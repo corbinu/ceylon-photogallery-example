@@ -34,7 +34,7 @@
             }
         });
         $(function() {
-            require(['ceylon/examples/basic/browser/1.0.0/ceylon.examples.basic.browser-1.0.0'], function(browser) {
+            require(['ceylon/examples/photogallery/1.0.0/ceylon.examples.photogallery-1.0.0'], function(browser) {
                 browser.init();
             });
         });
@@ -53,12 +53,43 @@
         </header>
         <div class="content">
             <div class="row">
-                <section class="main span16">
-                    content
+                <section class="main offset1">
+                    <div class="span7">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/500x400" alt="">
+                            <h3>Image Title</h3>
+                            <p>Image Caption...</p>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <ul class="thumbnails">
+                            <li class="span2">
+                                <a href="#" class="thumbnail">
+                                    <img src="http://placehold.it/300x200" alt="">
+                                </a>
+                            </li>
+                            <li class="span2">
+                                <a href="#" class="thumbnail">
+                                    <img src="http://placehold.it/300x200" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="pagination pagination-centered">
+                            <ul>
+                                <li><a href="#">Prev</a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">Next</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </section>
             </div>
             <div class="row">
-                <footer class="span16">
+                <footer class="offset1 span10">
                     <p>Build by <a href="http://celyonjsvm.wordpress.com">Corbin Uselton</a> 2013</p>
                 </footer>
             </div>
