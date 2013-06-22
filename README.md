@@ -13,7 +13,7 @@ Building the projects requires:
 
 * http://nodejs.org
 * http://gruntjs.com
-** which can be installed by running: sudo npm install -g grunt-cli
++ which can be installed by running: sudo npm install -g grunt-cli
 
 **To build**
 
