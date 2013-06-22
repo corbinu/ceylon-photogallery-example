@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ceylon Base Browser Demo</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--[if lt IE 9]>
+        <p>
+            Your browser is <em>ancient!</em> 
+            <a href="http://browsehappy.com/">
+                Upgrade to a different browser
+            </a>
+            to experience this site.
+        </p>
+        <![endif]-->
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/require.js"></script>
+        <script type="text/javascript">
+        require.config({
+            baseUrl:'modules',
+            paths:{
+                //You could point this to your local copy of the js language module
+                'ceylon/language/0.6/ceylon.language-0.6':'../assets/js/ceylon.language-0.6',
+                'jquery': 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min'
+            },
+            shim: {
+                "ceylon/examples/basic/browser/1.0.0/ceylon.examples.basic.browser-1.0.0": ["jquery"]
+            }
+        });
+        $(function() {
+            require(['ceylon/examples/basic/browser/1.0.0/ceylon.examples.basic.browser-1.0.0'], function(browser) {
+                browser.init();
+            });
+        });
+        </script>
+        
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+        
+    </head>
+    <body>
+        <header class="navbar navbar-inverse navbar-fixed-top">
+            <nav class="navbar-inner">
+                <a class="brand" href="#">Ceylon Demo</a>
+            </nav>   
+        </header>
+        <div class="content">
+            <div class="row">
+                <section class="main span16">
+                    content
+                </section>
+            </div>
+            <div class="row">
+                <footer class="span16">
+                    <p>Build by <a href="http://celyonjsvm.wordpress.com">Corbin Uselton</a> 2013</p>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
