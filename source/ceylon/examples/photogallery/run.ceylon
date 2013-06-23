@@ -1,7 +1,12 @@
 "Run the module `ceylon.examples.photogallery`."
 
-shared void init() {
+shared void init(String galleryDir) {
+	
     dynamic {
-		/*jQuery(".main").text("Text changed by ceylon");*/
+		jQuery.getJSON(galleryDir + "/images.json")
+		.done((categories) {
+			alert(JSON.stringify(categories));
+		})
+		.fail(() => alert("Error could not load image file") );
     }
 }

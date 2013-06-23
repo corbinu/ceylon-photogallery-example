@@ -1,0 +1,53 @@
+{
+
+	"landscapes": [
+	{
+		"src": "landscapes/land1.jpg",
+		"height": "640",
+		"width": "480",
+		"span": "4"
+	},
+	{
+		"src": "landscapes/land2.jpg",
+		"height": "640",
+		"width": "480",
+		"span": "4"
+	},
+	{
+		"src": "landscapes/land3.jpg",
+		"height": "640",
+		"width": "480",
+		"span": "4"
+	},
+	{
+		"src": "landscapes/land4.jpg",
+		"height": "1936",
+		"width": "2592",
+		"span": "4"
+	},
+	{
+		"src": "landscapes/land5.jpg",
+		"height": "2592",
+		"width": "1936",
+		"span": "4"
+	},
+	{
+		"src": "landscapes/land6.jpg",
+		"height": "2592",
+		"width": "1936",
+		"span": "4"
+	},
+	{
+		"src": "landscapes/land7.jpg",
+		"height": "2592",
+		"width": "1936",
+		"span": "4"
+	},
+	{
+		"src": "landscapes/land8.jpg",
+		"height": "2592",
+		"width": "1936",
+		"span": "4"
+	}
+	]
+}

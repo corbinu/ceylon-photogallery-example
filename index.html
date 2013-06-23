@@ -30,12 +30,12 @@
                 'jquery': 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min'
             },
             shim: {
-                "ceylon/examples/basic/browser/1.0.0/ceylon.examples.basic.browser-1.0.0": ["jquery"]
+                "ceylon/examples/photogallery/1.0.0/ceylon.examples.photogallery-1.0.0": ["jquery"]
             }
         });
         $(function() {
             require(['ceylon/examples/photogallery/1.0.0/ceylon.examples.photogallery-1.0.0'], function(browser) {
-                browser.init();
+                browser.init('assets/img/gallery');
             });
         });
         </script>
@@ -89,7 +89,7 @@
                 </section>
             </div>
             <div class="row">
-                <footer class="offset1 span10">
+                <footer class="offset1n span10">
                     <p>Build by <a href="http://celyonjsvm.wordpress.com">Corbin Uselton</a> 2013</p>
                 </footer>
             </div>
