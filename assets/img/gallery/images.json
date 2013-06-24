@@ -7,48 +7,56 @@
 			"src": "landscapes/land1.jpg",
 			"height": "640",
 			"width": "480",
+			"alt":"Bluff on Kauai",
 			"span": "2"
 		},
 		{
 			"src": "landscapes/land2.jpg",
 			"height": "640",
 			"width": "480",
+			"alt":"Bluff on Kauai",
 			"span": "2"
 		},
 		{
 			"src": "landscapes/land3.jpg",
 			"height": "640",
 			"width": "480",
+			"alt":"Mountain on Kauai",
 			"span": "2"
 		},
 		{
 			"src": "landscapes/land4.jpg",
 			"height": "1936",
 			"width": "2592",
+			"alt":"Pictured Rocks in Upper Peninsula of Michigan",
 			"span": "2"
 		},
 		{
 			"src": "landscapes/land5.jpg",
 			"height": "2592",
 			"width": "1936",
+			"alt":"Waterfall in Upper Peninsula of Michigan",
 			"span": "2"
 		},
 		{
 			"src": "landscapes/land6.jpg",
 			"height": "2592",
 			"width": "1936",
+			"alt":"Pictured Rocks in Upper Peninsula of Michigan",
 			"span": "2"
 		},
 		{
 			"src": "landscapes/land7.jpg",
 			"height": "2592",
 			"width": "1936",
+			"alt":"Pictured Rocks in Upper Peninsula of Michigan",
 			"span": "2"
 		},
 		{
 			"src": "landscapes/land8.jpg",
 			"height": "2592",
 			"width": "1936",
+			"alt":"Pictured Rocks in Upper Peninsula of Michigan",
 			"span": "2"
 		}
 		]
