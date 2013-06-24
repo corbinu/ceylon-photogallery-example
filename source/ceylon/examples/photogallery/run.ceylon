@@ -33,7 +33,6 @@ class Gallery(shared String dir) {
 	
 	shared void displayPhoto(Photo photo) {
 		dynamic {
-			// Should be shown here on click
 			jQuery(".display-photo").attr("src", dir + "/" + photo.src).attr("alt", photo.alt);
 		}
 	}
@@ -68,17 +67,18 @@ class PhotoCategory(shared Gallery gallery, shared String name) {
 		
 		variable Integer i = 0;
 		for (photo in photos) {
+			String photoname = "photo" + i.string;
+			i++;
 			dynamic {
-				print("adding photo: " + photo.src);
 				jQuery(".image-grid").append("<li class=\"span" + photo.span.string 
-					+ "\"><a href=\"#\" class=\"thumbnail photo" + i.string + "\"><img src=\"" 
+					+ "\"><a href=\"#\" class=\"thumbnail " + photoname + "\"><img src=\"" 
 					+ dir + "/" + photo.src + "\" alt=\"" + photo.alt 
 					+ "\" width=\"" + photo.width.string 
 					+ "\" height=\"" + photo.height.string + "\"></a></li>");
 				// Should be binding to a photo click here and passing the photo
-				jQuery(".photo"+i.string).click( () => gallery.displayPhoto(photo));
+				
+				jQuery("." + photoname).click( () => gallery.displayPhoto(photo));
 			}
-			i++;
 		}
 	}
 	

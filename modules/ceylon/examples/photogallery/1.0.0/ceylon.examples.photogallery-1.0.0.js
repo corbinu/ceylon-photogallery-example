@@ -119,15 +119,15 @@ function PhotoCategory(gallery, name, $$photoCategory){
         var setI$31=function(i$32){return i$31=i$32;};
         var it$33 = $$photoCategory.photos.iterator();
         var photo$34;while ((photo$34=it$33.next())!==$$$cl1.getFinished()){
+            var photoname$35=$$$cl1.String("photo",5).plus(i$31.string);
+            (oldi$36=i$31,i$31=oldi$36.successor,oldi$36);
+            var oldi$36;
             /*Begin dynamic block*/
-            $$$cl1.print($$$cl1.String("adding photo: ",14).plus(photo$34.src));
-            (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".image-grid",11).valueOf()).append($$$cl1.String("<li class=\"span",15).plus(photo$34.span.string).plus($$$cl1.String("\"><a href=\"#\" class=\"thumbnail photo",36)).plus(i$31.string).plus($$$cl1.String("\"><img src=\"",12)).plus(dir$28).plus($$$cl1.String("/",1)).plus(photo$34.src).plus($$$cl1.String("\" alt=\"",7)).plus(photo$34.alt).plus($$$cl1.String("\" width=\"",9)).plus(photo$34.width.string).plus($$$cl1.String("\" height=\"",10)).plus(photo$34.height.string).plus($$$cl1.String("\"></a></li>",11)).valueOf());
-            (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".photo",6).plus(i$31.string).valueOf()).click($$$cl1.$JsCallable(function (){
+            (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".image-grid",11).valueOf()).append($$$cl1.String("<li class=\"span",15).plus(photo$34.span.string).plus($$$cl1.String("\"><a href=\"#\" class=\"thumbnail ",31)).plus(photoname$35).plus($$$cl1.String("\"><img src=\"",12)).plus(dir$28).plus($$$cl1.String("/",1)).plus(photo$34.src).plus($$$cl1.String("\" alt=\"",7)).plus(photo$34.alt).plus($$$cl1.String("\" width=\"",9)).plus(photo$34.width.string).plus($$$cl1.String("\" height=\"",10)).plus(photo$34.height.string).plus($$$cl1.String("\"></a></li>",11)).valueOf());
+            (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".",1).plus(photoname$35).valueOf()).click($$$cl1.$JsCallable(function (){
                 return $$photoCategory.gallery.displayPhoto(photo$34);
             },[],{Arguments:{t:$$$cl1.Empty},Return:{t:$$$cl1.Anything}}));
             /*End dynamic block*/
-            (oldi$35=i$31,i$31=oldi$35.successor,oldi$35);
-            var oldi$35;
         }
     }
     $$photoCategory.displayPhotos=displayPhotos;
