@@ -44,8 +44,7 @@ class Gallery(shared String dir) {
 	}
 	
 	void init() {
-		PhotoCategory? firstCategory = categories[0];
-		if (exists firstCategory) {
+		if (exists firstCategory = categories[0]) {
 			displayCategory(firstCategory.name);
 		}
 	}
@@ -59,9 +58,12 @@ class PhotoCategory(shared Gallery gallery, shared String name) {
 		photos  = [ for ( photo in photosJSON) Photo(photo.src, photo.height, photo.width, photo.alt, photo.span) ];
 	}
 	
+	void showPhoto(Photo photo)() {
+		gallery.displayPhoto(photo);
+	}
+	
 	shared void displayPhotos(String dir) {
-		Photo? firstPhoto = photos[0];
-		if (exists firstPhoto) {
+		if (exists firstPhoto = photos[0]) {
 			gallery.displayPhoto(firstPhoto);
 		}
 		
@@ -77,8 +79,7 @@ class PhotoCategory(shared Gallery gallery, shared String name) {
 					+ "\" height=\"" + photo.height.string + "\"></a></li>");
 				// Should be binding to a photo click here and passing the photo
 				
-				Photo photo2 = photo;
-				jQuery("." + photoname).click( () => gallery.displayPhoto(photo2));
+				 jQuery("." + photoname).click(showPhoto(photo));
 			}
 		}
 	}
