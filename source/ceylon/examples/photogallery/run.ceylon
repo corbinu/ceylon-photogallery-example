@@ -77,7 +77,8 @@ class PhotoCategory(shared Gallery gallery, shared String name) {
 					+ "\" height=\"" + photo.height.string + "\"></a></li>");
 				// Should be binding to a photo click here and passing the photo
 				
-				jQuery("." + photoname).click( () => gallery.displayPhoto(photo));
+				Photo photo2 = photo;
+				jQuery("." + photoname).click( () => gallery.displayPhoto(photo2));
 			}
 		}
 	}

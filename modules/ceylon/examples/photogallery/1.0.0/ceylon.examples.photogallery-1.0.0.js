@@ -124,8 +124,9 @@ function PhotoCategory(gallery, name, $$photoCategory){
             var oldi$36;
             /*Begin dynamic block*/
             (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".image-grid",11).valueOf()).append($$$cl1.String("<li class=\"span",15).plus(photo$34.span.string).plus($$$cl1.String("\"><a href=\"#\" class=\"thumbnail ",31)).plus(photoname$35).plus($$$cl1.String("\"><img src=\"",12)).plus(dir$28).plus($$$cl1.String("/",1)).plus(photo$34.src).plus($$$cl1.String("\" alt=\"",7)).plus(photo$34.alt).plus($$$cl1.String("\" width=\"",9)).plus(photo$34.width.string).plus($$$cl1.String("\" height=\"",10)).plus(photo$34.height.string).plus($$$cl1.String("\"></a></li>",11)).valueOf());
+            var photo2$37=photo$34;
             (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".",1).plus(photoname$35).valueOf()).click($$$cl1.$JsCallable(function (){
-                return $$photoCategory.gallery.displayPhoto(photo$34);
+                return $$photoCategory.gallery.displayPhoto(photo2$37);
             },[],{Arguments:{t:$$$cl1.Empty},Return:{t:$$$cl1.Anything}}));
             /*End dynamic block*/
         }
