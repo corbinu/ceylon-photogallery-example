@@ -1,6 +1,6 @@
 {
     "name": "ceylon-photogallery-example",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "description": "jQuery photo gallery example build in Ceylon",
     "author": "Corbin Uselton <CorbinU@OpenSwimSoftware.com>",
     "copyright": "2013 © Corbin Uselton",
