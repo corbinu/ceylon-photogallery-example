@@ -7,56 +7,218 @@
 			"src": "landscapes/land1.jpg",
 			"height": "640",
 			"width": "480",
-			"alt":"Bluff on Kauai",
+			"alt":"photo of a bluff on Kauai",
+			"title":"Bluff on Kauai",
+			"caption":"Bluff on the island of Kauai. It is on a hard to access beach and the photo was taken in 2007",
 			"span": "2"
 		},
 		{
 			"src": "landscapes/land2.jpg",
 			"height": "640",
 			"width": "480",
-			"alt":"Bluff on Kauai",
+			"alt":"photo of a bluff on Kauai",
+			"title":"Bluff on Kauai Two",
+			"caption":"Bluff on the island of Kauai. It is on a hard to access beach and the photo was taken in 2007",
 			"span": "2"
 		},
 		{
 			"src": "landscapes/land3.jpg",
 			"height": "640",
 			"width": "480",
-			"alt":"Mountain on Kauai",
+			"alt":"photo of a mountain on Kauai",
+			"title":"Mountain on Kauai",
+			"caption":"Moutain on the island of Kauai. Taken in 2007",
 			"span": "2"
 		},
 		{
 			"src": "landscapes/land4.jpg",
 			"height": "1936",
 			"width": "2592",
-			"alt":"Pictured Rocks in Upper Peninsula of Michigan",
+			"alt":"photo of pictured Rocks in Upper Peninsula of Michigan",
+			"title":"Pictured Rocks",
+			"caption":"Pictured Rocks in Upper Peninsula of Michigan. Taken in 2011.",
 			"span": "2"
 		},
 		{
 			"src": "landscapes/land5.jpg",
 			"height": "2592",
 			"width": "1936",
-			"alt":"Waterfall in Upper Peninsula of Michigan",
+			"alt":"photo of a waterfall in Upper Peninsula of Michigan",
+			"title":"UP Waterfall",
+			"caption":"A waterfall in Upper Peninsula of Michigan. Taken in 2011.",
 			"span": "2"
 		},
 		{
 			"src": "landscapes/land6.jpg",
 			"height": "2592",
 			"width": "1936",
-			"alt":"Pictured Rocks in Upper Peninsula of Michigan",
+			"alt":"photo of pictured Rocks in Upper Peninsula of Michigan",
+			"title":"Pictured Rocks Two",
+			"caption":"Pictured Rocks in Upper Peninsula of Michigan. Taken in 2011.",
 			"span": "2"
 		},
 		{
 			"src": "landscapes/land7.jpg",
 			"height": "2592",
 			"width": "1936",
-			"alt":"Pictured Rocks in Upper Peninsula of Michigan",
+			"alt":"photo of pictured Rocks in Upper Peninsula of Michigan",
+			"title":"Pictured Rocks Three",
+			"caption":"Pictured Rocks in Upper Peninsula of Michigan. Taken in 2011.",
 			"span": "2"
 		},
 		{
 			"src": "landscapes/land8.jpg",
 			"height": "2592",
 			"width": "1936",
-			"alt":"Pictured Rocks in Upper Peninsula of Michigan",
+			"alt":"photo of pictured Rocks in Upper Peninsula of Michigan",
+			"title":"Pictured Rocks Four",
+			"caption":"Pictured Rocks in Upper Peninsula of Michigan. Taken in 2011.",
+			"span": "2"
+		}
+		]
+	},
+	{
+		"name":"views",
+	 	"photos":[
+		{
+			"src": "view/view1.jpg",
+			"height": "2592",
+			"width": "1936",
+			"alt":"a photo of the harbor on Mackinac Island",
+			"title":"Mackinac Harbor",
+			"caption":"The harbor on Mackinac Island. Taken in 2012",
+			"span": "2"
+		},
+		{
+			"src": "view/view2.jpg",
+			"height": "1936",
+			"width": "2592",
+			"alt":"photo of Houghton MI covered in snow",
+			"title":"Snowy Houghton",
+			"caption":"Photo of snowy Houghton, MI. Taken from Mount Ripley Skii Hill in 2012",
+			"span": "2"
+		},
+		{
+			"src": "view/view3.jpg",
+			"height": "3264",
+			"width": "2448",
+			"alt":"photo of MichiganTech Campus",
+			"title":"MichiganTech in Summer",
+			"caption":"Photo of MichiganTech campus in the summer of 2013. Taken from across the chanel",
+			"span": "2"
+		}
+		]
+	},
+	{
+		"name":"views",
+	 	"photos":[
+		{
+			"src": "view/view1.jpg",
+			"height": "2592",
+			"width": "1936",
+			"alt":"a photo of the harbor on Mackinac Island",
+			"title":"Mackinac Harbor",
+			"caption":"The harbor on Mackinac Island. Taken in 2012",
+			"span": "2"
+		},
+		{
+			"src": "view/view2.jpg",
+			"height": "1936",
+			"width": "2592",
+			"alt":"photo of Houghton MI covered in snow",
+			"title":"Snowy Houghton",
+			"caption":"Photo of snowy Houghton, MI. Taken from Mount Ripley Skii Hill in 2012",
+			"span": "2"
+		},
+		{
+			"src": "view/view3.jpg",
+			"height": "3264",
+			"width": "2448",
+			"alt":"photo of MichiganTech Campus",
+			"title":"MichiganTech in Summer",
+			"caption":"Photo of MichiganTech campus in the summer of 2013. Taken from across the channel",
+			"span": "2"
+		}
+		]
+	},
+	{
+		"name":"Nature",
+	 	"photos":[
+		{
+			"src": "nature/nature1.jpg",
+			"height": "2592",
+			"width": "1936",
+			"alt":"photo of a cave on Mackinac Island",
+			"title":"Cave on Mackinac",
+			"caption":"Cave on Mackinac Island. Taken in 2012",
+			"span": "2"
+		},
+		{
+			"src": "nature/nature2.jpg",
+			"height": "1936",
+			"width": "2592",
+			"alt":"photo of a waterfall on the Keweenaw Peninsula",
+			"title":"Keweenaw Waterfall",
+			"caption":"Water fall on the Keweenaw Peninsula. Taken in 2012",
+			"span": "2"
+		},
+		{
+			"src": "nature/nature3.jpg",
+			"height": "1936",
+			"width": "2592",
+			"alt":"photo of miners falls in munising",
+			"title":"Miners Falls",
+			"caption":"Miners Falls in Munising, MI",
+			"span": "2"
+		}
+		]
+	},
+	{
+		"name":"Miscellaneous",
+	 	"photos":[
+		{
+			"src": "misc/misc1.jpg",
+			"height": "1936",
+			"width": "2592",
+			"alt":"photo of hollywood tower in disneyland",
+			"title":"Hollywood Tower",
+			"caption":"The Hollywood Tower in Disneyland",
+			"span": "2"
+		},
+		{
+			"src": "misc/misc2.jpg",
+			"height": "2592",
+			"width": "1936",
+			"alt":"photo of train made out of snow and ice",
+			"title":"Ice Train",
+			"caption":"Ice Train made as part of the MichiganTech Winter Carnival",
+			"span": "2"
+		},
+		{
+			"src": "misc/misc3.jpg",
+			"height": "1280",
+			"width": "960",
+			"alt":"photo of a white honda del sol",
+			"title":"Del Sol",
+			"caption":"1995 Honda Civic Del Sol",
+			"span": "2"
+		},
+		{
+			"src": "misc/misc4.jpg",
+			"height": "640",
+			"width": "480",
+			"alt":"photo of a galapagos turtle",
+			"title":"Galapagos Turtle",
+			"caption":"A Galapagos Turtle at the San Diego Zoo",
+			"span": "2"
+		},
+		{
+			"src": "misc/misc5.jpg",
+			"height": "2592",
+			"width": "1936",
+			"alt":"photo of a water wheel",
+			"title":"Water Wheel",
+			"caption":"Water Wheel at the Sawdust Art Festival in Laguna Beach, CA",
 			"span": "2"
 		}
 		]
