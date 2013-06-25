@@ -34,6 +34,8 @@ class Gallery(shared String dir) {
 	shared void displayPhoto(Photo photo) {
 		dynamic {
 			jQuery(".display-photo").attr("src", dir + "/" + photo.src).attr("alt", photo.alt);
+			jQuery(".display-title").text(photo.title);
+			jQuery(".display-caption").text(photo.caption);
 		}
 	}
 	
@@ -55,7 +57,7 @@ class PhotoCategory(shared Gallery gallery, shared String name) {
 	shared variable Photo[] photos = {};
 	
 	shared void setPhotos(PhotoJSON[] photosJSON) {
-		photos  = [ for ( photo in photosJSON) Photo(photo.src, photo.height, photo.width, photo.alt, photo.span) ];
+		photos  = [ for ( photo in photosJSON) Photo(photo.title, photo.caption, photo.src, photo.height, photo.width, photo.alt, photo.span) ];
 	}
 	
 	void showPhoto(Photo photo)() {
@@ -77,8 +79,6 @@ class PhotoCategory(shared Gallery gallery, shared String name) {
 					+ dir + "/" + photo.src + "\" alt=\"" + photo.alt 
 					+ "\" width=\"" + photo.width.string 
 					+ "\" height=\"" + photo.height.string + "\"></a></li>");
-				// Should be binding to a photo click here and passing the photo
-				
 				 jQuery("." + photoname).click(showPhoto(photo));
 			}
 		}
@@ -86,7 +86,7 @@ class PhotoCategory(shared Gallery gallery, shared String name) {
 	
 	
 }
-class Photo(shared String src, shared Integer height, shared Integer width, shared String alt, shared Integer span) {}
+class Photo(shared String title, shared String caption, shared String src, shared Integer height, shared Integer width, shared String alt, shared Integer span) {}
 
 class PhotoCategoryJSON(shared String name, shared PhotoJSON[] photos) {}
-class PhotoJSON(shared String src, shared Integer height, shared Integer width, shared String alt, shared Integer span) {}
+class PhotoJSON(shared String title, shared String caption, shared String src, shared Integer height, shared Integer width, shared String alt, shared Integer span) {}

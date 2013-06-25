@@ -2,3 +2,15 @@ body {
 	padding-top: 60px;
 	padding-bottom: 40px;
 }
+
+.nav-tabs {
+	padding-left: 40px;
+}
+
+.display-title {
+	padding-left: 20px;
+}
+
+.display-caption {
+	padding: 20px;
+}

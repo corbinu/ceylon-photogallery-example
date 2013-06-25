@@ -1,7 +1,7 @@
 [
 
 	{
-		"name":"landscapes",
+		"name":"Landscapes",
 	 	"photos":[
 		{
 			"src": "landscapes/land1.jpg",
@@ -78,7 +78,7 @@
 		]
 	},
 	{
-		"name":"views",
+		"name":"Views",
 	 	"photos":[
 		{
 			"src": "view/view1.jpg",
@@ -105,38 +105,6 @@
 			"alt":"photo of MichiganTech Campus",
 			"title":"MichiganTech in Summer",
 			"caption":"Photo of MichiganTech campus in the summer of 2013. Taken from across the chanel",
-			"span": "2"
-		}
-		]
-	},
-	{
-		"name":"views",
-	 	"photos":[
-		{
-			"src": "view/view1.jpg",
-			"height": "2592",
-			"width": "1936",
-			"alt":"a photo of the harbor on Mackinac Island",
-			"title":"Mackinac Harbor",
-			"caption":"The harbor on Mackinac Island. Taken in 2012",
-			"span": "2"
-		},
-		{
-			"src": "view/view2.jpg",
-			"height": "1936",
-			"width": "2592",
-			"alt":"photo of Houghton MI covered in snow",
-			"title":"Snowy Houghton",
-			"caption":"Photo of snowy Houghton, MI. Taken from Mount Ripley Skii Hill in 2012",
-			"span": "2"
-		},
-		{
-			"src": "view/view3.jpg",
-			"height": "3264",
-			"width": "2448",
-			"alt":"photo of MichiganTech Campus",
-			"title":"MichiganTech in Summer",
-			"caption":"Photo of MichiganTech campus in the summer of 2013. Taken from across the channel",
 			"span": "2"
 		}
 		]
