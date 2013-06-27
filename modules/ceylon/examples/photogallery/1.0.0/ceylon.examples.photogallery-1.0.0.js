@@ -62,6 +62,11 @@ function Gallery(dir, $$gallery){
             }
         }
         if(found$18){
+            /*Begin dynamic block*/
+            (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".category",9).valueOf()).each(function (){
+                return (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)((typeof this==='undefined'||this===null?$$$cl1.throwexc('Undefined or null reference: this'):this)).removeClass($$$cl1.String("active",6).valueOf());
+            });
+            /*End dynamic block*/
             var it$22 = $$gallery.categories.iterator();
             var category$23;while ((category$23=it$22.next())!==$$$cl1.getFinished()){
                 if(name$16.lowercased.equals(category$23.name.lowercased)){
@@ -70,10 +75,6 @@ function Gallery(dir, $$gallery){
                     (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".category-",10).plus(category$23.name.lowercased).valueOf()).addClass($$$cl1.String("active",6).valueOf());
                     /*End dynamic block*/
                     category$23.displayPage(page$17);
-                }else {
-                    /*Begin dynamic block*/
-                    (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".category-",10).plus(category$23.name.lowercased).valueOf()).removeClass($$$cl1.String("active",6).valueOf());
-                    /*End dynamic block*/
                 }
             }
         }else {

@@ -37,6 +37,9 @@ class Gallery(shared String dir) {
 			}
 		}
 		if (found) {
+			dynamic {
+				jQuery(".category").each( () => jQuery(\ithis).removeClass("active") );
+			}
 			for (category in categories) {
 				if (name.lowercased == category.name.lowercased) {
 					print("Display category with name: " + name + " and page: " + page.string);
@@ -44,10 +47,6 @@ class Gallery(shared String dir) {
 						jQuery(".category-" + category.name.lowercased).addClass("active");
 					}
 					category.displayPage(page);
-				} else {
-					dynamic {
-						jQuery(".category-" + category.name.lowercased).removeClass("active");
-					}
 				}
 			}
 		} else {
