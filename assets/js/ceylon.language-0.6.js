@@ -154,108 +154,114 @@ return isOfType(that, {t:Identifiable}) && (that===this);
 }
 defineAttr(Identifiable$proto, 'hash', function(){ return $identityHash(this); });
 //INTERFACES
+//Compiled from Ceylon sources
 function Callable(wat) {
-return wat;
+    return wat;
 }
 Callable.$$metamodel$$={mod:$$METAMODEL$$,$an:function(){return[shared()];},$tp:{Arguments:{'var':'out'},Return:{'var':'out'}},d:$$METAMODEL$$['ceylon.language']['Callable']};
 exports.Callable=Callable;
 function $init$Callable() {
-if (Callable.$$===undefined) {
-initType(Callable, 'ceylon.language::Callable');
-}
-return Callable;
+    if (Callable.$$===undefined) {
+        initType(Callable, 'ceylon.language::Callable');
+    }
+    return Callable;
 }
 exports.$init$Callable=$init$Callable;
 $init$Callable();
+
 function $JsCallable(callable,parms,targs) {
-if (callable.getT$all === undefined) {
-callable.getT$all=Callable.getT$all;
-}
-var set_meta = callable.$$metamodel$$ === undefined;
-if (set_meta) {
-callable.$$metamodel$$={$ps:[],mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['Callable']};
-if (parms !== undefined) {
-callable.$$metamodel$$['$ps']=parms;
-}
-}
-if (targs !== undefined && callable.$$targs$$ === undefined) {
-callable.$$targs$$=targs;
-if (set_meta) {
-callable.$$metamodel$$['$t']=targs['Return'];
-}
-}
-return callable;
+    if (callable.getT$all === undefined) {
+        callable.getT$all=Callable.getT$all;
+    }
+    var set_meta = callable.$$metamodel$$ === undefined;
+    if (set_meta) {
+        callable.$$metamodel$$={$ps:[],mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['Callable']};
+        if (parms !== undefined) {
+            callable.$$metamodel$$['$ps']=parms;
+        }
+    }
+    if (targs !== undefined && callable.$$targs$$ === undefined) {
+        callable.$$targs$$=targs;
+        if (set_meta) {
+            callable.$$metamodel$$['$t']=targs['Return'];
+        }
+    }
+    return callable;
 }
 initExistingTypeProto($JsCallable, Function, 'ceylon.language::JsCallable', Callable);
+
 function noop() { return null; }
+
 //This is used for plain method references
 function JsCallable(o,f) {
-Callable(o);
-if (o === null) return noop;
-var f2 = function() { return f.apply(o, arguments); };
-f2.$$metamodel$$=f.$$metamodel$$===undefined?Callable.$$metamodel$$:f.$$metamodel$$;
-return f2;
+    Callable(o);
+    if (o === null) return noop;
+    var f2 = function() { return f.apply(o, arguments); };
+    f2.$$metamodel$$=f.$$metamodel$$===undefined?Callable.$$metamodel$$:f.$$metamodel$$;
+    return f2;
 }
 JsCallable.$$metamodel$$={$tp:{Return:{'var':'out'}, Arguments:{'var':'in'}},$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['Callable']};
+
 //This is used for spread method references
 function JsCallableList(value) {
-return function() {
-var rval = Array(value.length);
-for (var i = 0; i < value.length; i++) {
-var c = value[i];
-rval[i] = c.f.apply(c.o, arguments);
-}
-return ArraySequence(rval);
-};
+    return function() {
+        var rval = Array(value.length);
+        for (var i = 0; i < value.length; i++) {
+            var c = value[i];
+            rval[i] = c.f.apply(c.o, arguments);
+        }
+        return ArraySequence(rval);
+    };
 }
 JsCallableList.$$metamodel$$={$tp:{Return:{'var':'out'}, Arguments:{'var':'in'}},$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['Callable']};
+
 exports.JsCallableList=JsCallableList;
 exports.JsCallable=JsCallable;
 exports.$JsCallable=$JsCallable;
 function Comprehension(makeNextFunc, $$targs$$, compr) {
-$init$Comprehension();
-if (compr===undefined) {compr = new Comprehension.$$;}
-Basic(compr);
-compr.makeNextFunc = makeNextFunc;
-compr.$$targs$$=$$targs$$;
-return compr;
+    $init$Comprehension();
+    if (compr===undefined) {compr = new Comprehension.$$;}
+    Basic(compr);
+    compr.makeNextFunc = makeNextFunc;
+    compr.$$targs$$=$$targs$$;
+    return compr;
 }
 Comprehension.$$metamodel$$={$nm:'Comprehension',$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['Iterable']};
 function $init$Comprehension() {
-if (Comprehension.$$===undefined) {
-initTypeProto(Comprehension, 'ceylon.language::Comprehension', $init$Basic(), $init$Iterable());
-}
-return Comprehension;
+    if (Comprehension.$$===undefined) {
+        initTypeProto(Comprehension, 'ceylon.language::Comprehension', $init$Basic(), $init$Iterable());
+    }
+    return Comprehension;
 }
 $init$Comprehension();
 var Comprehension$proto = Comprehension.$$.prototype;
 Comprehension$proto.iterator = function() {
-return ComprehensionIterator(this.makeNextFunc(), this.$$targs$$);
+    return ComprehensionIterator(this.makeNextFunc(), this.$$targs$$);
 }
 defineAttr(Comprehension$proto, 'sequence', function() {
-var sb = SequenceBuilder(this.$$targs$$);
-sb.appendAll(this);
-return sb.sequence;
+    var sb = SequenceBuilder(this.$$targs$$);
+    sb.appendAll(this);
+    return sb.sequence;
 });
 exports.Comprehension=Comprehension;
+
 function ComprehensionIterator(nextFunc, $$targs$$, it) {
-$init$ComprehensionIterator();
-if (it===undefined) {it = new ComprehensionIterator.$$;}
-it.$$targs$$=$$targs$$;
-Basic(it);
-it.next = nextFunc;
-return it;
+    $init$ComprehensionIterator();
+    if (it===undefined) {it = new ComprehensionIterator.$$;}
+    it.$$targs$$=$$targs$$;
+    Basic(it);
+    it.next = nextFunc;
+    return it;
 }
 ComprehensionIterator.$$metamodel$$={$nm:'ComprehensionIterator',$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['Iterator']};
 function $init$ComprehensionIterator() {
-if (ComprehensionIterator.$$===undefined) {
-initTypeProto(ComprehensionIterator, 'ceylon.language::ComprehensionIterator',
-$init$Basic(), $init$Iterator());
-}
-return ComprehensionIterator;
+    if (ComprehensionIterator.$$===undefined) {
+        initTypeProto(ComprehensionIterator, 'ceylon.language::ComprehensionIterator',
+                $init$Basic(), $init$Iterator());
+    }
+    return ComprehensionIterator;
 }
 $init$ComprehensionIterator();
-//Compiled from Ceylon sources
 function Basic($$basic){
     $init$Basic();
     if ($$basic===undefined)$$basic=new Basic.$$;
@@ -4762,124 +4768,129 @@ var optional=function (){
 };
 optional.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:Optional},$ps:[],$an:function(){return[shared(),annotation()];},pkg:'ceylon.language',d:$$METAMODEL$$['ceylon.language']['optional']};
 exports.optional=optional;
-//Ends compiled from Ceylon sources
 function type$metamodel(x) {
-if (x === null) {
-return getNothingType$metamodel();
-} else {
-//Search for metamodel
-var mm = x.$$metamodel$$;
-if (mm === undefined && x.constructor && x.constructor.T$name && x.constructor.T$all) {
-//It's probably an instance of a Ceylon type
-var _x = x.constructor.T$all[x.constructor.T$name];
-if (_x) {
-mm = _x.$$metamodel$$;
-}
-}
-if (mm && mm.d['$mt']) {
-var metatype = mm.d['$mt'];
-if (metatype === 'ifc') { //Interface
-//
-} else if (metatype === 'cls') { //Class
-} else if (metatype === 'mthd') { //Method
-} else {
-}
-} else {
-throw Exception(String$("No metamodel available for "+x));
-}
-}
-return "UNIMPLEMENTED";
+    if (x === null) {
+        return getNothingType$metamodel();
+    } else {
+        //Search for metamodel
+        var mm = x.$$metamodel$$;
+        if (mm === undefined && x.constructor && x.constructor.T$name && x.constructor.T$all) {
+            //It's probably an instance of a Ceylon type
+            var _x = x.constructor.T$all[x.constructor.T$name];
+            if (_x) {
+                mm = _x.$$metamodel$$;
+            }
+        }
+        if (mm && mm.d['$mt']) {
+            var metatype = mm.d['$mt'];
+            if (metatype === 'ifc') { //Interface
+                //
+            } else if (metatype === 'cls') { //Class
+            } else if (metatype === 'mthd') { //Method
+            } else {
+            }
+        } else {
+            throw Exception(String$("No metamodel available for "+x));
+        }
+    }
+    return "UNIMPLEMENTED";
 }
 type$metamodel.$$metamodel$$={$ps:[{t:Anything}],$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language.metamodel']['type']};
 exports.type$metamodel=type$metamodel;
+
 function typeLiteral$metamodel($$targs$$) {
-if ($$targs$$ === undefined || $$targs$$.Type === undefined) {
-throw Exception("JS Interop not supported");
-}
+    if ($$targs$$ === undefined || $$targs$$.Type === undefined) {
+        throw Exception("JS Interop not supported");
+    }
 console.log("typeLiteral<" + className($$targs$$.Type) + ">");
-throw Exception("typeLiteral UNIMPLEMENTED");
+    throw Exception("typeLiteral UNIMPLEMENTED");
 }
 typeLiteral$metamodel.$$metamodel$$={$ps:[],$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language.metamodel']['typeLiteral']};
 exports.typeLiteral$metamodel=typeLiteral$metamodel;
 function Number$(wat) {
-return wat;
+    return wat;
 }
 initType(Number$, 'ceylon.language::Number');
 Number$.$$metamodel$$={$an:function(){return[shared()]},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['Number']};
 exports.Number=Number$;
 function $init$Number$() {
-if (Number$.$$===undefined) {
-initType(Number$, 'ceylon.language::Number');
+    if (Number$.$$===undefined) {
+        initType(Number$, 'ceylon.language::Number');
+    }
+    return Number$;
 }
-return Number$;
-}
+
 function JSNumber(value) { return Number(value); }
 initExistingType(JSNumber, Number, 'ceylon.language::JSNumber');
 JSNumber.$$metamodel$$={$nm:'JSNumber',$mt:'cls',$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['Number']};
+
 var origNumToString = Number.prototype.toString;
 inheritProto(JSNumber, Object$, Scalar, $init$Integral(), Exponentiable);
+
 function Integer(value) {
-if (value && value.getT$name && value.getT$name() === 'ceylon.language::Integer') {
-return value;
+    if (value && value.getT$name && value.getT$name() === 'ceylon.language::Integer') {
+        return value;
+    }
+    return Number(value);
 }
-return Number(value);
-}
-initTypeProto(Integer, 'ceylon.language::Integer', Object$, Scalar,
-$init$Integral(), Exponentiable, Binary);
+initTypeProto(Integer, 'ceylon.language::Integer', Object$, Scalar, 
+        $init$Integral(), Exponentiable, Binary);
 Integer.$$metamodel$$={$an:function(){return[shared(),native(),final()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['Integer']};
+
 function Float(value) {
-if (value && value.getT$name && value.getT$name() === 'ceylon.language::Float') {
-return value;
-}
-var that = new Number(value);
-that.float$ = true;
-return that;
+    if (value && value.getT$name && value.getT$name() === 'ceylon.language::Float') {
+        return value;
+    }
+    var that = new Number(value);
+    that.float$ = true;
+    return that;
 }
 initTypeProto(Float, 'ceylon.language::Float', Object$, Scalar, Exponentiable);
 Float.$$metamodel$$={$an:function(){return[shared(),native(),final()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['Float']};
+
 var JSNum$proto = Number.prototype;
 JSNum$proto.getT$all = function() {
-return (this.float$ ? Float : Integer).$$.T$all;
+    return (this.float$ ? Float : Integer).$$.T$all;
 }
 JSNum$proto.getT$name = function() {
-return (this.float$ ? Float : Integer).$$.T$name;
+    return (this.float$ ? Float : Integer).$$.T$name;
 }
 JSNum$proto.toString = origNumToString;
 defineAttr(JSNum$proto, 'string', function(){ return String$(this.toString()); });
 JSNum$proto.plus = function(other) {
-return (this.float$||other.float$) ? Float(this+other) : (this+other);
+    return (this.float$||other.float$) ? Float(this+other) : (this+other);
 }
 JSNum$proto.minus = function(other) {
-return (this.float$||other.float$) ? Float(this-other) : (this-other);
+    return (this.float$||other.float$) ? Float(this-other) : (this-other);
 }
 JSNum$proto.times = function(other) {
-return (this.float$||other.float$) ? Float(this*other) : (this*other);
+    return (this.float$||other.float$) ? Float(this*other) : (this*other);
 }
 JSNum$proto.divided = function(other) {
-if (this.float$||other.float$) { return Float(this/other); }
-if (other == 0) {
-throw Exception(String$("Division by Zero"));
-}
-return (this/other)|0;
+    if (this.float$||other.float$) { return Float(this/other); }
+    if (other == 0) {
+        throw Exception(String$("Division by Zero"));
+    }
+    return (this/other)|0;
 }
 JSNum$proto.remainder = function(other) { return this%other; }
 JSNum$proto.power = function(exp) {
-if (this.float$||exp.float$) { return Float(Math.pow(this, exp)); }
-if (exp<0 && this!=1 && this!=-1) {
-throw Exception(String$("Negative exponent"));
-}
-return Math.pow(this, exp)|0;
+    if (this.float$||exp.float$) { return Float(Math.pow(this, exp)); }
+    if (exp<0 && this!=1 && this!=-1) {
+        throw Exception(String$("Negative exponent"));
+    }
+    return Math.pow(this, exp)|0;
 }
 defineAttr(JSNum$proto, 'negativeValue', function() {
-return this.float$ ? Float(-this) : -this;
+    return this.float$ ? Float(-this) : -this;
 });
 defineAttr(JSNum$proto, 'positiveValue', function() {
-return this.float$ ? this : this.valueOf();
+    return this.float$ ? this : this.valueOf();
 });
 JSNum$proto.equals = function(other) { return other==this.valueOf(); }
 JSNum$proto.compare = function(other) {
-var value = this.valueOf();
-return value==other ? equal : (value<other ? smaller:larger);
+    var value = this.valueOf();
+    return value==other ? equal : (value<other ? smaller:larger);
 }
 defineAttr(JSNum$proto, '$float', function(){ return Float(this.valueOf()); });
 defineAttr(JSNum$proto, 'integer', function(){ return this|0; });
@@ -4890,19 +4901,19 @@ defineAttr(JSNum$proto, 'predecessor', function(){ return this-1; });
 defineAttr(JSNum$proto, 'unit', function(){ return this == 1; });
 defineAttr(JSNum$proto, 'zero', function(){ return this == 0; });
 defineAttr(JSNum$proto, 'fractionalPart', function() {
-if (!this.float$) { return 0; }
-return Float(this - (this>=0 ? Math.floor(this) : Math.ceil(this)));
+    if (!this.float$) { return 0; }
+    return Float(this - (this>=0 ? Math.floor(this) : Math.ceil(this)));
 });
 defineAttr(JSNum$proto, 'wholePart', function() {
-if (!this.float$) { return this.valueOf(); }
-return Float(this>=0 ? Math.floor(this) : Math.ceil(this));
+    if (!this.float$) { return this.valueOf(); }
+    return Float(this>=0 ? Math.floor(this) : Math.ceil(this));
 });
 defineAttr(JSNum$proto, 'sign', function(){ return this > 0 ? 1 : this < 0 ? -1 : 0; });
 defineAttr(JSNum$proto, 'hash', function() {
-return this.float$ ? String$(this.toPrecision()).hash : this.valueOf();
+    return this.float$ ? String$(this.toPrecision()).hash : this.valueOf();
 });
 JSNum$proto.distanceFrom = function(other) {
-return (this.float$ ? this.wholePart : this) - other;
+    return (this.float$ ? this.wholePart : this) - other;
 }
 //Binary interface
 defineAttr(JSNum$proto, 'not', function(){ return ~this; });
@@ -4913,778 +4924,802 @@ JSNum$proto.and = function(x) { return this & x; }
 JSNum$proto.or = function(x) { return this | x; }
 JSNum$proto.xor = function(x) { return this ^ x; }
 JSNum$proto.get = function(idx) {
-var mask = 1 << idx;
-return (this & mask) != 0 ? $true : $false;
+    var mask = 1 << idx;
+    return (this & mask) != 0 ? $true : $false;
 }
 JSNum$proto.set = function(idx,bit) {
-if (bit === undefined) { bit = $true; }
-var mask = idx > 1 ? 1 << idx : 1;
-return (bit === $true) ? this | mask : this & ~mask;
+    if (bit === undefined) { bit = $true; }
+        var mask = idx > 1 ? 1 << idx : 1;
+    return (bit === $true) ? this | mask : this & ~mask;
 }
 JSNum$proto.flip = function(idx) {
-var mask = 1 << idx;
-return this ^ mask;
+    var mask = 1 << idx;
+    return this ^ mask;
 }
 JSNum$proto.clear = function(index) {
-return this.set(index, false);
+    return this.set(index, false);
 }
 defineAttr(JSNum$proto, 'size', function(){ return 53; });
 defineAttr(JSNum$proto, 'magnitude', function(){ return Math.abs(this); });
+
 function $parseInteger(s) {
-//xkcd.com/208/
-if (s.match(/^[+-]?\d+(_\d+)*[kMGPT]?$/g) === null) {
-return null;
-}
-s = s.replace(/_/g, "");
-var mag = null;
-if (s.match(/[kMGTP]$/g) !== null) {
-mag = s[s.length-1];
-s = s.slice(0,-1);
-}
-var i = parseInt(s);
-if (s[0]=='+') s = s.substring(1);
-if (s[0]=='-') {
-while (s[1]=='0') s='-'+s.substring(2);
-} else {
-while (s[0]=='0') s=s.substring(1);
-}
-if (i.toString()!==s) return null;
-var factor=1;
-switch(mag) {
-case 'P':factor*=1000;
-case 'T':factor*=1000;
-case 'G':factor*=1000;
-case 'M':factor*=1000;
-case 'k':factor*=1000;
-}
-return isNaN(i) ? null : i*factor;
+    //xkcd.com/208/
+    if (s.match(/^[+-]?\d+(_\d+)*[kMGPT]?$/g) === null) {
+        return null;
+    }
+    s = s.replace(/_/g, "");
+    var mag = null;
+    if (s.match(/[kMGTP]$/g) !== null) {
+        mag = s[s.length-1];
+        s = s.slice(0,-1);
+    }
+    var i = parseInt(s);
+    if (s[0]=='+') s = s.substring(1);
+    if (s[0]=='-') {
+        while (s[1]=='0') s='-'+s.substring(2);
+    } else {
+        while (s[0]=='0') s=s.substring(1);
+    }
+    if (i.toString()!==s) return null;
+    var factor=1;
+    switch(mag) {
+        case 'P':factor*=1000;
+        case 'T':factor*=1000;
+        case 'G':factor*=1000;
+        case 'M':factor*=1000;
+        case 'k':factor*=1000;
+    }
+    return isNaN(i) ? null : i*factor;
 }
 function $parseFloat(s) { return Float(parseFloat(s)); }
+
 defineAttr(JSNum$proto, 'undefined', function(){ return isNaN(this); });
 defineAttr(JSNum$proto, 'finite', function(){ return this!=Infinity && this!=-Infinity && !isNaN(this); });
 defineAttr(JSNum$proto, 'infinite', function(){ return this==Infinity || this==-Infinity; });
 defineAttr(JSNum$proto, 'strictlyPositive', function(){ return this>0 || (this==0 && (1/this==Infinity)); });
 defineAttr(JSNum$proto, 'strictlyNegative', function() { return this<0 || (this==0 && (1/this==-Infinity)); });
+
 var $infinity = Float(Infinity);
 function getInfinity() { return $infinity; }
 getInfinity.$$metamodel$$={mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['infinity']};
 //TODO metamodel
 //function getNegativeInfinity() { return Float(-Infinity); }
+
 exports.Integer=Integer;
 exports.Float=Float;
 exports.getInfinity=getInfinity;
 exports.parseInteger=$parseInteger;
 exports.parseFloat=$parseFloat;
 function String$(value,size) {
-if (value && value.getT$name && value.getT$name() == 'ceylon.language::String') {
-return value;
-}
-var that = new String(value);
-that.codePoints = size;
-return that;
+    if (value && value.getT$name && value.getT$name() == 'ceylon.language::String') {
+        return value;
+    }
+    var that = new String(value);
+    that.codePoints = size;
+    return that;
 }
 String$.$$metamodel$$={$ps:[],$an:function(){return[shared(),native(),final()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['String']};
+
 initExistingType(String$, String, 'ceylon.language::String', Object$, Sequential, Comparable,
-Ranged, Summable, Cloneable);
+        Ranged, Summable, Cloneable);
 var origStrToString = String.prototype.toString;
 inheritProto(String$, Object$, Sequential, Comparable, Ranged, Summable,
-Cloneable);
+        Cloneable);
 var String$proto = String$.$$.prototype;
 String$proto.$$targs$$={Element:{t:Character}, Absent:{t:Null}};
 String$proto.getT$name = function() {
-return String$.$$.T$name;
+    return String$.$$.T$name;
 }
 String$proto.getT$all = function() {
-return String$.$$.T$all;
+    return String$.$$.T$all;
 }
 String$proto.toString = origStrToString;
 defineAttr(String$proto, 'string', function(){ return this; });
 String$proto.plus = function(other) {
-var size = this.codePoints + other.codePoints;
-return String$(this+other, isNaN(size)?undefined:size);
+    var size = this.codePoints + other.codePoints;
+    return String$(this+other, isNaN(size)?undefined:size);
 }
 String$proto.equals = function(other) {
-if (other.constructor===String) {
-return other.valueOf()===this.valueOf();
-} else if (isOfType(other, {t:Iterable, a:{Element:{t:Character}}})) {
-if (other.size===this.size) {
-for (var i=0;i<this.size;i++) {
-if (!this.get(i).equals(other.get(i))) return false;
-}
-return true;
-}
-}
-return false;
+    if (other.constructor===String) {
+        return other.valueOf()===this.valueOf();
+    } else if (isOfType(other, {t:Iterable, a:{Element:{t:Character}}})) {
+        if (other.size===this.size) {
+            for (var i=0;i<this.size;i++) {
+                if (!this.get(i).equals(other.get(i))) return false;
+            }
+            return true;
+        }
+    }
+    return false;
 }
 String$proto.compare = function(other) {
-var cmp = this.localeCompare(other);
-return cmp===0 ? equal : (cmp<0 ? smaller:larger);
+    var cmp = this.localeCompare(other);
+    return cmp===0 ? equal : (cmp<0 ? smaller:larger);
 }
 defineAttr(String$proto, 'uppercased', function(){ return String$(this.toUpperCase()); });
 defineAttr(String$proto, 'lowercased', function(){ return String$(this.toLowerCase()); });
 defineAttr(String$proto, 'size', function() {
-if (this.codePoints===undefined) {
-this.codePoints = countCodepoints(this);
-}
-return this.codePoints;
+    if (this.codePoints===undefined) {
+        this.codePoints = countCodepoints(this);
+    }
+    return this.codePoints;
 });
 defineAttr(String$proto, 'lastIndex', function(){ return this.size.equals(0) ? null : this.size.predecessor; });
 String$proto.span = function(from, to) {
-if (from > to) {
-return this.segment(to, from-to+1).reversed;
-}
-return this.segment(from, to-from+1);
+    if (from > to) {
+        return this.segment(to, from-to+1).reversed;
+    }
+    return this.segment(from, to-from+1);
 }
 String$proto.spanFrom = function(from) {
-return this.span(from, 0x7fffffff);
+    return this.span(from, 0x7fffffff);
 }
 String$proto.spanTo = function(to) {
-return to < 0 ? String$('', 0) : this.span(0, to);
+    return to < 0 ? String$('', 0) : this.span(0, to);
 }
 String$proto.segment = function(from, len) {
-var fromIndex = from;
-var maxCount = len + fromIndex;
-if (fromIndex < 0) {fromIndex = 0;}
-var i1 = 0;
-var count = 0;
-for (; i1<this.length && count<fromIndex; ++i1, ++count) {
-if ((this.charCodeAt(i1)&0xfc00) === 0xd800) {++i1}
-}
-var i2 = i1;
-for (; i2<this.length && count<maxCount; ++i2, ++count) {
-if ((this.charCodeAt(i2)&0xfc00) === 0xd800) {++i2}
-}
-if (i2 >= this.length) {
-this.codePoints = count;
-if (fromIndex === 0) {return this;}
-}
-return String$(this.substring(i1, i2), count-fromIndex);
+    var fromIndex = from;
+    var maxCount = len + fromIndex;
+    if (fromIndex < 0) {fromIndex = 0;}
+    var i1 = 0;
+    var count = 0;
+    for (; i1<this.length && count<fromIndex; ++i1, ++count) {
+        if ((this.charCodeAt(i1)&0xfc00) === 0xd800) {++i1}
+    }
+    var i2 = i1;
+    for (; i2<this.length && count<maxCount; ++i2, ++count) {
+        if ((this.charCodeAt(i2)&0xfc00) === 0xd800) {++i2}
+    }
+    if (i2 >= this.length) {
+        this.codePoints = count;
+        if (fromIndex === 0) {return this;}
+    }
+    return String$(this.substring(i1, i2), count-fromIndex);
 }
 defineAttr(String$proto, 'empty', function() {
-return this.length===0;
+    return this.length===0;
 });
 String$proto.longerThan = function(length) {
-if (this.codePoints!==undefined) {return this.codePoints>length}
-if (this.length <= length) {return false}
-if (this.length<<1 > length) {return true}
-this.codePoints = countCodepoints(this);
-return this.codePoints>length;
+    if (this.codePoints!==undefined) {return this.codePoints>length}
+    if (this.length <= length) {return false}
+    if (this.length<<1 > length) {return true}
+    this.codePoints = countCodepoints(this);
+    return this.codePoints>length;
 }
 String$proto.shorterThan = function(length) {
-if (this.codePoints!==undefined) {return this.codePoints<length}
-if (this.length < length) {return true}
-if (this.length<<1 >= length) {return false}
-this.codePoints = countCodepoints(this);
-return this.codePoints<length;
+    if (this.codePoints!==undefined) {return this.codePoints<length}
+    if (this.length < length) {return true}
+    if (this.length<<1 >= length) {return false}
+    this.codePoints = countCodepoints(this);
+    return this.codePoints<length;
 }
 String$proto.iterator= function() {
-return this.length === 0 ? getEmptyIterator() : StringIterator(this);
+	return this.length === 0 ? getEmptyIterator() : StringIterator(this);
 }
 String$proto.get = function(index) {
-if (index<0 || index>=this.length) {return null}
-var i = 0;
-for (var count=0; count<index; count++) {
-if ((this.charCodeAt(i)&0xfc00) === 0xd800) {++i}
-if (++i >= this.length) {return null}
-}
-return Character(codepointFromString(this, i));
+    if (index<0 || index>=this.length) {return null}
+    var i = 0;
+    for (var count=0; count<index; count++) {
+        if ((this.charCodeAt(i)&0xfc00) === 0xd800) {++i}
+        if (++i >= this.length) {return null}
+    }
+    return Character(codepointFromString(this, i));
 }
 defineAttr(String$proto, 'trimmed', function() {
-// make use of the fact that all WS characters are single UTF-16 code units
-var from = 0;
-while (from<this.length && (this.charCodeAt(from) in $WS)) {++from}
-var to = this.length;
-if (from < to) {
-do {--to} while (from<to && (this.charCodeAt(to) in $WS));
-++to;
-}
-if (from===0 && to===this.length) {return this;}
-var result = String$(this.substring(from, to));
-if (this.codePoints !== undefined) {
-result.codePoints = this.codePoints - from - this.length + to;
-}
-return result;
+    // make use of the fact that all WS characters are single UTF-16 code units
+    var from = 0;
+    while (from<this.length && (this.charCodeAt(from) in $WS)) {++from}
+    var to = this.length;
+    if (from < to) {
+        do {--to} while (from<to && (this.charCodeAt(to) in $WS));
+        ++to;
+    }
+    if (from===0 && to===this.length) {return this;}
+    var result = String$(this.substring(from, to));
+    if (this.codePoints !== undefined) {
+        result.codePoints = this.codePoints - from - this.length + to;
+    }
+    return result;
 });
 String$proto.trimCharacters = function(/*Category*/chars) {
-var from = 0;
-while (from<this.length && chars.contains(this.get(from))) {++from}
-var to = this.length;
-if (from < to) {
-do {--to} while (from<to && chars.contains(this.get(to)));
-++to;
-}
-if (from===0 && to===this.length) {return this;}
-var result = String$(this.substring(from, to));
-if (this.codePoints !== undefined) {
-result.codePoints = this.codePoints - from - this.length + to;
-}
-return result;
+    var from = 0;
+    while (from<this.length && chars.contains(this.get(from))) {++from}
+    var to = this.length;
+    if (from < to) {
+        do {--to} while (from<to && chars.contains(this.get(to)));
+        ++to;
+    }
+    if (from===0 && to===this.length) {return this;}
+    var result = String$(this.substring(from, to));
+    if (this.codePoints !== undefined) {
+        result.codePoints = this.codePoints - from - this.length + to;
+    }
+    return result;
 }
 String$proto.trimLeadingCharacters = function(/*Category*/chars) {
-var from = 0;
-while (from<this.length && chars.contains(this.get(from))) {++from}
-if (from===0) {return this;}
-var result = String$(this.substring(from, this.length));
-if (this.codePoints !== undefined) {
-result.codePoints = this.codePoints - from;
-}
-return result;
+    var from = 0;
+    while (from<this.length && chars.contains(this.get(from))) {++from}
+    if (from===0) {return this;}
+    var result = String$(this.substring(from, this.length));
+    if (this.codePoints !== undefined) {
+        result.codePoints = this.codePoints - from;
+    }
+    return result;
 }
 String$proto.trimTrailingCharacters = function(/*Category*/chars) {
-var to = this.length;
-if (to > 0) {
-do {--to} while (to>=0 && chars.contains(this.get(to)));
-++to;
+    var to = this.length;
+    if (to > 0) {
+        do {--to} while (to>=0 && chars.contains(this.get(to)));
+        ++to;
+    }
+    if (to===this.length) {return this;}
+    else if (to===0) { return String$("",0); }
+    var result = String$(this.substring(0, to));
+    if (this.codePoints !== undefined) {
+        result.codePoints = this.codePoints - this.length + to;
+    }
+    return result;
 }
-if (to===this.length) {return this;}
-else if (to===0) { return String$("",0); }
-var result = String$(this.substring(0, to));
-if (this.codePoints !== undefined) {
-result.codePoints = this.codePoints - this.length + to;
-}
-return result;
-}
+
 String$proto.initial = function(length) {
-if (length >= this.codePoints) {return this}
-var count = 0;
-var i = 0;
-for (; i<this.length && count<length; ++i, ++count) {
-if ((this.charCodeAt(i)&0xfc00) === 0xd800) {++i}
-}
-if (i >= this.length) {
-this.codePoints = count;
-return this;
-}
-return String$(this.substr(0, i), count);
+    if (length >= this.codePoints) {return this}
+    var count = 0;
+    var i = 0;
+    for (; i<this.length && count<length; ++i, ++count) {
+        if ((this.charCodeAt(i)&0xfc00) === 0xd800) {++i}
+    }
+    if (i >= this.length) {
+        this.codePoints = count;
+        return this;
+    }
+    return String$(this.substr(0, i), count);
 }
 String$proto.terminal = function(length) {
-if (length >= this.codePoints) {return this}
-var count = 0;
-var i = this.length;
-for (; i>0 && count<length; ++count) {
-if ((this.charCodeAt(--i)&0xfc00) === 0xdc00) {--i}
-}
-if (i <= 0) {
-this.codePoints = count;
-return this;
-}
-return String$(this.substr(i), count);
+    if (length >= this.codePoints) {return this}
+    var count = 0;
+    var i = this.length;
+    for (; i>0 && count<length; ++count) {
+        if ((this.charCodeAt(--i)&0xfc00) === 0xdc00) {--i}
+    }
+    if (i <= 0) {
+        this.codePoints = count;
+        return this;
+    }
+    return String$(this.substr(i), count);
 }
 defineAttr(String$proto, 'hash', function() {
-if (this._hash === undefined) {
-for (var i = 0; i < this.length; i++) {
-var c = this.charCodeAt(i);
-this._hash += c + (this._hash << 10);
-this._hash ^= this._hash >> 6;
-}
-this._hash += this._hash << 3;
-this._hash ^= this._hash >> 11;
-this._hash += this._hash << 15;
-this._hash = this._hash & ((1 << 29) - 1);
-}
-return this._hash;
+    if (this._hash === undefined) {
+        for (var i = 0; i < this.length; i++) {
+          var c = this.charCodeAt(i);
+          this._hash += c + (this._hash << 10);
+          this._hash ^= this._hash >> 6;
+    }
+
+    this._hash += this._hash << 3;
+    this._hash ^= this._hash >> 11;
+    this._hash += this._hash << 15;
+    this._hash = this._hash & ((1 << 29) - 1);
+  }
+  return this._hash;
 });
+
 function cmpSubString(str, subStr, offset) {
-for (var i=0; i<subStr.length; ++i) {
-if (str.charCodeAt(offset+i)!==subStr.charCodeAt(i)) {return false}
-}
-return true;
+    for (var i=0; i<subStr.length; ++i) {
+        if (str.charCodeAt(offset+i)!==subStr.charCodeAt(i)) {return false}
+    }
+    return true;
 }
 String$proto.startsWith = function(str) {
-if (str.length > this.length) {return false}
-return cmpSubString(this, str, 0);
+    if (str.length > this.length) {return false}
+    return cmpSubString(this, str, 0);
 }
 String$proto.endsWith = function(str) {
-var start = this.length - str.length
-if (start < 0) {return false}
-return cmpSubString(this, str, start);
+    var start = this.length - str.length
+    if (start < 0) {return false}
+    return cmpSubString(this, str, start);
 }
 String$proto.contains = function(sub) {
-var str;
-if (sub.constructor === String) {str = sub}
-else if (sub.constructor !== Character.$$) {return false}
-else {str = codepointToString(sub.value)}
-return this.indexOf(str) >= 0;
+    var str;
+    if (sub.constructor === String) {str = sub}
+    else if (sub.constructor !== Character.$$) {return false}
+    else {str = codepointToString(sub.value)}
+    return this.indexOf(str) >= 0;
 }
 defineAttr(String$proto, 'normalized', function() {
-// make use of the fact that all WS characters are single UTF-16 code units
-var result = "";
-var len = 0;
-var first = true;
-var i1 = 0;
-while (i1 < this.length) {
-while (this.charCodeAt(i1) in $WS) {
-if (++i1 >= this.length) {return String$(result)}
-}
-var i2 = i1;
-var cc = this.charCodeAt(i2);
-do {
-++i2;
-if ((cc&0xfc00) === 0xd800) {++i2}
-++len;
-cc = this.charCodeAt(i2);
-} while (i2<this.length && !(cc in $WS));
-if (!first) {
-result += " ";
-++len;
-}
-first = false;
-result += this.substring(i1, i2);
-i1 = i2+1;
-}
-return String$(result, len);
+    // make use of the fact that all WS characters are single UTF-16 code units
+    var result = "";
+    var len = 0;
+    var first = true;
+    var i1 = 0;
+    while (i1 < this.length) {
+        while (this.charCodeAt(i1) in $WS) {
+            if (++i1 >= this.length) {return String$(result)}
+        }
+        var i2 = i1;
+        var cc = this.charCodeAt(i2);
+        do {
+            ++i2;
+            if ((cc&0xfc00) === 0xd800) {++i2}
+            ++len;
+            cc = this.charCodeAt(i2);
+        } while (i2<this.length && !(cc in $WS));
+        if (!first) {
+            result += " ";
+            ++len;
+        }
+        first = false;
+        result += this.substring(i1, i2);
+        i1 = i2+1;
+    }
+    return String$(result, len);
 });
 String$proto.firstOccurrence = function(sub) {
-if (sub.length == 0) {return 0}
-var bound = this.length - sub.length;
-for (var i=0, count=0; i<=bound; ++count) {
-if (cmpSubString(this, sub, i)) {return count}
-if ((this.charCodeAt(i++)&0xfc00) === 0xd800) {++i}
-}
-return null;
+    if (sub.length == 0) {return 0}
+    var bound = this.length - sub.length;
+    for (var i=0, count=0; i<=bound; ++count) {
+        if (cmpSubString(this, sub, i)) {return count}
+        if ((this.charCodeAt(i++)&0xfc00) === 0xd800) {++i}
+    }
+    return null;
 }
 String$proto.lastOccurrence = function(sub) {
-if (sub.length == 0) {return this.length>0 ? this.length-1 : 0}
-for (var i=this.length-sub.length; i>=0; --i) {
-if (cmpSubString(this, sub, i)) {
-for (var count=0; i>0; ++count) {
-if ((this.charCodeAt(--i)&0xfc00) === 0xdc00) {--i}
-}
-return count;
-}
-}
-return null;
+    if (sub.length == 0) {return this.length>0 ? this.length-1 : 0}
+    for (var i=this.length-sub.length; i>=0; --i) {
+        if (cmpSubString(this, sub, i)) {
+            for (var count=0; i>0; ++count) {
+                if ((this.charCodeAt(--i)&0xfc00) === 0xdc00) {--i}
+            }
+            return count;
+        }
+    }
+    return null;
 }
 String$proto.firstCharacterOccurrence = function(subc) {
-for (var i=0, count=0; i<this.length; count++) {
-var cp = this.charCodeAt(i++);
-if (((cp&0xfc00) === 0xd800) && i<this.length) {
-cp = (cp<<10) + this.charCodeAt(i++) - 0x35fdc00;
-}
-if (cp === subc.value) {return count;}
-}
-this.codePoints = count;
-return null;
+    for (var i=0, count=0; i<this.length; count++) {
+        var cp = this.charCodeAt(i++);
+        if (((cp&0xfc00) === 0xd800) && i<this.length) {
+            cp = (cp<<10) + this.charCodeAt(i++) - 0x35fdc00;
+        }
+        if (cp === subc.value) {return count;}
+    }
+    this.codePoints = count;
+    return null;
 }
 String$proto.lastCharacterOccurrence = function(subc) {
-for (var i=this.length-1, count=0; i>=0; count++) {
-var cp = this.charCodeAt(i--);
-if (((cp%0xfc00) === 0xdc00) && i>=0) {
-cp = (this.charCodeAt(i--)<<10) + cp - 0x35fdc00;
-}
-if (cp === subc.value) {
-if (this.codePoints === undefined) {this.codePoints = countCodepoints(this);}
-return this.codePoints - count - 1;
-}
-}
-this.codePoints = count;
-return null;
+    for (var i=this.length-1, count=0; i>=0; count++) {
+        var cp = this.charCodeAt(i--);
+        if (((cp%0xfc00) === 0xdc00) && i>=0) {
+           cp = (this.charCodeAt(i--)<<10) + cp - 0x35fdc00;
+        }
+        if (cp === subc.value) {
+            if (this.codePoints === undefined) {this.codePoints = countCodepoints(this);}
+            return this.codePoints - count - 1;
+        }
+    }
+    this.codePoints = count;
+    return null;
 }
 defineAttr(String$proto, 'characters', function() {
-return this.length>0 ? this:getEmpty();
+    return this.length>0 ? this:getEmpty();
 });
 defineAttr(String$proto, 'first', function() { return this.get(0); });
 defineAttr(String$proto, 'last', function(){ return this.size>0?this.get(this.size.predecessor):null; });
 defineAttr(String$proto, 'keys', function() {
-//TODO implement!!!
-return this.size > 0 ? Range(0, this.size.predecessor, {Element:{t:Integer}}) : getEmpty();
+    //TODO implement!!!
+    return this.size > 0 ? Range(0, this.size.predecessor, {Element:{t:Integer}}) : getEmpty();
 });
 String$proto.join = function(strings) {
-var it = strings.iterator();
-var str = it.next();
-if (str === getFinished()) {return String$("", 0);}
-if (this.codePoints === undefined) {this.codePoints = countCodepoints(this)}
-var result = str;
-var len = str.codePoints;
-while ((str = it.next()) !== getFinished()) {
-result += this;
-result += str;
-len += this.codePoints + str.codePoints;
-}
-return String$(result, isNaN(len)?undefined:len);
+    var it = strings.iterator();
+    var str = it.next();
+    if (str === getFinished()) {return String$("", 0);}
+    if (this.codePoints === undefined) {this.codePoints = countCodepoints(this)}
+    var result = str;
+    var len = str.codePoints;
+    while ((str = it.next()) !== getFinished()) {
+        result += this;
+        result += str;
+        len += this.codePoints + str.codePoints;
+    }
+    return String$(result, isNaN(len)?undefined:len);
 }
 function isWhitespace(c) { return c.value in $WS; }
 String$proto.$split = function(sep, discard, group) {
-// shortcut for empty input
-if (this.length === 0) {return Singleton(this, {Element:{t:String$}}); }
-if (sep === undefined) {sep = isWhitespace}
-if (discard === undefined) {discard = true}
-if (group === undefined) {group = true}
-//TODO: return an iterable which determines the next token on demand
-var tokens = [];
-var tokenBegin = 0;
-var tokenBeginCount = 0;
-var count = 0;
-var value = this;
-var separator = true;
-function pushToken(tokenEnd) {
-tokens.push(String$(value.substring(tokenBegin, tokenEnd), count-tokenBeginCount));
-}
-if (isOfType(sep, {t:Iterable})) {
-var sepChars = {}
-var it = sep.iterator();
-var c; while ((c=it.next()) !== getFinished()) {sepChars[c.value] = true}
-for (var i=0; i<this.length;) {
-var j = i;
-var cp = this.charCodeAt(i++);
-if ((cp&0xfc00)===0xd800 && i<this.length) {
-cp = (cp<<10) + this.charCodeAt(i++) - 0x35fdc00;
-}
-if (cp in sepChars) {
-if (!group) {
-// ungrouped separator: store preceding token
-pushToken(j);
-if (!discard) {
-// store separator as token
-tokens.push(String$(this.substring(j, i), 1));
-}
-// next token begins after this character
-tokenBegin = i;
-tokenBeginCount = count + 1;
-} else if (!separator || (j == 0)) {
-// begin of grouped separator: store preceding token
-pushToken(j);
-// separator token begins at this character
-tokenBegin = j;
-tokenBeginCount = count;
-}
-separator = true;
-} else if (separator) {
-// first non-separator after separators or at beginning
-if (!discard && (tokenBegin != j)) {
-// store preceding grouped separator (if group=false then tokenBegin=j)
-pushToken(j);
-}
-// non-separator token begins at this character
-tokenBegin = j;
-tokenBeginCount = count;
-separator = false;
-}
-}
-if (tokenBegin != i) {
-pushToken(i);
-}
-} else {
-for (var i=0; i<this.length; ++count) {
-var j = i;
-var cp = this.charCodeAt(i++);
-if ((cp&0xfc00)===0xd800 && i<this.length) {
-cp = (cp<<10) + this.charCodeAt(i++) - 0x35fdc00;
-}
-if (sep(Character(cp))) {
-if (!group) {
-// ungrouped separator: store preceding token
-pushToken(j);
-if (!discard) {
-// store separator as token
-tokens.push(String$(this.substring(j, i), 1));
-}
-// next token begins after this character
-tokenBegin = i;
-tokenBeginCount = count + 1;
-} else if (!separator || (j == 0)) {
-// begin of grouped separator: store preceding token
-pushToken(j);
-// separator token begins at this character
-tokenBegin = j;
-tokenBeginCount = count;
-}
-separator = true;
-} else if (separator) {
-// first non-separator after separators or at beginning
-if (!discard && (tokenBegin != j)) {
-// store preceding grouped separator (if group=false then tokenBegin=j)
-pushToken(j);
-}
-// non-separator token begins at this character
-tokenBegin = j;
-tokenBeginCount = count;
-separator = false;
-}
-}
-if ((tokenBegin != i) && !(separator && discard)) {
-// store preceding token (may be a grouped separator)
-pushToken(i);
-}
-if (separator) {
-// if last character was a separator then there's another empty token
-tokens.push(String$("", 0));
-}
-}
-this.codePoints = count;
-return ArraySequence(tokens, {Element:{t:String$}});
+    // shortcut for empty input
+    if (this.length === 0) {return Singleton(this, {Element:{t:String$}}); }
+
+    if (sep === undefined) {sep = isWhitespace}
+    if (discard === undefined) {discard = true}
+    if (group === undefined) {group = true}
+
+    //TODO: return an iterable which determines the next token on demand
+    var tokens = [];
+    var tokenBegin = 0;
+    var tokenBeginCount = 0;
+    var count = 0;
+    var value = this;
+    var separator = true;
+
+    function pushToken(tokenEnd) {
+        tokens.push(String$(value.substring(tokenBegin, tokenEnd), count-tokenBeginCount));
+    }
+    if (isOfType(sep, {t:Iterable})) {
+        var sepChars = {}
+        var it = sep.iterator();
+        var c; while ((c=it.next()) !== getFinished()) {sepChars[c.value] = true}
+        for (var i=0; i<this.length;) {
+            var j = i;
+            var cp = this.charCodeAt(i++);
+            if ((cp&0xfc00)===0xd800 && i<this.length) {
+                cp = (cp<<10) + this.charCodeAt(i++) - 0x35fdc00;
+            }
+            if (cp in sepChars) {
+                if (!group) {
+                    // ungrouped separator: store preceding token
+                    pushToken(j);
+                    if (!discard) {
+                        // store separator as token
+                        tokens.push(String$(this.substring(j, i), 1));
+                    }
+                    // next token begins after this character
+                    tokenBegin = i;
+                    tokenBeginCount = count + 1;
+                } else if (!separator || (j == 0)) {
+                    // begin of grouped separator: store preceding token
+                    pushToken(j);
+                    // separator token begins at this character
+                    tokenBegin = j;
+                    tokenBeginCount = count;
+                }
+                separator = true;
+
+            } else if (separator) {
+                // first non-separator after separators or at beginning
+                if (!discard && (tokenBegin != j)) {
+                    // store preceding grouped separator (if group=false then tokenBegin=j)
+                    pushToken(j);
+                }
+                // non-separator token begins at this character
+                tokenBegin = j;
+                tokenBeginCount = count;
+                separator = false;
+            }
+        }
+        if (tokenBegin != i) {
+            pushToken(i);
+        }
+    } else {
+        for (var i=0; i<this.length; ++count) {
+            var j = i;
+            var cp = this.charCodeAt(i++);
+            if ((cp&0xfc00)===0xd800 && i<this.length) {
+                cp = (cp<<10) + this.charCodeAt(i++) - 0x35fdc00;
+            }
+
+            if (sep(Character(cp))) {
+                if (!group) {
+                    // ungrouped separator: store preceding token
+                    pushToken(j);
+                    if (!discard) {
+                        // store separator as token
+                        tokens.push(String$(this.substring(j, i), 1));
+                    }
+                    // next token begins after this character
+                    tokenBegin = i;
+                    tokenBeginCount = count + 1;
+                } else if (!separator || (j == 0)) {
+                    // begin of grouped separator: store preceding token
+                    pushToken(j);
+                    // separator token begins at this character
+                    tokenBegin = j;
+                    tokenBeginCount = count;
+                }
+                separator = true;
+
+            } else if (separator) {
+                // first non-separator after separators or at beginning
+                if (!discard && (tokenBegin != j)) {
+                    // store preceding grouped separator (if group=false then tokenBegin=j)
+                    pushToken(j);
+                }
+                // non-separator token begins at this character
+                tokenBegin = j;
+                tokenBeginCount = count;
+                separator = false;
+            }
+        }
+
+        if ((tokenBegin != i) && !(separator && discard)) {
+            // store preceding token (may be a grouped separator)
+            pushToken(i);
+        }
+        if (separator) {
+            // if last character was a separator then there's another empty token
+            tokens.push(String$("", 0));
+        }
+    }
+
+    this.codePoints = count;
+    return ArraySequence(tokens, {Element:{t:String$}});
 }
 defineAttr(String$proto, 'reversed', function() {
-var result = "";
-for (var i=this.length; i>0;) {
-var cc = this.charCodeAt(--i);
-if ((cc&0xfc00)!==0xdc00 || i===0) {
-result += this.charAt(i);
-} else {
-result += this.substr(--i, 2);
-}
-}
-return String$(result);
+    var result = "";
+    for (var i=this.length; i>0;) {
+        var cc = this.charCodeAt(--i);
+        if ((cc&0xfc00)!==0xdc00 || i===0) {
+            result += this.charAt(i);
+        } else {
+            result += this.substr(--i, 2);
+        }
+    }
+    return String$(result);
 });
 String$proto.$replace = function(sub, repl) {
-return String$(this.replace(new RegExp(sub, 'g'), repl));
+    return String$(this.replace(new RegExp(sub, 'g'), repl));
 }
 String$proto.repeat = function(times) {
-var sb = StringBuilder();
-for (var i = 0; i < times; i++) {
-sb.append(this);
-}
-return sb.string;
+    var sb = StringBuilder();
+    for (var i = 0; i < times; i++) {
+        sb.append(this);
+    }
+    return sb.string;
 }
 function isNewline(c) { return c.value===10; }
 defineAttr(String$proto, 'lines', function() {
-return this.$split(isNewline, true);
+    return this.$split(isNewline, true);
 });
 String$proto.occurrences = function(sub) {
-if (sub.length == 0) {return 0}
-var ocs = [];
-var bound = this.length - sub.length;
-for (var i=0, count=0; i<=bound; ++count) {
-if (cmpSubString(this, sub, i)) {
-ocs.push(count);
-i+=sub.length;
-} else if ((this.charCodeAt(i++)&0xfc00) === 0xd800) {++i;}
-}
-return ocs.length > 0 ? ocs : getEmpty();
+    if (sub.length == 0) {return 0}
+    var ocs = [];
+    var bound = this.length - sub.length;
+    for (var i=0, count=0; i<=bound; ++count) {
+        if (cmpSubString(this, sub, i)) {
+            ocs.push(count);
+            i+=sub.length;
+        } else if ((this.charCodeAt(i++)&0xfc00) === 0xd800) {++i;}
+    }
+    return ocs.length > 0 ? ocs : getEmpty();
 }
 String$proto.$filter = function(f) {
-var r = Iterable.$$.prototype.$filter.apply(this, [f]);
-return string(r);
+    var r = Iterable.$$.prototype.$filter.apply(this, [f]);
+    return string(r);
 }
 String$proto.skipping = function(skip) {
-if (skip==0) return this;
-return this.segment(skip, this.size);
+    if (skip==0) return this;
+    return this.segment(skip, this.size);
 }
 String$proto.taking = function(take) {
-if (take==0) return getEmpty();
-return this.segment(0, take);
+    if (take==0) return getEmpty();
+    return this.segment(0, take);
 }
 String$proto.by = function(step) {
-var r = Iterable.$$.prototype.by.apply(this, [step]);
-return string(r);
+    var r = Iterable.$$.prototype.by.apply(this, [step]);
+    return string(r);
 }
 String$proto.$sort = function(f) {
-var r = Iterable.$$.prototype.$sort.apply(this, [f]);
-return string(r);
+    var r = Iterable.$$.prototype.$sort.apply(this, [f]);
+    return string(r);
 }
 defineAttr(String$proto, 'coalesced', function(){ return this; });
+
 function StringIterator(string) {
-var that = new StringIterator.$$;
-that.str = string;
-that.index = 0;
-return that;
+    var that = new StringIterator.$$;
+    that.str = string;
+    that.index = 0;
+    return that;
 }
 StringIterator.$$metamodel$$={$nm:'StringIterator',$mt:'cls',$ps:[{t:String$}],$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['Iterator']};
+
 initTypeProto(StringIterator, 'ceylon.language::StringIterator', $init$Basic(), Iterator);
 var StringIterator$proto = StringIterator.$$.prototype;
 StringIterator$proto.$$targs$$={Element:{t:Character}, Absent:{t:Null}};
 StringIterator$proto.next = function() {
-if (this.index >= this.str.length) { return getFinished(); }
-var first = this.str.charCodeAt(this.index++);
-if ((first&0xfc00) !== 0xd800 || this.index >= this.str.length) {
-return Character(first);
+    if (this.index >= this.str.length) { return getFinished(); }
+    var first = this.str.charCodeAt(this.index++);
+    if ((first&0xfc00) !== 0xd800 || this.index >= this.str.length) {
+        return Character(first);
+    }
+    return Character((first<<10) + this.str.charCodeAt(this.index++) - 0x35fdc00);
 }
-return Character((first<<10) + this.str.charCodeAt(this.index++) - 0x35fdc00);
-}
+
 function countCodepoints(str) {
-var count = 0;
-for (var i=0; i<str.length; ++i) {
-++count;
-if ((str.charCodeAt(i)&0xfc00) === 0xd800) {++i}
-}
-return count;
+    var count = 0;
+    for (var i=0; i<str.length; ++i) {
+        ++count;
+        if ((str.charCodeAt(i)&0xfc00) === 0xd800) {++i}
+    }
+    return count;
 }
 function codepointToString(cp) {
-if (cp <= 0xffff) {
-return String.fromCharCode(cp);
-}
-return String.fromCharCode((cp>>10)+0xd7c0, (cp&0x3ff)+0xdc00);
+    if (cp <= 0xffff) {
+        return String.fromCharCode(cp);
+    }
+    return String.fromCharCode((cp>>10)+0xd7c0, (cp&0x3ff)+0xdc00);
 }
 function codepointFromString(str, index) {
-var first = str.charCodeAt(index);
-if ((first&0xfc00) !== 0xd800) {return first}
-var second = str.charCodeAt(index+1);
-return isNaN(second) ? first : ((first<<10) + second - 0x35fdc00);
+    var first = str.charCodeAt(index);
+    if ((first&0xfc00) !== 0xd800) {return first}
+    var second = str.charCodeAt(index+1);
+    return isNaN(second) ? first : ((first<<10) + second - 0x35fdc00);
 }
 exports.codepointFromString=codepointFromString;
+
 function Character(value) {
-if (value && value.getT$name && value.getT$name() === 'ceylon.language::Character') {
-return value;
-}
-var that = new Character.$$;
-that.value = value;
-return that;
+    if (value && value.getT$name && value.getT$name() === 'ceylon.language::Character') {
+        return value;
+    }
+    var that = new Character.$$;
+    that.value = value;
+    return that;
 }
 Character.$$metamodel$$={$ps:[],$an:function(){return[shared(),native(),final()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['Character']};
+
 initTypeProto(Character, 'ceylon.language::Character', Object$, Comparable, $init$Enumerable());
 var Character$proto = Character.$$.prototype;
 defineAttr(Character$proto, 'string', function(){ return String$(codepointToString(this.value)); });
 Character$proto.equals = function(other) {
-return other.constructor===Character.$$ && other.value===this.value;
+    return other.constructor===Character.$$ && other.value===this.value;
 }
 defineAttr(Character$proto, 'hash', function(){ return this.value; });
 Character$proto.compare = function(other) {
-return this.value===other.value ? equal
-: (this.value<other.value ? smaller:larger);
+    return this.value===other.value ? equal
+                                    : (this.value<other.value ? smaller:larger);
 }
 defineAttr(Character$proto, 'uppercased', function() {
-var ucstr = codepointToString(this.value).toUpperCase();
-return Character(codepointFromString(ucstr, 0));
+    var ucstr = codepointToString(this.value).toUpperCase();
+    return Character(codepointFromString(ucstr, 0));
 });
 defineAttr(Character$proto, 'lowercased', function() {
-var lcstr = codepointToString(this.value).toLowerCase();
-return Character(codepointFromString(lcstr, 0));
+    var lcstr = codepointToString(this.value).toLowerCase();
+    return Character(codepointFromString(lcstr, 0));
 });
 defineAttr(Character$proto, 'titlecased', function() {
-var tc = $toTitlecase[this.value];
-return tc===undefined ? this.uppercased : Character(tc);
+    var tc = $toTitlecase[this.value];
+    return tc===undefined ? this.uppercased : Character(tc);
 });
 var $WS={0x9:true, 0xa:true, 0xb:true, 0xc:true, 0xd:true, 0x20:true, 0x85:true,
-0x1680:true, 0x180e:true, 0x2028:true, 0x2029:true, 0x205f:true, 0x3000:true,
-0x1c:true, 0x1d:true, 0x1e:true, 0x1f:true};
+    0x1680:true, 0x180e:true, 0x2028:true, 0x2029:true, 0x205f:true, 0x3000:true,
+    0x1c:true, 0x1d:true, 0x1e:true, 0x1f:true};
 for (var i=0x2000; i<0x2007; i++) { $WS[i]=true; }
 for (var i=0x2008; i<=0x200a; i++) { $WS[i]=true; }
 var $digit={0x30:true, 0x660:true, 0x6f0:true, 0x7c0:true, 0x966:true, 0x9e6:true, 0xa66:true,
-0xae6:true, 0xb66:true, 0xbe6:true, 0xc66:true, 0xce6:true, 0xd66:true, 0xe50:true,
-0xed0:true, 0xf20:true, 0x1040:true, 0x1090:true, 0x17e0:true, 0x1810:true, 0x1946:true,
-0x19d0:true, 0x1a80:true, 0x1a90:true, 0x1b50:true, 0x1bb0:true, 0x1c40:true, 0x1c50:true,
-0xa620:true, 0xa8d0:true, 0xa900:true, 0xa9d0:true, 0xaa50:true, 0xabf0:true, 0xff10:true,
-0x104a0:true, 0x11066:true, 0x110f0:true, 0x11136:true, 0x111d0:true, 0x116c0:true}
+    0xae6:true, 0xb66:true, 0xbe6:true, 0xc66:true, 0xce6:true, 0xd66:true, 0xe50:true,
+    0xed0:true, 0xf20:true, 0x1040:true, 0x1090:true, 0x17e0:true, 0x1810:true, 0x1946:true,
+    0x19d0:true, 0x1a80:true, 0x1a90:true, 0x1b50:true, 0x1bb0:true, 0x1c40:true, 0x1c50:true,
+    0xa620:true, 0xa8d0:true, 0xa900:true, 0xa9d0:true, 0xaa50:true, 0xabf0:true, 0xff10:true,
+    0x104a0:true, 0x11066:true, 0x110f0:true, 0x11136:true, 0x111d0:true, 0x116c0:true}
 var $titlecase={
-0x1c5: [0x1c4, 0x1c6], 0x1c8: [0x1c7, 0x1c9], 0x1cb: [0x1ca, 0x1cc], 0x1f2: [0x1f1, 0x1f3],
-0x1f88: [undefined, 0x1f80], 0x1f89: [undefined, 0x1f81], 0x1f8a: [undefined, 0x1f82],
-0x1f8b: [undefined, 0x1f83], 0x1f8c: [undefined, 0x1f84], 0x1f8d: [undefined, 0x1f85],
-0x1f8e: [undefined, 0x1f86], 0x1f8f: [undefined, 0x1f87], 0x1f98: [undefined, 0x1f90],
-0x1f99: [undefined, 0x1f91], 0x1f9a: [undefined, 0x1f92], 0x1f9b: [undefined, 0x1f93],
-0x1f9c: [undefined, 0x1f94], 0x1f9d: [undefined, 0x1f95], 0x1f9e: [undefined, 0x1f96],
-0x1f9f: [undefined, 0x1f97], 0x1fa8: [undefined, 0x1fa0], 0x1fa9: [undefined, 0x1fa1],
-0x1faa: [undefined, 0x1fa2], 0x1fab: [undefined, 0x1fa3], 0x1fac: [undefined, 0x1fa4],
-0x1fad: [undefined, 0x1fa5], 0x1fae: [undefined, 0x1fa6], 0x1faf: [undefined, 0x1fa7],
-0x1fbc: [undefined, 0x1fb3], 0x1fcc: [undefined, 0x1fc3], 0x1ffc: [undefined, 0x1ff3]
+    0x1c5: [0x1c4, 0x1c6], 0x1c8: [0x1c7, 0x1c9], 0x1cb: [0x1ca, 0x1cc], 0x1f2: [0x1f1, 0x1f3],
+    0x1f88: [undefined, 0x1f80], 0x1f89: [undefined, 0x1f81], 0x1f8a: [undefined, 0x1f82],
+    0x1f8b: [undefined, 0x1f83], 0x1f8c: [undefined, 0x1f84], 0x1f8d: [undefined, 0x1f85],
+    0x1f8e: [undefined, 0x1f86], 0x1f8f: [undefined, 0x1f87], 0x1f98: [undefined, 0x1f90],
+    0x1f99: [undefined, 0x1f91], 0x1f9a: [undefined, 0x1f92], 0x1f9b: [undefined, 0x1f93],
+    0x1f9c: [undefined, 0x1f94], 0x1f9d: [undefined, 0x1f95], 0x1f9e: [undefined, 0x1f96],
+    0x1f9f: [undefined, 0x1f97], 0x1fa8: [undefined, 0x1fa0], 0x1fa9: [undefined, 0x1fa1],
+    0x1faa: [undefined, 0x1fa2], 0x1fab: [undefined, 0x1fa3], 0x1fac: [undefined, 0x1fa4],
+    0x1fad: [undefined, 0x1fa5], 0x1fae: [undefined, 0x1fa6], 0x1faf: [undefined, 0x1fa7],
+    0x1fbc: [undefined, 0x1fb3], 0x1fcc: [undefined, 0x1fc3], 0x1ffc: [undefined, 0x1ff3]
 }
 var $toTitlecase={
-0x1c6:0x1c5, 0x1c7:0x1c8, 0x1ca:0x1cb, 0x1f1:0x1f2,
-0x1c4:0x1c5, 0x1c9:0x1c8, 0x1cc:0x1cb, 0x1f3:0x1f2, 0x1f80:0x1f88, 0x1f81:0x1f89, 0x1f82:0x1f8a,
-0x1f83:0x1f8b, 0x1f84:0x1f8c, 0x1f85:0x1f8d, 0x1f86:0x1f8e, 0x1f87:0x1f8f, 0x1f90:0x1f98,
-0x1f91:0x1f99, 0x1f92:0x1f9a, 0x1f93:0x1f9b, 0x1f94:0x1f9c, 0x1f95:0x1f9d, 0x1f96:0x1f9e,
-0x1f97:0x1f9f, 0x1fa0:0x1fa8, 0x1fa1:0x1fa9, 0x1fa2:0x1faa, 0x1fa3:0x1fab, 0x1fa4:0x1fac,
-0x1fa5:0x1fad, 0x1fa6:0x1fae, 0x1fa7:0x1faf, 0x1fb3:0x1fbc, 0x1fc3:0x1fcc, 0x1ff3:0x1ffc
+    0x1c6:0x1c5, 0x1c7:0x1c8, 0x1ca:0x1cb, 0x1f1:0x1f2,
+    0x1c4:0x1c5, 0x1c9:0x1c8, 0x1cc:0x1cb, 0x1f3:0x1f2, 0x1f80:0x1f88, 0x1f81:0x1f89, 0x1f82:0x1f8a,
+    0x1f83:0x1f8b, 0x1f84:0x1f8c, 0x1f85:0x1f8d, 0x1f86:0x1f8e, 0x1f87:0x1f8f, 0x1f90:0x1f98,
+    0x1f91:0x1f99, 0x1f92:0x1f9a, 0x1f93:0x1f9b, 0x1f94:0x1f9c, 0x1f95:0x1f9d, 0x1f96:0x1f9e,
+    0x1f97:0x1f9f, 0x1fa0:0x1fa8, 0x1fa1:0x1fa9, 0x1fa2:0x1faa, 0x1fa3:0x1fab, 0x1fa4:0x1fac,
+    0x1fa5:0x1fad, 0x1fa6:0x1fae, 0x1fa7:0x1faf, 0x1fb3:0x1fbc, 0x1fc3:0x1fcc, 0x1ff3:0x1ffc
 }
 defineAttr(Character$proto, 'whitespace', function(){ return this.value in $WS; });
 defineAttr(Character$proto, 'control', function(){ return this.value<32 || this.value===127; });
 defineAttr(Character$proto, 'digit', function() {
-var check = this.value & 0xfffffff0;
-if (check in $digit) {
-return (this.value&0xf) <= 9;
-}
-if ((check|6) in $digit) {
-return (this.value&0xf) >= 6;
-}
-return this.value>=0x1d7ce && this.value<=0x1d7ff;
+    var check = this.value & 0xfffffff0;
+    if (check in $digit) {
+        return (this.value&0xf) <= 9;
+    }
+    if ((check|6) in $digit) {
+        return (this.value&0xf) >= 6;
+    }
+    return this.value>=0x1d7ce && this.value<=0x1d7ff;
 });
 defineAttr(Character$proto, 'integerValue', function(){ return this.value; });
 defineAttr(Character$proto, 'integer',function(){ return this.value; });
 defineAttr(Character$proto, 'uppercase', function() {
-var str = codepointToString(this.value);
-return str.toLowerCase()!==str && !(this.value in $titlecase);
+    var str = codepointToString(this.value);
+    return str.toLowerCase()!==str && !(this.value in $titlecase);
 });
 defineAttr(Character$proto, 'lowercase', function() {
-var str = codepointToString(this.value);
-return str.toUpperCase()!==str && !(this.value in $titlecase);
+    var str = codepointToString(this.value);
+    return str.toUpperCase()!==str && !(this.value in $titlecase);
 });
 defineAttr(Character$proto, 'titlecase', function(){ return this.value in $titlecase; });
 defineAttr(Character$proto, 'letter', function() {
-//TODO: this captures only letters that have case
-var str = codepointToString(this.value);
-return str.toUpperCase()!==str || str.toLowerCase()!==str || (this.value in $titlecase);
+    //TODO: this captures only letters that have case
+    var str = codepointToString(this.value);
+    return str.toUpperCase()!==str || str.toLowerCase()!==str || (this.value in $titlecase);
 });
 defineAttr(Character$proto, 'successor', function() {
-var succ = this.value+1;
-if ((succ&0xf800) === 0xd800) {return Character(0xe000)}
-return Character((succ<=0x10ffff) ? succ:0);
+    var succ = this.value+1;
+    if ((succ&0xf800) === 0xd800) {return Character(0xe000)}
+    return Character((succ<=0x10ffff) ? succ:0);
 });
 defineAttr(Character$proto, 'predecessor', function() {
-var succ = this.value-1;
-if ((succ&0xf800) === 0xd800) {return Character(0xd7ff)}
-return Character((succ>=0) ? succ:0x10ffff);
+    var succ = this.value-1;
+    if ((succ&0xf800) === 0xd800) {return Character(0xd7ff)}
+    return Character((succ>=0) ? succ:0x10ffff);
 });
 Character$proto.distanceFrom = function(other) {
-return this.value - other.value;
+    return this.value - other.value;
 }
+
 function StringBuilder(/*String...*/comps) {
-var that = new StringBuilder.$$;
-that.value = "";
-if (comps !== undefined) {
-that.appendAll(comps);
-}
-return that;
+    var that = new StringBuilder.$$;
+    that.value = "";
+    if (comps !== undefined) {
+        that.appendAll(comps);
+    }
+    return that;
 }
 StringBuilder.$$metamodel$$={$ps:[],$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['StringBuilder']};
+
 initTypeProto(StringBuilder, 'ceylon.language::StringBuilder', $init$Basic());
 var StringBuilder$proto = StringBuilder.$$.prototype;
 defineAttr(StringBuilder$proto, 'string', function(){ return String$(this.value); });
 StringBuilder$proto.append = function(s) {
-this.value = this.value + s;
-return this;
+    this.value = this.value + s;
+    return this;
 }
 StringBuilder$proto.appendAll = function(strings) {
-var iter = strings.iterator();
-var _s; while ((_s = iter.next()) !== getFinished()) {
-this.value += _s?_s:"null";
-}
-return this;
+    var iter = strings.iterator();
+    var _s; while ((_s = iter.next()) !== getFinished()) {
+        this.value += _s?_s:"null";
+    }
+    return this;
 }
 StringBuilder$proto.appendCharacter = function(c) {
-this.append(c.string);
-return this;
+    this.append(c.string);
+    return this;
 }
 StringBuilder$proto.appendNewline = function() {
-this.value = this.value + "\n";
-return this;
+    this.value = this.value + "\n";
+    return this;
 }
 StringBuilder$proto.appendSpace = function() {
-this.value = this.value + " ";
-return this;
+    this.value = this.value + " ";
+    return this;
 }
 defineAttr(StringBuilder$proto, 'size', function() {
-return countCodepoints(this.value);
+    return countCodepoints(this.value);
 });
 StringBuilder$proto.reset = function() {
-this.value = "";
-return this;
+    this.value = "";
+    return this;
 }
 StringBuilder$proto.insert = function(pos, content) {
-if (pos <= 0) {
-this.value = content + this.value;
-} else if (pos >= this.size) {
-this.value = this.value + content;
-} else {
-this.value = this.value.slice(0, pos) + content + this.value.slice(pos);
-}
-return this;
+    if (pos <= 0) {
+        this.value = content + this.value;
+    } else if (pos >= this.size) {
+        this.value = this.value + content;
+    } else {
+        this.value = this.value.slice(0, pos) + content + this.value.slice(pos);
+    }
+    return this;
 }
 StringBuilder$proto.insertCharacter = function(pos, c) {
-if (pos <= 0) {
-this.value = c.string + this.value;
-} else if (pos >= this.size) {
-this.value = this.value + c.string;
-} else {
-this.value = this.value.slice(0, pos) + c.string + this.value.slice(pos);
-}
-return this;
+    if (pos <= 0) {
+        this.value = c.string + this.value;
+    } else if (pos >= this.size) {
+        this.value = this.value + c.string;
+    } else {
+        this.value = this.value.slice(0, pos) + c.string + this.value.slice(pos);
+    }
+    return this;
 }
 StringBuilder$proto.$delete = function(pos, count) {
-if (pos < 0) pos=0; else if (pos>this.size) return this;
-if (count > 0) {
-this.value = this.value.slice(0, pos) + this.value.slice(pos+count);
+    if (pos < 0) pos=0; else if (pos>this.size) return this;
+    if (count > 0) {
+        this.value = this.value.slice(0, pos) + this.value.slice(pos+count);
+    }
+    return this;
 }
-return this;
-}
+
 exports.String=String$;
 exports.Character=Character;
 exports.StringBuilder=StringBuilder;
@@ -5697,10 +5732,10 @@ initType(trueClass, "ceylon.language::true", Boolean$);
 function falseClass() {}
 initType(falseClass, "ceylon.language::false", Boolean$);
 Boolean.prototype.getT$name = function() {
-return (this.valueOf()?trueClass:falseClass).$$.T$name;
+    return (this.valueOf()?trueClass:falseClass).$$.T$name;
 }
 Boolean.prototype.getT$all = function() {
-return (this.valueOf()?trueClass:falseClass).$$.T$all;
+    return (this.valueOf()?trueClass:falseClass).$$.T$all;
 }
 Boolean.prototype.equals = function(other) {return other.constructor===Boolean && other==this;}
 defineAttr(Boolean.prototype, 'hash', function(){ return this.valueOf()?1:0; });
@@ -5711,10 +5746,11 @@ function getTrue() {return true}
 function getFalse() {return false}
 var $true = true;
 var $false = false;
+
 function Comparison(name) {
-var that = new Comparison.$$;
-that.name = String$(name);
-return that;
+    var that = new Comparison.$$;
+    that.name = String$(name);
+    return that;
 }
 initTypeProto(Comparison, 'ceylon.language::Comparison', $init$Basic());
 Comparison.$$metamodel$$={$ps:[{t:String$}],$an:function(){return[shared(),abstract()]},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['Comparison']};
@@ -5726,249 +5762,255 @@ var smaller = Comparison("smaller");
 function getSmaller() { return smaller }
 var equal = Comparison("equal");
 function getEqual() { return equal }
+
 exports.getLarger=getLarger;
 exports.getSmaller=getSmaller;
 exports.getEqual=getEqual;
+
 //These are operators for handling nulls
 function exists(value) {
-return value !== null && value !== undefined;
+    return value !== null && value !== undefined;
 }
 function nonempty(value) {
-return value !== null && value !== undefined && !value.empty;
+    return value !== null && value !== undefined && !value.empty;
 }
+
 function isOfType(obj, type) {
-if (type && type.t) {
-if (type.t == 'i' || type.t == 'u') {
-return isOfTypes(obj, type);
-}
-if (obj === null || obj === undefined) {
-return type.t===Null || type.t===Anything;
-}
-if (obj.getT$all === undefined) {
-if (obj.$$metamodel$$) {
-//We can navigate the metamodel
-if (obj.$$metamodel$$.d['$mt'] === 'mthd') {
-if (type.t === Callable) { //It's a callable reference
-if (type.a && type.a.Return && obj.$$metamodel$$['$t']) {
-//Check if return type matches
-if (extendsType(obj.$$metamodel$$['$t'], type.a.Return)) {
-if (type.a.Arguments && obj.$$metamodel$$['$ps'] !== undefined) {
-var metaparams = obj.$$metamodel$$['$ps'];
-if (metaparams.length == 0) {
-return type.a.Arguments.t === Empty;
-} else {
-//check if arguments match
-var comptype = type.a.Arguments;
-for (var i=0; i < metaparams.length; i++) {
-if (comptype.t !== Tuple || !extendsType(metaparams[i]['$t'], comptype.a.First)) {
-return false;
-}
-comptype = comptype.a.Rest;
-}
-}
-}
-return true;
-}
-}
-}
-}
-}
-return false;
-}
-if (type.t.$$.T$name in obj.getT$all()) {
-if (type.a && obj.$$targs$$) {
-for (var i in type.a) {
-var cmptype = type.a[i];
-var tmpobj = obj;
-var iance = null;
-if (type.t.$$metamodel$$ && type.t.$$metamodel$$.$tp && type.t.$$metamodel$$.$tp[i]) iance=type.t.$$metamodel$$.$tp[i]['var'];
-if (iance === null) {
-//Type parameter may be in the outer type
-while (iance===null && tmpobj.$$outer !== undefined) {
-tmpobj=tmpobj.$$outer;
-var _tmpf = tmpobj.constructor.T$all[tmpobj.constructor.T$name];
-if (_tmpf.$$metamodel$$ && _tmpf.$$metamodel$$.$tp && _tmpf.$$metamodel$$.$tp[i]) {
-iance=_tmpf.$$metamodel$$.$tp[i]['var'];
-}
-}
-}
-if (iance === 'out') {
-if (!extendsType(tmpobj.$$targs$$[i], cmptype)) {
-return false;
-}
-} else if (iance === 'in') {
-if (!extendsType(cmptype, tmpobj.$$targs$$[i])) {
-return false;
-}
-} else if (iance === undefined) {
-if (!(tmpobj.$$targs$$[i] && tmpobj.$$targs$$[i].t.$$ && tmpobj.$$targs$$[i].t.$$.T$name && cmptype && cmptype.t.$$ && cmptype.t.$$.T$name && tmpobj.$$targs$$[i].t.$$.T$name === cmptype.t.$$.T$name)) {
-return false;
-}
-} else if (iance === null) {
-console.log("Possible missing metamodel for " + type.t.$$.T$name + "<" + i + ">");
-} else {
-console.log("Don't know what to do about variance '" + iance + "'");
-}
-}
-}
-return true;
-}
-}
-return false;
+    if (type && type.t) {
+        if (type.t == 'i' || type.t == 'u') {
+            return isOfTypes(obj, type);
+        }
+        if (obj === null || obj === undefined) {
+            return type.t===Null || type.t===Anything;
+        }
+        if (obj.getT$all === undefined) {
+            if (obj.$$metamodel$$) {
+                //We can navigate the metamodel
+                if (obj.$$metamodel$$.d['$mt'] === 'mthd') {
+                    if (type.t === Callable) { //It's a callable reference
+                        if (type.a && type.a.Return && obj.$$metamodel$$['$t']) {
+                            //Check if return type matches
+                            if (extendsType(obj.$$metamodel$$['$t'], type.a.Return)) {
+                                if (type.a.Arguments && obj.$$metamodel$$['$ps'] !== undefined) {
+                                    var metaparams = obj.$$metamodel$$['$ps'];
+                                    if (metaparams.length == 0) {
+                                        return type.a.Arguments.t === Empty;
+                                    } else {
+                                        //check if arguments match
+                                        var comptype = type.a.Arguments;
+                                        for (var i=0; i < metaparams.length; i++) {
+                                            if (comptype.t !== Tuple || !extendsType(metaparams[i]['$t'], comptype.a.First)) {
+                                                return false;
+                                            }
+                                            comptype = comptype.a.Rest;
+                                        }
+                                    }
+                                }
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+        if (type.t.$$.T$name in obj.getT$all()) {
+            if (type.a && obj.$$targs$$) {
+                for (var i in type.a) {
+                    var cmptype = type.a[i];
+                    var tmpobj = obj;
+                    var iance = null;
+                    if (type.t.$$metamodel$$ && type.t.$$metamodel$$.$tp && type.t.$$metamodel$$.$tp[i]) iance=type.t.$$metamodel$$.$tp[i]['var'];
+                    if (iance === null) {
+                        //Type parameter may be in the outer type
+                        while (iance===null && tmpobj.$$outer !== undefined) {
+                            tmpobj=tmpobj.$$outer;
+                            var _tmpf = tmpobj.constructor.T$all[tmpobj.constructor.T$name];
+                            if (_tmpf.$$metamodel$$ && _tmpf.$$metamodel$$.$tp && _tmpf.$$metamodel$$.$tp[i]) {
+                                iance=_tmpf.$$metamodel$$.$tp[i]['var'];
+                            }
+                        }
+                    }
+                    if (iance === 'out') {
+                        if (!extendsType(tmpobj.$$targs$$[i], cmptype)) {
+                            return false;
+                        }
+                    } else if (iance === 'in') {
+                        if (!extendsType(cmptype, tmpobj.$$targs$$[i])) {
+                            return false;
+                        }
+                    } else if (iance === undefined) {
+                        if (!(tmpobj.$$targs$$[i] && tmpobj.$$targs$$[i].t.$$ && tmpobj.$$targs$$[i].t.$$.T$name && cmptype && cmptype.t.$$ && cmptype.t.$$.T$name && tmpobj.$$targs$$[i].t.$$.T$name === cmptype.t.$$.T$name)) {
+                            return false;
+                        }
+                    } else if (iance === null) {
+                        console.log("Possible missing metamodel for " + type.t.$$.T$name + "<" + i + ">");
+                    } else {
+                        console.log("Don't know what to do about variance '" + iance + "'");
+                    }
+                }
+            }
+            return true;
+        }
+    }
+    return false;
 }
 function isOfTypes(obj, types) {
-if (obj===null) {
-for (var i=0; i < types.l.length; i++) {
-if(types.l[i].t===Null || types.l[i].t===Anything) return true;
-else if (types.l[i].t==='u') {
-if (isOfTypes(null, types.l[i])) return true;
-}
-}
-return false;
-}
-if (obj === undefined || obj.getT$all === undefined) { return false; }
-var unions = false;
-var inters = true;
-var _ints=false;
-var objTypes = obj.getT$all();
-for (var i = 0; i < types.l.length; i++) {
-var t = types.l[i];
-var partial = isOfType(obj, t);
-if (types.t==='u') {
-unions = partial || unions;
-} else {
-inters = partial && inters;
-_ints=true;
-}
-}
-return _ints ? inters||unions : unions;
+    if (obj===null) {
+        for (var i=0; i < types.l.length; i++) {
+            if(types.l[i].t===Null || types.l[i].t===Anything) return true;
+            else if (types.l[i].t==='u') {
+                if (isOfTypes(null, types.l[i])) return true;
+            }
+        }
+        return false;
+    }
+    if (obj === undefined || obj.getT$all === undefined) { return false; }
+    var unions = false;
+    var inters = true;
+    var _ints=false;
+    var objTypes = obj.getT$all();
+    for (var i = 0; i < types.l.length; i++) {
+        var t = types.l[i];
+        var partial = isOfType(obj, t);
+        if (types.t==='u') {
+            unions = partial || unions;
+        } else {
+            inters = partial && inters;
+            _ints=true;
+        }
+    }
+    return _ints ? inters||unions : unions;
 }
 function extendsType(t1, t2) {
-if (t1 === undefined) {
-return true;//t2 === undefined;
-} else if (t1 === null) {
-return t2.t === Null;
-}
-if (t1.t === 'u' || t1.t === 'i') {
-if (t1.t==='i')removeSupertypes(t1.l);
-var unions = false;
-var inters = true;
-var _ints = false;
-for (var i = 0; i < t1.l.length; i++) {
-var partial = extendsType(t1.l[i], t2);
-if (t1.t==='u') {
-unions = partial||unions;
-} else {
-inters = partial&&inters;
-_ints=true;
-}
-}
-return _ints ? inters||unions : unions;
-}
-if (t2.t === 'u' || t2.t === 'i') {
-if (t2.t==='i') removeSupertypes(t2.l);
-var unions = false;
-var inters = true;
-var _ints = false;
-for (var i = 0; i < t2.l.length; i++) {
-var partial = extendsType(t1, t2.l[i]);
-if (t2.t==='u') {
-unions = partial||unions;
-} else {
-inters = partial&&inters;
-_ints=true;
-}
-}
-return _ints ? inters||unions : unions;
-}
-for (t in t1.t.$$.T$all) {
-if (t === t2.t.$$.T$name || t === 'ceylon.language::Nothing') {
-if (t1.a && t2.a) {
-//Compare type arguments
-for (ta in t1.a) {
-if (!extendsType(t1.a[ta], t2.a[ta])) return false;
-}
-}
-return true;
-}
-}
-return false;
+    if (t1 === undefined) {
+        return true;//t2 === undefined;
+    } else if (t1 === null) {
+        return t2.t === Null;
+    }
+    if (t1.t === 'u' || t1.t === 'i') {
+        if (t1.t==='i')removeSupertypes(t1.l);
+        var unions = false;
+        var inters = true;
+        var _ints = false;
+        for (var i = 0; i < t1.l.length; i++) {
+            var partial = extendsType(t1.l[i], t2);
+            if (t1.t==='u') {
+                unions = partial||unions;
+            } else {
+                inters = partial&&inters;
+                _ints=true;
+            }
+        }
+        return _ints ? inters||unions : unions;
+    }
+    if (t2.t === 'u' || t2.t === 'i') {
+        if (t2.t==='i') removeSupertypes(t2.l);
+        var unions = false;
+        var inters = true;
+        var _ints = false;
+        for (var i = 0; i < t2.l.length; i++) {
+            var partial = extendsType(t1, t2.l[i]);
+            if (t2.t==='u') {
+                unions = partial||unions;
+            } else {
+                inters = partial&&inters;
+                _ints=true;
+            }
+        }
+        return _ints ? inters||unions : unions;
+    }
+    for (t in t1.t.$$.T$all) {
+        if (t === t2.t.$$.T$name || t === 'ceylon.language::Nothing') {
+            if (t1.a && t2.a) {
+                //Compare type arguments
+                for (ta in t1.a) {
+                    if (!extendsType(t1.a[ta], t2.a[ta])) return false;
+                }
+            }
+            return true;
+        }
+    }
+    return false;
 }
 function removeSupertypes(list) {
-for (var i=0; i < list.length; i++) {
-for (var j=i; i < list.length; i++) {
-if (i!==j) {
-if (extendsType(list[i],list[j])) {
-list[j]=list[i];
-} else if (extendsType(list[j],list[i])) {
-list[i]=list[j];
+    for (var i=0; i < list.length; i++) {
+        for (var j=i; i < list.length; i++) {
+            if (i!==j) {
+                if (extendsType(list[i],list[j])) {
+                    list[j]=list[i];
+                } else if (extendsType(list[j],list[i])) {
+                    list[i]=list[j];
+                }
+            }
+        }
+    }
 }
-}
-}
-}
-}
+
 function className(obj) {
-function _typename(t) {
-if (t.t==='i' || t.t==='u') {
-var _sep = t.t==='i'?'&':'|';
-var ct = '';
-for (var i=0; i < t.l.length; i++) {
-if (i>0) { ct+=_sep; }
-ct += _typename(t.l[i]);
-}
-return String$(ct);
-} else {
-var tn = t.t.$$.T$name;
-if (t.a) {
-tn += '<';
-for (var i = 0; i < t.a.length; i++) {
-if (i>0) { tn += ','; }
-tn += _typename(t.a[i]);
-}
-tn += '>';
-}
-return tn;
-}
-}
-if (obj === null) return String$('ceylon.language::Null');
-var tn = obj.getT$name === undefined ? 'UNKNOWN' : obj.getT$name();
-if (tn === 'UNKNOWN') {
-if (typeof obj === 'function') {
-tn = 'ceylon.language::Callable';
-}
-}
-else if (obj.$$targs$$) {
-/*tn += '<';
-for (var i=0; i < obj.$$targs$$.length; i++) {
-if (i>0) { tn += ','; }
-tn += _typename(obj.$$targs$$[i]);
-}
-tn += '>';*/
-}
-return String$(tn);
+    function _typename(t) {
+        if (t.t==='i' || t.t==='u') {
+            var _sep = t.t==='i'?'&':'|';
+            var ct = '';
+            for (var i=0; i < t.l.length; i++) {
+                if (i>0) { ct+=_sep; }
+                ct += _typename(t.l[i]);
+            }
+            return String$(ct);
+        } else {
+            var tn = t.t.$$.T$name;
+            if (t.a) {
+                tn += '<';
+                for (var i = 0; i < t.a.length; i++) {
+                    if (i>0) { tn += ','; }
+                    tn += _typename(t.a[i]);
+                }
+                tn += '>';
+            }
+            return tn;
+        }
+    }
+    if (obj === null) return String$('ceylon.language::Null');
+    var tn = obj.getT$name === undefined ? 'UNKNOWN' : obj.getT$name();
+    if (tn === 'UNKNOWN') {
+        if (typeof obj === 'function') {
+            tn = 'ceylon.language::Callable';
+        }
+    }
+    else if (obj.$$targs$$) {
+        /*tn += '<';
+        for (var i=0; i < obj.$$targs$$.length; i++) {
+            if (i>0) { tn += ','; }
+            tn += _typename(obj.$$targs$$[i]);
+        }
+        tn += '>';*/
+    }
+    return String$(tn);
 }
 className.$$metamodel$$={$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['className']};
+
 function identityHash(obj) {
-return obj.BasicID;
+    return obj.BasicID;
 }
 identityHash.$$metamodel$$={$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['identityHash']};
+
 function set_type_args(obj, targs) {
-if (obj.$$targs$$ === undefined) {
-obj.$$targs$$=targs;
-} else {
-for (x in targs) {
-obj.$$targs$$[x] = targs[x];
-}
-}
+    if (obj.$$targs$$ === undefined) {
+        obj.$$targs$$=targs;
+    } else {
+        for (x in targs) {
+            obj.$$targs$$[x] = targs[x];
+        }
+    }
 }
 function add_type_arg(obj, name, type) {
-if (obj.$$targs$$ === undefined) {
-obj.$$targs$$={};
-}
-obj.$$targs$$[name]=type;
+    if (obj.$$targs$$ === undefined) {
+        obj.$$targs$$={};
+    }
+    obj.$$targs$$[name]=type;
 }
 function throwexc(msg) {
-throw Exception(msg.getT$all?msg:String$(msg));
+    throw Exception(msg.getT$all?msg:String$(msg));
 }
 exports.set_type_args=set_type_args;
 exports.add_type_arg=add_type_arg;
@@ -5979,336 +6021,353 @@ exports.className=className;
 exports.identityHash=identityHash;
 exports.throwexc=throwexc;
 function string(/*Iterable<Character>*/chars) {
-if (chars === undefined) return String$('',0);
-var s = StringBuilder();
-var iter = chars.iterator();
-var c; while ((c = iter.next()) !== getFinished()) {
-s.appendCharacter(c);
-}
-return s.string;
+    if (chars === undefined) return String$('',0);
+    var s = StringBuilder();
+    var iter = chars.iterator();
+    var c; while ((c = iter.next()) !== getFinished()) {
+        s.appendCharacter(c);
+    }
+    return s.string;
 }
 string.$$metamodel$$={$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['string']};
+
 function internalSort(comp, elems, $$$mptypes) {
-if (elems===undefined) {return getEmpty();}
-var arr = [];
-var it = elems.iterator();
-var e;
-while ((e=it.next()) !== getFinished()) {arr.push(e);}
-if (arr.length === 0) {return getEmpty();}
-arr.sort(function(a, b) {
-var cmp = comp(a,b);
-return (cmp===larger) ? 1 : ((cmp===smaller) ? -1 : 0);
-});
-return ArraySequence(arr, $$$mptypes);
+    if (elems===undefined) {return getEmpty();}
+    var arr = [];
+    var it = elems.iterator();
+    var e;
+    while ((e=it.next()) !== getFinished()) {arr.push(e);}
+    if (arr.length === 0) {return getEmpty();}
+    arr.sort(function(a, b) {
+        var cmp = comp(a,b);
+        return (cmp===larger) ? 1 : ((cmp===smaller) ? -1 : 0);
+    });
+    return ArraySequence(arr, $$$mptypes);
 }
 internalSort.$$metamodel$$={$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['internalSort']};
 exports.string=string;
+
 function flatten(tf, $$$mptypes) {
-var rf = function() {
-var t = getEmpty();
-var e = null;
-var argc = arguments.length;
-var last = argc>0 ? arguments[argc-1] : undefined;
-if (typeof(last) === 'object' && typeof(last.Args) === 'object' && typeof(last.Args.t) === 'function') {
-argc--;
-}
-for (var i=0; i < argc; i++) {
-var c = arguments[i]===null ? Null :
-arguments[i] === undefined ? Empty :
-arguments[i].getT$all ? arguments[i].getT$all() :
-Anything;
-if (e === null) {
-e = c;
-} else if (e.t === 'u' && e.l.length > 0) {
-var l = [c];
-for (var j=0; j < e.l.length; j++) {
-l[j+1] = e.l[j];
-}
-} else {
-e = {t:'u', l:[e, c]};
-}
-var rest;
-if (t === getEmpty()) {
-rest={t:Empty};
-} else {
-rest={t:Tuple, a:t.$$$targs$$$};
-}
-t = Tuple(arguments[i], t, {First:c, Element:e, Rest:rest});
-}
-return tf(t, t.$$targs$$);
-};
-rf.$$targs$$=$$$mptypes;
-return rf;
+    var rf = function() {
+        var t = getEmpty();
+        var e = null;
+        var argc = arguments.length;
+        var last = argc>0 ? arguments[argc-1] : undefined;
+        if (typeof(last) === 'object' && typeof(last.Args) === 'object' && typeof(last.Args.t) === 'function') {
+            argc--;
+        }
+        for (var i=0; i < argc; i++) {
+            var c = arguments[i]===null ? Null :
+                arguments[i] === undefined ? Empty :
+                arguments[i].getT$all ? arguments[i].getT$all() :
+                Anything;
+            if (e === null) {
+                e = c;
+            } else if (e.t === 'u' && e.l.length > 0) {
+                var l = [c];
+                for (var j=0; j < e.l.length; j++) {
+                    l[j+1] = e.l[j];
+                }
+            } else {
+                e = {t:'u', l:[e, c]};
+            }
+            var rest;
+            if (t === getEmpty()) {
+                rest={t:Empty};
+            } else {
+                rest={t:Tuple, a:t.$$$targs$$$};
+            }
+            t = Tuple(arguments[i], t, {First:c, Element:e, Rest:rest});
+        }
+        return tf(t, t.$$targs$$);
+    };
+    rf.$$targs$$=$$$mptypes;
+    return rf;
 }
 flatten.$$metamodel$$={$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['flatten']};
+
 function unflatten(ff, $$$mptypes) {
-if (ff.$$metamodel$$ && ff.$$metamodel$$['$ps']) {
-var ru = function ru(seq) {
-if (seq===undefined || seq.size === 0) { return ff(); }
-var pmeta = ff.$$metamodel$$['$ps'];
-var a = [];
-for (var i = 0; i < pmeta.length; i++) {
-if (pmeta[i]['seq'] == 1) {
-a[i] = seq.skipping(i).sequence;
-} else if (seq.size > i) {
-a[i] = seq.get(i);
-} else {
-a[i] = undefined;
-}
-}
-a[i]=ru.$$targs$$;
-return ff.apply(ru, a);
-}
-} else {
-var ru = function ru(seq) {
-if (seq===undefined || seq.size === 0) { return ff(); }
-var a = [];
-for (var i = 0; i < seq.size; i++) {
-a[i] = seq.get(i);
-}
-a[i]=ru.$$targs$$;
-return ff.apply(ru, a);
-}
-}
-ru.$$targs$$=$$$mptypes;
-return ru;
+    if (ff.$$metamodel$$ && ff.$$metamodel$$['$ps']) {
+        var ru = function ru(seq) {
+            if (seq===undefined || seq.size === 0) { return ff(); }
+            var pmeta = ff.$$metamodel$$['$ps'];
+            var a = [];
+            for (var i = 0; i < pmeta.length; i++) {
+                if (pmeta[i]['seq'] == 1) {
+                    a[i] = seq.skipping(i).sequence;
+                } else if (seq.size > i) {
+                    a[i] = seq.get(i);
+                } else {
+                    a[i] = undefined;
+                }
+            }
+            a[i]=ru.$$targs$$;
+            return ff.apply(ru, a);
+        }
+    } else {
+        var ru = function ru(seq) {
+            if (seq===undefined || seq.size === 0) { return ff(); }
+            var a = [];
+            for (var i = 0; i < seq.size; i++) {
+                a[i] = seq.get(i);
+            }
+            a[i]=ru.$$targs$$;
+            return ff.apply(ru, a);
+        }
+    }
+    ru.$$targs$$=$$$mptypes;
+    return ru;
 }
 unflatten.$$metamodel$$={$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['unflatten']};
 exports.flatten=flatten;
 exports.unflatten=unflatten;
+
 //internal
 function toTuple(iterable) {
-var seq = iterable.sequence;
-return Tuple(seq.first, seq.rest.sequence,
-{First:seq.$$targs$$.Element, Element:seq.$$targs$$.Element, Rest:{t:Sequential, a:seq.$$targs$$}});
+  var seq = iterable.sequence;
+  return Tuple(seq.first, seq.rest.sequence,
+    {First:seq.$$targs$$.Element, Element:seq.$$targs$$.Element, Rest:{t:Sequential, a:seq.$$targs$$}});
 }
 exports.toTuple=toTuple;
+
 function integerRangeByIterable(range, step, $$$mptypes) {
-return Comprehension(function(){
-var a = range.first;
-var b = range.last;
-if (a>b) {
-a += step;
-return function() {
-a -= step;
-return a<b ? getFinished() : a;
-}
-}
-a-=step;
-return function() {
-a += step;
-return a>b ? getFinished() : a;
-}
-}, {Element:range.$$targs$$.Element, Absent:range.$$targs$$.Absent});
+    return Comprehension(function(){
+        var a = range.first;
+        var b = range.last;
+        if (a>b) {
+            a += step;
+            return function() {
+                a -= step;
+                return a<b ? getFinished() : a;
+            }
+        }
+        a-=step;
+        return function() {
+            a += step;
+            return a>b ? getFinished() : a;
+        }
+    }, {Element:range.$$targs$$.Element, Absent:range.$$targs$$.Absent});
 }
 integerRangeByIterable.$$metamodel$$={$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['integerRangeByIterable']};
 exports.integerRangeByIterable=integerRangeByIterable;
 function Array$() {
-var that = new Array$.$$;
-List(that);
-return that;
+    var that = new Array$.$$;
+    List(that);
+    return that;
 }
 Array$.$$metamodel$$={$ps:[],$an:function(){return[shared(),abstract(),native()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['Array']};
+
 initExistingType(Array$, Array, 'ceylon.language::Array', Object$,
-Cloneable, Ranged, $init$List());
+        Cloneable, Ranged, $init$List());
 var Array$proto = Array.prototype;
 var origArrToString = Array$proto.toString;
 inheritProto(Array$, Object$, Cloneable, Ranged, $init$List());
 Array$proto.toString = origArrToString;
 Array$proto.reifyCeylonType = function(typeParameters) {
-this.$$targs$$ = typeParameters;
-return this;
+    this.$$targs$$ = typeParameters;
+    return this;
 }
 exports.Array=Array$;
+
 function EmptyArray() {
-return [];
+    return [];
 }
 initTypeProto(EmptyArray, 'ceylon.language::EmptyArray', Array$);
 function ArrayList(items) {
-return items;
+    return items;
 }
 initTypeProto(ArrayList, 'ceylon.language::ArrayList', Array$, $init$List());
 function ArraySequence(/* js array */value, $$targs$$) {
-value.$seq = true;
-value.$$targs$$=$$targs$$;
-this.$$targs$$=$$targs$$;
-return value;
+    value.$seq = true;
+    value.$$targs$$=$$targs$$;
+    this.$$targs$$=$$targs$$;
+    return value;
 }
 initTypeProto(ArraySequence, 'ceylon.language::ArraySequence', $init$Basic(), $init$Sequence());
 Array$proto.getT$name = function() {
-return (this.$seq ? ArraySequence : (this.length>0?ArrayList:EmptyArray)).$$.T$name;
+    return (this.$seq ? ArraySequence : (this.length>0?ArrayList:EmptyArray)).$$.T$name;
 }
 Array$proto.getT$all = function() {
-return (this.$seq ? ArraySequence : (this.length>0?ArrayList:EmptyArray)).$$.T$all;
+    return (this.$seq ? ArraySequence : (this.length>0?ArrayList:EmptyArray)).$$.T$all;
 }
+
 exports.EmptyArray=EmptyArray;
+
 defineAttr(Array$proto, 'size', function(){ return this.length; });
 defineAttr(Array$proto,'string',function(){
-return (opt$181=(this.empty?String$("[]",2):null),opt$181!==null?opt$181:StringBuilder().appendAll([String$("[",1),commaList(this).string,String$("]",1)]).string);
+    return (opt$181=(this.empty?String$("[]",2):null),opt$181!==null?opt$181:StringBuilder().appendAll([String$("[",1),commaList(this).string,String$("]",1)]).string);
 });
 Array$proto.set = function(idx,elem) {
-if (idx >= 0 && idx < this.length) {
-this[idx] = elem;
-}
+    if (idx >= 0 && idx < this.length) {
+        this[idx] = elem;
+    }
 }
 Array$proto.get = function(idx) {
-var result = this[idx];
-return result!==undefined ? result:null;
+    var result = this[idx];
+    return result!==undefined ? result:null;
 }
 defineAttr(Array$proto, 'lastIndex', function() {
-return this.length>0 ? (this.length-1) : null;
+    return this.length>0 ? (this.length-1) : null;
 });
 defineAttr(Array$proto, 'reversed', function() {
-if (this.length === 0) { return this; }
-var arr = this.slice(0);
-arr.reverse();
-return this.$seq ? ArraySequence(arr,this.$$targs$$) : arr.reifyCeylonType(this.$$targs$$);
+    if (this.length === 0) { return this; }
+    var arr = this.slice(0);
+    arr.reverse();
+    return this.$seq ? ArraySequence(arr,this.$$targs$$) : arr.reifyCeylonType(this.$$targs$$);
 });
 Array$proto.chain = function(other, $$$mptypes) {
-if (this.length === 0) { return other; }
-return Iterable.$$.prototype.chain.call(this, other, $$$mptypes);
+    if (this.length === 0) { return other; }
+    return Iterable.$$.prototype.chain.call(this, other, $$$mptypes);
 }
 defineAttr(Array$proto, 'first', function(){ return this.length>0 ? this[0] : null; });
 defineAttr(Array$proto, 'last', function() { return this.length>0 ? this[this.length-1] : null; });
 Array$proto.segment = function(from, len) {
-if (len <= 0) { return getEmpty(); }
-var stop = from + len;
-var seq = this.slice((from>=0)?from:0, (stop>=0)?stop:0);
-return (seq.length > 0) ? ArraySequence(seq,this.$$targs$$) : getEmpty();
+    if (len <= 0) { return getEmpty(); }
+    var stop = from + len;
+    var seq = this.slice((from>=0)?from:0, (stop>=0)?stop:0);
+    return (seq.length > 0) ? ArraySequence(seq,this.$$targs$$) : getEmpty();
 }
 Array$proto.span = function(from, to) {
-if (from > to) {
-var arr = this.segment(to, from-to+1);
-arr.reverse();
-return arr.reifyCeylonType(this.$$targs$$);
-}
-return this.segment(from, to-from+1);
+    if (from > to) {
+        var arr = this.segment(to, from-to+1);
+        arr.reverse();
+        return arr.reifyCeylonType(this.$$targs$$);
+    }
+    return this.segment(from, to-from+1);
 }
 Array$proto.spanTo = function(to) {
-return to < 0 ? getEmpty() : this.span(0, to);
+    return to < 0 ? getEmpty() : this.span(0, to);
 }
 Array$proto.spanFrom = function(from) {
-return this.span(from, 0x7fffffff);
+    return this.span(from, 0x7fffffff);
 }
 defineAttr(Array$proto, 'rest', function() {
-return this.length<=1 ? getEmpty() : ArraySequence(this.slice(1),this.$$targs$$);
+    return this.length<=1 ? getEmpty() : ArraySequence(this.slice(1),this.$$targs$$);
 });
 Array$proto.items = function(keys) {
-if (keys === undefined) return getEmpty();
-var seq = [];
-for (var i = 0; i < keys.size; i++) {
-var key = keys.get(i);
-seq.push(this.get(key));
-}
-return ArraySequence(seq,this.$$targs$$);
+    if (keys === undefined) return getEmpty();
+    var seq = [];
+    for (var i = 0; i < keys.size; i++) {
+        var key = keys.get(i);
+        seq.push(this.get(key));
+    }
+    return ArraySequence(seq,this.$$targs$$);
 }
 defineAttr(Array$proto, 'keys', function(){ return TypeCategory(this, {t:Integer}); });
 Array$proto.contains = function(elem) {
-for (var i=0; i<this.length; i++) {
-if (elem.equals(this[i])) {
-return true;
-}
-}
-return false;
+    for (var i=0; i<this.length; i++) {
+        if (elem.equals(this[i])) {
+            return true;
+        }
+    }
+    return false;
 }
 Array$proto.iterator = function() {
-var $$$index$$$ = 0;
-var $$$arr$$$ = this;
-return new ComprehensionIterator(function() {
-return ($$$index$$$ === $$$arr$$$.length) ? getFinished() : $$$arr$$$[$$$index$$$++];
-}, this.$$targs$$);
+    var $$$index$$$ = 0;
+    var $$$arr$$$ = this;
+    return new ComprehensionIterator(function() {
+        return ($$$index$$$ === $$$arr$$$.length) ? getFinished() : $$$arr$$$[$$$index$$$++];
+    }, this.$$targs$$);
 }
 Array$proto.copyTo = function(other, srcpos, dstpos, length) {
-if (length === undefined) length = this.size;
-if (srcpos === undefined) srcpos = 0;
-if (dstpos === undefined) dstpos = 0;
-var endpos = srcpos+length;
-//TODO validate range?
-for (var i=srcpos; i<endpos; i++) {
-other[dstpos]=this[i];
-dstpos++;
+    if (length === undefined) length = this.size;
+    if (srcpos === undefined) srcpos = 0;
+    if (dstpos === undefined) dstpos = 0;
+    var endpos = srcpos+length;
+    //TODO validate range?
+    for (var i=srcpos; i<endpos; i++) {
+        other[dstpos]=this[i];
+        dstpos++;
+    }
 }
-}
+
 exports.ArrayList=ArrayList;
 exports.array=function(elems, $$$ptypes) {
-var e=[];
-if (!(elems === null || elems === undefined)) {
-var iter=elems.iterator();
-var item;while((item=iter.next())!==getFinished()) {
-e.push(item);
-}
-}
-e.$$targs$$=$$$ptypes;
-return e;
+    var e=[];
+    if (!(elems === null || elems === undefined)) {
+        var iter=elems.iterator();
+        var item;while((item=iter.next())!==getFinished()) {
+            e.push(item);
+        }
+    }
+    e.$$targs$$=$$$ptypes;
+    return e;
 }
 exports.array.$$metamodel$$={$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['array']};
+
 exports.arrayOfSize=function(size, elem, $$$mptypes) {
-if (size > 0) {
-var elems = [];
-for (var i = 0; i < size; i++) {
-elems.push(elem);
-}
-elems.$$targs$$=$$$mptypes;
-return elems;
-} else return [];
+    if (size > 0) {
+        var elems = [];
+        for (var i = 0; i < size; i++) {
+            elems.push(elem);
+        }
+        elems.$$targs$$=$$$mptypes;
+        return elems;
+    } else return [];
 }
 exports.arrayOfSize.$$metamodel$$={$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['arrayOfSize']};
+
 function TypeCategory(seq, type) {
-var that = new TypeCategory.$$;
-that.type = type;
-that.seq = seq;
-return that;
+    var that = new TypeCategory.$$;
+    that.type = type;
+    that.seq = seq;
+    return that;
 }
 initTypeProto(TypeCategory, 'ceylon.language::TypeCategory', $init$Basic(), Category);
 var TypeCategory$proto = TypeCategory.$$.prototype;
 TypeCategory$proto.contains = function(k) {
-return isOfType(k, this.type) && this.seq.defines(k);
+    return isOfType(k, this.type) && this.seq.defines(k);
 }
+
 function SequenceBuilder($$targs$$) {
-var that = new SequenceBuilder.$$;
-that.seq = [];
-that.$$targs$$=$$targs$$;
-return that;
+    var that = new SequenceBuilder.$$;
+    that.seq = [];
+    that.$$targs$$=$$targs$$;
+    return that;
 }
 SequenceBuilder.$$metamodel$$={$ps:[],$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['SequenceBuilder']};
+
 initTypeProto(SequenceBuilder, 'ceylon.language::SequenceBuilder', $init$Basic());
 var SequenceBuilder$proto = SequenceBuilder.$$.prototype;
 defineAttr(SequenceBuilder$proto, 'sequence', function() {
-return (this.seq.length > 0) ? ArraySequence(this.seq,this.$$targs$$) : getEmpty();
+    return (this.seq.length > 0) ? ArraySequence(this.seq,this.$$targs$$) : getEmpty();
 });
 SequenceBuilder$proto.append = function(e) { this.seq.push(e); }
 SequenceBuilder$proto.appendAll = function(/*Iterable*/arr) {
-if (arr === undefined) return;
-var iter = arr.iterator();
-var e; while ((e = iter.next()) !== getFinished()) {
-this.seq.push(e);
-}
+    if (arr === undefined) return;
+    var iter = arr.iterator();
+    var e; while ((e = iter.next()) !== getFinished()) {
+        this.seq.push(e);
+    }
 }
 defineAttr(SequenceBuilder$proto, 'size', function(){ return this.seq.length; });
+
 function SequenceAppender(other, $$targs$$) {
-var that = new SequenceAppender.$$;
-that.seq = [];
-that.$$targs$$=$$targs$$;
-that.appendAll(other);
-return that;
+    var that = new SequenceAppender.$$;
+    that.seq = [];
+    that.$$targs$$=$$targs$$;
+    that.appendAll(other);
+    return that;
 }
 SequenceAppender.$$metamodel$$={$ps:[],$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['SequenceAppender']};
+
 initTypeProto(SequenceAppender, 'ceylon.language::SequenceAppender', SequenceBuilder);
+
 exports.Sequence=Sequence;
 exports.SequenceBuilder=SequenceBuilder;
 exports.SequenceAppender=SequenceAppender;
 exports.ArraySequence=ArraySequence;
 // implementation of object "process" in ceylon.language
 function languageClass() {
-var lang = new languageClass.$$;
-Basic(lang);
-return lang;
+    var lang = new languageClass.$$;
+    Basic(lang);
+    return lang;
 }
 languageClass.$$metamodel$$={$nm:'languageClass',$mt:'cls',$ps:[],$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['language']};
 initTypeProto(languageClass, "ceylon.language::language", $init$Basic());
 var lang$proto=languageClass.$$.prototype;
 defineAttr(lang$proto, 'version', function() {
-return String$("0.6",3);
+    return String$("0.6",3);
 });
 defineAttr(lang$proto, 'majorVersion', function(){ return 0; });
 defineAttr(lang$proto, 'minorVersion', function(){ return 6; });
@@ -6318,196 +6377,212 @@ defineAttr(lang$proto, 'majorVersionBinary', function(){ return 5; });
 defineAttr(lang$proto, 'minorVersionBinary', function(){ return 0; });
 var languageString = String$("language", 8);
 defineAttr(lang$proto, 'string', function() {
-return languageString;
+    return languageString;
 });
+
 var language$ = languageClass();
 function getLanguage() { return language$; }
 exports.getLanguage=getLanguage;
+
 function processClass() {
-var proc = new processClass.$$;
-Basic(proc);
-return proc;
+    var proc = new processClass.$$;
+    Basic(proc);
+    return proc;
 }
 processClass.$$metamodel$$={$nm:'processClass',$mt:'cls',$ps:[],$an:function(){return[shared()];},mod:$$METAMODEL$$,d:$$METAMODEL$$['ceylon.language']['process']};
 initTypeProto(processClass, "ceylon.language::process", $init$Basic());
 var process$proto = processClass.$$.prototype;
+
 var argv = getEmpty();
 var namedArgs = {};
 if ((typeof process !== "undefined") && (process.argv !== undefined)) {
-// parse command line arguments
-if (process.argv.length > 1) {
-var args = process.argv.slice(1);
-for (var i=0; i<args.length; ++i) {
-var arg = args[i];
-if (arg.charAt(0) == '-') {
-var pos = 1;
-if (arg.charAt(1) == '-') { pos = 2; }
-arg = arg.substr(pos);
-pos = arg.indexOf('=');
-if (pos >= 0) {
-namedArgs[arg.substr(0, pos)] = String$(arg.substr(pos+1));
-} else {
-var value = args[i+1];
-if ((value !== undefined) && (value.charAt(0) != '-')) {
-namedArgs[arg] = String$(value);
-++i;
-} else {
-namedArgs[arg] = null;
-}
-}
-}
-args[i] = String$(args[i]);
-}
-argv = ArraySequence(args, {Element:{t:String$}});
-}
+    // parse command line arguments
+    if (process.argv.length > 1) {
+        var args = process.argv.slice(1);
+        for (var i=0; i<args.length; ++i) {
+            var arg = args[i];
+            if (arg.charAt(0) == '-') {
+                var pos = 1;
+                if (arg.charAt(1) == '-') { pos = 2; }
+                arg = arg.substr(pos);
+                pos = arg.indexOf('=');
+                if (pos >= 0) {
+                    namedArgs[arg.substr(0, pos)] = String$(arg.substr(pos+1));
+                } else {
+                    var value = args[i+1];
+                    if ((value !== undefined) && (value.charAt(0) != '-')) {
+                        namedArgs[arg] = String$(value);
+                        ++i;
+                    } else {
+                        namedArgs[arg] = null;
+                    }
+                }
+            }
+            args[i] = String$(args[i]);
+        }
+        argv = ArraySequence(args, {Element:{t:String$}});
+    }
 } else if (typeof window !== "undefined") {
-// parse URL parameters
-var parts = window.location.search.substr(1).replace('+', ' ').split('&');
-if ((parts.length > 1) || ((parts.length > 0) && (parts[0].length > 0))) {
-var argStrings = new Array(parts.length);
-//can't do "for (i in parts)" anymore because of the added stuff to arrays
-var i;
-for (i=0; i<parts.length; i++) { argStrings[i] = String$(parts[i]); }
-argv = ArraySequence(argStrings, {Element:{t:String$}});
-for (i=0; i < parts.length; i++) {
-var part = parts[i];
-var pos = part.indexOf('=');
-if (pos >= 0) {
-var value = decodeURIComponent(part.substr(pos+1));
-namedArgs[part.substr(0, pos)] = String$(value);
-} else {
-namedArgs[part] = null;
-}
-}
-}
+    // parse URL parameters
+    var parts = window.location.search.substr(1).replace('+', ' ').split('&');
+    if ((parts.length > 1) || ((parts.length > 0) && (parts[0].length > 0))) {
+        var argStrings = new Array(parts.length);
+        //can't do "for (i in parts)" anymore because of the added stuff to arrays
+        var i;
+        for (i=0; i<parts.length; i++) { argStrings[i] = String$(parts[i]); }
+        argv = ArraySequence(argStrings, {Element:{t:String$}});
+        
+        for (i=0; i < parts.length; i++) {
+            var part = parts[i];
+            var pos = part.indexOf('=');
+            if (pos >= 0) {
+                var value = decodeURIComponent(part.substr(pos+1));
+                namedArgs[part.substr(0, pos)] = String$(value);
+            } else {
+                namedArgs[part] = null;
+            }
+        }
+    }
 }
 defineAttr(process$proto, 'arguments', function(){ return argv; });
 process$proto.namedArgumentPresent = function(name) {
-return (name in namedArgs);
+    return (name in namedArgs);
 }
 process$proto.namedArgumentValue = function(name) {
-var value = namedArgs[name];
-return (value !== undefined) ? value : null;
+    var value = namedArgs[name];
+    return (value !== undefined) ? value : null;
 }
+
 var properties = {};
 if (typeof navigator !== "undefined") {
-if (navigator.language !== undefined) {
-properties["user.language"] = String$(navigator.language);
-}
-if (navigator.platform !== undefined) {
-properties["os.name"] = String$(navigator.platform);
-}
+    if (navigator.language !== undefined) {
+        properties["user.language"] = String$(navigator.language);
+    }
+    if (navigator.platform !== undefined) {
+        properties["os.name"] = String$(navigator.platform);
+    }
 }
 if (typeof process !== "undefined") {
-if (process.platform !== undefined) {
-properties["os.name"] = String$(process.platform);
-}
-if (process.arch !== undefined) {
-properties["os.arch"] = String$(process.arch);
-}
+    if (process.platform !== undefined) {
+        properties["os.name"] = String$(process.platform);
+    }
+    if (process.arch !== undefined) {
+        properties["os.arch"] = String$(process.arch);
+    }
 }
 if (typeof document !== "undefined") {
-if (document.defaultCharset !== undefined) {
-properties["file.encoding"] = String$(document.defaultCharset);
+    if (document.defaultCharset !== undefined) {
+        properties["file.encoding"] = String$(document.defaultCharset);
+    }
 }
-}
+
 var linesep = String$('\n', 1);
 var filesep = String$('/', 1);
 var pathsep = String$(':', 1);
 var osname = properties["os.name"];
 if ((osname !== undefined) && (osname.search(/windows/i) >= 0)) {
-linesep = String$("\r\n", 2);
-filesep = String$('\\', 1);
-pathsep = String$(';', 1);
+    linesep = String$("\r\n", 2);
+    filesep = String$('\\', 1);
+    pathsep = String$(';', 1);
 }
 properties["line.separator"] = linesep;
 properties["file.separator"] = filesep;
 properties["path.separator"] = pathsep;
+
 process$proto.propertyValue = function(name) {
-var value = properties[name];
-return (value !== undefined) ? value : null;
+    var value = properties[name];
+    return (value !== undefined) ? value : null;
 }
+
 defineAttr(process$proto, 'newline', function(){ return linesep; });
+
 if ((typeof process !== "undefined") && (process.stdout !== undefined)) {
-process$proto.write = function(string) {
-process.stdout.write(string.valueOf());
-}
-process$proto.writeLine = function(line) {
-this.write(line.valueOf());
-this.write(linesep.valueOf());
-}
+    process$proto.write = function(string) {
+        process.stdout.write(string.valueOf());
+    }
+    process$proto.writeLine = function(line) {
+        this.write(line.valueOf());
+        this.write(linesep.valueOf());
+    }
 } else if ((typeof console !== "undefined") && (console.log !== undefined)) {
-process$proto.writeLine = function(line) {
-console.log(line.valueOf());
-}
-process$proto.write = process$proto.writeLine;
+    process$proto.writeLine = function(line) {
+        console.log(line.valueOf());
+    }
+    process$proto.write = process$proto.writeLine;
 } else {
-process$proto.write = function() {};
-process$proto.writeLine = function() {};
+    process$proto.write = function() {};
+    process$proto.writeLine = function() {};    
 }
+
 if ((typeof process !== "undefined") && (process.stderr !== undefined)) {
-process$proto.writeError = function(string) {
-process.stderr.write(string.valueOf());
-}
-process$proto.writeErrorLine = function(line) {
-this.writeError(line.valueOf());
-this.writeError(linesep.valueOf());
-}
+    process$proto.writeError = function(string) {
+        process.stderr.write(string.valueOf());
+    }
+    process$proto.writeErrorLine = function(line) {
+        this.writeError(line.valueOf());
+        this.writeError(linesep.valueOf());
+    }
 } else if ((typeof console !== "undefined") && (console.error !== undefined)) {
-process$proto.writeErrorLine = function(line) {
-console.error(line.valueOf());
-}
-process$proto.writeError = process$proto.writeErrorLine;
+    process$proto.writeErrorLine = function(line) {
+        console.error(line.valueOf());
+    }
+    process$proto.writeError = process$proto.writeErrorLine;
 } else {
-process$proto.writeError = process$proto.write;
-process$proto.writeErrorLine = process$proto.writeLine;
+    process$proto.writeError = process$proto.write;
+    process$proto.writeErrorLine = process$proto.writeLine;    
 }
+
 process$proto.readLine = function() {
-return String$("", 0);//TODO
+    return String$("", 0);//TODO
 }
+
 defineAttr(process$proto, 'milliseconds', function() {
-return Date.now();
+    return Date.now();
 });
 defineAttr(process$proto, 'nanoseconds', function() {
-return Date.now()*1000000;
+    return Date.now()*1000000;
 });
+
 if ((typeof process !== "undefined") && (process.exit !== undefined)) {
-process$proto.exit = function(code) {
-process.exit(code);
-}
+    process$proto.exit = function(code) {
+        process.exit(code);
+    }
 } else {
-process$proto.exit = function() {}
+    process$proto.exit = function() {}
 }
+
 var processString = String$("process", 7);
 defineAttr(process$proto, 'string', function() {
-return processString;
+    return processString;
 });
 defineAttr(process$proto, 'vm', function() {
-if (typeof process !== "undefined" && process.execPath && process.execPath.match(/node(\.exe)?$/)) {
-return String$("node.js", 7);
-} else if (typeof window === 'object') {
-return String$("Browser", 7);
-}
-return String$("Unknown JavaScript environment", 30);
+    if (typeof process !== "undefined" && process.execPath && process.execPath.match(/node(\.exe)?$/)) {
+        return String$("node.js", 7);
+    } else if (typeof window === 'object') {
+        return String$("Browser", 7);
+    }
+    return String$("Unknown JavaScript environment", 30);
 });
 defineAttr(process$proto, 'vmVersion', function() {
-if (typeof process !== "undefined" && typeof process.version === 'string') {
-return String$(process.version);
-}
-return String$("Unknown");
+    if (typeof process !== "undefined" && typeof process.version === 'string') {
+        return String$(process.version);
+    }
+    return String$("Unknown");
 });
 defineAttr(process$proto, 'os',function() {
-if (typeof process !== "undefined" && typeof process.platform === 'string') {
-return String$(process.platform);
-}
-return String$("Unknown");
+    if (typeof process !== "undefined" && typeof process.platform === 'string') {
+        return String$(process.platform);
+    }
+    return String$("Unknown");
 });
 defineAttr(process$proto, 'osVersion', function() {
-return String$("Unknown");
+    return String$("Unknown");
 });
+
 var process$ = processClass();
 function getProcess() { return process$; }
 exports.getProcess=getProcess;
+//Ends compiled from Ceylon sources
 function NativeException(e) {
 var that = new NativeException.$$;
 var msg;
