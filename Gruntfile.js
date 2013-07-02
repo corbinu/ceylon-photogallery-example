@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 	{
 		var exec = require('child_process').exec;
 
-		var compile = exec('$CEYLON_HOME/bin/ceylon compile-js source/ceylon/examples/photogallery/*.ceylon', function (error, stdout, stderr) 
+		var compile = exec('$CEYLON_HOME/bin/ceylon compile-js source/ceylon/examples/photogallery/*.ceylon source/ceylon/examples/photogallery/gallery/*.ceylon', function (error, stdout, stderr) 
 		{
 			console.log('stdout: ' + stdout);
 			console.log('stderr: ' + stderr);

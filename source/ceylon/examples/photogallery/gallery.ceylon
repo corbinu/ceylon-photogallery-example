@@ -1,11 +1,9 @@
-import ceylon.examples.photogallery.data { CategoryJSON }
-import ceylon.examples.photogallery.gallery { Category }
-
+import ceylon.examples.photogallery.gallery { PhotoCategory, PhotoCategoryJSON }
 shared class Gallery(shared String dir) {
-	shared variable Category[] categories = {};
+	shared variable PhotoCategory[] categories = {};
 	shared String currentCategory = "";
 	
-	shared void setCategories(CategoryJSON[] categoriesJSON) {
+	shared void setCategories(PhotoCategoryJSON[] categoriesJSON) {
 		categories = [for (category in categoriesJSON) getCategory(category)];
 		init();
 	}
@@ -44,8 +42,8 @@ shared class Gallery(shared String dir) {
 		}
 	}
 	
-	Category getCategory(CategoryJSON categoryJSON) {
-		Category category = Category(this, categoryJSON.name);
+	PhotoCategory getCategory(PhotoCategoryJSON categoryJSON) {
+		PhotoCategory category = PhotoCategory(this, categoryJSON.name);
 		category.setPhotos(categoryJSON.photos);
 		return category;
 	}

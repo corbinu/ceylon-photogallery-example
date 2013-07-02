@@ -1,12 +1,11 @@
 import ceylon.examples.photogallery { Gallery }
-import ceylon.examples.photogallery.data { PhotoJSON, PhotoModel }
 
-shared class Category(shared Gallery gallery, shared String name) {
-	shared variable PhotoModel[] photos = {};
+shared class PhotoCategory(shared Gallery gallery, shared String name) {
+	shared variable Photo[] photos = {};
 	shared variable Integer pages = 1;
 	
 	shared void setPhotos(PhotoJSON[] photosJSON) {
-		photos  = [ for ( photo in photosJSON) PhotoModel(photo.title, photo.caption, photo.src, photo.height, photo.width, photo.alt, photo.span) ];
+		photos  = [ for ( photo in photosJSON) Photo(photo.title, photo.caption, photo.src, photo.height, photo.width, photo.alt, photo.span) ];
 		pages += photos.size/6;
 		print("number of pages: " + pages.string);
 	}
@@ -83,4 +82,12 @@ shared class Category(shared Gallery gallery, shared String name) {
 		print("display photo: " + ((page-1)*6).string);
 		displayPhoto((page-1)*6);
 	}
+	
+	
 }
+
+shared class PhotoCategoryJSON(shared String name, shared PhotoJSON[] photos) {}
+
+shared class Photo(shared String title, shared String caption, shared String src, shared Integer height, shared Integer width, shared String alt, shared Integer span) {}
+
+shared class PhotoJSON(shared String title, shared String caption, shared String src, shared Integer height, shared Integer width, shared String alt, shared Integer span) {}
