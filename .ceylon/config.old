@@ -1,0 +1,6 @@
+
+[defaults]
+encoding=US-ASCII
+
+[repositories]
+lookup=/Developer/SDK/ceylon/ceylon-sdk
