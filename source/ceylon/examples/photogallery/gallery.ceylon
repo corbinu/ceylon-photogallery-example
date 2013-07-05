@@ -130,7 +130,6 @@ shared class GalleryView(shared Gallery controller) {
 	}
 }
 
-
 shared class Category(shared Gallery parent) {
 	shared late CategoryModel model;
 	shared late CategoryView view;
@@ -192,7 +191,18 @@ shared class CategoryView(shared Category controller) {
 	
 	shared void displayPhoto(Photo photo) {
 		dynamic {
-			jQuery(".display-photo").attr("src", photo.src).attr("alt", photo.alt);
+			value photoDisplay = jQuery(".display-photo");
+			photoDisplay.attr("src", photo.src).attr("alt", photo.alt);
+			if (exists width = photo.width) {
+				photoDisplay.attr("width", width);
+			} else {
+				photoDisplay.removeAttr("width");
+			}
+			if (exists height = photo.height) {
+				photoDisplay.attr("height", height);
+			} else {
+				photoDisplay.removeAttr("height");
+			}
 			jQuery(".display-title").text(photo.title);
 			jQuery(".display-caption").text(photo.caption);
 		}
@@ -240,6 +250,8 @@ shared class CategoryView(shared Category controller) {
 	}
 }
 
+shared class CategoryJSON(shared String name, shared PhotoJSON[] photos) {}
+
 shared class Page(shared Category parent, shared String uri) {
 	shared late PageModel model;
 	shared late PageView view;
@@ -268,7 +280,7 @@ shared class PageModel(shared Page controller) {
 	
 	shared void parsePhotos(PhotoJSON[] photosJSON, String dir) {
 		print("parsing photos");
-		photos  = [ for (photo in photosJSON ) Photo(photo.title, photo.caption, dir + "/" + photo.src, photo.height, photo.width, photo.alt, photo.span) ];
+		photos  = [ for (photo in photosJSON ) Photo(photo.title, photo.caption, dir + "/" + photo.src, photo.height, photo.width, photo.alt) ];
 	}
 }
 
@@ -279,11 +291,8 @@ shared class PageView(shared Page controller) {
 			jQuery(".image-grid").empty();
 		}
 		for (i -> photo in entries(controller.model.photos) ) {
-			value append = "<li class=\"span" + photo.span.string 
-				+ "\"><a href=\"" + controller.uri + i.string + "\" class=\"thumbnail\"><img src=\"" 
-				+ photo.src + "\" alt=\"" + photo.alt 
-				+ "\" width=\"" + photo.width.string 
-				+ "\" height=\"" + photo.height.string + "\"></a></li>";
+			value append = "<li class=\"span2\"><a href=\"" + controller.uri + i.string + "\" class=\"thumbnail\"><img src=\"" 
+				+ photo.src + "\" alt=\"" + photo.alt + "\"></a></li>";
 			dynamic {
 				jQuery(".image-grid").append(append);
 			}
@@ -292,8 +301,6 @@ shared class PageView(shared Page controller) {
 	
 }
 
-shared class CategoryJSON(shared String name, shared PhotoJSON[] photos) {}
+shared class Photo(shared String title, shared String caption, shared String src, shared Integer? height, shared Integer? width, shared String alt) {}
 
-shared class Photo(shared String title, shared String caption, shared String src, shared Integer height, shared Integer width, shared String alt, shared Integer span) {}
-
-shared class PhotoJSON(shared String title,shared String caption, shared String src, shared Integer height, shared Integer width, shared String alt, shared Integer span) {}
+shared class PhotoJSON(shared String title,shared String caption, shared String src, shared Integer? height, shared Integer? width, shared String alt) {}
