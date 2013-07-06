@@ -54,32 +54,47 @@
             </nav>   
         </header>
         <div class="content">
-            <div class="row">
-                <section class="main">
-                    <div class="tabs-left span2">
-                        <ul class="nav nav-tabs catagories">
-                            <!-- Ceylon inserts the category tabs here -->
-                        </ul>
+            <section class="desktop visible-desktop">
+                <div class="tabs-left span2">
+                    <ul class="nav nav-tabs catagories">
+                        <!-- Ceylon inserts the category tabs here -->
+                    </ul>
+                </div>
+                <div class="span6">
+                    <div class="thumbnail">
+                        <h3 class="display-title"></h3>
+                        <img class="display-photo">
+                        <p class="display-caption"></p>
                     </div>
-                    <div class="span7">
-                        <div class="thumbnail">
-                            <h3 class="display-title"></h3>
-                            <img class="display-photo" src="http://placehold.it/500x400" alt="placeholder image">
-                            <p class="display-caption"></p>
-                        </div>
+                </div>
+                <div class="span4">
+                    <ul class="thumbnails image-grid">
+                        <!-- Ceylon inserts the image thumbnails here -->
+                    </ul>
+                    <div class="pagination pagination-centered">
+                        <!-- Ceylon inserts the pagination buttons here -->
                     </div>
-                    <div class="span4">
+                </div>
+            </section>
+            <section class="mobile hidden-desktop">
+                <div class="row">
+                    <ul class="offset3 span9 nav nav-pills catagories">
+                        <!-- Ceylon inserts the category tabs here -->
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="offset3 span9">
                         <ul class="thumbnails image-grid">
                             <!-- Ceylon inserts the image thumbnails here -->
                         </ul>
-                        <div class="pagination pagination-centered">
-                            <!-- Ceylon inserts the pagination buttons here -->
-                        </div>
                     </div>
-                </section>
-            </div>
+                </div>
+                <div class="row pagination pagination-centered">
+                    <!-- Ceylon inserts the pagination buttons here -->
+                </div>
+            </section>
             <div class="row">
-                <footer class="offset1n span10">
+                <footer class="offset1 span10">
                     <p>Build by <a href="http://celyonjsvm.wordpress.com">Corbin Uselton</a> 2013</p>
                 </footer>
             </div>

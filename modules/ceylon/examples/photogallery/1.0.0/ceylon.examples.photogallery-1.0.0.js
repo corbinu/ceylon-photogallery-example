@@ -494,9 +494,11 @@ function PageView(controller, $$pageView){
         var item$88;while ((item$88=it$87.next())!==$$$cl1.getFinished()){
             var i$89=item$88.key;
             var photo$90=item$88.item;
-            var append$91=$$$cl1.String("<li class=\"span2\"><a href=\"",27).plus($$pageView.controller.uri).plus(i$89.string).plus($$$cl1.String("\" class=\"thumbnail\"><img class=\"photo",37)).plus(i$89.string).plus($$$cl1.String("\" src=\"",7)).plus(photo$90.thumb).plus($$$cl1.String("\" alt=\"",7)).plus(photo$90.alt).plus($$$cl1.String("\"></a></li>",11));
+            var appendDesktop$91=$$$cl1.String("<li class=\"span2\"><a href=\"",27).plus($$pageView.controller.uri).plus(i$89.string).plus($$$cl1.String("\" class=\"thumbnail\"><img class=\"photo",37)).plus(i$89.string).plus($$$cl1.String("\" src=\"",7)).plus(photo$90.thumb).plus($$$cl1.String("\" alt=\"",7)).plus(photo$90.alt).plus($$$cl1.String("\"></a></li>",11));
+            var appendMobile$92=$$$cl1.String("<li class=\"span4\"><h4>",22).plus(photo$90.title).plus($$$cl1.String("</h4><img class=\"photo",22)).plus(i$89.string).plus($$$cl1.String("\" src=\"",7)).plus(photo$90.thumb).plus($$$cl1.String("\" alt=\"",7)).plus(photo$90.alt).plus($$$cl1.String("\"><p>",5)).plus(photo$90.caption).plus($$$cl1.String("</p></li>",9));
             /*Begin dynamic block*/
-            (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".image-grid",11).valueOf()).append(append$91.valueOf());
+            (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".desktop .image-grid",20).valueOf()).append(appendDesktop$91.valueOf());
+            (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".mobile .image-grid",19).valueOf()).append(appendMobile$92.valueOf());
             (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".photo",6).plus(i$89.string).valueOf()).load($$$cl1.$JsCallable(function (){
                 return (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)((typeof this==='undefined'||this===null?$$$cl1.throwexc('Undefined or null reference: this'):this)).parent().spin(false);
             },[],{Arguments:{t:$$$cl1.Empty},Return:{t:$$$cl1.Anything}}));
@@ -562,8 +564,8 @@ function $init$PhotoJSON(){
 }
 exports.$init$PhotoJSON=$init$PhotoJSON;
 $init$PhotoJSON();
-function init(galleryDir$92){
-    Gallery().init(galleryDir$92);
+function init(galleryDir$93){
+    Gallery().init(galleryDir$93);
 }
 exports.init=init;
 init.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'galleryDir',$mt:'prm',$t:{t:$$$cl1.String}}],$an:function(){return[$$$cl1.shared()];},pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['init']};//init.$$targs$$={Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.String},Element:{t:$$$cl1.String}}},Return:{t:$$$cl1.Anything}};

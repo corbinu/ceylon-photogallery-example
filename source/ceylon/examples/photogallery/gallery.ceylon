@@ -291,10 +291,13 @@ shared class PageView(shared Page controller) {
 			jQuery(".image-grid").empty();
 		}
 		for (i -> photo in entries(controller.model.photos) ) {
-			value append = "<li class=\"span2\"><a href=\"" + controller.uri + i.string + "\" class=\"thumbnail\"><img class=\"photo" + i.string + "\" src=\"" 
+			value appendDesktop = "<li class=\"span2\"><a href=\"" + controller.uri + i.string + "\" class=\"thumbnail\"><img class=\"photo" + i.string + "\" src=\"" 
 				+ photo.thumb + "\" alt=\"" + photo.alt + "\"></a></li>";
+			value appendMobile = "<li class=\"span4\"><h4>" + photo.title + "</h4><img class=\"photo" + i.string + "\" src=\"" 
+				+ photo.thumb + "\" alt=\"" + photo.alt + "\"><p>" + photo.caption + "</p></li>";
 			dynamic {
-				jQuery(".image-grid").append(append);
+				jQuery(".desktop .image-grid").append(appendDesktop);
+				jQuery(".mobile .image-grid").append(appendMobile);
 				jQuery(".photo" + i.string).load( () => jQuery(\ithis).parent().spin(false) );
 				jQuery(".photo" + i.string).parent().spin("small");
 			}
