@@ -192,7 +192,7 @@ shared class CategoryView(shared Category controller) {
 	shared void displayPhoto(Photo photo) {
 		dynamic {
 			value photoDisplay = jQuery(".display-photo");
-			photoDisplay.attr("src", photo.src).attr("alt", photo.alt);
+			photoDisplay.attr("src", photo.src).attr("alt", photo.alt).stop(true,true).hide().fadeIn(800);
 			if (exists width = photo.width) {
 				photoDisplay.attr("width", width);
 			} else {
@@ -205,6 +205,7 @@ shared class CategoryView(shared Category controller) {
 			}
 			jQuery(".display-title").text(photo.title);
 			jQuery(".display-caption").text(photo.caption);
+			
 		}
 	}
 	

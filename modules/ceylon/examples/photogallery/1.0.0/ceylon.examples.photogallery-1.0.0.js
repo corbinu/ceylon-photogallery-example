@@ -312,7 +312,7 @@ function CategoryView(controller, $$categoryView){
     function displayPhoto(photo$61){
         /*Begin dynamic block*/
         var photoDisplay$62=(typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".display-photo",14).valueOf());
-        photoDisplay$62.attr($$$cl1.String("src",3).valueOf(),photo$61.src.valueOf()).attr($$$cl1.String("alt",3).valueOf(),photo$61.alt.valueOf());
+        photoDisplay$62.attr($$$cl1.String("src",3).valueOf(),photo$61.src.valueOf()).attr($$$cl1.String("alt",3).valueOf(),photo$61.alt.valueOf()).stop(true,true).hide().fadeIn((800));
         var width$63;
         if((width$63=photo$61.width)!==null){
             photoDisplay$62.attr($$$cl1.String("width",5).valueOf(),width$63);
