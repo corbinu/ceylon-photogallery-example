@@ -5,6 +5,7 @@
 	 	"photos":[
 		{
 			"src": "landscapes/land1.jpg",
+			"thumb": "thumbnails/landscapes/land1.jpg",
 			"height": "640",
 			"width": "480",
 			"alt":"photo of a bluff on Kauai",
@@ -13,6 +14,7 @@
 		},
 		{
 			"src": "landscapes/land2.jpg",
+			"thumb": "thumbnails/landscapes/land2.jpg",
 			"height": "640",
 			"width": "480",
 			"alt":"photo of a bluff on Kauai",
@@ -21,6 +23,7 @@
 		},
 		{
 			"src": "landscapes/land3.jpg",
+			"thumb": "thumbnails/landscapes/land3.jpg",
 			"height": "640",
 			"width": "480",
 			"alt":"photo of a mountain on Kauai",
@@ -29,6 +32,7 @@
 		},
 		{
 			"src": "landscapes/land4.jpg",
+			"thumb": "thumbnails/landscapes/land4.jpg",
 			"height": "1936",
 			"width": "2592",
 			"alt":"photo of pictured Rocks in Upper Peninsula of Michigan",
@@ -37,6 +41,7 @@
 		},
 		{
 			"src": "landscapes/land5.jpg",
+			"thumb": "thumbnails/landscapes/land5.jpg",
 			"height": "2592",
 			"width": "1936",
 			"alt":"photo of a waterfall in Upper Peninsula of Michigan",
@@ -45,6 +50,7 @@
 		},
 		{
 			"src": "landscapes/land6.jpg",
+			"thumb": "thumbnails/landscapes/land6.jpg",
 			"height": "2592",
 			"width": "1936",
 			"alt":"photo of pictured Rocks in Upper Peninsula of Michigan",
@@ -53,6 +59,7 @@
 		},
 		{
 			"src": "landscapes/land7.jpg",
+			"thumb": "thumbnails/landscapes/land7.jpg",
 			"height": "2592",
 			"width": "1936",
 			"alt":"photo of pictured Rocks in Upper Peninsula of Michigan",
@@ -61,6 +68,7 @@
 		},
 		{
 			"src": "landscapes/land8.jpg",
+			"thumb": "thumbnails/landscapes/land8.jpg",
 			"height": "2592",
 			"width": "1936",
 			"alt":"photo of pictured Rocks in Upper Peninsula of Michigan",
@@ -74,6 +82,7 @@
 	 	"photos":[
 		{
 			"src": "view/view1.jpg",
+			"thumb": "thumbnails/view/view1.jpg",
 			"height": "2592",
 			"width": "1936",
 			"alt":"a photo of the harbor on Mackinac Island",
@@ -82,6 +91,7 @@
 		},
 		{
 			"src": "view/view2.jpg",
+			"thumb": "thumbnails/view/view2.jpg",
 			"height": "1936",
 			"width": "2592",
 			"alt":"photo of Houghton MI covered in snow",
@@ -90,6 +100,7 @@
 		},
 		{
 			"src": "view/view3.jpg",
+			"thumb": "thumbnails/view/view3.jpg",
 			"height": "3264",
 			"width": "2448",
 			"alt":"photo of MichiganTech Campus",
@@ -103,6 +114,7 @@
 	 	"photos":[
 		{
 			"src": "nature/nature1.jpg",
+			"thumb": "thumbnails/nature/nature1.jpg",
 			"height": "2592",
 			"width": "1936",
 			"alt":"photo of a cave on Mackinac Island",
@@ -111,6 +123,7 @@
 		},
 		{
 			"src": "nature/nature2.jpg",
+			"thumb": "thumbnails/nature/nature2.jpg",
 			"height": "1936",
 			"width": "2592",
 			"alt":"photo of a waterfall on the Keweenaw Peninsula",
@@ -119,6 +132,7 @@
 		},
 		{
 			"src": "nature/nature3.jpg",
+			"thumb": "thumbnails/nature/nature3.jpg",
 			"height": "1936",
 			"width": "2592",
 			"alt":"photo of miners falls in munising",
@@ -132,6 +146,7 @@
 	 	"photos":[
 		{
 			"src": "misc/misc1.jpg",
+			"thumb": "thumbnails/misc/misc1.jpg",
 			"height": "1936",
 			"width": "2592",
 			"alt":"photo of hollywood tower in disneyland",
@@ -140,6 +155,7 @@
 		},
 		{
 			"src": "misc/misc2.jpg",
+			"thumb": "thumbnails/misc/misc2.jpg",
 			"height": "2592",
 			"width": "1936",
 			"alt":"photo of train made out of snow and ice",
@@ -148,6 +164,7 @@
 		},
 		{
 			"src": "misc/misc3.jpg",
+			"thumb": "thumbnails/misc/misc3.jpg",
 			"height": "1280",
 			"width": "960",
 			"alt":"photo of a white honda del sol",
@@ -156,6 +173,7 @@
 		},
 		{
 			"src": "misc/misc4.jpg",
+			"thumb": "thumbnails/misc/misc4.jpg",
 			"height": "640",
 			"width": "480",
 			"alt":"photo of a galapagos turtle",
@@ -164,6 +182,7 @@
 		},
 		{
 			"src": "misc/misc5.jpg",
+			"thumb": "thumbnails/misc/misc5.jpg",
 			"height": "2592",
 			"width": "1936",
 			"alt":"photo of a water wheel",

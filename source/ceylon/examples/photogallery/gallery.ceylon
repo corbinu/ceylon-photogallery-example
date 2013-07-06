@@ -280,7 +280,7 @@ shared class PageModel(shared Page controller) {
 	
 	shared void parsePhotos(PhotoJSON[] photosJSON, String dir) {
 		print("parsing photos");
-		photos  = [ for (photo in photosJSON ) Photo(photo.title, photo.caption, dir + "/" + photo.src, photo.height, photo.width, photo.alt) ];
+		photos  = [ for (photo in photosJSON ) Photo(photo.title, photo.caption, dir + "/" + photo.src, dir + "/" + photo.thumb, photo.height, photo.width, photo.alt) ];
 	}
 }
 
@@ -292,7 +292,7 @@ shared class PageView(shared Page controller) {
 		}
 		for (i -> photo in entries(controller.model.photos) ) {
 			value append = "<li class=\"span2\"><a href=\"" + controller.uri + i.string + "\" class=\"thumbnail\"><img class=\"photo" + i.string + "\" src=\"" 
-				+ photo.src + "\" alt=\"" + photo.alt + "\"></a></li>";
+				+ photo.thumb + "\" alt=\"" + photo.alt + "\"></a></li>";
 			dynamic {
 				jQuery(".image-grid").append(append);
 				jQuery(".photo" + i.string).load( () => jQuery(\ithis).parent().spin(false) );
@@ -303,6 +303,6 @@ shared class PageView(shared Page controller) {
 	
 }
 
-shared class Photo(shared String title, shared String caption, shared String src, shared Integer? height, shared Integer? width, shared String alt) {}
+shared class Photo(shared String title, shared String caption, shared String src, shared String thumb, shared Integer? height, shared Integer? width, shared String alt) {}
 
-shared class PhotoJSON(shared String title,shared String caption, shared String src, shared Integer? height, shared Integer? width, shared String alt) {}
+shared class PhotoJSON(shared String title,shared String caption, shared String src, shared String thumb, shared Integer? height, shared Integer? width, shared String alt) {}
