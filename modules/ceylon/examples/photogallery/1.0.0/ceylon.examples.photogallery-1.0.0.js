@@ -312,6 +312,10 @@ function CategoryView(controller, $$categoryView){
     function displayPhoto(photo$61){
         /*Begin dynamic block*/
         var photoDisplay$62=(typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".display-photo",14).valueOf());
+        photoDisplay$62.spin($$$cl1.String("small",5).valueOf());
+        photoDisplay$62.load($$$cl1.$JsCallable(function (){
+            return photoDisplay$62.spin(false);
+        },[],{Arguments:{t:$$$cl1.Empty},Return:{t:$$$cl1.Anything}}));
         photoDisplay$62.attr($$$cl1.String("src",3).valueOf(),photo$61.src.valueOf()).attr($$$cl1.String("alt",3).valueOf(),photo$61.alt.valueOf());
         var width$63;
         if((width$63=photo$61.width)!==null){
@@ -494,9 +498,13 @@ function PageView(controller, $$pageView){
         var item$88;while ((item$88=it$87.next())!==$$$cl1.getFinished()){
             var i$89=item$88.key;
             var photo$90=item$88.item;
-            var append$91=$$$cl1.String("<li class=\"span2\"><a href=\"",27).plus($$pageView.controller.uri).plus(i$89.string).plus($$$cl1.String("\" class=\"thumbnail\"><img src=\"",30)).plus(photo$90.src).plus($$$cl1.String("\" alt=\"",7)).plus(photo$90.alt).plus($$$cl1.String("\"></a></li>",11));
+            var append$91=$$$cl1.String("<li class=\"span2\"><a href=\"",27).plus($$pageView.controller.uri).plus(i$89.string).plus($$$cl1.String("\" class=\"thumbnail\"><img class=\"photo",37)).plus(i$89.string).plus($$$cl1.String("\" src=\"",7)).plus(photo$90.src).plus($$$cl1.String("\" alt=\"",7)).plus(photo$90.alt).plus($$$cl1.String("\"></a></li>",11));
             /*Begin dynamic block*/
             (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".image-grid",11).valueOf()).append(append$91.valueOf());
+            (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".photo",6).plus(i$89.string).valueOf()).load($$$cl1.$JsCallable(function (){
+                return (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)((typeof this==='undefined'||this===null?$$$cl1.throwexc('Undefined or null reference: this'):this)).parent().spin(false);
+            },[],{Arguments:{t:$$$cl1.Empty},Return:{t:$$$cl1.Anything}}));
+            (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".photo",6).plus(i$89.string).valueOf()).parent().spin($$$cl1.String("small",5).valueOf());
             /*End dynamic block*/
         }
     }

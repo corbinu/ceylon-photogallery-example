@@ -15,3 +15,7 @@ body {
 .display-caption {
 	padding: 20px;
 }
+
+.thumbnail {
+	min-height: 100px;
+}
