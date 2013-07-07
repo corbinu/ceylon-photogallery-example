@@ -1,3 +1,5 @@
+import ceylon.json { ... }
+
 shared class Gallery() {
 	shared variable Category[] categories = {};
 	shared String currentCategory = "";
@@ -113,12 +115,18 @@ shared class GalleryModel(shared Gallery controller, shared String dir) {
 
 shared class GalleryView(shared Gallery controller) {
 	
+	dynamic {
+		\ithis.template = \iHandlebars.compile(jQuery("gallery-template").html());
+		\ithis.tabsTemplate = \iHandlebars.compile(jQuery("gallery-tabs-template").html());
+		value context = Object {
+	        "categoryTabs" -> "categoryTabs",
+	        "categoryMobile" -> "categoryMobile"
+	    };
+	    jQuery("body").html(\ithis.template(context));
+	}
+	
 	shared void displayCategories() {
-		for (category in controller.categories) {
-			dynamic {
-				jQuery(".catagories").append("<li class=\"category category-" + category.model.name.lowercased + "\"><a href=\"#/" + category.model.name.lowercased + "\">" + category.model.name + "</a></li>");
-			}
-		}
+	    
 	}
 	
 	shared void displayNoCategories() {
@@ -191,21 +199,8 @@ shared class CategoryView(shared Category controller) {
 	
 	shared void displayPhoto(Photo photo) {
 		dynamic {
-			value photoDisplay = jQuery(".display-photo");
-			photoDisplay.attr("src", photo.src).attr("alt", photo.alt).stop(true,true).hide().fadeIn(800);
-			if (exists width = photo.width) {
-				photoDisplay.attr("width", width);
-			} else {
-				photoDisplay.removeAttr("width");
-			}
-			if (exists height = photo.height) {
-				photoDisplay.attr("height", height);
-			} else {
-				photoDisplay.removeAttr("height");
-			}
-			jQuery(".display-title").text(photo.title);
-			jQuery(".display-caption").text(photo.caption);
-			
+			// update template
+			jQuery(".display-photo").stop(true,true).hide().fadeIn(800);
 		}
 	}
 	
@@ -218,36 +213,7 @@ shared class CategoryView(shared Category controller) {
 	}
 
 	shared void displayPage(Integer page) {
-		dynamic {
-			jQuery(".pagination").empty();
-		}
-		if (controller.pages.size > 1) {
-			variable String append = "<ul>";
-			if (page > 0) {
-				append += "<li><a href=\"" + controller.model.uri + (page-1).string + "\">Prev</a></li>";
-			} else {
-				append += "<li class=\"disabled\"><a href=\"#\">Prev</a></li>";
-			}
-			
-			for (i in 0:controller.pages.size) {
-				append += "<li";
-				if (i == page) {
-					append += " class=\"active\"";
-				}
-				append += "><a href=\"" + controller.model.uri + i.string + "\">" + (i + 1).string + "</a></li>";
-			}
-			
-			if (page < (controller.pages.size - 1)) {
-				append += "<li><a href=\"" + controller.model.uri + (page+1).string + "\">Next</a></li>";
-			} else {
-				append += "<li class=\"disabled\"><a href=\"#\">Next</a></li>";
-			}
-			append += "</ul>";
-			
-			dynamic {
-				jQuery(".pagination").append(append);
-			}
-		}
+		// update template
 	}
 }
 
@@ -288,17 +254,10 @@ shared class PageModel(shared Page controller) {
 shared class PageView(shared Page controller) {
 	
 	shared void display() {
-		dynamic {
-			jQuery(".image-grid").empty();
-		}
+		
+		// update template
 		for (i -> photo in entries(controller.model.photos) ) {
-			value appendDesktop = "<li class=\"span2\"><a href=\"" + controller.uri + i.string + "\" class=\"thumbnail\"><img class=\"photo" + i.string + "\" src=\"" 
-				+ photo.thumb + "\" alt=\"" + photo.alt + "\"></a></li>";
-			value appendMobile = "<li class=\"span4\"><h4>" + photo.title + "</h4><img class=\"photo" + i.string + "\" src=\"" 
-				+ photo.thumb + "\" alt=\"" + photo.alt + "\"><p>" + photo.caption + "</p></li>";
 			dynamic {
-				jQuery(".desktop .image-grid").append(appendDesktop);
-				jQuery(".mobile .image-grid").append(appendMobile);
 				jQuery(".photo" + i.string).load( () => jQuery(\ithis).parent().spin(false) );
 				jQuery(".photo" + i.string).parent().spin("small");
 			}

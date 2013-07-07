@@ -30,9 +30,10 @@
                 'jquery': 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min',
                 'jquery-spin': '../assets/js/jquery.spin',
                 'spin': '../assets/js/spin',
+                'handlebars': '../assets/js/handlebars'
             },
             shim: {
-                "ceylon/examples/photogallery/1.0.0/ceylon.examples.photogallery-1.0.0": ["jquery", "spin", "jquery-spin", "director"]
+                "ceylon/examples/photogallery/1.0.0/ceylon.examples.photogallery-1.0.0": ["jquery", "spin", "jquery-spin", "director", "handlebars"]
             }
         });
         $(function() {
@@ -45,59 +46,123 @@
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-responsive.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+        <script id="gallery-template" type="text/x-handlebars-template">
+            <header class="navbar navbar-inverse navbar-fixed-top">
+                <nav class="navbar-inner">
+                    <a class="brand" href="#">Ceylon Demo</a>
+                </nav>   
+            </header>
+            <div class="content">
+                <section class="desktop visible-desktop">
+                    <div class="tabs-left span2">
+                        <ul class="nav nav-tabs catagories">
+                            {{ categoryTabs }}
+                        </ul>
+                    </div>
+                    {{{ categoryDesktop }}}
+                </section>
+                <section class="mobile hidden-desktop">
+                    <div class="row">
+                        <ul class="offset3 span9 nav nav-pills catagories">
+                            {{ categoryTabs }}
+                        </ul>
+                    </div>
+                    {{{ categoryMobile }}}
+                </section>
+                <div class="row">
+                    <footer class="offset1 span10">
+                        <p>Build by <a href="http://celyonjsvm.wordpress.com">Corbin Uselton</a> 2013</p>
+                    </footer>
+                </div>
+            </div>
+        </script>
+
+        <script id="gallery-tabs-template" type="text/x-handlebars-template">
+            {{#each category }}
+            <li class="category category-{{ name }}">
+                <a href="#/{ name }}">"{{ name }}"</a>
+            </li>
+            {{/each}}
+        </script>
+
+        <script id="category-desktop-template" type="text/x-handlebars-template">
+            <div class="span6">
+                <div class="thumbnail">
+                    <h3 class="display-title">{{ title }}</h3>
+                    <img class="display-photo" width="{{ width }}" height="{{ height }}" src="{{ src }}" alt="{{ alt }}">
+                    <p class="display-caption">{{ caption }}</p>
+                </div>
+            </div>
+            <div class="span4">
+                {{{ pageDesktop }}}
+                {{ pagination }}
+            </div>
+        </script>
+
+        <script id="category-mobile-template" type="text/x-handlebars-template">
+            {{{ pageMobile }}}
+            {{ pagination }}
+        </script>
+
+        <script id="page-desktop-template" type="text/x-handlebars-template">
+            <ul class="thumbnails image-grid">
+                {{#each photo }}
+                <li class="span2">
+                    <a href="{{ uri }}{{ @index }}" class="thumbnail">
+                        <img class="photo{{ @index }}" src="{{ thumb }}" alt="{{ alt }}">
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </script>
+
+        <script id="category-pagination-template" type="text/x-handlebars-template">
+            <div class="row pagination pagination-centered">
+                <ul>
+                    {{#if prev }}
+                    <li>
+                        <a href="{{ uri }}{{ prev }}">Prev</a>
+                    </li>
+                    {{ else }}
+                    <li class="disabled">
+                        <a href="#">Prev</a>
+                    </li>
+                    {{/if}}
+
+                    {{#each pages }}
+                    <li {{#if isCurrent }} class="active"{{/if}}><a href="{{ uri }}{{ @index }}">{{ photoNum }}</a></li>
+                    {{/each}}
+
+                    {{#if next }}
+                    <li>
+                        <a href="{{ uri }}{{ prev }}">Next</a>
+                    </li>
+                    {{ else }}
+                    <li class="disabled">
+                        <a href="#">Next</a>
+                    </li>
+                    {{/if}}
+                </ul>
+            </div>
+        </script>
+
+        <script id="page-mobile-template" type="text/x-handlebars-template">
+            <div class="row">
+                <div class="offset3 span9">
+                    <ul class="thumbnails image-grid">
+                        {{#each photo }}
+                        <li class="span4 thumbnail">
+                            <img class="photo{{ @index }}" src="{{ thumb }}" alt="{{ alt }}">
+                            <p>t{{ caption }}</p>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </script>
         
     </head>
     <body>
-        <header class="navbar navbar-inverse navbar-fixed-top">
-            <nav class="navbar-inner">
-                <a class="brand" href="#">Ceylon Demo</a>
-            </nav>   
-        </header>
-        <div class="content">
-            <section class="desktop visible-desktop">
-                <div class="tabs-left span2">
-                    <ul class="nav nav-tabs catagories">
-                        <!-- Ceylon inserts the category tabs here -->
-                    </ul>
-                </div>
-                <div class="span6">
-                    <div class="thumbnail">
-                        <h3 class="display-title"></h3>
-                        <img class="display-photo">
-                        <p class="display-caption"></p>
-                    </div>
-                </div>
-                <div class="span4">
-                    <ul class="thumbnails image-grid">
-                        <!-- Ceylon inserts the image thumbnails here -->
-                    </ul>
-                    <div class="pagination pagination-centered">
-                        <!-- Ceylon inserts the pagination buttons here -->
-                    </div>
-                </div>
-            </section>
-            <section class="mobile hidden-desktop">
-                <div class="row">
-                    <ul class="offset3 span9 nav nav-pills catagories">
-                        <!-- Ceylon inserts the category tabs here -->
-                    </ul>
-                </div>
-                <div class="row">
-                    <div class="offset3 span9">
-                        <ul class="thumbnails image-grid">
-                            <!-- Ceylon inserts the image thumbnails here -->
-                        </ul>
-                    </div>
-                </div>
-                <div class="row pagination pagination-centered">
-                    <!-- Ceylon inserts the pagination buttons here -->
-                </div>
-            </section>
-            <div class="row">
-                <footer class="offset1 span10">
-                    <p>Build by <a href="http://celyonjsvm.wordpress.com">Corbin Uselton</a> 2013</p>
-                </footer>
-            </div>
-        </div>
     </body>
 </html>
