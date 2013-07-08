@@ -1,5 +1,101 @@
 import ceylon.json { ... }
 
+shared void nativejs() {  }
+
+shared nativejs interface JSArray {
+	
+	// add the rest later
+	
+	shared formal Anything pop();
+	
+	shared formal Anything push();
+
+}
+
+shared nativejs interface JSJSON {}
+
+class JSObject({Entry<String, String|Boolean|Integer|Float|Object|Array|NullInstance>*} values = {}) extends Object(values) {
+	
+	shared JSJSON toJson() {
+		print("converting object to json");
+		return objectToJson(this);
+	}
+	
+	JSJSON objectToJson(Object ceylonJSON) {
+		variable JSJSON returnJSON;
+		dynamic {
+			value json = \iObject();
+			print("created new JS object " + json);
+			for (name -> entry in ceylonJSON) {
+				switch (entry)
+				case (is String) { 
+					print("adding entry" + name + " with value " + entry);
+					json.name = entry;
+				}
+				case (is Boolean) {
+					if (entry) {
+						json.name = \itrue;
+					} else {
+						json.name = \ifalse;
+					}
+				}
+				case (is Integer|Float) { 
+					json.name = \iNumber(entry);
+				}
+				case (is Object) {
+					json.name = objectToJson(entry);
+				}
+				case (is Array) {
+					json.name = arrayToArray(entry);
+				}
+				case (is NullInstance) {
+					json.name = \inull;
+				}
+
+			}
+			returnJSON = json;
+		}
+		
+		return returnJSON;
+	}
+	
+	JSArray arrayToArray(Array ceylonArray) {
+		variable JSArray returnArray;
+		dynamic {
+			value array = \iArray();
+			for (entry in ceylonArray) {
+				switch (entry)
+				case (is String) {  
+					array.push(entry);
+				}
+				case (is Boolean) {
+					if (entry) {
+						array.push(\itrue);
+					} else {
+						array.push(\ifalse);
+					}
+				}
+				case (is Integer|Float) { 
+					array.push(objectToJson(\iNumber(entry)));
+				}
+				case (is Object) {
+					array.push(objectToJson(entry));
+				}
+				case (is Array) {
+					array.push(arrayToArray(entry));
+				}
+				case (is NullInstance) {
+					array.push(\inull);
+				}
+
+			}
+			returnArray = array;
+		}
+		
+		return returnArray;
+	}
+}
+
 shared class Gallery() {
 	shared variable Category[] categories = {};
 	shared String currentCategory = "";
@@ -26,11 +122,7 @@ shared class Gallery() {
 			router.on("/:category/:page/:photo", routePhoto);
 		}
 		
-		if (categories.size > 0) {
-			view.displayCategories();
-		} else {
-			view.displayNoCategories();
-		}
+		view.displayCategories();
 	}
 	
 	Category? getCategory(String name) {
@@ -48,9 +140,6 @@ shared class Gallery() {
 		if (exists firstCategory = categories[0]) {
 			print("display first category");
 			firstCategory.display(0, 0);
-		} else {
-			print("display no categories");
-			view.displayNoCategories();
 		}
 	}
 	
@@ -96,7 +185,7 @@ shared class Gallery() {
 shared class GalleryModel(shared Gallery controller, shared String dir) {
 	
 	shared void loadJSON() {
-		print("laoding loal json");
+		print("loading loal json");
 		dynamic {
 			jQuery.getJSON(dir + "/images.json")
 			.done(parseCategories)
@@ -114,23 +203,40 @@ shared class GalleryModel(shared Gallery controller, shared String dir) {
 }
 
 shared class GalleryView(shared Gallery controller) {
+	variable Callable<String, Anything[]> template;
+	variable Callable<String, Anything[]> tabsTemplate;
+	
+	variable String categoryTabs = "categoryTabs";
+	variable String categoryMobile = "categoryMobile";
+	variable String categoryDesktop = "categoryDesktop";
 	
 	dynamic {
-		\ithis.template = \iHandlebars.compile(jQuery("gallery-template").html());
-		\ithis.tabsTemplate = \iHandlebars.compile(jQuery("gallery-tabs-template").html());
-		value context = Object {
-	        "categoryTabs" -> "categoryTabs",
-	        "categoryMobile" -> "categoryMobile"
+		template = \iHandlebars.compile(jQuery("#gallery-template").html());
+		tabsTemplate = \iHandlebars.compile(jQuery("#gallery-tabs-template").html());
+	}
+	
+	shared void display() {
+		value context = JSObject {
+	        "categoryTabs" -> categoryTabs,
+	        "categoryMobile" -> categoryMobile,
+	        "categoryDesktop" -> categoryDesktop
 	    };
-	    jQuery("body").html(\ithis.template(context));
+	    dynamic {
+	       	alert(context.toJson());
+	    	jQuery("body").html(template(context.toJson()));
+		}
 	}
 	
 	shared void displayCategories() {
-	    
-	}
-	
-	shared void displayNoCategories() {
-		// display no categories here
+		/*value contextArray = [ for (category in controller.categories) JSObject { "name" -> category.model.name }];
+		dynamic {
+			value context = \iArray();
+			for (entry in contextArray) {
+				context.push(entry.json);
+			}
+			categoryTabs = tabsTemplate(context);
+		}*/
+		display();
 	}
 	
 	shared void displayInvalidCategory() {
