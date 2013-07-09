@@ -57,7 +57,7 @@
                 <section class="desktop visible-desktop">
                     <div class="tabs-left span2">
                         <ul class="nav nav-tabs catagories">
-                            {{ categoryTabs }}
+                            {{{ categoryTabs }}}
                         </ul>
                     </div>
                     {{{ categoryDesktop }}}
@@ -65,7 +65,7 @@
                 <section class="mobile hidden-desktop">
                     <div class="row">
                         <ul class="offset3 span9 nav nav-pills catagories">
-                            {{ categoryTabs }}
+                            {{{ categoryTabs }}}
                         </ul>
                     </div>
                     {{{ categoryMobile }}}
@@ -96,13 +96,13 @@
             </div>
             <div class="span4">
                 {{{ pageDesktop }}}
-                {{ pagination }}
+                {{{ pagination }}}
             </div>
         </script>
 
         <script id="category-mobile-template" type="text/x-handlebars-template">
             {{{ pageMobile }}}
-            {{ pagination }}
+            {{{ pagination }}}
         </script>
 
         <script id="page-desktop-template" type="text/x-handlebars-template">

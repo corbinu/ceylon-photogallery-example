@@ -1,66 +1,61 @@
 import ceylon.json { ... }
 
-shared void nativejs() {  }
-
-shared nativejs interface JSArray {
-	
-	// add the rest later
-	
-	shared formal Anything pop();
-	
-	shared formal Anything push();
-
-}
-
-shared nativejs interface JSJSON {}
+class Carrier() {}
 
 class JSObject({Entry<String, String|Boolean|Integer|Float|Object|Array|NullInstance>*} values = {}) extends Object(values) {
 	
-	shared JSJSON toJson() {
+	shared Carrier toJson() {
 		print("converting object to json");
 		return objectToJson(this);
 	}
 	
-	JSJSON objectToJson(Object ceylonJSON) {
-		variable JSJSON returnJSON;
+	Carrier objectToJson(Object ceylonJSON) {
+		value carrier = Carrier();
 		dynamic {
 			value json = \iObject();
+			value options = \iObject();
+			options.writable = \itrue;
+			options.enumerable = \itrue;
+			options.configurable = \itrue;
 			print("created new JS object " + json);
 			for (name -> entry in ceylonJSON) {
 				switch (entry)
-				case (is String) { 
-					print("adding entry" + name + " with value " + entry);
-					json.name = entry;
+				case (is String) {
+					options.\ivalue = entry;
 				}
 				case (is Boolean) {
 					if (entry) {
-						json.name = \itrue;
+						options.\ivalue = \itrue;
 					} else {
-						json.name = \ifalse;
+						options.\ivalue = \ifalse;
 					}
 				}
 				case (is Integer|Float) { 
-					json.name = \iNumber(entry);
+					options.\ivalue = \iNumber(entry);
 				}
 				case (is Object) {
-					json.name = objectToJson(entry);
+					options.\ivalue = objectToJson(entry);
 				}
 				case (is Array) {
-					json.name = arrayToArray(entry);
+					value dummy = value {dCarrier=arrayToArray(entry);};
+					options.\ivalue = dummy.dCarrier.array;
 				}
 				case (is NullInstance) {
-					json.name = \inull;
+					options.\ivalue = \inull;
 				}
-
+				\iObject.defineProperty(json, name, options);
+				variable value dummy = value {};
+				variable value dCarrier = dummy;
+				dCarrier = carrier;
+				dCarrier.json = json;
 			}
-			returnJSON = json;
 		}
 		
-		return returnJSON;
+		return carrier;
 	}
 	
-	JSArray arrayToArray(Array ceylonArray) {
-		variable JSArray returnArray;
+	Carrier arrayToArray(Array ceylonArray) {
+		value carrier = Carrier();
 		dynamic {
 			value array = \iArray();
 			for (entry in ceylonArray) {
@@ -89,10 +84,13 @@ class JSObject({Entry<String, String|Boolean|Integer|Float|Object|Array|NullInst
 				}
 
 			}
-			returnArray = array;
+			variable value dummy = value {};
+			variable value dCarrier = dummy;
+			dCarrier = carrier;
+			dCarrier.array = array;
 		}
 		
-		return returnArray;
+		return carrier;
 	}
 }
 
@@ -222,8 +220,9 @@ shared class GalleryView(shared Gallery controller) {
 	        "categoryDesktop" -> categoryDesktop
 	    };
 	    dynamic {
-	       	alert(context.toJson());
-	    	jQuery("body").html(template(context.toJson()));
+	       	value dummy = value {dCarrier=context.toJson();};
+	       	print(\iJSON.stringify(dummy.dCarrier.json));
+	    	jQuery("body").html(template(dummy.dCarrier.json));
 		}
 	}
 	
