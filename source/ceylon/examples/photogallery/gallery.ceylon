@@ -5,7 +5,6 @@ class Carrier() {}
 class JSObject({Entry<String, String|Boolean|Integer|Float|Object|Array|NullInstance>*} values = {}) extends Object(values) {
 	
 	shared Carrier toJson() {
-		print("converting object to json");
 		return objectToJson(this);
 	}
 	
@@ -17,7 +16,6 @@ class JSObject({Entry<String, String|Boolean|Integer|Float|Object|Array|NullInst
 			options.writable = \itrue;
 			options.enumerable = \itrue;
 			options.configurable = \itrue;
-			print("created new JS object " + json);
 			for (name -> entry in ceylonJSON) {
 				switch (entry)
 				case (is String) {
@@ -34,7 +32,8 @@ class JSObject({Entry<String, String|Boolean|Integer|Float|Object|Array|NullInst
 					options.\ivalue = \iNumber(entry);
 				}
 				case (is Object) {
-					options.\ivalue = objectToJson(entry);
+					value dummy = value {dCarrier=objectToJson(entry);};
+					options.\ivalue = dummy.dCarrier.json;
 				}
 				case (is Array) {
 					value dummy = value {dCarrier=arrayToArray(entry);};
@@ -74,10 +73,12 @@ class JSObject({Entry<String, String|Boolean|Integer|Float|Object|Array|NullInst
 					array.push(objectToJson(\iNumber(entry)));
 				}
 				case (is Object) {
-					array.push(objectToJson(entry));
+					value dummy = value {dCarrier=objectToJson(entry);};
+					array.push(dummy.dCarrier.json);
 				}
 				case (is Array) {
-					array.push(arrayToArray(entry));
+					value dummy = value {dCarrier=arrayToArray(entry);};
+					array.push(dummy.dCarrier.array);
 				}
 				case (is NullInstance) {
 					array.push(\inull);
@@ -105,6 +106,7 @@ shared class Gallery() {
 		model = GalleryModel(this, dir);
 		view = GalleryView(this);
 		
+		handlebarHelpers();
 		model.loadJSON();
 		
 		return this;
@@ -121,6 +123,56 @@ shared class Gallery() {
 		}
 		
 		view.displayCategories();
+	}
+	
+	shared void updateCategory(String category) {
+		view.category = category;
+		view.display();
+	}
+	
+	void handlebarHelpers() {
+		dynamic {
+			\iHandlebars.registerHelper("lower", (String string) { 
+				return string.lowercased;
+			});
+			\iHandlebars.registerHelper("upper", (String string) { 
+				return string.uppercased;
+			});
+			\iHandlebars.registerHelper("add", (Integer int1, Integer int2) { 
+				return (int1 + int2).string;
+			});
+			\iHandlebars.registerHelper("sub", (Integer int1, Integer int2) {
+				return (int1 - int2).string;
+			});
+			\iHandlebars.registerHelper("eql", void (Object obj1, Object obj2, value funcs) { 
+				if (obj1 == obj2) {
+					funcs.fn(\ithis);
+				} else {
+					funcs.inverse(\ithis);
+				}
+			});
+			\iHandlebars.registerHelper("nteql", void (Object obj1, Object obj2, value funcs) {
+				if (obj1 != obj2) {
+					funcs.fn(\ithis);
+				} else {
+					funcs.inverse(\ithis);
+				}
+			});
+			\iHandlebars.registerHelper("lt", void (Integer int1, Integer int2, value funcs) {
+				if (int1 < int2) {
+					funcs.fn(\ithis);
+				} else {
+					funcs.inverse(\ithis);
+				}
+			});
+			\iHandlebars.registerHelper("gt", void (Integer int1, Integer int2, value funcs) {
+				if (int1 > int2) {
+					funcs.fn(\ithis);
+				} else {
+					funcs.inverse(\ithis);
+				}
+			});
+		}
 	}
 	
 	Category? getCategory(String name) {
@@ -183,7 +235,7 @@ shared class Gallery() {
 shared class GalleryModel(shared Gallery controller, shared String dir) {
 	
 	shared void loadJSON() {
-		print("loading loal json");
+		print("loading local json");
 		dynamic {
 			jQuery.getJSON(dir + "/images.json")
 			.done(parseCategories)
@@ -193,6 +245,7 @@ shared class GalleryModel(shared Gallery controller, shared String dir) {
 	
 	shared void parseCategories(CategoryJSON[] categoriesJSON) {
 		print("process category json");
+		print("dir is:" + dir);
 		controller.categories = [for (category in categoriesJSON) Category(controller).init(category.name, category.photos, dir) ];
 		
 		controller.loaded();
@@ -204,9 +257,8 @@ shared class GalleryView(shared Gallery controller) {
 	variable Callable<String, Anything[]> template;
 	variable Callable<String, Anything[]> tabsTemplate;
 	
-	variable String categoryTabs = "categoryTabs";
-	variable String categoryMobile = "categoryMobile";
-	variable String categoryDesktop = "categoryDesktop";
+	shared variable String categoryTabs = "categoryTabs";
+	shared variable String category = "category";
 	
 	dynamic {
 		template = \iHandlebars.compile(jQuery("#gallery-template").html());
@@ -216,25 +268,24 @@ shared class GalleryView(shared Gallery controller) {
 	shared void display() {
 		value context = JSObject {
 	        "categoryTabs" -> categoryTabs,
-	        "categoryMobile" -> categoryMobile,
-	        "categoryDesktop" -> categoryDesktop
+	        "category" -> category
 	    };
 	    dynamic {
 	       	value dummy = value {dCarrier=context.toJson();};
-	       	print(\iJSON.stringify(dummy.dCarrier.json));
 	    	jQuery("body").html(template(dummy.dCarrier.json));
 		}
 	}
 	
 	shared void displayCategories() {
-		/*value contextArray = [ for (category in controller.categories) JSObject { "name" -> category.model.name }];
+		value categories = Array();
+		for (category in controller.categories) { 
+			categories.add(JSObject { "name" -> category.model.name });
+		}
+		value context = JSObject { "category" -> categories };
 		dynamic {
-			value context = \iArray();
-			for (entry in contextArray) {
-				context.push(entry.json);
-			}
-			categoryTabs = tabsTemplate(context);
-		}*/
+			value dummy = value {dCarrier=context.toJson();};
+			categoryTabs = tabsTemplate(dummy.dCarrier.json);
+		}
 		display();
 	}
 	
@@ -258,8 +309,13 @@ shared class Category(shared Gallery parent) {
 		return this;
 	}
 	
+	shared void updatePage(String page) {
+		view.page = page;
+		view.display();
+	}
+	
 	shared void display(Integer pageNum, Integer photoNum) {
-		print("display category " + model.name + " page " + pageNum.string + " photo" + photoNum.string);
+		print("display category " + model.name + " page " + pageNum.string + " photo " + photoNum.string);
 		view.display();
 		if (exists page = pages[pageNum]) {
 			print("display page");
@@ -293,6 +349,22 @@ shared class CategoryModel(shared Category controller, shared String name) {
 }
 
 shared class CategoryView(shared Category controller) {
+	variable Callable<String, Anything[]> template;
+	variable Callable<String, Anything[]> paginationTemplate;
+	
+	shared variable String pagination = "pagination";
+	shared variable String page = "page";
+	shared variable String title = "";
+	shared variable String src = "";
+	shared variable String alt = "";
+	shared variable String caption = "";
+	shared variable String width = "";
+	shared variable String height = "";
+	
+	dynamic {
+		template = \iHandlebars.compile(jQuery("#category-template").html());
+		paginationTemplate = \iHandlebars.compile(jQuery("#category-pagination-template").html());
+	}
 	
 	shared void display() {
 		print("display category");
@@ -300,12 +372,36 @@ shared class CategoryView(shared Category controller) {
 			jQuery(".category").each( () => jQuery(\ithis).removeClass("active") );
 			jQuery(".category-" + controller.model.name.lowercased).addClass("active");
 		}
+		value context = JSObject {
+	        "title" -> title,
+	        "width" -> width,
+	        "src" -> src,
+	        "alt" -> alt,
+	        "caption" -> caption,
+	        "page" -> page,
+	        "pagination" -> pagination
+		};
+		print("src: " + src);
+		dynamic {
+			value dummy = value {dCarrier=context.toJson();};
+	    	controller.parent.updateCategory(template(dummy.dCarrier.json));
+		}
 	}
 	
 	shared void displayPhoto(Photo photo) {
+	    if (exists photoWidth = photo.width) {
+	    	width = photoWidth.string;
+		}
+		if (exists photoHeight = photo.height) {
+	    	height = photoHeight.string;
+		}
+		src = photo.src;
+		alt = photo.alt;
+		caption = photo.caption;
+		title = photo.title;
 		dynamic {
-			// update template
-			jQuery(".display-photo").stop(true,true).hide().fadeIn(800);
+			display();
+			jQuery(".display-photo").stop(true, true).hide().fadeIn(800);
 		}
 	}
 	
@@ -317,8 +413,21 @@ shared class CategoryView(shared Category controller) {
 		// display no photo
 	}
 
-	shared void displayPage(Integer page) {
-		// update template
+	shared void displayPage(Integer pageNum) {
+		value pages = Array();
+		for (page in controller.pages) { 
+			pages.add(JSObject { "uri" -> page.uri });
+		}
+		value context = JSObject {
+	        "page" -> pageNum,
+	        "lastPage" -> (controller.pages.size - 1),
+	        "pages" -> pages
+	    };
+	    dynamic {
+			value dummy = value {dCarrier=context.toJson();};
+	    	pagination = paginationTemplate(dummy.dCarrier.json);
+		}
+		display();
 	}
 }
 
@@ -357,11 +466,30 @@ shared class PageModel(shared Page controller) {
 }
 
 shared class PageView(shared Page controller) {
+	variable Callable<String, Anything[]> template;
+	
+	dynamic {
+		template = \iHandlebars.compile(jQuery("#page-template").html());
+	}
 	
 	shared void display() {
-		
-		// update template
-		for (i -> photo in entries(controller.model.photos) ) {
+		value photos = Array();
+		for (photo in controller.model.photos) { 
+			photos.add(JSObject { 
+				"title" -> photo.title,
+				"uri" -> controller.uri,
+				"src" -> photo.thumb,
+				"alt" -> photo.alt
+			});
+		}
+		value context = JSObject {
+	        "photos" -> photos
+	    };
+	    dynamic {
+			value dummy = value {dCarrier=context.toJson();};
+	    	controller.parent.updatePage(template(dummy.dCarrier.json));
+		}
+		for (i in 0:photos.size) {
 			dynamic {
 				jQuery(".photo" + i.string).load( () => jQuery(\ithis).parent().spin(false) );
 				jQuery(".photo" + i.string).parent().spin("small");

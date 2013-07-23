@@ -557,7 +557,7 @@ $init$Object();
 function Parser(str$697, $$parser){
     $init$Parser();
     if ($$parser===undefined)$$parser=new Parser.$$;
-    var chars$698=str$697.characters;
+    var chars$698=str$697.characters.sequence;
     $$$cl1.defineAttr($$parser,'chars$698',function(){return chars$698;});
     var index$699=(0);
     $$$cl1.defineAttr($$parser,'index$699',function(){return index$699;},function(index$700){return index$699=index$700;});

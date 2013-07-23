@@ -1,21 +1,16 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
-	grunt.registerTask('build', 'Build the browser files', function() 
-	{
-		var exec = require('child_process').exec;
-
-		var compile = exec('$CEYLON_HOME/bin/ceylon compile-js ceylon.examples.photogallery', function (error, stdout, stderr) 
-		{
-			console.log('stdout: ' + stdout);
-			console.log('stderr: ' + stderr);
-			if (error !== null) 
-			{
-				console.log('exec error: ' + error);
+	grunt.initConfig({
+		exec: {
+			build: {
+				command: '$CEYLON_HOME/bin/ceylon compile-js ceylon.examples.photogallery'
 			}
-		});
+		}
 	});
 
-	grunt.registerTask('default', ['build']);
+	grunt.loadNpmTasks('grunt-exec');
+
+	grunt.registerTask('default', ['exec:build']);
 
 };
