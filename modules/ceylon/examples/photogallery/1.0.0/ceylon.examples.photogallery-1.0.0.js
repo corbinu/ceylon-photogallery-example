@@ -1,5 +1,12 @@
 (function(define) { define(function(require, exports, module) {
 var $$METAMODEL$$={"ceylon.examples.photogallery":{"CategoryJSON":{"super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"name"},{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.examples.photogallery","$nm":"PhotoJSON"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"photos"}],"$mt":"cls","$an":{"shared":[]},"$nm":"CategoryJSON"},"init":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$nm":"galleryDir"}]],"$mt":"mthd","$an":{"shared":[],"doc":["Run the module `ceylon.examples.photogallery`."]},"$nm":"init"},"CategoryModel":{"super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$ps":[{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"Category"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"controller"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"name"}],"$mt":"cls","$an":{"shared":[]},"$at":{"uri":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"gttr","$an":{"shared":[]},"$nm":"uri"}},"$nm":"CategoryModel"},"CategoryView":{"super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$ps":[{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"Category"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"controller"}],"$mt":"cls","$an":{"shared":[]},"$m":{"displayPage":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$pt":"v","$nm":"pageNum"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"displayPage"},"displayPhoto":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"Photo"},"$mt":"prm","$pt":"v","$nm":"photo"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"displayPhoto"},"displayInvalidPage":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"mthd","$an":{"shared":[]},"$nm":"displayInvalidPage"},"displayNoPhoto":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"mthd","$an":{"shared":[]},"$nm":"displayNoPhoto"},"display":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"mthd","$an":{"shared":[]},"$nm":"display"}},"$at":{"template":{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"String"},{"$md":"ceylon.language","$mt":"tpm","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"}],"$pk":"ceylon.language","$nm":"Sequential"}],"$pk":"ceylon.language","$nm":"Callable"},"var":"1","$mt":"attr","$an":{"shared":[],"actual":[],"variable":[]},"$nm":"template"},"title":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"var":"1","$mt":"attr","$an":{"shared":[],"actual":[],"variable":[]},"$nm":"title"},"height":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"var":"1","$mt":"attr","$an":{"shared":[],"actual":[],"variable":[]},"$nm":"height"},"paginationTemplate":{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"String"},{"$md":"ceylon.language","$mt":"tpm","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"}],"$pk":"ceylon.language","$nm":"Sequential"}],"$pk":"ceylon.language","$nm":"Callable"},"var":"1","$mt":"attr","$an":{"shared":[],"actual":[],"variable":[]},"$nm":"paginationTemplate"},"page":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"var":"1","$mt":"attr","$an":{"shared":[],"variable":[]},"$nm":"page"},"alt":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"var":"1","$mt":"attr","$an":{"shared":[],"actual":[],"variable":[]},"$nm":"alt"},"width":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"var":"1","$mt":"attr","$an":{"shared":[],"actual":[],"variable":[]},"$nm":"width"},"caption":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"var":"1","$mt":"attr","$an":{"shared":[],"actual":[],"variable":[]},"$nm":"caption"},"src":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"var":"1","$mt":"attr","$an":{"shared":[],"actual":[],"variable":[]},"$nm":"src"},"pagination":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"var":"1","$mt":"attr","$an":{"shared":[],"actual":[],"variable":[]},"$nm":"pagination"}},"$nm":"CategoryView"},"PageModel":{"super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$ps":[{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"Page"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"controller"}],"$mt":"cls","$an":{"shared":[]},"$m":{"parsePhotos":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.examples.photogallery","$nm":"PhotoJSON"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","$pt":"v","$nm":"photosJSON"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$nm":"dir"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"parsePhotos"}},"$at":{"photos":{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.examples.photogallery","$nm":"Photo"}],"$pk":"ceylon.language","$nm":"Sequential"},"var":"1","$mt":"attr","$an":{"shared":[],"actual":[],"variable":[]},"$nm":"photos"}},"$nm":"PageModel"},"Photo":{"super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"title"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"caption"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"src"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"thumb"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"height"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"width"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"alt"}],"$mt":"cls","$an":{"shared":[]},"$nm":"Photo"},"PageView":{"super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$ps":[{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"Page"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"controller"}],"$mt":"cls","$an":{"shared":[]},"$m":{"display":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"mthd","$an":{"shared":[]},"$nm":"display"}},"$at":{"template":{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"String"},{"$md":"ceylon.language","$mt":"tpm","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"}],"$pk":"ceylon.language","$nm":"Sequential"}],"$pk":"ceylon.language","$nm":"Callable"},"var":"1","$mt":"attr","$an":{"shared":[],"actual":[],"variable":[]},"$nm":"template"}},"$nm":"PageView"},"$pkg-shared":"1","GalleryView":{"super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$ps":[{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"Gallery"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"controller"}],"$mt":"cls","$an":{"shared":[]},"$m":{"displayInvalidCategory":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"mthd","$an":{"shared":[]},"$nm":"displayInvalidCategory"},"display":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"mthd","$an":{"shared":[]},"$nm":"display"},"displayCategories":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"mthd","$an":{"shared":[]},"$nm":"displayCategories"}},"$at":{"template":{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"String"},{"$md":"ceylon.language","$mt":"tpm","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"}],"$pk":"ceylon.language","$nm":"Sequential"}],"$pk":"ceylon.language","$nm":"Callable"},"var":"1","$mt":"attr","$an":{"shared":[],"actual":[],"variable":[]},"$nm":"template"},"category":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"var":"1","$mt":"attr","$an":{"shared":[],"variable":[]},"$nm":"category"},"categoryTabs":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"var":"1","$mt":"attr","$an":{"shared":[],"actual":[],"variable":[]},"$nm":"categoryTabs"},"tabsTemplate":{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"String"},{"$md":"ceylon.language","$mt":"tpm","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"}],"$pk":"ceylon.language","$nm":"Sequential"}],"$pk":"ceylon.language","$nm":"Callable"},"var":"1","$mt":"attr","$an":{"shared":[],"actual":[],"variable":[]},"$nm":"tabsTemplate"}},"$nm":"GalleryView"},"GalleryModel":{"super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$ps":[{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"Gallery"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"controller"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"dir"}],"$mt":"cls","$an":{"shared":[]},"$m":{"parseCategories":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.examples.photogallery","$nm":"CategoryJSON"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","$pt":"v","$nm":"categoriesJSON"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"parseCategories"},"loadJSON":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"mthd","$an":{"shared":[]},"$nm":"loadJSON"}},"$nm":"GalleryModel"},"Category":{"super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$ps":[{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"Gallery"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"parent"}],"$mt":"cls","$an":{"shared":[]},"$m":{"displayPhoto":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.examples.photogallery","$nm":"Photo"}]},"$mt":"prm","$pt":"v","$nm":"photoM"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"displayPhoto"},"setPages":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.examples.photogallery","$nm":"PhotoJSON"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","$pt":"v","$nm":"photosJSON"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$nm":"dir"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setPages"},"init":{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"Category"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$nm":"name"},{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.examples.photogallery","$nm":"PhotoJSON"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","$pt":"v","$nm":"photos"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$nm":"dir"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"init"},"display":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$pt":"v","$nm":"pageNum"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$pt":"v","$nm":"photoNum"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"display"},"updatePage":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$nm":"page"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"updatePage"}},"$at":{"model":{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"CategoryModel"},"$mt":"attr","$an":{"shared":[],"late":[],"actual":[]},"$nm":"model"},"pages":{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.examples.photogallery","$nm":"Page"}],"$pk":"ceylon.language","$nm":"Sequential"},"var":"1","$mt":"attr","$an":{"shared":[],"actual":[],"variable":[]},"$nm":"pages"},"view":{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"CategoryView"},"$mt":"attr","$an":{"shared":[],"late":[],"actual":[]},"$nm":"view"}},"$nm":"Category"},"PhotoJSON":{"super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"title"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"caption"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"src"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"thumb"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"height"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"width"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"alt"}],"$mt":"cls","$an":{"shared":[]},"$nm":"PhotoJSON"},"Carrier":{"super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$mt":"cls","$nm":"Carrier"},"Page":{"super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$ps":[{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"Category"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"parent"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$an":{"shared":[]},"$nm":"uri"}],"$mt":"cls","$an":{"shared":[]},"$m":{"init":{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"Page"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.examples.photogallery","$nm":"PhotoJSON"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","$pt":"v","$nm":"photos"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$nm":"dir"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"init"},"display":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$pt":"v","$nm":"photoNum"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"display"}},"$at":{"model":{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"PageModel"},"$mt":"attr","$an":{"shared":[],"late":[],"actual":[]},"$nm":"model"},"view":{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"PageView"},"$mt":"attr","$an":{"shared":[],"late":[],"actual":[]},"$nm":"view"}},"$nm":"Page"},"JSObject":{"super":{"$md":"ceylon.json","$pk":"ceylon.json","$nm":"Object"},"$ps":[{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"String"},{"comp":"u","$mt":"tpm","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Float"},{"$md":"ceylon.json","$pk":"ceylon.json","$nm":"Object"},{"$md":"ceylon.json","$pk":"ceylon.json","$nm":"Array"},{"$md":"ceylon.json","$pk":"ceylon.json","$nm":"NullInstance"}]}],"$pk":"ceylon.language","$nm":"Entry"},{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Null"}],"$pk":"ceylon.language","$nm":"Iterable"},"$mt":"prm","$pt":"v","$def":"1","$nm":"values"}],"$mt":"cls","$m":{"arrayToArray":{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"Carrier"},"$ps":[[{"$t":{"$md":"ceylon.json","$pk":"ceylon.json","$nm":"Array"},"$mt":"prm","$pt":"v","$nm":"ceylonArray"}]],"$mt":"mthd","$nm":"arrayToArray"},"toJson":{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"Carrier"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toJson"},"objectToJson":{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"Carrier"},"$ps":[[{"$t":{"$md":"ceylon.json","$pk":"ceylon.json","$nm":"Object"},"$mt":"prm","$pt":"v","$nm":"ceylonJSON"}]],"$mt":"mthd","$nm":"objectToJson"}},"$nm":"JSObject"},"Gallery":{"super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$mt":"cls","$an":{"shared":[]},"$m":{"routePage":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$nm":"categoryName"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$pt":"v","$nm":"page"}]],"$mt":"mthd","$nm":"routePage"},"routeCategory":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$nm":"categoryName"}]],"$mt":"mthd","$nm":"routeCategory"},"loaded":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"mthd","$an":{"shared":[]},"$nm":"loaded"},"updateCategory":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$nm":"category"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"updateCategory"},"routePhoto":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$nm":"categoryName"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$pt":"v","$nm":"page"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$pt":"v","$nm":"photo"}]],"$mt":"mthd","$nm":"routePhoto"},"routeIndex":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"mthd","$nm":"routeIndex"},"getCategory":{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.examples.photogallery","$nm":"Category"}]},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$nm":"name"}]],"$mt":"mthd","$nm":"getCategory"},"handlebarHelpers":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"mthd","$nm":"handlebarHelpers"},"init":{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"Gallery"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$pt":"v","$nm":"dir"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"init"}},"$at":{"model":{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"GalleryModel"},"$mt":"attr","$an":{"shared":[],"late":[],"actual":[]},"$nm":"model"},"currentCategory":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"attr","$an":{"shared":[]},"$nm":"currentCategory"},"categories":{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.examples.photogallery","$nm":"Category"}],"$pk":"ceylon.language","$nm":"Sequential"},"var":"1","$mt":"attr","$an":{"shared":[],"variable":[]},"$nm":"categories"},"view":{"$t":{"$pk":"ceylon.examples.photogallery","$nm":"GalleryView"},"$mt":"attr","$an":{"shared":[],"late":[],"actual":[]},"$nm":"view"}},"$nm":"Gallery"}},"$mod-deps":["ceylon.language\/0.6","ceylon.json\/0.6"],"$mod-name":"ceylon.examples.photogallery","$mod-version":"1.0.0"};
+Handlebars.registerHelper("eql", function(value, test, options) {
+    if (value === test) {
+      return options.fn(this);
+    } else {
+      return options.inverse(this);
+    }
+});
 var $$$cl1=require('ceylon/language/0.6/ceylon.language-0.6');
 var $$$cj2=require('ceylon/json/0.6/ceylon.json-0.6');
 function Carrier($$carrier){
@@ -171,85 +178,78 @@ function Gallery($$gallery){
         (typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).registerHelper($$$cl1.String("sub",3).valueOf(),$$$cl1.$JsCallable(function (int1$52,int2$53){
             return int1$52.minus(int2$53).string;
         },[{$nm:'int1',$mt:'prm',$t:{t:$$$cl1.Integer}},{$nm:'int2',$mt:'prm',$t:{t:$$$cl1.Integer}}],{Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.Integer},Element:{t:$$$cl1.Integer}}},First:{t:$$$cl1.Integer},Element:{t:$$$cl1.Integer}}},Return:{t:$$$cl1.String}}));
-        (typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).registerHelper($$$cl1.String("eql",3).valueOf(),$$$cl1.$JsCallable(function (obj1$54,obj2$55,funcs$56){
-            if(obj1$54.equals(obj2$55)){
+        (typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).registerHelper($$$cl1.String("nteql",5).valueOf(),$$$cl1.$JsCallable(function (obj1$54,obj2$55,funcs$56){
+            if((!obj1$54.equals(obj2$55))){
                 funcs$56.fn((typeof this==='undefined'||this===null?$$$cl1.throwexc('Undefined or null reference: this'):this));
             }else {
                 funcs$56.inverse((typeof this==='undefined'||this===null?$$$cl1.throwexc('Undefined or null reference: this'):this));
             }
         },[{$nm:'obj1',$mt:'prm',$t:{t:$$$cj2.Object}},{$nm:'obj2',$mt:'prm',$t:{t:$$$cj2.Object}},{$nm:'funcs',$mt:'prm',$t:{t:$$$cl1.Anything}}],{Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.Anything},Element:{t:$$$cl1.Anything}}},First:{t:$$$cj2.Object},Element:{ t:'u', l:[{t:$$$cj2.Object},{t:$$$cl1.Anything}]}}},First:{t:$$$cj2.Object},Element:{ t:'u', l:[{t:$$$cj2.Object},{t:$$$cl1.Anything}]}}},Return:{t:$$$cl1.Anything}}));
-        (typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).registerHelper($$$cl1.String("nteql",5).valueOf(),$$$cl1.$JsCallable(function (obj1$57,obj2$58,funcs$59){
-            if((!obj1$57.equals(obj2$58))){
+        (typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).registerHelper($$$cl1.String("lt",2).valueOf(),$$$cl1.$JsCallable(function (int1$57,int2$58,funcs$59){
+            if(int1$57.compare(int2$58).equals($$$cl1.getSmaller())){
                 funcs$59.fn((typeof this==='undefined'||this===null?$$$cl1.throwexc('Undefined or null reference: this'):this));
             }else {
                 funcs$59.inverse((typeof this==='undefined'||this===null?$$$cl1.throwexc('Undefined or null reference: this'):this));
             }
-        },[{$nm:'obj1',$mt:'prm',$t:{t:$$$cj2.Object}},{$nm:'obj2',$mt:'prm',$t:{t:$$$cj2.Object}},{$nm:'funcs',$mt:'prm',$t:{t:$$$cl1.Anything}}],{Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.Anything},Element:{t:$$$cl1.Anything}}},First:{t:$$$cj2.Object},Element:{ t:'u', l:[{t:$$$cj2.Object},{t:$$$cl1.Anything}]}}},First:{t:$$$cj2.Object},Element:{ t:'u', l:[{t:$$$cj2.Object},{t:$$$cl1.Anything}]}}},Return:{t:$$$cl1.Anything}}));
-        (typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).registerHelper($$$cl1.String("lt",2).valueOf(),$$$cl1.$JsCallable(function (int1$60,int2$61,funcs$62){
-            if(int1$60.compare(int2$61).equals($$$cl1.getSmaller())){
+        },[{$nm:'int1',$mt:'prm',$t:{t:$$$cl1.Integer}},{$nm:'int2',$mt:'prm',$t:{t:$$$cl1.Integer}},{$nm:'funcs',$mt:'prm',$t:{t:$$$cl1.Anything}}],{Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.Anything},Element:{t:$$$cl1.Anything}}},First:{t:$$$cl1.Integer},Element:{ t:'u', l:[{t:$$$cl1.Integer},{t:$$$cl1.Anything}]}}},First:{t:$$$cl1.Integer},Element:{ t:'u', l:[{t:$$$cl1.Integer},{t:$$$cl1.Anything}]}}},Return:{t:$$$cl1.Anything}}));
+        (typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).registerHelper($$$cl1.String("gt",2).valueOf(),$$$cl1.$JsCallable(function (int1$60,int2$61,funcs$62){
+            if(int1$60.compare(int2$61).equals($$$cl1.getLarger())){
                 funcs$62.fn((typeof this==='undefined'||this===null?$$$cl1.throwexc('Undefined or null reference: this'):this));
             }else {
                 funcs$62.inverse((typeof this==='undefined'||this===null?$$$cl1.throwexc('Undefined or null reference: this'):this));
             }
         },[{$nm:'int1',$mt:'prm',$t:{t:$$$cl1.Integer}},{$nm:'int2',$mt:'prm',$t:{t:$$$cl1.Integer}},{$nm:'funcs',$mt:'prm',$t:{t:$$$cl1.Anything}}],{Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.Anything},Element:{t:$$$cl1.Anything}}},First:{t:$$$cl1.Integer},Element:{ t:'u', l:[{t:$$$cl1.Integer},{t:$$$cl1.Anything}]}}},First:{t:$$$cl1.Integer},Element:{ t:'u', l:[{t:$$$cl1.Integer},{t:$$$cl1.Anything}]}}},Return:{t:$$$cl1.Anything}}));
-        (typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).registerHelper($$$cl1.String("gt",2).valueOf(),$$$cl1.$JsCallable(function (int1$63,int2$64,funcs$65){
-            if(int1$63.compare(int2$64).equals($$$cl1.getLarger())){
-                funcs$65.fn((typeof this==='undefined'||this===null?$$$cl1.throwexc('Undefined or null reference: this'):this));
-            }else {
-                funcs$65.inverse((typeof this==='undefined'||this===null?$$$cl1.throwexc('Undefined or null reference: this'):this));
-            }
-        },[{$nm:'int1',$mt:'prm',$t:{t:$$$cl1.Integer}},{$nm:'int2',$mt:'prm',$t:{t:$$$cl1.Integer}},{$nm:'funcs',$mt:'prm',$t:{t:$$$cl1.Anything}}],{Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.Anything},Element:{t:$$$cl1.Anything}}},First:{t:$$$cl1.Integer},Element:{ t:'u', l:[{t:$$$cl1.Integer},{t:$$$cl1.Anything}]}}},First:{t:$$$cl1.Integer},Element:{ t:'u', l:[{t:$$$cl1.Integer},{t:$$$cl1.Anything}]}}},Return:{t:$$$cl1.Anything}}));
         /*End dynamic block*/
     };handlebarHelpers$40.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['Gallery']['$m']['handlebarHelpers']};//handlebarHelpers$40.$$targs$$={Arguments:{t:$$$cl1.Empty},Return:{t:$$$cl1.Anything}};
-    function getCategory$66(name$67){
-        $$$cl1.print($$$cl1.String("getting category: ",18).plus(name$67));
-        var it$68 = $$gallery.categories.iterator();
-        var category$69;while ((category$69=it$68.next())!==$$$cl1.getFinished()){
-            if(name$67.lowercased.equals(category$69.model.name.lowercased)){
-                return category$69;
+    function getCategory$63(name$64){
+        $$$cl1.print($$$cl1.String("getting category: ",18).plus(name$64));
+        var it$65 = $$gallery.categories.iterator();
+        var category$66;while ((category$66=it$65.next())!==$$$cl1.getFinished()){
+            if(name$64.lowercased.equals(category$66.model.name.lowercased)){
+                return category$66;
             }
         }
         return null;
-    };getCategory$66.$$metamodel$$={mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:$$$cl1.Null},{t:Category}]},$ps:[{$nm:'name',$mt:'prm',$t:{t:$$$cl1.String}}],pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['Gallery']['$m']['getCategory']};//getCategory$66.$$targs$$={Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.String},Element:{t:$$$cl1.String}}},Return:{ t:'u', l:[{t:$$$cl1.Null},{t:Category}]}};
+    };getCategory$63.$$metamodel$$={mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:$$$cl1.Null},{t:Category}]},$ps:[{$nm:'name',$mt:'prm',$t:{t:$$$cl1.String}}],pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['Gallery']['$m']['getCategory']};//getCategory$63.$$targs$$={Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.String},Element:{t:$$$cl1.String}}},Return:{ t:'u', l:[{t:$$$cl1.Null},{t:Category}]}};
     function routeIndex$43(){
         $$$cl1.print($$$cl1.String("routing index",13));
-        var firstCategory$70;
-        if((firstCategory$70=$$gallery.categories.get((0)))!==null){
+        var firstCategory$67;
+        if((firstCategory$67=$$gallery.categories.get((0)))!==null){
             $$$cl1.print($$$cl1.String("display first category",22));
-            firstCategory$70.display((0),(0));
+            firstCategory$67.display((0),(0));
         }
     };routeIndex$43.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['Gallery']['$m']['routeIndex']};//routeIndex$43.$$targs$$={Arguments:{t:$$$cl1.Empty},Return:{t:$$$cl1.Anything}};
-    function routeCategory$44(categoryName$71){
-        $$$cl1.print($$$cl1.String("route category name: ",21).plus(categoryName$71));
-        var category$72;
-        if((category$72=getCategory$66(categoryName$71))!==null){
+    function routeCategory$44(categoryName$68){
+        $$$cl1.print($$$cl1.String("route category name: ",21).plus(categoryName$68));
+        var category$69;
+        if((category$69=getCategory$63(categoryName$68))!==null){
             $$$cl1.print($$$cl1.String("display category",16));
-            category$72.display((0),(0));
+            category$69.display((0),(0));
         }else {
             $$$cl1.print($$$cl1.String("display invalid category",24));
             $$gallery.view.displayInvalidCategory();
         }
     };routeCategory$44.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'categoryName',$mt:'prm',$t:{t:$$$cl1.String}}],pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['Gallery']['$m']['routeCategory']};//routeCategory$44.$$targs$$={Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.String},Element:{t:$$$cl1.String}}},Return:{t:$$$cl1.Anything}};
-    function routePage$45(categoryName$73,page$74){
-        var pageNum$75=$$$cl1.Integer(page$74);
-        $$$cl1.print($$$cl1.String("route category name: ",21).plus(categoryName$73).plus($$$cl1.String(" page num: ",11)).plus(pageNum$75.string));
-        var category$76;
-        if((category$76=getCategory$66(categoryName$73))!==null){
+    function routePage$45(categoryName$70,page$71){
+        var pageNum$72=$$$cl1.Integer(page$71);
+        $$$cl1.print($$$cl1.String("route category name: ",21).plus(categoryName$70).plus($$$cl1.String(" page num: ",11)).plus(pageNum$72.string));
+        var category$73;
+        if((category$73=getCategory$63(categoryName$70))!==null){
             $$$cl1.print($$$cl1.String("display category and page",25));
-            category$76.display(pageNum$75,(0));
+            category$73.display(pageNum$72,(0));
         }else {
             $$$cl1.print($$$cl1.String("display invalid category",24));
             $$gallery.view.displayInvalidCategory();
         }
     };routePage$45.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'categoryName',$mt:'prm',$t:{t:$$$cl1.String}},{$nm:'page',$mt:'prm',$t:{t:$$$cl1.Integer}}],pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['Gallery']['$m']['routePage']};//routePage$45.$$targs$$={Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.Integer},Element:{t:$$$cl1.Integer}}},Return:{t:$$$cl1.Anything}};
-    function routePhoto$46(categoryName$77,page$78,photo$79){
-        var pageNum$80=$$$cl1.Integer(page$78);
-        var photoNum$81=$$$cl1.Integer(photo$79);
-        $$$cl1.print($$$cl1.String("route category name: ",21).plus(categoryName$77).plus($$$cl1.String(" page num: ",11)).plus(pageNum$80.string).plus($$$cl1.String(" photo num: ",12)).plus(photo$79.string));
-        var category$82;
-        if((category$82=getCategory$66(categoryName$77))!==null){
+    function routePhoto$46(categoryName$74,page$75,photo$76){
+        var pageNum$77=$$$cl1.Integer(page$75);
+        var photoNum$78=$$$cl1.Integer(photo$76);
+        $$$cl1.print($$$cl1.String("route category name: ",21).plus(categoryName$74).plus($$$cl1.String(" page num: ",11)).plus(pageNum$77.string).plus($$$cl1.String(" photo num: ",12)).plus(photo$76.string));
+        var category$79;
+        if((category$79=getCategory$63(categoryName$74))!==null){
             $$$cl1.print($$$cl1.String("display category, page and photo",32));
-            category$82.display(pageNum$80,photoNum$81);
+            category$79.display(pageNum$77,photoNum$78);
         }else {
             $$$cl1.print($$$cl1.String("display invalid category",24));
             $$gallery.view.displayInvalidCategory();
@@ -282,20 +282,20 @@ function GalleryModel(controller, dir, $$galleryModel){
     }
     $$galleryModel.loadJSON=loadJSON;
     loadJSON.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],$an:function(){return[$$$cl1.shared()];},pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['GalleryModel']['$m']['loadJSON']};//loadJSON.$$targs$$={Arguments:{t:$$$cl1.Empty},Return:{t:$$$cl1.Anything}};
-    function parseCategories(categoriesJSON$83){
+    function parseCategories(categoriesJSON$80){
         $$$cl1.print($$$cl1.String("process category json",21));
         $$$cl1.print($$$cl1.String("dir is:",7).plus($$galleryModel.dir));
         ($$galleryModel.controller.categories=$$$cl1.Comprehension(function(){
-            var it$84=categoriesJSON$83.iterator();
-            var category$85=$$$cl1.getFinished();
-            var next$category$85=function(){return category$85=it$84.next();}
-            next$category$85();
+            var it$81=categoriesJSON$80.iterator();
+            var category$82=$$$cl1.getFinished();
+            var next$category$82=function(){return category$82=it$81.next();}
+            next$category$82();
             return function(){
-                if(category$85!==$$$cl1.getFinished()){
-                    var category$85$86=category$85;
-                    var tmpvar$87=Category($$galleryModel.controller).init(category$85$86.name,category$85$86.photos,$$galleryModel.dir);
-                    next$category$85();
-                    return tmpvar$87;
+                if(category$82!==$$$cl1.getFinished()){
+                    var category$82$83=category$82;
+                    var tmpvar$84=Category($$galleryModel.controller).init(category$82$83.name,category$82$83.photos,$$galleryModel.dir);
+                    next$category$82();
+                    return tmpvar$84;
                 }
                 return $$$cl1.getFinished();
             }
@@ -320,38 +320,38 @@ function GalleryView(controller, $$galleryView){
     $init$GalleryView();
     if ($$galleryView===undefined)$$galleryView=new GalleryView.$$;
     $$galleryView.controller=controller;
-    var template$88;
-    $$$cl1.defineAttr($$galleryView,'template$88',function(){return template$88;},function(template$89){return template$88=template$89;});
-    var tabsTemplate$90;
-    $$$cl1.defineAttr($$galleryView,'tabsTemplate$90',function(){return tabsTemplate$90;},function(tabsTemplate$91){return tabsTemplate$90=tabsTemplate$91;});
+    var template$85;
+    $$$cl1.defineAttr($$galleryView,'template$85',function(){return template$85;},function(template$86){return template$85=template$86;});
+    var tabsTemplate$87;
+    $$$cl1.defineAttr($$galleryView,'tabsTemplate$87',function(){return tabsTemplate$87;},function(tabsTemplate$88){return tabsTemplate$87=tabsTemplate$88;});
     var categoryTabs=$$$cl1.String("categoryTabs",12);
-    $$$cl1.defineAttr($$galleryView,'categoryTabs',function(){return categoryTabs;},function(categoryTabs$92){return categoryTabs=categoryTabs$92;});
+    $$$cl1.defineAttr($$galleryView,'categoryTabs',function(){return categoryTabs;},function(categoryTabs$89){return categoryTabs=categoryTabs$89;});
     var category=$$$cl1.String("category",8);
-    $$$cl1.defineAttr($$galleryView,'category',function(){return category;},function(category$93){return category=category$93;});
+    $$$cl1.defineAttr($$galleryView,'category',function(){return category;},function(category$90){return category=category$90;});
     /*Begin dynamic block*/
-    template$88=(tmpvar$94=(typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).compile((typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String("#gallery-template",17).valueOf()).html()),$$$cl1.isOfType(tmpvar$94,{t:$$$cl1.Callable,a:{Arguments:{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}},Return:{t:$$$cl1.String}}})?tmpvar$94:$$$cl1.throwexc('dynamic objects cannot be used here'));tabsTemplate$90=(tmpvar$95=(typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).compile((typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String("#gallery-tabs-template",22).valueOf()).html()),$$$cl1.isOfType(tmpvar$95,{t:$$$cl1.Callable,a:{Arguments:{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}},Return:{t:$$$cl1.String}}})?tmpvar$95:$$$cl1.throwexc('dynamic objects cannot be used here'));/*End dynamic block*/
+    template$85=(tmpvar$91=(typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).compile((typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String("#gallery-template",17).valueOf()).html()),$$$cl1.isOfType(tmpvar$91,{t:$$$cl1.Callable,a:{Arguments:{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}},Return:{t:$$$cl1.String}}})?tmpvar$91:$$$cl1.throwexc('dynamic objects cannot be used here'));tabsTemplate$87=(tmpvar$92=(typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).compile((typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String("#gallery-tabs-template",22).valueOf()).html()),$$$cl1.isOfType(tmpvar$92,{t:$$$cl1.Callable,a:{Arguments:{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}},Return:{t:$$$cl1.String}}})?tmpvar$92:$$$cl1.throwexc('dynamic objects cannot be used here'));/*End dynamic block*/
     function display(){
-        var context$96=(values$97=[$$$cl1.Entry($$$cl1.String("categoryTabs",12),$$galleryView.categoryTabs,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("category",8),$$galleryView.category,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}}}),JSObject(values$97));
-        var values$97;
+        var context$93=(values$94=[$$$cl1.Entry($$$cl1.String("categoryTabs",12),$$galleryView.categoryTabs,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("category",8),$$galleryView.category,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}}}),JSObject(values$94));
+        var values$94;
         /*Begin dynamic block*/
-        var dummy$98={dCarrier:context$96.toJson()};
-        (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String("body",4).valueOf()).html(template$88(dummy$98.dCarrier.json).valueOf());
+        var dummy$95={dCarrier:context$93.toJson()};
+        (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String("body",4).valueOf()).html(template$85(dummy$95.dCarrier.json).valueOf());
         /*End dynamic block*/
     }
     $$galleryView.display=display;
     display.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],$an:function(){return[$$$cl1.shared()];},pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['GalleryView']['$m']['display']};//display.$$targs$$={Arguments:{t:$$$cl1.Empty},Return:{t:$$$cl1.Anything}};
     function displayCategories(){
-        var categories$99=$$$cj2.Array();
-        var it$100 = $$galleryView.controller.categories.iterator();
-        var category$101;while ((category$101=it$100.next())!==$$$cl1.getFinished()){
-            categories$99.add((values$102=[$$$cl1.Entry($$$cl1.String("name",4),category$101.model.name,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}}}),JSObject(values$102)));
-            var values$102;
+        var categories$96=$$$cj2.Array();
+        var it$97 = $$galleryView.controller.categories.iterator();
+        var category$98;while ((category$98=it$97.next())!==$$$cl1.getFinished()){
+            categories$96.add((values$99=[$$$cl1.Entry($$$cl1.String("name",4),category$98.model.name,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}}}),JSObject(values$99)));
+            var values$99;
         }
-        var context$103=(values$104=[$$$cl1.Entry($$$cl1.String("category",8),categories$99,{Key:{t:$$$cl1.String},Item:{t:$$$cj2.Array}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cj2.Array}}}}),JSObject(values$104));
-        var values$104;
+        var context$100=(values$101=[$$$cl1.Entry($$$cl1.String("category",8),categories$96,{Key:{t:$$$cl1.String},Item:{t:$$$cj2.Array}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cj2.Array}}}}),JSObject(values$101));
+        var values$101;
         /*Begin dynamic block*/
-        var dummy$105={dCarrier:context$103.toJson()};
-        $$galleryView.categoryTabs=tabsTemplate$90(dummy$105.dCarrier.json);/*End dynamic block*/
+        var dummy$102={dCarrier:context$100.toJson()};
+        $$galleryView.categoryTabs=tabsTemplate$87(dummy$102.dCarrier.json);/*End dynamic block*/
         $$galleryView.display();
     }
     $$galleryView.displayCategories=displayCategories;
@@ -377,36 +377,36 @@ function Category(parent, $$category){
     if ($$category===undefined)$$category=new Category.$$;
     $$category.parent=parent;
     var model;
-    $$$cl1.defineAttr($$category,'model',function(){if (model===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «model»'));return model;},function(model$106){if(model!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «model»'));return model=model$106;});
+    $$$cl1.defineAttr($$category,'model',function(){if (model===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «model»'));return model;},function(model$103){if(model!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «model»'));return model=model$103;});
     var view;
-    $$$cl1.defineAttr($$category,'view',function(){if (view===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «view»'));return view;},function(view$107){if(view!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «view»'));return view=view$107;});
+    $$$cl1.defineAttr($$category,'view',function(){if (view===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «view»'));return view;},function(view$104){if(view!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «view»'));return view=view$104;});
     var pages=$$$cl1.getEmpty();
-    $$$cl1.defineAttr($$category,'pages',function(){return pages;},function(pages$108){return pages=pages$108;});
-    function init(name$109,photos$110,dir$111){
+    $$$cl1.defineAttr($$category,'pages',function(){return pages;},function(pages$105){return pages=pages$105;});
+    function init(name$106,photos$107,dir$108){
         $$$cl1.print($$$cl1.String("initalizing category",20));
-        var model=CategoryModel($$category,name$109);
-        $$$cl1.defineAttr($$category,'model',function(){if (model===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «model»'));return model;},function(model$112){if(model!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «model»'));return model=model$112;});
+        var model=CategoryModel($$category,name$106);
+        $$$cl1.defineAttr($$category,'model',function(){if (model===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «model»'));return model;},function(model$109){if(model!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «model»'));return model=model$109;});
         var view=CategoryView($$category);
-        $$$cl1.defineAttr($$category,'view',function(){if (view===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «view»'));return view;},function(view$113){if(view!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «view»'));return view=view$113;});
-        $$category.setPages(photos$110,dir$111);
+        $$$cl1.defineAttr($$category,'view',function(){if (view===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «view»'));return view;},function(view$110){if(view!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «view»'));return view=view$110;});
+        $$category.setPages(photos$107,dir$108);
         return $$category;
     }
     $$category.init=init;
     init.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:Category},$ps:[{$nm:'name',$mt:'prm',$t:{t:$$$cl1.String}},{$nm:'photos',$mt:'prm',$t:{t:$$$cl1.Sequential,a:{Element:{t:PhotoJSON}}}},{$nm:'dir',$mt:'prm',$t:{t:$$$cl1.String}}],$an:function(){return[$$$cl1.shared()];},pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['Category']['$m']['init']};//init.$$targs$$={Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.String},Element:{t:$$$cl1.String}}},Return:{t:Category}};
-    function updatePage(page$114){
-        ($$category.view.page=page$114);
+    function updatePage(page$111){
+        ($$category.view.page=page$111);
         $$category.view.display();
     }
     $$category.updatePage=updatePage;
     updatePage.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'page',$mt:'prm',$t:{t:$$$cl1.String}}],$an:function(){return[$$$cl1.shared()];},pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['Category']['$m']['updatePage']};//updatePage.$$targs$$={Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.String},Element:{t:$$$cl1.String}}},Return:{t:$$$cl1.Anything}};
-    function display(pageNum$115,photoNum$116){
-        $$$cl1.print($$$cl1.String("display category ",17).plus($$category.model.name).plus($$$cl1.String(" page ",6)).plus(pageNum$115.string).plus($$$cl1.String(" photo ",7)).plus(photoNum$116.string));
+    function display(pageNum$112,photoNum$113){
+        $$$cl1.print($$$cl1.String("display category ",17).plus($$category.model.name).plus($$$cl1.String(" page ",6)).plus(pageNum$112.string).plus($$$cl1.String(" photo ",7)).plus(photoNum$113.string));
         $$category.view.display();
-        var page$117;
-        if((page$117=$$category.pages.get(pageNum$115))!==null){
+        var page$114;
+        if((page$114=$$category.pages.get(pageNum$112))!==null){
             $$$cl1.print($$$cl1.String("display page",12));
-            $$category.view.displayPage(pageNum$115);
-            page$117.display(photoNum$116);
+            $$category.view.displayPage(pageNum$112);
+            page$114.display(photoNum$113);
         }else {
             $$$cl1.print($$$cl1.String("display invalid page",20));
             $$category.view.displayInvalidPage();
@@ -414,11 +414,11 @@ function Category(parent, $$category){
     }
     $$category.display=display;
     display.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'pageNum',$mt:'prm',$t:{t:$$$cl1.Integer}},{$nm:'photoNum',$mt:'prm',$t:{t:$$$cl1.Integer}}],$an:function(){return[$$$cl1.shared()];},pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['Category']['$m']['display']};//display.$$targs$$={Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.Integer},Element:{t:$$$cl1.Integer}}},Return:{t:$$$cl1.Anything}};
-    function displayPhoto(photoM$118){
-        var photo$119;
-        if((photo$119=photoM$118)!==null){
+    function displayPhoto(photoM$115){
+        var photo$116;
+        if((photo$116=photoM$115)!==null){
             $$$cl1.print($$$cl1.String("display photo",13));
-            $$category.view.displayPhoto(photo$119);
+            $$category.view.displayPhoto(photo$116);
         }else {
             $$$cl1.print($$$cl1.String("display no photo",16));
             $$category.view.displayNoPhoto();
@@ -426,26 +426,26 @@ function Category(parent, $$category){
     }
     $$category.displayPhoto=displayPhoto;
     displayPhoto.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'photoM',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.Null},{t:Photo}]}}],$an:function(){return[$$$cl1.shared()];},pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['Category']['$m']['displayPhoto']};//displayPhoto.$$targs$$={Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{ t:'u', l:[{t:$$$cl1.Null},{t:Photo}]},Element:{ t:'u', l:[{t:$$$cl1.Null},{t:Photo}]}}},Return:{t:$$$cl1.Anything}};
-    function setPages(photosJSON$120,dir$121){
+    function setPages(photosJSON$117,dir$118){
         $$$cl1.print($$$cl1.String("set category pages",18));
-        var end$122=(1).plus(photosJSON$120.size.divided((6)));
+        var end$119=(1).plus(photosJSON$117.size.divided((6)));
         $$category.pages=$$$cl1.Comprehension(function(){
-            var it$123=(function(){var tmpvar$125=end$122;
-            if (tmpvar$125>0){
-            var tmpvar$126=(0);
-            var tmpvar$127=tmpvar$126;
-            for (var i=1; i<tmpvar$125; i++){tmpvar$127=tmpvar$127.successor;}
-            return $$$cl1.Range(tmpvar$126,tmpvar$127,{Element:{t:$$$cl1.Integer}})
+            var it$120=(function(){var tmpvar$122=end$119;
+            if (tmpvar$122>0){
+            var tmpvar$123=(0);
+            var tmpvar$124=tmpvar$123;
+            for (var i=1; i<tmpvar$122; i++){tmpvar$124=tmpvar$124.successor;}
+            return $$$cl1.Range(tmpvar$123,tmpvar$124,{Element:{t:$$$cl1.Integer}})
             }else return $$$cl1.getEmpty();}()).iterator();
-            var i$124=$$$cl1.getFinished();
-            var next$i$124=function(){return i$124=it$123.next();}
-            next$i$124();
+            var i$121=$$$cl1.getFinished();
+            var next$i$121=function(){return i$121=it$120.next();}
+            next$i$121();
             return function(){
-                if(i$124!==$$$cl1.getFinished()){
-                    var i$124$128=i$124;
-                    var tmpvar$129=Page($$category,$$category.model.uri.plus(i$124$128.string).plus($$$cl1.String("/",1))).init(photosJSON$120.segment(i$124$128.times((6)),(6)),dir$121);
-                    next$i$124();
-                    return tmpvar$129;
+                if(i$121!==$$$cl1.getFinished()){
+                    var i$121$125=i$121;
+                    var tmpvar$126=Page($$category,$$category.model.uri.plus(i$121$125.string).plus($$$cl1.String("/",1))).init(photosJSON$117.segment(i$121$125.times((6)),(6)),dir$118);
+                    next$i$121();
+                    return tmpvar$126;
                 }
                 return $$$cl1.getFinished();
             }
@@ -486,59 +486,59 @@ function CategoryView(controller, $$categoryView){
     $init$CategoryView();
     if ($$categoryView===undefined)$$categoryView=new CategoryView.$$;
     $$categoryView.controller=controller;
-    var template$130;
-    $$$cl1.defineAttr($$categoryView,'template$130',function(){return template$130;},function(template$131){return template$130=template$131;});
-    var paginationTemplate$132;
-    $$$cl1.defineAttr($$categoryView,'paginationTemplate$132',function(){return paginationTemplate$132;},function(paginationTemplate$133){return paginationTemplate$132=paginationTemplate$133;});
+    var template$127;
+    $$$cl1.defineAttr($$categoryView,'template$127',function(){return template$127;},function(template$128){return template$127=template$128;});
+    var paginationTemplate$129;
+    $$$cl1.defineAttr($$categoryView,'paginationTemplate$129',function(){return paginationTemplate$129;},function(paginationTemplate$130){return paginationTemplate$129=paginationTemplate$130;});
     var pagination=$$$cl1.String("pagination",10);
-    $$$cl1.defineAttr($$categoryView,'pagination',function(){return pagination;},function(pagination$134){return pagination=pagination$134;});
+    $$$cl1.defineAttr($$categoryView,'pagination',function(){return pagination;},function(pagination$131){return pagination=pagination$131;});
     var page=$$$cl1.String("page",4);
-    $$$cl1.defineAttr($$categoryView,'page',function(){return page;},function(page$135){return page=page$135;});
+    $$$cl1.defineAttr($$categoryView,'page',function(){return page;},function(page$132){return page=page$132;});
     var title=$$$cl1.String("",0);
-    $$$cl1.defineAttr($$categoryView,'title',function(){return title;},function(title$136){return title=title$136;});
+    $$$cl1.defineAttr($$categoryView,'title',function(){return title;},function(title$133){return title=title$133;});
     var src=$$$cl1.String("",0);
-    $$$cl1.defineAttr($$categoryView,'src',function(){return src;},function(src$137){return src=src$137;});
+    $$$cl1.defineAttr($$categoryView,'src',function(){return src;},function(src$134){return src=src$134;});
     var alt=$$$cl1.String("",0);
-    $$$cl1.defineAttr($$categoryView,'alt',function(){return alt;},function(alt$138){return alt=alt$138;});
+    $$$cl1.defineAttr($$categoryView,'alt',function(){return alt;},function(alt$135){return alt=alt$135;});
     var caption=$$$cl1.String("",0);
-    $$$cl1.defineAttr($$categoryView,'caption',function(){return caption;},function(caption$139){return caption=caption$139;});
+    $$$cl1.defineAttr($$categoryView,'caption',function(){return caption;},function(caption$136){return caption=caption$136;});
     var width=$$$cl1.String("",0);
-    $$$cl1.defineAttr($$categoryView,'width',function(){return width;},function(width$140){return width=width$140;});
+    $$$cl1.defineAttr($$categoryView,'width',function(){return width;},function(width$137){return width=width$137;});
     var height=$$$cl1.String("",0);
-    $$$cl1.defineAttr($$categoryView,'height',function(){return height;},function(height$141){return height=height$141;});
+    $$$cl1.defineAttr($$categoryView,'height',function(){return height;},function(height$138){return height=height$138;});
     /*Begin dynamic block*/
-    template$130=(tmpvar$142=(typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).compile((typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String("#category-template",18).valueOf()).html()),$$$cl1.isOfType(tmpvar$142,{t:$$$cl1.Callable,a:{Arguments:{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}},Return:{t:$$$cl1.String}}})?tmpvar$142:$$$cl1.throwexc('dynamic objects cannot be used here'));paginationTemplate$132=(tmpvar$143=(typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).compile((typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String("#category-pagination-template",29).valueOf()).html()),$$$cl1.isOfType(tmpvar$143,{t:$$$cl1.Callable,a:{Arguments:{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}},Return:{t:$$$cl1.String}}})?tmpvar$143:$$$cl1.throwexc('dynamic objects cannot be used here'));/*End dynamic block*/
+    template$127=(tmpvar$139=(typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).compile((typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String("#category-template",18).valueOf()).html()),$$$cl1.isOfType(tmpvar$139,{t:$$$cl1.Callable,a:{Arguments:{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}},Return:{t:$$$cl1.String}}})?tmpvar$139:$$$cl1.throwexc('dynamic objects cannot be used here'));paginationTemplate$129=(tmpvar$140=(typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).compile((typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String("#category-pagination-template",29).valueOf()).html()),$$$cl1.isOfType(tmpvar$140,{t:$$$cl1.Callable,a:{Arguments:{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}},Return:{t:$$$cl1.String}}})?tmpvar$140:$$$cl1.throwexc('dynamic objects cannot be used here'));/*End dynamic block*/
     function display(){
         $$$cl1.print($$$cl1.String("display category",16));
+        var context$141=(values$142=[$$$cl1.Entry($$$cl1.String("title",5),$$categoryView.title,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("width",5),$$categoryView.width,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("src",3),$$categoryView.src,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("alt",3),$$categoryView.alt,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("caption",7),$$categoryView.caption,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("page",4),$$categoryView.page,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("pagination",10),$$categoryView.pagination,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}}}),JSObject(values$142));
+        var values$142;
+        $$$cl1.print($$$cl1.String("src: ",5).plus($$categoryView.src));
+        /*Begin dynamic block*/
+        var dummy$143={dCarrier:context$141.toJson()};
+        $$categoryView.controller.parent.updateCategory(template$127(dummy$143.dCarrier.json));
+        /*End dynamic block*/
         /*Begin dynamic block*/
         (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".category",9).valueOf()).each($$$cl1.$JsCallable(function (){
             return (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)((typeof this==='undefined'||this===null?$$$cl1.throwexc('Undefined or null reference: this'):this)).removeClass($$$cl1.String("active",6).valueOf());
         },[],{Arguments:{t:$$$cl1.Empty},Return:{t:$$$cl1.Anything}}));
         (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".category-",10).plus($$categoryView.controller.model.name.lowercased).valueOf()).addClass($$$cl1.String("active",6).valueOf());
         /*End dynamic block*/
-        var context$144=(values$145=[$$$cl1.Entry($$$cl1.String("title",5),$$categoryView.title,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("width",5),$$categoryView.width,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("src",3),$$categoryView.src,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("alt",3),$$categoryView.alt,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("caption",7),$$categoryView.caption,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("page",4),$$categoryView.page,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("pagination",10),$$categoryView.pagination,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}}}),JSObject(values$145));
-        var values$145;
-        $$$cl1.print($$$cl1.String("src: ",5).plus($$categoryView.src));
-        /*Begin dynamic block*/
-        var dummy$146={dCarrier:context$144.toJson()};
-        $$categoryView.controller.parent.updateCategory(template$130(dummy$146.dCarrier.json));
-        /*End dynamic block*/
     }
     $$categoryView.display=display;
     display.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],$an:function(){return[$$$cl1.shared()];},pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['CategoryView']['$m']['display']};//display.$$targs$$={Arguments:{t:$$$cl1.Empty},Return:{t:$$$cl1.Anything}};
-    function displayPhoto(photo$147){
-        var photoWidth$148;
-        if((photoWidth$148=photo$147.width)!==null){
-            $$categoryView.width=photoWidth$148.string;
+    function displayPhoto(photo$144){
+        var photoWidth$145;
+        if((photoWidth$145=photo$144.width)!==null){
+            $$categoryView.width=photoWidth$145.string;
         }
-        var photoHeight$149;
-        if((photoHeight$149=photo$147.height)!==null){
-            $$categoryView.height=photoHeight$149.string;
+        var photoHeight$146;
+        if((photoHeight$146=photo$144.height)!==null){
+            $$categoryView.height=photoHeight$146.string;
         }
-        $$categoryView.src=photo$147.src;
-        $$categoryView.alt=photo$147.alt;
-        $$categoryView.caption=photo$147.caption;
-        $$categoryView.title=photo$147.title;
+        $$categoryView.src=photo$144.src;
+        $$categoryView.alt=photo$144.alt;
+        $$categoryView.caption=photo$144.caption;
+        $$categoryView.title=photo$144.title;
         /*Begin dynamic block*/
         $$categoryView.display();
         (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".display-photo",14).valueOf()).stop(true,true).hide().fadeIn((800));
@@ -554,18 +554,18 @@ function CategoryView(controller, $$categoryView){
     }
     $$categoryView.displayInvalidPage=displayInvalidPage;
     displayInvalidPage.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],$an:function(){return[$$$cl1.shared()];},pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['CategoryView']['$m']['displayInvalidPage']};//displayInvalidPage.$$targs$$={Arguments:{t:$$$cl1.Empty},Return:{t:$$$cl1.Anything}};
-    function displayPage(pageNum$150){
-        var pages$151=$$$cj2.Array();
-        var it$152 = $$categoryView.controller.pages.iterator();
-        var page$153;while ((page$153=it$152.next())!==$$$cl1.getFinished()){
-            pages$151.add((values$154=[$$$cl1.Entry($$$cl1.String("uri",3),page$153.uri,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}}}),JSObject(values$154)));
-            var values$154;
+    function displayPage(pageNum$147){
+        var pages$148=$$$cj2.Array();
+        var it$149 = $$categoryView.controller.pages.iterator();
+        var page$150;while ((page$150=it$149.next())!==$$$cl1.getFinished()){
+            pages$148.add((values$151=[$$$cl1.Entry($$$cl1.String("uri",3),page$150.uri,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}}}),JSObject(values$151)));
+            var values$151;
         }
-        var context$155=(values$156=[$$$cl1.Entry($$$cl1.String("page",4),pageNum$150,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.Integer}}),$$$cl1.Entry($$$cl1.String("lastPage",8),$$categoryView.controller.pages.size.minus((1)),{Key:{t:$$$cl1.String},Item:{t:$$$cl1.Integer}}),$$$cl1.Entry($$$cl1.String("pages",5),pages$151,{Key:{t:$$$cl1.String},Item:{t:$$$cj2.Array}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{ t:'u', l:[{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.Integer}}},{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cj2.Array}}}]}}),JSObject(values$156));
-        var values$156;
+        var context$152=(values$153=[$$$cl1.Entry($$$cl1.String("page",4),pageNum$147,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.Integer}}),$$$cl1.Entry($$$cl1.String("lastPage",8),$$categoryView.controller.pages.size.minus((1)),{Key:{t:$$$cl1.String},Item:{t:$$$cl1.Integer}}),$$$cl1.Entry($$$cl1.String("pages",5),pages$148,{Key:{t:$$$cl1.String},Item:{t:$$$cj2.Array}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{ t:'u', l:[{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.Integer}}},{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cj2.Array}}}]}}),JSObject(values$153));
+        var values$153;
         /*Begin dynamic block*/
-        var dummy$157={dCarrier:context$155.toJson()};
-        $$categoryView.pagination=paginationTemplate$132(dummy$157.dCarrier.json);/*End dynamic block*/
+        var dummy$154={dCarrier:context$152.toJson()};
+        $$categoryView.pagination=paginationTemplate$129(dummy$154.dCarrier.json);/*End dynamic block*/
         $$categoryView.display();
     }
     $$categoryView.displayPage=displayPage;
@@ -605,25 +605,25 @@ function Page(parent, uri, $$page){
     $$page.parent=parent;
     $$page.uri=uri;
     var model;
-    $$$cl1.defineAttr($$page,'model',function(){if (model===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «model»'));return model;},function(model$158){if(model!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «model»'));return model=model$158;});
+    $$$cl1.defineAttr($$page,'model',function(){if (model===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «model»'));return model;},function(model$155){if(model!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «model»'));return model=model$155;});
     var view;
-    $$$cl1.defineAttr($$page,'view',function(){if (view===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «view»'));return view;},function(view$159){if(view!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «view»'));return view=view$159;});
-    function init(photos$160,dir$161){
+    $$$cl1.defineAttr($$page,'view',function(){if (view===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «view»'));return view;},function(view$156){if(view!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «view»'));return view=view$156;});
+    function init(photos$157,dir$158){
         $$$cl1.print($$$cl1.String("initalize page: ",16).plus($$page.uri));
         var model=PageModel($$page);
-        $$$cl1.defineAttr($$page,'model',function(){if (model===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «model»'));return model;},function(model$162){if(model!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «model»'));return model=model$162;});
+        $$$cl1.defineAttr($$page,'model',function(){if (model===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «model»'));return model;},function(model$159){if(model!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «model»'));return model=model$159;});
         var view=PageView($$page);
-        $$$cl1.defineAttr($$page,'view',function(){if (view===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «view»'));return view;},function(view$163){if(view!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «view»'));return view=view$163;});
-        $$page.model.parsePhotos(photos$160,dir$161);
+        $$$cl1.defineAttr($$page,'view',function(){if (view===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «view»'));return view;},function(view$160){if(view!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «view»'));return view=view$160;});
+        $$page.model.parsePhotos(photos$157,dir$158);
         return $$page;
     }
     $$page.init=init;
     init.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:Page},$ps:[{$nm:'photos',$mt:'prm',$t:{t:$$$cl1.Sequential,a:{Element:{t:PhotoJSON}}}},{$nm:'dir',$mt:'prm',$t:{t:$$$cl1.String}}],$an:function(){return[$$$cl1.shared()];},pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['Page']['$m']['init']};//init.$$targs$$={Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.String},Element:{t:$$$cl1.String}}},Return:{t:Page}};
-    function display(photoNum$164){
+    function display(photoNum$161){
         $$$cl1.print($$$cl1.String("display page: ",14).plus($$page.uri));
         $$page.view.display();
-        $$$cl1.print($$$cl1.String("display photo: ",15).plus(photoNum$164.string));
-        $$page.parent.displayPhoto($$page.model.photos.get(photoNum$164));
+        $$$cl1.print($$$cl1.String("display photo: ",15).plus(photoNum$161.string));
+        $$page.parent.displayPhoto($$page.model.photos.get(photoNum$161));
     }
     $$page.display=display;
     display.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'photoNum',$mt:'prm',$t:{t:$$$cl1.Integer}}],$an:function(){return[$$$cl1.shared()];},pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['Page']['$m']['display']};//display.$$targs$$={Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.Integer},Element:{t:$$$cl1.Integer}}},Return:{t:$$$cl1.Anything}};
@@ -643,20 +643,20 @@ function PageModel(controller, $$pageModel){
     $init$PageModel();
     if ($$pageModel===undefined)$$pageModel=new PageModel.$$;
     var photos=$$$cl1.getEmpty();
-    $$$cl1.defineAttr($$pageModel,'photos',function(){return photos;},function(photos$165){return photos=photos$165;});
-    function parsePhotos(photosJSON$166,dir$167){
+    $$$cl1.defineAttr($$pageModel,'photos',function(){return photos;},function(photos$162){return photos=photos$162;});
+    function parsePhotos(photosJSON$163,dir$164){
         $$$cl1.print($$$cl1.String("parsing photos",14));
         $$pageModel.photos=$$$cl1.Comprehension(function(){
-            var it$168=photosJSON$166.iterator();
-            var photo$169=$$$cl1.getFinished();
-            var next$photo$169=function(){return photo$169=it$168.next();}
-            next$photo$169();
+            var it$165=photosJSON$163.iterator();
+            var photo$166=$$$cl1.getFinished();
+            var next$photo$166=function(){return photo$166=it$165.next();}
+            next$photo$166();
             return function(){
-                if(photo$169!==$$$cl1.getFinished()){
-                    var photo$169$170=photo$169;
-                    var tmpvar$171=Photo(photo$169$170.title,photo$169$170.caption,dir$167.plus($$$cl1.String("/",1)).plus(photo$169$170.src),dir$167.plus($$$cl1.String("/",1)).plus(photo$169$170.thumb),photo$169$170.height,photo$169$170.width,photo$169$170.alt);
-                    next$photo$169();
-                    return tmpvar$171;
+                if(photo$166!==$$$cl1.getFinished()){
+                    var photo$166$167=photo$166;
+                    var tmpvar$168=Photo(photo$166$167.title,photo$166$167.caption,dir$164.plus($$$cl1.String("/",1)).plus(photo$166$167.src),dir$164.plus($$$cl1.String("/",1)).plus(photo$166$167.thumb),photo$166$167.height,photo$166$167.width,photo$166$167.alt);
+                    next$photo$166();
+                    return tmpvar$168;
                 }
                 return $$$cl1.getFinished();
             }
@@ -680,36 +680,36 @@ function PageView(controller, $$pageView){
     $init$PageView();
     if ($$pageView===undefined)$$pageView=new PageView.$$;
     $$pageView.controller=controller;
-    var template$172;
-    $$$cl1.defineAttr($$pageView,'template$172',function(){return template$172;},function(template$173){return template$172=template$173;});
+    var template$169;
+    $$$cl1.defineAttr($$pageView,'template$169',function(){return template$169;},function(template$170){return template$169=template$170;});
     /*Begin dynamic block*/
-    template$172=(tmpvar$174=(typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).compile((typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String("#page-template",14).valueOf()).html()),$$$cl1.isOfType(tmpvar$174,{t:$$$cl1.Callable,a:{Arguments:{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}},Return:{t:$$$cl1.String}}})?tmpvar$174:$$$cl1.throwexc('dynamic objects cannot be used here'));/*End dynamic block*/
+    template$169=(tmpvar$171=(typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc('Undefined or null reference: Handlebars'):Handlebars).compile((typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String("#page-template",14).valueOf()).html()),$$$cl1.isOfType(tmpvar$171,{t:$$$cl1.Callable,a:{Arguments:{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}},Return:{t:$$$cl1.String}}})?tmpvar$171:$$$cl1.throwexc('dynamic objects cannot be used here'));/*End dynamic block*/
     function display(){
-        var photos$175=$$$cj2.Array();
-        var it$176 = $$pageView.controller.model.photos.iterator();
-        var photo$177;while ((photo$177=it$176.next())!==$$$cl1.getFinished()){
-            photos$175.add((values$178=[$$$cl1.Entry($$$cl1.String("title",5),photo$177.title,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("uri",3),$$pageView.controller.uri,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("src",3),photo$177.thumb,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("alt",3),photo$177.alt,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}}}),JSObject(values$178)));
-            var values$178;
+        var photos$172=$$$cj2.Array();
+        var it$173 = $$pageView.controller.model.photos.iterator();
+        var photo$174;while ((photo$174=it$173.next())!==$$$cl1.getFinished()){
+            photos$172.add((values$175=[$$$cl1.Entry($$$cl1.String("title",5),photo$174.title,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("uri",3),$$pageView.controller.uri,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("src",3),photo$174.thumb,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}),$$$cl1.Entry($$$cl1.String("alt",3),photo$174.alt,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}}}),JSObject(values$175)));
+            var values$175;
         }
-        var context$179=(values$180=[$$$cl1.Entry($$$cl1.String("photos",6),photos$175,{Key:{t:$$$cl1.String},Item:{t:$$$cj2.Array}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cj2.Array}}}}),JSObject(values$180));
-        var values$180;
+        var context$176=(values$177=[$$$cl1.Entry($$$cl1.String("photos",6),photos$172,{Key:{t:$$$cl1.String},Item:{t:$$$cj2.Array}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cj2.Array}}}}),JSObject(values$177));
+        var values$177;
         /*Begin dynamic block*/
-        var dummy$181={dCarrier:context$179.toJson()};
-        $$pageView.controller.parent.updatePage(template$172(dummy$181.dCarrier.json));
+        var dummy$178={dCarrier:context$176.toJson()};
+        $$pageView.controller.parent.updatePage(template$169(dummy$178.dCarrier.json));
         /*End dynamic block*/
-        var it$182 = (function(){var tmpvar$184=photos$175.size;
-        if (tmpvar$184>0){
-        var tmpvar$185=(0);
-        var tmpvar$186=tmpvar$185;
-        for (var i=1; i<tmpvar$184; i++){tmpvar$186=tmpvar$186.successor;}
-        return $$$cl1.Range(tmpvar$185,tmpvar$186,{Element:{t:$$$cl1.Integer}})
+        var it$179 = (function(){var tmpvar$181=photos$172.size;
+        if (tmpvar$181>0){
+        var tmpvar$182=(0);
+        var tmpvar$183=tmpvar$182;
+        for (var i=1; i<tmpvar$181; i++){tmpvar$183=tmpvar$183.successor;}
+        return $$$cl1.Range(tmpvar$182,tmpvar$183,{Element:{t:$$$cl1.Integer}})
         }else return $$$cl1.getEmpty();}()).iterator();
-        var i$183;while ((i$183=it$182.next())!==$$$cl1.getFinished()){
+        var i$180;while ((i$180=it$179.next())!==$$$cl1.getFinished()){
             /*Begin dynamic block*/
-            (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".photo",6).plus(i$183.string).valueOf()).load($$$cl1.$JsCallable(function (){
+            (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".photo",6).plus(i$180.string).valueOf()).load($$$cl1.$JsCallable(function (){
                 return (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)((typeof this==='undefined'||this===null?$$$cl1.throwexc('Undefined or null reference: this'):this)).parent().spin(false);
             },[],{Arguments:{t:$$$cl1.Empty},Return:{t:$$$cl1.Anything}}));
-            (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".photo",6).plus(i$183.string).valueOf()).parent().spin($$$cl1.String("small",5).valueOf());
+            (typeof jQuery==='undefined'||jQuery===null?$$$cl1.throwexc('Undefined or null reference: jQuery'):jQuery)($$$cl1.String(".photo",6).plus(i$180.string).valueOf()).parent().spin($$$cl1.String("small",5).valueOf());
             /*End dynamic block*/
         }
     }
@@ -771,8 +771,8 @@ function $init$PhotoJSON(){
 }
 exports.$init$PhotoJSON=$init$PhotoJSON;
 $init$PhotoJSON();
-function init(galleryDir$187){
-    Gallery().init(galleryDir$187);
+function init(galleryDir$184){
+    Gallery().init(galleryDir$184);
 }
 exports.init=init;
 init.$$metamodel$$={mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'galleryDir',$mt:'prm',$t:{t:$$$cl1.String}}],$an:function(){return[$$$cl1.shared()];},pkg:'ceylon.examples.photogallery',d:$$METAMODEL$$['ceylon.examples.photogallery']['init']};//init.$$targs$$={Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.String},Element:{t:$$$cl1.String}}},Return:{t:$$$cl1.Anything}};

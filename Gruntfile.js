@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		exec: {
 			build: {
-				command: '$CEYLON_HOME/bin/ceylon compile-js ceylon.examples.photogallery'
+				command: '$CEYLON_HOME/bin/ceylon compile-js assets/js/helpers.js ceylon.examples.photogallery'
 			}
 		}
 	});

@@ -1,0 +1,10 @@
+Handlebars.registerHelper("nteql", function (obj1$54, obj2$55, funcs$56){
+	if(( ! obj1$54.equals(obj2$55)) )
+	{
+		funcs$56.fn(this);
+	}
+	else 
+	{
+		funcs$56.inverse(this);
+	}
+};

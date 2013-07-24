@@ -144,13 +144,13 @@ shared class Gallery() {
 			\iHandlebars.registerHelper("sub", (Integer int1, Integer int2) {
 				return (int1 - int2).string;
 			});
-			\iHandlebars.registerHelper("eql", void (Object obj1, Object obj2, value funcs) { 
+			/*\iHandlebars.registerHelper("eql", void (Object obj1, Object obj2, value funcs) { 
 				if (obj1 == obj2) {
 					funcs.fn(\ithis);
 				} else {
 					funcs.inverse(\ithis);
 				}
-			});
+			});*/
 			\iHandlebars.registerHelper("nteql", void (Object obj1, Object obj2, value funcs) {
 				if (obj1 != obj2) {
 					funcs.fn(\ithis);
@@ -228,7 +228,6 @@ shared class Gallery() {
 			view.displayInvalidCategory();
 		}
 	}
-	
 	
 }
 
@@ -368,10 +367,6 @@ shared class CategoryView(shared Category controller) {
 	
 	shared void display() {
 		print("display category");
-		dynamic {
-			jQuery(".category").each( () => jQuery(\ithis).removeClass("active") );
-			jQuery(".category-" + controller.model.name.lowercased).addClass("active");
-		}
 		value context = JSObject {
 	        "title" -> title,
 	        "width" -> width,
@@ -385,6 +380,10 @@ shared class CategoryView(shared Category controller) {
 		dynamic {
 			value dummy = value {dCarrier=context.toJson();};
 	    	controller.parent.updateCategory(template(dummy.dCarrier.json));
+		}
+		dynamic {
+			jQuery(".category").each( () => jQuery(\ithis).removeClass("active") );
+			jQuery(".category-" + controller.model.name.lowercased).addClass("active");
 		}
 	}
 	
