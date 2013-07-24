@@ -144,32 +144,32 @@ shared class Gallery() {
 			\iHandlebars.registerHelper("sub", (Integer int1, Integer int2) {
 				return (int1 - int2).string;
 			});
-			/*\iHandlebars.registerHelper("eql", void (Object obj1, Object obj2, value funcs) { 
+			\iHandlebars.registerHelper("eql", (Object obj1, Object obj2, value funcs) { 
 				if (obj1 == obj2) {
-					funcs.fn(\ithis);
+					return funcs.fn(\ithis);
 				} else {
-					funcs.inverse(\ithis);
+					return funcs.inverse(\ithis);
 				}
-			});*/
-			\iHandlebars.registerHelper("nteql", void (Object obj1, Object obj2, value funcs) {
+			});
+			\iHandlebars.registerHelper("nteql", (Object obj1, Object obj2, value funcs) {
 				if (obj1 != obj2) {
-					funcs.fn(\ithis);
+					return funcs.fn(\ithis);
 				} else {
-					funcs.inverse(\ithis);
+					return funcs.inverse(\ithis);
 				}
 			});
-			\iHandlebars.registerHelper("lt", void (Integer int1, Integer int2, value funcs) {
+			\iHandlebars.registerHelper("lt", (Integer int1, Integer int2, value funcs) {
 				if (int1 < int2) {
-					funcs.fn(\ithis);
+					return funcs.fn(\ithis);
 				} else {
-					funcs.inverse(\ithis);
+					return funcs.inverse(\ithis);
 				}
 			});
-			\iHandlebars.registerHelper("gt", void (Integer int1, Integer int2, value funcs) {
+			\iHandlebars.registerHelper("gt", (Integer int1, Integer int2, value funcs) {
 				if (int1 > int2) {
-					funcs.fn(\ithis);
+					return funcs.fn(\ithis);
 				} else {
-					funcs.inverse(\ithis);
+					return funcs.inverse(\ithis);
 				}
 			});
 		}
@@ -418,6 +418,7 @@ shared class CategoryView(shared Category controller) {
 			pages.add(JSObject { "uri" -> page.uri });
 		}
 		value context = JSObject {
+			"uri" -> controller.model.uri,
 	        "page" -> pageNum,
 	        "lastPage" -> (controller.pages.size - 1),
 	        "pages" -> pages

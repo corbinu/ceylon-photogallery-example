@@ -94,6 +94,7 @@
         </script>
 
         <script id="category-pagination-template" type="text/x-handlebars-template">
+            {{#gt lastPage 0}}
             <div class="row">
                 <ul class="offset1 pagination">
                     {{#gt page 0}}
@@ -121,6 +122,7 @@
                     {{/lt}}
                 </ul>
             </div>
+            {{/gt}}
         </script>
 
         <script id="page-template" type="text/x-handlebars-template">
