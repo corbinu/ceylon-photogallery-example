@@ -2,5 +2,7 @@
 [defaults]
 encoding=US-ASCII
 
+
+
 [repositories]
-lookup=/Developer/SDK/ceylon/ceylon-sdk
+lookup=/Users/corbinu/Developer/git/ceylon-js-interop

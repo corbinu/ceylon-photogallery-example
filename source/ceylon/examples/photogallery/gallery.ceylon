@@ -1,99 +1,4 @@
-import ceylon.json { ... }
-
-class Carrier() {}
-
-class JSObject({Entry<String, String|Boolean|Integer|Float|Object|Array|NullInstance>*} values = {}) extends Object(values) {
-	
-	shared Carrier toJson() {
-		return objectToJson(this);
-	}
-	
-	Carrier objectToJson(Object ceylonJSON) {
-		value carrier = Carrier();
-		dynamic {
-			value json = \iObject();
-			value options = \iObject();
-			options.writable = \itrue;
-			options.enumerable = \itrue;
-			options.configurable = \itrue;
-			for (name -> entry in ceylonJSON) {
-				switch (entry)
-				case (is String) {
-					options.\ivalue = entry;
-				}
-				case (is Boolean) {
-					if (entry) {
-						options.\ivalue = \itrue;
-					} else {
-						options.\ivalue = \ifalse;
-					}
-				}
-				case (is Integer|Float) { 
-					options.\ivalue = \iNumber(entry);
-				}
-				case (is Object) {
-					value dummy = value {dCarrier=objectToJson(entry);};
-					options.\ivalue = dummy.dCarrier.json;
-				}
-				case (is Array) {
-					value dummy = value {dCarrier=arrayToArray(entry);};
-					options.\ivalue = dummy.dCarrier.array;
-				}
-				case (is NullInstance) {
-					options.\ivalue = \inull;
-				}
-				\iObject.defineProperty(json, name, options);
-				variable value dummy = value {};
-				variable value dCarrier = dummy;
-				dCarrier = carrier;
-				dCarrier.json = json;
-			}
-		}
-		
-		return carrier;
-	}
-	
-	Carrier arrayToArray(Array ceylonArray) {
-		value carrier = Carrier();
-		dynamic {
-			value array = \iArray();
-			for (entry in ceylonArray) {
-				switch (entry)
-				case (is String) {  
-					array.push(entry);
-				}
-				case (is Boolean) {
-					if (entry) {
-						array.push(\itrue);
-					} else {
-						array.push(\ifalse);
-					}
-				}
-				case (is Integer|Float) { 
-					array.push(objectToJson(\iNumber(entry)));
-				}
-				case (is Object) {
-					value dummy = value {dCarrier=objectToJson(entry);};
-					array.push(dummy.dCarrier.json);
-				}
-				case (is Array) {
-					value dummy = value {dCarrier=arrayToArray(entry);};
-					array.push(dummy.dCarrier.array);
-				}
-				case (is NullInstance) {
-					array.push(\inull);
-				}
-
-			}
-			variable value dummy = value {};
-			variable value dCarrier = dummy;
-			dCarrier = carrier;
-			dCarrier.array = array;
-		}
-		
-		return carrier;
-	}
-}
+import ceylon.js.json { JSON, JSONArray }
 
 shared class Gallery() {
 	shared variable Category[] categories = {};
@@ -109,13 +14,24 @@ shared class Gallery() {
 		handlebarHelpers();
 		model.loadJSON();
 		
+		dynamic {
+			value resize = void () {
+				if ( jQuery(".visible-lg").css("display") == "none !important" ) {
+					view.isMobile();
+				} else {
+					view.isDesktop();
+				}
+			};
+			jQuery(window).resize(resize);
+		}
+		
 		return this;
 	}
 	
 	shared void loaded() {
 		print("gallery loaded");
 		dynamic {
-			value router = Router().init("/");
+			dynamic router = Router().init("/");
 			router.on("/", routeIndex);
 			router.on("/:category", routeCategory);
 			router.on("/:category/:page", routePage);
@@ -144,28 +60,28 @@ shared class Gallery() {
 			\iHandlebars.registerHelper("sub", (Integer int1, Integer int2) {
 				return (int1 - int2).string;
 			});
-			\iHandlebars.registerHelper("eql", (Object obj1, Object obj2, value funcs) { 
+			\iHandlebars.registerHelper("eql", (Object obj1, Object obj2, dynamic funcs) { 
 				if (obj1 == obj2) {
 					return funcs.fn(\ithis);
 				} else {
 					return funcs.inverse(\ithis);
 				}
 			});
-			\iHandlebars.registerHelper("nteql", (Object obj1, Object obj2, value funcs) {
+			\iHandlebars.registerHelper("nteql", (Object obj1, Object obj2, dynamic funcs) {
 				if (obj1 != obj2) {
 					return funcs.fn(\ithis);
 				} else {
 					return funcs.inverse(\ithis);
 				}
 			});
-			\iHandlebars.registerHelper("lt", (Integer int1, Integer int2, value funcs) {
+			\iHandlebars.registerHelper("lt", (Integer int1, Integer int2, dynamic funcs) {
 				if (int1 < int2) {
 					return funcs.fn(\ithis);
 				} else {
 					return funcs.inverse(\ithis);
 				}
 			});
-			\iHandlebars.registerHelper("gt", (Integer int1, Integer int2, value funcs) {
+			\iHandlebars.registerHelper("gt", (Integer int1, Integer int2, dynamic funcs) {
 				if (int1 > int2) {
 					return funcs.fn(\ithis);
 				} else {
@@ -253,8 +169,8 @@ shared class GalleryModel(shared Gallery controller, shared String dir) {
 }
 
 shared class GalleryView(shared Gallery controller) {
-	variable Callable<String, Anything[]> template;
-	variable Callable<String, Anything[]> tabsTemplate;
+	variable dynamic template;
+	variable dynamic tabsTemplate;
 	
 	shared variable String categoryTabs = "categoryTabs";
 	shared variable String category = "category";
@@ -265,31 +181,37 @@ shared class GalleryView(shared Gallery controller) {
 	}
 	
 	shared void display() {
-		value context = JSObject {
+		value context = JSON {
 	        "categoryTabs" -> categoryTabs,
 	        "category" -> category
 	    };
 	    dynamic {
-	       	value dummy = value {dCarrier=context.toJson();};
-	    	jQuery("body").html(template(dummy.dCarrier.json));
+	    	jQuery("body").html(template(context.toJson()));
 		}
 	}
 	
 	shared void displayCategories() {
-		value categories = Array();
+		value categories = JSONArray();
 		for (category in controller.categories) { 
-			categories.add(JSObject { "name" -> category.model.name });
+			categories.add(JSON { "name" -> category.model.name });
 		}
-		value context = JSObject { "category" -> categories };
+		value context = JSON { "category" -> categories };
 		dynamic {
-			value dummy = value {dCarrier=context.toJson();};
-			categoryTabs = tabsTemplate(dummy.dCarrier.json);
+			categoryTabs = tabsTemplate(context.toJson());
 		}
 		display();
 	}
 	
 	shared void displayInvalidCategory() {
 		// display invalid category here
+	}
+	
+	shared void isMobile() {
+		print("is mobile");
+	}
+	
+	shared void isDesktop() {
+		print("is desktop");
 	}
 }
 
@@ -348,8 +270,8 @@ shared class CategoryModel(shared Category controller, shared String name) {
 }
 
 shared class CategoryView(shared Category controller) {
-	variable Callable<String, Anything[]> template;
-	variable Callable<String, Anything[]> paginationTemplate;
+	variable dynamic template;
+	variable dynamic paginationTemplate;
 	
 	shared variable String pagination = "pagination";
 	shared variable String page = "page";
@@ -367,7 +289,7 @@ shared class CategoryView(shared Category controller) {
 	
 	shared void display() {
 		print("display category");
-		value context = JSObject {
+		value context = JSON {
 	        "title" -> title,
 	        "width" -> width,
 	        "src" -> src,
@@ -378,8 +300,7 @@ shared class CategoryView(shared Category controller) {
 		};
 		print("src: " + src);
 		dynamic {
-			value dummy = value {dCarrier=context.toJson();};
-	    	controller.parent.updateCategory(template(dummy.dCarrier.json));
+	    	controller.parent.updateCategory(template(context.toJson()));
 		}
 		dynamic {
 			jQuery(".category").each( () => jQuery(\ithis).removeClass("active") );
@@ -413,19 +334,18 @@ shared class CategoryView(shared Category controller) {
 	}
 
 	shared void displayPage(Integer pageNum) {
-		value pages = Array();
+		value pages = JSONArray();
 		for (page in controller.pages) { 
-			pages.add(JSObject { "uri" -> page.uri });
+			pages.add(JSON { "uri" -> page.uri });
 		}
-		value context = JSObject {
+		value context = JSON {
 			"uri" -> controller.model.uri,
 	        "page" -> pageNum,
 	        "lastPage" -> (controller.pages.size - 1),
 	        "pages" -> pages
 	    };
 	    dynamic {
-			value dummy = value {dCarrier=context.toJson();};
-	    	pagination = paginationTemplate(dummy.dCarrier.json);
+	    	pagination = paginationTemplate(context.toJson());
 		}
 		display();
 	}
@@ -466,34 +386,41 @@ shared class PageModel(shared Page controller) {
 }
 
 shared class PageView(shared Page controller) {
-	variable Callable<String, Anything[]> template;
+	variable dynamic template;
 	
 	dynamic {
 		template = \iHandlebars.compile(jQuery("#page-template").html());
 	}
 	
 	shared void display() {
-		value photos = Array();
+		value photos = JSONArray();
 		for (photo in controller.model.photos) { 
-			photos.add(JSObject { 
+			photos.add(JSON { 
 				"title" -> photo.title,
 				"uri" -> controller.uri,
 				"src" -> photo.thumb,
 				"alt" -> photo.alt
 			});
 		}
-		value context = JSObject {
+		value context = JSON {
 	        "photos" -> photos
 	    };
 	    dynamic {
-			value dummy = value {dCarrier=context.toJson();};
-	    	controller.parent.updatePage(template(dummy.dCarrier.json));
+			controller.parent.updatePage(template(context.toJson()));
 		}
 		for (i in 0:photos.size) {
 			dynamic {
-				jQuery(".photo" + i.string).load( () => jQuery(\ithis).parent().spin(false) );
+				jQuery(".photo" + i.string).hide();
+				jQuery(".photo" + i.string).load( () => photoLoaded(i) );
 				jQuery(".photo" + i.string).parent().spin("small");
 			}
+		}
+	}
+	
+	void photoLoaded(Integer photo) {
+		dynamic {
+			jQuery(\ithis).parent().spin(false);
+			jQuery(\ithis).show();
 		}
 	}
 	

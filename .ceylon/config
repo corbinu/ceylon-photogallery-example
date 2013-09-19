@@ -2,3 +2,8 @@
 [defaults]
 encoding=US-ASCII
 
+
+
+[repositories]
+lookup=/Users/corbinu/Developer/git/ceylon-js-interop/modules
+lookup=/Users/corbinu/Developer/git/ceylon-js-interop
