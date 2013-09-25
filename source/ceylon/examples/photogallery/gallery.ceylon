@@ -1,4 +1,6 @@
 import ceylon.js.json { JSON, JSONArray }
+import ceylon.js.jquery { jq, jQueryGetJSON }
+import ceylon.js.language { JSObject }
 
 shared class Gallery() {
 	shared variable Category[] categories = {};
@@ -15,14 +17,14 @@ shared class Gallery() {
 		model.loadJSON();
 		
 		dynamic {
-			value resize = void () {
-				if ( jQuery(".visible-lg").css("display") == "none !important" ) {
+			value resize = void (Anything event) {
+				 if ( jq(".visible-lg").getCss("display") == "none !important" ) {
 					view.isMobile();
 				} else {
 					view.isDesktop();
 				}
 			};
-			jQuery(window).resize(resize);
+			jq(JSObject(window)).resize(resize);
 		}
 		
 		return this;
@@ -152,9 +154,9 @@ shared class GalleryModel(shared Gallery controller, shared String dir) {
 	shared void loadJSON() {
 		print("loading local json");
 		dynamic {
-			jQuery.getJSON(dir + "/images.json")
-			.done(parseCategories)
-			.fail( () => alert("Error could not load image file") );
+			 jQueryGetJSON(dir + "/images.json");/*
+			 .done(parseCategories)
+			.fail( () => alert("Error could not load image file") );*/
 		}
 	}
 	
@@ -176,17 +178,19 @@ shared class GalleryView(shared Gallery controller) {
 	shared variable String category = "category";
 	
 	dynamic {
-		template = \iHandlebars.compile(jQuery("#gallery-template").html());
-		tabsTemplate = \iHandlebars.compile(jQuery("#gallery-tabs-template").html());
+		//template = \iHandlebars.compile(jq("#gallery-template").getHtml());
+		//tabsTemplate = \iHandlebars.compile(jq("#gallery-tabs-template").getHtml());
 	}
 	
 	shared void display() {
+		/*
 		value context = JSON {
 	        "categoryTabs" -> categoryTabs,
 	        "category" -> category
 	    };
+		*/
 	    dynamic {
-	    	jQuery("body").html(template(context.toJson()));
+	    	//jq("body").setHtml(template(context.toJson()));
 		}
 	}
 	
@@ -197,7 +201,7 @@ shared class GalleryView(shared Gallery controller) {
 		}
 		value context = JSON { "category" -> categories };
 		dynamic {
-			categoryTabs = tabsTemplate(context.toJson());
+			//categoryTabs = tabsTemplate(context.toJson());
 		}
 		display();
 	}
@@ -283,8 +287,8 @@ shared class CategoryView(shared Category controller) {
 	shared variable String height = "";
 	
 	dynamic {
-		template = \iHandlebars.compile(jQuery("#category-template").html());
-		paginationTemplate = \iHandlebars.compile(jQuery("#category-pagination-template").html());
+		//template = \iHandlebars.compile(jq("#category-template").getHtml());
+		//paginationTemplate = \iHandlebars.compile(jq("#category-pagination-template").getHtml());
 	}
 	
 	shared void display() {
@@ -300,11 +304,11 @@ shared class CategoryView(shared Category controller) {
 		};
 		print("src: " + src);
 		dynamic {
-	    	controller.parent.updateCategory(template(context.toJson()));
+	    	//controller.parent.updateCategory(template(context.toJson()));
 		}
 		dynamic {
-			jQuery(".category").each( () => jQuery(\ithis).removeClass("active") );
-			jQuery(".category-" + controller.model.name.lowercased).addClass("active");
+			//jq(".category").each( (Integer index, Anything item) => jq(\ithis).removeClass("active") );
+			//jq(".category-" + controller.model.name.lowercased).addClass("active");
 		}
 	}
 	
@@ -321,7 +325,7 @@ shared class CategoryView(shared Category controller) {
 		title = photo.title;
 		dynamic {
 			display();
-			jQuery(".display-photo").stop(true, true).hide().fadeIn(800);
+			//jq(".display-photo").stop(true, true).hide().fadeIn(800);
 		}
 	}
 	
@@ -345,7 +349,7 @@ shared class CategoryView(shared Category controller) {
 	        "pages" -> pages
 	    };
 	    dynamic {
-	    	pagination = paginationTemplate(context.toJson());
+	    	//pagination = paginationTemplate(context.toJson());
 		}
 		display();
 	}
@@ -389,7 +393,7 @@ shared class PageView(shared Page controller) {
 	variable dynamic template;
 	
 	dynamic {
-		template = \iHandlebars.compile(jQuery("#page-template").html());
+		//template = \iHandlebars.compile(jq("#page-template").getHtml());
 	}
 	
 	shared void display() {
@@ -406,21 +410,23 @@ shared class PageView(shared Page controller) {
 	        "photos" -> photos
 	    };
 	    dynamic {
-			controller.parent.updatePage(template(context.toJson()));
+			//controller.parent.updatePage(template(context.toJson()));
 		}
+		/*
 		for (i in 0:photos.size) {
 			dynamic {
-				jQuery(".photo" + i.string).hide();
-				jQuery(".photo" + i.string).load( () => photoLoaded(i) );
-				jQuery(".photo" + i.string).parent().spin("small");
+				jq(".photo" + i.string).hide();
+				jq(".photo" + i.string).on( "load", null, null, (Anything event) => photoLoaded(i) );
+				spin(jq(".photo" + i.string).parent()).spinPreset("small");
 			}
 		}
+		*/
 	}
 	
 	void photoLoaded(Integer photo) {
 		dynamic {
-			jQuery(\ithis).parent().spin(false);
-			jQuery(\ithis).show();
+			//spin(jq(\ithis).parent()).spinStop();
+			//jq(\ithis).show();
 		}
 	}
 	
