@@ -1,16 +1,11 @@
-//import ceylon.js.jquery { JQueryAbs, JQuery }
+import ceylon.js.jquery { JQueryAbs, JQuery }
 import ceylon.js.json { JSJSON }
 import ceylon.js.language { DataDescriptor, JSObject, createJSObject }
 
 
-/*shared JQuerySpin spin(JQuery jq) {
+shared JQuerySpin spin(JQuery jq) {
 	dynamic {
-		dynamic native = jq.native;
-		if (native.spin == \iundefined || native.spin == \inull) {
-			throw Exception("jQuery Spin Library was not found. Did you make sure to include jQuery Spin?");
-		} else {
-			return JQuerySpin(native);
-		}
+		return JQuerySpin(jq.native);
 	}
 }
 

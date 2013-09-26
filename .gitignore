@@ -1,5 +1,5 @@
-classes
-node_modules
-tmp
+/classes
+/node_modules
+/tmp
 ._*
 .DS_Store

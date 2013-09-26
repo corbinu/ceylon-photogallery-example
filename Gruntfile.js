@@ -9,6 +9,9 @@ module.exports = function(grunt) {
 			build_interop: {
 				command: 'grunt',
 				cwd: '../ceylon-js-interop'
+			},
+			flatten: {
+				command: 'node r.js -o build.js optimize=none'
 			}
 		},
 		clean: {
@@ -27,6 +30,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 
-	grunt.registerTask('default', ['exec:build_interop', 'clean:interop', 'copy:interop', 'exec:build']);
+	grunt.registerTask('default', ['exec:build_interop', 'clean:interop', 'copy:interop', 'exec:build', 'exec:flatten']);
 
 };

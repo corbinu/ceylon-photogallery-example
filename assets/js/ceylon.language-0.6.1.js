@@ -815,150 +815,143 @@ function $init$Iterable(){
                             defineAttr($$iterator$98,'alive$99',function(){return this.alive$99_;},function(alive$100){return this.alive$99_=alive$100;},function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:iterator$98,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$m','takingWhile','$o','iterable','$m','iterator','$o','iterator','$at','alive']};});
                             $$iterator$98.next=function next(){
                                 var $$iterator$98=this;
-                                if($$iterator$98.alive$99){
-                                    var next$101=iter$97.next();
-                                    $prop$getNext$101={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},d:['ceylon.language','Iterable','$m','takingWhile','$o','iterable','$m','iterator','$o','iterator','$m','next','$at','next']};}};
-                                    $prop$getNext$101.get=function(){return next$101};
-                                    var next$102;
-                                    if(!isOfType((next$102=next$101),{t:Finished})){
-                                        if(take$95(next$102)){
-                                            return next$102;
-                                        }else {
-                                            $$iterator$98.alive$99=false;
-                                        }
+                                var next$101;
+                                if($$iterator$98.alive$99&&!isOfType((next$101=iter$97.next()),{t:Finished})){
+                                    if(take$95(next$101)){
+                                        return next$101;
+                                    }else {
+                                        $$iterator$98.alive$99=false;
                                     }
                                 }
                                 return getFinished();
                             };$$iterator$98.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:iterator$98,$an:function(){return[actual(),shared()];},d:['ceylon.language','Iterable','$m','takingWhile','$o','iterable','$m','iterator','$o','iterator','$m','next']};};
                         })(iterator$98.$$.prototype);
-                        var iterator$103;
-                        function getIterator$103(){
-                            if (iterator$103===undefined)iterator$103=$init$iterator$98()({Element:$$iterable.$$targs$$.Element});
-                            return iterator$103;
+                        var iterator$102;
+                        function getIterator$102(){
+                            if (iterator$102===undefined)iterator$102=$init$iterator$98()({Element:$$iterable.$$targs$$.Element});
+                            return iterator$102;
                         }
-                        getIterator$103.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$98},d:['ceylon.language','Iterable','$m','takingWhile','$o','iterable','$m','iterator','$at','iterator']};};
-                        $prop$getIterator$103={get:getIterator$103,$$metamodel$$:getIterator$103.$$metamodel$$};
-                        return getIterator$103();
+                        getIterator$102.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$98},d:['ceylon.language','Iterable','$m','takingWhile','$o','iterable','$m','iterator','$at','iterator']};};
+                        $prop$getIterator$102={get:getIterator$102,$$metamodel$$:getIterator$102.$$metamodel$$};
+                        return getIterator$102();
                     };$$iterable$96.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$ps:[],$cont:iterable$96,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$m','takingWhile','$o','iterable','$m','iterator']};};
                 })(iterable$96.$$.prototype);
-                var iterable$104;
-                function getIterable$104(){
-                    if (iterable$104===undefined)iterable$104=$init$iterable$96()({Absent:{t:Null},Element:$$iterable.$$targs$$.Element});
-                    return iterable$104;
+                var iterable$103;
+                function getIterable$103(){
+                    if (iterable$103===undefined)iterable$103=$init$iterable$96()({Absent:{t:Null},Element:$$iterable.$$targs$$.Element});
+                    return iterable$103;
                 }
-                getIterable$104.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterable$96},d:['ceylon.language','Iterable','$m','takingWhile','$at','iterable']};};
-                $prop$getIterable$104={get:getIterable$104,$$metamodel$$:getIterable$104.$$metamodel$$};
-                return getIterable$104();
+                getIterable$103.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterable$96},d:['ceylon.language','Iterable','$m','takingWhile','$at','iterable']};};
+                $prop$getIterable$103={get:getIterable$103,$$metamodel$$:getIterable$103.$$metamodel$$};
+                return getIterable$103();
             };$$iterable.takingWhile.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}},$ps:[{$nm:'take',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Iterable,$an:function(){return[shared(),$default()];},d:['ceylon.language','Iterable','$m','takingWhile']};};
-            $$iterable.by=function by(step$105){
+            $$iterable.by=function by(step$104){
                 var $$iterable=this;
-                //assert at Iterable.ceylon (397:8-398:25)
-                if (!(step$105.compare((0)).equals(getLarger()))) {throw wrapexc(AssertionException("step size must be greater than zero: \'step > 0\' at Iterable.ceylon (398:15-398:24)"),'397:8-398:25','Iterable.ceylon'); }
-                if(step$105.equals((1))){
+                //assert at Iterable.ceylon (395:8-396:25)
+                if (!(step$104.compare((0)).equals(getLarger()))) {throw wrapexc(AssertionException("step size must be greater than zero: \'step > 0\' at Iterable.ceylon (396:15-396:24)"),'395:8-396:25','Iterable.ceylon'); }
+                if(step$104.equals((1))){
                     return $$iterable;
                 }else {
-                    var cntvar$106=false;
-                    var brkvar$108=false;
-                    var retvar$107=(function(){
-                        function iterable$109($$targs$$){
-                            var $$iterable$109=new iterable$109.$$;
-                            $$iterable$109.$$targs$$=$$targs$$;
-                            Iterable({Absent:$$iterable.$$targs$$.Absent,Element:$$iterable.$$targs$$.Element},$$iterable$109);
-                            return $$iterable$109;
+                    var cntvar$105=false;
+                    var brkvar$107=false;
+                    var retvar$106=(function(){
+                        function iterable$108($$targs$$){
+                            var $$iterable$108=new iterable$108.$$;
+                            $$iterable$108.$$targs$$=$$targs$$;
+                            Iterable({Absent:$$iterable.$$targs$$.Absent,Element:$$iterable.$$targs$$.Element},$$iterable$108);
+                            return $$iterable$108;
                         }
-                        function $init$iterable$109(){
-                            if (iterable$109.$$===undefined){
-                                initTypeProto(iterable$109,'ceylon.language::Iterable.by.iterable',Basic,$init$Iterable());
+                        function $init$iterable$108(){
+                            if (iterable$108.$$===undefined){
+                                initTypeProto(iterable$108,'ceylon.language::Iterable.by.iterable',Basic,$init$Iterable());
                             }
-                            return iterable$109;
+                            return iterable$108;
                         }
-                        $init$iterable$109();
-                        (function($$iterable$109){
-                            $$iterable$109.iterator=function iterator(){
-                                var $$iterable$109=this;
-                                var iter$110=$$iterable.iterator();
-                                function iterator$111($$targs$$){
-                                    var $$iterator$111=new iterator$111.$$;
-                                    $$iterator$111.$$targs$$=$$targs$$;
-                                    Iterator({Element:$$iterable.$$targs$$.Element},$$iterator$111);
-                                    return $$iterator$111;
+                        $init$iterable$108();
+                        (function($$iterable$108){
+                            $$iterable$108.iterator=function iterator(){
+                                var $$iterable$108=this;
+                                var iter$109=$$iterable.iterator();
+                                function iterator$110($$targs$$){
+                                    var $$iterator$110=new iterator$110.$$;
+                                    $$iterator$110.$$targs$$=$$targs$$;
+                                    Iterator({Element:$$iterable.$$targs$$.Element},$$iterator$110);
+                                    return $$iterator$110;
                                 }
-                                function $init$iterator$111(){
-                                    if (iterator$111.$$===undefined){
-                                        initTypeProto(iterator$111,'ceylon.language::Iterable.by.iterable.iterator.iterator',Basic,$init$Iterator());
+                                function $init$iterator$110(){
+                                    if (iterator$110.$$===undefined){
+                                        initTypeProto(iterator$110,'ceylon.language::Iterable.by.iterable.iterator.iterator',Basic,$init$Iterator());
                                     }
-                                    return iterator$111;
+                                    return iterator$110;
                                 }
-                                $init$iterator$111();
-                                (function($$iterator$111){
-                                    $$iterator$111.next=function next(){
-                                        var $$iterator$111=this;
-                                        var next$112=iter$110.next();
-                                        var i$113=(0);
-                                        function setI$113(i$114){return i$113=i$114;};
-                                        while(((i$113=i$113.successor).compare(step$105).equals(getSmaller())&&(!isOfType(iter$110.next(),{t:Finished})))){}
-                                        return next$112;
-                                    };$$iterator$111.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:iterator$111,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$m','by','$o','iterable','$m','iterator','$o','iterator','$m','next']};};
-                                })(iterator$111.$$.prototype);
-                                var iterator$115;
-                                function getIterator$115(){
-                                    if (iterator$115===undefined)iterator$115=$init$iterator$111()({Element:$$iterable.$$targs$$.Element});
-                                    return iterator$115;
+                                $init$iterator$110();
+                                (function($$iterator$110){
+                                    $$iterator$110.next=function next(){
+                                        var $$iterator$110=this;
+                                        var next$111=iter$109.next();
+                                        var i$112=(0);
+                                        function setI$112(i$113){return i$112=i$113;};
+                                        while(((i$112=i$112.successor).compare(step$104).equals(getSmaller())&&(!isOfType(iter$109.next(),{t:Finished})))){}
+                                        return next$111;
+                                    };$$iterator$110.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:iterator$110,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$m','by','$o','iterable','$m','iterator','$o','iterator','$m','next']};};
+                                })(iterator$110.$$.prototype);
+                                var iterator$114;
+                                function getIterator$114(){
+                                    if (iterator$114===undefined)iterator$114=$init$iterator$110()({Element:$$iterable.$$targs$$.Element});
+                                    return iterator$114;
                                 }
-                                getIterator$115.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$111},d:['ceylon.language','Iterable','$m','by','$o','iterable','$m','iterator','$at','iterator']};};
-                                $prop$getIterator$115={get:getIterator$115,$$metamodel$$:getIterator$115.$$metamodel$$};
-                                return getIterator$115();
-                            };$$iterable$109.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$ps:[],$cont:iterable$109,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$m','by','$o','iterable','$m','iterator']};};
-                        })(iterable$109.$$.prototype);
-                        var iterable$116;
-                        function getIterable$116(){
-                            if (iterable$116===undefined)iterable$116=$init$iterable$109()({Absent:$$iterable.$$targs$$.Absent,Element:$$iterable.$$targs$$.Element});
-                            return iterable$116;
+                                getIterator$114.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$110},d:['ceylon.language','Iterable','$m','by','$o','iterable','$m','iterator','$at','iterator']};};
+                                $prop$getIterator$114={get:getIterator$114,$$metamodel$$:getIterator$114.$$metamodel$$};
+                                return getIterator$114();
+                            };$$iterable$108.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$ps:[],$cont:iterable$108,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$m','by','$o','iterable','$m','iterator']};};
+                        })(iterable$108.$$.prototype);
+                        var iterable$115;
+                        function getIterable$115(){
+                            if (iterable$115===undefined)iterable$115=$init$iterable$108()({Absent:$$iterable.$$targs$$.Absent,Element:$$iterable.$$targs$$.Element});
+                            return iterable$115;
                         }
-                        getIterable$116.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterable$109},d:['ceylon.language','Iterable','$m','by','$at','iterable']};};
-                        $prop$getIterable$116={get:getIterable$116,$$metamodel$$:getIterable$116.$$metamodel$$};
-                        return getIterable$116();
-                    }());if(retvar$107!==undefined){return retvar$107;}
+                        getIterable$115.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterable$108},d:['ceylon.language','Iterable','$m','by','$at','iterable']};};
+                        $prop$getIterable$115={get:getIterable$115,$$metamodel$$:getIterable$115.$$metamodel$$};
+                        return getIterable$115();
+                    }());if(retvar$106!==undefined){return retvar$106;}
                 }
             };$$iterable.by.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$ps:[{$nm:'step',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Iterable,$an:function(){return[doc(String$("Produce an `Iterable` containing every `step`th \nelement of this iterable object. If the step size \nis `1`, the `Iterable` contains the same elements \nas this iterable object. The step size must be \ngreater than zero. The expression\n\n    (0..10).by(3)\n\nresults in an iterable object with the elements\n`0`, `3`, `6`, and `9` in that order.",338)),$throws($init$OpenClass()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),AssertionException),String$("if the given step size is nonpositive, \ni.e. `step<1`",53)),shared(),$default()];},d:['ceylon.language','Iterable','$m','by']};};
-            $$iterable.count=function count(selecting$117){
+            $$iterable.count=function count(selecting$116){
                 var $$iterable=this;
-                var count$118=(0);
-                function setCount$118(count$119){return count$118=count$119;};
-                var it$120 = $$iterable.iterator();
-                var elem$121;while ((elem$121=it$120.next())!==getFinished()){
-                    var elem$122;
-                    if((elem$122=elem$121)!==null){
-                        if(selecting$117(elem$122)){
-                            (oldcount$123=count$118,count$118=oldcount$123.successor,oldcount$123);
-                            var oldcount$123;
-                        }
+                var count$117=(0);
+                function setCount$117(count$118){return count$117=count$118;};
+                var it$119 = $$iterable.iterator();
+                var elem$120;while ((elem$120=it$119.next())!==getFinished()){
+                    var elem$121;
+                    if((elem$121=elem$120)!==null&&selecting$116(elem$121)){
+                        (oldcount$122=count$117,count$117=oldcount$122.successor,oldcount$122);
+                        var oldcount$122;
                     }
                 }
-                return count$118;
+                return count$117;
             };$$iterable.count.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[doc("The predicate satisfied by the elements to\nbe counted.")];}}],$cont:Iterable,$an:function(){return[doc(String$("Return the number of elements in this `Iterable` \nthat satisfy the predicate function.",86)),shared(),$default()];},d:['ceylon.language','Iterable','$m','count']};};
             defineAttr($$iterable,'coalesced',function(){
                 var $$iterable=this;
                 return Comprehension(function(){
-                    var e$126;
-                    var it$124=$$iterable.iterator();
-                    var e$125=getFinished();
-                    var e$126;
-                    var next$e$125=function(){
-                        while((e$125=it$124.next())!==getFinished()){
-                            if((e$126=e$125)!==null){
-                                return e$125;
+                    var e$125;
+                    var it$123=$$iterable.iterator();
+                    var e$124=getFinished();
+                    var e$125;
+                    var next$e$124=function(){
+                        while((e$124=it$123.next())!==getFinished()){
+                            if((e$125=e$124)!==null){
+                                return e$124;
                             }
                         }
                         return getFinished();
                     }
-                    next$e$125();
+                    next$e$124();
                     return function(){
-                        if(e$125!==getFinished()){
-                            var e$125$127=e$125;
-                            var tmpvar$128=e$126;
-                            next$e$125();
-                            return tmpvar$128;
+                        if(e$124!==getFinished()){
+                            var e$124$126=e$124;
+                            var tmpvar$127=e$125;
+                            next$e$124();
+                            return tmpvar$127;
                         }
                         return getFinished();
                     }
@@ -966,200 +959,202 @@ function $init$Iterable(){
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:{ t:'i', l:['Element',{t:Object$}]}}},$cont:Iterable,$an:function(){return[doc(String$("The non-null elements of this `Iterable`, in their\noriginal order. For null elements of the original \n`Iterable`, there is no entry in the resulting \niterable object.",166)),shared(),$default()];},d:['ceylon.language','Iterable','$at','coalesced']};});
             defineAttr($$iterable,'indexed',function(){
                 var $$iterable=this;
-                function indexes$129($$targs$$){
-                    var $$indexes$129=new indexes$129.$$;
-                    $$indexes$129.$$targs$$=$$targs$$;
-                    Iterable({Absent:{t:Null},Element:{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:[$$iterable.$$targs$$.Element,{t:Object$}]}}}},$$indexes$129);
-                    add_type_arg($$indexes$129,'Absent',{t:Null});
-                    add_type_arg($$indexes$129,'Element',{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:[$$iterable.$$targs$$.Element,{t:Object$}]}}});
-                    $$indexes$129.$prop$getOrig$130={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$cont:indexes$129,d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$at','orig']};}};
-                    $$indexes$129.$prop$getOrig$130.get=function(){return orig$130};
-                    return $$indexes$129;
+                function indexes$128($$targs$$){
+                    var $$indexes$128=new indexes$128.$$;
+                    $$indexes$128.$$targs$$=$$targs$$;
+                    Iterable({Absent:{t:Null},Element:{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:[$$iterable.$$targs$$.Element,{t:Object$}]}}}},$$indexes$128);
+                    add_type_arg($$indexes$128,'Absent',{t:Null});
+                    add_type_arg($$indexes$128,'Element',{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:[$$iterable.$$targs$$.Element,{t:Object$}]}}});
+                    $$indexes$128.$prop$getOrig$129={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$cont:indexes$128,d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$at','orig']};}};
+                    $$indexes$128.$prop$getOrig$129.get=function(){return orig$129};
+                    return $$indexes$128;
                 }
-                function $init$indexes$129(){
-                    if (indexes$129.$$===undefined){
-                        initTypeProto(indexes$129,'ceylon.language::Iterable.indexed.indexes',Basic,$init$Iterable());
+                function $init$indexes$128(){
+                    if (indexes$128.$$===undefined){
+                        initTypeProto(indexes$128,'ceylon.language::Iterable.indexed.indexes',Basic,$init$Iterable());
                     }
-                    return indexes$129;
+                    return indexes$128;
                 }
-                $init$indexes$129();
-                (function($$indexes$129){
-                    defineAttr($$indexes$129,'orig$130',function(){
-                        var $$indexes$129=this;
+                $init$indexes$128();
+                (function($$indexes$128){
+                    defineAttr($$indexes$128,'orig$129',function(){
+                        var $$indexes$128=this;
                         return $$iterable;
-                    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$cont:indexes$129,d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$at','orig']};});
-                    $$indexes$129.iterator=function iterator(){
-                        var $$indexes$129=this;
-                        function iterator$131($$targs$$){
-                            var $$iterator$131=new iterator$131.$$;
-                            $$iterator$131.$$targs$$=$$targs$$;
-                            Iterator({Element:{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:[$$iterable.$$targs$$.Element,{t:Object$}]}}}},$$iterator$131);
-                            add_type_arg($$iterator$131,'Element',{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:[$$iterable.$$targs$$.Element,{t:Object$}]}}});
-                            $$iterator$131.iter$132_=$$indexes$129.orig$130.iterator();
-                            $$iterator$131.$prop$getIter$132={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$131,d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$m','iterator','$o','iterator','$at','iter']};}};
-                            $$iterator$131.$prop$getIter$132.get=function(){return iter$132};
-                            $$iterator$131.i$133_=(0);
-                            $$iterator$131.$prop$getI$133={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:iterator$131,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$m','iterator','$o','iterator','$at','i']};}};
-                            $$iterator$131.$prop$getI$133.get=function(){return i$133};
-                            return $$iterator$131;
+                    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$cont:indexes$128,d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$at','orig']};});
+                    $$indexes$128.iterator=function iterator(){
+                        var $$indexes$128=this;
+                        function iterator$130($$targs$$){
+                            var $$iterator$130=new iterator$130.$$;
+                            $$iterator$130.$$targs$$=$$targs$$;
+                            Iterator({Element:{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:[$$iterable.$$targs$$.Element,{t:Object$}]}}}},$$iterator$130);
+                            add_type_arg($$iterator$130,'Element',{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:[$$iterable.$$targs$$.Element,{t:Object$}]}}});
+                            $$iterator$130.iter$131_=$$indexes$128.orig$129.iterator();
+                            $$iterator$130.$prop$getIter$131={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$130,d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$m','iterator','$o','iterator','$at','iter']};}};
+                            $$iterator$130.$prop$getIter$131.get=function(){return iter$131};
+                            $$iterator$130.i$132_=(0);
+                            $$iterator$130.$prop$getI$132={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:iterator$130,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$m','iterator','$o','iterator','$at','i']};}};
+                            $$iterator$130.$prop$getI$132.get=function(){return i$132};
+                            return $$iterator$130;
                         }
-                        function $init$iterator$131(){
-                            if (iterator$131.$$===undefined){
-                                initTypeProto(iterator$131,'ceylon.language::Iterable.indexed.indexes.iterator.iterator',Basic,$init$Iterator());
+                        function $init$iterator$130(){
+                            if (iterator$130.$$===undefined){
+                                initTypeProto(iterator$130,'ceylon.language::Iterable.indexed.indexes.iterator.iterator',Basic,$init$Iterator());
                             }
-                            return iterator$131;
+                            return iterator$130;
                         }
-                        $init$iterator$131();
-                        (function($$iterator$131){
-                            defineAttr($$iterator$131,'iter$132',function(){return this.iter$132_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$131,d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$m','iterator','$o','iterator','$at','iter']};});
-                            defineAttr($$iterator$131,'i$133',function(){return this.i$133_;},function(i$134){return this.i$133_=i$134;},function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:iterator$131,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$m','iterator','$o','iterator','$at','i']};});
-                            $$iterator$131.next=function next(){
-                                var $$iterator$131=this;
-                                var next$135=$$iterator$131.iter$132.next();
-                                function setNext$135(next$136){return next$135=next$136;};
-                                while((!exists(next$135))){
-                                    (oldi$137=$$iterator$131.i$133,$$iterator$131.i$133=oldi$137.successor,oldi$137);
-                                    var oldi$137;
-                                    next$135=$$iterator$131.iter$132.next();
+                        $init$iterator$130();
+                        (function($$iterator$130){
+                            defineAttr($$iterator$130,'iter$131',function(){return this.iter$131_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$130,d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$m','iterator','$o','iterator','$at','iter']};});
+                            defineAttr($$iterator$130,'i$132',function(){return this.i$132_;},function(i$133){return this.i$132_=i$133;},function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:iterator$130,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$m','iterator','$o','iterator','$at','i']};});
+                            $$iterator$130.next=function next(){
+                                var $$iterator$130=this;
+                                var next$134=$$iterator$130.iter$131.next();
+                                function setNext$134(next$135){return next$134=next$135;};
+                                while((!exists(next$134))){
+                                    (oldi$136=$$iterator$130.i$132,$$iterator$130.i$132=oldi$136.successor,oldi$136);
+                                    var oldi$136;
+                                    next$134=$$iterator$130.iter$131.next();
                                 }
+                                //assert at Iterable.ceylon (469:24-469:48)
+                                var n$137;
+                                if (!((n$137=next$134)!==null)) {throw wrapexc(AssertionException("Assertion failed: \'exists n = next\' at Iterable.ceylon (469:31-469:47)"),'469:24-469:48','Iterable.ceylon'); }
                                 var n$138;
-                                var n$139;
-                                if(!isOfType((n$138=next$135),{t:Finished})&&(n$139=n$138)!==null){
-                                    return Entry((oldi$140=$$iterator$131.i$133,$$iterator$131.i$133=oldi$140.successor,oldi$140),n$139,{Key:{t:Integer},Item:{ t:'i', l:[$$iterable.$$targs$$.Element,{t:Object$}]}});
-                                    var oldi$140;
+                                if(!isOfType((n$138=n$137),{t:Finished})){
+                                    return Entry((oldi$139=$$iterator$130.i$132,$$iterator$130.i$132=oldi$139.successor,oldi$139),n$138,{Key:{t:Integer},Item:{ t:'i', l:[$$iterable.$$targs$$.Element,{t:Object$}]}});
+                                    var oldi$139;
                                 }else {
                                     return getFinished();
                                 }
-                            };$$iterator$131.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:['Element',{t:Object$}]}}},{t:Finished}]},$ps:[],$cont:iterator$131,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$m','iterator','$o','iterator','$m','next']};};
-                        })(iterator$131.$$.prototype);
-                        var iterator$141;
-                        function getIterator$141(){
-                            if (iterator$141===undefined)iterator$141=$init$iterator$131()({Element:{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:[$$iterable.$$targs$$.Element,{t:Object$}]}}}});
-                            return iterator$141;
+                            };$$iterator$130.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:['Element',{t:Object$}]}}},{t:Finished}]},$ps:[],$cont:iterator$130,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$m','iterator','$o','iterator','$m','next']};};
+                        })(iterator$130.$$.prototype);
+                        var iterator$140;
+                        function getIterator$140(){
+                            if (iterator$140===undefined)iterator$140=$init$iterator$130()({Element:{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:[$$iterable.$$targs$$.Element,{t:Object$}]}}}});
+                            return iterator$140;
                         }
-                        getIterator$141.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$131},d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$m','iterator','$at','iterator']};};
-                        $prop$getIterator$141={get:getIterator$141,$$metamodel$$:getIterator$141.$$metamodel$$};
-                        return getIterator$141();
-                    };$$indexes$129.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:['Element',{t:Object$}]}}}}},$ps:[],$cont:indexes$129,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$m','iterator']};};
-                })(indexes$129.$$.prototype);
-                var indexes$142;
-                function getIndexes$142(){
-                    if (indexes$142===undefined)indexes$142=$init$indexes$129()({Absent:{t:Null},Element:{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:[$$iterable.$$targs$$.Element,{t:Object$}]}}}});
-                    return indexes$142;
+                        getIterator$140.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$130},d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$m','iterator','$at','iterator']};};
+                        $prop$getIterator$140={get:getIterator$140,$$metamodel$$:getIterator$140.$$metamodel$$};
+                        return getIterator$140();
+                    };$$indexes$128.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:['Element',{t:Object$}]}}}}},$ps:[],$cont:indexes$128,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$at','indexed','$o','indexes','$m','iterator']};};
+                })(indexes$128.$$.prototype);
+                var indexes$141;
+                function getIndexes$141(){
+                    if (indexes$141===undefined)indexes$141=$init$indexes$128()({Absent:{t:Null},Element:{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:[$$iterable.$$targs$$.Element,{t:Object$}]}}}});
+                    return indexes$141;
                 }
-                getIndexes$142.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:indexes$129},d:['ceylon.language','Iterable','$at','indexed','$at','indexes']};};
-                $prop$getIndexes$142={get:getIndexes$142,$$metamodel$$:getIndexes$142.$$metamodel$$};
-                return getIndexes$142();
-            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:['Element',{t:Object$}]}}}}},$cont:Iterable,$an:function(){return[doc(String$("All entries of form `index->element` where `index` \nis the position at which `element` occurs, for every\nnon-null element of this `Iterable`, ordered by\nincreasing `index`. For a null element at a given\nposition in the original `Iterable`, there is no \nentry with the corresponding index in the resulting \niterable object. The expression \n\n    { \"hello\", null, \"world\" }.indexed\n    \nresults in an iterable object with the entries\n`0->\"hello\"` and `2->\"world\"`.",461)),shared(),$default()];},d:['ceylon.language','Iterable','$at','indexed']};});$$iterable.following=function following(head$143,$$$mptypes){
+                getIndexes$141.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:indexes$128},d:['ceylon.language','Iterable','$at','indexed','$at','indexes']};};
+                $prop$getIndexes$141={get:getIndexes$141,$$metamodel$$:getIndexes$141.$$metamodel$$};
+                return getIndexes$141();
+            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:['Element',{t:Object$}]}}}}},$cont:Iterable,$an:function(){return[doc(String$("All entries of form `index->element` where `index` \nis the position at which `element` occurs, for every\nnon-null element of this `Iterable`, ordered by\nincreasing `index`. For a null element at a given\nposition in the original `Iterable`, there is no \nentry with the corresponding index in the resulting \niterable object. The expression \n\n    { \"hello\", null, \"world\" }.indexed\n    \nresults in an iterable object with the entries\n`0->\"hello\"` and `2->\"world\"`.",461)),shared(),$default()];},d:['ceylon.language','Iterable','$at','indexed']};});$$iterable.following=function following(head$142,$$$mptypes){
                 var $$iterable=this;
-                function cons$144($$targs$$){
-                    var $$cons$144=new cons$144.$$;
-                    $$cons$144.$$targs$$=$$targs$$;
-                    Iterable({Absent:{t:Nothing},Element:{ t:'u', l:[$$iterable.$$targs$$.Element,$$$mptypes.Other]}},$$cons$144);
-                    return $$cons$144;
+                function cons$143($$targs$$){
+                    var $$cons$143=new cons$143.$$;
+                    $$cons$143.$$targs$$=$$targs$$;
+                    Iterable({Absent:{t:Nothing},Element:{ t:'u', l:[$$iterable.$$targs$$.Element,$$$mptypes.Other]}},$$cons$143);
+                    return $$cons$143;
                 }
-                function $init$cons$144(){
-                    if (cons$144.$$===undefined){
-                        initTypeProto(cons$144,'ceylon.language::Iterable.following.cons',Basic,$init$Iterable());
+                function $init$cons$143(){
+                    if (cons$143.$$===undefined){
+                        initTypeProto(cons$143,'ceylon.language::Iterable.following.cons',Basic,$init$Iterable());
                     }
-                    return cons$144;
+                    return cons$143;
                 }
-                $init$cons$144();
-                (function($$cons$144){
-                    $$cons$144.iterator=function iterator(){
-                        var $$cons$144=this;
-                        var iter$145=$$iterable.iterator();
-                        function iterator$146($$targs$$){
-                            var $$iterator$146=new iterator$146.$$;
-                            $$iterator$146.$$targs$$=$$targs$$;
-                            Iterator({Element:{ t:'u', l:[$$iterable.$$targs$$.Element,$$$mptypes.Other]}},$$iterator$146);
-                            $$iterator$146.first$147_=true;
-                            $$iterator$146.$prop$getFirst$147={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:iterator$146,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$m','following','$o','cons','$m','iterator','$o','iterator','$at','first']};}};
-                            $$iterator$146.$prop$getFirst$147.get=function(){return first$147};
-                            return $$iterator$146;
+                $init$cons$143();
+                (function($$cons$143){
+                    $$cons$143.iterator=function iterator(){
+                        var $$cons$143=this;
+                        var iter$144=$$iterable.iterator();
+                        function iterator$145($$targs$$){
+                            var $$iterator$145=new iterator$145.$$;
+                            $$iterator$145.$$targs$$=$$targs$$;
+                            Iterator({Element:{ t:'u', l:[$$iterable.$$targs$$.Element,$$$mptypes.Other]}},$$iterator$145);
+                            $$iterator$145.first$146_=true;
+                            $$iterator$145.$prop$getFirst$146={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:iterator$145,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$m','following','$o','cons','$m','iterator','$o','iterator','$at','first']};}};
+                            $$iterator$145.$prop$getFirst$146.get=function(){return first$146};
+                            return $$iterator$145;
                         }
-                        function $init$iterator$146(){
-                            if (iterator$146.$$===undefined){
-                                initTypeProto(iterator$146,'ceylon.language::Iterable.following.cons.iterator.iterator',Basic,$init$Iterator());
+                        function $init$iterator$145(){
+                            if (iterator$145.$$===undefined){
+                                initTypeProto(iterator$145,'ceylon.language::Iterable.following.cons.iterator.iterator',Basic,$init$Iterator());
                             }
-                            return iterator$146;
+                            return iterator$145;
                         }
-                        $init$iterator$146();
-                        (function($$iterator$146){
-                            defineAttr($$iterator$146,'first$147',function(){return this.first$147_;},function(first$148){return this.first$147_=first$148;},function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:iterator$146,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$m','following','$o','cons','$m','iterator','$o','iterator','$at','first']};});
-                            $$iterator$146.next=function next(){
-                                var $$iterator$146=this;
-                                if($$iterator$146.first$147){
-                                    $$iterator$146.first$147=false;
-                                    return head$143;
+                        $init$iterator$145();
+                        (function($$iterator$145){
+                            defineAttr($$iterator$145,'first$146',function(){return this.first$146_;},function(first$147){return this.first$146_=first$147;},function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:iterator$145,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$m','following','$o','cons','$m','iterator','$o','iterator','$at','first']};});
+                            $$iterator$145.next=function next(){
+                                var $$iterator$145=this;
+                                if($$iterator$145.first$146){
+                                    $$iterator$145.first$146=false;
+                                    return head$142;
                                 }else {
-                                    return iter$145.next();
+                                    return iter$144.next();
                                 }
-                            };$$iterator$146.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element','Other',{t:Finished}]},$ps:[],$cont:iterator$146,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$m','following','$o','cons','$m','iterator','$o','iterator','$m','next']};};
-                        })(iterator$146.$$.prototype);
-                        var iterator$149;
-                        function getIterator$149(){
-                            if (iterator$149===undefined)iterator$149=$init$iterator$146()({Element:{ t:'u', l:[$$iterable.$$targs$$.Element,$$$mptypes.Other]}});
-                            return iterator$149;
+                            };$$iterator$145.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element','Other',{t:Finished}]},$ps:[],$cont:iterator$145,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$m','following','$o','cons','$m','iterator','$o','iterator','$m','next']};};
+                        })(iterator$145.$$.prototype);
+                        var iterator$148;
+                        function getIterator$148(){
+                            if (iterator$148===undefined)iterator$148=$init$iterator$145()({Element:{ t:'u', l:[$$iterable.$$targs$$.Element,$$$mptypes.Other]}});
+                            return iterator$148;
                         }
-                        getIterator$149.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$146},d:['ceylon.language','Iterable','$m','following','$o','cons','$m','iterator','$at','iterator']};};
-                        $prop$getIterator$149={get:getIterator$149,$$metamodel$$:getIterator$149.$$metamodel$$};
-                        return getIterator$149();
-                    };$$cons$144.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:{ t:'u', l:['Element','Other']}}},$ps:[],$cont:cons$144,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$m','following','$o','cons','$m','iterator']};};
-                })(cons$144.$$.prototype);
-                var cons$150;
-                function getCons$150(){
-                    if (cons$150===undefined)cons$150=$init$cons$144()({Absent:{t:Nothing},Element:{ t:'u', l:[$$iterable.$$targs$$.Element,$$$mptypes.Other]}});
-                    return cons$150;
+                        getIterator$148.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$145},d:['ceylon.language','Iterable','$m','following','$o','cons','$m','iterator','$at','iterator']};};
+                        $prop$getIterator$148={get:getIterator$148,$$metamodel$$:getIterator$148.$$metamodel$$};
+                        return getIterator$148();
+                    };$$cons$143.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:{ t:'u', l:['Element','Other']}}},$ps:[],$cont:cons$143,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$m','following','$o','cons','$m','iterator']};};
+                })(cons$143.$$.prototype);
+                var cons$149;
+                function getCons$149(){
+                    if (cons$149===undefined)cons$149=$init$cons$143()({Absent:{t:Nothing},Element:{ t:'u', l:[$$iterable.$$targs$$.Element,$$$mptypes.Other]}});
+                    return cons$149;
                 }
-                getCons$150.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:cons$144},d:['ceylon.language','Iterable','$m','following','$at','cons']};};
-                $prop$getCons$150={get:getCons$150,$$metamodel$$:getCons$150.$$metamodel$$};
-                return getCons$150();
+                getCons$149.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:cons$143},d:['ceylon.language','Iterable','$m','following','$at','cons']};};
+                $prop$getCons$149={get:getCons$149,$$metamodel$$:getCons$149.$$metamodel$$};
+                return getCons$149();
             };$$iterable.following.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Nothing},Element:{ t:'u', l:['Element','Other']}}},$ps:[{$nm:'head',$mt:'prm',$t:'Other',$an:function(){return[];}}],$cont:Iterable,$tp:{Other:{}},$an:function(){return[doc(String$("An `Iterable` with the given inital element followed \nby the elements of this iterable object.",94)),shared(),$default()];},d:['ceylon.language','Iterable','$m','following']};};
-            $$iterable.chain=function chain(other$151,$$$mptypes){
+            $$iterable.chain=function chain(other$150,$$$mptypes){
                 var $$iterable=this;
-                function chained$152($$targs$$){
-                    var $$chained$152=new chained$152.$$;
-                    $$chained$152.$$targs$$=$$targs$$;
-                    Iterable({Absent:{ t:'i', l:[$$iterable.$$targs$$.Absent,$$$mptypes.OtherAbsent]},Element:{ t:'u', l:[$$iterable.$$targs$$.Element,$$$mptypes.Other]}},$$chained$152);
-                    return $$chained$152;
+                function chained$151($$targs$$){
+                    var $$chained$151=new chained$151.$$;
+                    $$chained$151.$$targs$$=$$targs$$;
+                    Iterable({Absent:{ t:'i', l:[$$iterable.$$targs$$.Absent,$$$mptypes.OtherAbsent]},Element:{ t:'u', l:[$$iterable.$$targs$$.Element,$$$mptypes.Other]}},$$chained$151);
+                    return $$chained$151;
                 }
-                function $init$chained$152(){
-                    if (chained$152.$$===undefined){
-                        initTypeProto(chained$152,'ceylon.language::Iterable.chain.chained',Basic,$init$Iterable());
+                function $init$chained$151(){
+                    if (chained$151.$$===undefined){
+                        initTypeProto(chained$151,'ceylon.language::Iterable.chain.chained',Basic,$init$Iterable());
                     }
+                    return chained$151;
+                }
+                $init$chained$151();
+                (function($$chained$151){
+                    $$chained$151.iterator=function (){
+                        var $$chained$151=this;
+                        return ChainedIterator($$iterable,other$150,{Other:$$$mptypes.Other,Element:$$iterable.$$targs$$.Element});
+                    };
+                    $$chained$151.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:{ t:'u', l:['Element','Other']}}},$ps:[],$cont:chained$151,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$m','chain','$o','chained','$m','iterator']};};
+                })(chained$151.$$.prototype);
+                var chained$152;
+                function getChained$152(){
+                    if (chained$152===undefined)chained$152=$init$chained$151()({Absent:{ t:'i', l:[$$iterable.$$targs$$.Absent,$$$mptypes.OtherAbsent]},Element:{ t:'u', l:[$$iterable.$$targs$$.Element,$$$mptypes.Other]}});
                     return chained$152;
                 }
-                $init$chained$152();
-                (function($$chained$152){
-                    $$chained$152.iterator=function (){
-                        var $$chained$152=this;
-                        return ChainedIterator($$iterable,other$151,{Other:$$$mptypes.Other,Element:$$iterable.$$targs$$.Element});
-                    };
-                    $$chained$152.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:{ t:'u', l:['Element','Other']}}},$ps:[],$cont:chained$152,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$m','chain','$o','chained','$m','iterator']};};
-                })(chained$152.$$.prototype);
-                var chained$153;
-                function getChained$153(){
-                    if (chained$153===undefined)chained$153=$init$chained$152()({Absent:{ t:'i', l:[$$iterable.$$targs$$.Absent,$$$mptypes.OtherAbsent]},Element:{ t:'u', l:[$$iterable.$$targs$$.Element,$$$mptypes.Other]}});
-                    return chained$153;
-                }
-                getChained$153.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:chained$152},d:['ceylon.language','Iterable','$m','chain','$at','chained']};};
-                $prop$getChained$153={get:getChained$153,$$metamodel$$:getChained$153.$$metamodel$$};
-                return getChained$153();
+                getChained$152.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:chained$151},d:['ceylon.language','Iterable','$m','chain','$at','chained']};};
+                $prop$getChained$152={get:getChained$152,$$metamodel$$:getChained$152.$$metamodel$$};
+                return getChained$152();
             };$$iterable.chain.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{ t:'i', l:['Absent','OtherAbsent']},Element:{ t:'u', l:['Element','Other']}}},$ps:[{$nm:'other',$mt:'prm',$t:{t:Iterable,a:{Absent:'OtherAbsent',Element:'Other'}},$an:function(){return[];}}],$cont:Iterable,$tp:{Other:{},OtherAbsent:{'satisfies':[{t:Null}]}},$an:function(){return[doc(String$("The elements of this iterable object, in their\noriginal order, followed by the elements of the \ngiven iterable object also in their original order.",147)),shared(),$default()];},d:['ceylon.language','Iterable','$m','chain']};};
-            $$iterable.defaultNullElements=function (defaultValue$154,$$$mptypes){
+            $$iterable.defaultNullElements=function (defaultValue$153,$$$mptypes){
                 var $$iterable=this;
                 return Comprehension(function(){
-                    var it$155=$$iterable.iterator();
-                    var elem$156=getFinished();
-                    var next$elem$156=function(){return elem$156=it$155.next();}
-                    next$elem$156();
+                    var it$154=$$iterable.iterator();
+                    var elem$155=getFinished();
+                    var next$elem$155=function(){return elem$155=it$154.next();}
+                    next$elem$155();
                     return function(){
-                        if(elem$156!==getFinished()){
-                            var elem$156$157=elem$156;
-                            var tmpvar$158=(opt$159=elem$156$157,opt$159!==null?opt$159:defaultValue$154);
-                            next$elem$156();
-                            return tmpvar$158;
+                        if(elem$155!==getFinished()){
+                            var elem$155$156=elem$155;
+                            var tmpvar$157=(opt$158=elem$155$156,opt$158!==null?opt$158:defaultValue$153);
+                            next$elem$155();
+                            return tmpvar$157;
                         }
                         return getFinished();
                     }
@@ -1171,175 +1166,175 @@ function $init$Iterable(){
                 if($$iterable.empty){
                     return String$("{}",2);
                 }else {
-                    var list$160=commaList($$iterable.taking((30)));
-                    $prop$getList$160={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:String$},d:['ceylon.language','Iterable','$at','string','$at','list']};}};
-                    $prop$getList$160.get=function(){return list$160};
-                    return StringBuilder().appendAll([String$("{ ",2),(opt$161=($$iterable.longerThan((30))?list$160.plus(String$(", ...",5)):null),opt$161!==null?opt$161:list$160).string,String$(" }",2)]).string;
-                    var opt$161;
+                    var list$159=commaList($$iterable.taking((30)));
+                    $prop$getList$159={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:String$},d:['ceylon.language','Iterable','$at','string','$at','list']};}};
+                    $prop$getList$159.get=function(){return list$159};
+                    return StringBuilder().appendAll([String$("{ ",2),(opt$160=($$iterable.longerThan((30))?list$159.plus(String$(", ...",5)):null),opt$160!==null?opt$160:list$159).string,String$(" }",2)]).string;
+                    var opt$160;
                 }
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:Iterable,$an:function(){return[doc(String$("A string of form `\"{ x, y, z }\"` where `x`, `y`, \nand `z` are the `string` representations of the \nelements of this collection, as produced by the\niterator of the collection, or the string `\"{}\"` \nif this iterable is empty. If the number of items\nis very large only a certain amount of them might\nbe shown followed by \"...\".",324)),shared(),actual(),$default()];},d:['ceylon.language','Iterable','$at','string']};});defineAttr($$iterable,'cycled',function(){
                 var $$iterable=this;
-                function iterable$162($$targs$$){
-                    var $$iterable$162=new iterable$162.$$;
-                    $$iterable$162.$$targs$$=$$targs$$;
-                    Iterable({Absent:$$iterable.$$targs$$.Absent,Element:$$iterable.$$targs$$.Element},$$iterable$162);
-                    $$iterable$162.$prop$getOrig$163={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$cont:iterable$162,d:['ceylon.language','Iterable','$at','cycled','$o','iterable','$at','orig']};}};
-                    $$iterable$162.$prop$getOrig$163.get=function(){return orig$163};
-                    return $$iterable$162;
+                function iterable$161($$targs$$){
+                    var $$iterable$161=new iterable$161.$$;
+                    $$iterable$161.$$targs$$=$$targs$$;
+                    Iterable({Absent:$$iterable.$$targs$$.Absent,Element:$$iterable.$$targs$$.Element},$$iterable$161);
+                    $$iterable$161.$prop$getOrig$162={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$cont:iterable$161,d:['ceylon.language','Iterable','$at','cycled','$o','iterable','$at','orig']};}};
+                    $$iterable$161.$prop$getOrig$162.get=function(){return orig$162};
+                    return $$iterable$161;
                 }
-                function $init$iterable$162(){
-                    if (iterable$162.$$===undefined){
-                        initTypeProto(iterable$162,'ceylon.language::Iterable.cycled.iterable',Basic,$init$Iterable());
+                function $init$iterable$161(){
+                    if (iterable$161.$$===undefined){
+                        initTypeProto(iterable$161,'ceylon.language::Iterable.cycled.iterable',Basic,$init$Iterable());
                     }
-                    return iterable$162;
+                    return iterable$161;
                 }
-                $init$iterable$162();
-                (function($$iterable$162){
-                    defineAttr($$iterable$162,'orig$163',function(){
-                        var $$iterable$162=this;
+                $init$iterable$161();
+                (function($$iterable$161){
+                    defineAttr($$iterable$161,'orig$162',function(){
+                        var $$iterable$161=this;
                         return $$iterable;
-                    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$cont:iterable$162,d:['ceylon.language','Iterable','$at','cycled','$o','iterable','$at','orig']};});
-                    $$iterable$162.iterator=function iterator(){
-                        var $$iterable$162=this;
-                        function iterator$164($$targs$$){
-                            var $$iterator$164=new iterator$164.$$;
-                            $$iterator$164.$$targs$$=$$targs$$;
-                            Iterator({Element:$$iterable.$$targs$$.Element},$$iterator$164);
-                            $$iterator$164.iter$165_=getEmptyIterator();
-                            $$iterator$164.$prop$getIter$165={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$164,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$at','cycled','$o','iterable','$m','iterator','$o','iterator','$at','iter']};}};
-                            $$iterator$164.$prop$getIter$165.get=function(){return iter$165};
-                            return $$iterator$164;
+                    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$cont:iterable$161,d:['ceylon.language','Iterable','$at','cycled','$o','iterable','$at','orig']};});
+                    $$iterable$161.iterator=function iterator(){
+                        var $$iterable$161=this;
+                        function iterator$163($$targs$$){
+                            var $$iterator$163=new iterator$163.$$;
+                            $$iterator$163.$$targs$$=$$targs$$;
+                            Iterator({Element:$$iterable.$$targs$$.Element},$$iterator$163);
+                            $$iterator$163.iter$164_=getEmptyIterator();
+                            $$iterator$163.$prop$getIter$164={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$163,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$at','cycled','$o','iterable','$m','iterator','$o','iterator','$at','iter']};}};
+                            $$iterator$163.$prop$getIter$164.get=function(){return iter$164};
+                            return $$iterator$163;
                         }
-                        function $init$iterator$164(){
-                            if (iterator$164.$$===undefined){
-                                initTypeProto(iterator$164,'ceylon.language::Iterable.cycled.iterable.iterator.iterator',Basic,$init$Iterator());
+                        function $init$iterator$163(){
+                            if (iterator$163.$$===undefined){
+                                initTypeProto(iterator$163,'ceylon.language::Iterable.cycled.iterable.iterator.iterator',Basic,$init$Iterator());
                             }
-                            return iterator$164;
+                            return iterator$163;
                         }
-                        $init$iterator$164();
-                        (function($$iterator$164){
-                            defineAttr($$iterator$164,'iter$165',function(){return this.iter$165_;},function(iter$166){return this.iter$165_=iter$166;},function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$164,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$at','cycled','$o','iterable','$m','iterator','$o','iterator','$at','iter']};});
-                            $$iterator$164.next=function next(){
-                                var $$iterator$164=this;
-                                var next$167;
-                                if(!isOfType((next$167=$$iterator$164.iter$165.next()),{t:Finished})){
-                                    return next$167;
+                        $init$iterator$163();
+                        (function($$iterator$163){
+                            defineAttr($$iterator$163,'iter$164',function(){return this.iter$164_;},function(iter$165){return this.iter$164_=iter$165;},function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$163,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$at','cycled','$o','iterable','$m','iterator','$o','iterator','$at','iter']};});
+                            $$iterator$163.next=function next(){
+                                var $$iterator$163=this;
+                                var next$166;
+                                if(!isOfType((next$166=$$iterator$163.iter$164.next()),{t:Finished})){
+                                    return next$166;
                                 }else {
-                                    $$iterator$164.iter$165=$$iterable$162.orig$163.iterator();
-                                    return $$iterator$164.iter$165.next();
+                                    $$iterator$163.iter$164=$$iterable$161.orig$162.iterator();
+                                    return $$iterator$163.iter$164.next();
                                 }
-                            };$$iterator$164.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:iterator$164,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$at','cycled','$o','iterable','$m','iterator','$o','iterator','$m','next']};};
-                        })(iterator$164.$$.prototype);
-                        var iterator$168;
-                        function getIterator$168(){
-                            if (iterator$168===undefined)iterator$168=$init$iterator$164()({Element:$$iterable.$$targs$$.Element});
-                            return iterator$168;
+                            };$$iterator$163.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:iterator$163,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$at','cycled','$o','iterable','$m','iterator','$o','iterator','$m','next']};};
+                        })(iterator$163.$$.prototype);
+                        var iterator$167;
+                        function getIterator$167(){
+                            if (iterator$167===undefined)iterator$167=$init$iterator$163()({Element:$$iterable.$$targs$$.Element});
+                            return iterator$167;
                         }
-                        getIterator$168.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$164},d:['ceylon.language','Iterable','$at','cycled','$o','iterable','$m','iterator','$at','iterator']};};
-                        $prop$getIterator$168={get:getIterator$168,$$metamodel$$:getIterator$168.$$metamodel$$};
-                        return getIterator$168();
-                    };$$iterable$162.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$ps:[],$cont:iterable$162,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$at','cycled','$o','iterable','$m','iterator']};};
-                })(iterable$162.$$.prototype);
-                var iterable$169;
-                function getIterable$169(){
-                    if (iterable$169===undefined)iterable$169=$init$iterable$162()({Absent:$$iterable.$$targs$$.Absent,Element:$$iterable.$$targs$$.Element});
-                    return iterable$169;
+                        getIterator$167.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$163},d:['ceylon.language','Iterable','$at','cycled','$o','iterable','$m','iterator','$at','iterator']};};
+                        $prop$getIterator$167={get:getIterator$167,$$metamodel$$:getIterator$167.$$metamodel$$};
+                        return getIterator$167();
+                    };$$iterable$161.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$ps:[],$cont:iterable$161,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$at','cycled','$o','iterable','$m','iterator']};};
+                })(iterable$161.$$.prototype);
+                var iterable$168;
+                function getIterable$168(){
+                    if (iterable$168===undefined)iterable$168=$init$iterable$161()({Absent:$$iterable.$$targs$$.Absent,Element:$$iterable.$$targs$$.Element});
+                    return iterable$168;
                 }
-                getIterable$169.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterable$162},d:['ceylon.language','Iterable','$at','cycled','$at','iterable']};};
-                $prop$getIterable$169={get:getIterable$169,$$metamodel$$:getIterable$169.$$metamodel$$};
-                return getIterable$169();
-            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$cont:Iterable,$an:function(){return[doc(String$("A non-finite iterable object that produces the elements \nof this iterable object, repeatedly.",93)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Iterable.$$.prototype.cycle)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared(),$default()];},d:['ceylon.language','Iterable','$at','cycled']};});$$iterable.cycle=function cycle(times$170){
+                getIterable$168.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterable$161},d:['ceylon.language','Iterable','$at','cycled','$at','iterable']};};
+                $prop$getIterable$168={get:getIterable$168,$$metamodel$$:getIterable$168.$$metamodel$$};
+                return getIterable$168();
+            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$cont:Iterable,$an:function(){return[doc(String$("A non-finite iterable object that produces the elements \nof this iterable object, repeatedly.",93)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Iterable.$$.prototype.cycle)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared(),$default()];},d:['ceylon.language','Iterable','$at','cycled']};});$$iterable.cycle=function cycle(times$169){
                 var $$iterable=this;
-                function iterable$171($$targs$$){
-                    var $$iterable$171=new iterable$171.$$;
-                    $$iterable$171.$$targs$$=$$targs$$;
-                    Iterable({Absent:$$iterable.$$targs$$.Absent,Element:$$iterable.$$targs$$.Element},$$iterable$171);
-                    $$iterable$171.$prop$getOrig$172={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$cont:iterable$171,d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$at','orig']};}};
-                    $$iterable$171.$prop$getOrig$172.get=function(){return orig$172};
-                    return $$iterable$171;
+                function iterable$170($$targs$$){
+                    var $$iterable$170=new iterable$170.$$;
+                    $$iterable$170.$$targs$$=$$targs$$;
+                    Iterable({Absent:$$iterable.$$targs$$.Absent,Element:$$iterable.$$targs$$.Element},$$iterable$170);
+                    $$iterable$170.$prop$getOrig$171={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$cont:iterable$170,d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$at','orig']};}};
+                    $$iterable$170.$prop$getOrig$171.get=function(){return orig$171};
+                    return $$iterable$170;
                 }
-                function $init$iterable$171(){
-                    if (iterable$171.$$===undefined){
-                        initTypeProto(iterable$171,'ceylon.language::Iterable.cycle.iterable',Basic,$init$Iterable());
+                function $init$iterable$170(){
+                    if (iterable$170.$$===undefined){
+                        initTypeProto(iterable$170,'ceylon.language::Iterable.cycle.iterable',Basic,$init$Iterable());
                     }
-                    return iterable$171;
+                    return iterable$170;
                 }
-                $init$iterable$171();
-                (function($$iterable$171){
-                    defineAttr($$iterable$171,'orig$172',function(){
-                        var $$iterable$171=this;
+                $init$iterable$170();
+                (function($$iterable$170){
+                    defineAttr($$iterable$170,'orig$171',function(){
+                        var $$iterable$170=this;
                         return $$iterable;
-                    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$cont:iterable$171,d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$at','orig']};});
-                    $$iterable$171.iterator=function iterator(){
-                        var $$iterable$171=this;
-                        function iterator$173($$targs$$){
-                            var $$iterator$173=new iterator$173.$$;
-                            $$iterator$173.$$targs$$=$$targs$$;
-                            Iterator({Element:$$iterable.$$targs$$.Element},$$iterator$173);
-                            $$iterator$173.iter$174_=getEmptyIterator();
-                            $$iterator$173.$prop$getIter$174={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$173,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$m','iterator','$o','iterator','$at','iter']};}};
-                            $$iterator$173.$prop$getIter$174.get=function(){return iter$174};
-                            $$iterator$173.count$175_=(0);
-                            $$iterator$173.$prop$getCount$175={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:iterator$173,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$m','iterator','$o','iterator','$at','count']};}};
-                            $$iterator$173.$prop$getCount$175.get=function(){return count$175};
-                            return $$iterator$173;
+                    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$cont:iterable$170,d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$at','orig']};});
+                    $$iterable$170.iterator=function iterator(){
+                        var $$iterable$170=this;
+                        function iterator$172($$targs$$){
+                            var $$iterator$172=new iterator$172.$$;
+                            $$iterator$172.$$targs$$=$$targs$$;
+                            Iterator({Element:$$iterable.$$targs$$.Element},$$iterator$172);
+                            $$iterator$172.iter$173_=getEmptyIterator();
+                            $$iterator$172.$prop$getIter$173={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$172,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$m','iterator','$o','iterator','$at','iter']};}};
+                            $$iterator$172.$prop$getIter$173.get=function(){return iter$173};
+                            $$iterator$172.count$174_=(0);
+                            $$iterator$172.$prop$getCount$174={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:iterator$172,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$m','iterator','$o','iterator','$at','count']};}};
+                            $$iterator$172.$prop$getCount$174.get=function(){return count$174};
+                            return $$iterator$172;
                         }
-                        function $init$iterator$173(){
-                            if (iterator$173.$$===undefined){
-                                initTypeProto(iterator$173,'ceylon.language::Iterable.cycle.iterable.iterator.iterator',Basic,$init$Iterator());
+                        function $init$iterator$172(){
+                            if (iterator$172.$$===undefined){
+                                initTypeProto(iterator$172,'ceylon.language::Iterable.cycle.iterable.iterator.iterator',Basic,$init$Iterator());
                             }
-                            return iterator$173;
+                            return iterator$172;
                         }
-                        $init$iterator$173();
-                        (function($$iterator$173){
-                            defineAttr($$iterator$173,'iter$174',function(){return this.iter$174_;},function(iter$176){return this.iter$174_=iter$176;},function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$173,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$m','iterator','$o','iterator','$at','iter']};});
-                            defineAttr($$iterator$173,'count$175',function(){return this.count$175_;},function(count$177){return this.count$175_=count$177;},function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:iterator$173,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$m','iterator','$o','iterator','$at','count']};});
-                            $$iterator$173.next=function next(){
-                                var $$iterator$173=this;
-                                var next$178;
-                                if(!isOfType((next$178=$$iterator$173.iter$174.next()),{t:Finished})){
-                                    return next$178;
+                        $init$iterator$172();
+                        (function($$iterator$172){
+                            defineAttr($$iterator$172,'iter$173',function(){return this.iter$173_;},function(iter$175){return this.iter$173_=iter$175;},function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$172,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$m','iterator','$o','iterator','$at','iter']};});
+                            defineAttr($$iterator$172,'count$174',function(){return this.count$174_;},function(count$176){return this.count$174_=count$176;},function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:iterator$172,$an:function(){return[variable()];},d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$m','iterator','$o','iterator','$at','count']};});
+                            $$iterator$172.next=function next(){
+                                var $$iterator$172=this;
+                                var next$177;
+                                if(!isOfType((next$177=$$iterator$172.iter$173.next()),{t:Finished})){
+                                    return next$177;
                                 }else {
-                                    if($$iterator$173.count$175.compare(times$170).equals(getSmaller())){
-                                        (oldcount$179=$$iterator$173.count$175,$$iterator$173.count$175=oldcount$179.successor,oldcount$179);
-                                        var oldcount$179;
-                                        $$iterator$173.iter$174=$$iterable$171.orig$172.iterator();
+                                    if($$iterator$172.count$174.compare(times$169).equals(getSmaller())){
+                                        (oldcount$178=$$iterator$172.count$174,$$iterator$172.count$174=oldcount$178.successor,oldcount$178);
+                                        var oldcount$178;
+                                        $$iterator$172.iter$173=$$iterable$170.orig$171.iterator();
                                     }else {
-                                        $$iterator$173.iter$174=getEmptyIterator();
+                                        $$iterator$172.iter$173=getEmptyIterator();
                                     }
-                                    return $$iterator$173.iter$174.next();
+                                    return $$iterator$172.iter$173.next();
                                 }
-                            };$$iterator$173.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:iterator$173,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$m','iterator','$o','iterator','$m','next']};};
-                        })(iterator$173.$$.prototype);
-                        var iterator$180;
-                        function getIterator$180(){
-                            if (iterator$180===undefined)iterator$180=$init$iterator$173()({Element:$$iterable.$$targs$$.Element});
-                            return iterator$180;
+                            };$$iterator$172.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:iterator$172,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$m','iterator','$o','iterator','$m','next']};};
+                        })(iterator$172.$$.prototype);
+                        var iterator$179;
+                        function getIterator$179(){
+                            if (iterator$179===undefined)iterator$179=$init$iterator$172()({Element:$$iterable.$$targs$$.Element});
+                            return iterator$179;
                         }
-                        getIterator$180.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$173},d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$m','iterator','$at','iterator']};};
-                        $prop$getIterator$180={get:getIterator$180,$$metamodel$$:getIterator$180.$$metamodel$$};
-                        return getIterator$180();
-                    };$$iterable$171.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$ps:[],$cont:iterable$171,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$m','iterator']};};
-                })(iterable$171.$$.prototype);
-                var iterable$181;
-                function getIterable$181(){
-                    if (iterable$181===undefined)iterable$181=$init$iterable$171()({Absent:$$iterable.$$targs$$.Absent,Element:$$iterable.$$targs$$.Element});
-                    return iterable$181;
+                        getIterator$179.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$172},d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$m','iterator','$at','iterator']};};
+                        $prop$getIterator$179={get:getIterator$179,$$metamodel$$:getIterator$179.$$metamodel$$};
+                        return getIterator$179();
+                    };$$iterable$170.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$ps:[],$cont:iterable$170,$an:function(){return[shared(),actual()];},d:['ceylon.language','Iterable','$m','cycle','$o','iterable','$m','iterator']};};
+                })(iterable$170.$$.prototype);
+                var iterable$180;
+                function getIterable$180(){
+                    if (iterable$180===undefined)iterable$180=$init$iterable$170()({Absent:$$iterable.$$targs$$.Absent,Element:$$iterable.$$targs$$.Element});
+                    return iterable$180;
                 }
-                getIterable$181.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterable$171},d:['ceylon.language','Iterable','$m','cycle','$at','iterable']};};
-                $prop$getIterable$181={get:getIterable$181,$$metamodel$$:getIterable$181.$$metamodel$$};
-                return getIterable$181();
+                getIterable$180.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterable$170},d:['ceylon.language','Iterable','$m','cycle','$at','iterable']};};
+                $prop$getIterable$180={get:getIterable$180,$$metamodel$$:getIterable$180.$$metamodel$$};
+                return getIterable$180();
             };$$iterable.cycle.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$ps:[{$nm:'times',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Iterable,$an:function(){return[doc(String$("A finite iterable object that produces the elements of \nthis iterable object, repeatedly, the given number of\ntimes.",116)),see([$init$OpenValue()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Iterable.$$.prototype.$prop$getCycled),$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Iterable.$$.prototype.repeat)].reifyCeylonType({Absent:{t:Null},Element:{ t:'u', l:[{t:ValueDeclaration$meta$declaration},{t:FunctionDeclaration$meta$declaration}]}})),shared(),$default()];},d:['ceylon.language','Iterable','$m','cycle']};};
-            $$iterable.repeat=function repeat(times$182){
+            $$iterable.repeat=function repeat(times$181){
                 var $$iterable=this;
-                var sb$183=SequenceBuilder({Element:$$iterable.$$targs$$.Element});
-                var count$184=(0);
-                function setCount$184(count$185){return count$184=count$185;};
-                while((oldcount$186=count$184,count$184=oldcount$186.successor,oldcount$186).compare(times$182).equals(getSmaller())){
-                    sb$183.appendAll($$iterable);
+                var sb$182=SequenceBuilder({Element:$$iterable.$$targs$$.Element});
+                var count$183=(0);
+                function setCount$183(count$184){return count$183=count$184;};
+                while((oldcount$185=count$183,count$183=oldcount$185.successor,oldcount$185).compare(times$181).equals(getSmaller())){
+                    sb$182.appendAll($$iterable);
                 }
-                var oldcount$186;
-                return sb$183.sequence;
+                var oldcount$185;
+                return sb$182.sequence;
             };$$iterable.repeat.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:List,a:{Element:'Element'}},$ps:[{$nm:'times',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Iterable,$an:function(){return[doc(String$("Returns a list formed by repeating the elements of this\niterable object the given number of times, or an empty \nlist if `times<=0`. An eager counterpart to `cycle()`.",166)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Iterable.$$.prototype.cycle)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared(),$default()];},d:['ceylon.language','Iterable','$m','repeat']};};
         })(Iterable.$$.prototype);
     }
@@ -1347,31 +1342,31 @@ function $init$Iterable(){
 }
 exports.$init$Iterable=$init$Iterable;
 $init$Iterable();
-var opt$19,opt$159;
-var commaList=function (elements$187){
-    return (strings$188=/*NULL PARAM!*/Comprehension(function(){
-        var it$189=elements$187.iterator();
-        var element$190=getFinished();
-        var next$element$190=function(){return element$190=it$189.next();}
-        next$element$190();
+var opt$19,opt$158;
+var commaList=function (elements$186){
+    return (strings$187=/*NULL PARAM!*/Comprehension(function(){
+        var it$188=elements$186.iterator();
+        var element$189=getFinished();
+        var next$element$189=function(){return element$189=it$188.next();}
+        next$element$189();
         return function(){
-            if(element$190!==getFinished()){
-                var element$190$191=element$190;
-                var tmpvar$192=(opt$193=(opt$194=element$190$191,opt$194!==null?opt$194.string:null),opt$193!==null?opt$193:String$("null",4));
-                next$element$190();
-                return tmpvar$192;
+            if(element$189!==getFinished()){
+                var element$189$190=element$189;
+                var tmpvar$191=(opt$192=(opt$193=element$189$190,opt$193!==null?opt$193.string:null),opt$192!==null?opt$192:String$("null",4));
+                next$element$189();
+                return tmpvar$191;
             }
             return getFinished();
         }
-    },{Absent:{t:Null},Element:{t:String$}}),(opt$195=String$(", ",2),JsCallable(opt$195,opt$195!==null?opt$195.join:null))(strings$188));
+    },{Absent:{t:Null},Element:{t:String$}}),(opt$194=String$(", ",2),JsCallable(opt$194,opt$194!==null?opt$194.join:null))(strings$187));
 };
 commaList.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:String$},$ps:[{$nm:'elements',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Anything}}},$an:function(){return[];}}],d:['ceylon.language','commaList']};};
-var strings$188,opt$193,opt$194,opt$195;
-function ifExists(predicate$196){
-    return function(val$197){
-        var val$198;
-        if((val$198=val$197)!==null){
-            return predicate$196(val$198);
+var strings$187,opt$192,opt$193,opt$194;
+function ifExists(predicate$195){
+    return function(val$196){
+        var val$197;
+        if((val$197=val$196)!==null){
+            return predicate$195(val$197);
         }else {
             return false;
         }
@@ -1404,38 +1399,38 @@ function $init$Sequential(){
                 return $$sequential;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$cont:Sequential,$an:function(){return[doc(String$("This sequence.",14)),shared(),actual(),$default()];},d:['ceylon.language','Sequential','$at','sequence']};});
             $$sequential.$prop$getRest={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$cont:Sequential,$an:function(){return[doc(String$("The rest of the sequence, without the first \nelement.",53)),shared(),actual(),formal()];},d:['ceylon.language','Sequential','$at','rest']};}};
-            $$sequential.repeat=function (times$199){
+            $$sequential.repeat=function (times$198){
                 var $$sequential=this;
-                return $$sequential.cycle(times$199).sequence;
+                return $$sequential.cycle(times$198).sequence;
             };
             $$sequential.repeat.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$ps:[{$nm:'times',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Sequential,$an:function(){return[doc(String$("Returns a sequence formed by repeating the elements of \nthis sequence the given number of times, or an empty \nsequence if `times<=0`.",133)),shared(),actual(),$default()];},d:['ceylon.language','Sequential','$m','repeat']};};
-            $$sequential.initial=function (length$200){
+            $$sequential.initial=function (length$199){
                 var $$sequential=this;
-                return $$sequential.segment((0),length$200);
+                return $$sequential.segment((0),length$199);
             };
             $$sequential.initial.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$ps:[{$nm:'length',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Sequential,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','Sequential','$m','initial']};};
-            $$sequential.terminal=function terminal(length$201){
+            $$sequential.terminal=function terminal(length$200){
                 var $$sequential=this;
-                var l$202;
-                if((l$202=$$sequential.lastIndex)!==null&&length$201.compare((0)).equals(getLarger())){
-                    return $$sequential.span(l$202.minus(length$201).plus((1)),l$202);
+                var l$201;
+                if((l$201=$$sequential.lastIndex)!==null&&length$200.compare((0)).equals(getLarger())){
+                    return $$sequential.span(l$201.minus(length$200).plus((1)),l$201);
                 }else {
                     return getEmpty();
                 }
             };$$sequential.terminal.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$ps:[{$nm:'length',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Sequential,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','Sequential','$m','terminal']};};
-            $$sequential.trim=function (trimming$203){
+            $$sequential.trim=function (trimming$202){
                 var $$sequential=this;
-                return $$sequential.getT$all()['ceylon.language::List'].$$.prototype.trim.call(this,$JsCallable(trimming$203,[{$nm:'elem',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$sequential.$$targs$$.Element,Element:$$sequential.$$targs$$.Element}},Return:{t:Boolean$}})).sequence;
+                return $$sequential.getT$all()['ceylon.language::List'].$$.prototype.trim.call(this,$JsCallable(trimming$202,[{$nm:'elem',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$sequential.$$targs$$.Element,Element:$$sequential.$$targs$$.Element}},Return:{t:Boolean$}})).sequence;
             };
             $$sequential.trim.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$ps:[{$nm:'trimming',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Sequential,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','Sequential','$m','trim']};};
-            $$sequential.trimLeading=function (trimming$204){
+            $$sequential.trimLeading=function (trimming$203){
                 var $$sequential=this;
-                return $$sequential.getT$all()['ceylon.language::List'].$$.prototype.trimLeading.call(this,$JsCallable(trimming$204,[{$nm:'elem',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$sequential.$$targs$$.Element,Element:$$sequential.$$targs$$.Element}},Return:{t:Boolean$}})).sequence;
+                return $$sequential.getT$all()['ceylon.language::List'].$$.prototype.trimLeading.call(this,$JsCallable(trimming$203,[{$nm:'elem',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$sequential.$$targs$$.Element,Element:$$sequential.$$targs$$.Element}},Return:{t:Boolean$}})).sequence;
             };
             $$sequential.trimLeading.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$ps:[{$nm:'trimming',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Sequential,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','Sequential','$m','trimLeading']};};
-            $$sequential.trimTrailing=function (trimming$205){
+            $$sequential.trimTrailing=function (trimming$204){
                 var $$sequential=this;
-                return $$sequential.getT$all()['ceylon.language::List'].$$.prototype.trimTrailing.call(this,$JsCallable(trimming$205,[{$nm:'elem',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$sequential.$$targs$$.Element,Element:$$sequential.$$targs$$.Element}},Return:{t:Boolean$}})).sequence;
+                return $$sequential.getT$all()['ceylon.language::List'].$$.prototype.trimTrailing.call(this,$JsCallable(trimming$204,[{$nm:'elem',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$sequential.$$targs$$.Element,Element:$$sequential.$$targs$$.Element}},Return:{t:Boolean$}})).sequence;
             };
             $$sequential.trimTrailing.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$ps:[{$nm:'trimming',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Sequential,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','Sequential','$m','trimTrailing']};};
             defineAttr($$sequential,'clone',function(){
@@ -1444,7 +1439,7 @@ function $init$Sequential(){
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$cont:Sequential,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','Sequential','$at','clone']};});
             defineAttr($$sequential,'string',function(){
                 var $$sequential=this;
-                return (opt$206=($$sequential.empty?String$("[]",2):null),opt$206!==null?opt$206:StringBuilder().appendAll([String$("[",1),commaList($$sequential).string,String$("]",1)]).string);
+                return (opt$205=($$sequential.empty?String$("[]",2):null),opt$205!==null?opt$205:StringBuilder().appendAll([String$("[",1),commaList($$sequential).string,String$("]",1)]).string);
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:Sequential,$an:function(){return[doc(String$("A string of form `\"[ x, y, z ]\"` where `x`, `y`, \nand `z` are the `string` representations of the \nelements of this collection, as produced by the\niterator of the collection, or the string `\"{}\"` \nif this collection is empty. If the collection \niterator produces the value `null`, the string\nrepresentation contains the string `\"null\"`.",336)),shared(),actual(),$default()];},d:['ceylon.language','Sequential','$at','string']};});
         })(Sequential.$$.prototype);
     }
@@ -1452,7 +1447,7 @@ function $init$Sequential(){
 }
 exports.$init$Sequential=$init$Sequential;
 $init$Sequential();
-var opt$206;
+var opt$205;
 function Sequence($$targs$$,$$sequence){
     Sequential($$sequence.$$targs$$===undefined?$$targs$$:{Element:$$sequence.$$targs$$.Element},$$sequence);
     Iterable($$sequence.$$targs$$===undefined?$$targs$$:{Absent:{t:Nothing},Element:$$sequence.$$targs$$.Element},$$sequence);
@@ -1487,21 +1482,21 @@ function $init$Sequence(){
                 return $$sequence;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Sequence,a:{Element:'Element'}},$cont:Sequence,$an:function(){return[doc(String$("This sequence.",14)),shared(),$default(),actual()];},d:['ceylon.language','Sequence','$at','sequence']};});
             $$sequence.$prop$getRest={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$cont:Sequence,$an:function(){return[doc(String$("The rest of the sequence, without the first \n    element.",57)),shared(),actual(),formal()];},d:['ceylon.language','Sequence','$at','rest']};}};
-            $$sequence.$sort=function $sort(comparing$207){
+            $$sequence.$sort=function $sort(comparing$206){
                 var $$sequence=this;
-                var s$208=internalSort($JsCallable(comparing$207,[{$nm:'x',$mt:'prm',$t:'Element',$an:function(){return[];}},{$nm:'y',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Empty},First:$$sequence.$$targs$$.Element,Element:$$sequence.$$targs$$.Element}},First:$$sequence.$$targs$$.Element,Element:$$sequence.$$targs$$.Element}},Return:{t:Comparison}}),$$sequence,{Element:$$sequence.$$targs$$.Element});
+                var s$207=internalSort($JsCallable(comparing$206,[{$nm:'x',$mt:'prm',$t:'Element',$an:function(){return[];}},{$nm:'y',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Empty},First:$$sequence.$$targs$$.Element,Element:$$sequence.$$targs$$.Element}},First:$$sequence.$$targs$$.Element,Element:$$sequence.$$targs$$.Element}},Return:{t:Comparison}}),$$sequence,{Element:$$sequence.$$targs$$.Element});
                 //assert at Sequence.ceylon (63:8-63:27)
-                var s$209;
-                if (!(nonempty((s$209=s$208)))) {throw wrapexc(AssertionException("Assertion failed: \'nonempty s\' at Sequence.ceylon (63:15-63:26)"),'63:8-63:27','Sequence.ceylon'); }
-                return s$209;
+                var s$208;
+                if (!(nonempty((s$208=s$207)))) {throw wrapexc(AssertionException("Assertion failed: \'nonempty s\' at Sequence.ceylon (63:15-63:26)"),'63:8-63:27','Sequence.ceylon'); }
+                return s$208;
             };$$sequence.$sort.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequence,a:{Element:'Element'}},$ps:[{$nm:'comparing',$mt:'prm',$pt:'f',$t:{t:Comparison},$an:function(){return[doc("The function comparing pairs of elements.")];}}],$cont:Sequence,$an:function(){return[doc(String$("A nonempty sequence containing the elements of this\ncontainer, sorted according to a function \nimposing a partial order upon the elements.",138)),shared(),$default(),actual()];},d:['ceylon.language','Sequence','$m','sort']};};
-            $$sequence.collect=function collect(collecting$210,$$$mptypes){
+            $$sequence.collect=function collect(collecting$209,$$$mptypes){
                 var $$sequence=this;
-                var s$211=$$sequence.$map($JsCallable(collecting$210,[{$nm:'element',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$sequence.$$targs$$.Element,Element:$$sequence.$$targs$$.Element}},Return:$$$mptypes.Result}),{Result:$$$mptypes.Result}).sequence;
+                var s$210=$$sequence.$map($JsCallable(collecting$209,[{$nm:'element',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$sequence.$$targs$$.Element,Element:$$sequence.$$targs$$.Element}},Return:$$$mptypes.Result}),{Result:$$$mptypes.Result}).sequence;
                 //assert at Sequence.ceylon (74:8-74:27)
-                var s$212;
-                if (!(nonempty((s$212=s$211)))) {throw wrapexc(AssertionException("Assertion failed: \'nonempty s\' at Sequence.ceylon (74:15-74:26)"),'74:8-74:27','Sequence.ceylon'); }
-                return s$212;
+                var s$211;
+                if (!(nonempty((s$211=s$210)))) {throw wrapexc(AssertionException("Assertion failed: \'nonempty s\' at Sequence.ceylon (74:15-74:26)"),'74:8-74:27','Sequence.ceylon'); }
+                return s$211;
             };$$sequence.collect.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequence,a:{Element:'Result'}},$ps:[{$nm:'collecting',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[doc("The transformation applied to the elements.")];}}],$cont:Sequence,$tp:{Result:{}},$an:function(){return[doc(String$("A nonempty sequence containing the results of \napplying the given mapping to the elements of this\nsequence.",107)),shared(),$default(),actual()];},d:['ceylon.language','Sequence','$m','collect']};};
             defineAttr($$sequence,'clone',function(){
                 var $$sequence=this;
@@ -1511,24 +1506,24 @@ function $init$Sequence(){
                 var $$sequence=this;
                 return attrGetter($$sequence.getT$all()['ceylon.language::Sequential'],'string').call(this);
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:Sequence,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','Sequence','$at','string']};});
-            $$sequence.shorterThan=function (length$213){
+            $$sequence.shorterThan=function (length$212){
                 var $$sequence=this;
-                return $$sequence.getT$all()['ceylon.language::List'].$$.prototype.shorterThan.call(this,length$213);
+                return $$sequence.getT$all()['ceylon.language::List'].$$.prototype.shorterThan.call(this,length$212);
             };
             $$sequence.shorterThan.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'length',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Sequence,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','Sequence','$m','shorterThan']};};
-            $$sequence.longerThan=function (length$214){
+            $$sequence.longerThan=function (length$213){
                 var $$sequence=this;
-                return $$sequence.getT$all()['ceylon.language::List'].$$.prototype.longerThan.call(this,length$214);
+                return $$sequence.getT$all()['ceylon.language::List'].$$.prototype.longerThan.call(this,length$213);
             };
             $$sequence.longerThan.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'length',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Sequence,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','Sequence','$m','longerThan']};};
-            $$sequence.findLast=function (selecting$215){
+            $$sequence.findLast=function (selecting$214){
                 var $$sequence=this;
-                return $$sequence.getT$all()['ceylon.language::List'].$$.prototype.findLast.call(this,$JsCallable(selecting$215,[{$nm:'elem',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$sequence.$$targs$$.Element,Element:$$sequence.$$targs$$.Element}},Return:{t:Boolean$}}));
+                return $$sequence.getT$all()['ceylon.language::List'].$$.prototype.findLast.call(this,$JsCallable(selecting$214,[{$nm:'elem',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$sequence.$$targs$$.Element,Element:$$sequence.$$targs$$.Element}},Return:{t:Boolean$}}));
             };
             $$sequence.findLast.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Sequence,$an:function(){return[shared(),$default(),actual()];},d:['ceylon.language','Sequence','$m','findLast']};};
-            $$sequence.repeat=function (times$216){
+            $$sequence.repeat=function (times$215){
                 var $$sequence=this;
-                return $$sequence.getT$all()['ceylon.language::Sequential'].$$.prototype.repeat.call(this,times$216);
+                return $$sequence.getT$all()['ceylon.language::Sequential'].$$.prototype.repeat.call(this,times$215);
             };
             $$sequence.repeat.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$ps:[{$nm:'times',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Sequence,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','Sequence','$m','repeat']};};
         })(Sequence.$$.prototype);
@@ -1580,27 +1575,27 @@ function $init$Empty(){
                 return getEmptyIterator();
             };
             $$empty.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:{t:Nothing}}},$ps:[],$cont:Empty,$an:function(){return[doc(String$("Returns an iterator that is already exhausted.",46)),shared(),actual()];},d:['ceylon.language','Empty','$m','iterator']};};
-            $$empty.get=function (index$217){
+            $$empty.get=function (index$216){
                 var $$empty=this;
                 return null;
             };
             $$empty.get.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Null},$ps:[{$nm:'index',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Empty,$an:function(){return[doc(String$("Returns `null` for any given index.",35)),shared(),actual()];},d:['ceylon.language','Empty','$m','get']};};
-            $$empty.segment=function (from$218,length$219){
+            $$empty.segment=function (from$217,length$218){
                 var $$empty=this;
                 return $$empty;
             };
             $$empty.segment.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'from',$mt:'prm',$t:{t:Integer},$an:function(){return[];}},{$nm:'length',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Empty,$an:function(){return[doc(String$("Returns an `Empty` for any given segment.",41)),shared(),actual()];},d:['ceylon.language','Empty','$m','segment']};};
-            $$empty.span=function (from$220,to$221){
+            $$empty.span=function (from$219,to$220){
                 var $$empty=this;
                 return $$empty;
             };
             $$empty.span.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'from',$mt:'prm',$t:{t:Integer},$an:function(){return[];}},{$nm:'to',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Empty,$an:function(){return[doc(String$("Returns an `Empty` for any given span.",38)),shared(),actual()];},d:['ceylon.language','Empty','$m','span']};};
-            $$empty.spanTo=function (to$222){
+            $$empty.spanTo=function (to$221){
                 var $$empty=this;
                 return $$empty;
             };
             $$empty.spanTo.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'to',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Empty,$an:function(){return[doc(String$("Returns an `Empty` for any given span.",38)),shared(),actual()];},d:['ceylon.language','Empty','$m','spanTo']};};
-            $$empty.spanFrom=function (from$223){
+            $$empty.spanFrom=function (from$222){
                 var $$empty=this;
                 return $$empty;
             };
@@ -1653,99 +1648,99 @@ function $init$Empty(){
                 var $$empty=this;
                 return $$empty;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$cont:Empty,$an:function(){return[doc(String$("Returns an `Empty`.",19)),shared(),actual()];},d:['ceylon.language','Empty','$at','indexed']};});
-            $$empty.chain=function (other$224,$$$mptypes){
+            $$empty.chain=function (other$223,$$$mptypes){
                 var $$empty=this;
-                return other$224;
+                return other$223;
             };
             $$empty.chain.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'OtherAbsent',Element:'Other'}},$ps:[{$nm:'other',$mt:'prm',$t:{t:Iterable,a:{Absent:'OtherAbsent',Element:'Other'}},$an:function(){return[];}}],$cont:Empty,$tp:{Other:{},OtherAbsent:{'satisfies':[{t:Null}]}},$an:function(){return[doc(String$("Returns `other`.",16)),shared(),actual()];},d:['ceylon.language','Empty','$m','chain']};};
-            $$empty.contains=function (element$225){
+            $$empty.contains=function (element$224){
                 var $$empty=this;
                 return false;
             };
             $$empty.contains.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'element',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:Empty,$an:function(){return[doc(String$("Returns `false` for any given element.",38)),shared(),actual()];},d:['ceylon.language','Empty','$m','contains']};};
-            $$empty.count=function (selecting$226){
+            $$empty.count=function (selecting$225){
                 var $$empty=this;
                 return (0);
             };
             $$empty.count.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Empty,$an:function(){return[doc(String$("Returns 0 for any given predicate.",34)),shared(),actual()];},d:['ceylon.language','Empty','$m','count']};};
-            $$empty.defines=function (index$227){
+            $$empty.defines=function (index$226){
                 var $$empty=this;
                 return false;
             };
             $$empty.defines.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'index',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Empty,$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','defines']};};
-            $$empty.$map=function (collecting$228,$$$mptypes){
+            $$empty.$map=function (collecting$227,$$$mptypes){
                 var $$empty=this;
                 return $$empty;
             };
             $$empty.$map.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'collecting',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:Empty,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','map']};};
-            $$empty.$filter=function (selecting$229){
+            $$empty.$filter=function (selecting$228){
                 var $$empty=this;
                 return $$empty;
             };
             $$empty.$filter.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Empty,$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','filter']};};
-            $$empty.fold=function (initial$230,accumulating$231,$$$mptypes){
+            $$empty.fold=function (initial$229,accumulating$230,$$$mptypes){
                 var $$empty=this;
-                return initial$230;
+                return initial$229;
             };
             $$empty.fold.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Result',$ps:[{$nm:'initial',$mt:'prm',$t:'Result',$an:function(){return[];}},{$nm:'accumulating',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:Empty,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','fold']};};
-            $$empty.find=function (selecting$232){
+            $$empty.find=function (selecting$231){
                 var $$empty=this;
                 return null;
             };
             $$empty.find.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Null},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Empty,$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','find']};};
-            $$empty.$sort=function (comparing$233){
+            $$empty.$sort=function (comparing$232){
                 var $$empty=this;
                 return $$empty;
             };
             $$empty.$sort.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'comparing',$mt:'prm',$pt:'f',$t:{t:Comparison},$an:function(){return[];}}],$cont:Empty,$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','sort']};};
-            $$empty.collect=function (collecting$234,$$$mptypes){
+            $$empty.collect=function (collecting$233,$$$mptypes){
                 var $$empty=this;
                 return $$empty;
             };
             $$empty.collect.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'collecting',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:Empty,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','collect']};};
-            $$empty.select=function (selecting$235){
+            $$empty.select=function (selecting$234){
                 var $$empty=this;
                 return $$empty;
             };
             $$empty.select.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Empty,$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','select']};};
-            $$empty.any=function (selecting$236){
+            $$empty.any=function (selecting$235){
                 var $$empty=this;
                 return false;
             };
             $$empty.any.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Empty,$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','any']};};
-            $$empty.$every=function (selecting$237){
+            $$empty.$every=function (selecting$236){
                 var $$empty=this;
                 return false;
             };
             $$empty.$every.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Empty,$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','every']};};
-            $$empty.skipping=function (skip$238){
+            $$empty.skipping=function (skip$237){
                 var $$empty=this;
                 return $$empty;
             };
             $$empty.skipping.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'skip',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Empty,$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','skipping']};};
-            $$empty.taking=function (take$239){
+            $$empty.taking=function (take$238){
                 var $$empty=this;
                 return $$empty;
             };
             $$empty.taking.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'take',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Empty,$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','taking']};};
-            $$empty.by=function (step$240){
+            $$empty.by=function (step$239){
                 var $$empty=this;
                 return $$empty;
             };
             $$empty.by.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'step',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Empty,$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','by']};};
-            $$empty.withLeading=function (element$241,$$$mptypes){
+            $$empty.withLeading=function (element$240,$$$mptypes){
+                var $$empty=this;
+                return Tuple(element$240,getEmpty(),{Rest:{t:Empty},First:$$$mptypes.Element,Element:$$$mptypes.Element});
+            };
+            $$empty.withLeading.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Tuple,a:{Rest:{t:Empty},First:'Element',Element:'Element'}},$ps:[{$nm:'element',$mt:'prm',$t:'Element',$an:function(){return[];}}],$cont:Empty,$tp:{Element:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','withLeading']};};
+            $$empty.withTrailing=function (element$241,$$$mptypes){
                 var $$empty=this;
                 return Tuple(element$241,getEmpty(),{Rest:{t:Empty},First:$$$mptypes.Element,Element:$$$mptypes.Element});
             };
-            $$empty.withLeading.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Tuple,a:{Rest:{t:Empty},First:'Element',Element:'Element'}},$ps:[{$nm:'element',$mt:'prm',$t:'Element',$an:function(){return[];}}],$cont:Empty,$tp:{Element:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','withLeading']};};
-            $$empty.withTrailing=function (element$242,$$$mptypes){
-                var $$empty=this;
-                return Tuple(element$242,getEmpty(),{Rest:{t:Empty},First:$$$mptypes.Element,Element:$$$mptypes.Element});
-            };
             $$empty.withTrailing.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Tuple,a:{Rest:{t:Empty},First:'Element',Element:'Element'}},$ps:[{$nm:'element',$mt:'prm',$t:'Element',$an:function(){return[];}}],$cont:Empty,$tp:{Element:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','withTrailing']};};
-            $$empty.following=function (head$243,$$$mptypes){
+            $$empty.following=function (head$242,$$$mptypes){
                 var $$empty=this;
-                return Singleton(head$243,{Element:$$$mptypes.Other});
+                return Singleton(head$242,{Element:$$$mptypes.Other});
             };
             $$empty.following.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Nothing},Element:'Other'}},$ps:[{$nm:'head',$mt:'prm',$t:'Other',$an:function(){return[];}}],$cont:Empty,$tp:{Other:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','Empty','$m','following']};};
         })(Empty.$$.prototype);
@@ -1754,63 +1749,63 @@ function $init$Empty(){
 }
 exports.$init$Empty=$init$Empty;
 $init$Empty();
-function empty$244(){
-    var $$empty=new empty$244.$$;
+function empty$243(){
+    var $$empty=new empty$243.$$;
     Object$($$empty);
     Empty($$empty);
     return $$empty;
 }
-function $init$empty$244(){
-    if (empty$244.$$===undefined){
-        initTypeProto(empty$244,'ceylon.language::empty',$init$Object$(),$init$Empty());
+function $init$empty$243(){
+    if (empty$243.$$===undefined){
+        initTypeProto(empty$243,'ceylon.language::empty',$init$Object$(),$init$Empty());
     }
+    return empty$243;
+}
+exports.$init$empty$243=$init$empty$243;
+$init$empty$243();
+var empty$244;
+function getEmpty(){
+    if (empty$244===undefined)empty$244=$init$empty$243()();
     return empty$244;
 }
-exports.$init$empty$244=$init$empty$244;
-$init$empty$244();
-var empty$245;
-function getEmpty(){
-    if (empty$245===undefined)empty$245=$init$empty$244()();
-    return empty$245;
-}
 exports.getEmpty=getEmpty;
-getEmpty.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:empty$244},$an:function(){return[doc(String$("A sequence with no elements, abbreviated `[]`. The \nunique instance of the type `[]`.",85)),shared()];},d:['ceylon.language','empty']};};
+getEmpty.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:empty$243},$an:function(){return[doc(String$("A sequence with no elements, abbreviated `[]`. The \nunique instance of the type `[]`.",85)),shared()];},d:['ceylon.language','empty']};};
 $prop$getEmpty={get:getEmpty,$$metamodel$$:getEmpty.$$metamodel$$};
 exports.$prop$getEmpty=$prop$getEmpty;
-function emptyIterator$246($$targs$$){
-    var $$emptyIterator=new emptyIterator$246.$$;
+function emptyIterator$245($$targs$$){
+    var $$emptyIterator=new emptyIterator$245.$$;
     $$emptyIterator.$$targs$$=$$targs$$;
     Iterator({Element:{t:Nothing}},$$emptyIterator);
     return $$emptyIterator;
 }
-function $init$emptyIterator$246(){
-    if (emptyIterator$246.$$===undefined){
-        initTypeProto(emptyIterator$246,'ceylon.language::emptyIterator',Basic,$init$Iterator());
+function $init$emptyIterator$245(){
+    if (emptyIterator$245.$$===undefined){
+        initTypeProto(emptyIterator$245,'ceylon.language::emptyIterator',Basic,$init$Iterator());
     }
-    return emptyIterator$246;
+    return emptyIterator$245;
 }
-exports.$init$emptyIterator$246=$init$emptyIterator$246;
-$init$emptyIterator$246();
+exports.$init$emptyIterator$245=$init$emptyIterator$245;
+$init$emptyIterator$245();
 (function($$emptyIterator){
     $$emptyIterator.next=function (){
         var $$emptyIterator=this;
         return getFinished();
     };
-})(emptyIterator$246.$$.prototype);
-var emptyIterator$247;
+})(emptyIterator$245.$$.prototype);
+var emptyIterator$246;
 function getEmptyIterator(){
-    if (emptyIterator$247===undefined)emptyIterator$247=$init$emptyIterator$246()({Element:{t:Nothing}});
-    return emptyIterator$247;
+    if (emptyIterator$246===undefined)emptyIterator$246=$init$emptyIterator$245()({Element:{t:Nothing}});
+    return emptyIterator$246;
 }
 exports.getEmptyIterator=getEmptyIterator;
-getEmptyIterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:emptyIterator$246},$an:function(){return[doc(String$("An iterator that returns no elements.",37)),shared()];},d:['ceylon.language','emptyIterator']};};
+getEmptyIterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:emptyIterator$245},$an:function(){return[doc(String$("An iterator that returns no elements.",37)),shared()];},d:['ceylon.language','emptyIterator']};};
 $prop$getEmptyIterator={get:getEmptyIterator,$$metamodel$$:getEmptyIterator.$$metamodel$$};
 exports.$prop$getEmptyIterator=$prop$getEmptyIterator;
-function Keys(correspondence$248, $$targs$$,$$keys){
+function Keys(correspondence$247, $$targs$$,$$keys){
     $init$Keys();
     if ($$keys===undefined)$$keys=new Keys.$$;
     set_type_args($$keys,$$targs$$);
-    $$keys.correspondence$248_=correspondence$248;
+    $$keys.correspondence$247_=correspondence$247;
     Category($$keys);
     return $$keys;
 }
@@ -1819,16 +1814,16 @@ function $init$Keys(){
     if (Keys.$$===undefined){
         initTypeProto(Keys,'ceylon.language::Keys',Basic,$init$Category());
         (function($$keys){
-            $$keys.contains=function contains(key$249){
+            $$keys.contains=function contains(key$248){
                 var $$keys=this;
-                var key$250;
-                if(isOfType((key$250=key$249),$$keys.$$targs$$.Key)){
-                    return $$keys.correspondence$248.defines(key$250);
+                var key$249;
+                if(isOfType((key$249=key$248),$$keys.$$targs$$.Key)){
+                    return $$keys.correspondence$247.defines(key$249);
                 }else {
                     return false;
                 }
             };$$keys.contains.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'key',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:Keys,$an:function(){return[shared(),actual()];},d:['ceylon.language','Keys','$m','contains']};};
-            defineAttr($$keys,'correspondence$248',function(){return this.correspondence$248_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Correspondence,a:{Key:'Key',Item:'Item'}},$cont:Keys,d:['ceylon.language','Keys','$at','correspondence']};});
+            defineAttr($$keys,'correspondence$247',function(){return this.correspondence$247_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Correspondence,a:{Key:'Key',Item:'Item'}},$cont:Keys,d:['ceylon.language','Keys','$at','correspondence']};});
         })(Keys.$$.prototype);
     }
     return Keys;
@@ -1846,52 +1841,52 @@ function $init$Correspondence(){
     if (Correspondence.$$===undefined){
         initTypeProto(Correspondence,'ceylon.language::Correspondence');
         (function($$correspondence){
-            $$correspondence.defines=function (key$251){
+            $$correspondence.defines=function (key$250){
                 var $$correspondence=this;
-                return exists($$correspondence.get(key$251));
+                return exists($$correspondence.get(key$250));
             };
             $$correspondence.defines.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'key',$mt:'prm',$t:'Key',$an:function(){return[];}}],$cont:Correspondence,$an:function(){return[doc(String$("Determines if there is a value defined for the \ngiven key.",58)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Correspondence.$$.prototype.definesAny),$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Correspondence.$$.prototype.definesEvery),$init$OpenValue()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Correspondence.$$.prototype.$prop$getKeys)].reifyCeylonType({Absent:{t:Null},Element:{ t:'u', l:[{t:FunctionDeclaration$meta$declaration},{t:ValueDeclaration$meta$declaration}]}})),shared(),$default()];},d:['ceylon.language','Correspondence','$m','defines']};};
             defineAttr($$correspondence,'keys',function(){
                 var $$correspondence=this;
                 return Keys($$correspondence,{Key:$$correspondence.$$targs$$.Key,Item:$$correspondence.$$targs$$.Item});
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Category},$cont:Correspondence,$an:function(){return[doc(String$("The `Category` of all keys for which a value is \ndefined by this `Correspondence`.",82)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Correspondence.$$.prototype.defines)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared(),$default()];},d:['ceylon.language','Correspondence','$at','keys']};});
-            $$correspondence.definesEvery=function definesEvery(keys$252){
+            $$correspondence.definesEvery=function definesEvery(keys$251){
                 var $$correspondence=this;
-                var it$253 = keys$252.iterator();
-                var key$254;while ((key$254=it$253.next())!==getFinished()){
-                    if((!$$correspondence.defines(key$254))){
+                var it$252 = keys$251.iterator();
+                var key$253;while ((key$253=it$252.next())!==getFinished()){
+                    if((!$$correspondence.defines(key$253))){
                         return false;
                     }
                 }
-                if (getFinished() === key$254){
+                if (getFinished() === key$253){
                     return true;
                 }
             };$$correspondence.definesEvery.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'keys',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:'Key'}},$an:function(){return[];}}],$cont:Correspondence,$an:function(){return[doc(String$("Determines if this `Correspondence` defines a value\nfor every one of the given keys.",84)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Correspondence.$$.prototype.defines)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared(),$default()];},d:['ceylon.language','Correspondence','$m','definesEvery']};};
-            $$correspondence.definesAny=function definesAny(keys$255){
+            $$correspondence.definesAny=function definesAny(keys$254){
                 var $$correspondence=this;
-                var it$256 = keys$255.iterator();
-                var key$257;while ((key$257=it$256.next())!==getFinished()){
-                    if($$correspondence.defines(key$257)){
+                var it$255 = keys$254.iterator();
+                var key$256;while ((key$256=it$255.next())!==getFinished()){
+                    if($$correspondence.defines(key$256)){
                         return true;
                     }
                 }
-                if (getFinished() === key$257){
+                if (getFinished() === key$256){
                     return false;
                 }
             };$$correspondence.definesAny.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'keys',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:'Key'}},$an:function(){return[];}}],$cont:Correspondence,$an:function(){return[doc(String$("Determines if this `Correspondence` defines a value\nfor any one of the given keys.",82)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Correspondence.$$.prototype.defines)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared(),$default()];},d:['ceylon.language','Correspondence','$m','definesAny']};};
-            $$correspondence.items=function (keys$258){
+            $$correspondence.items=function (keys$257){
                 var $$correspondence=this;
                 return Comprehension(function(){
-                    var it$259=keys$258.iterator();
-                    var key$260=getFinished();
-                    var next$key$260=function(){return key$260=it$259.next();}
-                    next$key$260();
+                    var it$258=keys$257.iterator();
+                    var key$259=getFinished();
+                    var next$key$259=function(){return key$259=it$258.next();}
+                    next$key$259();
                     return function(){
-                        if(key$260!==getFinished()){
-                            var key$260$261=key$260;
-                            var tmpvar$262=$$correspondence.get(key$260$261);
-                            next$key$260();
-                            return tmpvar$262;
+                        if(key$259!==getFinished()){
+                            var key$259$260=key$259;
+                            var tmpvar$261=$$correspondence.get(key$259$260);
+                            next$key$259();
+                            return tmpvar$261;
                         }
                         return getFinished();
                     }
@@ -1919,39 +1914,39 @@ function $init$Finished(){
 }
 exports.$init$Finished=$init$Finished;
 $init$Finished();
-function finished$263(){
-    var $$finished=new finished$263.$$;
+function finished$262(){
+    var $$finished=new finished$262.$$;
     Finished($$finished);
-    $$finished.$prop$getString={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:finished$263,$an:function(){return[shared(),actual()];},d:['ceylon.language','finished','$at','string']};}};
+    $$finished.$prop$getString={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:finished$262,$an:function(){return[shared(),actual()];},d:['ceylon.language','finished','$at','string']};}};
     $$finished.$prop$getString.get=function(){return string};
     return $$finished;
 }
-function $init$finished$263(){
-    if (finished$263.$$===undefined){
-        initTypeProto(finished$263,'ceylon.language::finished',$init$Finished());
+function $init$finished$262(){
+    if (finished$262.$$===undefined){
+        initTypeProto(finished$262,'ceylon.language::finished',$init$Finished());
     }
-    return finished$263;
+    return finished$262;
 }
-exports.$init$finished$263=$init$finished$263;
-$init$finished$263();
+exports.$init$finished$262=$init$finished$262;
+$init$finished$262();
 (function($$finished){
     defineAttr($$finished,'string',function(){
         var $$finished=this;
         return String$("finished",8);
-    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:finished$263,$an:function(){return[shared(),actual()];},d:['ceylon.language','finished','$at','string']};});
-})(finished$263.$$.prototype);
-var finished$264;
+    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:finished$262,$an:function(){return[shared(),actual()];},d:['ceylon.language','finished','$at','string']};});
+})(finished$262.$$.prototype);
+var finished$263;
 function getFinished(){
-    if (finished$264===undefined)finished$264=$init$finished$263()();
-    return finished$264;
+    if (finished$263===undefined)finished$263=$init$finished$262()();
+    return finished$263;
 }
 exports.getFinished=getFinished;
-getFinished.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:finished$263},$an:function(){return[doc(String$("A value that indicates that an `Iterator`\nis exhausted and has no more values to \nreturn.",89)),see([$init$OpenInterface()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Iterator)].reifyCeylonType({Absent:{t:Null},Element:{t:InterfaceDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','finished']};};
+getFinished.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:finished$262},$an:function(){return[doc(String$("A value that indicates that an `Iterator`\nis exhausted and has no more values to \nreturn.",89)),see([$init$OpenInterface()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Iterator)].reifyCeylonType({Absent:{t:Null},Element:{t:InterfaceDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','finished']};};
 $prop$getFinished={get:getFinished,$$metamodel$$:getFinished.$$metamodel$$};
 exports.$prop$getFinished=$prop$getFinished;
 function Binary($$targs$$,$$binary){
     set_type_args($$binary,$$targs$$);
-    $$binary.set$defs$bit=function(index$265,bit$266){return true;};
+    $$binary.set$defs$bit=function(index$264,bit$265){return true;};
 }
 Binary.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$tp:{Other:{'satisfies':[{t:Binary,a:{Other:'Other'}}]}},satisfies:[],$an:function(){return[doc(String$("Abstraction of numeric types like `Integer` that may be \nrepresented as a sequence of bits, and may be the subject\nof bitwise operations.",137)),see([$init$OpenClass()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Integer)].reifyCeylonType({Absent:{t:Null},Element:{t:ClassDeclaration$meta$declaration}})),by([String$("Stef",4)].reifyCeylonType({Absent:{t:Null},Element:{t:String$}})),shared()];},d:['ceylon.language','Binary']};};
 exports.Binary=Binary;
@@ -1961,9 +1956,9 @@ function $init$Binary(){
         (function($$binary){
             $$binary.$prop$getNot={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'Other',$cont:Binary,$an:function(){return[doc(String$("The binary complement of this sequence of bits.",47)),shared(),formal()];},d:['ceylon.language','Binary','$at','not']};}};
             $$binary.$prop$getSize={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:Binary,$an:function(){return[doc(String$("The number of bits (0 or 1) that this sequence of bits can hold.",64)),shared(),formal()];},d:['ceylon.language','Binary','$at','size']};}};
-            $$binary.clear=function clear(index$267){
+            $$binary.clear=function clear(index$266){
                 var $$binary=this;
-                return $$binary.set(index$267,false);
+                return $$binary.set(index$266,false);
             };$$binary.clear.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Other',$ps:[{$nm:'index',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Binary,$an:function(){return[doc(String$("Returns a new number with the given bit set to 0.\nBits are indexed from right to left.",86)),shared(),$default()];},d:['ceylon.language','Binary','$m','clear']};};
         })(Binary.$$.prototype);
     }
@@ -2071,22 +2066,22 @@ function $init$Collection(){
                 var $$collection=this;
                 return $$collection.size.equals((0));
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:Collection,$an:function(){return[doc(String$("Determine if the collection is empty, that is, if \nit has no elements.",70)),shared(),actual(),$default()];},d:['ceylon.language','Collection','$at','empty']};});
-            $$collection.contains=function contains(element$268){
+            $$collection.contains=function contains(element$267){
                 var $$collection=this;
-                var it$269 = $$collection.iterator();
-                var elem$270;while ((elem$270=it$269.next())!==getFinished()){
-                    var elem$271;
-                    if((elem$271=elem$270)!==null&&elem$271.equals(element$268)){
+                var it$268 = $$collection.iterator();
+                var elem$269;while ((elem$269=it$268.next())!==getFinished()){
+                    var elem$270;
+                    if((elem$270=elem$269)!==null&&elem$270.equals(element$267)){
                         return true;
                     }
                 }
-                if (getFinished() === elem$270){
+                if (getFinished() === elem$269){
                     return false;
                 }
             };$$collection.contains.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'element',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:Collection,$an:function(){return[doc(String$("Return `true` if the given object is an element of\nthis collection. In this default implementation,\nand in most refining implementations, return `false`\notherwise. An acceptable refining implementation\nmay return `true` for objects which are not \nelements of the collection, but this is not \nrecommended. (For example, the `contains()` method \nof `String` returns `true` for any substring of the\nstring.)",404)),shared(),actual(),$default()];},d:['ceylon.language','Collection','$m','contains']};};
             defineAttr($$collection,'string',function(){
                 var $$collection=this;
-                return (opt$272=($$collection.empty?String$("{}",2):null),opt$272!==null?opt$272:StringBuilder().appendAll([String$("{ ",2),commaList($$collection).string,String$(" }",2)]).string);
+                return (opt$271=($$collection.empty?String$("{}",2):null),opt$271!==null?opt$271:StringBuilder().appendAll([String$("{ ",2),commaList($$collection).string,String$(" }",2)]).string);
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:Collection,$an:function(){return[doc(String$("A string of form `\"{ x, y, z }\"` where `x`, `y`, \nand `z` are the `string` representations of the \nelements of this collection, as produced by the\niterator of the collection, or the string `\"{}\"` \nif this collection is empty. If the collection \niterator produces the value `null`, the string\nrepresentation contains the string `\"null\"`.",336)),shared(),actual(),$default()];},d:['ceylon.language','Collection','$at','string']};});
         })(Collection.$$.prototype);
     }
@@ -2094,7 +2089,7 @@ function $init$Collection(){
 }
 exports.$init$Collection=$init$Collection;
 $init$Collection();
-var opt$272;
+var opt$271;
 function Category($$category){
 }
 Category.$$metamodel$$=function(){return{mod:$$METAMODEL$$,satisfies:[],$an:function(){return[doc(String$("Abstract supertype of objects that contain other \nvalues, called *elements*, where it is possible to \nefficiently determine if a given value is an element. \n`Category` does not satisfy `Container`, because it is \nconceptually possible to have a `Category` whose \nemptiness cannot be computed.\n\nThe `in` operator may be used to determine if a value\nbelongs to a `Category`:\n\n    if (\"hello\" in \"hello world\") { ... }\n    if (69 in 0..100) { ... }\n    if (key->value in { for (n in 0..100) n.string->n**2 }) { ... }\n\nOrdinarily, `x==y` implies that `x in cat == y in cat`.\nBut this contract is not required since it is possible\nto form a meaningful `Category` using a different\nequivalence relation. For example, an `IdentitySet` is\na meaningful `Category`.",755)),see([$init$OpenInterface()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Container)].reifyCeylonType({Absent:{t:Null},Element:{t:InterfaceDeclaration$meta$declaration}})),by([String$("Gavin",5)].reifyCeylonType({Absent:{t:Null},Element:{t:String$}})),shared()];},d:['ceylon.language','Category']};};
@@ -2103,27 +2098,27 @@ function $init$Category(){
     if (Category.$$===undefined){
         initTypeProto(Category,'ceylon.language::Category');
         (function($$category){
-            $$category.containsEvery=function containsEvery(elements$273){
+            $$category.containsEvery=function containsEvery(elements$272){
                 var $$category=this;
-                var it$274 = elements$273.iterator();
-                var element$275;while ((element$275=it$274.next())!==getFinished()){
-                    if((!$$category.contains(element$275))){
+                var it$273 = elements$272.iterator();
+                var element$274;while ((element$274=it$273.next())!==getFinished()){
+                    if((!$$category.contains(element$274))){
                         return false;
                     }
                 }
-                if (getFinished() === element$275){
+                if (getFinished() === element$274){
                     return true;
                 }
             };$$category.containsEvery.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'elements',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Object$}}},$an:function(){return[];}}],$cont:Category,$an:function(){return[doc(String$("Determines if every one of the given values belongs\nto this `Category`.",71)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Category.$$.prototype.contains)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared(),$default()];},d:['ceylon.language','Category','$m','containsEvery']};};
-            $$category.containsAny=function containsAny(elements$276){
+            $$category.containsAny=function containsAny(elements$275){
                 var $$category=this;
-                var it$277 = elements$276.iterator();
-                var element$278;while ((element$278=it$277.next())!==getFinished()){
-                    if($$category.contains(element$278)){
+                var it$276 = elements$275.iterator();
+                var element$277;while ((element$277=it$276.next())!==getFinished()){
+                    if($$category.contains(element$277)){
                         return true;
                     }
                 }
-                if (getFinished() === element$278){
+                if (getFinished() === element$277){
                     return false;
                 }
             };$$category.containsAny.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'elements',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Object$}}},$an:function(){return[];}}],$cont:Category,$an:function(){return[doc(String$("Determines if any one of the given values belongs \nto this `Category`",69)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Category.$$.prototype.contains)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared(),$default()];},d:['ceylon.language','Category','$m','containsAny']};};
@@ -2157,99 +2152,99 @@ function $init$List(){
             $$list.$prop$getLastIndex={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},{t:Integer}]},$cont:List,$an:function(){return[doc(String$("The index of the last element of the list, or\nnull if the list is empty.",72)),see([$init$OpenValue()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),List.$$.prototype.$prop$getSize)].reifyCeylonType({Absent:{t:Null},Element:{t:ValueDeclaration$meta$declaration}})),shared(),formal()];},d:['ceylon.language','List','$at','lastIndex']};}};
             defineAttr($$list,'size',function(){
                 var $$list=this;
-                return (opt$279=$$list.lastIndex,opt$279!==null?opt$279:(-(1))).plus((1));
+                return (opt$278=$$list.lastIndex,opt$278!==null?opt$278:(-(1))).plus((1));
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:List,$an:function(){return[doc(String$("The number of elements in this sequence, always\n`sequence.lastIndex+1`.",71)),see([$init$OpenValue()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),List.$$.prototype.$prop$getLastIndex)].reifyCeylonType({Absent:{t:Null},Element:{t:ValueDeclaration$meta$declaration}})),shared(),actual(),$default()];},d:['ceylon.language','List','$at','size']};});
-            $$list.shorterThan=function (length$280){
+            $$list.shorterThan=function (length$279){
                 var $$list=this;
-                return $$list.size.compare(length$280).equals(getSmaller());
+                return $$list.size.compare(length$279).equals(getSmaller());
             };
             $$list.shorterThan.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'length',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:List,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','List','$m','shorterThan']};};
-            $$list.longerThan=function (length$281){
+            $$list.longerThan=function (length$280){
                 var $$list=this;
-                return $$list.size.compare(length$281).equals(getLarger());
+                return $$list.size.compare(length$280).equals(getLarger());
             };
             $$list.longerThan.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'length',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:List,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','List','$m','longerThan']};};
             $$list.$prop$getRest={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:List,a:{Element:'Element'}},$cont:List,$an:function(){return[doc(String$("The rest of the list, without the first element.",48)),shared(),actual(),formal()];},d:['ceylon.language','List','$at','rest']};}};
-            $$list.defines=function (index$282){
+            $$list.defines=function (index$281){
                 var $$list=this;
-                return (index$282.compare((opt$283=$$list.lastIndex,opt$283!==null?opt$283:(-(1))))!==getLarger());
+                return (index$281.compare((opt$282=$$list.lastIndex,opt$282!==null?opt$282:(-(1))))!==getLarger());
             };
             $$list.defines.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'index',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:List,$an:function(){return[doc(String$("Determines if the given index refers to an element\n    of this sequence, that is, if\n    `index<=sequence.lastIndex`.",117)),shared(),actual(),$default()];},d:['ceylon.language','List','$m','defines']};};
             $$list.iterator=function iterator(){
                 var $$list=this;
-                function listIterator$284($$targs$$){
-                    var $$listIterator$284=new listIterator$284.$$;
-                    $$listIterator$284.$$targs$$=$$targs$$;
-                    Iterator({Element:$$list.$$targs$$.Element},$$listIterator$284);
-                    $$listIterator$284.index$285_=(0);
-                    $$listIterator$284.$prop$getIndex$285={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:listIterator$284,$an:function(){return[variable()];},d:['ceylon.language','List','$m','iterator','$o','listIterator','$at','index']};}};
-                    $$listIterator$284.$prop$getIndex$285.get=function(){return index$285};
-                    return $$listIterator$284;
+                function listIterator$283($$targs$$){
+                    var $$listIterator$283=new listIterator$283.$$;
+                    $$listIterator$283.$$targs$$=$$targs$$;
+                    Iterator({Element:$$list.$$targs$$.Element},$$listIterator$283);
+                    $$listIterator$283.index$284_=(0);
+                    $$listIterator$283.$prop$getIndex$284={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:listIterator$283,$an:function(){return[variable()];},d:['ceylon.language','List','$m','iterator','$o','listIterator','$at','index']};}};
+                    $$listIterator$283.$prop$getIndex$284.get=function(){return index$284};
+                    return $$listIterator$283;
                 }
-                function $init$listIterator$284(){
-                    if (listIterator$284.$$===undefined){
-                        initTypeProto(listIterator$284,'ceylon.language::List.iterator.listIterator',Basic,$init$Iterator());
+                function $init$listIterator$283(){
+                    if (listIterator$283.$$===undefined){
+                        initTypeProto(listIterator$283,'ceylon.language::List.iterator.listIterator',Basic,$init$Iterator());
                     }
-                    return listIterator$284;
+                    return listIterator$283;
                 }
-                $init$listIterator$284();
-                (function($$listIterator$284){
-                    defineAttr($$listIterator$284,'index$285',function(){return this.index$285_;},function(index$286){return this.index$285_=index$286;},function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:listIterator$284,$an:function(){return[variable()];},d:['ceylon.language','List','$m','iterator','$o','listIterator','$at','index']};});
-                    $$listIterator$284.next=function next(){
-                        var $$listIterator$284=this;
-                        if(($$listIterator$284.index$285.compare((opt$287=$$list.lastIndex,opt$287!==null?opt$287:(-(1))))!==getLarger())){
+                $init$listIterator$283();
+                (function($$listIterator$283){
+                    defineAttr($$listIterator$283,'index$284',function(){return this.index$284_;},function(index$285){return this.index$284_=index$285;},function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:listIterator$283,$an:function(){return[variable()];},d:['ceylon.language','List','$m','iterator','$o','listIterator','$at','index']};});
+                    $$listIterator$283.next=function next(){
+                        var $$listIterator$283=this;
+                        if(($$listIterator$283.index$284.compare((opt$286=$$list.lastIndex,opt$286!==null?opt$286:(-(1))))!==getLarger())){
                             //assert at List.ceylon (67:20-67:65)
-                            var elem$288;
-                            if (!(isOfType((elem$288=$$list.get((oldindex$289=$$listIterator$284.index$285,$$listIterator$284.index$285=oldindex$289.successor,oldindex$289))),$$list.$$targs$$.Element))) {throw wrapexc(AssertionException("Assertion failed: \'is Element elem = outer.get(index++)\' at List.ceylon (67:27-67:64)"),'67:20-67:65','List.ceylon'); }
-                            var oldindex$289;
-                            return elem$288;
+                            var elem$287;
+                            if (!(isOfType((elem$287=$$list.get((oldindex$288=$$listIterator$283.index$284,$$listIterator$283.index$284=oldindex$288.successor,oldindex$288))),$$list.$$targs$$.Element))) {throw wrapexc(AssertionException("Assertion failed: \'is Element elem = outer.get(index++)\' at List.ceylon (67:27-67:64)"),'67:20-67:65','List.ceylon'); }
+                            var oldindex$288;
+                            return elem$287;
                         }else {
                             return getFinished();
                         }
-                        var opt$287;
-                    };$$listIterator$284.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:listIterator$284,$an:function(){return[shared(),actual()];},d:['ceylon.language','List','$m','iterator','$o','listIterator','$m','next']};};
-                })(listIterator$284.$$.prototype);
-                var listIterator$290;
-                function getListIterator$290(){
-                    if (listIterator$290===undefined)listIterator$290=$init$listIterator$284()({Element:$$list.$$targs$$.Element});
-                    return listIterator$290;
+                        var opt$286;
+                    };$$listIterator$283.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:listIterator$283,$an:function(){return[shared(),actual()];},d:['ceylon.language','List','$m','iterator','$o','listIterator','$m','next']};};
+                })(listIterator$283.$$.prototype);
+                var listIterator$289;
+                function getListIterator$289(){
+                    if (listIterator$289===undefined)listIterator$289=$init$listIterator$283()({Element:$$list.$$targs$$.Element});
+                    return listIterator$289;
                 }
-                getListIterator$290.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:listIterator$284},d:['ceylon.language','List','$m','iterator','$at','listIterator']};};
-                $prop$getListIterator$290={get:getListIterator$290,$$metamodel$$:getListIterator$290.$$metamodel$$};
-                return getListIterator$290();
+                getListIterator$289.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:listIterator$283},d:['ceylon.language','List','$m','iterator','$at','listIterator']};};
+                $prop$getListIterator$289={get:getListIterator$289,$$metamodel$$:getListIterator$289.$$metamodel$$};
+                return getListIterator$289();
             };$$list.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$ps:[],$cont:List,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','List','$m','iterator']};};
             $$list.$prop$getReversed={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:List,a:{Element:'Element'}},$cont:List,$an:function(){return[doc(String$("Reverse this list, returning a new list.",40)),shared(),formal()];},d:['ceylon.language','List','$at','reversed']};}};
-            $$list.equals=function equals(that$291){
+            $$list.equals=function equals(that$290){
                 var $$list=this;
-                var that$292;
-                if(isOfType((that$292=that$291),{t:List,a:{Element:{t:Anything}}})){
-                    if(that$292.size.equals($$list.size)){
-                        var it$293 = Range((0),$$list.size.minus((1)),{Element:{t:Integer}}).iterator();
-                        var i$294;while ((i$294=it$293.next())!==getFinished()){
-                            var x$295=$$list.get(i$294);
-                            $prop$getX$295={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},d:['ceylon.language','List','$m','equals','$at','x']};}};
-                            $prop$getX$295.get=function(){return x$295};
-                            var y$296=that$292.get(i$294);
-                            $prop$getY$296={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Anything},d:['ceylon.language','List','$m','equals','$at','y']};}};
-                            $prop$getY$296.get=function(){return y$296};
-                            var x$297;
-                            if((x$297=x$295)!==null){
-                                var y$298;
-                                if((y$298=y$296)!==null){
-                                    if((!x$297.equals(y$298))){
+                var that$291;
+                if(isOfType((that$291=that$290),{t:List,a:{Element:{t:Anything}}})){
+                    if(that$291.size.equals($$list.size)){
+                        var it$292 = Range((0),$$list.size.minus((1)),{Element:{t:Integer}}).iterator();
+                        var i$293;while ((i$293=it$292.next())!==getFinished()){
+                            var x$294=$$list.get(i$293);
+                            $prop$getX$294={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},d:['ceylon.language','List','$m','equals','$at','x']};}};
+                            $prop$getX$294.get=function(){return x$294};
+                            var y$295=that$291.get(i$293);
+                            $prop$getY$295={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Anything},d:['ceylon.language','List','$m','equals','$at','y']};}};
+                            $prop$getY$295.get=function(){return y$295};
+                            var x$296;
+                            if((x$296=x$294)!==null){
+                                var y$297;
+                                if((y$297=y$295)!==null){
+                                    if((!x$296.equals(y$297))){
                                         return false;
                                     }
                                 }else {
                                     return false;
                                 }
                             }else {
-                                var y$299;
-                                if((y$299=y$296)!==null){
+                                var y$298;
+                                if((y$298=y$295)!==null){
                                     return false;
                                 }
                             }
                         }
-                        if (getFinished() === i$294){
+                        if (getFinished() === i$293){
                             return true;
                         }
                     }
@@ -2258,39 +2253,39 @@ function $init$List(){
             };$$list.equals.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'that',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:List,$an:function(){return[doc(String$("Two `List`s are considered equal iff they have the \nsame `size` and _entry sets_. The entry set of a \nlist `l` is the set of elements of `l.indexed`. \nThis definition is equivalent to the more intuitive \nnotion that two lists are equal iff they have the \nsame `size` and for every index either:\n\n- the lists both have the element `null`, or\n- the lists both have a non-null element, and the\n  two elements are equal.",416)),shared(),actual(),$default()];},d:['ceylon.language','List','$m','equals']};};
             defineAttr($$list,'hash',function(){
                 var $$list=this;
-                var hash$300=(1);
-                function setHash$300(hash$301){return hash$300=hash$301;};
-                $prop$getHash$300={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','List','$at','hash','$at','hash']};}};
-                $prop$getHash$300.get=function(){return hash$300};
-                $prop$getHash$300.set=setHash$300;
-                if (setHash$300.$$metamodel$$===undefined)setHash$300.$$metamodel$$=$prop$getHash$300.$$metamodel$$;
-                var it$302 = $$list.iterator();
-                var elem$303;while ((elem$303=it$302.next())!==getFinished()){
-                    (hash$300=hash$300.times((31)));
-                    var elem$304;
-                    if((elem$304=elem$303)!==null){
-                        (hash$300=hash$300.plus(elem$304.hash));
+                var hash$299=(1);
+                function setHash$299(hash$300){return hash$299=hash$300;};
+                $prop$getHash$299={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','List','$at','hash','$at','hash']};}};
+                $prop$getHash$299.get=function(){return hash$299};
+                $prop$getHash$299.set=setHash$299;
+                if (setHash$299.$$metamodel$$===undefined)setHash$299.$$metamodel$$=$prop$getHash$299.$$metamodel$$;
+                var it$301 = $$list.iterator();
+                var elem$302;while ((elem$302=it$301.next())!==getFinished()){
+                    (hash$299=hash$299.times((31)));
+                    var elem$303;
+                    if((elem$303=elem$302)!==null){
+                        (hash$299=hash$299.plus(elem$303.hash));
                     }
                 }
-                return hash$300;
-            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:List,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','List','$at','hash']};});$$list.findLast=function findLast(selecting$305){
+                return hash$299;
+            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:List,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','List','$at','hash']};});$$list.findLast=function findLast(selecting$304){
                 var $$list=this;
-                var l$306;
-                if((l$306=$$list.lastIndex)!==null){
-                    var index$307=l$306;
-                    function setIndex$307(index$308){return index$307=index$308;};
-                    $prop$getIndex$307={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','List','$m','findLast','$at','index']};}};
-                    $prop$getIndex$307.get=function(){return index$307};
-                    $prop$getIndex$307.set=setIndex$307;
-                    if (setIndex$307.$$metamodel$$===undefined)setIndex$307.$$metamodel$$=$prop$getIndex$307.$$metamodel$$;
-                    while((index$307.compare((0))!==getSmaller())){
-                        var elem$309;
-                        if((elem$309=$$list.get((oldindex$310=index$307,index$307=oldindex$310.predecessor,oldindex$310)))!==null){
-                            if(selecting$305(elem$309)){
-                                return elem$309;
+                var l$305;
+                if((l$305=$$list.lastIndex)!==null){
+                    var index$306=l$305;
+                    function setIndex$306(index$307){return index$306=index$307;};
+                    $prop$getIndex$306={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','List','$m','findLast','$at','index']};}};
+                    $prop$getIndex$306.get=function(){return index$306};
+                    $prop$getIndex$306.set=setIndex$306;
+                    if (setIndex$306.$$metamodel$$===undefined)setIndex$306.$$metamodel$$=$prop$getIndex$306.$$metamodel$$;
+                    while((index$306.compare((0))!==getSmaller())){
+                        var elem$308;
+                        if((elem$308=$$list.get((oldindex$309=index$306,index$306=oldindex$309.predecessor,oldindex$309)))!==null){
+                            if(selecting$304(elem$308)){
+                                return elem$308;
                             }
                         }
-                        var oldindex$310;
+                        var oldindex$309;
                     }
                 }
                 return null;
@@ -2301,379 +2296,379 @@ function $init$List(){
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},$cont:List,$an:function(){return[doc(String$("Returns the first element of this `List`, if any.",49)),shared(),actual(),$default()];},d:['ceylon.language','List','$at','first']};});
             defineAttr($$list,'last',function(){
                 var $$list=this;
-                var i$311;
-                if((i$311=$$list.lastIndex)!==null){
-                    return $$list.get(i$311);
+                var i$310;
+                if((i$310=$$list.lastIndex)!==null){
+                    return $$list.get(i$310);
                 }else {
                     return null;
                 }
-            },undefined,function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},$cont:List,$an:function(){return[doc(String$("Returns the last element of this `List`, if any.",48)),shared(),actual(),$default()];},d:['ceylon.language','List','$at','last']};});$$list.withLeading=function withLeading(element$312,$$$mptypes){
+            },undefined,function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},$cont:List,$an:function(){return[doc(String$("Returns the last element of this `List`, if any.",48)),shared(),actual(),$default()];},d:['ceylon.language','List','$at','last']};});$$list.withLeading=function withLeading(element$311,$$$mptypes){
                 var $$list=this;
-                var sb$313=SequenceBuilder({Element:{ t:'u', l:[$$list.$$targs$$.Element,$$$mptypes.Other]}});
-                sb$313.append(element$312);
+                var sb$312=SequenceBuilder({Element:{ t:'u', l:[$$list.$$targs$$.Element,$$$mptypes.Other]}});
+                sb$312.append(element$311);
                 if((!$$list.empty)){
-                    sb$313.appendAll($$list);
+                    sb$312.appendAll($$list);
                 }
                 //assert at List.ceylon (169:8-169:41)
-                var seq$314;
-                if (!(nonempty((seq$314=sb$313.sequence)))) {throw wrapexc(AssertionException("Assertion failed: \'nonempty seq=sb.sequence\' at List.ceylon (169:15-169:40)"),'169:8-169:41','List.ceylon'); }
-                return seq$314;
+                var seq$313;
+                if (!(nonempty((seq$313=sb$312.sequence)))) {throw wrapexc(AssertionException("Assertion failed: \'nonempty seq=sb.sequence\' at List.ceylon (169:15-169:40)"),'169:8-169:41','List.ceylon'); }
+                return seq$313;
             };$$list.withLeading.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequence,a:{Element:{ t:'u', l:['Element','Other']}}},$ps:[{$nm:'element',$mt:'prm',$t:'Other',$an:function(){return[doc("The first element of the resulting sequence.")];}}],$cont:List,$tp:{Other:{}},$an:function(){return[doc(String$("Returns a new `List` that starts with the specified\nelement, followed by the elements of this `List`.",101)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Iterable.$$.prototype.following)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared(),$default()];},d:['ceylon.language','List','$m','withLeading']};};
-            $$list.withTrailing=function withTrailing(element$315,$$$mptypes){
+            $$list.withTrailing=function withTrailing(element$314,$$$mptypes){
                 var $$list=this;
-                var sb$316=SequenceBuilder({Element:{ t:'u', l:[$$list.$$targs$$.Element,$$$mptypes.Other]}});
+                var sb$315=SequenceBuilder({Element:{ t:'u', l:[$$list.$$targs$$.Element,$$$mptypes.Other]}});
                 if((!$$list.empty)){
-                    sb$316.appendAll($$list);
+                    sb$315.appendAll($$list);
                 }
-                sb$316.append(element$315);
+                sb$315.append(element$314);
                 //assert at List.ceylon (184:8-184:41)
-                var seq$317;
-                if (!(nonempty((seq$317=sb$316.sequence)))) {throw wrapexc(AssertionException("Assertion failed: \'nonempty seq=sb.sequence\' at List.ceylon (184:15-184:40)"),'184:8-184:41','List.ceylon'); }
-                return seq$317;
+                var seq$316;
+                if (!(nonempty((seq$316=sb$315.sequence)))) {throw wrapexc(AssertionException("Assertion failed: \'nonempty seq=sb.sequence\' at List.ceylon (184:15-184:40)"),'184:8-184:41','List.ceylon'); }
+                return seq$316;
             };$$list.withTrailing.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequence,a:{Element:{ t:'u', l:['Element','Other']}}},$ps:[{$nm:'element',$mt:'prm',$t:'Other',$an:function(){return[doc("The last element of the resulting sequence.")];}}],$cont:List,$tp:{Other:{}},$an:function(){return[doc(String$("Returns a new `List` that contains the specified\nelement appended to the end of the elements of this \n`List`.",109)),shared(),$default()];},d:['ceylon.language','List','$m','withTrailing']};};
-            $$list.startsWith=function (sublist$318){
+            $$list.startsWith=function (sublist$317){
                 var $$list=this;
-                return $$list.includesAt((0),sublist$318);
+                return $$list.includesAt((0),sublist$317);
             };
             $$list.startsWith.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'sublist',$mt:'prm',$t:{t:List,a:{Element:{t:Anything}}},$an:function(){return[];}}],$cont:List,$an:function(){return[doc(String$("Determine if the given list occurs at the start of this \nlist.",62)),shared(),$default()];},d:['ceylon.language','List','$m','startsWith']};};
-            $$list.endsWith=function (sublist$319){
+            $$list.endsWith=function (sublist$318){
                 var $$list=this;
-                return $$list.includesAt($$list.size.minus(sublist$319.size),sublist$319);
+                return $$list.includesAt($$list.size.minus(sublist$318.size),sublist$318);
             };
             $$list.endsWith.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'sublist',$mt:'prm',$t:{t:List,a:{Element:{t:Anything}}},$an:function(){return[];}}],$cont:List,$an:function(){return[doc(String$("Determine if the given list occurs at the end of this\nlist.",59)),shared(),$default()];},d:['ceylon.language','List','$m','endsWith']};};
-            $$list.includesAt=function includesAt(index$320,sublist$321){
+            $$list.includesAt=function includesAt(index$319,sublist$320){
                 var $$list=this;
-                var it$322 = (function(){var tmpvar$324=sublist$321.size;
-                if (tmpvar$324>0){
-                var tmpvar$325=(0);
-                var tmpvar$326=tmpvar$325;
-                for (var i=1; i<tmpvar$324; i++){tmpvar$326=tmpvar$326.successor;}
-                return Range(tmpvar$325,tmpvar$326,{Element:{t:Integer}})
+                var it$321 = (function(){var tmpvar$323=sublist$320.size;
+                if (tmpvar$323>0){
+                var tmpvar$324=(0);
+                var tmpvar$325=tmpvar$324;
+                for (var i=1; i<tmpvar$323; i++){tmpvar$325=tmpvar$325.successor;}
+                return Range(tmpvar$324,tmpvar$325,{Element:{t:Integer}})
                 }else return getEmpty();}()).iterator();
-                var i$323;while ((i$323=it$322.next())!==getFinished()){
-                    var x$327=$$list.get(index$320.plus(i$323));
-                    $prop$getX$327={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},d:['ceylon.language','List','$m','includesAt','$at','x']};}};
-                    $prop$getX$327.get=function(){return x$327};
-                    var y$328=sublist$321.get(i$323);
-                    $prop$getY$328={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Anything},d:['ceylon.language','List','$m','includesAt','$at','y']};}};
-                    $prop$getY$328.get=function(){return y$328};
-                    var x$329;
-                    if((x$329=x$327)!==null){
-                        var y$330;
-                        if((y$330=y$328)!==null){
-                            if((!x$329.equals(y$330))){
+                var i$322;while ((i$322=it$321.next())!==getFinished()){
+                    var x$326=$$list.get(index$319.plus(i$322));
+                    $prop$getX$326={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},d:['ceylon.language','List','$m','includesAt','$at','x']};}};
+                    $prop$getX$326.get=function(){return x$326};
+                    var y$327=sublist$320.get(i$322);
+                    $prop$getY$327={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Anything},d:['ceylon.language','List','$m','includesAt','$at','y']};}};
+                    $prop$getY$327.get=function(){return y$327};
+                    var x$328;
+                    if((x$328=x$326)!==null){
+                        var y$329;
+                        if((y$329=y$327)!==null){
+                            if((!x$328.equals(y$329))){
                                 return false;
                             }
                         }else {
                             return false;
                         }
                     }else {
-                        var y$331;
-                        if((y$331=y$328)!==null){
+                        var y$330;
+                        if((y$330=y$327)!==null){
                             return false;
                         }
                     }
                 }
-                if (getFinished() === i$323){
+                if (getFinished() === i$322){
                     return true;
                 }
             };$$list.includesAt.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'index',$mt:'prm',$t:{t:Integer},$an:function(){return[doc("The index at which this list might occur")];}},{$nm:'sublist',$mt:'prm',$t:{t:List,a:{Element:{t:Anything}}},$an:function(){return[];}}],$cont:List,$an:function(){return[doc(String$("Determine if the given list occurs at the given index \nof this list.",68)),shared(),$default()];},d:['ceylon.language','List','$m','includesAt']};};
-            $$list.includes=function includes(sublist$332){
+            $$list.includes=function includes(sublist$331){
                 var $$list=this;
-                var it$333 = (function(){var tmpvar$335=$$list.size;
-                if (tmpvar$335>0){
-                var tmpvar$336=(0);
-                var tmpvar$337=tmpvar$336;
-                for (var i=1; i<tmpvar$335; i++){tmpvar$337=tmpvar$337.successor;}
-                return Range(tmpvar$336,tmpvar$337,{Element:{t:Integer}})
+                var it$332 = (function(){var tmpvar$334=$$list.size;
+                if (tmpvar$334>0){
+                var tmpvar$335=(0);
+                var tmpvar$336=tmpvar$335;
+                for (var i=1; i<tmpvar$334; i++){tmpvar$336=tmpvar$336.successor;}
+                return Range(tmpvar$335,tmpvar$336,{Element:{t:Integer}})
                 }else return getEmpty();}()).iterator();
-                var index$334;while ((index$334=it$333.next())!==getFinished()){
-                    if($$list.includesAt(index$334,sublist$332)){
+                var index$333;while ((index$333=it$332.next())!==getFinished()){
+                    if($$list.includesAt(index$333,sublist$331)){
                         return true;
                     }
                 }
                 return false;
             };$$list.includes.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'sublist',$mt:'prm',$t:{t:List,a:{Element:{t:Anything}}},$an:function(){return[];}}],$cont:List,$an:function(){return[doc(String$("Determine if the given list occurs at some index in \nthis list.",63)),shared(),$default()];},d:['ceylon.language','List','$m','includes']};};
-            $$list.inclusions=function (sublist$338){
+            $$list.inclusions=function (sublist$337){
                 var $$list=this;
                 return Comprehension(function(){
-                    var it$339=(function(){var tmpvar$341=$$list.size;
-                    if (tmpvar$341>0){
-                    var tmpvar$342=(0);
-                    var tmpvar$343=tmpvar$342;
-                    for (var i=1; i<tmpvar$341; i++){tmpvar$343=tmpvar$343.successor;}
-                    return Range(tmpvar$342,tmpvar$343,{Element:{t:Integer}})
+                    var it$338=(function(){var tmpvar$340=$$list.size;
+                    if (tmpvar$340>0){
+                    var tmpvar$341=(0);
+                    var tmpvar$342=tmpvar$341;
+                    for (var i=1; i<tmpvar$340; i++){tmpvar$342=tmpvar$342.successor;}
+                    return Range(tmpvar$341,tmpvar$342,{Element:{t:Integer}})
                     }else return getEmpty();}()).iterator();
-                    var index$340=getFinished();
-                    var next$index$340=function(){
-                        while((index$340=it$339.next())!==getFinished()){
-                            if($$list.includesAt(index$340,sublist$338)){
-                                return index$340;
+                    var index$339=getFinished();
+                    var next$index$339=function(){
+                        while((index$339=it$338.next())!==getFinished()){
+                            if($$list.includesAt(index$339,sublist$337)){
+                                return index$339;
                             }
                         }
                         return getFinished();
                     }
-                    next$index$340();
+                    next$index$339();
                     return function(){
-                        if(index$340!==getFinished()){
-                            var index$340$344=index$340;
-                            var tmpvar$345=index$340$344;
-                            next$index$340();
-                            return tmpvar$345;
+                        if(index$339!==getFinished()){
+                            var index$339$343=index$339;
+                            var tmpvar$344=index$339$343;
+                            next$index$339();
+                            return tmpvar$344;
                         }
                         return getFinished();
                     }
                 },{Absent:{t:Null},Element:{t:Integer}});
             };
             $$list.inclusions.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Integer}}},$ps:[{$nm:'sublist',$mt:'prm',$t:{t:List,a:{Element:{t:Anything}}},$an:function(){return[];}}],$cont:List,$an:function(){return[doc(String$("The indexes in this list at which the given list \noccurs.",57)),shared(),$default()];},d:['ceylon.language','List','$m','inclusions']};};
-            $$list.firstInclusion=function firstInclusion(sublist$346){
+            $$list.firstInclusion=function firstInclusion(sublist$345){
                 var $$list=this;
-                var it$347 = (function(){var tmpvar$349=$$list.size;
-                if (tmpvar$349>0){
-                var tmpvar$350=(0);
-                var tmpvar$351=tmpvar$350;
-                for (var i=1; i<tmpvar$349; i++){tmpvar$351=tmpvar$351.successor;}
-                return Range(tmpvar$350,tmpvar$351,{Element:{t:Integer}})
+                var it$346 = (function(){var tmpvar$348=$$list.size;
+                if (tmpvar$348>0){
+                var tmpvar$349=(0);
+                var tmpvar$350=tmpvar$349;
+                for (var i=1; i<tmpvar$348; i++){tmpvar$350=tmpvar$350.successor;}
+                return Range(tmpvar$349,tmpvar$350,{Element:{t:Integer}})
                 }else return getEmpty();}()).iterator();
-                var index$348;while ((index$348=it$347.next())!==getFinished()){
-                    if($$list.includesAt(index$348,sublist$346)){
-                        return index$348;
+                var index$347;while ((index$347=it$346.next())!==getFinished()){
+                    if($$list.includesAt(index$347,sublist$345)){
+                        return index$347;
                     }
                 }
-                if (getFinished() === index$348){
+                if (getFinished() === index$347){
                     return null;
                 }
             };$$list.firstInclusion.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},{t:Integer}]},$ps:[{$nm:'sublist',$mt:'prm',$t:{t:List,a:{Element:{t:Anything}}},$an:function(){return[];}}],$cont:List,$an:function(){return[doc(String$("The first index in this list at which the given list \noccurs.",61)),shared(),$default()];},d:['ceylon.language','List','$m','firstInclusion']};};
-            $$list.lastInclusion=function lastInclusion(sublist$352){
+            $$list.lastInclusion=function lastInclusion(sublist$351){
                 var $$list=this;
-                var it$353 = (function(){var tmpvar$355=$$list.size;
-                if (tmpvar$355>0){
-                var tmpvar$356=(0);
-                var tmpvar$357=tmpvar$356;
-                for (var i=1; i<tmpvar$355; i++){tmpvar$357=tmpvar$357.successor;}
-                return Range(tmpvar$356,tmpvar$357,{Element:{t:Integer}})
+                var it$352 = (function(){var tmpvar$354=$$list.size;
+                if (tmpvar$354>0){
+                var tmpvar$355=(0);
+                var tmpvar$356=tmpvar$355;
+                for (var i=1; i<tmpvar$354; i++){tmpvar$356=tmpvar$356.successor;}
+                return Range(tmpvar$355,tmpvar$356,{Element:{t:Integer}})
                 }else return getEmpty();}()).reversed.iterator();
-                var index$354;while ((index$354=it$353.next())!==getFinished()){
-                    if($$list.includesAt(index$354,sublist$352)){
-                        return index$354;
+                var index$353;while ((index$353=it$352.next())!==getFinished()){
+                    if($$list.includesAt(index$353,sublist$351)){
+                        return index$353;
                     }
                 }
-                if (getFinished() === index$354){
+                if (getFinished() === index$353){
                     return null;
                 }
             };$$list.lastInclusion.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},{t:Integer}]},$ps:[{$nm:'sublist',$mt:'prm',$t:{t:List,a:{Element:{t:Anything}}},$an:function(){return[];}}],$cont:List,$an:function(){return[doc(String$("The last index in this list at which the given list \noccurs.",60)),shared(),$default()];},d:['ceylon.language','List','$m','lastInclusion']};};
-            $$list.occursAt=function occursAt(index$358,element$359){
+            $$list.occursAt=function occursAt(index$357,element$358){
                 var $$list=this;
-                var elem$360=$$list.get(index$358);
-                var element$361;
-                if((element$361=element$359)!==null){
-                    var elem$362;
-                    if((elem$362=elem$360)!==null){
-                        return elem$362.equals(element$361);
+                var elem$359=$$list.get(index$357);
+                var element$360;
+                if((element$360=element$358)!==null){
+                    var elem$361;
+                    if((elem$361=elem$359)!==null){
+                        return elem$361.equals(element$360);
                     }else {
                         return false;
                     }
                 }else {
-                    return exists(elem$360);
+                    return exists(elem$359);
                 }
             };$$list.occursAt.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'index',$mt:'prm',$t:{t:Integer},$an:function(){return[];}},{$nm:'element',$mt:'prm',$t:{t:Anything},$an:function(){return[];}}],$cont:List,$an:function(){return[shared(),$default()];},d:['ceylon.language','List','$m','occursAt']};};
-            $$list.occurs=function occurs(element$363){
+            $$list.occurs=function occurs(element$362){
                 var $$list=this;
-                var it$364 = (function(){var tmpvar$366=$$list.size;
-                if (tmpvar$366>0){
-                var tmpvar$367=(0);
-                var tmpvar$368=tmpvar$367;
-                for (var i=1; i<tmpvar$366; i++){tmpvar$368=tmpvar$368.successor;}
-                return Range(tmpvar$367,tmpvar$368,{Element:{t:Integer}})
+                var it$363 = (function(){var tmpvar$365=$$list.size;
+                if (tmpvar$365>0){
+                var tmpvar$366=(0);
+                var tmpvar$367=tmpvar$366;
+                for (var i=1; i<tmpvar$365; i++){tmpvar$367=tmpvar$367.successor;}
+                return Range(tmpvar$366,tmpvar$367,{Element:{t:Integer}})
                 }else return getEmpty();}()).iterator();
-                var index$365;while ((index$365=it$364.next())!==getFinished()){
-                    if($$list.occursAt(index$365,element$363)){
+                var index$364;while ((index$364=it$363.next())!==getFinished()){
+                    if($$list.occursAt(index$364,element$362)){
                         return true;
                     }
                 }
                 return false;
             };$$list.occurs.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'element',$mt:'prm',$t:{t:Anything},$an:function(){return[];}}],$cont:List,$an:function(){return[shared(),$default()];},d:['ceylon.language','List','$m','occurs']};};
-            $$list.occurrences=function (element$369){
+            $$list.occurrences=function (element$368){
                 var $$list=this;
                 return Comprehension(function(){
-                    var it$370=(function(){var tmpvar$372=$$list.size;
-                    if (tmpvar$372>0){
-                    var tmpvar$373=(0);
-                    var tmpvar$374=tmpvar$373;
-                    for (var i=1; i<tmpvar$372; i++){tmpvar$374=tmpvar$374.successor;}
-                    return Range(tmpvar$373,tmpvar$374,{Element:{t:Integer}})
+                    var it$369=(function(){var tmpvar$371=$$list.size;
+                    if (tmpvar$371>0){
+                    var tmpvar$372=(0);
+                    var tmpvar$373=tmpvar$372;
+                    for (var i=1; i<tmpvar$371; i++){tmpvar$373=tmpvar$373.successor;}
+                    return Range(tmpvar$372,tmpvar$373,{Element:{t:Integer}})
                     }else return getEmpty();}()).iterator();
-                    var index$371=getFinished();
-                    var next$index$371=function(){
-                        while((index$371=it$370.next())!==getFinished()){
-                            if($$list.occursAt(index$371,element$369)){
-                                return index$371;
+                    var index$370=getFinished();
+                    var next$index$370=function(){
+                        while((index$370=it$369.next())!==getFinished()){
+                            if($$list.occursAt(index$370,element$368)){
+                                return index$370;
                             }
                         }
                         return getFinished();
                     }
-                    next$index$371();
+                    next$index$370();
                     return function(){
-                        if(index$371!==getFinished()){
-                            var index$371$375=index$371;
-                            var tmpvar$376=index$371$375;
-                            next$index$371();
-                            return tmpvar$376;
+                        if(index$370!==getFinished()){
+                            var index$370$374=index$370;
+                            var tmpvar$375=index$370$374;
+                            next$index$370();
+                            return tmpvar$375;
                         }
                         return getFinished();
                     }
                 },{Absent:{t:Null},Element:{t:Integer}});
             };
             $$list.occurrences.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Integer}}},$ps:[{$nm:'element',$mt:'prm',$t:{t:Anything},$an:function(){return[];}}],$cont:List,$an:function(){return[doc(String$("The indexes in this list at which the given element \noccurs.",60)),shared(),$default()];},d:['ceylon.language','List','$m','occurrences']};};
-            $$list.firstOccurrence=function firstOccurrence(element$377){
+            $$list.firstOccurrence=function firstOccurrence(element$376){
                 var $$list=this;
-                var it$378 = (function(){var tmpvar$380=$$list.size;
-                if (tmpvar$380>0){
-                var tmpvar$381=(0);
-                var tmpvar$382=tmpvar$381;
-                for (var i=1; i<tmpvar$380; i++){tmpvar$382=tmpvar$382.successor;}
-                return Range(tmpvar$381,tmpvar$382,{Element:{t:Integer}})
+                var it$377 = (function(){var tmpvar$379=$$list.size;
+                if (tmpvar$379>0){
+                var tmpvar$380=(0);
+                var tmpvar$381=tmpvar$380;
+                for (var i=1; i<tmpvar$379; i++){tmpvar$381=tmpvar$381.successor;}
+                return Range(tmpvar$380,tmpvar$381,{Element:{t:Integer}})
                 }else return getEmpty();}()).iterator();
-                var index$379;while ((index$379=it$378.next())!==getFinished()){
-                    if($$list.occursAt(index$379,element$377)){
-                        return index$379;
+                var index$378;while ((index$378=it$377.next())!==getFinished()){
+                    if($$list.occursAt(index$378,element$376)){
+                        return index$378;
                     }
                 }
-                if (getFinished() === index$379){
+                if (getFinished() === index$378){
                     return null;
                 }
             };$$list.firstOccurrence.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},{t:Integer}]},$ps:[{$nm:'element',$mt:'prm',$t:{t:Anything},$an:function(){return[];}}],$cont:List,$an:function(){return[doc(String$("The first index in this list at which the given element \noccurs.",64)),shared(),$default()];},d:['ceylon.language','List','$m','firstOccurrence']};};
-            $$list.lastOccurrence=function lastOccurrence(element$383){
+            $$list.lastOccurrence=function lastOccurrence(element$382){
                 var $$list=this;
-                var it$384 = (function(){var tmpvar$386=$$list.size;
-                if (tmpvar$386>0){
-                var tmpvar$387=(0);
-                var tmpvar$388=tmpvar$387;
-                for (var i=1; i<tmpvar$386; i++){tmpvar$388=tmpvar$388.successor;}
-                return Range(tmpvar$387,tmpvar$388,{Element:{t:Integer}})
+                var it$383 = (function(){var tmpvar$385=$$list.size;
+                if (tmpvar$385>0){
+                var tmpvar$386=(0);
+                var tmpvar$387=tmpvar$386;
+                for (var i=1; i<tmpvar$385; i++){tmpvar$387=tmpvar$387.successor;}
+                return Range(tmpvar$386,tmpvar$387,{Element:{t:Integer}})
                 }else return getEmpty();}()).reversed.iterator();
-                var index$385;while ((index$385=it$384.next())!==getFinished()){
-                    if($$list.occursAt(index$385,element$383)){
-                        return index$385;
+                var index$384;while ((index$384=it$383.next())!==getFinished()){
+                    if($$list.occursAt(index$384,element$382)){
+                        return index$384;
                     }
                 }
-                if (getFinished() === index$385){
+                if (getFinished() === index$384){
                     return null;
                 }
             };$$list.lastOccurrence.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},{t:Integer}]},$ps:[{$nm:'element',$mt:'prm',$t:{t:Anything},$an:function(){return[];}}],$cont:List,$an:function(){return[doc(String$("The last index in this list at which the given element \noccurs.",63)),shared(),$default()];},d:['ceylon.language','List','$m','lastOccurrence']};};
-            $$list.indexes=function (selecting$389){
+            $$list.indexes=function (selecting$388){
                 var $$list=this;
                 return Comprehension(function(){
-                    var it$390=(function(){var tmpvar$392=$$list.size;
-                    if (tmpvar$392>0){
-                    var tmpvar$393=(0);
-                    var tmpvar$394=tmpvar$393;
-                    for (var i=1; i<tmpvar$392; i++){tmpvar$394=tmpvar$394.successor;}
-                    return Range(tmpvar$393,tmpvar$394,{Element:{t:Integer}})
+                    var it$389=(function(){var tmpvar$391=$$list.size;
+                    if (tmpvar$391>0){
+                    var tmpvar$392=(0);
+                    var tmpvar$393=tmpvar$392;
+                    for (var i=1; i<tmpvar$391; i++){tmpvar$393=tmpvar$393.successor;}
+                    return Range(tmpvar$392,tmpvar$393,{Element:{t:Integer}})
                     }else return getEmpty();}()).iterator();
-                    var index$391=getFinished();
-                    var next$index$391=function(){
-                        while((index$391=it$390.next())!==getFinished()){
-                            if(selecting$389((opt$395=$$list.get(index$391),opt$395!==null?opt$395:getNothing()))){
-                                return index$391;
+                    var index$390=getFinished();
+                    var next$index$390=function(){
+                        while((index$390=it$389.next())!==getFinished()){
+                            if(selecting$388((opt$394=$$list.get(index$390),opt$394!==null?opt$394:getNothing()))){
+                                return index$390;
                             }
                         }
                         return getFinished();
                     }
-                    next$index$391();
+                    next$index$390();
                     return function(){
-                        if(index$391!==getFinished()){
-                            var index$391$396=index$391;
-                            var tmpvar$397=index$391$396;
-                            next$index$391();
-                            return tmpvar$397;
+                        if(index$390!==getFinished()){
+                            var index$390$395=index$390;
+                            var tmpvar$396=index$390$395;
+                            next$index$390();
+                            return tmpvar$396;
                         }
                         return getFinished();
                     }
                 },{Absent:{t:Null},Element:{t:Integer}});
             };
             $$list.indexes.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Integer}}},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[doc("The predicate the indexed elements must satisfy")];}}],$cont:List,$an:function(){return[doc(String$("The indexes in this list for which the element \nsatisfies the given predicate.",78)),shared(),$default()];},d:['ceylon.language','List','$m','indexes']};};
-            $$list.trim=function trim(trimming$398){
+            $$list.trim=function trim(trimming$397){
                 var $$list=this;
-                var l$399;
-                if((l$399=$$list.lastIndex)!==null){
-                    var from$400=(-(1));
-                    function setFrom$400(from$401){return from$400=from$401;};
-                    $prop$getFrom$400={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','List','$m','trim','$at','from']};}};
-                    $prop$getFrom$400.get=function(){return from$400};
-                    $prop$getFrom$400.set=setFrom$400;
-                    if (setFrom$400.$$metamodel$$===undefined)setFrom$400.$$metamodel$$=$prop$getFrom$400.$$metamodel$$;
-                    var to$402=(-(1));
-                    function setTo$402(to$403){return to$402=to$403;};
-                    $prop$getTo$402={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','List','$m','trim','$at','to']};}};
-                    $prop$getTo$402.get=function(){return to$402};
-                    $prop$getTo$402.set=setTo$402;
-                    if (setTo$402.$$metamodel$$===undefined)setTo$402.$$metamodel$$=$prop$getTo$402.$$metamodel$$;
-                    var it$404 = Range((0),l$399,{Element:{t:Integer}}).iterator();
-                    var index$405;while ((index$405=it$404.next())!==getFinished()){
-                        if((!trimming$398((opt$406=$$list.get(index$405),opt$406!==null?opt$406:getNothing())))){
-                            from$400=index$405;
+                var l$398;
+                if((l$398=$$list.lastIndex)!==null){
+                    var from$399=(-(1));
+                    function setFrom$399(from$400){return from$399=from$400;};
+                    $prop$getFrom$399={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','List','$m','trim','$at','from']};}};
+                    $prop$getFrom$399.get=function(){return from$399};
+                    $prop$getFrom$399.set=setFrom$399;
+                    if (setFrom$399.$$metamodel$$===undefined)setFrom$399.$$metamodel$$=$prop$getFrom$399.$$metamodel$$;
+                    var to$401=(-(1));
+                    function setTo$401(to$402){return to$401=to$402;};
+                    $prop$getTo$401={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','List','$m','trim','$at','to']};}};
+                    $prop$getTo$401.get=function(){return to$401};
+                    $prop$getTo$401.set=setTo$401;
+                    if (setTo$401.$$metamodel$$===undefined)setTo$401.$$metamodel$$=$prop$getTo$401.$$metamodel$$;
+                    var it$403 = Range((0),l$398,{Element:{t:Integer}}).iterator();
+                    var index$404;while ((index$404=it$403.next())!==getFinished()){
+                        if((!trimming$397((opt$405=$$list.get(index$404),opt$405!==null?opt$405:getNothing())))){
+                            from$399=index$404;
                             break;
                         }
-                        var opt$406;
+                        var opt$405;
                     }
-                    if (getFinished() === index$405){
+                    if (getFinished() === index$404){
                         return getEmpty();
                     }
-                    var it$407 = Range(l$399,(0),{Element:{t:Integer}}).iterator();
-                    var index$408;while ((index$408=it$407.next())!==getFinished()){
-                        if((!trimming$398((opt$409=$$list.get(index$408),opt$409!==null?opt$409:getNothing())))){
-                            to$402=index$408;
+                    var it$406 = Range(l$398,(0),{Element:{t:Integer}}).iterator();
+                    var index$407;while ((index$407=it$406.next())!==getFinished()){
+                        if((!trimming$397((opt$408=$$list.get(index$407),opt$408!==null?opt$408:getNothing())))){
+                            to$401=index$407;
                             break;
                         }
-                        var opt$409;
+                        var opt$408;
                     }
-                    if (getFinished() === index$408){
+                    if (getFinished() === index$407){
                         return getEmpty();
                     }
-                    return $$list.span(from$400,to$402);
+                    return $$list.span(from$399,to$401);
                 }else {
                     return getEmpty();
                 }
             };$$list.trim.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:List,a:{Element:'Element'}},$ps:[{$nm:'trimming',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:List,$an:function(){return[shared(),$default()];},d:['ceylon.language','List','$m','trim']};};
-            $$list.trimLeading=function trimLeading(trimming$410){
+            $$list.trimLeading=function trimLeading(trimming$409){
                 var $$list=this;
-                var l$411;
-                if((l$411=$$list.lastIndex)!==null){
-                    var it$412 = Range((0),l$411,{Element:{t:Integer}}).iterator();
-                    var index$413;while ((index$413=it$412.next())!==getFinished()){
-                        if((!trimming$410((opt$414=$$list.get(index$413),opt$414!==null?opt$414:getNothing())))){
-                            return $$list.span(index$413,l$411);
+                var l$410;
+                if((l$410=$$list.lastIndex)!==null){
+                    var it$411 = Range((0),l$410,{Element:{t:Integer}}).iterator();
+                    var index$412;while ((index$412=it$411.next())!==getFinished()){
+                        if((!trimming$409((opt$413=$$list.get(index$412),opt$413!==null?opt$413:getNothing())))){
+                            return $$list.span(index$412,l$410);
                         }
-                        var opt$414;
+                        var opt$413;
                     }
                 }
                 return getEmpty();
             };$$list.trimLeading.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:List,a:{Element:'Element'}},$ps:[{$nm:'trimming',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:List,$an:function(){return[shared(),$default()];},d:['ceylon.language','List','$m','trimLeading']};};
-            $$list.trimTrailing=function trimTrailing(trimming$415){
+            $$list.trimTrailing=function trimTrailing(trimming$414){
                 var $$list=this;
-                var l$416;
-                if((l$416=$$list.lastIndex)!==null){
-                    var it$417 = Range(l$416,(0),{Element:{t:Integer}}).iterator();
-                    var index$418;while ((index$418=it$417.next())!==getFinished()){
-                        if((!trimming$415((opt$419=$$list.get(index$418),opt$419!==null?opt$419:getNothing())))){
-                            return $$list.span((0),index$418);
+                var l$415;
+                if((l$415=$$list.lastIndex)!==null){
+                    var it$416 = Range(l$415,(0),{Element:{t:Integer}}).iterator();
+                    var index$417;while ((index$417=it$416.next())!==getFinished()){
+                        if((!trimming$414((opt$418=$$list.get(index$417),opt$418!==null?opt$418:getNothing())))){
+                            return $$list.span((0),index$417);
                         }
-                        var opt$419;
+                        var opt$418;
                     }
                 }
                 return getEmpty();
             };$$list.trimTrailing.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:List,a:{Element:'Element'}},$ps:[{$nm:'trimming',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:List,$an:function(){return[shared(),$default()];},d:['ceylon.language','List','$m','trimTrailing']};};
-            $$list.initial=function (length$420){
+            $$list.initial=function (length$419){
                 var $$list=this;
-                return $$list.segment((0),length$420);
+                return $$list.segment((0),length$419);
             };
             $$list.initial.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:List,a:{Element:'Element'}},$ps:[{$nm:'length',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:List,$an:function(){return[doc(String$("Select the first elements of this list, returning a \nlist no longer than the given length. If this list is \nshorter than the given length, return this list. \nOtherwise return a list of the given length.",202)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),List.$$.prototype.terminal)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared(),$default()];},d:['ceylon.language','List','$m','initial']};};
-            $$list.terminal=function terminal(length$421){
+            $$list.terminal=function terminal(length$420){
                 var $$list=this;
-                var l$422;
-                if((l$422=$$list.lastIndex)!==null&&length$421.compare((0)).equals(getLarger())){
-                    return $$list.span(l$422.minus(length$421).plus((1)),l$422);
+                var l$421;
+                if((l$421=$$list.lastIndex)!==null&&length$420.compare((0)).equals(getLarger())){
+                    return $$list.span(l$421.minus(length$420).plus((1)),l$421);
                 }else {
                     return getEmpty();
                 }
@@ -2684,7 +2679,7 @@ function $init$List(){
 }
 exports.$init$List=$init$List;
 $init$List();
-var opt$279,opt$283,opt$395;
+var opt$278,opt$282,opt$394;
 function Tuple(first, rest, $$targs$$,$$tuple){
     $init$Tuple();
     if ($$tuple===undefined)$$tuple=new Tuple.$$;
@@ -2693,10 +2688,10 @@ function Tuple(first, rest, $$targs$$,$$tuple){
     Sequence($$tuple.$$targs$$===undefined?$$targs$$:{Element:$$tuple.$$targs$$.Element},$$tuple);
     Cloneable($$tuple.$$targs$$===undefined?$$targs$$:{Clone:{t:Tuple,a:{Rest:$$tuple.$$targs$$.Rest,First:$$tuple.$$targs$$.First,Element:$$tuple.$$targs$$.Element}}},$$tuple);
     add_type_arg($$tuple,'Clone',{t:Tuple,a:{Rest:$$tuple.$$targs$$.Rest,First:$$tuple.$$targs$$.First,Element:$$tuple.$$targs$$.Element}});
-    $$tuple.first$423_=first;
+    $$tuple.first$422_=first;
     $$tuple.$prop$getFirst={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'First',$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$at','first']};}};
     $$tuple.$prop$getFirst.get=function(){return first};
-    $$tuple.rest$424_=rest;
+    $$tuple.rest$423_=rest;
     $$tuple.$prop$getRest={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'Rest',$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$at','rest']};}};
     $$tuple.$prop$getRest.get=function(){return rest};
     $$tuple.$prop$getSize={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$at','size']};}};
@@ -2713,37 +2708,37 @@ function $init$Tuple(){
     if (Tuple.$$===undefined){
         initTypeProto(Tuple,'ceylon.language::Tuple',$init$Object$(),$init$Sequence(),$init$Cloneable());
         (function($$tuple){
-            defineAttr($$tuple,'first',function(){return this.first$423_;},undefined,function(){return{mod:$$METAMODEL$$,$t:'First',$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$at','first']};});
-            defineAttr($$tuple,'rest',function(){return this.rest$424_;},undefined,function(){return{mod:$$METAMODEL$$,$t:'Rest',$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$at','rest']};});
+            defineAttr($$tuple,'first',function(){return this.first$422_;},undefined,function(){return{mod:$$METAMODEL$$,$t:'First',$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$at','first']};});
+            defineAttr($$tuple,'rest',function(){return this.rest$423_;},undefined,function(){return{mod:$$METAMODEL$$,$t:'Rest',$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$at','rest']};});
             defineAttr($$tuple,'size',function(){
                 var $$tuple=this;
                 return (1).plus($$tuple.rest.size);
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$at','size']};});
-            $$tuple.get=function get(index$425){
+            $$tuple.get=function get(index$424){
                 var $$tuple=this;
                 
-                var case$426=index$425.compare((0));
-                if (case$426===getSmaller()) {
+                var case$425=index$424.compare((0));
+                if (case$425===getSmaller()) {
                     return null;
-                }else if (case$426===getEqual()) {
+                }else if (case$425===getEqual()) {
                     return $$tuple.first;
-                }else if (case$426===getLarger()) {
-                    return $$tuple.rest.get(index$425.minus((1)));
+                }else if (case$425===getLarger()) {
+                    return $$tuple.rest.get(index$424.minus((1)));
                 }
             };$$tuple.get.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},$ps:[{$nm:'index',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$m','get']};};
             defineAttr($$tuple,'lastIndex',function(){
                 var $$tuple=this;
-                var restLastIndex$427;
-                if((restLastIndex$427=$$tuple.rest.lastIndex)!==null){
-                    return restLastIndex$427.plus((1));
+                var restLastIndex$426;
+                if((restLastIndex$426=$$tuple.rest.lastIndex)!==null){
+                    return restLastIndex$426.plus((1));
                 }else {
                     return (0);
                 }
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$at','lastIndex']};});defineAttr($$tuple,'last',function(){
                 var $$tuple=this;
-                var rest$428;
-                if(nonempty((rest$428=$$tuple.rest))){
-                    return rest$428.last;
+                var rest$427;
+                if(nonempty((rest$427=$$tuple.rest))){
+                    return rest$427.last;
                 }else {
                     return $$tuple.first;
                 }
@@ -2751,39 +2746,39 @@ function $init$Tuple(){
                 var $$tuple=this;
                 return $$tuple.rest.reversed.withTrailing($$tuple.first,{Other:$$tuple.$$targs$$.First});
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Sequence,a:{Element:'Element'}},$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$at','reversed']};});
-            $$tuple.segment=function segment(from$429,length$430){
+            $$tuple.segment=function segment(from$428,length$429){
                 var $$tuple=this;
-                if((length$430.compare((0))!==getLarger())){
+                if((length$429.compare((0))!==getLarger())){
                     return getEmpty();
                 }
-                var realFrom$431=(opt$432=(from$429.compare((0)).equals(getSmaller())?(0):null),opt$432!==null?opt$432:from$429);
-                var opt$432;
-                if(realFrom$431.equals((0))){
-                    return (opt$433=(length$430.equals((1))?Tuple($$tuple.first,getEmpty(),{Rest:{t:Empty},First:$$tuple.$$targs$$.First,Element:$$tuple.$$targs$$.First}):null),opt$433!==null?opt$433:$$tuple.rest.segment((0),length$430.plus(realFrom$431).minus((1))).withLeading($$tuple.first,{Other:$$tuple.$$targs$$.First}));
-                    var opt$433;
+                var realFrom$430=(opt$431=(from$428.compare((0)).equals(getSmaller())?(0):null),opt$431!==null?opt$431:from$428);
+                var opt$431;
+                if(realFrom$430.equals((0))){
+                    return (opt$432=(length$429.equals((1))?Tuple($$tuple.first,getEmpty(),{Rest:{t:Empty},First:$$tuple.$$targs$$.First,Element:$$tuple.$$targs$$.First}):null),opt$432!==null?opt$432:$$tuple.rest.segment((0),length$429.plus(realFrom$430).minus((1))).withLeading($$tuple.first,{Other:$$tuple.$$targs$$.First}));
+                    var opt$432;
                 }
-                return $$tuple.rest.segment(realFrom$431.minus((1)),length$430);
+                return $$tuple.rest.segment(realFrom$430.minus((1)),length$429);
             };$$tuple.segment.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$ps:[{$nm:'from',$mt:'prm',$t:{t:Integer},$an:function(){return[];}},{$nm:'length',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$m','segment']};};
-            $$tuple.span=function span(from$434,end$435){
+            $$tuple.span=function span(from$433,end$434){
                 var $$tuple=this;
-                if((from$434.compare((0)).equals(getSmaller())&&end$435.compare((0)).equals(getSmaller()))){
+                if((from$433.compare((0)).equals(getSmaller())&&end$434.compare((0)).equals(getSmaller()))){
                     return getEmpty();
                 }
-                var realFrom$436=(opt$437=(from$434.compare((0)).equals(getSmaller())?(0):null),opt$437!==null?opt$437:from$434);
-                var opt$437;
-                var realEnd$438=(opt$439=(end$435.compare((0)).equals(getSmaller())?(0):null),opt$439!==null?opt$439:end$435);
+                var realFrom$435=(opt$436=(from$433.compare((0)).equals(getSmaller())?(0):null),opt$436!==null?opt$436:from$433);
+                var opt$436;
+                var realEnd$437=(opt$438=(end$434.compare((0)).equals(getSmaller())?(0):null),opt$438!==null?opt$438:end$434);
+                var opt$438;
+                return (opt$439=((realFrom$435.compare(realEnd$437)!==getLarger())?$$tuple.segment(from$433,realEnd$437.minus(realFrom$435).plus((1))):null),opt$439!==null?opt$439:$$tuple.segment(realEnd$437,realFrom$435.minus(realEnd$437).plus((1))).reversed.sequence);
                 var opt$439;
-                return (opt$440=((realFrom$436.compare(realEnd$438)!==getLarger())?$$tuple.segment(from$434,realEnd$438.minus(realFrom$436).plus((1))):null),opt$440!==null?opt$440:$$tuple.segment(realEnd$438,realFrom$436.minus(realEnd$438).plus((1))).reversed.sequence);
-                var opt$440;
             };$$tuple.span.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$ps:[{$nm:'from',$mt:'prm',$t:{t:Integer},$an:function(){return[];}},{$nm:'end',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$m','span']};};
-            $$tuple.spanTo=function (to$441){
+            $$tuple.spanTo=function (to$440){
                 var $$tuple=this;
-                return (opt$442=(to$441.compare((0)).equals(getSmaller())?getEmpty():null),opt$442!==null?opt$442:$$tuple.span((0),to$441));
+                return (opt$441=(to$440.compare((0)).equals(getSmaller())?getEmpty():null),opt$441!==null?opt$441:$$tuple.span((0),to$440));
             };
             $$tuple.spanTo.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$ps:[{$nm:'to',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$m','spanTo']};};
-            $$tuple.spanFrom=function (from$443){
+            $$tuple.spanFrom=function (from$442){
                 var $$tuple=this;
-                return $$tuple.span(from$443,$$tuple.size);
+                return $$tuple.span(from$442,$$tuple.size);
             };
             $$tuple.spanFrom.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$ps:[{$nm:'from',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$m','spanFrom']};};
             defineAttr($$tuple,'clone',function(){
@@ -2792,56 +2787,56 @@ function $init$Tuple(){
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Tuple,a:{Rest:'Rest',First:'First',Element:'Element'}},$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$at','clone']};});
             $$tuple.iterator=function iterator(){
                 var $$tuple=this;
-                function iterator$444($$targs$$){
-                    var $$iterator$444=new iterator$444.$$;
-                    $$iterator$444.$$targs$$=$$targs$$;
-                    Iterator({Element:$$tuple.$$targs$$.Element},$$iterator$444);
-                    $$iterator$444.current$445_=$$tuple;
-                    $$iterator$444.$prop$getCurrent$445={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$cont:iterator$444,$an:function(){return[variable()];},d:['ceylon.language','Tuple','$m','iterator','$o','iterator','$at','current']};}};
-                    $$iterator$444.$prop$getCurrent$445.get=function(){return current$445};
-                    return $$iterator$444;
+                function iterator$443($$targs$$){
+                    var $$iterator$443=new iterator$443.$$;
+                    $$iterator$443.$$targs$$=$$targs$$;
+                    Iterator({Element:$$tuple.$$targs$$.Element},$$iterator$443);
+                    $$iterator$443.current$444_=$$tuple;
+                    $$iterator$443.$prop$getCurrent$444={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$cont:iterator$443,$an:function(){return[variable()];},d:['ceylon.language','Tuple','$m','iterator','$o','iterator','$at','current']};}};
+                    $$iterator$443.$prop$getCurrent$444.get=function(){return current$444};
+                    return $$iterator$443;
                 }
-                function $init$iterator$444(){
-                    if (iterator$444.$$===undefined){
-                        initTypeProto(iterator$444,'ceylon.language::Tuple.iterator.iterator',Basic,$init$Iterator());
+                function $init$iterator$443(){
+                    if (iterator$443.$$===undefined){
+                        initTypeProto(iterator$443,'ceylon.language::Tuple.iterator.iterator',Basic,$init$Iterator());
                     }
-                    return iterator$444;
+                    return iterator$443;
                 }
-                $init$iterator$444();
-                (function($$iterator$444){
-                    defineAttr($$iterator$444,'current$445',function(){return this.current$445_;},function(current$446){return this.current$445_=current$446;},function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$cont:iterator$444,$an:function(){return[variable()];},d:['ceylon.language','Tuple','$m','iterator','$o','iterator','$at','current']};});
-                    $$iterator$444.next=function next(){
-                        var $$iterator$444=this;
-                        var c$447;
-                        if(nonempty((c$447=$$iterator$444.current$445))){
-                            $$iterator$444.current$445=c$447.rest;
-                            return c$447.first;
+                $init$iterator$443();
+                (function($$iterator$443){
+                    defineAttr($$iterator$443,'current$444',function(){return this.current$444_;},function(current$445){return this.current$444_=current$445;},function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$cont:iterator$443,$an:function(){return[variable()];},d:['ceylon.language','Tuple','$m','iterator','$o','iterator','$at','current']};});
+                    $$iterator$443.next=function next(){
+                        var $$iterator$443=this;
+                        var c$446;
+                        if(nonempty((c$446=$$iterator$443.current$444))){
+                            $$iterator$443.current$444=c$446.rest;
+                            return c$446.first;
                         }else {
                             return getFinished();
                         }
-                    };$$iterator$444.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:iterator$444,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$m','iterator','$o','iterator','$m','next']};};
-                })(iterator$444.$$.prototype);
-                var iterator$448;
-                function getIterator$448(){
-                    if (iterator$448===undefined)iterator$448=$init$iterator$444()({Element:$$tuple.$$targs$$.Element});
-                    return iterator$448;
+                    };$$iterator$443.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:iterator$443,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$m','iterator','$o','iterator','$m','next']};};
+                })(iterator$443.$$.prototype);
+                var iterator$447;
+                function getIterator$447(){
+                    if (iterator$447===undefined)iterator$447=$init$iterator$443()({Element:$$tuple.$$targs$$.Element});
+                    return iterator$447;
                 }
-                getIterator$448.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$444},d:['ceylon.language','Tuple','$m','iterator','$at','iterator']};};
-                $prop$getIterator$448={get:getIterator$448,$$metamodel$$:getIterator$448.$$metamodel$$};
-                return getIterator$448();
+                getIterator$447.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$443},d:['ceylon.language','Tuple','$m','iterator','$at','iterator']};};
+                $prop$getIterator$447={get:getIterator$447,$$metamodel$$:getIterator$447.$$metamodel$$};
+                return getIterator$447();
             };$$tuple.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$ps:[],$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$m','iterator']};};
-            $$tuple.contains=function contains(element$449){
+            $$tuple.contains=function contains(element$448){
                 var $$tuple=this;
-                var first$450;
-                if((first$450=$$tuple.first)!==null&&first$450.equals(element$449)){
+                var first$449;
+                if((first$449=$$tuple.first)!==null&&first$449.equals(element$448)){
                     return true;
                 }else {
-                    return $$tuple.rest.contains(element$449);
+                    return $$tuple.rest.contains(element$448);
                 }
             };$$tuple.contains.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'element',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:Tuple,$an:function(){return[shared(),actual()];},d:['ceylon.language','Tuple','$m','contains']};};
-            $$tuple.withLeading=function (element$451,$$$mptypes){
+            $$tuple.withLeading=function (element$450,$$$mptypes){
                 var $$tuple=this;
-                return Tuple(element$451,$$tuple,{Rest:{t:Tuple,a:{Rest:$$tuple.$$targs$$.Rest,First:$$tuple.$$targs$$.First,Element:$$tuple.$$targs$$.Element}},First:$$$mptypes.Other,Element:{ t:'u', l:[$$$mptypes.Other,$$tuple.$$targs$$.Element]}});
+                return Tuple(element$450,$$tuple,{Rest:{t:Tuple,a:{Rest:$$tuple.$$targs$$.Rest,First:$$tuple.$$targs$$.First,Element:$$tuple.$$targs$$.Element}},First:$$$mptypes.Other,Element:{ t:'u', l:[$$$mptypes.Other,$$tuple.$$targs$$.Element]}});
             };
             $$tuple.withLeading.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:'Rest',First:'First',Element:'Element'}},First:'Other',Element:{ t:'u', l:['Element','Other']}}},$ps:[{$nm:'element',$mt:'prm',$t:'Other',$an:function(){return[doc("The first element of the resulting tuple.")];}}],$cont:Tuple,$tp:{Other:{}},$an:function(){return[doc(String$("Returns a new tuple that starts with the specified\nelement, followed by the elements of this tuple.",99)),shared(),actual()];},d:['ceylon.language','Tuple','$m','withLeading']};};
         })(Tuple.$$.prototype);
@@ -2850,20 +2845,20 @@ function $init$Tuple(){
 }
 exports.$init$Tuple=$init$Tuple;
 $init$Tuple();
-var opt$442;
-function ChainedIterator(first$452, second$453, $$targs$$,$$chainedIterator){
+var opt$441;
+function ChainedIterator(first$451, second$452, $$targs$$,$$chainedIterator){
     $init$ChainedIterator();
     if ($$chainedIterator===undefined)$$chainedIterator=new ChainedIterator.$$;
     set_type_args($$chainedIterator,$$targs$$);
-    $$chainedIterator.first$452_=first$452;
-    $$chainedIterator.second$453_=second$453;
+    $$chainedIterator.first$451_=first$451;
+    $$chainedIterator.second$452_=second$452;
     Iterator($$chainedIterator.$$targs$$===undefined?$$targs$$:{Element:{ t:'u', l:[$$chainedIterator.$$targs$$.Element,$$chainedIterator.$$targs$$.Other]}},$$chainedIterator);
-    $$chainedIterator.iter$454_=$$chainedIterator.first$452.iterator();
-    $$chainedIterator.$prop$getIter$454={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:{ t:'u', l:['Element','Other']}}},$cont:ChainedIterator,$an:function(){return[variable()];},d:['ceylon.language','ChainedIterator','$at','iter']};}};
-    $$chainedIterator.$prop$getIter$454.get=function(){return iter$454};
-    $$chainedIterator.more$455_=true;
-    $$chainedIterator.$prop$getMore$455={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:ChainedIterator,$an:function(){return[variable()];},d:['ceylon.language','ChainedIterator','$at','more']};}};
-    $$chainedIterator.$prop$getMore$455.get=function(){return more$455};
+    $$chainedIterator.iter$453_=$$chainedIterator.first$451.iterator();
+    $$chainedIterator.$prop$getIter$453={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:{ t:'u', l:['Element','Other']}}},$cont:ChainedIterator,$an:function(){return[variable()];},d:['ceylon.language','ChainedIterator','$at','iter']};}};
+    $$chainedIterator.$prop$getIter$453.get=function(){return iter$453};
+    $$chainedIterator.more$454_=true;
+    $$chainedIterator.$prop$getMore$454={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:ChainedIterator,$an:function(){return[variable()];},d:['ceylon.language','ChainedIterator','$at','more']};}};
+    $$chainedIterator.$prop$getMore$454.get=function(){return more$454};
     return $$chainedIterator;
 }
 ChainedIterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:Basic},$tp:{Element:{'var':'out'},Other:{'var':'out'}},satisfies:[{t:Iterator,a:{Element:{ t:'u', l:['Element','Other']}}}],$an:function(){return[doc(String$("An `Iterator` that returns the elements of two\n`Iterable`s, as if they were chained together.",93)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Iterable.$$.prototype.chain)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),by([String$("Enrique Zamudio",15)].reifyCeylonType({Absent:{t:Null},Element:{t:String$}}))];},d:['ceylon.language','ChainedIterator']};};
@@ -2871,24 +2866,24 @@ function $init$ChainedIterator(){
     if (ChainedIterator.$$===undefined){
         initTypeProto(ChainedIterator,'ceylon.language::ChainedIterator',Basic,$init$Iterator());
         (function($$chainedIterator){
-            defineAttr($$chainedIterator,'iter$454',function(){return this.iter$454_;},function(iter$456){return this.iter$454_=iter$456;},function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:{ t:'u', l:['Element','Other']}}},$cont:ChainedIterator,$an:function(){return[variable()];},d:['ceylon.language','ChainedIterator','$at','iter']};});
-            defineAttr($$chainedIterator,'more$455',function(){return this.more$455_;},function(more$457){return this.more$455_=more$457;},function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:ChainedIterator,$an:function(){return[variable()];},d:['ceylon.language','ChainedIterator','$at','more']};});
+            defineAttr($$chainedIterator,'iter$453',function(){return this.iter$453_;},function(iter$455){return this.iter$453_=iter$455;},function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:{ t:'u', l:['Element','Other']}}},$cont:ChainedIterator,$an:function(){return[variable()];},d:['ceylon.language','ChainedIterator','$at','iter']};});
+            defineAttr($$chainedIterator,'more$454',function(){return this.more$454_;},function(more$456){return this.more$454_=more$456;},function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:ChainedIterator,$an:function(){return[variable()];},d:['ceylon.language','ChainedIterator','$at','more']};});
             $$chainedIterator.next=function next(){
                 var $$chainedIterator=this;
-                var e$458=$$chainedIterator.iter$454.next();
-                function setE$458(e$459){return e$458=e$459;};
-                var f$460;
-                if(isOfType((f$460=e$458),{t:Finished})){
-                    if($$chainedIterator.more$455){
-                        $$chainedIterator.iter$454=$$chainedIterator.second$453.iterator();
-                        $$chainedIterator.more$455=false;
-                        e$458=$$chainedIterator.iter$454.next();
+                var e$457=$$chainedIterator.iter$453.next();
+                function setE$457(e$458){return e$457=e$458;};
+                var f$459;
+                if(isOfType((f$459=e$457),{t:Finished})){
+                    if($$chainedIterator.more$454){
+                        $$chainedIterator.iter$453=$$chainedIterator.second$452.iterator();
+                        $$chainedIterator.more$454=false;
+                        e$457=$$chainedIterator.iter$453.next();
                     }
                 }
-                return e$458;
+                return e$457;
             };$$chainedIterator.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element','Other',{t:Finished}]},$ps:[],$cont:ChainedIterator,$an:function(){return[shared(),actual()];},d:['ceylon.language','ChainedIterator','$m','next']};};
-            defineAttr($$chainedIterator,'first$452',function(){return this.first$452_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}},$cont:ChainedIterator,d:['ceylon.language','ChainedIterator','$at','first']};});
-            defineAttr($$chainedIterator,'second$453',function(){return this.second$453_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:'Other'}},$cont:ChainedIterator,d:['ceylon.language','ChainedIterator','$at','second']};});
+            defineAttr($$chainedIterator,'first$451',function(){return this.first$451_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}},$cont:ChainedIterator,d:['ceylon.language','ChainedIterator','$at','first']};});
+            defineAttr($$chainedIterator,'second$452',function(){return this.second$452_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:'Other'}},$cont:ChainedIterator,d:['ceylon.language','ChainedIterator','$at','second']};});
         })(ChainedIterator.$$.prototype);
     }
     return ChainedIterator;
@@ -2900,10 +2895,10 @@ function Entry(key, item, $$targs$$,$$entry){
     if ($$entry===undefined)$$entry=new Entry.$$;
     set_type_args($$entry,$$targs$$);
     Object$($$entry);
-    $$entry.key$461_=key;
+    $$entry.key$460_=key;
     $$entry.$prop$getKey={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'Key',$cont:Entry,$an:function(){return[doc(String$("The key used to access the entry.",33)),shared()];},d:['ceylon.language','Entry','$at','key']};}};
     $$entry.$prop$getKey.get=function(){return key};
-    $$entry.item$462_=item;
+    $$entry.item$461_=item;
     $$entry.$prop$getItem={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'Item',$cont:Entry,$an:function(){return[doc(String$("The value associated with the key.",34)),shared()];},d:['ceylon.language','Entry','$at','item']};}};
     $$entry.$prop$getItem.get=function(){return item};
     $$entry.$prop$getHash={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:Entry,$an:function(){return[shared(),actual()];},d:['ceylon.language','Entry','$at','hash']};}};
@@ -2918,13 +2913,13 @@ function $init$Entry(){
     if (Entry.$$===undefined){
         initTypeProto(Entry,'ceylon.language::Entry',$init$Object$());
         (function($$entry){
-            defineAttr($$entry,'key',function(){return this.key$461_;},undefined,function(){return{mod:$$METAMODEL$$,$t:'Key',$cont:Entry,$an:function(){return[doc(String$("The key used to access the entry.",33)),shared()];},d:['ceylon.language','Entry','$at','key']};});
-            defineAttr($$entry,'item',function(){return this.item$462_;},undefined,function(){return{mod:$$METAMODEL$$,$t:'Item',$cont:Entry,$an:function(){return[doc(String$("The value associated with the key.",34)),shared()];},d:['ceylon.language','Entry','$at','item']};});
-            $$entry.equals=function equals(that$463){
+            defineAttr($$entry,'key',function(){return this.key$460_;},undefined,function(){return{mod:$$METAMODEL$$,$t:'Key',$cont:Entry,$an:function(){return[doc(String$("The key used to access the entry.",33)),shared()];},d:['ceylon.language','Entry','$at','key']};});
+            defineAttr($$entry,'item',function(){return this.item$461_;},undefined,function(){return{mod:$$METAMODEL$$,$t:'Item',$cont:Entry,$an:function(){return[doc(String$("The value associated with the key.",34)),shared()];},d:['ceylon.language','Entry','$at','item']};});
+            $$entry.equals=function equals(that$462){
                 var $$entry=this;
-                var that$464;
-                if(isOfType((that$464=that$463),{t:Entry,a:{Key:{t:Object$},Item:{t:Object$}}})){
-                    return ($$entry.key.equals(that$464.key)&&$$entry.item.equals(that$464.item));
+                var that$463;
+                if(isOfType((that$463=that$462),{t:Entry,a:{Key:{t:Object$},Item:{t:Object$}}})){
+                    return ($$entry.key.equals(that$463.key)&&$$entry.item.equals(that$463.item));
                 }else {
                     return false;
                 }
@@ -3091,9 +3086,9 @@ function $init$Integral(){
         (function($$integral){
             $$integral.$prop$getZero={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:Integral,$an:function(){return[doc(String$("Determine if the number is zero.",32)),shared(),formal()];},d:['ceylon.language','Integral','$at','zero']};}};
             $$integral.$prop$getUnit={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:Integral,$an:function(){return[doc(String$("Determine if the number is one.",31)),shared(),formal()];},d:['ceylon.language','Integral','$at','unit']};}};
-            $$integral.divides=function (other$465){
+            $$integral.divides=function (other$464){
                 var $$integral=this;
-                return other$465.remainder($$integral).zero;
+                return other$464.remainder($$integral).zero;
             };
             $$integral.divides.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'other',$mt:'prm',$t:'Other',$an:function(){return[];}}],$cont:Integral,$an:function(){return[doc(String$("Determine if this number is a factor of the given \nnumber.",58)),shared()];},d:['ceylon.language','Integral','$m','divides']};};
         })(Integral.$$.prototype);
@@ -3149,11 +3144,11 @@ function $init$OverflowException(){
 }
 exports.$init$OverflowException=$init$OverflowException;
 $init$OverflowException();
-function InitializationException(description$466, $$initializationException){
+function InitializationException(description$465, $$initializationException){
     $init$InitializationException();
     if ($$initializationException===undefined)$$initializationException=new InitializationException.$$;
-    $$initializationException.description$466_=description$466;
-    Exception($$initializationException.description$466,null,$$initializationException);
+    $$initializationException.description$465_=description$465;
+    Exception($$initializationException.description$465,null,$$initializationException);
     return $$initializationException;
 }
 InitializationException.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:Exception},satisfies:[],$an:function(){return[doc(String$("Thrown when a problem was detected with value initialization.\n\nPossible problems include:\n\n* when a value could not be initialized due to recursive access during initialization, \n* an attempt to use a `late` value before it was initialized, \n* an attempt to assign to a `late` but non-`variable` value after it was initialized.",327)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),late)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','InitializationException']};};
@@ -3162,7 +3157,7 @@ function $init$InitializationException(){
     if (InitializationException.$$===undefined){
         initTypeProto(InitializationException,'ceylon.language::InitializationException',$init$Exception());
         (function($$initializationException){
-            defineAttr($$initializationException,'description$466',function(){return this.description$466_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:InitializationException,d:['ceylon.language','InitializationException','$at','description']};});
+            defineAttr($$initializationException,'description$465',function(){return this.description$465_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:InitializationException,d:['ceylon.language','InitializationException','$at','description']};});
         })(InitializationException.$$.prototype);
     }
     return InitializationException;
@@ -3181,41 +3176,41 @@ function $init$Set(){
     if (Set.$$===undefined){
         initTypeProto(Set,'ceylon.language::Set',$init$Collection(),$init$Cloneable());
         (function($$set){
-            $$set.superset=function superset(set$467){
+            $$set.superset=function superset(set$466){
                 var $$set=this;
-                var it$468 = set$467.iterator();
-                var element$469;while ((element$469=it$468.next())!==getFinished()){
-                    if((!$$set.contains(element$469))){
+                var it$467 = set$466.iterator();
+                var element$468;while ((element$468=it$467.next())!==getFinished()){
+                    if((!$$set.contains(element$468))){
                         return false;
                     }
                 }
-                if (getFinished() === element$469){
+                if (getFinished() === element$468){
                     return true;
                 }
             };$$set.superset.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:{t:Object$}}},$an:function(){return[];}}],$cont:Set,$an:function(){return[doc(String$("Determines if this `Set` is a superset of the \nspecified Set, that is, if this `Set` contains all \nof the elements in the specified `Set`.",138)),shared(),$default()];},d:['ceylon.language','Set','$m','superset']};};
-            $$set.subset=function subset(set$470){
+            $$set.subset=function subset(set$469){
                 var $$set=this;
-                var it$471 = $$set.iterator();
-                var element$472;while ((element$472=it$471.next())!==getFinished()){
-                    if((!set$470.contains(element$472))){
+                var it$470 = $$set.iterator();
+                var element$471;while ((element$471=it$470.next())!==getFinished()){
+                    if((!set$469.contains(element$471))){
                         return false;
                     }
                 }
-                if (getFinished() === element$472){
+                if (getFinished() === element$471){
                     return true;
                 }
             };$$set.subset.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:{t:Object$}}},$an:function(){return[];}}],$cont:Set,$an:function(){return[doc(String$("Determines if this `Set` is a subset of the given \n`Set`, that is, if the given set contains all of \nthe elements in this set.",126)),shared(),$default()];},d:['ceylon.language','Set','$m','subset']};};
-            $$set.equals=function equals(that$473){
+            $$set.equals=function equals(that$472){
                 var $$set=this;
-                var that$474;
-                if(isOfType((that$474=that$473),{t:Set,a:{Element:{t:Object$}}})&&that$474.size.equals($$set.size)){
-                    var it$475 = $$set.iterator();
-                    var element$476;while ((element$476=it$475.next())!==getFinished()){
-                        if((!that$474.contains(element$476))){
+                var that$473;
+                if(isOfType((that$473=that$472),{t:Set,a:{Element:{t:Object$}}})&&that$473.size.equals($$set.size)){
+                    var it$474 = $$set.iterator();
+                    var element$475;while ((element$475=it$474.next())!==getFinished()){
+                        if((!that$473.contains(element$475))){
                             return false;
                         }
                     }
-                    if (getFinished() === element$476){
+                    if (getFinished() === element$475){
                         return true;
                     }
                 }
@@ -3223,18 +3218,18 @@ function $init$Set(){
             };$$set.equals.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'that',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:Set,$an:function(){return[doc(String$("Two `Set`s are considered equal if they have the \nsame size and if every element of the first set is\nalso an element of the second set, as determined\nby `contains()`.",166)),shared(),actual(),$default()];},d:['ceylon.language','Set','$m','equals']};};
             defineAttr($$set,'hash',function(){
                 var $$set=this;
-                var hashCode$477=(1);
-                function setHashCode$477(hashCode$478){return hashCode$477=hashCode$478;};
-                $prop$getHashCode$477={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','Set','$at','hash','$at','hashCode']};}};
-                $prop$getHashCode$477.get=function(){return hashCode$477};
-                $prop$getHashCode$477.set=setHashCode$477;
-                if (setHashCode$477.$$metamodel$$===undefined)setHashCode$477.$$metamodel$$=$prop$getHashCode$477.$$metamodel$$;
-                var it$479 = $$set.iterator();
-                var elem$480;while ((elem$480=it$479.next())!==getFinished()){
-                    (hashCode$477=hashCode$477.times((31)));
-                    (hashCode$477=hashCode$477.plus(elem$480.hash));
+                var hashCode$476=(1);
+                function setHashCode$476(hashCode$477){return hashCode$476=hashCode$477;};
+                $prop$getHashCode$476={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','Set','$at','hash','$at','hashCode']};}};
+                $prop$getHashCode$476.get=function(){return hashCode$476};
+                $prop$getHashCode$476.set=setHashCode$476;
+                if (setHashCode$476.$$metamodel$$===undefined)setHashCode$476.$$metamodel$$=$prop$getHashCode$476.$$metamodel$$;
+                var it$478 = $$set.iterator();
+                var elem$479;while ((elem$479=it$478.next())!==getFinished()){
+                    (hashCode$476=hashCode$476.times((31)));
+                    (hashCode$476=hashCode$476.plus(elem$479.hash));
                 }
-                return hashCode$477;
+                return hashCode$476;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:Set,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','Set','$at','hash']};});
         })(Set.$$.prototype);
     }
@@ -3242,154 +3237,154 @@ function $init$Set(){
 }
 exports.$init$Set=$init$Set;
 $init$Set();
-function emptySet$481($$targs$$){
-    var $$emptySet=new emptySet$481.$$;
+function emptySet$480($$targs$$){
+    var $$emptySet=new emptySet$480.$$;
     $$emptySet.$$targs$$=$$targs$$;
     Object$($$emptySet);
     Set({Element:{t:Nothing}},$$emptySet);
-    $$emptySet.$prop$getClone={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$at','clone']};}};
+    $$emptySet.$prop$getClone={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$at','clone']};}};
     $$emptySet.$prop$getClone.get=function(){return clone};
-    $$emptySet.size$482_=(0);
-    $$emptySet.$prop$getSize={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$at','size']};}};
+    $$emptySet.size$481_=(0);
+    $$emptySet.$prop$getSize={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$at','size']};}};
     $$emptySet.$prop$getSize.get=function(){return size};
-    $$emptySet.empty$483_=true;
-    $$emptySet.$prop$getEmpty={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$at','empty']};}};
+    $$emptySet.empty$482_=true;
+    $$emptySet.$prop$getEmpty={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$at','empty']};}};
     $$emptySet.$prop$getEmpty.get=function(){return empty};
     return $$emptySet;
 }
-function $init$emptySet$481(){
-    if (emptySet$481.$$===undefined){
-        initTypeProto(emptySet$481,'ceylon.language::emptySet',$init$Object$(),$init$Set());
+function $init$emptySet$480(){
+    if (emptySet$480.$$===undefined){
+        initTypeProto(emptySet$480,'ceylon.language::emptySet',$init$Object$(),$init$Set());
     }
-    return emptySet$481;
+    return emptySet$480;
 }
-exports.$init$emptySet$481=$init$emptySet$481;
-$init$emptySet$481();
+exports.$init$emptySet$480=$init$emptySet$480;
+$init$emptySet$480();
 (function($$emptySet){
-    $$emptySet.union=function (set$484,$$$mptypes){
+    $$emptySet.union=function (set$483,$$$mptypes){
         var $$emptySet=this;
-        return set$484;
+        return set$483;
     };
-    $$emptySet.union.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:'Other'}},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:'Other'}},$an:function(){return[];}}],$cont:emptySet$481,$tp:{Other:{'satisfies':[{t:Object$}]}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','union']};};
-    $$emptySet.intersection=function (set$485,$$$mptypes){
-        var $$emptySet=this;
-        return getEmptySet();
-    };
-    $$emptySet.intersection.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:'Other'}},$an:function(){return[];}}],$cont:emptySet$481,$tp:{Other:{'satisfies':[{t:Object$}]}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','intersection']};};
-    $$emptySet.exclusiveUnion=function (set$486,$$$mptypes){
-        var $$emptySet=this;
-        return set$486;
-    };
-    $$emptySet.exclusiveUnion.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:'Other'}},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:'Other'}},$an:function(){return[];}}],$cont:emptySet$481,$tp:{Other:{'satisfies':[{t:Object$}]}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','exclusiveUnion']};};
-    $$emptySet.complement=function (set$487,$$$mptypes){
+    $$emptySet.union.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:'Other'}},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:'Other'}},$an:function(){return[];}}],$cont:emptySet$480,$tp:{Other:{'satisfies':[{t:Object$}]}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','union']};};
+    $$emptySet.intersection=function (set$484,$$$mptypes){
         var $$emptySet=this;
         return getEmptySet();
     };
-    $$emptySet.complement.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:'Other'}},$an:function(){return[];}}],$cont:emptySet$481,$tp:{Other:{'satisfies':[{t:Object$}]}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','complement']};};
+    $$emptySet.intersection.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:'Other'}},$an:function(){return[];}}],$cont:emptySet$480,$tp:{Other:{'satisfies':[{t:Object$}]}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','intersection']};};
+    $$emptySet.exclusiveUnion=function (set$485,$$$mptypes){
+        var $$emptySet=this;
+        return set$485;
+    };
+    $$emptySet.exclusiveUnion.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:'Other'}},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:'Other'}},$an:function(){return[];}}],$cont:emptySet$480,$tp:{Other:{'satisfies':[{t:Object$}]}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','exclusiveUnion']};};
+    $$emptySet.complement=function (set$486,$$$mptypes){
+        var $$emptySet=this;
+        return getEmptySet();
+    };
+    $$emptySet.complement.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:'Other'}},$an:function(){return[];}}],$cont:emptySet$480,$tp:{Other:{'satisfies':[{t:Object$}]}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','complement']};};
     defineAttr($$emptySet,'clone',function(){
         var $$emptySet=this;
         return getEmptySet();
-    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$at','clone']};});
+    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$at','clone']};});
     $$emptySet.iterator=function (){
         var $$emptySet=this;
         return getEmptyIterator();
     };
-    $$emptySet.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:{t:Nothing}}},$ps:[],$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','iterator']};};
-    $$emptySet.subset=function (set$488){
+    $$emptySet.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:{t:Nothing}}},$ps:[],$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','iterator']};};
+    $$emptySet.subset=function (set$487){
         var $$emptySet=this;
         return true;
     };
-    $$emptySet.subset.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:{t:Object$}}},$an:function(){return[];}}],$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','subset']};};
-    $$emptySet.superset=function (set$489){
+    $$emptySet.subset.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:{t:Object$}}},$an:function(){return[];}}],$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','subset']};};
+    $$emptySet.superset=function (set$488){
         var $$emptySet=this;
-        return set$489.empty;
+        return set$488.empty;
     };
-    $$emptySet.superset.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:{t:Object$}}},$an:function(){return[];}}],$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','superset']};};
-    defineAttr($$emptySet,'size',function(){return this.size$482_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$at','size']};});
-    defineAttr($$emptySet,'empty',function(){return this.empty$483_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$at','empty']};});
-    $$emptySet.contains=function (element$490){
-        var $$emptySet=this;
-        return false;
-    };
-    $$emptySet.contains.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'element',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','contains']};};
-    $$emptySet.containsAny=function (elements$491){
+    $$emptySet.superset.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:{t:Object$}}},$an:function(){return[];}}],$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','superset']};};
+    defineAttr($$emptySet,'size',function(){return this.size$481_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$at','size']};});
+    defineAttr($$emptySet,'empty',function(){return this.empty$482_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$at','empty']};});
+    $$emptySet.contains=function (element$489){
         var $$emptySet=this;
         return false;
     };
-    $$emptySet.containsAny.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'elements',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Object$}}},$an:function(){return[];}}],$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','containsAny']};};
-    $$emptySet.containsEvery=function (elements$492){
+    $$emptySet.contains.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'element',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','contains']};};
+    $$emptySet.containsAny=function (elements$490){
         var $$emptySet=this;
         return false;
     };
-    $$emptySet.containsEvery.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'elements',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Object$}}},$an:function(){return[];}}],$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','containsEvery']};};
-    $$emptySet.count=function (selecting$493){
+    $$emptySet.containsAny.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'elements',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Object$}}},$an:function(){return[];}}],$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','containsAny']};};
+    $$emptySet.containsEvery=function (elements$491){
+        var $$emptySet=this;
+        return false;
+    };
+    $$emptySet.containsEvery.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'elements',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Object$}}},$an:function(){return[];}}],$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','containsEvery']};};
+    $$emptySet.count=function (selecting$492){
         var $$emptySet=this;
         return (0);
     };
-    $$emptySet.count.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','count']};};
-    $$emptySet.$map=function (collecting$494,$$$mptypes){
+    $$emptySet.count.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','count']};};
+    $$emptySet.$map=function (collecting$493,$$$mptypes){
         var $$emptySet=this;
         return getEmptySet();
     };
-    $$emptySet.$map.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$ps:[{$nm:'collecting',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:emptySet$481,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','map']};};
-    $$emptySet.$filter=function (selecting$495){
+    $$emptySet.$map.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$ps:[{$nm:'collecting',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:emptySet$480,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','map']};};
+    $$emptySet.$filter=function (selecting$494){
         var $$emptySet=this;
         return getEmptySet();
     };
-    $$emptySet.$filter.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','filter']};};
-    $$emptySet.fold=function (initial$496,accumulating$497,$$$mptypes){
+    $$emptySet.$filter.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','filter']};};
+    $$emptySet.fold=function (initial$495,accumulating$496,$$$mptypes){
         var $$emptySet=this;
-        return initial$496;
+        return initial$495;
     };
-    $$emptySet.fold.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Result',$ps:[{$nm:'initial',$mt:'prm',$t:'Result',$an:function(){return[];}},{$nm:'accumulating',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:emptySet$481,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','fold']};};
-    $$emptySet.find=function (selecting$498){
+    $$emptySet.fold.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Result',$ps:[{$nm:'initial',$mt:'prm',$t:'Result',$an:function(){return[];}},{$nm:'accumulating',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:emptySet$480,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','fold']};};
+    $$emptySet.find=function (selecting$497){
         var $$emptySet=this;
         return null;
     };
-    $$emptySet.find.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Null},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','find']};};
-    $$emptySet.collect=function (collecting$499,$$$mptypes){
+    $$emptySet.find.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Null},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','find']};};
+    $$emptySet.collect=function (collecting$498,$$$mptypes){
         var $$emptySet=this;
         return getEmpty();
     };
-    $$emptySet.collect.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'collecting',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:emptySet$481,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','collect']};};
-    $$emptySet.select=function (selecting$500){
+    $$emptySet.collect.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'collecting',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:emptySet$480,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','collect']};};
+    $$emptySet.select=function (selecting$499){
         var $$emptySet=this;
         return getEmpty();
     };
-    $$emptySet.select.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','select']};};
-    $$emptySet.any=function (selecting$501){
+    $$emptySet.select.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','select']};};
+    $$emptySet.any=function (selecting$500){
         var $$emptySet=this;
         return false;
     };
-    $$emptySet.any.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','any']};};
-    $$emptySet.$every=function (selecting$502){
+    $$emptySet.any.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','any']};};
+    $$emptySet.$every=function (selecting$501){
         var $$emptySet=this;
         return false;
     };
-    $$emptySet.$every.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','every']};};
-    $$emptySet.skipping=function (skip$503){
+    $$emptySet.$every.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','every']};};
+    $$emptySet.skipping=function (skip$502){
         var $$emptySet=this;
         return getEmptySet();
     };
-    $$emptySet.skipping.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$ps:[{$nm:'skip',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','skipping']};};
-    $$emptySet.taking=function (take$504){
+    $$emptySet.skipping.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$ps:[{$nm:'skip',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','skipping']};};
+    $$emptySet.taking=function (take$503){
         var $$emptySet=this;
         return getEmptySet();
     };
-    $$emptySet.taking.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$ps:[{$nm:'take',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','taking']};};
-    $$emptySet.by=function (step$505){
+    $$emptySet.taking.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$ps:[{$nm:'take',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','taking']};};
+    $$emptySet.by=function (step$504){
         var $$emptySet=this;
         return getEmptySet();
     };
-    $$emptySet.by.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$ps:[{$nm:'step',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:emptySet$481,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','by']};};
-})(emptySet$481.$$.prototype);
-var emptySet$506;
+    $$emptySet.by.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$ps:[{$nm:'step',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:emptySet$480,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptySet','$m','by']};};
+})(emptySet$480.$$.prototype);
+var emptySet$505;
 function getEmptySet(){
-    if (emptySet$506===undefined)emptySet$506=$init$emptySet$481()({Element:{t:Nothing}});
-    return emptySet$506;
+    if (emptySet$505===undefined)emptySet$505=$init$emptySet$480()({Element:{t:Nothing}});
+    return emptySet$505;
 }
 exports.getEmptySet=getEmptySet;
-getEmptySet.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:emptySet$481},$an:function(){return[doc(String$("A [[Set]] with no elements.",27)),shared()];},d:['ceylon.language','emptySet']};};
+getEmptySet.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:emptySet$480},$an:function(){return[doc(String$("A [[Set]] with no elements.",27)),shared()];},d:['ceylon.language','emptySet']};};
 $prop$getEmptySet={get:getEmptySet,$$metamodel$$:getEmptySet.$$metamodel$$};
 exports.$prop$getEmptySet=$prop$getEmptySet;
 function Range(first, last, $$targs$$,$$range){
@@ -3400,10 +3395,10 @@ function Range(first, last, $$targs$$,$$range){
     Sequence($$range.$$targs$$===undefined?$$targs$$:{Element:$$range.$$targs$$.Element},$$range);
     Cloneable($$range.$$targs$$===undefined?$$targs$$:{Clone:{t:Range,a:{Element:$$range.$$targs$$.Element}}},$$range);
     add_type_arg($$range,'Clone',{t:Range,a:{Element:$$range.$$targs$$.Element}});
-    $$range.first$507_=first;
+    $$range.first$506_=first;
     $$range.$prop$getFirst={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'Element',$cont:Range,$an:function(){return[doc(String$("The start of the range.",23)),shared(),actual()];},d:['ceylon.language','Range','$at','first']};}};
     $$range.$prop$getFirst.get=function(){return first};
-    $$range.last$508_=last;
+    $$range.last$507_=last;
     $$range.$prop$getLast={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'Element',$cont:Range,$an:function(){return[doc(String$("The end of the range.",21)),shared(),actual()];},d:['ceylon.language','Range','$at','last']};}};
     $$range.$prop$getLast.get=function(){return last};
     $$range.$prop$getString={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:Range,$an:function(){return[shared(),actual()];},d:['ceylon.language','Range','$at','string']};}};
@@ -3428,8 +3423,8 @@ function $init$Range(){
     if (Range.$$===undefined){
         initTypeProto(Range,'ceylon.language::Range',$init$Object$(),$init$Sequence(),$init$Cloneable());
         (function($$range){
-            defineAttr($$range,'first',function(){return this.first$507_;},undefined,function(){return{mod:$$METAMODEL$$,$t:'Element',$cont:Range,$an:function(){return[doc(String$("The start of the range.",23)),shared(),actual()];},d:['ceylon.language','Range','$at','first']};});
-            defineAttr($$range,'last',function(){return this.last$508_;},undefined,function(){return{mod:$$METAMODEL$$,$t:'Element',$cont:Range,$an:function(){return[doc(String$("The end of the range.",21)),shared(),actual()];},d:['ceylon.language','Range','$at','last']};});
+            defineAttr($$range,'first',function(){return this.first$506_;},undefined,function(){return{mod:$$METAMODEL$$,$t:'Element',$cont:Range,$an:function(){return[doc(String$("The start of the range.",23)),shared(),actual()];},d:['ceylon.language','Range','$at','first']};});
+            defineAttr($$range,'last',function(){return this.last$507_;},undefined,function(){return{mod:$$METAMODEL$$,$t:'Element',$cont:Range,$an:function(){return[doc(String$("The end of the range.",21)),shared(),actual()];},d:['ceylon.language','Range','$at','last']};});
             defineAttr($$range,'string',function(){
                 var $$range=this;
                 return $$range.first.string.plus(String$("..",2)).plus($$range.last.string);
@@ -3438,36 +3433,36 @@ function $init$Range(){
                 var $$range=this;
                 return $$range.last.compare($$range.first).equals(getSmaller());
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:Range,$an:function(){return[doc(String$("Determines if the range is decreasing.",38)),shared()];},d:['ceylon.language','Range','$at','decreasing']};});
-            $$range.next$509=function (x$510){
+            $$range.next$508=function (x$509){
                 var $$range=this;
-                return (opt$511=($$range.decreasing?x$510.predecessor:null),opt$511!==null?opt$511:x$510.successor);
+                return (opt$510=($$range.decreasing?x$509.predecessor:null),opt$510!==null?opt$510:x$509.successor);
             };
-            $$range.next$509.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Element',$ps:[{$nm:'x',$mt:'prm',$t:'Element',$an:function(){return[];}}],$cont:Range,d:['ceylon.language','Range','$m','next']};};
+            $$range.next$508.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Element',$ps:[{$nm:'x',$mt:'prm',$t:'Element',$an:function(){return[];}}],$cont:Range,d:['ceylon.language','Range','$m','next']};};
             defineAttr($$range,'size',function(){
                 var $$range=this;
-                var last$512;
-                var first$513;
-                if(isOfType((last$512=$$range.last),{t:Enumerable,a:{Other:{t:Anything}}})&&isOfType((first$513=$$range.first),{t:Enumerable,a:{Other:{t:Anything}}})){
-                    return last$512.integerValue.minus(first$513.integerValue).magnitude.plus((1));
+                var last$511;
+                var first$512;
+                if(isOfType((last$511=$$range.last),{t:Enumerable,a:{Other:{t:Anything}}})&&isOfType((first$512=$$range.first),{t:Enumerable,a:{Other:{t:Anything}}})){
+                    return last$511.integerValue.minus(first$512.integerValue).magnitude.plus((1));
                 }else {
-                    var size$514=(1);
-                    function setSize$514(size$515){return size$514=size$515;};
-                    $prop$getSize$514={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','Range','$at','size','$at','size']};}};
-                    $prop$getSize$514.get=function(){return size$514};
-                    $prop$getSize$514.set=setSize$514;
-                    if (setSize$514.$$metamodel$$===undefined)setSize$514.$$metamodel$$=$prop$getSize$514.$$metamodel$$;
-                    var current$516=$$range.first;
-                    function setCurrent$516(current$517){return current$516=current$517;};
-                    $prop$getCurrent$516={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'Element',$an:function(){return[variable()];},d:['ceylon.language','Range','$at','size','$at','current']};}};
-                    $prop$getCurrent$516.get=function(){return current$516};
-                    $prop$getCurrent$516.set=setCurrent$516;
-                    if (setCurrent$516.$$metamodel$$===undefined)setCurrent$516.$$metamodel$$=$prop$getCurrent$516.$$metamodel$$;
-                    while((!current$516.equals($$range.last))){
-                        (oldsize$518=size$514,size$514=oldsize$518.successor,oldsize$518);
-                        var oldsize$518;
-                        current$516=$$range.next$509(current$516);
+                    var size$513=(1);
+                    function setSize$513(size$514){return size$513=size$514;};
+                    $prop$getSize$513={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','Range','$at','size','$at','size']};}};
+                    $prop$getSize$513.get=function(){return size$513};
+                    $prop$getSize$513.set=setSize$513;
+                    if (setSize$513.$$metamodel$$===undefined)setSize$513.$$metamodel$$=$prop$getSize$513.$$metamodel$$;
+                    var current$515=$$range.first;
+                    function setCurrent$515(current$516){return current$515=current$516;};
+                    $prop$getCurrent$515={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'Element',$an:function(){return[variable()];},d:['ceylon.language','Range','$at','size','$at','current']};}};
+                    $prop$getCurrent$515.get=function(){return current$515};
+                    $prop$getCurrent$515.set=setCurrent$515;
+                    if (setCurrent$515.$$metamodel$$===undefined)setCurrent$515.$$metamodel$$=$prop$getCurrent$515.$$metamodel$$;
+                    while((!current$515.equals($$range.last))){
+                        (oldsize$517=size$513,size$513=oldsize$517.successor,oldsize$517);
+                        var oldsize$517;
+                        current$515=$$range.next$508(current$515);
                     }
-                    return size$514;
+                    return size$513;
                 }
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:Range,$an:function(){return[doc(String$("The nonzero number of elements in the range.",44)),shared(),actual()];},d:['ceylon.language','Range','$at','size']};});defineAttr($$range,'lastIndex',function(){
                 var $$range=this;
@@ -3478,251 +3473,251 @@ function $init$Range(){
                 if($$range.size.equals((1))){
                     return getEmpty();
                 }
-                var n$519=$$range.next$509($$range.first);
-                $prop$getN$519={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'Element',d:['ceylon.language','Range','$at','rest','$at','n']};}};
-                $prop$getN$519.get=function(){return n$519};
-                return (opt$520=(n$519.equals($$range.last)?getEmpty():null),opt$520!==null?opt$520:Range(n$519,$$range.last,{Element:$$range.$$targs$$.Element}));
-                var opt$520;
-            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$cont:Range,$an:function(){return[doc(String$("The rest of the range, without the start of the\nrange.",54)),shared(),actual()];},d:['ceylon.language','Range','$at','rest']};});$$range.get=function get(n$521){
+                var n$518=$$range.next$508($$range.first);
+                $prop$getN$518={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'Element',d:['ceylon.language','Range','$at','rest','$at','n']};}};
+                $prop$getN$518.get=function(){return n$518};
+                return (opt$519=(n$518.equals($$range.last)?getEmpty():null),opt$519!==null?opt$519:Range(n$518,$$range.last,{Element:$$range.$$targs$$.Element}));
+                var opt$519;
+            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$cont:Range,$an:function(){return[doc(String$("The rest of the range, without the start of the\nrange.",54)),shared(),actual()];},d:['ceylon.language','Range','$at','rest']};});$$range.get=function get(n$520){
                 var $$range=this;
-                var index$522=(0);
-                function setIndex$522(index$523){return index$522=index$523;};
-                var x$524=$$range.first;
-                function setX$524(x$525){return x$524=x$525;};
-                while(index$522.compare(n$521).equals(getSmaller())){
-                    if(x$524.equals($$range.last)){
+                var index$521=(0);
+                function setIndex$521(index$522){return index$521=index$522;};
+                var x$523=$$range.first;
+                function setX$523(x$524){return x$523=x$524;};
+                while(index$521.compare(n$520).equals(getSmaller())){
+                    if(x$523.equals($$range.last)){
                         return null;
                     }else {
-                        (index$522=index$522.successor);
-                        x$524=$$range.next$509(x$524);
+                        (index$521=index$521.successor);
+                        x$523=$$range.next$508(x$523);
                     }
                 }
-                return x$524;
+                return x$523;
             };$$range.get.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},$ps:[{$nm:'n',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Range,$an:function(){return[doc(String$("The element of the range that occurs `n` values after\nthe start of the range. Note that this operation \nis inefficient for large ranges.",136)),shared(),actual()];},d:['ceylon.language','Range','$m','get']};};
             $$range.iterator=function iterator(){
                 var $$range=this;
-                function RangeIterator$526($$rangeIterator$526){
-                    $init$RangeIterator$526();
-                    if ($$rangeIterator$526===undefined)$$rangeIterator$526=new RangeIterator$526.$$;
-                    $$rangeIterator$526.$$targs$$={Element:$$range.$$targs$$.Element};
-                    Iterator({Element:$$range.$$targs$$.Element},$$rangeIterator$526);
-                    $$rangeIterator$526.current$527_=$$range.first;
-                    $$rangeIterator$526.$prop$getCurrent$527={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$cont:RangeIterator$526,$an:function(){return[variable()];},d:['ceylon.language','Range','$m','iterator','$c','RangeIterator','$at','current']};}};
-                    $$rangeIterator$526.$prop$getCurrent$527.get=function(){return current$527};
-                    return $$rangeIterator$526;
+                function RangeIterator$525($$rangeIterator$525){
+                    $init$RangeIterator$525();
+                    if ($$rangeIterator$525===undefined)$$rangeIterator$525=new RangeIterator$525.$$;
+                    $$rangeIterator$525.$$targs$$={Element:$$range.$$targs$$.Element};
+                    Iterator({Element:$$range.$$targs$$.Element},$$rangeIterator$525);
+                    $$rangeIterator$525.current$526_=$$range.first;
+                    $$rangeIterator$525.$prop$getCurrent$526={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$cont:RangeIterator$525,$an:function(){return[variable()];},d:['ceylon.language','Range','$m','iterator','$c','RangeIterator','$at','current']};}};
+                    $$rangeIterator$525.$prop$getCurrent$526.get=function(){return current$526};
+                    return $$rangeIterator$525;
                 }
-                RangeIterator$526.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:Basic},satisfies:[{t:Iterator,a:{Element:'Element'}}],d:['ceylon.language','Range','$m','iterator','$c','RangeIterator']};};
-                function $init$RangeIterator$526(){
-                    if (RangeIterator$526.$$===undefined){
-                        initTypeProto(RangeIterator$526,'ceylon.language::Range.iterator.RangeIterator',Basic,$init$Iterator());
-                        (function($$rangeIterator$526){
-                            defineAttr($$rangeIterator$526,'current$527',function(){return this.current$527_;},function(current$528){return this.current$527_=current$528;},function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$cont:RangeIterator$526,$an:function(){return[variable()];},d:['ceylon.language','Range','$m','iterator','$c','RangeIterator','$at','current']};});
-                            $$rangeIterator$526.next=function next(){
-                                var $$rangeIterator$526=this;
-                                var result$529=$$rangeIterator$526.current$527;
-                                var curr$530;
-                                if(!isOfType((curr$530=$$rangeIterator$526.current$527),{t:Finished})){
-                                    if((opt$531=($$range.decreasing?(curr$530.compare($$range.last)!==getLarger()):null),opt$531!==null?opt$531:(curr$530.compare($$range.last)!==getSmaller()))){
-                                        $$rangeIterator$526.current$527=getFinished();
+                RangeIterator$525.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:Basic},satisfies:[{t:Iterator,a:{Element:'Element'}}],d:['ceylon.language','Range','$m','iterator','$c','RangeIterator']};};
+                function $init$RangeIterator$525(){
+                    if (RangeIterator$525.$$===undefined){
+                        initTypeProto(RangeIterator$525,'ceylon.language::Range.iterator.RangeIterator',Basic,$init$Iterator());
+                        (function($$rangeIterator$525){
+                            defineAttr($$rangeIterator$525,'current$526',function(){return this.current$526_;},function(current$527){return this.current$526_=current$527;},function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$cont:RangeIterator$525,$an:function(){return[variable()];},d:['ceylon.language','Range','$m','iterator','$c','RangeIterator','$at','current']};});
+                            $$rangeIterator$525.next=function next(){
+                                var $$rangeIterator$525=this;
+                                var result$528=$$rangeIterator$525.current$526;
+                                var curr$529;
+                                if(!isOfType((curr$529=$$rangeIterator$525.current$526),{t:Finished})){
+                                    if((opt$530=($$range.decreasing?(curr$529.compare($$range.last)!==getLarger()):null),opt$530!==null?opt$530:(curr$529.compare($$range.last)!==getSmaller()))){
+                                        $$rangeIterator$525.current$526=getFinished();
                                     }else {
-                                        $$rangeIterator$526.current$527=$$range.next$509(curr$530);
+                                        $$rangeIterator$525.current$526=$$range.next$508(curr$529);
                                     }
-                                    var opt$531;
+                                    var opt$530;
                                 }
-                                return result$529;
-                            };$$rangeIterator$526.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:RangeIterator$526,$an:function(){return[shared(),actual()];},d:['ceylon.language','Range','$m','iterator','$c','RangeIterator','$m','next']};};
-                            defineAttr($$rangeIterator$526,'string',function(){
-                                var $$rangeIterator$526=this;
+                                return result$528;
+                            };$$rangeIterator$525.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:RangeIterator$525,$an:function(){return[shared(),actual()];},d:['ceylon.language','Range','$m','iterator','$c','RangeIterator','$m','next']};};
+                            defineAttr($$rangeIterator$525,'string',function(){
+                                var $$rangeIterator$525=this;
                                 return String$("RangeIterator",13);
-                            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:RangeIterator$526,$an:function(){return[shared(),actual()];},d:['ceylon.language','Range','$m','iterator','$c','RangeIterator','$at','string']};});
-                        })(RangeIterator$526.$$.prototype);
+                            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:RangeIterator$525,$an:function(){return[shared(),actual()];},d:['ceylon.language','Range','$m','iterator','$c','RangeIterator','$at','string']};});
+                        })(RangeIterator$525.$$.prototype);
                     }
-                    return RangeIterator$526;
+                    return RangeIterator$525;
                 }
-                $init$RangeIterator$526();
-                return RangeIterator$526();
+                $init$RangeIterator$525();
+                return RangeIterator$525();
             };$$range.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$ps:[],$cont:Range,$an:function(){return[doc(String$("An iterator for the elements of the range.",42)),shared(),actual()];},d:['ceylon.language','Range','$m','iterator']};};
-            $$range.by=function by(step$532){
+            $$range.by=function by(step$531){
                 var $$range=this;
                 //assert at Range.ceylon (113:8-114:25)
-                if (!(step$532.compare((0)).equals(getLarger()))) {throw wrapexc(AssertionException("step size must be greater than zero: \'step > 0\' at Range.ceylon (114:15-114:24)"),'113:8-114:25','Range.ceylon'); }
-                if(step$532.equals((1))){
+                if (!(step$531.compare((0)).equals(getLarger()))) {throw wrapexc(AssertionException("step size must be greater than zero: \'step > 0\' at Range.ceylon (114:15-114:24)"),'113:8-114:25','Range.ceylon'); }
+                if(step$531.equals((1))){
                     return $$range;
                 }
-                var first$533;
-                var last$534;
-                if(isOfType((first$533=$$range.first),{t:Integer})&&isOfType((last$534=$$range.last),{t:Integer})){
-                    return integerRangeByIterable($$range,step$532,{Element:$$range.$$targs$$.Element});
+                var first$532;
+                var last$533;
+                if(isOfType((first$532=$$range.first),{t:Integer})&&isOfType((last$533=$$range.last),{t:Integer})){
+                    return integerRangeByIterable($$range,step$531,{Element:$$range.$$targs$$.Element});
                 }
-                return $$range.getT$all()['ceylon.language::Iterable'].$$.prototype.by.call(this,step$532);
+                return $$range.getT$all()['ceylon.language::Iterable'].$$.prototype.by.call(this,step$531);
             };$$range.by.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Nothing},Element:'Element'}},$ps:[{$nm:'step',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Range,$an:function(){return[shared(),actual()];},d:['ceylon.language','Range','$m','by']};};
-            $$range.contains=function contains(element$535){
+            $$range.contains=function contains(element$534){
                 var $$range=this;
-                var element$536;
-                if(isOfType((element$536=element$535),$$range.$$targs$$.Element)){
-                    return $$range.containsElement(element$536);
+                var element$535;
+                if(isOfType((element$535=element$534),$$range.$$targs$$.Element)){
+                    return $$range.containsElement(element$535);
                 }else {
                     return false;
                 }
             };$$range.contains.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'element',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:Range,$an:function(){return[doc(String$("Determines if the range includes the given object.",50)),shared(),actual()];},d:['ceylon.language','Range','$m','contains']};};
-            $$range.count=function count(selecting$537){
+            $$range.count=function count(selecting$536){
                 var $$range=this;
-                var e$538=$$range.first;
-                function setE$538(e$539){return e$538=e$539;};
-                var c$540=(0);
-                function setC$540(c$541){return c$540=c$541;};
-                while($$range.containsElement(e$538)){
-                    if(selecting$537(e$538)){
-                        (oldc$542=c$540,c$540=oldc$542.successor,oldc$542);
-                        var oldc$542;
+                var e$537=$$range.first;
+                function setE$537(e$538){return e$537=e$538;};
+                var c$539=(0);
+                function setC$539(c$540){return c$539=c$540;};
+                while($$range.containsElement(e$537)){
+                    if(selecting$536(e$537)){
+                        (oldc$541=c$539,c$539=oldc$541.successor,oldc$541);
+                        var oldc$541;
                     }
-                    e$538=$$range.next$509(e$538);
+                    e$537=$$range.next$508(e$537);
                 }
-                return c$540;
+                return c$539;
             };$$range.count.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Range,$an:function(){return[shared(),actual()];},d:['ceylon.language','Range','$m','count']};};
-            $$range.containsElement=function (x$543){
+            $$range.containsElement=function (x$542){
                 var $$range=this;
-                return (opt$544=($$range.decreasing?((x$543.compare($$range.first)!==getLarger())&&(x$543.compare($$range.last)!==getSmaller())):null),opt$544!==null?opt$544:((x$543.compare($$range.first)!==getSmaller())&&(x$543.compare($$range.last)!==getLarger())));
+                return (opt$543=($$range.decreasing?((x$542.compare($$range.first)!==getLarger())&&(x$542.compare($$range.last)!==getSmaller())):null),opt$543!==null?opt$543:((x$542.compare($$range.first)!==getSmaller())&&(x$542.compare($$range.last)!==getLarger())));
             };
             $$range.containsElement.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'x',$mt:'prm',$t:'Element',$an:function(){return[];}}],$cont:Range,$an:function(){return[doc(String$("Determines if the range includes the given value.",49)),shared()];},d:['ceylon.language','Range','$m','containsElement']};};
-            $$range.occurs=function occurs(element$545){
+            $$range.occurs=function occurs(element$544){
                 var $$range=this;
-                var element$546;
-                if(isOfType((element$546=element$545),$$range.$$targs$$.Element)){
-                    return $$range.containsElement(element$546);
+                var element$545;
+                if(isOfType((element$545=element$544),$$range.$$targs$$.Element)){
+                    return $$range.containsElement(element$545);
                 }else {
                     return false;
                 }
             };$$range.occurs.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'element',$mt:'prm',$t:{t:Anything},$an:function(){return[];}}],$cont:Range,$an:function(){return[shared(),actual()];},d:['ceylon.language','Range','$m','occurs']};};
-            $$range.includes=function includes(sublist$547){
+            $$range.includes=function includes(sublist$546){
                 var $$range=this;
-                var sublist$548;
-                if(isOfType((sublist$548=sublist$547),{t:Range,a:{Element:$$range.$$targs$$.Element}})){
-                    return ((tmpvar$549=sublist$548.first,tmpvar$549.compare($$range.first)!==getSmaller()&&tmpvar$549.compare($$range.last)!==getLarger())&&(tmpvar$550=sublist$548.last,tmpvar$550.compare($$range.first)!==getSmaller()&&tmpvar$550.compare($$range.last)!==getLarger()));
+                var sublist$547;
+                if(isOfType((sublist$547=sublist$546),{t:Range,a:{Element:$$range.$$targs$$.Element}})){
+                    return ((tmpvar$548=sublist$547.first,tmpvar$548.compare($$range.first)!==getSmaller()&&tmpvar$548.compare($$range.last)!==getLarger())&&(tmpvar$549=sublist$547.last,tmpvar$549.compare($$range.first)!==getSmaller()&&tmpvar$549.compare($$range.last)!==getLarger()));
                 }else {
-                    return $$range.getT$all()['ceylon.language::List'].$$.prototype.includes.call(this,sublist$547);
+                    return $$range.getT$all()['ceylon.language::List'].$$.prototype.includes.call(this,sublist$546);
                 }
             };$$range.includes.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'sublist',$mt:'prm',$t:{t:List,a:{Element:{t:Anything}}},$an:function(){return[];}}],$cont:Range,$an:function(){return[shared(),actual()];},d:['ceylon.language','Range','$m','includes']};};
-            $$range.equals=function equals(that$551){
+            $$range.equals=function equals(that$550){
                 var $$range=this;
-                var that$552;
-                if(isOfType((that$552=that$551),{t:Range,a:{Element:{t:Object$}}})){
-                    return (that$552.first.equals($$range.first)&&that$552.last.equals($$range.last));
+                var that$551;
+                if(isOfType((that$551=that$550),{t:Range,a:{Element:{t:Object$}}})){
+                    return (that$551.first.equals($$range.first)&&that$551.last.equals($$range.last));
                 }else {
-                    return $$range.getT$all()['ceylon.language::List'].$$.prototype.equals.call(this,that$551);
+                    return $$range.getT$all()['ceylon.language::List'].$$.prototype.equals.call(this,that$550);
                 }
             };$$range.equals.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'that',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:Range,$an:function(){return[doc(String$("Determines if two ranges are the same by comparing\ntheir endpoints.",67)),shared(),actual()];},d:['ceylon.language','Range','$m','equals']};};
             defineAttr($$range,'clone',function(){
                 var $$range=this;
                 return $$range;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Range,a:{Element:'Element'}},$cont:Range,$an:function(){return[doc(String$("Returns the range itself, since ranges are \nimmutable.",54)),shared(),actual()];},d:['ceylon.language','Range','$at','clone']};});
-            $$range.segment=function segment(from$553,length$554){
+            $$range.segment=function segment(from$552,length$553){
                 var $$range=this;
-                if(((length$554.compare((0))!==getLarger())||from$553.compare($$range.lastIndex).equals(getLarger()))){
+                if(((length$553.compare((0))!==getLarger())||from$552.compare($$range.lastIndex).equals(getLarger()))){
                     return getEmpty();
                 }
-                var x$555=$$range.first;
-                function setX$555(x$556){return x$555=x$556;};
-                var i$557=(0);
-                function setI$557(i$558){return i$557=i$558;};
-                while((oldi$559=i$557,i$557=oldi$559.successor,oldi$559).compare(from$553).equals(getSmaller())){
-                    x$555=$$range.next$509(x$555);
+                var x$554=$$range.first;
+                function setX$554(x$555){return x$554=x$555;};
+                var i$556=(0);
+                function setI$556(i$557){return i$556=i$557;};
+                while((oldi$558=i$556,i$556=oldi$558.successor,oldi$558).compare(from$552).equals(getSmaller())){
+                    x$554=$$range.next$508(x$554);
                 }
-                var oldi$559;
-                var y$560=x$555;
-                function setY$560(y$561){return y$560=y$561;};
-                var j$562=(1);
-                function setJ$562(j$563){return j$562=j$563;};
-                while(((oldj$564=j$562,j$562=oldj$564.successor,oldj$564).compare(length$554).equals(getSmaller())&&y$560.compare($$range.last).equals(getSmaller()))){
-                    y$560=$$range.next$509(y$560);
+                var oldi$558;
+                var y$559=x$554;
+                function setY$559(y$560){return y$559=y$560;};
+                var j$561=(1);
+                function setJ$561(j$562){return j$561=j$562;};
+                while(((oldj$563=j$561,j$561=oldj$563.successor,oldj$563).compare(length$553).equals(getSmaller())&&y$559.compare($$range.last).equals(getSmaller()))){
+                    y$559=$$range.next$508(y$559);
                 }
-                var oldj$564;
-                return Range(x$555,y$560,{Element:$$range.$$targs$$.Element});
+                var oldj$563;
+                return Range(x$554,y$559,{Element:$$range.$$targs$$.Element});
             };$$range.segment.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Range,a:{Element:'Element'}},{t:Empty}]},$ps:[{$nm:'from',$mt:'prm',$t:{t:Integer},$an:function(){return[];}},{$nm:'length',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Range,$an:function(){return[shared(),actual()];},d:['ceylon.language','Range','$m','segment']};};
-            $$range.span=function span(from$565,to$566){
+            $$range.span=function span(from$564,to$565){
                 var $$range=this;
-                var toIndex$567=to$566;
-                function setToIndex$567(toIndex$568){return toIndex$567=toIndex$568;};
-                var fromIndex$569=from$565;
-                function setFromIndex$569(fromIndex$570){return fromIndex$569=fromIndex$570;};
-                if(toIndex$567.compare((0)).equals(getSmaller())){
-                    if(fromIndex$569.compare((0)).equals(getSmaller())){
+                var toIndex$566=to$565;
+                function setToIndex$566(toIndex$567){return toIndex$566=toIndex$567;};
+                var fromIndex$568=from$564;
+                function setFromIndex$568(fromIndex$569){return fromIndex$568=fromIndex$569;};
+                if(toIndex$566.compare((0)).equals(getSmaller())){
+                    if(fromIndex$568.compare((0)).equals(getSmaller())){
                         return getEmpty();
                     }
-                    toIndex$567=(0);
+                    toIndex$566=(0);
                 }else {
-                    if(toIndex$567.compare($$range.lastIndex).equals(getLarger())){
-                        if(fromIndex$569.compare($$range.lastIndex).equals(getLarger())){
+                    if(toIndex$566.compare($$range.lastIndex).equals(getLarger())){
+                        if(fromIndex$568.compare($$range.lastIndex).equals(getLarger())){
                             return getEmpty();
                         }
-                        toIndex$567=$$range.lastIndex;
+                        toIndex$566=$$range.lastIndex;
                     }
                 }
-                if(fromIndex$569.compare((0)).equals(getSmaller())){
-                    fromIndex$569=(0);
+                if(fromIndex$568.compare((0)).equals(getSmaller())){
+                    fromIndex$568=(0);
                 }else {
-                    if(fromIndex$569.compare($$range.lastIndex).equals(getLarger())){
-                        fromIndex$569=$$range.lastIndex;
+                    if(fromIndex$568.compare($$range.lastIndex).equals(getLarger())){
+                        fromIndex$568=$$range.lastIndex;
                     }
                 }
-                var x$571=$$range.first;
-                function setX$571(x$572){return x$571=x$572;};
-                var i$573=(0);
-                function setI$573(i$574){return i$573=i$574;};
-                while((oldi$575=i$573,i$573=oldi$575.successor,oldi$575).compare(fromIndex$569).equals(getSmaller())){
-                    x$571=$$range.next$509(x$571);
+                var x$570=$$range.first;
+                function setX$570(x$571){return x$570=x$571;};
+                var i$572=(0);
+                function setI$572(i$573){return i$572=i$573;};
+                while((oldi$574=i$572,i$572=oldi$574.successor,oldi$574).compare(fromIndex$568).equals(getSmaller())){
+                    x$570=$$range.next$508(x$570);
                 }
-                var oldi$575;
-                var y$576=$$range.first;
-                function setY$576(y$577){return y$576=y$577;};
-                var j$578=(0);
-                function setJ$578(j$579){return j$578=j$579;};
-                while((oldj$580=j$578,j$578=oldj$580.successor,oldj$580).compare(toIndex$567).equals(getSmaller())){
-                    y$576=$$range.next$509(y$576);
+                var oldi$574;
+                var y$575=$$range.first;
+                function setY$575(y$576){return y$575=y$576;};
+                var j$577=(0);
+                function setJ$577(j$578){return j$577=j$578;};
+                while((oldj$579=j$577,j$577=oldj$579.successor,oldj$579).compare(toIndex$566).equals(getSmaller())){
+                    y$575=$$range.next$508(y$575);
                 }
-                var oldj$580;
-                return Range(x$571,y$576,{Element:$$range.$$targs$$.Element});
+                var oldj$579;
+                return Range(x$570,y$575,{Element:$$range.$$targs$$.Element});
             };$$range.span.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Range,a:{Element:'Element'}},{t:Empty}]},$ps:[{$nm:'from',$mt:'prm',$t:{t:Integer},$an:function(){return[];}},{$nm:'to',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Range,$an:function(){return[shared(),actual()];},d:['ceylon.language','Range','$m','span']};};
-            $$range.spanTo=function spanTo(to$581){
+            $$range.spanTo=function spanTo(to$580){
                 var $$range=this;
-                return (opt$582=(to$581.compare((0)).equals(getSmaller())?getEmpty():null),opt$582!==null?opt$582:$$range.span((0),to$581));
-                var opt$582;
+                return (opt$581=(to$580.compare((0)).equals(getSmaller())?getEmpty():null),opt$581!==null?opt$581:$$range.span((0),to$580));
+                var opt$581;
             };$$range.spanTo.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Range,a:{Element:'Element'}},{t:Empty}]},$ps:[{$nm:'to',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Range,$an:function(){return[shared(),actual()];},d:['ceylon.language','Range','$m','spanTo']};};
-            $$range.spanFrom=function spanFrom(from$583){
+            $$range.spanFrom=function spanFrom(from$582){
                 var $$range=this;
-                return $$range.span(from$583,$$range.size);
+                return $$range.span(from$582,$$range.size);
             };$$range.spanFrom.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Range,a:{Element:'Element'}},{t:Empty}]},$ps:[{$nm:'from',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Range,$an:function(){return[shared(),actual()];},d:['ceylon.language','Range','$m','spanFrom']};};
             defineAttr($$range,'reversed',function(){
                 var $$range=this;
                 return Range($$range.last,$$range.first,{Element:$$range.$$targs$$.Element});
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Range,a:{Element:'Element'}},$cont:Range,$an:function(){return[doc(String$("Reverse this range, returning a new range.",42)),shared(),actual()];},d:['ceylon.language','Range','$at','reversed']};});
-            $$range.skipping=function skipping(skip$584){
+            $$range.skipping=function skipping(skip$583){
                 var $$range=this;
-                var x$585=(0);
-                function setX$585(x$586){return x$585=x$586;};
-                var e$587=$$range.first;
-                function setE$587(e$588){return e$587=e$588;};
-                while((oldx$589=x$585,x$585=oldx$589.successor,oldx$589).compare(skip$584).equals(getSmaller())){
-                    e$587=$$range.next$509(e$587);
+                var x$584=(0);
+                function setX$584(x$585){return x$584=x$585;};
+                var e$586=$$range.first;
+                function setE$586(e$587){return e$586=e$587;};
+                while((oldx$588=x$584,x$584=oldx$588.successor,oldx$588).compare(skip$583).equals(getSmaller())){
+                    e$586=$$range.next$508(e$586);
                 }
-                var oldx$589;
-                return (opt$590=($$range.containsElement(e$587)?Range(e$587,$$range.last,{Element:$$range.$$targs$$.Element}):null),opt$590!==null?opt$590:getEmpty());
-                var opt$590;
+                var oldx$588;
+                return (opt$589=($$range.containsElement(e$586)?Range(e$586,$$range.last,{Element:$$range.$$targs$$.Element}):null),opt$589!==null?opt$589:getEmpty());
+                var opt$589;
             };$$range.skipping.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Range,a:{Element:'Element'}},{t:Empty}]},$ps:[{$nm:'skip',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Range,$an:function(){return[shared(),actual()];},d:['ceylon.language','Range','$m','skipping']};};
-            $$range.taking=function taking(take$591){
+            $$range.taking=function taking(take$590){
                 var $$range=this;
-                if(take$591.equals((0))){
+                if(take$590.equals((0))){
                     return getEmpty();
                 }
-                var x$592=(0);
-                function setX$592(x$593){return x$592=x$593;};
-                var e$594=$$range.first;
-                function setE$594(e$595){return e$594=e$595;};
-                while((x$592=x$592.successor).compare(take$591).equals(getSmaller())){
-                    e$594=$$range.next$509(e$594);
+                var x$591=(0);
+                function setX$591(x$592){return x$591=x$592;};
+                var e$593=$$range.first;
+                function setE$593(e$594){return e$593=e$594;};
+                while((x$591=x$591.successor).compare(take$590).equals(getSmaller())){
+                    e$593=$$range.next$508(e$593);
                 }
-                return (opt$596=($$range.containsElement(e$594)?Range($$range.first,e$594,{Element:$$range.$$targs$$.Element}):null),opt$596!==null?opt$596:$$range);
-                var opt$596;
+                return (opt$595=($$range.containsElement(e$593)?Range($$range.first,e$593,{Element:$$range.$$targs$$.Element}):null),opt$595!==null?opt$595:$$range);
+                var opt$595;
             };$$range.taking.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Range,a:{Element:'Element'}},{t:Empty}]},$ps:[{$nm:'take',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Range,$an:function(){return[shared(),actual()];},d:['ceylon.language','Range','$m','taking']};};
             defineAttr($$range,'coalesced',function(){
                 var $$range=this;
@@ -3738,12 +3733,12 @@ function $init$Range(){
 }
 exports.$init$Range=$init$Range;
 $init$Range();
-var opt$511,opt$544;
-function Singleton(element$597, $$targs$$,$$singleton){
+var opt$510,opt$543;
+function Singleton(element$596, $$targs$$,$$singleton){
     $init$Singleton();
     if ($$singleton===undefined)$$singleton=new Singleton.$$;
     set_type_args($$singleton,$$targs$$);
-    $$singleton.element$597_=element$597;
+    $$singleton.element$596_=element$596;
     Object$($$singleton);
     Sequence($$singleton.$$targs$$===undefined?$$targs$$:{Element:$$singleton.$$targs$$.Element},$$singleton);
     $$singleton.$prop$getLastIndex={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:Singleton,$an:function(){return[doc(String$("Returns `0`.",12)),shared(),actual()];},d:['ceylon.language','Singleton','$at','lastIndex']};}};
@@ -3782,20 +3777,20 @@ function $init$Singleton(){
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:Singleton,$an:function(){return[doc(String$("Returns `1`.",12)),shared(),actual()];},d:['ceylon.language','Singleton','$at','size']};});
             defineAttr($$singleton,'first',function(){
                 var $$singleton=this;
-                return $$singleton.element$597;
+                return $$singleton.element$596;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:'Element',$cont:Singleton,$an:function(){return[doc(String$("Returns the element contained in this `Singleton`.",50)),shared(),actual()];},d:['ceylon.language','Singleton','$at','first']};});
             defineAttr($$singleton,'last',function(){
                 var $$singleton=this;
-                return $$singleton.element$597;
+                return $$singleton.element$596;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:'Element',$cont:Singleton,$an:function(){return[doc(String$("Returns the element contained in this `Singleton`.",50)),shared(),actual()];},d:['ceylon.language','Singleton','$at','last']};});
             defineAttr($$singleton,'rest',function(){
                 var $$singleton=this;
                 return getEmpty();
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$cont:Singleton,$an:function(){return[doc(String$("Returns `Empty`.",16)),shared(),actual()];},d:['ceylon.language','Singleton','$at','rest']};});
-            $$singleton.get=function get(index$598){
+            $$singleton.get=function get(index$597){
                 var $$singleton=this;
-                if(index$598.equals((0))){
-                    return $$singleton.element$597;
+                if(index$597.equals((0))){
+                    return $$singleton.element$596;
                 }else {
                     return null;
                 }
@@ -3806,80 +3801,80 @@ function $init$Singleton(){
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Singleton,a:{Element:'Element'}},$cont:Singleton,$an:function(){return[doc(String$("Returns a `Singleton` with the same element.",44)),shared(),actual()];},d:['ceylon.language','Singleton','$at','clone']};});
             $$singleton.iterator=function iterator(){
                 var $$singleton=this;
-                function SingletonIterator$599($$singletonIterator$599){
-                    $init$SingletonIterator$599();
-                    if ($$singletonIterator$599===undefined)$$singletonIterator$599=new SingletonIterator$599.$$;
-                    $$singletonIterator$599.$$targs$$={Element:$$singleton.$$targs$$.Element};
-                    Iterator({Element:$$singleton.$$targs$$.Element},$$singletonIterator$599);
-                    $$singletonIterator$599.done$600_=false;
-                    $$singletonIterator$599.$prop$getDone$600={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:SingletonIterator$599,$an:function(){return[variable()];},d:['ceylon.language','Singleton','$m','iterator','$c','SingletonIterator','$at','done']};}};
-                    $$singletonIterator$599.$prop$getDone$600.get=function(){return done$600};
-                    return $$singletonIterator$599;
+                function SingletonIterator$598($$singletonIterator$598){
+                    $init$SingletonIterator$598();
+                    if ($$singletonIterator$598===undefined)$$singletonIterator$598=new SingletonIterator$598.$$;
+                    $$singletonIterator$598.$$targs$$={Element:$$singleton.$$targs$$.Element};
+                    Iterator({Element:$$singleton.$$targs$$.Element},$$singletonIterator$598);
+                    $$singletonIterator$598.done$599_=false;
+                    $$singletonIterator$598.$prop$getDone$599={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:SingletonIterator$598,$an:function(){return[variable()];},d:['ceylon.language','Singleton','$m','iterator','$c','SingletonIterator','$at','done']};}};
+                    $$singletonIterator$598.$prop$getDone$599.get=function(){return done$599};
+                    return $$singletonIterator$598;
                 }
-                SingletonIterator$599.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:Basic},satisfies:[{t:Iterator,a:{Element:'Element'}}],d:['ceylon.language','Singleton','$m','iterator','$c','SingletonIterator']};};
-                function $init$SingletonIterator$599(){
-                    if (SingletonIterator$599.$$===undefined){
-                        initTypeProto(SingletonIterator$599,'ceylon.language::Singleton.iterator.SingletonIterator',Basic,$init$Iterator());
-                        (function($$singletonIterator$599){
-                            defineAttr($$singletonIterator$599,'done$600',function(){return this.done$600_;},function(done$601){return this.done$600_=done$601;},function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:SingletonIterator$599,$an:function(){return[variable()];},d:['ceylon.language','Singleton','$m','iterator','$c','SingletonIterator','$at','done']};});
-                            $$singletonIterator$599.next=function next(){
-                                var $$singletonIterator$599=this;
-                                if($$singletonIterator$599.done$600){
+                SingletonIterator$598.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:Basic},satisfies:[{t:Iterator,a:{Element:'Element'}}],d:['ceylon.language','Singleton','$m','iterator','$c','SingletonIterator']};};
+                function $init$SingletonIterator$598(){
+                    if (SingletonIterator$598.$$===undefined){
+                        initTypeProto(SingletonIterator$598,'ceylon.language::Singleton.iterator.SingletonIterator',Basic,$init$Iterator());
+                        (function($$singletonIterator$598){
+                            defineAttr($$singletonIterator$598,'done$599',function(){return this.done$599_;},function(done$600){return this.done$599_=done$600;},function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:SingletonIterator$598,$an:function(){return[variable()];},d:['ceylon.language','Singleton','$m','iterator','$c','SingletonIterator','$at','done']};});
+                            $$singletonIterator$598.next=function next(){
+                                var $$singletonIterator$598=this;
+                                if($$singletonIterator$598.done$599){
                                     return getFinished();
                                 }else {
-                                    $$singletonIterator$599.done$600=true;
-                                    return $$singleton.element$597;
+                                    $$singletonIterator$598.done$599=true;
+                                    return $$singleton.element$596;
                                 }
-                            };$$singletonIterator$599.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:SingletonIterator$599,$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$m','iterator','$c','SingletonIterator','$m','next']};};
-                            defineAttr($$singletonIterator$599,'string',function(){
-                                var $$singletonIterator$599=this;
+                            };$$singletonIterator$598.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:SingletonIterator$598,$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$m','iterator','$c','SingletonIterator','$m','next']};};
+                            defineAttr($$singletonIterator$598,'string',function(){
+                                var $$singletonIterator$598=this;
                                 return String$("SingletonIterator",17);
-                            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:SingletonIterator$599,$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$m','iterator','$c','SingletonIterator','$at','string']};});
-                        })(SingletonIterator$599.$$.prototype);
+                            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:SingletonIterator$598,$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$m','iterator','$c','SingletonIterator','$at','string']};});
+                        })(SingletonIterator$598.$$.prototype);
                     }
-                    return SingletonIterator$599;
+                    return SingletonIterator$598;
                 }
-                $init$SingletonIterator$599();
-                return SingletonIterator$599();
+                $init$SingletonIterator$598();
+                return SingletonIterator$598();
             };$$singleton.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$ps:[],$cont:Singleton,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','Singleton','$m','iterator']};};
             defineAttr($$singleton,'string',function(){
                 var $$singleton=this;
-                return StringBuilder().appendAll([String$("[",1),(opt$602=(opt$603=$$singleton.element$597,opt$603!==null?opt$603.string:null),opt$602!==null?opt$602:String$("null",4)).string,String$("]",1)]).string;
+                return StringBuilder().appendAll([String$("[",1),(opt$601=(opt$602=$$singleton.element$596,opt$602!==null?opt$602.string:null),opt$601!==null?opt$601:String$("null",4)).string,String$("]",1)]).string;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:Singleton,$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$at','string']};});
-            $$singleton.segment=function (from$604,length$605){
+            $$singleton.segment=function (from$603,length$604){
                 var $$singleton=this;
-                return (opt$606=(((from$604.compare((0))!==getLarger())&&from$604.plus(length$605).compare((0)).equals(getLarger()))?$$singleton:null),opt$606!==null?opt$606:getEmpty());
+                return (opt$605=(((from$603.compare((0))!==getLarger())&&from$603.plus(length$604).compare((0)).equals(getLarger()))?$$singleton:null),opt$605!==null?opt$605:getEmpty());
             };
             $$singleton.segment.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Empty},{t:Singleton,a:{Element:'Element'}}]},$ps:[{$nm:'from',$mt:'prm',$t:{t:Integer},$an:function(){return[];}},{$nm:'length',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Singleton,$an:function(){return[doc(String$("Returns a `Singleton` if the given starting index \nis `0` and the given `length` is greater than `0`.\nOtherwise, returns an instance of `Empty`.",144)),shared(),actual()];},d:['ceylon.language','Singleton','$m','segment']};};
-            $$singleton.span=function (from$607,to$608){
+            $$singleton.span=function (from$606,to$607){
                 var $$singleton=this;
-                return (opt$609=((((from$607.compare((0))!==getLarger())&&(to$608.compare((0))!==getSmaller()))||((from$607.compare((0))!==getSmaller())&&(to$608.compare((0))!==getLarger())))?$$singleton:null),opt$609!==null?opt$609:getEmpty());
+                return (opt$608=((((from$606.compare((0))!==getLarger())&&(to$607.compare((0))!==getSmaller()))||((from$606.compare((0))!==getSmaller())&&(to$607.compare((0))!==getLarger())))?$$singleton:null),opt$608!==null?opt$608:getEmpty());
             };
             $$singleton.span.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Empty},{t:Singleton,a:{Element:'Element'}}]},$ps:[{$nm:'from',$mt:'prm',$t:{t:Integer},$an:function(){return[];}},{$nm:'to',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Singleton,$an:function(){return[doc(String$("Returns a `Singleton` if the given starting index \nis `0`. Otherwise, returns an instance of `Empty`.",101)),shared(),actual()];},d:['ceylon.language','Singleton','$m','span']};};
-            $$singleton.spanTo=function (to$610){
+            $$singleton.spanTo=function (to$609){
                 var $$singleton=this;
-                return (opt$611=(to$610.compare((0)).equals(getSmaller())?getEmpty():null),opt$611!==null?opt$611:$$singleton);
+                return (opt$610=(to$609.compare((0)).equals(getSmaller())?getEmpty():null),opt$610!==null?opt$610:$$singleton);
             };
             $$singleton.spanTo.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Empty},{t:Singleton,a:{Element:'Element'}}]},$ps:[{$nm:'to',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Singleton,$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$m','spanTo']};};
-            $$singleton.spanFrom=function (from$612){
+            $$singleton.spanFrom=function (from$611){
                 var $$singleton=this;
-                return (opt$613=(from$612.compare((0)).equals(getLarger())?getEmpty():null),opt$613!==null?opt$613:$$singleton);
+                return (opt$612=(from$611.compare((0)).equals(getLarger())?getEmpty():null),opt$612!==null?opt$612:$$singleton);
             };
             $$singleton.spanFrom.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Empty},{t:Singleton,a:{Element:'Element'}}]},$ps:[{$nm:'from',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Singleton,$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$m','spanFrom']};};
             defineAttr($$singleton,'reversed',function(){
                 var $$singleton=this;
                 return $$singleton;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Singleton,a:{Element:'Element'}},$cont:Singleton,$an:function(){return[doc(String$("Return this singleton.",22)),shared(),actual()];},d:['ceylon.language','Singleton','$at','reversed']};});
-            $$singleton.equals=function equals(that$614){
+            $$singleton.equals=function equals(that$613){
                 var $$singleton=this;
-                var element$615;
-                if((element$615=$$singleton.element$597)!==null){
-                    var that$616;
-                    if(isOfType((that$616=that$614),{t:List,a:{Element:{t:Anything}}})){
-                        if(that$616.size.equals((1))){
-                            var elem$617;
-                            if((elem$617=that$616.first)!==null){
-                                return elem$617.equals(element$615);
+                var element$614;
+                if((element$614=$$singleton.element$596)!==null){
+                    var that$615;
+                    if(isOfType((that$615=that$613),{t:List,a:{Element:{t:Anything}}})){
+                        if(that$615.size.equals((1))){
+                            var elem$616;
+                            if((elem$616=that$615.first)!==null){
+                                return elem$616.equals(element$614);
                             }
                         }
                     }
@@ -3889,93 +3884,93 @@ function $init$Singleton(){
             };$$singleton.equals.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'that',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:Singleton,$an:function(){return[doc(String$("A `Singleton` can be equal to another `List` if \nthat `List` has only one element which is equal to \nthis `Singleton`\'s element.",128)),shared(),actual()];},d:['ceylon.language','Singleton','$m','equals']};};
             defineAttr($$singleton,'hash',function(){
                 var $$singleton=this;
-                return (31).plus((opt$618=(opt$619=$$singleton.element$597,opt$619!==null?opt$619.hash:null),opt$618!==null?opt$618:(0)));
+                return (31).plus((opt$617=(opt$618=$$singleton.element$596,opt$618!==null?opt$618.hash:null),opt$617!==null?opt$617:(0)));
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:Singleton,$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$at','hash']};});
-            $$singleton.contains=function contains(element$620){
+            $$singleton.contains=function contains(element$619){
                 var $$singleton=this;
-                var e$621;
-                if((e$621=$$singleton.element$597)!==null){
-                    return e$621.equals(element$620);
+                var e$620;
+                if((e$620=$$singleton.element$596)!==null){
+                    return e$620.equals(element$619);
                 }
                 return false;
             };$$singleton.contains.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'element',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:Singleton,$an:function(){return[doc(String$("Returns `true` if the specified element is this \n`Singleton`\'s element.",71)),shared(),actual()];},d:['ceylon.language','Singleton','$m','contains']};};
-            $$singleton.count=function (selecting$622){
+            $$singleton.count=function (selecting$621){
                 var $$singleton=this;
-                return (opt$623=(selecting$622($$singleton.element$597)?(1):null),opt$623!==null?opt$623:(0));
+                return (opt$622=(selecting$621($$singleton.element$596)?(1):null),opt$622!==null?opt$622:(0));
             };
             $$singleton.count.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Singleton,$an:function(){return[doc(String$("Returns `1` if this `Singleton`\'s element\nsatisfies the predicate, or `0` otherwise.",84)),shared(),actual()];},d:['ceylon.language','Singleton','$m','count']};};
-            $$singleton.$map=function (selecting$624,$$$mptypes){
+            $$singleton.$map=function (selecting$623,$$$mptypes){
                 var $$singleton=this;
-                return Tuple(selecting$624($$singleton.element$597),getEmpty(),{Rest:{t:Empty},First:$$$mptypes.Result,Element:$$$mptypes.Result});
+                return Tuple(selecting$623($$singleton.element$596),getEmpty(),{Rest:{t:Empty},First:$$$mptypes.Result,Element:$$$mptypes.Result});
             };
             $$singleton.$map.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequence,a:{Element:'Result'}},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:Singleton,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$m','map']};};
-            $$singleton.$filter=function (selecting$625){
+            $$singleton.$filter=function (selecting$624){
                 var $$singleton=this;
-                return (opt$626=(selecting$625($$singleton.element$597)?$$singleton:null),opt$626!==null?opt$626:getEmpty());
+                return (opt$625=(selecting$624($$singleton.element$596)?$$singleton:null),opt$625!==null?opt$625:getEmpty());
             };
             $$singleton.$filter.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Singleton,a:{Element:'Element'}},{t:Empty}]},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Singleton,$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$m','filter']};};
-            $$singleton.fold=function (initial$627,accumulating$628,$$$mptypes){
+            $$singleton.fold=function (initial$626,accumulating$627,$$$mptypes){
                 var $$singleton=this;
-                return accumulating$628(initial$627,$$singleton.element$597);
+                return accumulating$627(initial$626,$$singleton.element$596);
             };
             $$singleton.fold.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Result',$ps:[{$nm:'initial',$mt:'prm',$t:'Result',$an:function(){return[];}},{$nm:'accumulating',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:Singleton,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$m','fold']};};
-            $$singleton.find=function find(selecting$629){
+            $$singleton.find=function find(selecting$628){
                 var $$singleton=this;
-                if(selecting$629($$singleton.element$597)){
-                    return $$singleton.element$597;
+                if(selecting$628($$singleton.element$596)){
+                    return $$singleton.element$596;
                 }
                 return null;
             };$$singleton.find.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Singleton,$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$m','find']};};
-            $$singleton.findLast=function (selecting$630){
+            $$singleton.findLast=function (selecting$629){
                 var $$singleton=this;
-                return $$singleton.find($JsCallable(selecting$630,[{$nm:'elem',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$singleton.$$targs$$.Element,Element:$$singleton.$$targs$$.Element}},Return:{t:Boolean$}}));
+                return $$singleton.find($JsCallable(selecting$629,[{$nm:'elem',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$singleton.$$targs$$.Element,Element:$$singleton.$$targs$$.Element}},Return:{t:Boolean$}}));
             };
             $$singleton.findLast.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Singleton,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','Singleton','$m','findLast']};};
-            $$singleton.$sort=function (comparing$631){
+            $$singleton.$sort=function (comparing$630){
                 var $$singleton=this;
                 return $$singleton;
             };
             $$singleton.$sort.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Singleton,a:{Element:'Element'}},$ps:[{$nm:'comparing',$mt:'prm',$pt:'f',$t:{t:Comparison},$an:function(){return[];}}],$cont:Singleton,$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$m','sort']};};
-            $$singleton.any=function (selecting$632){
+            $$singleton.any=function (selecting$631){
                 var $$singleton=this;
-                return selecting$632($$singleton.element$597);
+                return selecting$631($$singleton.element$596);
             };
             $$singleton.any.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Singleton,$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$m','any']};};
-            $$singleton.$every=function (selecting$633){
+            $$singleton.$every=function (selecting$632){
                 var $$singleton=this;
-                return selecting$633($$singleton.element$597);
+                return selecting$632($$singleton.element$596);
             };
             $$singleton.$every.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:Singleton,$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$m','every']};};
-            $$singleton.skipping=function (skip$634){
+            $$singleton.skipping=function (skip$633){
                 var $$singleton=this;
-                return (opt$635=(skip$634.compare((1)).equals(getSmaller())?$$singleton:null),opt$635!==null?opt$635:getEmpty());
+                return (opt$634=(skip$633.compare((1)).equals(getSmaller())?$$singleton:null),opt$634!==null?opt$634:getEmpty());
             };
             $$singleton.skipping.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Singleton,a:{Element:'Element'}},{t:Empty}]},$ps:[{$nm:'skip',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Singleton,$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$m','skipping']};};
-            $$singleton.taking=function (take$636){
+            $$singleton.taking=function (take$635){
                 var $$singleton=this;
-                return (opt$637=(take$636.compare((0)).equals(getLarger())?$$singleton:null),opt$637!==null?opt$637:getEmpty());
+                return (opt$636=(take$635.compare((0)).equals(getLarger())?$$singleton:null),opt$636!==null?opt$636:getEmpty());
             };
             $$singleton.taking.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Singleton,a:{Element:'Element'}},{t:Empty}]},$ps:[{$nm:'take',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:Singleton,$an:function(){return[shared(),actual()];},d:['ceylon.language','Singleton','$m','taking']};};
             defineAttr($$singleton,'coalesced',function(){
                 var $$singleton=this;
-                var self$638;
-                if(isOfType((self$638=$$singleton),{t:Singleton,a:{Element:{t:Object$}}})){
-                    return self$638;
+                var self$637;
+                if(isOfType((self$637=$$singleton),{t:Singleton,a:{Element:{t:Object$}}})){
+                    return self$637;
                 }
                 return getEmpty();
-            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:{ t:'i', l:['Element',{t:Object$}]}}},$cont:Singleton,$an:function(){return[doc(String$("Returns the Singleton itself, or empty",38)),shared(),actual()];},d:['ceylon.language','Singleton','$at','coalesced']};});defineAttr($$singleton,'element$597',function(){return this.element$597_;},undefined,function(){return{mod:$$METAMODEL$$,$t:'Element',$cont:Singleton,d:['ceylon.language','Singleton','$at','element']};});
+            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:{ t:'i', l:['Element',{t:Object$}]}}},$cont:Singleton,$an:function(){return[doc(String$("Returns the Singleton itself, or empty",38)),shared(),actual()];},d:['ceylon.language','Singleton','$at','coalesced']};});defineAttr($$singleton,'element$596',function(){return this.element$596_;},undefined,function(){return{mod:$$METAMODEL$$,$t:'Element',$cont:Singleton,d:['ceylon.language','Singleton','$at','element']};});
         })(Singleton.$$.prototype);
     }
     return Singleton;
 }
 exports.$init$Singleton=$init$Singleton;
 $init$Singleton();
-var opt$602,opt$603,opt$606,opt$609,opt$611,opt$613,opt$618,opt$619,opt$623,opt$626,opt$635,opt$637;
-function AssertionException(message$639, $$assertionException){
+var opt$601,opt$602,opt$605,opt$608,opt$610,opt$612,opt$617,opt$618,opt$622,opt$625,opt$634,opt$636;
+function AssertionException(message$638, $$assertionException){
     $init$AssertionException();
     if ($$assertionException===undefined)$$assertionException=new AssertionException.$$;
-    $$assertionException.message$639_=message$639;
-    Exception($$assertionException.message$639,undefined,$$assertionException);
+    $$assertionException.message$638_=message$638;
+    Exception($$assertionException.message$638,undefined,$$assertionException);
     return $$assertionException;
 }
 AssertionException.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:Exception},satisfies:[],$an:function(){return[doc(String$("An exception that occurs when an assertion fails, that\nis, when a condition in an `assert` statement evaluates\nto false at runtime.",131)),shared()];},d:['ceylon.language','AssertionException']};};
@@ -3984,7 +3979,7 @@ function $init$AssertionException(){
     if (AssertionException.$$===undefined){
         initTypeProto(AssertionException,'ceylon.language::AssertionException',$init$Exception());
         (function($$assertionException){
-            defineAttr($$assertionException,'message$639',function(){return this.message$639_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:AssertionException,d:['ceylon.language','AssertionException','$at','message']};});
+            defineAttr($$assertionException,'message$638',function(){return this.message$638_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:AssertionException,d:['ceylon.language','AssertionException','$at','message']};});
         })(AssertionException.$$.prototype);
     }
     return AssertionException;
@@ -4012,20 +4007,20 @@ function $init$Map(){
     if (Map.$$===undefined){
         initTypeProto(Map,'ceylon.language::Map',$init$Collection(),$init$Correspondence(),$init$Cloneable());
         (function($$map){
-            $$map.equals=function equals(that$640){
+            $$map.equals=function equals(that$639){
                 var $$map=this;
-                var that$641;
-                if(isOfType((that$641=that$640),{t:Map,a:{Key:{t:Object$},Item:{t:Object$}}})&&that$641.size.equals($$map.size)){
-                    var it$642 = $$map.iterator();
-                    var entry$643;while ((entry$643=it$642.next())!==getFinished()){
-                        var item$644;
-                        if((item$644=that$641.get(entry$643.key))!==null&&item$644.equals(entry$643.item)){
+                var that$640;
+                if(isOfType((that$640=that$639),{t:Map,a:{Key:{t:Object$},Item:{t:Object$}}})&&that$640.size.equals($$map.size)){
+                    var it$641 = $$map.iterator();
+                    var entry$642;while ((entry$642=it$641.next())!==getFinished()){
+                        var item$643;
+                        if((item$643=that$640.get(entry$642.key))!==null&&item$643.equals(entry$642.item)){
                             continue;
                         }else {
                             return false;
                         }
                     }
-                    if (getFinished() === entry$643){
+                    if (getFinished() === entry$642){
                         return true;
                     }
                 }else {
@@ -4034,41 +4029,41 @@ function $init$Map(){
             };$$map.equals.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'that',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:Map,$an:function(){return[doc(String$("Two `Map`s are considered equal iff they have the \nsame _entry sets_. The entry set of a `Map` is the\nset of `Entry`s belonging to the map. Therefore, the\nmaps are equal iff they have same set of `keys`, and \nfor every key in the key set, the maps have equal\nitems.",265)),shared(),actual(),$default()];},d:['ceylon.language','Map','$m','equals']};};
             defineAttr($$map,'hash',function(){
                 var $$map=this;
-                var hashCode$645=(1);
-                function setHashCode$645(hashCode$646){return hashCode$645=hashCode$646;};
-                $prop$getHashCode$645={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','Map','$at','hash','$at','hashCode']};}};
-                $prop$getHashCode$645.get=function(){return hashCode$645};
-                $prop$getHashCode$645.set=setHashCode$645;
-                if (setHashCode$645.$$metamodel$$===undefined)setHashCode$645.$$metamodel$$=$prop$getHashCode$645.$$metamodel$$;
-                var it$647 = $$map.iterator();
-                var elem$648;while ((elem$648=it$647.next())!==getFinished()){
-                    (hashCode$645=hashCode$645.times((31)));
-                    (hashCode$645=hashCode$645.plus(elem$648.hash));
+                var hashCode$644=(1);
+                function setHashCode$644(hashCode$645){return hashCode$644=hashCode$645;};
+                $prop$getHashCode$644={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','Map','$at','hash','$at','hashCode']};}};
+                $prop$getHashCode$644.get=function(){return hashCode$644};
+                $prop$getHashCode$644.set=setHashCode$644;
+                if (setHashCode$644.$$metamodel$$===undefined)setHashCode$644.$$metamodel$$=$prop$getHashCode$644.$$metamodel$$;
+                var it$646 = $$map.iterator();
+                var elem$647;while ((elem$647=it$646.next())!==getFinished()){
+                    (hashCode$644=hashCode$644.times((31)));
+                    (hashCode$644=hashCode$644.plus(elem$647.hash));
                 }
-                return hashCode$645;
+                return hashCode$644;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:Map,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','Map','$at','hash']};});defineAttr($$map,'keys',function(){
                 var $$map=this;
                 return LazySet(Comprehension(function(){
-                    var it$649=$$map.iterator();
-                    var k$650,v$651;
-                    var next$v$651=function(){
-                        var entry$652;
-                        if((entry$652=it$649.next())!==getFinished()){
-                            k$650=entry$652.key;
-                            v$651=entry$652.item;
-                            return entry$652;
+                    var it$648=$$map.iterator();
+                    var k$649,v$650;
+                    var next$v$650=function(){
+                        var entry$651;
+                        if((entry$651=it$648.next())!==getFinished()){
+                            k$649=entry$651.key;
+                            v$650=entry$651.item;
+                            return entry$651;
                         }
-                        v$651=undefined;
+                        v$650=undefined;
                         return getFinished();
                     }
-                    next$v$651();
+                    next$v$650();
                     return function(){
-                        if(v$651!==undefined){
-                            var k$650$653=k$650;
-                            var v$651$654=v$651;
-                            var tmpvar$655=k$650$653;
-                            next$v$651();
-                            return tmpvar$655;
+                        if(v$650!==undefined){
+                            var k$649$652=k$649;
+                            var v$650$653=v$650;
+                            var tmpvar$654=k$649$652;
+                            next$v$650();
+                            return tmpvar$654;
                         }
                         return getFinished();
                     }
@@ -4077,26 +4072,26 @@ function $init$Map(){
             defineAttr($$map,'values',function(){
                 var $$map=this;
                 return LazyList(Comprehension(function(){
-                    var it$656=$$map.iterator();
-                    var k$657,v$658;
-                    var next$v$658=function(){
-                        var entry$659;
-                        if((entry$659=it$656.next())!==getFinished()){
-                            k$657=entry$659.key;
-                            v$658=entry$659.item;
-                            return entry$659;
+                    var it$655=$$map.iterator();
+                    var k$656,v$657;
+                    var next$v$657=function(){
+                        var entry$658;
+                        if((entry$658=it$655.next())!==getFinished()){
+                            k$656=entry$658.key;
+                            v$657=entry$658.item;
+                            return entry$658;
                         }
-                        v$658=undefined;
+                        v$657=undefined;
                         return getFinished();
                     }
-                    next$v$658();
+                    next$v$657();
                     return function(){
-                        if(v$658!==undefined){
-                            var k$657$660=k$657;
-                            var v$658$661=v$658;
-                            var tmpvar$662=v$658$661;
-                            next$v$658();
-                            return tmpvar$662;
+                        if(v$657!==undefined){
+                            var k$656$659=k$656;
+                            var v$657$660=v$657;
+                            var tmpvar$661=v$657$660;
+                            next$v$657();
+                            return tmpvar$661;
                         }
                         return getFinished();
                     }
@@ -4105,80 +4100,80 @@ function $init$Map(){
             defineAttr($$map,'inverse',function(){
                 var $$map=this;
                 return LazyMap(Comprehension(function(){
-                    var it$663=$$map.iterator();
-                    var key$664,item$665;
-                    var next$item$665=function(){
-                        var entry$666;
-                        if((entry$666=it$663.next())!==getFinished()){
-                            key$664=entry$666.key;
-                            item$665=entry$666.item;
-                            return entry$666;
+                    var it$662=$$map.iterator();
+                    var key$663,item$664;
+                    var next$item$664=function(){
+                        var entry$665;
+                        if((entry$665=it$662.next())!==getFinished()){
+                            key$663=entry$665.key;
+                            item$664=entry$665.item;
+                            return entry$665;
                         }
-                        item$665=undefined;
+                        item$664=undefined;
                         return getFinished();
                     }
-                    next$item$665();
+                    next$item$664();
                     return function(){
-                        if(item$665!==undefined){
-                            var key$664$667=key$664;
-                            var item$665$668=item$665;
-                            var tmpvar$669=Entry(item$665$668,LazySet(Comprehension(function(){
-                                var it$670=$$map.iterator();
-                                var k$671,i$672;
-                                var next$i$672=function(){
-                                    var entry$673;
-                                    while((entry$673=it$670.next())!==getFinished()){
-                                        k$671=entry$673.key;
-                                        i$672=entry$673.item;
-                                        if(i$672.equals(item$665$668)){
-                                            return entry$673;
+                        if(item$664!==undefined){
+                            var key$663$666=key$663;
+                            var item$664$667=item$664;
+                            var tmpvar$668=Entry(item$664$667,LazySet(Comprehension(function(){
+                                var it$669=$$map.iterator();
+                                var k$670,i$671;
+                                var next$i$671=function(){
+                                    var entry$672;
+                                    while((entry$672=it$669.next())!==getFinished()){
+                                        k$670=entry$672.key;
+                                        i$671=entry$672.item;
+                                        if(i$671.equals(item$664$667)){
+                                            return entry$672;
                                         }
                                     }
-                                    i$672=undefined;
+                                    i$671=undefined;
                                     return getFinished();
                                 }
-                                next$i$672();
+                                next$i$671();
                                 return function(){
-                                    if(i$672!==undefined){
-                                        var k$671$674=k$671;
-                                        var i$672$675=i$672;
-                                        var tmpvar$676=k$671$674;
-                                        next$i$672();
-                                        return tmpvar$676;
+                                    if(i$671!==undefined){
+                                        var k$670$673=k$670;
+                                        var i$671$674=i$671;
+                                        var tmpvar$675=k$670$673;
+                                        next$i$671();
+                                        return tmpvar$675;
                                     }
                                     return getFinished();
                                 }
                             },{Absent:{t:Null},Element:$$map.$$targs$$.Key}),{Element:$$map.$$targs$$.Key}),{Key:$$map.$$targs$$.Item,Item:{t:LazySet,a:{Element:$$map.$$targs$$.Key}}});
-                            next$item$665();
-                            return tmpvar$669;
+                            next$item$664();
+                            return tmpvar$668;
                         }
                         return getFinished();
                     }
                 },{Absent:{t:Null},Element:{t:Entry,a:{Key:$$map.$$targs$$.Item,Item:{t:LazySet,a:{Element:$$map.$$targs$$.Key}}}}}),{Key:$$map.$$targs$$.Item,Item:{t:LazySet,a:{Element:$$map.$$targs$$.Key}}});
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:'Item',Item:{t:Set,a:{Element:'Key'}}}},$cont:Map,$an:function(){return[doc(String$("Returns a `Map` in which every key is an `Item` in \nthis map, and every value is the set of keys that \nstored the `Item` in this map.",133)),shared(),$default()];},d:['ceylon.language','Map','$at','inverse']};});
-            $$map.mapItems=function (mapping$677,$$$mptypes){
+            $$map.mapItems=function (mapping$676,$$$mptypes){
                 var $$map=this;
                 return LazyMap(Comprehension(function(){
-                    var it$678=$$map.iterator();
-                    var key$679,item$680;
-                    var next$item$680=function(){
-                        var entry$681;
-                        if((entry$681=it$678.next())!==getFinished()){
-                            key$679=entry$681.key;
-                            item$680=entry$681.item;
-                            return entry$681;
+                    var it$677=$$map.iterator();
+                    var key$678,item$679;
+                    var next$item$679=function(){
+                        var entry$680;
+                        if((entry$680=it$677.next())!==getFinished()){
+                            key$678=entry$680.key;
+                            item$679=entry$680.item;
+                            return entry$680;
                         }
-                        item$680=undefined;
+                        item$679=undefined;
                         return getFinished();
                     }
-                    next$item$680();
+                    next$item$679();
                     return function(){
-                        if(item$680!==undefined){
-                            var key$679$682=key$679;
-                            var item$680$683=item$680;
-                            var tmpvar$684=Entry(key$679$682,mapping$677(key$679$682,item$680$683),{Key:$$map.$$targs$$.Key,Item:$$$mptypes.Result});
-                            next$item$680();
-                            return tmpvar$684;
+                        if(item$679!==undefined){
+                            var key$678$681=key$678;
+                            var item$679$682=item$679;
+                            var tmpvar$683=Entry(key$678$681,mapping$676(key$678$681,item$679$682),{Key:$$map.$$targs$$.Key,Item:$$$mptypes.Result});
+                            next$item$679();
+                            return tmpvar$683;
                         }
                         return getFinished();
                     }
@@ -4191,161 +4186,161 @@ function $init$Map(){
 }
 exports.$init$Map=$init$Map;
 $init$Map();
-function emptyMap$685($$targs$$){
-    var $$emptyMap=new emptyMap$685.$$;
+function emptyMap$684($$targs$$){
+    var $$emptyMap=new emptyMap$684.$$;
     $$emptyMap.$$targs$$=$$targs$$;
     Object$($$emptyMap);
     Map({Key:{t:Nothing},Item:{t:Nothing}},$$emptyMap);
-    $$emptyMap.$prop$getClone={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:{t:Nothing},Item:{t:Nothing}}},$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','clone']};}};
+    $$emptyMap.$prop$getClone={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:{t:Nothing},Item:{t:Nothing}}},$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','clone']};}};
     $$emptyMap.$prop$getClone.get=function(){return clone};
     $$emptyMap.$prop$getKeys.get=function(){return keys};
     $$emptyMap.$prop$getInverse.get=function(){return inverse};
     $$emptyMap.$prop$getValues.get=function(){return values};
-    $$emptyMap.size$686_=(0);
-    $$emptyMap.$prop$getSize={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','size']};}};
+    $$emptyMap.size$685_=(0);
+    $$emptyMap.$prop$getSize={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','size']};}};
     $$emptyMap.$prop$getSize.get=function(){return size};
-    $$emptyMap.empty$687_=true;
-    $$emptyMap.$prop$getEmpty={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','empty']};}};
+    $$emptyMap.empty$686_=true;
+    $$emptyMap.$prop$getEmpty={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','empty']};}};
     $$emptyMap.$prop$getEmpty.get=function(){return empty};
     return $$emptyMap;
 }
-function $init$emptyMap$685(){
-    if (emptyMap$685.$$===undefined){
-        initTypeProto(emptyMap$685,'ceylon.language::emptyMap',$init$Object$(),$init$Map());
+function $init$emptyMap$684(){
+    if (emptyMap$684.$$===undefined){
+        initTypeProto(emptyMap$684,'ceylon.language::emptyMap',$init$Object$(),$init$Map());
     }
-    return emptyMap$685;
+    return emptyMap$684;
 }
-exports.$init$emptyMap$685=$init$emptyMap$685;
-$init$emptyMap$685();
+exports.$init$emptyMap$684=$init$emptyMap$684;
+$init$emptyMap$684();
 (function($$emptyMap){
     defineAttr($$emptyMap,'clone',function(){
         var $$emptyMap=this;
         return getEmptyMap();
-    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:{t:Nothing},Item:{t:Nothing}}},$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','clone']};});
+    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:{t:Nothing},Item:{t:Nothing}}},$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','clone']};});
     $$emptyMap.iterator=function (){
         var $$emptyMap=this;
         return getEmptyIterator();
     };
-    $$emptyMap.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:{t:Nothing}}},$ps:[],$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','iterator']};};
-    $$emptyMap.get=function (key$688){
+    $$emptyMap.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:{t:Nothing}}},$ps:[],$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','iterator']};};
+    $$emptyMap.get=function (key$687){
         var $$emptyMap=this;
         return null;
     };
-    $$emptyMap.get.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Null},$ps:[{$nm:'key',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','get']};};
+    $$emptyMap.get.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Null},$ps:[{$nm:'key',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','get']};};
     defineAttr($$emptyMap,'keys',function(){
         var $$emptyMap=this;
         return getEmptySet();
-    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','keys']};});
-    $$emptyMap.mapItems=function (mapping$689,$$$mptypes){
+    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{t:Nothing}}},$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','keys']};});
+    $$emptyMap.mapItems=function (mapping$688,$$$mptypes){
         var $$emptyMap=this;
         return getEmptyMap();
     };
-    $$emptyMap.mapItems.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:{t:Nothing},Item:{t:Nothing}}},$ps:[{$nm:'mapping',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:emptyMap$685,$tp:{Result:{'satisfies':[{t:Object$}]}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','mapItems']};};
+    $$emptyMap.mapItems.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:{t:Nothing},Item:{t:Nothing}}},$ps:[{$nm:'mapping',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:emptyMap$684,$tp:{Result:{'satisfies':[{t:Object$}]}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','mapItems']};};
     defineAttr($$emptyMap,'inverse',function(){
         var $$emptyMap=this;
         return getEmptyMap();
-    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:{t:Nothing},Item:{t:Nothing}}},$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','inverse']};});
+    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:{t:Nothing},Item:{t:Nothing}}},$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','inverse']};});
     defineAttr($$emptyMap,'values',function(){
         var $$emptyMap=this;
         return getEmpty();
-    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Collection,a:{Element:{t:Nothing}}},$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','values']};});
-    defineAttr($$emptyMap,'size',function(){return this.size$686_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','size']};});
-    defineAttr($$emptyMap,'empty',function(){return this.empty$687_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','empty']};});
-    $$emptyMap.contains=function (element$690){
+    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Collection,a:{Element:{t:Nothing}}},$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','values']};});
+    defineAttr($$emptyMap,'size',function(){return this.size$685_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','size']};});
+    defineAttr($$emptyMap,'empty',function(){return this.empty$686_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$at','empty']};});
+    $$emptyMap.contains=function (element$689){
         var $$emptyMap=this;
         return false;
     };
-    $$emptyMap.contains.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'element',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','contains']};};
-    $$emptyMap.containsAny=function (elements$691){
+    $$emptyMap.contains.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'element',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','contains']};};
+    $$emptyMap.containsAny=function (elements$690){
         var $$emptyMap=this;
         return false;
     };
-    $$emptyMap.containsAny.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'elements',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Object$}}},$an:function(){return[];}}],$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','containsAny']};};
-    $$emptyMap.containsEvery=function (elements$692){
+    $$emptyMap.containsAny.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'elements',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Object$}}},$an:function(){return[];}}],$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','containsAny']};};
+    $$emptyMap.containsEvery=function (elements$691){
         var $$emptyMap=this;
         return false;
     };
-    $$emptyMap.containsEvery.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'elements',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Object$}}},$an:function(){return[];}}],$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','containsEvery']};};
-    $$emptyMap.count=function (selecting$693){
+    $$emptyMap.containsEvery.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'elements',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Object$}}},$an:function(){return[];}}],$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','containsEvery']};};
+    $$emptyMap.count=function (selecting$692){
         var $$emptyMap=this;
         return (0);
     };
-    $$emptyMap.count.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','count']};};
-    $$emptyMap.defines=function (index$694){
+    $$emptyMap.count.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','count']};};
+    $$emptyMap.defines=function (index$693){
         var $$emptyMap=this;
         return false;
     };
-    $$emptyMap.defines.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'index',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','defines']};};
-    $$emptyMap.$map=function (collecting$695,$$$mptypes){
+    $$emptyMap.defines.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'index',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','defines']};};
+    $$emptyMap.$map=function (collecting$694,$$$mptypes){
         var $$emptyMap=this;
         return getEmpty();
     };
-    $$emptyMap.$map.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'collecting',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:emptyMap$685,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','map']};};
-    $$emptyMap.$filter=function (selecting$696){
+    $$emptyMap.$map.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'collecting',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:emptyMap$684,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','map']};};
+    $$emptyMap.$filter=function (selecting$695){
         var $$emptyMap=this;
         return getEmptyMap();
     };
-    $$emptyMap.$filter.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:{t:Nothing},Item:{t:Nothing}}},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','filter']};};
-    $$emptyMap.fold=function (initial$697,accumulating$698,$$$mptypes){
+    $$emptyMap.$filter.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:{t:Nothing},Item:{t:Nothing}}},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','filter']};};
+    $$emptyMap.fold=function (initial$696,accumulating$697,$$$mptypes){
         var $$emptyMap=this;
-        return initial$697;
+        return initial$696;
     };
-    $$emptyMap.fold.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Result',$ps:[{$nm:'initial',$mt:'prm',$t:'Result',$an:function(){return[];}},{$nm:'accumulating',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:emptyMap$685,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','fold']};};
-    $$emptyMap.find=function (selecting$699){
+    $$emptyMap.fold.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Result',$ps:[{$nm:'initial',$mt:'prm',$t:'Result',$an:function(){return[];}},{$nm:'accumulating',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:emptyMap$684,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','fold']};};
+    $$emptyMap.find=function (selecting$698){
         var $$emptyMap=this;
         return null;
     };
-    $$emptyMap.find.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Null},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','find']};};
-    $$emptyMap.collect=function (collecting$700,$$$mptypes){
+    $$emptyMap.find.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Null},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','find']};};
+    $$emptyMap.collect=function (collecting$699,$$$mptypes){
         var $$emptyMap=this;
         return getEmpty();
     };
-    $$emptyMap.collect.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'collecting',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:emptyMap$685,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','collect']};};
-    $$emptyMap.select=function (selecting$701){
+    $$emptyMap.collect.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'collecting',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$cont:emptyMap$684,$tp:{Result:{}},$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','collect']};};
+    $$emptyMap.select=function (selecting$700){
         var $$emptyMap=this;
         return getEmpty();
     };
-    $$emptyMap.select.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','select']};};
-    $$emptyMap.any=function (selecting$702){
+    $$emptyMap.select.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Empty},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','select']};};
+    $$emptyMap.any=function (selecting$701){
         var $$emptyMap=this;
         return false;
     };
-    $$emptyMap.any.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','any']};};
-    $$emptyMap.$every=function (selecting$703){
+    $$emptyMap.any.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','any']};};
+    $$emptyMap.$every=function (selecting$702){
         var $$emptyMap=this;
         return false;
     };
-    $$emptyMap.$every.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','every']};};
-    $$emptyMap.skipping=function (skip$704){
+    $$emptyMap.$every.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','every']};};
+    $$emptyMap.skipping=function (skip$703){
         var $$emptyMap=this;
         return getEmptyMap();
     };
-    $$emptyMap.skipping.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:{t:Nothing},Item:{t:Nothing}}},$ps:[{$nm:'skip',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','skipping']};};
-    $$emptyMap.taking=function (take$705){
+    $$emptyMap.skipping.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:{t:Nothing},Item:{t:Nothing}}},$ps:[{$nm:'skip',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','skipping']};};
+    $$emptyMap.taking=function (take$704){
         var $$emptyMap=this;
         return getEmptyMap();
     };
-    $$emptyMap.taking.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:{t:Nothing},Item:{t:Nothing}}},$ps:[{$nm:'take',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','taking']};};
-    $$emptyMap.by=function (step$706){
+    $$emptyMap.taking.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:{t:Nothing},Item:{t:Nothing}}},$ps:[{$nm:'take',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','taking']};};
+    $$emptyMap.by=function (step$705){
         var $$emptyMap=this;
         return getEmptyMap();
     };
-    $$emptyMap.by.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:{t:Nothing},Item:{t:Nothing}}},$ps:[{$nm:'step',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:emptyMap$685,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','by']};};
-})(emptyMap$685.$$.prototype);
-var emptyMap$707;
+    $$emptyMap.by.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Map,a:{Key:{t:Nothing},Item:{t:Nothing}}},$ps:[{$nm:'step',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:emptyMap$684,$an:function(){return[shared(),actual()];},d:['ceylon.language','emptyMap','$m','by']};};
+})(emptyMap$684.$$.prototype);
+var emptyMap$706;
 function getEmptyMap(){
-    if (emptyMap$707===undefined)emptyMap$707=$init$emptyMap$685()({Key:{t:Nothing},Item:{t:Nothing}});
-    return emptyMap$707;
+    if (emptyMap$706===undefined)emptyMap$706=$init$emptyMap$684()({Key:{t:Nothing},Item:{t:Nothing}});
+    return emptyMap$706;
 }
 exports.getEmptyMap=getEmptyMap;
-getEmptyMap.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:emptyMap$685},$an:function(){return[doc(String$("A [[Map]] with no entries.",26)),shared()];},d:['ceylon.language','emptyMap']};};
+getEmptyMap.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:emptyMap$684},$an:function(){return[doc(String$("A [[Map]] with no entries.",26)),shared()];},d:['ceylon.language','emptyMap']};};
 $prop$getEmptyMap={get:getEmptyMap,$$metamodel$$:getEmptyMap.$$metamodel$$};
 exports.$prop$getEmptyMap=$prop$getEmptyMap;
-function LazyMap(entries$708, $$targs$$,$$lazyMap){
+function LazyMap(entries$707, $$targs$$,$$lazyMap){
     $init$LazyMap();
     if ($$lazyMap===undefined)$$lazyMap=new LazyMap.$$;
     set_type_args($$lazyMap,$$targs$$);
-    $$lazyMap.entries$708_=entries$708;
+    $$lazyMap.entries$707_=entries$707;
     Map($$lazyMap.$$targs$$===undefined?$$targs$$:{Key:$$lazyMap.$$targs$$.Key,Item:$$lazyMap.$$targs$$.Item},$$lazyMap);
     $$lazyMap.$prop$getFirst={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},{t:Entry,a:{Key:'Key',Item:'Item'}}]},$cont:LazyMap,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyMap','$at','first']};}};
     $$lazyMap.$prop$getFirst.get=function(){return first};
@@ -4365,11 +4360,11 @@ function $init$LazyMap(){
         (function($$lazyMap){
             defineAttr($$lazyMap,'first',function(){
                 var $$lazyMap=this;
-                return $$lazyMap.entries$708.first;
+                return $$lazyMap.entries$707.first;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},{t:Entry,a:{Key:'Key',Item:'Item'}}]},$cont:LazyMap,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyMap','$at','first']};});
             defineAttr($$lazyMap,'last',function(){
                 var $$lazyMap=this;
-                return $$lazyMap.entries$708.last;
+                return $$lazyMap.entries$707.last;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},{t:Entry,a:{Key:'Key',Item:'Item'}}]},$cont:LazyMap,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyMap','$at','last']};});
             defineAttr($$lazyMap,'clone',function(){
                 var $$lazyMap=this;
@@ -4377,36 +4372,36 @@ function $init$LazyMap(){
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:LazyMap,a:{Key:'Key',Item:'Item'}},$cont:LazyMap,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyMap','$at','clone']};});
             defineAttr($$lazyMap,'size',function(){
                 var $$lazyMap=this;
-                return $$lazyMap.entries$708.size;
+                return $$lazyMap.entries$707.size;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:LazyMap,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyMap','$at','size']};});
-            $$lazyMap.get=function (key$709){
+            $$lazyMap.get=function (key$708){
                 var $$lazyMap=this;
-                return (opt$710=$$lazyMap.entries$708.find($JsCallable(function (e$711){
-                    return e$711.key.equals(key$709);
-                },[{$nm:'e',$mt:'prm',$t:{t:Entry,a:{Key:'Key',Item:'Item'}},$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:{t:Entry,a:{Key:$$lazyMap.$$targs$$.Key,Item:$$lazyMap.$$targs$$.Item}},Element:{t:Entry,a:{Key:$$lazyMap.$$targs$$.Key,Item:$$lazyMap.$$targs$$.Item}}}},Return:{t:Boolean$}})),opt$710!==null?opt$710.item:null);
+                return (opt$709=$$lazyMap.entries$707.find($JsCallable(function (e$710){
+                    return e$710.key.equals(key$708);
+                },[{$nm:'e',$mt:'prm',$t:{t:Entry,a:{Key:'Key',Item:'Item'}},$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:{t:Entry,a:{Key:$$lazyMap.$$targs$$.Key,Item:$$lazyMap.$$targs$$.Item}},Element:{t:Entry,a:{Key:$$lazyMap.$$targs$$.Key,Item:$$lazyMap.$$targs$$.Item}}}},Return:{t:Boolean$}})),opt$709!==null?opt$709.item:null);
             };
             $$lazyMap.get.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Item']},$ps:[{$nm:'key',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:LazyMap,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyMap','$m','get']};};
             $$lazyMap.iterator=function (){
                 var $$lazyMap=this;
-                return $$lazyMap.entries$708.iterator();
+                return $$lazyMap.entries$707.iterator();
             };
             $$lazyMap.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:{t:Entry,a:{Key:'Key',Item:'Item'}}}},$ps:[],$cont:LazyMap,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyMap','$m','iterator']};};
-            $$lazyMap.equals=function equals(that$712){
+            $$lazyMap.equals=function equals(that$711){
                 var $$lazyMap=this;
-                var that$713;
-                if(isOfType((that$713=that$712),{t:Map,a:{Key:{t:Object$},Item:{t:Object$}}})){
-                    if(that$713.size.equals($$lazyMap.size)){
-                        var it$714 = $$lazyMap.iterator();
-                        var entry$715;while ((entry$715=it$714.next())!==getFinished()){
-                            var item$716;
-                            if((item$716=that$713.get(entry$715.key))!==null){
-                                if(item$716.equals(entry$715.item)){
+                var that$712;
+                if(isOfType((that$712=that$711),{t:Map,a:{Key:{t:Object$},Item:{t:Object$}}})){
+                    if(that$712.size.equals($$lazyMap.size)){
+                        var it$713 = $$lazyMap.iterator();
+                        var entry$714;while ((entry$714=it$713.next())!==getFinished()){
+                            var item$715;
+                            if((item$715=that$712.get(entry$714.key))!==null){
+                                if(item$715.equals(entry$714.item)){
                                     continue;
                                 }
                             }
                             return false;
                         }
-                        if (getFinished() === entry$715){
+                        if (getFinished() === entry$714){
                             return true;
                         }
                     }
@@ -4415,31 +4410,31 @@ function $init$LazyMap(){
             };$$lazyMap.equals.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'that',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:LazyMap,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','LazyMap','$m','equals']};};
             defineAttr($$lazyMap,'hash',function(){
                 var $$lazyMap=this;
-                var hashCode$717=(1);
-                function setHashCode$717(hashCode$718){return hashCode$717=hashCode$718;};
-                $prop$getHashCode$717={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','LazyMap','$at','hash','$at','hashCode']};}};
-                $prop$getHashCode$717.get=function(){return hashCode$717};
-                $prop$getHashCode$717.set=setHashCode$717;
-                if (setHashCode$717.$$metamodel$$===undefined)setHashCode$717.$$metamodel$$=$prop$getHashCode$717.$$metamodel$$;
-                var it$719 = $$lazyMap.entries$708.iterator();
-                var elem$720;while ((elem$720=it$719.next())!==getFinished()){
-                    (hashCode$717=hashCode$717.times((31)));
-                    (hashCode$717=hashCode$717.plus(elem$720.hash));
+                var hashCode$716=(1);
+                function setHashCode$716(hashCode$717){return hashCode$716=hashCode$717;};
+                $prop$getHashCode$716={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','LazyMap','$at','hash','$at','hashCode']};}};
+                $prop$getHashCode$716.get=function(){return hashCode$716};
+                $prop$getHashCode$716.set=setHashCode$716;
+                if (setHashCode$716.$$metamodel$$===undefined)setHashCode$716.$$metamodel$$=$prop$getHashCode$716.$$metamodel$$;
+                var it$718 = $$lazyMap.entries$707.iterator();
+                var elem$719;while ((elem$719=it$718.next())!==getFinished()){
+                    (hashCode$716=hashCode$716.times((31)));
+                    (hashCode$716=hashCode$716.plus(elem$719.hash));
                 }
-                return hashCode$717;
-            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:LazyMap,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','LazyMap','$at','hash']};});defineAttr($$lazyMap,'entries$708',function(){return this.entries$708_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Entry,a:{Key:'Key',Item:'Item'}}}},$cont:LazyMap,d:['ceylon.language','LazyMap','$at','entries']};});
+                return hashCode$716;
+            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:LazyMap,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','LazyMap','$at','hash']};});defineAttr($$lazyMap,'entries$707',function(){return this.entries$707_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Entry,a:{Key:'Key',Item:'Item'}}}},$cont:LazyMap,d:['ceylon.language','LazyMap','$at','entries']};});
         })(LazyMap.$$.prototype);
     }
     return LazyMap;
 }
 exports.$init$LazyMap=$init$LazyMap;
 $init$LazyMap();
-var opt$710;
-function LazyList(elems$721, $$targs$$,$$lazyList){
+var opt$709;
+function LazyList(elems$720, $$targs$$,$$lazyList){
     $init$LazyList();
     if ($$lazyList===undefined)$$lazyList=new LazyList.$$;
     set_type_args($$lazyList,$$targs$$);
-    $$lazyList.elems$721_=elems$721;
+    $$lazyList.elems$720_=elems$720;
     List($$lazyList.$$targs$$===undefined?$$targs$$:{Element:$$lazyList.$$targs$$.Element},$$lazyList);
     $$lazyList.$prop$getRest={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:List,a:{Element:'Element'}},$cont:LazyList,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyList','$at','rest']};}};
     $$lazyList.$prop$getRest.get=function(){return rest};
@@ -4461,113 +4456,113 @@ function $init$LazyList(){
         (function($$lazyList){
             defineAttr($$lazyList,'lastIndex',function(){
                 var $$lazyList=this;
-                var size$722=$$lazyList.elems$721.size;
-                $prop$getSize$722={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','LazyList','$at','lastIndex','$at','size']};}};
-                $prop$getSize$722.get=function(){return size$722};
-                return (opt$723=(size$722.compare((0)).equals(getLarger())?size$722.minus((1)):null),opt$723!==null?opt$723:null);
-                var opt$723;
-            },undefined,function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},{t:Integer}]},$cont:LazyList,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyList','$at','lastIndex']};});$$lazyList.get=function get(index$724){
+                var size$721=$$lazyList.elems$720.size;
+                $prop$getSize$721={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','LazyList','$at','lastIndex','$at','size']};}};
+                $prop$getSize$721.get=function(){return size$721};
+                return (opt$722=(size$721.compare((0)).equals(getLarger())?size$721.minus((1)):null),opt$722!==null?opt$722:null);
+                var opt$722;
+            },undefined,function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},{t:Integer}]},$cont:LazyList,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyList','$at','lastIndex']};});$$lazyList.get=function get(index$723){
                 var $$lazyList=this;
-                if(index$724.equals((0))){
-                    return $$lazyList.elems$721.first;
+                if(index$723.equals((0))){
+                    return $$lazyList.elems$720.first;
                 }else {
-                    return $$lazyList.elems$721.skipping(index$724).first;
+                    return $$lazyList.elems$720.skipping(index$723).first;
                 }
             };$$lazyList.get.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},$ps:[{$nm:'index',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:LazyList,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyList','$m','get']};};
             defineAttr($$lazyList,'rest',function(){
                 var $$lazyList=this;
-                return LazyList($$lazyList.elems$721.rest,{Element:$$lazyList.$$targs$$.Element});
+                return LazyList($$lazyList.elems$720.rest,{Element:$$lazyList.$$targs$$.Element});
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:List,a:{Element:'Element'}},$cont:LazyList,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyList','$at','rest']};});
             $$lazyList.iterator=function (){
                 var $$lazyList=this;
-                return $$lazyList.elems$721.iterator();
+                return $$lazyList.elems$720.iterator();
             };
             $$lazyList.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$ps:[],$cont:LazyList,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyList','$m','iterator']};};
             defineAttr($$lazyList,'reversed',function(){
                 var $$lazyList=this;
-                return $$lazyList.elems$721.sequence.reversed;
+                return $$lazyList.elems$720.sequence.reversed;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:List,a:{Element:'Element'}},$cont:LazyList,$an:function(){return[doc(String$("Returns a `List` with the elements of this `List` \nin reverse order. This operation will create copy \nthe elements to a new `List`, so changes to the \noriginal `Iterable` will no longer be reflected in \nthe new `List`.",218)),shared(),actual()];},d:['ceylon.language','LazyList','$at','reversed']};});
             defineAttr($$lazyList,'clone',function(){
                 var $$lazyList=this;
                 return $$lazyList;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:List,a:{Element:'Element'}},$cont:LazyList,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyList','$at','clone']};});
-            $$lazyList.span=function span(from$725,to$726){
+            $$lazyList.span=function span(from$724,to$725){
                 var $$lazyList=this;
-                if((to$726.compare((0)).equals(getSmaller())&&from$725.compare((0)).equals(getSmaller()))){
+                if((to$725.compare((0)).equals(getSmaller())&&from$724.compare((0)).equals(getSmaller()))){
                     return getEmpty();
                 }
-                var toIndex$727=largest(to$726,(0),{Element:{t:Integer}});
-                var fromIndex$728=largest(from$725,(0),{Element:{t:Integer}});
-                if((toIndex$727.compare(fromIndex$728)!==getSmaller())){
-                    var els$729=(opt$730=(fromIndex$728.compare((0)).equals(getLarger())?$$lazyList.elems$721.skipping(fromIndex$728):null),opt$730!==null?opt$730:$$lazyList.elems$721);
-                    $prop$getEls$729={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}},d:['ceylon.language','LazyList','$m','span','$at','els']};}};
-                    $prop$getEls$729.get=function(){return els$729};
-                    var opt$730;
-                    return LazyList(els$729.taking(toIndex$727.minus(fromIndex$728).plus((1))),{Element:$$lazyList.$$targs$$.Element});
+                var toIndex$726=largest(to$725,(0),{Element:{t:Integer}});
+                var fromIndex$727=largest(from$724,(0),{Element:{t:Integer}});
+                if((toIndex$726.compare(fromIndex$727)!==getSmaller())){
+                    var els$728=(opt$729=(fromIndex$727.compare((0)).equals(getLarger())?$$lazyList.elems$720.skipping(fromIndex$727):null),opt$729!==null?opt$729:$$lazyList.elems$720);
+                    $prop$getEls$728={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}},d:['ceylon.language','LazyList','$m','span','$at','els']};}};
+                    $prop$getEls$728.get=function(){return els$728};
+                    var opt$729;
+                    return LazyList(els$728.taking(toIndex$726.minus(fromIndex$727).plus((1))),{Element:$$lazyList.$$targs$$.Element});
                 }else {
-                    var seq$731=(opt$732=(toIndex$727.compare((0)).equals(getLarger())?$$lazyList.elems$721.skipping(toIndex$727):null),opt$732!==null?opt$732:$$lazyList.elems$721);
-                    $prop$getSeq$731={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}},d:['ceylon.language','LazyList','$m','span','$at','seq']};}};
-                    $prop$getSeq$731.get=function(){return seq$731};
-                    var opt$732;
-                    return seq$731.taking(fromIndex$728.minus(toIndex$727).plus((1))).sequence.reversed;
+                    var seq$730=(opt$731=(toIndex$726.compare((0)).equals(getLarger())?$$lazyList.elems$720.skipping(toIndex$726):null),opt$731!==null?opt$731:$$lazyList.elems$720);
+                    $prop$getSeq$730={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}},d:['ceylon.language','LazyList','$m','span','$at','seq']};}};
+                    $prop$getSeq$730.get=function(){return seq$730};
+                    var opt$731;
+                    return seq$730.taking(fromIndex$727.minus(toIndex$726).plus((1))).sequence.reversed;
                 }
             };$$lazyList.span.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:List,a:{Element:'Element'}},$ps:[{$nm:'from',$mt:'prm',$t:{t:Integer},$an:function(){return[];}},{$nm:'to',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:LazyList,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyList','$m','span']};};
-            $$lazyList.spanTo=function (to$733){
+            $$lazyList.spanTo=function (to$732){
                 var $$lazyList=this;
-                return (opt$734=(to$733.compare((0)).equals(getSmaller())?getEmpty():null),opt$734!==null?opt$734:LazyList($$lazyList.elems$721.taking(to$733.plus((1))),{Element:$$lazyList.$$targs$$.Element}));
+                return (opt$733=(to$732.compare((0)).equals(getSmaller())?getEmpty():null),opt$733!==null?opt$733:LazyList($$lazyList.elems$720.taking(to$732.plus((1))),{Element:$$lazyList.$$targs$$.Element}));
             };
             $$lazyList.spanTo.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:List,a:{Element:'Element'}},$ps:[{$nm:'to',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:LazyList,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyList','$m','spanTo']};};
-            $$lazyList.spanFrom=function (from$735){
+            $$lazyList.spanFrom=function (from$734){
                 var $$lazyList=this;
-                return (opt$736=(from$735.compare((0)).equals(getLarger())?LazyList($$lazyList.elems$721.skipping(from$735),{Element:$$lazyList.$$targs$$.Element}):null),opt$736!==null?opt$736:$$lazyList);
+                return (opt$735=(from$734.compare((0)).equals(getLarger())?LazyList($$lazyList.elems$720.skipping(from$734),{Element:$$lazyList.$$targs$$.Element}):null),opt$735!==null?opt$735:$$lazyList);
             };
             $$lazyList.spanFrom.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:List,a:{Element:'Element'}},$ps:[{$nm:'from',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:LazyList,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyList','$m','spanFrom']};};
-            $$lazyList.segment=function segment(from$737,length$738){
+            $$lazyList.segment=function segment(from$736,length$737){
                 var $$lazyList=this;
-                if(length$738.compare((0)).equals(getLarger())){
-                    var els$739=(opt$740=(from$737.compare((0)).equals(getLarger())?$$lazyList.elems$721.skipping(from$737):null),opt$740!==null?opt$740:$$lazyList.elems$721);
-                    $prop$getEls$739={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}},d:['ceylon.language','LazyList','$m','segment','$at','els']};}};
-                    $prop$getEls$739.get=function(){return els$739};
-                    var opt$740;
-                    return LazyList(els$739.taking(length$738),{Element:$$lazyList.$$targs$$.Element});
+                if(length$737.compare((0)).equals(getLarger())){
+                    var els$738=(opt$739=(from$736.compare((0)).equals(getLarger())?$$lazyList.elems$720.skipping(from$736):null),opt$739!==null?opt$739:$$lazyList.elems$720);
+                    $prop$getEls$738={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}},d:['ceylon.language','LazyList','$m','segment','$at','els']};}};
+                    $prop$getEls$738.get=function(){return els$738};
+                    var opt$739;
+                    return LazyList(els$738.taking(length$737),{Element:$$lazyList.$$targs$$.Element});
                 }else {
                     return getEmpty();
                 }
             };$$lazyList.segment.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:List,a:{Element:'Element'}},$ps:[{$nm:'from',$mt:'prm',$t:{t:Integer},$an:function(){return[];}},{$nm:'length',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],$cont:LazyList,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazyList','$m','segment']};};
-            $$lazyList.equals=function equals(that$741){
+            $$lazyList.equals=function equals(that$740){
                 var $$lazyList=this;
-                var that$742;
-                if(isOfType((that$742=that$741),{t:List,a:{Element:{t:Anything}}})){
-                    var size$743=$$lazyList.elems$721.size;
-                    $prop$getSize$743={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','LazyList','$m','equals','$at','size']};}};
-                    $prop$getSize$743.get=function(){return size$743};
-                    if(that$742.size.equals(size$743)){
-                        var it$744 = Range((0),size$743.minus((1)),{Element:{t:Integer}}).iterator();
-                        var i$745;while ((i$745=it$744.next())!==getFinished()){
-                            var x$746=$$lazyList.get(i$745);
-                            $prop$getX$746={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},d:['ceylon.language','LazyList','$m','equals','$at','x']};}};
-                            $prop$getX$746.get=function(){return x$746};
-                            var y$747=that$742.get(i$745);
-                            $prop$getY$747={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Anything},d:['ceylon.language','LazyList','$m','equals','$at','y']};}};
-                            $prop$getY$747.get=function(){return y$747};
-                            var x$748;
-                            if((x$748=x$746)!==null){
-                                var y$749;
-                                if((y$749=y$747)!==null){
-                                    if((!x$748.equals(y$749))){
+                var that$741;
+                if(isOfType((that$741=that$740),{t:List,a:{Element:{t:Anything}}})){
+                    var size$742=$$lazyList.elems$720.size;
+                    $prop$getSize$742={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','LazyList','$m','equals','$at','size']};}};
+                    $prop$getSize$742.get=function(){return size$742};
+                    if(that$741.size.equals(size$742)){
+                        var it$743 = Range((0),size$742.minus((1)),{Element:{t:Integer}}).iterator();
+                        var i$744;while ((i$744=it$743.next())!==getFinished()){
+                            var x$745=$$lazyList.get(i$744);
+                            $prop$getX$745={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},d:['ceylon.language','LazyList','$m','equals','$at','x']};}};
+                            $prop$getX$745.get=function(){return x$745};
+                            var y$746=that$741.get(i$744);
+                            $prop$getY$746={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Anything},d:['ceylon.language','LazyList','$m','equals','$at','y']};}};
+                            $prop$getY$746.get=function(){return y$746};
+                            var x$747;
+                            if((x$747=x$745)!==null){
+                                var y$748;
+                                if((y$748=y$746)!==null){
+                                    if((!x$747.equals(y$748))){
                                         return false;
                                     }
                                 }else {
                                     return false;
                                 }
                             }else {
-                                var y$750;
-                                if((y$750=y$747)!==null){
+                                var y$749;
+                                if((y$749=y$746)!==null){
                                     return false;
                                 }
                             }
                         }
-                        if (getFinished() === i$745){
+                        if (getFinished() === i$744){
                             return true;
                         }
                     }
@@ -4576,47 +4571,47 @@ function $init$LazyList(){
             };$$lazyList.equals.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'that',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:LazyList,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','LazyList','$m','equals']};};
             defineAttr($$lazyList,'hash',function(){
                 var $$lazyList=this;
-                var hash$751=(1);
-                function setHash$751(hash$752){return hash$751=hash$752;};
-                $prop$getHash$751={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','LazyList','$at','hash','$at','hash']};}};
-                $prop$getHash$751.get=function(){return hash$751};
-                $prop$getHash$751.set=setHash$751;
-                if (setHash$751.$$metamodel$$===undefined)setHash$751.$$metamodel$$=$prop$getHash$751.$$metamodel$$;
-                var it$753 = $$lazyList.elems$721.iterator();
-                var elem$754;while ((elem$754=it$753.next())!==getFinished()){
-                    (hash$751=hash$751.times((31)));
-                    var elem$755;
-                    if((elem$755=elem$754)!==null){
-                        (hash$751=hash$751.plus(elem$755.hash));
+                var hash$750=(1);
+                function setHash$750(hash$751){return hash$750=hash$751;};
+                $prop$getHash$750={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','LazyList','$at','hash','$at','hash']};}};
+                $prop$getHash$750.get=function(){return hash$750};
+                $prop$getHash$750.set=setHash$750;
+                if (setHash$750.$$metamodel$$===undefined)setHash$750.$$metamodel$$=$prop$getHash$750.$$metamodel$$;
+                var it$752 = $$lazyList.elems$720.iterator();
+                var elem$753;while ((elem$753=it$752.next())!==getFinished()){
+                    (hash$750=hash$750.times((31)));
+                    var elem$754;
+                    if((elem$754=elem$753)!==null){
+                        (hash$750=hash$750.plus(elem$754.hash));
                     }
                 }
-                return hash$751;
-            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:LazyList,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','LazyList','$at','hash']};});$$lazyList.findLast=function (selecting$756){
+                return hash$750;
+            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:LazyList,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','LazyList','$at','hash']};});$$lazyList.findLast=function (selecting$755){
                 var $$lazyList=this;
-                return $$lazyList.elems$721.findLast($JsCallable(selecting$756,[{$nm:'elem',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$lazyList.$$targs$$.Element,Element:$$lazyList.$$targs$$.Element}},Return:{t:Boolean$}}));
+                return $$lazyList.elems$720.findLast($JsCallable(selecting$755,[{$nm:'elem',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$lazyList.$$targs$$.Element,Element:$$lazyList.$$targs$$.Element}},Return:{t:Boolean$}}));
             };
             $$lazyList.findLast.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},$ps:[{$nm:'selecting',$mt:'prm',$pt:'f',$t:{t:Boolean$},$an:function(){return[];}}],$cont:LazyList,$an:function(){return[shared(),$default(),actual()];},d:['ceylon.language','LazyList','$m','findLast']};};
             defineAttr($$lazyList,'first',function(){
                 var $$lazyList=this;
-                return $$lazyList.elems$721.first;
+                return $$lazyList.elems$720.first;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},$cont:LazyList,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','LazyList','$at','first']};});
             defineAttr($$lazyList,'last',function(){
                 var $$lazyList=this;
-                return $$lazyList.elems$721.last;
+                return $$lazyList.elems$720.last;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Element']},$cont:LazyList,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','LazyList','$at','last']};});
-            defineAttr($$lazyList,'elems$721',function(){return this.elems$721_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}},$cont:LazyList,d:['ceylon.language','LazyList','$at','elems']};});
+            defineAttr($$lazyList,'elems$720',function(){return this.elems$720_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}},$cont:LazyList,d:['ceylon.language','LazyList','$at','elems']};});
         })(LazyList.$$.prototype);
     }
     return LazyList;
 }
 exports.$init$LazyList=$init$LazyList;
 $init$LazyList();
-var opt$734,opt$736;
-function LazySet(elems$757, $$targs$$,$$lazySet){
+var opt$733,opt$735;
+function LazySet(elems$756, $$targs$$,$$lazySet){
     $init$LazySet();
     if ($$lazySet===undefined)$$lazySet=new LazySet.$$;
     set_type_args($$lazySet,$$targs$$);
-    $$lazySet.elems$757_=elems$757;
+    $$lazySet.elems$756_=elems$756;
     Set($$lazySet.$$targs$$===undefined?$$targs$$:{Element:$$lazySet.$$targs$$.Element},$$lazySet);
     $$lazySet.$prop$getClone={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:LazySet,a:{Element:'Element'}},$cont:LazySet,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazySet','$at','clone']};}};
     $$lazySet.$prop$getClone.get=function(){return clone};
@@ -4634,202 +4629,202 @@ function $init$LazySet(){
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:LazySet,a:{Element:'Element'}},$cont:LazySet,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazySet','$at','clone']};});
             defineAttr($$lazySet,'size',function(){
                 var $$lazySet=this;
-                var c$758=(0);
-                function setC$758(c$759){return c$758=c$759;};
-                $prop$getC$758={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','LazySet','$at','size','$at','c']};}};
-                $prop$getC$758.get=function(){return c$758};
-                $prop$getC$758.set=setC$758;
-                if (setC$758.$$metamodel$$===undefined)setC$758.$$metamodel$$=$prop$getC$758.$$metamodel$$;
-                var sorted$760=$$lazySet.elems$757.$sort($JsCallable(byIncreasing($JsCallable(function (e$761){
-                    return e$761.hash;
+                var c$757=(0);
+                function setC$757(c$758){return c$757=c$758;};
+                $prop$getC$757={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','LazySet','$at','size','$at','c']};}};
+                $prop$getC$757.get=function(){return c$757};
+                $prop$getC$757.set=setC$757;
+                if (setC$757.$$metamodel$$===undefined)setC$757.$$metamodel$$=$prop$getC$757.$$metamodel$$;
+                var sorted$759=$$lazySet.elems$756.$sort($JsCallable(byIncreasing($JsCallable(function (e$760){
+                    return e$760.hash;
                 },[{$nm:'e',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$lazySet.$$targs$$.Element,Element:$$lazySet.$$targs$$.Element}},Return:{t:Integer}}),{Value:{t:Integer},Element:$$lazySet.$$targs$$.Element}),[{$nm:'p1',$mt:'prm',$t:'Element'},{$nm:'p2',$mt:'prm',$t:'Element'}],{Arguments:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Empty},First:$$lazySet.$$targs$$.Element,Element:$$lazySet.$$targs$$.Element}},First:$$lazySet.$$targs$$.Element,Element:$$lazySet.$$targs$$.Element}},Return:{t:Comparison}}));
-                $prop$getSorted$760={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},d:['ceylon.language','LazySet','$at','size','$at','sorted']};}};
-                $prop$getSorted$760.get=function(){return sorted$760};
-                var l$762;
-                if((l$762=sorted$760.first)!==null){
-                    c$758=(1);
-                    var last$763=l$762;
-                    function setLast$763(last$764){return last$763=last$764;};
-                    $prop$getLast$763={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'Element',$an:function(){return[variable()];},d:['ceylon.language','LazySet','$at','size','$at','last']};}};
-                    $prop$getLast$763.get=function(){return last$763};
-                    $prop$getLast$763.set=setLast$763;
-                    if (setLast$763.$$metamodel$$===undefined)setLast$763.$$metamodel$$=$prop$getLast$763.$$metamodel$$;
-                    var it$765 = sorted$760.rest.iterator();
-                    var e$766;while ((e$766=it$765.next())!==getFinished()){
-                        if((!e$766.equals(last$763))){
-                            (oldc$767=c$758,c$758=oldc$767.successor,oldc$767);
-                            var oldc$767;
-                            last$763=e$766;
+                $prop$getSorted$759={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},d:['ceylon.language','LazySet','$at','size','$at','sorted']};}};
+                $prop$getSorted$759.get=function(){return sorted$759};
+                var l$761;
+                if((l$761=sorted$759.first)!==null){
+                    c$757=(1);
+                    var last$762=l$761;
+                    function setLast$762(last$763){return last$762=last$763;};
+                    $prop$getLast$762={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'Element',$an:function(){return[variable()];},d:['ceylon.language','LazySet','$at','size','$at','last']};}};
+                    $prop$getLast$762.get=function(){return last$762};
+                    $prop$getLast$762.set=setLast$762;
+                    if (setLast$762.$$metamodel$$===undefined)setLast$762.$$metamodel$$=$prop$getLast$762.$$metamodel$$;
+                    var it$764 = sorted$759.rest.iterator();
+                    var e$765;while ((e$765=it$764.next())!==getFinished()){
+                        if((!e$765.equals(last$762))){
+                            (oldc$766=c$757,c$757=oldc$766.successor,oldc$766);
+                            var oldc$766;
+                            last$762=e$765;
                         }
                     }
                 }
-                return c$758;
+                return c$757;
             },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:LazySet,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazySet','$at','size']};});$$lazySet.iterator=function iterator(){
                 var $$lazySet=this;
-                function iterator$768($$targs$$){
-                    var $$iterator$768=new iterator$768.$$;
-                    $$iterator$768.$$targs$$=$$targs$$;
-                    Iterator({Element:$$lazySet.$$targs$$.Element},$$iterator$768);
-                    $$iterator$768.sorted$769_=$$lazySet.elems$757.$sort($JsCallable(byIncreasing($JsCallable(function (e$770){
-                        return e$770.hash;
+                function iterator$767($$targs$$){
+                    var $$iterator$767=new iterator$767.$$;
+                    $$iterator$767.$$targs$$=$$targs$$;
+                    Iterator({Element:$$lazySet.$$targs$$.Element},$$iterator$767);
+                    $$iterator$767.sorted$768_=$$lazySet.elems$756.$sort($JsCallable(byIncreasing($JsCallable(function (e$769){
+                        return e$769.hash;
                     },[{$nm:'e',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$lazySet.$$targs$$.Element,Element:$$lazySet.$$targs$$.Element}},Return:{t:Integer}}),{Value:{t:Integer},Element:$$lazySet.$$targs$$.Element}),[{$nm:'p1',$mt:'prm',$t:'Element'},{$nm:'p2',$mt:'prm',$t:'Element'}],{Arguments:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Empty},First:$$lazySet.$$targs$$.Element,Element:$$lazySet.$$targs$$.Element}},First:$$lazySet.$$targs$$.Element,Element:$$lazySet.$$targs$$.Element}},Return:{t:Comparison}})).iterator();
-                    $$iterator$768.$prop$getSorted$769={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$768,d:['ceylon.language','LazySet','$m','iterator','$o','iterator','$at','sorted']};}};
-                    $$iterator$768.$prop$getSorted$769.get=function(){return sorted$769};
-                    $$iterator$768.ready$771_=$$iterator$768.sorted$769.next();
-                    $$iterator$768.$prop$getReady$771={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$cont:iterator$768,$an:function(){return[variable()];},d:['ceylon.language','LazySet','$m','iterator','$o','iterator','$at','ready']};}};
-                    $$iterator$768.$prop$getReady$771.get=function(){return ready$771};
-                    return $$iterator$768;
+                    $$iterator$767.$prop$getSorted$768={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$767,d:['ceylon.language','LazySet','$m','iterator','$o','iterator','$at','sorted']};}};
+                    $$iterator$767.$prop$getSorted$768.get=function(){return sorted$768};
+                    $$iterator$767.ready$770_=$$iterator$767.sorted$768.next();
+                    $$iterator$767.$prop$getReady$770={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$cont:iterator$767,$an:function(){return[variable()];},d:['ceylon.language','LazySet','$m','iterator','$o','iterator','$at','ready']};}};
+                    $$iterator$767.$prop$getReady$770.get=function(){return ready$770};
+                    return $$iterator$767;
                 }
-                function $init$iterator$768(){
-                    if (iterator$768.$$===undefined){
-                        initTypeProto(iterator$768,'ceylon.language::LazySet.iterator.iterator',Basic,$init$Iterator());
+                function $init$iterator$767(){
+                    if (iterator$767.$$===undefined){
+                        initTypeProto(iterator$767,'ceylon.language::LazySet.iterator.iterator',Basic,$init$Iterator());
                     }
-                    return iterator$768;
+                    return iterator$767;
                 }
-                $init$iterator$768();
-                (function($$iterator$768){
-                    defineAttr($$iterator$768,'sorted$769',function(){return this.sorted$769_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$768,d:['ceylon.language','LazySet','$m','iterator','$o','iterator','$at','sorted']};});
-                    defineAttr($$iterator$768,'ready$771',function(){return this.ready$771_;},function(ready$772){return this.ready$771_=ready$772;},function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$cont:iterator$768,$an:function(){return[variable()];},d:['ceylon.language','LazySet','$m','iterator','$o','iterator','$at','ready']};});
-                    $$iterator$768.next=function next(){
-                        var $$iterator$768=this;
-                        var next$773=$$iterator$768.ready$771;
-                        var next$774;
-                        if(!isOfType((next$774=next$773),{t:Finished})){
-                            while(next$774.equals($$iterator$768.ready$771)){
-                                $$iterator$768.ready$771=$$iterator$768.sorted$769.next();
+                $init$iterator$767();
+                (function($$iterator$767){
+                    defineAttr($$iterator$767,'sorted$768',function(){return this.sorted$768_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$767,d:['ceylon.language','LazySet','$m','iterator','$o','iterator','$at','sorted']};});
+                    defineAttr($$iterator$767,'ready$770',function(){return this.ready$770_;},function(ready$771){return this.ready$770_=ready$771;},function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$cont:iterator$767,$an:function(){return[variable()];},d:['ceylon.language','LazySet','$m','iterator','$o','iterator','$at','ready']};});
+                    $$iterator$767.next=function next(){
+                        var $$iterator$767=this;
+                        var next$772=$$iterator$767.ready$770;
+                        var next$773;
+                        if(!isOfType((next$773=next$772),{t:Finished})){
+                            while(next$773.equals($$iterator$767.ready$770)){
+                                $$iterator$767.ready$770=$$iterator$767.sorted$768.next();
                             }
                         }
-                        return next$773;
-                    };$$iterator$768.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:iterator$768,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazySet','$m','iterator','$o','iterator','$m','next']};};
-                })(iterator$768.$$.prototype);
-                var iterator$775;
-                function getIterator$775(){
-                    if (iterator$775===undefined)iterator$775=$init$iterator$768()({Element:$$lazySet.$$targs$$.Element});
-                    return iterator$775;
+                        return next$772;
+                    };$$iterator$767.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Element',{t:Finished}]},$ps:[],$cont:iterator$767,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazySet','$m','iterator','$o','iterator','$m','next']};};
+                })(iterator$767.$$.prototype);
+                var iterator$774;
+                function getIterator$774(){
+                    if (iterator$774===undefined)iterator$774=$init$iterator$767()({Element:$$lazySet.$$targs$$.Element});
+                    return iterator$774;
                 }
-                getIterator$775.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$768},d:['ceylon.language','LazySet','$m','iterator','$at','iterator']};};
-                $prop$getIterator$775={get:getIterator$775,$$metamodel$$:getIterator$775.$$metamodel$$};
-                return getIterator$775();
+                getIterator$774.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$767},d:['ceylon.language','LazySet','$m','iterator','$at','iterator']};};
+                $prop$getIterator$774={get:getIterator$774,$$metamodel$$:getIterator$774.$$metamodel$$};
+                return getIterator$774();
             };$$lazySet.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$ps:[],$cont:LazySet,$an:function(){return[shared(),actual()];},d:['ceylon.language','LazySet','$m','iterator']};};
-            $$lazySet.union=function (set$776,$$$mptypes){
+            $$lazySet.union=function (set$775,$$$mptypes){
                 var $$lazySet=this;
-                return LazySet($$lazySet.elems$757.chain(set$776,{Other:$$$mptypes.Other,OtherAbsent:{t:Null}}),{Element:{ t:'u', l:[$$lazySet.$$targs$$.Element,$$$mptypes.Other]}});
+                return LazySet($$lazySet.elems$756.chain(set$775,{Other:$$$mptypes.Other,OtherAbsent:{t:Null}}),{Element:{ t:'u', l:[$$lazySet.$$targs$$.Element,$$$mptypes.Other]}});
             };
             $$lazySet.union.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{ t:'u', l:['Element','Other']}}},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:'Other'}},$an:function(){return[];}}],$cont:LazySet,$tp:{Other:{'satisfies':[{t:Object$}]}},$an:function(){return[shared(),actual()];},d:['ceylon.language','LazySet','$m','union']};};
-            $$lazySet.intersection=function (set$777,$$$mptypes){
+            $$lazySet.intersection=function (set$776,$$$mptypes){
                 var $$lazySet=this;
                 return LazySet(Comprehension(function(){
-                    var e$780;
-                    var it$778=set$777.iterator();
-                    var e$779=getFinished();
-                    var e$780;
-                    var next$e$779=function(){
-                        while((e$779=it$778.next())!==getFinished()){
-                            if(isOfType((e$780=e$779),$$lazySet.$$targs$$.Element)&&$$lazySet.contains(e$780)){
-                                return e$779;
+                    var e$779;
+                    var it$777=set$776.iterator();
+                    var e$778=getFinished();
+                    var e$779;
+                    var next$e$778=function(){
+                        while((e$778=it$777.next())!==getFinished()){
+                            if(isOfType((e$779=e$778),$$lazySet.$$targs$$.Element)&&$$lazySet.contains(e$779)){
+                                return e$778;
                             }
                         }
                         return getFinished();
                     }
-                    next$e$779();
+                    next$e$778();
                     return function(){
-                        if(e$779!==getFinished()){
-                            var e$779$781=e$779;
-                            var tmpvar$782=e$780;
-                            next$e$779();
-                            return tmpvar$782;
+                        if(e$778!==getFinished()){
+                            var e$778$780=e$778;
+                            var tmpvar$781=e$779;
+                            next$e$778();
+                            return tmpvar$781;
                         }
                         return getFinished();
                     }
                 },{Absent:{t:Null},Element:{ t:'i', l:[$$$mptypes.Other,$$lazySet.$$targs$$.Element]}}),{Element:{ t:'i', l:[$$$mptypes.Other,$$lazySet.$$targs$$.Element]}});
             };
             $$lazySet.intersection.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{ t:'i', l:['Element','Other']}}},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:'Other'}},$an:function(){return[];}}],$cont:LazySet,$tp:{Other:{'satisfies':[{t:Object$}]}},$an:function(){return[shared(),actual()];},d:['ceylon.language','LazySet','$m','intersection']};};
-            $$lazySet.exclusiveUnion=function exclusiveUnion(other$783,$$$mptypes){
+            $$lazySet.exclusiveUnion=function exclusiveUnion(other$782,$$$mptypes){
                 var $$lazySet=this;
-                var hereNotThere$784=Comprehension(function(){
-                    var it$785=$$lazySet.elems$757.iterator();
-                    var e$786=getFinished();
-                    var next$e$786=function(){
-                        while((e$786=it$785.next())!==getFinished()){
-                            if((!other$783.contains(e$786))){
-                                return e$786;
+                var hereNotThere$783=Comprehension(function(){
+                    var it$784=$$lazySet.elems$756.iterator();
+                    var e$785=getFinished();
+                    var next$e$785=function(){
+                        while((e$785=it$784.next())!==getFinished()){
+                            if((!other$782.contains(e$785))){
+                                return e$785;
                             }
                         }
                         return getFinished();
                     }
-                    next$e$786();
+                    next$e$785();
                     return function(){
-                        if(e$786!==getFinished()){
-                            var e$786$787=e$786;
-                            var tmpvar$788=e$786$787;
-                            next$e$786();
-                            return tmpvar$788;
+                        if(e$785!==getFinished()){
+                            var e$785$786=e$785;
+                            var tmpvar$787=e$785$786;
+                            next$e$785();
+                            return tmpvar$787;
                         }
                         return getFinished();
                     }
                 },{Absent:{t:Null},Element:$$lazySet.$$targs$$.Element});
-                var thereNotHere$789=Comprehension(function(){
-                    var it$790=other$783.iterator();
-                    var e$791=getFinished();
-                    var next$e$791=function(){
-                        while((e$791=it$790.next())!==getFinished()){
-                            if((!$$lazySet.contains(e$791))){
-                                return e$791;
+                var thereNotHere$788=Comprehension(function(){
+                    var it$789=other$782.iterator();
+                    var e$790=getFinished();
+                    var next$e$790=function(){
+                        while((e$790=it$789.next())!==getFinished()){
+                            if((!$$lazySet.contains(e$790))){
+                                return e$790;
                             }
                         }
                         return getFinished();
                     }
-                    next$e$791();
+                    next$e$790();
                     return function(){
-                        if(e$791!==getFinished()){
-                            var e$791$792=e$791;
-                            var tmpvar$793=e$791$792;
-                            next$e$791();
-                            return tmpvar$793;
+                        if(e$790!==getFinished()){
+                            var e$790$791=e$790;
+                            var tmpvar$792=e$790$791;
+                            next$e$790();
+                            return tmpvar$792;
                         }
                         return getFinished();
                     }
                 },{Absent:{t:Null},Element:$$$mptypes.Other});
-                return LazySet(hereNotThere$784.chain(thereNotHere$789,{Other:$$$mptypes.Other,OtherAbsent:{t:Null}}),{Element:{ t:'u', l:[$$lazySet.$$targs$$.Element,$$$mptypes.Other]}});
+                return LazySet(hereNotThere$783.chain(thereNotHere$788,{Other:$$$mptypes.Other,OtherAbsent:{t:Null}}),{Element:{ t:'u', l:[$$lazySet.$$targs$$.Element,$$$mptypes.Other]}});
             };$$lazySet.exclusiveUnion.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:{ t:'u', l:['Element','Other']}}},$ps:[{$nm:'other',$mt:'prm',$t:{t:Set,a:{Element:'Other'}},$an:function(){return[];}}],$cont:LazySet,$tp:{Other:{'satisfies':[{t:Object$}]}},$an:function(){return[shared(),actual()];},d:['ceylon.language','LazySet','$m','exclusiveUnion']};};
-            $$lazySet.complement=function (set$794,$$$mptypes){
+            $$lazySet.complement=function (set$793,$$$mptypes){
                 var $$lazySet=this;
                 return LazySet(Comprehension(function(){
-                    var it$795=$$lazySet.iterator();
-                    var e$796=getFinished();
-                    var next$e$796=function(){
-                        while((e$796=it$795.next())!==getFinished()){
-                            if((!set$794.contains(e$796))){
-                                return e$796;
+                    var it$794=$$lazySet.iterator();
+                    var e$795=getFinished();
+                    var next$e$795=function(){
+                        while((e$795=it$794.next())!==getFinished()){
+                            if((!set$793.contains(e$795))){
+                                return e$795;
                             }
                         }
                         return getFinished();
                     }
-                    next$e$796();
+                    next$e$795();
                     return function(){
-                        if(e$796!==getFinished()){
-                            var e$796$797=e$796;
-                            var tmpvar$798=e$796$797;
-                            next$e$796();
-                            return tmpvar$798;
+                        if(e$795!==getFinished()){
+                            var e$795$796=e$795;
+                            var tmpvar$797=e$795$796;
+                            next$e$795();
+                            return tmpvar$797;
                         }
                         return getFinished();
                     }
                 },{Absent:{t:Null},Element:$$lazySet.$$targs$$.Element}),{Element:$$lazySet.$$targs$$.Element});
             };
             $$lazySet.complement.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Set,a:{Element:'Element'}},$ps:[{$nm:'set',$mt:'prm',$t:{t:Set,a:{Element:'Other'}},$an:function(){return[];}}],$cont:LazySet,$tp:{Other:{'satisfies':[{t:Object$}]}},$an:function(){return[shared(),actual()];},d:['ceylon.language','LazySet','$m','complement']};};
-            $$lazySet.equals=function equals(that$799){
+            $$lazySet.equals=function equals(that$798){
                 var $$lazySet=this;
-                var that$800;
-                if(isOfType((that$800=that$799),{t:Set,a:{Element:{t:Object$}}})){
-                    if(that$800.size.equals($$lazySet.size)){
-                        var it$801 = $$lazySet.elems$757.iterator();
-                        var element$802;while ((element$802=it$801.next())!==getFinished()){
-                            if((!that$800.contains(element$802))){
+                var that$799;
+                if(isOfType((that$799=that$798),{t:Set,a:{Element:{t:Object$}}})){
+                    if(that$799.size.equals($$lazySet.size)){
+                        var it$800 = $$lazySet.elems$756.iterator();
+                        var element$801;while ((element$801=it$800.next())!==getFinished()){
+                            if((!that$799.contains(element$801))){
                                 return false;
                             }
                         }
-                        if (getFinished() === element$802){
+                        if (getFinished() === element$801){
                             return true;
                         }
                     }
@@ -4838,29 +4833,29 @@ function $init$LazySet(){
             };$$lazySet.equals.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'that',$mt:'prm',$t:{t:Object$},$an:function(){return[];}}],$cont:LazySet,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','LazySet','$m','equals']};};
             defineAttr($$lazySet,'hash',function(){
                 var $$lazySet=this;
-                var hashCode$803=(1);
-                function setHashCode$803(hashCode$804){return hashCode$803=hashCode$804;};
-                $prop$getHashCode$803={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','LazySet','$at','hash','$at','hashCode']};}};
-                $prop$getHashCode$803.get=function(){return hashCode$803};
-                $prop$getHashCode$803.set=setHashCode$803;
-                if (setHashCode$803.$$metamodel$$===undefined)setHashCode$803.$$metamodel$$=$prop$getHashCode$803.$$metamodel$$;
-                var it$805 = $$lazySet.elems$757.iterator();
-                var elem$806;while ((elem$806=it$805.next())!==getFinished()){
-                    (hashCode$803=hashCode$803.times((31)));
-                    (hashCode$803=hashCode$803.plus(elem$806.hash));
+                var hashCode$802=(1);
+                function setHashCode$802(hashCode$803){return hashCode$802=hashCode$803;};
+                $prop$getHashCode$802={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','LazySet','$at','hash','$at','hashCode']};}};
+                $prop$getHashCode$802.get=function(){return hashCode$802};
+                $prop$getHashCode$802.set=setHashCode$802;
+                if (setHashCode$802.$$metamodel$$===undefined)setHashCode$802.$$metamodel$$=$prop$getHashCode$802.$$metamodel$$;
+                var it$804 = $$lazySet.elems$756.iterator();
+                var elem$805;while ((elem$805=it$804.next())!==getFinished()){
+                    (hashCode$802=hashCode$802.times((31)));
+                    (hashCode$802=hashCode$802.plus(elem$805.hash));
                 }
-                return hashCode$803;
-            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:LazySet,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','LazySet','$at','hash']};});defineAttr($$lazySet,'elems$757',function(){return this.elems$757_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}},$cont:LazySet,d:['ceylon.language','LazySet','$at','elems']};});
+                return hashCode$802;
+            },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$cont:LazySet,$an:function(){return[shared(),actual(),$default()];},d:['ceylon.language','LazySet','$at','hash']};});defineAttr($$lazySet,'elems$756',function(){return this.elems$756_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}},$cont:LazySet,d:['ceylon.language','LazySet','$at','elems']};});
         })(LazySet.$$.prototype);
     }
     return LazySet;
 }
 exports.$init$LazySet=$init$LazySet;
 $init$LazySet();
-function any(values$807){
-    var it$808 = values$807.iterator();
-    var val$809;while ((val$809=it$808.next())!==getFinished()){
-        if(val$809){
+function any(values$806){
+    var it$807 = values$806.iterator();
+    var val$808;while ((val$808=it$807.next())!==getFinished()){
+        if(val$808){
             return true;
         }
     }
@@ -4868,75 +4863,75 @@ function any(values$807){
 }
 exports.any=any;
 any.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'values',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Boolean$}}},$an:function(){return[];}}],$an:function(){return[doc(String$("Determines if any one of the given boolean values \n(usually a comprehension) is `true`.",87)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),every)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','any']};};
-var byDecreasing=function (comparable$810,$$$mptypes){
-    return function(x$811,y$812){{
-        return comparable$810(y$812).compare(comparable$810(x$811));
+var byDecreasing=function (comparable$809,$$$mptypes){
+    return function(x$810,y$811){{
+        return comparable$809(y$811).compare(comparable$809(x$810));
     }
 }
 }
 ;
 byDecreasing.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Comparison},$ps:[{$nm:'comparable',$mt:'prm',$pt:'f',$t:'Value',$an:function(){return[];}}],$tp:{Element:{},Value:{'satisfies':[{t:Comparable,a:{Other:'Value'}}]}},$an:function(){return[doc(String$("A comparator which orders elements in decreasing order \naccording to the `Comparable` returned by the given \n`comparable()` function.",133)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),byIncreasing)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','byDecreasing']};};
 exports.byDecreasing=byDecreasing;
-var byIncreasing=function (comparable$813,$$$mptypes){
-    return function(x$814,y$815){{
-        return comparable$813(x$814).compare(comparable$813(y$815));
+var byIncreasing=function (comparable$812,$$$mptypes){
+    return function(x$813,y$814){{
+        return comparable$812(x$813).compare(comparable$812(y$814));
     }
 }
 }
 ;
 byIncreasing.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Comparison},$ps:[{$nm:'comparable',$mt:'prm',$pt:'f',$t:'Value',$an:function(){return[];}}],$tp:{Element:{},Value:{'satisfies':[{t:Comparable,a:{Other:'Value'}}]}},$an:function(){return[doc(String$("A comparator which orders elements in increasing order \naccording to the `Comparable` returned by the given \n`comparable()` function.",133)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),byDecreasing)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','byIncreasing']};};
 exports.byIncreasing=byIncreasing;
-var byItem=function (comparing$816,$$$mptypes){
-    return function(x$817,y$818){{
-        return comparing$816(x$817.item,y$818.item);
+var byItem=function (comparing$815,$$$mptypes){
+    return function(x$816,y$817){{
+        return comparing$815(x$816.item,y$817.item);
     }
 }
 }
 ;
 byItem.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Comparison},$ps:[{$nm:'comparing',$mt:'prm',$pt:'f',$t:{t:Comparison},$an:function(){return[];}}],$tp:{Item:{'satisfies':[{t:Object$}]}},$an:function(){return[doc(String$("A comparator for `Entry`s which compares their items \naccording to the given `comparing()` function.",100)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),byKey)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','byItem']};};
 exports.byItem=byItem;
-var byKey=function (comparing$819,$$$mptypes){
-    return function(x$820,y$821){{
-        return comparing$819(x$820.key,y$821.key);
+var byKey=function (comparing$818,$$$mptypes){
+    return function(x$819,y$820){{
+        return comparing$818(x$819.key,y$820.key);
     }
 }
 }
 ;
 byKey.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Comparison},$ps:[{$nm:'comparing',$mt:'prm',$pt:'f',$t:{t:Comparison},$an:function(){return[];}}],$tp:{Key:{'satisfies':[{t:Object$}]}},$an:function(){return[doc(String$("A comparator for `Entry`s which compares their keys \naccording to the given `comparing()` function.",99)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),byItem)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','byKey']};};
 exports.byKey=byKey;
-var coalesce=function (values$822,$$$mptypes){
-    return values$822.coalesced;
+var coalesce=function (values$821,$$$mptypes){
+    return values$821.coalesced;
 };
 coalesce.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:{ t:'i', l:['Element',{t:Object$}]}}},$ps:[{$nm:'values',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}},$an:function(){return[doc("The values, some of which may be null.")];}}],$tp:{Element:{}},$an:function(){return[doc(String$("Return a sequence containing the given values which are\nnot null. If there are no values which are not null,\nreturn an empty sequence.",134)),shared()];},d:['ceylon.language','coalesce']};};
 exports.coalesce=coalesce;
-function count(values$823){
-    var count$824=(0);
-    function setCount$824(count$825){return count$824=count$825;};
-    var it$826 = values$823.iterator();
-    var val$827;while ((val$827=it$826.next())!==getFinished()){
-        if(val$827){
-            (oldcount$828=count$824,count$824=oldcount$828.successor,oldcount$828);
-            var oldcount$828;
+function count(values$822){
+    var count$823=(0);
+    function setCount$823(count$824){return count$823=count$824;};
+    var it$825 = values$822.iterator();
+    var val$826;while ((val$826=it$825.next())!==getFinished()){
+        if(val$826){
+            (oldcount$827=count$823,count$823=oldcount$827.successor,oldcount$827);
+            var oldcount$827;
         }
     }
-    return count$824;
+    return count$823;
 }
 exports.count=count;
 count.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$ps:[{$nm:'values',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Boolean$}}},$an:function(){return[];}}],$an:function(){return[doc(String$("A count of the number of `true` items in the given values.",58)),shared()];},d:['ceylon.language','count']};};
-function emptyOrSingleton(element$829,$$$mptypes){
-    var element$830;
-    if((element$830=element$829)!==null){
-        return Singleton(element$830,{Element:$$$mptypes.Element});
+function emptyOrSingleton(element$828,$$$mptypes){
+    var element$829;
+    if((element$829=element$828)!==null){
+        return Singleton(element$829,{Element:$$$mptypes.Element});
     }else {
         return getEmpty();
     }
 }
 exports.emptyOrSingleton=emptyOrSingleton;
 emptyOrSingleton.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$ps:[{$nm:'element',$mt:'prm',$t:{ t:'u', l:[{t:Null},'Element']},$an:function(){return[];}}],$tp:{Element:{'satisfies':[{t:Object$}]}},$an:function(){return[doc(String$("A `Singleton` if the given element is non-null, otherwise `Empty`.",66)),see([$init$OpenClass()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Singleton),$init$OpenInterface()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Empty)].reifyCeylonType({Absent:{t:Null},Element:{ t:'u', l:[{t:ClassDeclaration$meta$declaration},{t:InterfaceDeclaration$meta$declaration}]}})),shared()];},d:['ceylon.language','emptyOrSingleton']};};
-var curry=function (f$831,$$$mptypes){
-    return function(first$832){{
-        return flatten($JsCallable(function (args$833){
-            return unflatten($JsCallable(f$831,[],{Arguments:{t:Tuple,a:{Rest:$$$mptypes.Rest,First:$$$mptypes.First,Element:$$$mptypes.Argument}},Return:$$$mptypes.Return}),{Args:{t:Tuple,a:{Rest:$$$mptypes.Rest,First:$$$mptypes.First,Element:$$$mptypes.Argument}},Return:$$$mptypes.Return})(Tuple(first$832,args$833,{Rest:$$$mptypes.Rest,First:$$$mptypes.First,Element:$$$mptypes.Argument}),{Args:{t:Tuple,a:{Rest:$$$mptypes.Rest,First:$$$mptypes.First,Element:$$$mptypes.Argument}},Return:$$$mptypes.Return});
+var curry=function (f$830,$$$mptypes){
+    return function(first$831){{
+        return flatten($JsCallable(function (args$832){
+            return unflatten($JsCallable(f$830,[],{Arguments:{t:Tuple,a:{Rest:$$$mptypes.Rest,First:$$$mptypes.First,Element:$$$mptypes.Argument}},Return:$$$mptypes.Return}),{Args:{t:Tuple,a:{Rest:$$$mptypes.Rest,First:$$$mptypes.First,Element:$$$mptypes.Argument}},Return:$$$mptypes.Return})(Tuple(first$831,args$832,{Rest:$$$mptypes.Rest,First:$$$mptypes.First,Element:$$$mptypes.Argument}),{Args:{t:Tuple,a:{Rest:$$$mptypes.Rest,First:$$$mptypes.First,Element:$$$mptypes.Argument}},Return:$$$mptypes.Return});
         },[{$nm:'args',$mt:'prm',$t:'Rest',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$$mptypes.Rest,Element:$$$mptypes.Rest}},Return:$$$mptypes.Return}),{Args:$$$mptypes.Rest,Return:$$$mptypes.Return});
     }
 }
@@ -4944,36 +4939,36 @@ var curry=function (f$831,$$$mptypes){
 ;
 curry.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Callable,a:{Arguments:'Rest',Return:'Return'}},$ps:[{$nm:'f',$mt:'prm',$t:{t:Callable,a:{Arguments:{t:Tuple,a:{Rest:'Rest',First:'First',Element:'Argument'}},Return:'Return'}},$an:function(){return[];}}],$tp:{Return:{},Argument:{},First:{'satisfies':['Argument']},Rest:{'satisfies':[{t:Sequential,a:{Element:'Argument'}}]}},$an:function(){return[doc(String$("Curries a function, returning a function of multiple parameter lists,\ngiven a function of multiple parameters.",110)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),uncurry),$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),compose)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','curry']};};
 exports.curry=curry;
-var uncurry=function (f$834,$$$mptypes){
-return flatten($JsCallable(function (args$835){
-    return unflatten($JsCallable(f$834(args$835.first),[],{Arguments:$$$mptypes.Rest,Return:$$$mptypes.Return}),{Args:$$$mptypes.Rest,Return:$$$mptypes.Return})(args$835.rest,{Args:$$$mptypes.Rest,Return:$$$mptypes.Return});
+var uncurry=function (f$833,$$$mptypes){
+return flatten($JsCallable(function (args$834){
+    return unflatten($JsCallable(f$833(args$834.first),[],{Arguments:$$$mptypes.Rest,Return:$$$mptypes.Return}),{Args:$$$mptypes.Rest,Return:$$$mptypes.Return})(args$834.rest,{Args:$$$mptypes.Rest,Return:$$$mptypes.Return});
 },[{$nm:'args',$mt:'prm',$t:{t:Tuple,a:{Rest:'Rest',First:'First',Element:'Argument'}},$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:{t:Tuple,a:{Rest:$$$mptypes.Rest,First:$$$mptypes.First,Element:$$$mptypes.Argument}},Element:{t:Tuple,a:{Rest:$$$mptypes.Rest,First:$$$mptypes.First,Element:$$$mptypes.Argument}}}},Return:$$$mptypes.Return}),{Args:{t:Tuple,a:{Rest:$$$mptypes.Rest,First:$$$mptypes.First,Element:$$$mptypes.Argument}},Return:$$$mptypes.Return});
 };
 uncurry.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Callable,a:{Arguments:{t:Tuple,a:{Rest:'Rest',First:'First',Element:'Argument'}},Return:'Return'}},$ps:[{$nm:'f',$mt:'prm',$pt:'f',$t:{t:Callable,a:{Arguments:'Rest',Return:'Return'}},$an:function(){return[];}}],$tp:{Return:{},Argument:{},First:{'satisfies':['Argument']},Rest:{'satisfies':[{t:Sequential,a:{Element:'Argument'}}]}},$an:function(){return[doc(String$("Uncurries a function, returning a function with multiple parameters, \ngiven a function with multiple parameter lists.",117)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),curry),$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),compose)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','uncurry']};};
 exports.uncurry=uncurry;
-var entries=function (elements$836,$$$mptypes){
-    return elements$836.indexed;
+var entries=function (elements$835,$$$mptypes){
+    return elements$835.indexed;
 };
 entries.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Entry,a:{Key:{t:Integer},Item:{ t:'i', l:['Element',{t:Object$}]}}}}},$ps:[{$nm:'elements',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}},$an:function(){return[];}}],$tp:{Element:{}},$an:function(){return[doc(String$("Produces a sequence of each index to element `Entry` \nfor the given sequence of values.",87)),shared()];},d:['ceylon.language','entries']};};
 exports.entries=entries;
-var equalTo=function (val$837,$$$mptypes){
-    return function(element$838){{
-        return element$838.equals(val$837);
+var equalTo=function (val$836,$$$mptypes){
+    return function(element$837){{
+        return element$837.equals(val$836);
     }
 }
 }
 ;
 equalTo.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'val',$mt:'prm',$t:'Element',$an:function(){return[];}}],$tp:{Element:{'satisfies':[{t:Object$}]}},$an:function(){return[doc(String$("Returns a partial function that will compare an element\nto any other element and returns true if they\'re equal.\nThis is useful in conjunction with methods that receive\na predicate function.",189)),shared()];},d:['ceylon.language','equalTo']};};
 exports.equalTo=equalTo;
-var $apply=function (f$839,args$840,$$$mptypes){
-    return unflatten($JsCallable(f$839,[],{Arguments:$$$mptypes.Args,Return:$$$mptypes.Return}),{Args:$$$mptypes.Args,Return:$$$mptypes.Return})(args$840,{Args:$$$mptypes.Args,Return:$$$mptypes.Return});
+var $apply=function (f$838,args$839,$$$mptypes){
+    return unflatten($JsCallable(f$838,[],{Arguments:$$$mptypes.Args,Return:$$$mptypes.Return}),{Args:$$$mptypes.Args,Return:$$$mptypes.Return})(args$839,{Args:$$$mptypes.Args,Return:$$$mptypes.Return});
 };
 $apply.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Return',$ps:[{$nm:'f',$mt:'prm',$t:{t:Callable,a:{Arguments:'Args',Return:'Return'}},$an:function(){return[];}},{$nm:'args',$mt:'prm',$t:'Args',$an:function(){return[];}}],$tp:{Return:{},Args:{'satisfies':[{t:Sequential,a:{Element:{t:Anything}}}]}},$an:function(){return[doc(String$("Applies an arbitrary `Callable` to the specified arguments. The arguments\nare taken packaged in a tuple whose type is compatible with the `Callable`\narguments tuple.\n\nIn practice, this behaves as if the `Callable` were called with the elements\nof the tuple used as its arguments.",279)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),unflatten)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','apply']};};
 exports.$apply=$apply;
-function every(values$841){
-    var it$842 = values$841.iterator();
-    var val$843;while ((val$843=it$842.next())!==getFinished()){
-        if((!val$843)){
+function every(values$840){
+    var it$841 = values$840.iterator();
+    var val$842;while ((val$842=it$841.next())!==getFinished()){
+        if((!val$842)){
             return false;
         }
     }
@@ -4981,191 +4976,191 @@ function every(values$841){
 }
 exports.every=every;
 every.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'values',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Boolean$}}},$an:function(){return[];}}],$an:function(){return[doc(String$("Determines if every one of the given boolean values \n(usually a comprehension) is `true`.",89)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),any)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','every']};};
-function first(values$844,$$$mptypes){
-    var first$845;
-    var next$846;
-    if(!isOfType((next$846=values$844.iterator().next()),{t:Finished})){
-        first$845=next$846;
+function first(values$843,$$$mptypes){
+    var first$844;
+    var next$845;
+    if(!isOfType((next$845=values$843.iterator().next()),{t:Finished})){
+        first$844=next$845;
     }else {
-        first$845=null;
+        first$844=null;
     }
     //assert at first.ceylon (12:4-12:34)
-    var first$847;
-    if (!(isOfType((first$847=first$845),{ t:'u', l:[$$$mptypes.Absent,$$$mptypes.Value]}))) {throw wrapexc(AssertionException("Assertion failed: \'is Absent|Value first\' at first.ceylon (12:11-12:33)"),'12:4-12:34','first.ceylon'); }
-    return first$847;
+    var first$846;
+    if (!(isOfType((first$846=first$844),{ t:'u', l:[$$$mptypes.Absent,$$$mptypes.Value]}))) {throw wrapexc(AssertionException("Assertion failed: \'is Absent|Value first\' at first.ceylon (12:11-12:33)"),'12:4-12:34','first.ceylon'); }
+    return first$846;
 }
 exports.first=first;
 first.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Absent','Value']},$ps:[{$nm:'values',$mt:'prm',$t:{t:Iterable,a:{Absent:'Absent',Element:'Value'}},$an:function(){return[];}}],$tp:{Value:{},Absent:{'satisfies':[{t:Null}]}},$an:function(){return[doc(String$("The first of the given values (usually a comprehension),\nif any.",64)),shared()];},d:['ceylon.language','first']};};
-var forItem=function (resulting$848,$$$mptypes){
-    return function(entry$849){{
-        return resulting$848(entry$849.item);
+var forItem=function (resulting$847,$$$mptypes){
+    return function(entry$848){{
+        return resulting$847(entry$848.item);
     }
 }
 }
 ;
 forItem.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Result',$ps:[{$nm:'resulting',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$tp:{Item:{'satisfies':[{t:Object$}]},Result:{}},$an:function(){return[doc(String$("A function that returns the result of the given `resulting()` function \non the item of a given `Entry`.",103)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),forKey)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','forItem']};};
 exports.forItem=forItem;
-var forKey=function (resulting$850,$$$mptypes){
-    return function(entry$851){{
-        return resulting$850(entry$851.key);
+var forKey=function (resulting$849,$$$mptypes){
+    return function(entry$850){{
+        return resulting$849(entry$850.key);
     }
 }
 }
 ;
 forKey.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Result',$ps:[{$nm:'resulting',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}}],$tp:{Key:{'satisfies':[{t:Object$}]},Result:{}},$an:function(){return[doc(String$("A function that returns the result of the given `resulting()` function \non the key of a given `Entry`.",102)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),forItem)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','forKey']};};
 exports.forKey=forKey;
-var greaterThan=function (val$852,$$$mptypes){
-    return function(element$853){{
-        return element$853.compare(val$852).equals(getLarger());
+var greaterThan=function (val$851,$$$mptypes){
+    return function(element$852){{
+        return element$852.compare(val$851).equals(getLarger());
     }
 }
 }
 ;
 greaterThan.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'val',$mt:'prm',$t:'Element',$an:function(){return[];}}],$tp:{Element:{'satisfies':[{t:Comparable,a:{Other:'Element'}}]}},$an:function(){return[doc(String$("Returns a partial function that will compare an element\nto any other element and returns true if the compared\nelement is greater than its element.\nThis is useful in conjunction with methods that receive\na predicate function.",224)),shared()];},d:['ceylon.language','greaterThan']};};
 exports.greaterThan=greaterThan;
-var concatenate=function (iterables$854,$$$mptypes){
-    if(iterables$854===undefined){iterables$854=getEmpty();}
+var concatenate=function (iterables$853,$$$mptypes){
+    if(iterables$853===undefined){iterables$853=getEmpty();}
     return Comprehension(function(){
-        var it$855=iterables$854.iterator();
-        var it$856=getFinished();
-        var next$it$856=function(){
-            if((it$856=it$855.next())!==getFinished()){
-                it$857=it$856.iterator();
-                next$val$858();
-                return it$856;
+        var it$854=iterables$853.iterator();
+        var it$855=getFinished();
+        var next$it$855=function(){
+            if((it$855=it$854.next())!==getFinished()){
+                it$856=it$855.iterator();
+                next$val$857();
+                return it$855;
             }
             return getFinished();
         }
-        var it$857;
-        var val$858=getFinished();
-        var next$val$858=function(){return val$858=it$857.next();}
-        next$it$856();
+        var it$856;
+        var val$857=getFinished();
+        var next$val$857=function(){return val$857=it$856.next();}
+        next$it$855();
         return function(){
             do{
-                if(val$858!==getFinished()){
-                    var val$858$859=val$858;
-                    var tmpvar$860=val$858$859;
-                    next$val$858();
-                    return tmpvar$860;
+                if(val$857!==getFinished()){
+                    var val$857$858=val$857;
+                    var tmpvar$859=val$857$858;
+                    next$val$857();
+                    return tmpvar$859;
                 }
-            }while(next$it$856()!==getFinished());
+            }while(next$it$855()!==getFinished());
             return getFinished();
         }
     },{Absent:{t:Null},Element:$$$mptypes.Element}).sequence;
 };
 concatenate.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$ps:[{$nm:'iterables',$mt:'prm',seq:1,$t:{t:Sequential,a:{Element:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}}}},$an:function(){return[doc("The iterable objects to concatenate.")];}}],$tp:{Element:{}},$an:function(){return[doc(String$("Given a list of iterable objects, return a new sequence \nof all elements of the all given objects. If there are\nno arguments, or if none of the arguments contains any\nelements, return the empty sequence.",203)),see([$init$OpenClass()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),SequenceBuilder)].reifyCeylonType({Absent:{t:Null},Element:{t:ClassDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','concatenate']};};
 exports.concatenate=concatenate;
-var largest=function (x$861,y$862,$$$mptypes){
-    return (opt$863=(x$861.compare(y$862).equals(getLarger())?x$861:null),opt$863!==null?opt$863:y$862);
+var largest=function (x$860,y$861,$$$mptypes){
+    return (opt$862=(x$860.compare(y$861).equals(getLarger())?x$860:null),opt$862!==null?opt$862:y$861);
 };
 largest.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Element',$ps:[{$nm:'x',$mt:'prm',$t:'Element',$an:function(){return[];}},{$nm:'y',$mt:'prm',$t:'Element',$an:function(){return[];}}],$tp:{Element:{'satisfies':[{t:Comparable,a:{Other:'Element'}}]}},$an:function(){return[doc(String$("Given two `Comparable` values, return largest of the\ntwo.",57)),see([$init$OpenInterface()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Comparable),$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),smallest),$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),max)].reifyCeylonType({Absent:{t:Null},Element:{ t:'u', l:[{t:InterfaceDeclaration$meta$declaration},{t:FunctionDeclaration$meta$declaration}]}})),shared()];},d:['ceylon.language','largest']};};
 exports.largest=largest;
-var opt$863;
-var lessThan=function (val$864,$$$mptypes){
-    return function(element$865){{
-        return element$865.compare(val$864).equals(getSmaller());
+var opt$862;
+var lessThan=function (val$863,$$$mptypes){
+    return function(element$864){{
+        return element$864.compare(val$863).equals(getSmaller());
     }
 }
 }
 ;
 lessThan.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'val',$mt:'prm',$t:'Element',$an:function(){return[];}}],$tp:{Element:{'satisfies':[{t:Comparable,a:{Other:'Element'}}]}},$an:function(){return[doc(String$("Returns a partial function that will compare an element\nto any other element and returns true if the compared\nelement is less than its element.\nThis is useful in conjunction with methods that receive\na predicate function.",221)),shared()];},d:['ceylon.language','lessThan']};};
 exports.lessThan=lessThan;
-function max(values$866,$$$mptypes){
-    var first$867=values$866.first;
-    var first$868;
-    if((first$868=first$867)!==null){
-        var max$869=first$868;
-        function setMax$869(max$870){return max$869=max$870;};
-        $prop$getMax$869={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'Value',$an:function(){return[variable()];},d:['ceylon.language','max','$at','max']};}};
-        $prop$getMax$869.get=function(){return max$869};
-        $prop$getMax$869.set=setMax$869;
-        if (setMax$869.$$metamodel$$===undefined)setMax$869.$$metamodel$$=$prop$getMax$869.$$metamodel$$;
-        var it$871 = values$866.rest.iterator();
-        var val$872;while ((val$872=it$871.next())!==getFinished()){
-            if(val$872.compare(max$869).equals(getLarger())){
-                max$869=val$872;
+function max(values$865,$$$mptypes){
+    var first$866=values$865.first;
+    var first$867;
+    if((first$867=first$866)!==null){
+        var max$868=first$867;
+        function setMax$868(max$869){return max$868=max$869;};
+        $prop$getMax$868={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'Value',$an:function(){return[variable()];},d:['ceylon.language','max','$at','max']};}};
+        $prop$getMax$868.get=function(){return max$868};
+        $prop$getMax$868.set=setMax$868;
+        if (setMax$868.$$metamodel$$===undefined)setMax$868.$$metamodel$$=$prop$getMax$868.$$metamodel$$;
+        var it$870 = values$865.rest.iterator();
+        var val$871;while ((val$871=it$870.next())!==getFinished()){
+            if(val$871.compare(max$868).equals(getLarger())){
+                max$868=val$871;
             }
         }
-        return max$869;
+        return max$868;
     }else {
-        return first$867;
+        return first$866;
     }
 }
 exports.max=max;
 max.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Absent','Value']},$ps:[{$nm:'values',$mt:'prm',$t:{t:Iterable,a:{Absent:'Absent',Element:'Value'}},$an:function(){return[];}}],$tp:{Value:{'satisfies':[{t:Comparable,a:{Other:'Value'}}]},Absent:{'satisfies':[{t:Null}]}},$an:function(){return[doc(String$("Given a nonempty stream of `Comparable` values, \nreturn the largest value in the stream.",88)),see([$init$OpenInterface()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Comparable),$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),min),$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),largest)].reifyCeylonType({Absent:{t:Null},Element:{ t:'u', l:[{t:InterfaceDeclaration$meta$declaration},{t:FunctionDeclaration$meta$declaration}]}})),shared()];},d:['ceylon.language','max']};};
-function min(values$873,$$$mptypes){
-    var first$874=values$873.first;
-    var first$875;
-    if((first$875=first$874)!==null){
-        var min$876=first$875;
-        function setMin$876(min$877){return min$876=min$877;};
-        $prop$getMin$876={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'Value',$an:function(){return[variable()];},d:['ceylon.language','min','$at','min']};}};
-        $prop$getMin$876.get=function(){return min$876};
-        $prop$getMin$876.set=setMin$876;
-        if (setMin$876.$$metamodel$$===undefined)setMin$876.$$metamodel$$=$prop$getMin$876.$$metamodel$$;
-        var it$878 = values$873.rest.iterator();
-        var val$879;while ((val$879=it$878.next())!==getFinished()){
-            if(val$879.compare(min$876).equals(getSmaller())){
-                min$876=val$879;
+function min(values$872,$$$mptypes){
+    var first$873=values$872.first;
+    var first$874;
+    if((first$874=first$873)!==null){
+        var min$875=first$874;
+        function setMin$875(min$876){return min$875=min$876;};
+        $prop$getMin$875={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:'Value',$an:function(){return[variable()];},d:['ceylon.language','min','$at','min']};}};
+        $prop$getMin$875.get=function(){return min$875};
+        $prop$getMin$875.set=setMin$875;
+        if (setMin$875.$$metamodel$$===undefined)setMin$875.$$metamodel$$=$prop$getMin$875.$$metamodel$$;
+        var it$877 = values$872.rest.iterator();
+        var val$878;while ((val$878=it$877.next())!==getFinished()){
+            if(val$878.compare(min$875).equals(getSmaller())){
+                min$875=val$878;
             }
         }
-        return min$876;
+        return min$875;
     }else {
-        return first$874;
+        return first$873;
     }
 }
 exports.min=min;
 min.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Absent','Value']},$ps:[{$nm:'values',$mt:'prm',$t:{t:Iterable,a:{Absent:'Absent',Element:'Value'}},$an:function(){return[];}}],$tp:{Value:{'satisfies':[{t:Comparable,a:{Other:'Value'}}]},Absent:{'satisfies':[{t:Null}]}},$an:function(){return[doc(String$("Given a nonempty stream of `Comparable` values, \nreturn the smallest value in the stream.",89)),see([$init$OpenInterface()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Comparable),$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),max),$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),smallest)].reifyCeylonType({Absent:{t:Null},Element:{ t:'u', l:[{t:InterfaceDeclaration$meta$declaration},{t:FunctionDeclaration$meta$declaration}]}})),shared()];},d:['ceylon.language','min']};};
-var smallest=function (x$880,y$881,$$$mptypes){
-    return (opt$882=(x$880.compare(y$881).equals(getSmaller())?x$880:null),opt$882!==null?opt$882:y$881);
+var smallest=function (x$879,y$880,$$$mptypes){
+    return (opt$881=(x$879.compare(y$880).equals(getSmaller())?x$879:null),opt$881!==null?opt$881:y$880);
 };
 smallest.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Element',$ps:[{$nm:'x',$mt:'prm',$t:'Element',$an:function(){return[];}},{$nm:'y',$mt:'prm',$t:'Element',$an:function(){return[];}}],$tp:{Element:{'satisfies':[{t:Comparable,a:{Other:'Element'}}]}},$an:function(){return[doc(String$("Given two `Comparable` values, return smallest of the\ntwo.",58)),see([$init$OpenInterface()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Comparable),$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),largest),$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),min)].reifyCeylonType({Absent:{t:Null},Element:{ t:'u', l:[{t:InterfaceDeclaration$meta$declaration},{t:FunctionDeclaration$meta$declaration}]}})),shared()];},d:['ceylon.language','smallest']};};
 exports.smallest=smallest;
-var opt$882;
-function sum(values$883,$$$mptypes){
-    var sum$884=values$883.first;
-    function setSum$884(sum$885){return sum$884=sum$885;};
-    var it$886 = values$883.rest.iterator();
-    var val$887;while ((val$887=it$886.next())!==getFinished()){
-        (sum$884=sum$884.plus(val$887));
+var opt$881;
+function sum(values$882,$$$mptypes){
+    var sum$883=values$882.first;
+    function setSum$883(sum$884){return sum$883=sum$884;};
+    var it$885 = values$882.rest.iterator();
+    var val$886;while ((val$886=it$885.next())!==getFinished()){
+        (sum$883=sum$883.plus(val$886));
     }
-    return sum$884;
+    return sum$883;
 }
 exports.sum=sum;
 sum.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Value',$ps:[{$nm:'values',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Nothing},Element:'Value'}},$an:function(){return[];}}],$tp:{Value:{'satisfies':[{t:Summable,a:{Other:'Value'}}]}},$an:function(){return[doc(String$("Given a nonempty stream of `Summable` values, return \nthe sum of the values.",76)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),product)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','sum']};};
-function product(values$888,$$$mptypes){
-    var product$889=values$888.first;
-    function setProduct$889(product$890){return product$889=product$890;};
-    var it$891 = values$888.rest.iterator();
-    var val$892;while ((val$892=it$891.next())!==getFinished()){
-        (product$889=product$889.times(val$892));
+function product(values$887,$$$mptypes){
+    var product$888=values$887.first;
+    function setProduct$888(product$889){return product$888=product$889;};
+    var it$890 = values$887.rest.iterator();
+    var val$891;while ((val$891=it$890.next())!==getFinished()){
+        (product$888=product$888.times(val$891));
     }
-    return product$889;
+    return product$888;
 }
 exports.product=product;
 product.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Value',$ps:[{$nm:'values',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Nothing},Element:'Value'}},$an:function(){return[];}}],$tp:{Value:{'satisfies':[{t:Numeric,a:{Other:'Value'}}]}},$an:function(){return[doc(String$("Given a nonempty stream of `Numeric` values, return \nthe product of the values.",79)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),sum)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','product']};};
-function zip(keys$893,items$894,$$$mptypes){
-    var iter$895=items$894.iterator();
+function zip(keys$892,items$893,$$$mptypes){
+    var iter$894=items$893.iterator();
     return Comprehension(function(){
-        var item$898;
-        var it$896=keys$893.iterator();
-        var key$897=getFinished();
-        var item$898;
-        var next$key$897=function(){
-            while((key$897=it$896.next())!==getFinished()){
-                if(!isOfType((item$898=iter$895.next()),{t:Finished})){
-                    return key$897;
+        var item$897;
+        var it$895=keys$892.iterator();
+        var key$896=getFinished();
+        var item$897;
+        var next$key$896=function(){
+            while((key$896=it$895.next())!==getFinished()){
+                if(!isOfType((item$897=iter$894.next()),{t:Finished})){
+                    return key$896;
                 }
             }
             return getFinished();
         }
-        next$key$897();
+        next$key$896();
         return function(){
-            if(key$897!==getFinished()){
-                var key$897$899=key$897;
-                var tmpvar$900=Entry(key$897$899,item$898,{Key:$$$mptypes.Key,Item:$$$mptypes.Item});
-                next$key$897();
-                return tmpvar$900;
+            if(key$896!==getFinished()){
+                var key$896$898=key$896;
+                var tmpvar$899=Entry(key$896$898,item$897,{Key:$$$mptypes.Key,Item:$$$mptypes.Item});
+                next$key$896();
+                return tmpvar$899;
             }
             return getFinished();
         }
@@ -5173,31 +5168,31 @@ function zip(keys$893,items$894,$$$mptypes){
 }
 exports.zip=zip;
 zip.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:{t:Entry,a:{Key:'Key',Item:'Item'}}}},$ps:[{$nm:'keys',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:'Key'}},$an:function(){return[];}},{$nm:'items',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:'Item'}},$an:function(){return[];}}],$tp:{Key:{'satisfies':[{t:Object$}]},Item:{'satisfies':[{t:Object$}]}},$an:function(){return[doc(String$("Given two sequences, form a new sequence consisting of\nall entries where, for any given index in the resulting\nsequence, the key of the entry is the element occurring \nat the same index in the first sequence, and the item \nis the element occurring at the same index in the second \nsequence. The length of the resulting sequence is the \nlength of the shorter of the two given sequences. \n\nThus:\n\n    zip(xs,ys)[i]==xs[i]->ys[i]\n\nfor every `0<=i<min({xs.size,ys.size})`.",468)),shared()];},d:['ceylon.language','zip']};};
-var print=function (val$901){
-    return getProcess().writeLine(stringify(val$901));
+var print=function (val$900){
+    return getProcess().writeLine(stringify(val$900));
 };
 print.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Anything},$ps:[{$nm:'val',$mt:'prm',$t:{t:Anything},$an:function(){return[];}}],$an:function(){return[doc(String$("Print a line to the standard output of the virtual machine \nprocess, printing the given value\'s `string`, or `<null>` \nif the value is `null`.\n\nThis method is a shortcut for:\n\n    process.writeLine(line?.string else \"<null>\")\n\nand is intended mainly for debugging purposes.",273)),by([String$("Gavin",5)].reifyCeylonType({Absent:{t:Null},Element:{t:String$}})),shared()];},d:['ceylon.language','print']};};
 exports.print=print;
-function printAll(values$902,separator$903){
-    if(separator$903===undefined){separator$903=String$(", ",2);}
-    var first$904;
-    if((first$904=values$902.first)!==null){
-        getProcess().write(stringify(first$904));
-        var it$905 = values$902.rest.iterator();
-        var val$906;while ((val$906=it$905.next())!==getFinished()){
-            getProcess().write(separator$903);
-            getProcess().write(stringify(val$906));
+function printAll(values$901,separator$902){
+    if(separator$902===undefined){separator$902=String$(", ",2);}
+    var first$903;
+    if((first$903=values$901.first)!==null){
+        getProcess().write(stringify(first$903));
+        var it$904 = values$901.rest.iterator();
+        var val$905;while ((val$905=it$904.next())!==getFinished()){
+            getProcess().write(separator$902);
+            getProcess().write(stringify(val$905));
         }
     }
     getProcess().write(getProcess().newline);
 }
 exports.printAll=printAll;
 printAll.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Anything},$ps:[{$nm:'values',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:{t:Anything}}},$an:function(){return[];}},{$nm:'separator',$mt:'prm',$def:1,$t:{t:String$},$an:function(){return[doc("A character sequence to use to separate the values")];}}],$an:function(){return[doc(String$("Print multiple values to the standard output of the virtual \nmachine process as a single line of text, separated by a\ngiven character sequence.",143)),by([String$("Gavin",5)].reifyCeylonType({Absent:{t:Null},Element:{t:String$}})),shared()];},d:['ceylon.language','printAll']};};
-var stringify=function (val$907){
-    return (opt$908=(opt$909=val$907,opt$909!==null?opt$909.string:null),opt$908!==null?opt$908:String$("<null>",6));
+var stringify=function (val$906){
+    return (opt$907=(opt$908=val$906,opt$908!==null?opt$908.string:null),opt$907!==null?opt$907:String$("<null>",6));
 };
 stringify.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:String$},$ps:[{$nm:'val',$mt:'prm',$t:{t:Anything},$an:function(){return[];}}],d:['ceylon.language','stringify']};};
-var opt$908,opt$909;
+var opt$907,opt$908;
 function getNothing(){
     throw wrapexc(Exception(),'4:25-4:30','ceylon/language/nothing.ceylon');
 }
@@ -5206,114 +5201,114 @@ var $prop$getNothing={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:No
 exports.$prop$getNothing=$prop$getNothing;
 $prop$getNothing.get=getNothing;
 getNothing.$$metamodel$$=$prop$getNothing.$$metamodel$$;
-var identical=function (x$910,y$911){
-    return (x$910===y$911);
+var identical=function (x$909,y$910){
+    return (x$909===y$910);
 };
 identical.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'x',$mt:'prm',$t:{t:Identifiable},$an:function(){return[doc("An object with well-defined identity.")];}},{$nm:'y',$mt:'prm',$t:{t:Identifiable},$an:function(){return[doc("A second object with well-defined identity.")];}}],$an:function(){return[doc(String$("Determine if the arguments are identical. Equivalent to\n`x===y`. Only instances of `Identifiable` have \nwell-defined identity.",126)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),identityHash)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','identical']};};
 exports.identical=identical;
-var compose=function (x$912,y$913,$$$mptypes){
-    return flatten($JsCallable(function (args$914){
-        return x$912(unflatten($JsCallable(y$913,[],{Arguments:$$$mptypes.Args,Return:$$$mptypes.Y}),{Args:$$$mptypes.Args,Return:$$$mptypes.Y})(args$914,{Args:$$$mptypes.Args,Return:$$$mptypes.Y}));
+var compose=function (x$911,y$912,$$$mptypes){
+    return flatten($JsCallable(function (args$913){
+        return x$911(unflatten($JsCallable(y$912,[],{Arguments:$$$mptypes.Args,Return:$$$mptypes.Y}),{Args:$$$mptypes.Args,Return:$$$mptypes.Y})(args$913,{Args:$$$mptypes.Args,Return:$$$mptypes.Y}));
     },[{$nm:'args',$mt:'prm',$t:'Args',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$$mptypes.Args,Element:$$$mptypes.Args}},Return:$$$mptypes.X}),{Args:$$$mptypes.Args,Return:$$$mptypes.X});
 };
 compose.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Callable,a:{Arguments:'Args',Return:'X'}},$ps:[{$nm:'x',$mt:'prm',$t:{t:Callable,a:{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:'Y',Element:'Y'}},Return:'X'}},$an:function(){return[];}},{$nm:'y',$mt:'prm',$t:{t:Callable,a:{Arguments:'Args',Return:'Y'}},$an:function(){return[];}}],$tp:{X:{},Y:{},Args:{'satisfies':[{t:Sequential,a:{Element:{t:Anything}}}]}},$an:function(){return[doc(String$("Composes two functions, returning a function equivalent to \ninvoking `x(y(args))`.",82)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),curry),$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),uncurry)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','compose']};};
 exports.compose=compose;
-var shuffle=function (f$915,$$$mptypes){
-    return flatten($JsCallable(function (secondArgs$916){
-        return flatten($JsCallable(function (firstArgs$917){
-            return unflatten($JsCallable(unflatten($JsCallable(f$915,[],{Arguments:$$$mptypes.FirstArgs,Return:{t:Callable,a:{Arguments:$$$mptypes.SecondArgs,Return:$$$mptypes.Result}}}),{Args:$$$mptypes.FirstArgs,Return:{t:Callable,a:{Arguments:$$$mptypes.SecondArgs,Return:$$$mptypes.Result}}})(firstArgs$917,{Args:$$$mptypes.FirstArgs,Return:{t:Callable,a:{Arguments:$$$mptypes.SecondArgs,Return:$$$mptypes.Result}}}),[],{Arguments:$$$mptypes.SecondArgs,Return:$$$mptypes.Result}),{Args:$$$mptypes.SecondArgs,Return:$$$mptypes.Result})(secondArgs$916,{Args:$$$mptypes.SecondArgs,Return:$$$mptypes.Result});
+var shuffle=function (f$914,$$$mptypes){
+    return flatten($JsCallable(function (secondArgs$915){
+        return flatten($JsCallable(function (firstArgs$916){
+            return unflatten($JsCallable(unflatten($JsCallable(f$914,[],{Arguments:$$$mptypes.FirstArgs,Return:{t:Callable,a:{Arguments:$$$mptypes.SecondArgs,Return:$$$mptypes.Result}}}),{Args:$$$mptypes.FirstArgs,Return:{t:Callable,a:{Arguments:$$$mptypes.SecondArgs,Return:$$$mptypes.Result}}})(firstArgs$916,{Args:$$$mptypes.FirstArgs,Return:{t:Callable,a:{Arguments:$$$mptypes.SecondArgs,Return:$$$mptypes.Result}}}),[],{Arguments:$$$mptypes.SecondArgs,Return:$$$mptypes.Result}),{Args:$$$mptypes.SecondArgs,Return:$$$mptypes.Result})(secondArgs$915,{Args:$$$mptypes.SecondArgs,Return:$$$mptypes.Result});
         },[{$nm:'firstArgs',$mt:'prm',$t:'FirstArgs',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$$mptypes.FirstArgs,Element:$$$mptypes.FirstArgs}},Return:$$$mptypes.Result}),{Args:$$$mptypes.FirstArgs,Return:$$$mptypes.Result});
     },[{$nm:'secondArgs',$mt:'prm',$t:'SecondArgs',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$$mptypes.SecondArgs,Element:$$$mptypes.SecondArgs}},Return:{t:Callable,a:{Arguments:$$$mptypes.FirstArgs,Return:$$$mptypes.Result}}}),{Args:$$$mptypes.SecondArgs,Return:{t:Callable,a:{Arguments:$$$mptypes.FirstArgs,Return:$$$mptypes.Result}}});
 };
 shuffle.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Callable,a:{Arguments:'SecondArgs',Return:{t:Callable,a:{Arguments:'FirstArgs',Return:'Result'}}}},$ps:[{$nm:'f',$mt:'prm',$t:{t:Callable,a:{Arguments:'FirstArgs',Return:{t:Callable,a:{Arguments:'SecondArgs',Return:'Result'}}}},$an:function(){return[];}}],$tp:{Result:{},FirstArgs:{'satisfies':[{t:Sequential,a:{Element:{t:Anything}}}]},SecondArgs:{'satisfies':[{t:Sequential,a:{Element:{t:Anything}}}]}},$an:function(){return[shared()];},d:['ceylon.language','shuffle']};};
 exports.shuffle=shuffle;
-var plus=function (x$918,y$919,$$$mptypes){
-    return x$918.plus(y$919);
+var plus=function (x$917,y$918,$$$mptypes){
+    return x$917.plus(y$918);
 };
 plus.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Value',$ps:[{$nm:'x',$mt:'prm',$t:'Value',$an:function(){return[];}},{$nm:'y',$mt:'prm',$t:'Value',$an:function(){return[];}}],$tp:{Value:{'satisfies':[{t:Summable,a:{Other:'Value'}}]}},$an:function(){return[doc(String$("Add the given `Summable` values.",32)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),times),$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),sum)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','plus']};};
 exports.plus=plus;
-var times=function (x$920,y$921,$$$mptypes){
-    return x$920.times(y$921);
+var times=function (x$919,y$920,$$$mptypes){
+    return x$919.times(y$920);
 };
 times.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:'Value',$ps:[{$nm:'x',$mt:'prm',$t:'Value',$an:function(){return[];}},{$nm:'y',$mt:'prm',$t:'Value',$an:function(){return[];}}],$tp:{Value:{'satisfies':[{t:Numeric,a:{Other:'Value'}}]}},$an:function(){return[doc(String$("Multiply the given `Numeric` values.",36)),see([$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),plus),$init$OpenFunction()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),product)].reifyCeylonType({Absent:{t:Null},Element:{t:FunctionDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','times']};};
 exports.times=times;
-function combine(combination$922,elements$923,otherElements$924,$$$mptypes){
-    function iterable$925($$targs$$){
-        var $$iterable$925=new iterable$925.$$;
-        $$iterable$925.$$targs$$=$$targs$$;
-        Iterable({Absent:$$$mptypes.Absent,Element:$$$mptypes.Result},$$iterable$925);
-        return $$iterable$925;
+function combine(combination$921,elements$922,otherElements$923,$$$mptypes){
+    function iterable$924($$targs$$){
+        var $$iterable$924=new iterable$924.$$;
+        $$iterable$924.$$targs$$=$$targs$$;
+        Iterable({Absent:$$$mptypes.Absent,Element:$$$mptypes.Result},$$iterable$924);
+        return $$iterable$924;
     }
-    function $init$iterable$925(){
-        if (iterable$925.$$===undefined){
-            initTypeProto(iterable$925,'ceylon.language::combine.iterable',Basic,$init$Iterable());
+    function $init$iterable$924(){
+        if (iterable$924.$$===undefined){
+            initTypeProto(iterable$924,'ceylon.language::combine.iterable',Basic,$init$Iterable());
         }
-        return iterable$925;
+        return iterable$924;
     }
-    $init$iterable$925();
-    (function($$iterable$925){
-        $$iterable$925.iterator=function iterator(){
-            var $$iterable$925=this;
-            function iterator$926($$targs$$){
-                var $$iterator$926=new iterator$926.$$;
-                $$iterator$926.$$targs$$=$$targs$$;
-                Iterator({Element:$$$mptypes.Result},$$iterator$926);
-                $$iterator$926.iter$927_=elements$923.iterator();
-                $$iterator$926.$prop$getIter$927={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$926,d:['ceylon.language','combine','$o','iterable','$m','iterator','$o','iterator','$at','iter']};}};
-                $$iterator$926.$prop$getIter$927.get=function(){return iter$927};
-                $$iterator$926.otherIter$928_=otherElements$924.iterator();
-                $$iterator$926.$prop$getOtherIter$928={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'OtherElement'}},$cont:iterator$926,d:['ceylon.language','combine','$o','iterable','$m','iterator','$o','iterator','$at','otherIter']};}};
-                $$iterator$926.$prop$getOtherIter$928.get=function(){return otherIter$928};
-                return $$iterator$926;
+    $init$iterable$924();
+    (function($$iterable$924){
+        $$iterable$924.iterator=function iterator(){
+            var $$iterable$924=this;
+            function iterator$925($$targs$$){
+                var $$iterator$925=new iterator$925.$$;
+                $$iterator$925.$$targs$$=$$targs$$;
+                Iterator({Element:$$$mptypes.Result},$$iterator$925);
+                $$iterator$925.iter$926_=elements$922.iterator();
+                $$iterator$925.$prop$getIter$926={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$925,d:['ceylon.language','combine','$o','iterable','$m','iterator','$o','iterator','$at','iter']};}};
+                $$iterator$925.$prop$getIter$926.get=function(){return iter$926};
+                $$iterator$925.otherIter$927_=otherElements$923.iterator();
+                $$iterator$925.$prop$getOtherIter$927={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'OtherElement'}},$cont:iterator$925,d:['ceylon.language','combine','$o','iterable','$m','iterator','$o','iterator','$at','otherIter']};}};
+                $$iterator$925.$prop$getOtherIter$927.get=function(){return otherIter$927};
+                return $$iterator$925;
             }
-            function $init$iterator$926(){
-                if (iterator$926.$$===undefined){
-                    initTypeProto(iterator$926,'ceylon.language::combine.iterable.iterator.iterator',Basic,$init$Iterator());
+            function $init$iterator$925(){
+                if (iterator$925.$$===undefined){
+                    initTypeProto(iterator$925,'ceylon.language::combine.iterable.iterator.iterator',Basic,$init$Iterator());
                 }
-                return iterator$926;
+                return iterator$925;
             }
-            $init$iterator$926();
-            (function($$iterator$926){
-                defineAttr($$iterator$926,'iter$927',function(){return this.iter$927_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$926,d:['ceylon.language','combine','$o','iterable','$m','iterator','$o','iterator','$at','iter']};});
-                defineAttr($$iterator$926,'otherIter$928',function(){return this.otherIter$928_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'OtherElement'}},$cont:iterator$926,d:['ceylon.language','combine','$o','iterable','$m','iterator','$o','iterator','$at','otherIter']};});
-                $$iterator$926.next=function next(){
-                    var $$iterator$926=this;
-                    var elem$929=$$iterator$926.iter$927.next();
-                    var otherElem$930=$$iterator$926.otherIter$928.next();
-                    var elem$931;
-                    var otherElem$932;
-                    if(!isOfType((elem$931=elem$929),{t:Finished})&&!isOfType((otherElem$932=otherElem$930),{t:Finished})){
-                        return combination$922(elem$931,otherElem$932);
+            $init$iterator$925();
+            (function($$iterator$925){
+                defineAttr($$iterator$925,'iter$926',function(){return this.iter$926_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Element'}},$cont:iterator$925,d:['ceylon.language','combine','$o','iterable','$m','iterator','$o','iterator','$at','iter']};});
+                defineAttr($$iterator$925,'otherIter$927',function(){return this.otherIter$927_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'OtherElement'}},$cont:iterator$925,d:['ceylon.language','combine','$o','iterable','$m','iterator','$o','iterator','$at','otherIter']};});
+                $$iterator$925.next=function next(){
+                    var $$iterator$925=this;
+                    var elem$928=$$iterator$925.iter$926.next();
+                    var otherElem$929=$$iterator$925.otherIter$927.next();
+                    var elem$930;
+                    var otherElem$931;
+                    if(!isOfType((elem$930=elem$928),{t:Finished})&&!isOfType((otherElem$931=otherElem$929),{t:Finished})){
+                        return combination$921(elem$930,otherElem$931);
                     }else {
                         return getFinished();
                     }
-                };$$iterator$926.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Result',{t:Finished}]},$ps:[],$cont:iterator$926,$an:function(){return[shared(),actual()];},d:['ceylon.language','combine','$o','iterable','$m','iterator','$o','iterator','$m','next']};};
-            })(iterator$926.$$.prototype);
-            var iterator$933;
-            function getIterator$933(){
-                if (iterator$933===undefined)iterator$933=$init$iterator$926()({Element:$$$mptypes.Result});
-                return iterator$933;
+                };$$iterator$925.next.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:['Result',{t:Finished}]},$ps:[],$cont:iterator$925,$an:function(){return[shared(),actual()];},d:['ceylon.language','combine','$o','iterable','$m','iterator','$o','iterator','$m','next']};};
+            })(iterator$925.$$.prototype);
+            var iterator$932;
+            function getIterator$932(){
+                if (iterator$932===undefined)iterator$932=$init$iterator$925()({Element:$$$mptypes.Result});
+                return iterator$932;
             }
-            getIterator$933.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$926},d:['ceylon.language','combine','$o','iterable','$m','iterator','$at','iterator']};};
-            $prop$getIterator$933={get:getIterator$933,$$metamodel$$:getIterator$933.$$metamodel$$};
-            return getIterator$933();
-        };$$iterable$925.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Result'}},$ps:[],$cont:iterable$925,$an:function(){return[shared(),actual()];},d:['ceylon.language','combine','$o','iterable','$m','iterator']};};
-    })(iterable$925.$$.prototype);
-    var iterable$934;
-    function getIterable$934(){
-        if (iterable$934===undefined)iterable$934=$init$iterable$925()({Absent:$$$mptypes.Absent,Element:$$$mptypes.Result});
-        return iterable$934;
+            getIterator$932.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterator$925},d:['ceylon.language','combine','$o','iterable','$m','iterator','$at','iterator']};};
+            $prop$getIterator$932={get:getIterator$932,$$metamodel$$:getIterator$932.$$metamodel$$};
+            return getIterator$932();
+        };$$iterable$924.iterator.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterator,a:{Element:'Result'}},$ps:[],$cont:iterable$924,$an:function(){return[shared(),actual()];},d:['ceylon.language','combine','$o','iterable','$m','iterator']};};
+    })(iterable$924.$$.prototype);
+    var iterable$933;
+    function getIterable$933(){
+        if (iterable$933===undefined)iterable$933=$init$iterable$924()({Absent:$$$mptypes.Absent,Element:$$$mptypes.Result});
+        return iterable$933;
     }
-    getIterable$934.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterable$925},d:['ceylon.language','combine','$at','iterable']};};
-    $prop$getIterable$934={get:getIterable$934,$$metamodel$$:getIterable$934.$$metamodel$$};
-    return getIterable$934();
+    getIterable$933.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:iterable$924},d:['ceylon.language','combine','$at','iterable']};};
+    $prop$getIterable$933={get:getIterable$933,$$metamodel$$:getIterable$933.$$metamodel$$};
+    return getIterable$933();
 }
 exports.combine=combine;
 combine.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Iterable,a:{Absent:'Absent',Element:'Result'}},$ps:[{$nm:'combination',$mt:'prm',$pt:'f',$t:'Result',$an:function(){return[];}},{$nm:'elements',$mt:'prm',$t:{t:Iterable,a:{Absent:'Absent',Element:'Element'}},$an:function(){return[];}},{$nm:'otherElements',$mt:'prm',$t:{t:Iterable,a:{Absent:'Absent',Element:'OtherElement'}},$an:function(){return[];}}],$tp:{Result:{},Absent:{'satisfies':[{t:Null}]},Element:{},OtherElement:{}},$an:function(){return[doc(String$("Applies a function to each element of two `Iterable`s\nand returns an `Iterable` with the results.",97)),by([String$("Gavin",5),String$("Enrique Zamudio",15),String$("Tako",4)].reifyCeylonType({Absent:{t:Null},Element:{t:String$}})),shared()];},d:['ceylon.language','combine']};};
-var sort=function (elements$935,$$$mptypes){
-    return internalSort($JsCallable(byIncreasing($JsCallable(function (e$936){
-        return e$936;
-    },[{$nm:'e',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$$mptypes.Element,Element:$$$mptypes.Element}},Return:$$$mptypes.Element}),{Value:$$$mptypes.Element,Element:$$$mptypes.Element}),[{$nm:'p1',$mt:'prm',$t:'Element'},{$nm:'p2',$mt:'prm',$t:'Element'}],{Arguments:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Empty},First:$$$mptypes.Element,Element:$$$mptypes.Element}},First:$$$mptypes.Element,Element:$$$mptypes.Element}},Return:{t:Comparison}}),elements$935,{Element:$$$mptypes.Element});
+var sort=function (elements$934,$$$mptypes){
+    return internalSort($JsCallable(byIncreasing($JsCallable(function (e$935){
+        return e$935;
+    },[{$nm:'e',$mt:'prm',$t:'Element',$an:function(){return[];}}],{Arguments:{t:Tuple,a:{Rest:{t:Empty},First:$$$mptypes.Element,Element:$$$mptypes.Element}},Return:$$$mptypes.Element}),{Value:$$$mptypes.Element,Element:$$$mptypes.Element}),[{$nm:'p1',$mt:'prm',$t:'Element'},{$nm:'p2',$mt:'prm',$t:'Element'}],{Arguments:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Empty},First:$$$mptypes.Element,Element:$$$mptypes.Element}},First:$$$mptypes.Element,Element:$$$mptypes.Element}},Return:{t:Comparison}}),elements$934,{Element:$$$mptypes.Element});
 };
 sort.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Element'}},$ps:[{$nm:'elements',$mt:'prm',$t:{t:Iterable,a:{Absent:{t:Null},Element:'Element'}},$an:function(){return[];}}],$tp:{Element:{'satisfies':[{t:Comparable,a:{Other:'Element'}}]}},$an:function(){return[doc(String$("Sort the given elements, returning a new sequence.",50)),see([$init$OpenInterface()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),Comparable)].reifyCeylonType({Absent:{t:Null},Element:{t:InterfaceDeclaration$meta$declaration}})),shared()];},d:['ceylon.language','sort']};};
 exports.sort=sort;
@@ -6317,120 +6312,120 @@ StringBuilder$proto.$delete = function(pos, count) {
 exports.String=String$;
 exports.Character=Character;
 exports.StringBuilder=StringBuilder;
-var minRadix$937;function $valinit$minRadix$937(){if (minRadix$937===undefined)minRadix$937=(2);return minRadix$937;};$valinit$minRadix$937();
-function getMinRadix(){return $valinit$minRadix$937();}
+var minRadix$936;function $valinit$minRadix$936(){if (minRadix$936===undefined)minRadix$936=(2);return minRadix$936;};$valinit$minRadix$936();
+function getMinRadix(){return $valinit$minRadix$936();}
 exports.getMinRadix=getMinRadix;
 var $prop$getMinRadix={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','minRadix']};}};
 exports.$prop$getMinRadix=$prop$getMinRadix;
 $prop$getMinRadix.get=getMinRadix;
 getMinRadix.$$metamodel$$=$prop$getMinRadix.$$metamodel$$;
-var maxRadix$938;function $valinit$maxRadix$938(){if (maxRadix$938===undefined)maxRadix$938=(36);return maxRadix$938;};$valinit$maxRadix$938();
-function getMaxRadix(){return $valinit$maxRadix$938();}
+var maxRadix$937;function $valinit$maxRadix$937(){if (maxRadix$937===undefined)maxRadix$937=(36);return maxRadix$937;};$valinit$maxRadix$937();
+function getMaxRadix(){return $valinit$maxRadix$937();}
 exports.getMaxRadix=getMaxRadix;
 var $prop$getMaxRadix={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','maxRadix']};}};
 exports.$prop$getMaxRadix=$prop$getMaxRadix;
 $prop$getMaxRadix.get=getMaxRadix;
 getMaxRadix.$$metamodel$$=$prop$getMaxRadix.$$metamodel$$;
-function parseInteger(string$939,radix$940){
-    if(radix$940===undefined){radix$940=(10);}
+function parseInteger(string$938,radix$939){
+    if(radix$939===undefined){radix$939=(10);}
     //assert at parseInteger.ceylon (32:4-32:49)
-    if (!((radix$940.compare(getMinRadix())!==getSmaller())&&(radix$940.compare(getMaxRadix())!==getLarger()))) {throw wrapexc(AssertionException("Assertion failed: \'radix >= minRadix, radix <= maxRadix\' at parseInteger.ceylon (32:11-32:48)"),'32:4-32:49','parseInteger.ceylon'); }
-    var ii$941=(0);
-    function setIi$941(ii$942){return ii$941=ii$942;};
-    $prop$getIi$941={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','parseInteger','$at','ii']};}};
-    $prop$getIi$941.get=function(){return ii$941};
-    $prop$getIi$941.set=setIi$941;
-    if (setIi$941.$$metamodel$$===undefined)setIi$941.$$metamodel$$=$prop$getIi$941.$$metamodel$$;
-    var max$943=getMinIntegerValue().divided(radix$940);
-    $prop$getMax$943={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','parseInteger','$at','max']};}};
-    $prop$getMax$943.get=function(){return max$943};
-    var negative$944;
-    $prop$getNegative$944={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},d:['ceylon.language','parseInteger','$at','negative']};}};
-    $prop$getNegative$944.get=function(){return negative$944};
-    var char$945;
-    if((char$945=string$939.get(ii$941))!==null){
-        if(char$945.equals(Character(45))){
-            negative$944=true;
-            (oldii$946=ii$941,ii$941=oldii$946.successor,oldii$946);
-            var oldii$946;
+    if (!((radix$939.compare(getMinRadix())!==getSmaller())&&(radix$939.compare(getMaxRadix())!==getLarger()))) {throw wrapexc(AssertionException("Assertion failed: \'radix >= minRadix, radix <= maxRadix\' at parseInteger.ceylon (32:11-32:48)"),'32:4-32:49','parseInteger.ceylon'); }
+    var ii$940=(0);
+    function setIi$940(ii$941){return ii$940=ii$941;};
+    $prop$getIi$940={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','parseInteger','$at','ii']};}};
+    $prop$getIi$940.get=function(){return ii$940};
+    $prop$getIi$940.set=setIi$940;
+    if (setIi$940.$$metamodel$$===undefined)setIi$940.$$metamodel$$=$prop$getIi$940.$$metamodel$$;
+    var max$942=getMinIntegerValue().divided(radix$939);
+    $prop$getMax$942={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','parseInteger','$at','max']};}};
+    $prop$getMax$942.get=function(){return max$942};
+    var negative$943;
+    $prop$getNegative$943={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},d:['ceylon.language','parseInteger','$at','negative']};}};
+    $prop$getNegative$943.get=function(){return negative$943};
+    var char$944;
+    if((char$944=string$938.get(ii$940))!==null){
+        if(char$944.equals(Character(45))){
+            negative$943=true;
+            (oldii$945=ii$940,ii$940=oldii$945.successor,oldii$945);
+            var oldii$945;
         }else {
-            if(char$945.equals(Character(43))){
-                negative$944=false;
-                (oldii$947=ii$941,ii$941=oldii$947.successor,oldii$947);
-                var oldii$947;
+            if(char$944.equals(Character(43))){
+                negative$943=false;
+                (oldii$946=ii$940,ii$940=oldii$946.successor,oldii$946);
+                var oldii$946;
             }else {
-                negative$944=false;
+                negative$943=false;
             }
         }
     }else {
         return null;
     }
-    var limit$948=(opt$949=(negative$944?getMinIntegerValue():null),opt$949!==null?opt$949:(-getMaxIntegerValue()));
-    $prop$getLimit$948={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','parseInteger','$at','limit']};}};
-    $prop$getLimit$948.get=function(){return limit$948};
-    var opt$949;
-    var length$950=string$939.size;
-    $prop$getLength$950={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','parseInteger','$at','length']};}};
-    $prop$getLength$950.get=function(){return length$950};
-    var result$951=(0);
-    function setResult$951(result$952){return result$951=result$952;};
-    $prop$getResult$951={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','parseInteger','$at','result']};}};
-    $prop$getResult$951.get=function(){return result$951};
-    $prop$getResult$951.set=setResult$951;
-    if (setResult$951.$$metamodel$$===undefined)setResult$951.$$metamodel$$=$prop$getResult$951.$$metamodel$$;
-    var sep$953=(-(1));
-    function setSep$953(sep$954){return sep$953=sep$954;};
-    $prop$getSep$953={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','parseInteger','$at','sep']};}};
-    $prop$getSep$953.get=function(){return sep$953};
-    $prop$getSep$953.set=setSep$953;
-    if (setSep$953.$$metamodel$$===undefined)setSep$953.$$metamodel$$=$prop$getSep$953.$$metamodel$$;
-    var digitIndex$955=(0);
-    function setDigitIndex$955(digitIndex$956){return digitIndex$955=digitIndex$956;};
-    $prop$getDigitIndex$955={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','parseInteger','$at','digitIndex']};}};
-    $prop$getDigitIndex$955.get=function(){return digitIndex$955};
-    $prop$getDigitIndex$955.set=setDigitIndex$955;
-    if (setDigitIndex$955.$$metamodel$$===undefined)setDigitIndex$955.$$metamodel$$=$prop$getDigitIndex$955.$$metamodel$$;
-    var groupingSize$957=(-(1));
-    function setGroupingSize$957(groupingSize$958){return groupingSize$957=groupingSize$958;};
-    $prop$getGroupingSize$957={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','parseInteger','$at','groupingSize']};}};
-    $prop$getGroupingSize$957.get=function(){return groupingSize$957};
-    $prop$getGroupingSize$957.set=setGroupingSize$957;
-    if (setGroupingSize$957.$$metamodel$$===undefined)setGroupingSize$957.$$metamodel$$=$prop$getGroupingSize$957.$$metamodel$$;
-    while(ii$941.compare(length$950).equals(getSmaller())){
-        var ch$959;
-        $prop$getCh$959={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Character},d:['ceylon.language','parseInteger','$at','ch']};}};
-        $prop$getCh$959.get=function(){return ch$959};
-        var char$960;
-        if((char$960=string$939.get(ii$941))!==null){
-            ch$959=char$960;
+    var limit$947=(opt$948=(negative$943?getMinIntegerValue():null),opt$948!==null?opt$948:(-getMaxIntegerValue()));
+    $prop$getLimit$947={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','parseInteger','$at','limit']};}};
+    $prop$getLimit$947.get=function(){return limit$947};
+    var opt$948;
+    var length$949=string$938.size;
+    $prop$getLength$949={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','parseInteger','$at','length']};}};
+    $prop$getLength$949.get=function(){return length$949};
+    var result$950=(0);
+    function setResult$950(result$951){return result$950=result$951;};
+    $prop$getResult$950={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','parseInteger','$at','result']};}};
+    $prop$getResult$950.get=function(){return result$950};
+    $prop$getResult$950.set=setResult$950;
+    if (setResult$950.$$metamodel$$===undefined)setResult$950.$$metamodel$$=$prop$getResult$950.$$metamodel$$;
+    var sep$952=(-(1));
+    function setSep$952(sep$953){return sep$952=sep$953;};
+    $prop$getSep$952={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','parseInteger','$at','sep']};}};
+    $prop$getSep$952.get=function(){return sep$952};
+    $prop$getSep$952.set=setSep$952;
+    if (setSep$952.$$metamodel$$===undefined)setSep$952.$$metamodel$$=$prop$getSep$952.$$metamodel$$;
+    var digitIndex$954=(0);
+    function setDigitIndex$954(digitIndex$955){return digitIndex$954=digitIndex$955;};
+    $prop$getDigitIndex$954={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','parseInteger','$at','digitIndex']};}};
+    $prop$getDigitIndex$954.get=function(){return digitIndex$954};
+    $prop$getDigitIndex$954.set=setDigitIndex$954;
+    if (setDigitIndex$954.$$metamodel$$===undefined)setDigitIndex$954.$$metamodel$$=$prop$getDigitIndex$954.$$metamodel$$;
+    var groupingSize$956=(-(1));
+    function setGroupingSize$956(groupingSize$957){return groupingSize$956=groupingSize$957;};
+    $prop$getGroupingSize$956={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','parseInteger','$at','groupingSize']};}};
+    $prop$getGroupingSize$956.get=function(){return groupingSize$956};
+    $prop$getGroupingSize$956.set=setGroupingSize$956;
+    if (setGroupingSize$956.$$metamodel$$===undefined)setGroupingSize$956.$$metamodel$$=$prop$getGroupingSize$956.$$metamodel$$;
+    while(ii$940.compare(length$949).equals(getSmaller())){
+        var ch$958;
+        $prop$getCh$958={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Character},d:['ceylon.language','parseInteger','$at','ch']};}};
+        $prop$getCh$958.get=function(){return ch$958};
+        var char$959;
+        if((char$959=string$938.get(ii$940))!==null){
+            ch$958=char$959;
         }else {
             return null;
         }
-        if(ch$959.equals(Character(95))){
-            if(sep$953.equals((-(1)))){
-                var digitGroupSize$961;
-                if((digitGroupSize$961=computeDigitGroupingSize(radix$940,digitIndex$955,string$939,ii$941))!==null&&(digitIndex$955.compare(digitGroupSize$961)!==getLarger())){
-                    groupingSize$957=digitGroupSize$961;
-                    sep$953=digitIndex$955;
+        if(ch$958.equals(Character(95))){
+            if(sep$952.equals((-(1)))){
+                var digitGroupSize$960;
+                if((digitGroupSize$960=computeDigitGroupingSize(radix$939,digitIndex$954,string$938,ii$940))!==null&&(digitIndex$954.compare(digitGroupSize$960)!==getLarger())){
+                    groupingSize$956=digitGroupSize$960;
+                    sep$952=digitIndex$954;
                 }else {
                     return null;
                 }
             }else {
-                if(digitIndex$955.minus(sep$953).equals(groupingSize$957)){
+                if(digitIndex$954.minus(sep$952).equals(groupingSize$956)){
                     return null;
                 }else {
-                    sep$953=digitIndex$955;
+                    sep$952=digitIndex$954;
                 }
             }
         }else {
-            if(((!sep$953.equals((-(1))))&&digitIndex$955.minus(sep$953).equals(groupingSize$957.plus((1))))){
+            if(((!sep$952.equals((-(1))))&&digitIndex$954.minus(sep$952).equals(groupingSize$956.plus((1))))){
                 return null;
             }
-            if(((ii$941.plus((1)).equals(length$950)&&radix$940.equals((10)))&&Tuple(Character(107),Tuple(Character(77),Tuple(Character(71),Tuple(Character(84),Tuple(Character(80),getEmpty(),{Rest:{t:Empty},First:{t:Character},Element:{t:Character}}),{Rest:{t:Tuple,a:{Rest:{t:Empty},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}),{Rest:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Empty},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}),{Rest:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Empty},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}),{Rest:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Empty},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}).contains(ch$959))){
-                var magnitude$962;
-                if((magnitude$962=computeMagnitude(radix$940,string$939.get((oldii$963=ii$941,ii$941=oldii$963.successor,oldii$963))))!==null){
-                    if(limit$948.divided(magnitude$962).compare(result$951).equals(getSmaller())){
-                        (result$951=result$951.times(magnitude$962));
+            if(((ii$940.plus((1)).equals(length$949)&&radix$939.equals((10)))&&Tuple(Character(107),Tuple(Character(77),Tuple(Character(71),Tuple(Character(84),Tuple(Character(80),getEmpty(),{Rest:{t:Empty},First:{t:Character},Element:{t:Character}}),{Rest:{t:Tuple,a:{Rest:{t:Empty},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}),{Rest:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Empty},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}),{Rest:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Empty},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}),{Rest:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Tuple,a:{Rest:{t:Empty},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}},First:{t:Character},Element:{t:Character}}).contains(ch$958))){
+                var magnitude$961;
+                if((magnitude$961=computeMagnitude(radix$939,string$938.get((oldii$962=ii$940,ii$940=oldii$962.successor,oldii$962))))!==null){
+                    if(limit$947.divided(magnitude$961).compare(result$950).equals(getSmaller())){
+                        (result$950=result$950.times(magnitude$961));
                         break;
                     }else {
                         return null;
@@ -6438,171 +6433,171 @@ function parseInteger(string$939,radix$940){
                 }else {
                     return null;
                 }
-                var oldii$963;
+                var oldii$962;
             }else {
-                var digit$964;
-                if((digit$964=parseDigit(ch$959,radix$940))!==null){
-                    if(result$951.compare(max$943).equals(getSmaller())){
+                var digit$963;
+                if((digit$963=parseDigit(ch$958,radix$939))!==null){
+                    if(result$950.compare(max$942).equals(getSmaller())){
                         return null;
                     }
-                    (result$951=result$951.times(radix$940));
-                    if(result$951.compare(limit$948.plus(digit$964)).equals(getSmaller())){
+                    (result$950=result$950.times(radix$939));
+                    if(result$950.compare(limit$947.plus(digit$963)).equals(getSmaller())){
                         return null;
                     }
-                    (result$951=result$951.minus(digit$964));
+                    (result$950=result$950.minus(digit$963));
                 }else {
                     return null;
                 }
             }
         }
-        (oldii$965=ii$941,ii$941=oldii$965.successor,oldii$965);
-        var oldii$965;
-        (olddigitIndex$966=digitIndex$955,digitIndex$955=olddigitIndex$966.successor,olddigitIndex$966);
-        var olddigitIndex$966;
+        (oldii$964=ii$940,ii$940=oldii$964.successor,oldii$964);
+        var oldii$964;
+        (olddigitIndex$965=digitIndex$954,digitIndex$954=olddigitIndex$965.successor,olddigitIndex$965);
+        var olddigitIndex$965;
     }
-    if(((!sep$953.equals((-(1))))&&(!digitIndex$955.minus(sep$953).equals(groupingSize$957.plus((1)))))){
+    if(((!sep$952.equals((-(1))))&&(!digitIndex$954.minus(sep$952).equals(groupingSize$956.plus((1)))))){
         return null;
     }
-    if(digitIndex$955.equals((0))){
+    if(digitIndex$954.equals((0))){
         return null;
     }
-    return (opt$967=(negative$944?result$951:null),opt$967!==null?opt$967:(-result$951));
-    var opt$967;
+    return (opt$966=(negative$943?result$950:null),opt$966!==null?opt$966:(-result$950));
+    var opt$966;
 }
 exports.parseInteger=parseInteger;
 parseInteger.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},{t:Integer}]},$ps:[{$nm:'string',$mt:'prm',$t:{t:String$},$an:function(){return[];}},{$nm:'radix',$mt:'prm',$def:1,$t:{t:Integer},$an:function(){return[];}}],$an:function(){return[doc(String$("The `Integer` value of the given string representation \nof an integer, or `null` if the string does not represent \nan integer or if the mathematical integer it represents \nis too large in magnitude to be represented by an \n`Integer`.\n\nThe syntax accepted by this function is the same as the \nsyntax for an `Integer` literal in the Ceylon language \nexcept that it may optionally begin with a sign \ncharacter (`+` or `-`).\n\nA radix can be given in input to specify what is the base\nto take in consideration for the parsing. radix has to be\nbetween `minRadix` and `maxRadix` included.\nThe list of available digits starts from `0` to `9` followed\nby `a` to `z`.\nWhen parsing in a specific base, the first `radix` digits\nfrom the available digits list can be used.\nThis function is not case sensitive; `a` and `A` both\ncorrespond to the `a` digit which decimal value is `10`.\n \n`_` character can be used to separate groups of digits\nfor bases 2, 10 and 16 as for `Integer` literal in the\nCeylon language. For any other bases, no grouping is\nsupported.",1046)),$throws($init$OpenClass()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),AssertionException),String$("if `radix` is not between `minRadix` and `maxRadix`",51)),shared()];},d:['ceylon.language','parseInteger']};};
-function computeDigitGroupingSize(radix$968,digitIndex$969,string$970,ii$971){
-    var groupingSize$972;
-    if(radix$968.equals((2))){
-        groupingSize$972=(4);
+function computeDigitGroupingSize(radix$967,digitIndex$968,string$969,ii$970){
+    var groupingSize$971;
+    if(radix$967.equals((2))){
+        groupingSize$971=(4);
     }else {
-        if(radix$968.equals((10))){
-            groupingSize$972=(3);
+        if(radix$967.equals((10))){
+            groupingSize$971=(3);
         }else {
-            if(radix$968.equals((16))){
-                var char$973;
-                if((digitIndex$969.compare((2))!==getLarger())&&(char$973=string$970.get(ii$971.plus((3))))!==null&&char$973.equals(Character(95))){
-                    groupingSize$972=(2);
+            if(radix$967.equals((16))){
+                var char$972;
+                if((digitIndex$968.compare((2))!==getLarger())&&(char$972=string$969.get(ii$970.plus((3))))!==null&&char$972.equals(Character(95))){
+                    groupingSize$971=(2);
                 }else {
-                    groupingSize$972=(4);
+                    groupingSize$971=(4);
                 }
             }else {
-                groupingSize$972=null;
+                groupingSize$971=null;
             }
         }
     }
-    return groupingSize$972;
+    return groupingSize$971;
 };computeDigitGroupingSize.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},{t:Integer}]},$ps:[{$nm:'radix',$mt:'prm',$t:{t:Integer},$an:function(){return[];}},{$nm:'digitIndex',$mt:'prm',$t:{t:Integer},$an:function(){return[];}},{$nm:'string',$mt:'prm',$t:{t:String$},$an:function(){return[];}},{$nm:'ii',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],d:['ceylon.language','computeDigitGroupingSize']};};
-function computeMagnitude(radix$974,char$975){
-    var power$976;
-    var char$977;
-    if((char$977=char$975)!==null){
-        if(char$977.equals(Character(80))){
-            power$976=(15);
+function computeMagnitude(radix$973,char$974){
+    var power$975;
+    var char$976;
+    if((char$976=char$974)!==null){
+        if(char$976.equals(Character(80))){
+            power$975=(15);
         }else {
-            if(char$977.equals(Character(84))){
-                power$976=(12);
+            if(char$976.equals(Character(84))){
+                power$975=(12);
             }else {
-                if(char$977.equals(Character(71))){
-                    power$976=(9);
+                if(char$976.equals(Character(71))){
+                    power$975=(9);
                 }else {
-                    if(char$977.equals(Character(77))){
-                        power$976=(6);
+                    if(char$976.equals(Character(77))){
+                        power$975=(6);
                     }else {
-                        if(char$977.equals(Character(107))){
-                            power$976=(3);
+                        if(char$976.equals(Character(107))){
+                            power$975=(3);
                         }else {
-                            power$976=null;
+                            power$975=null;
                         }
                     }
                 }
             }
         }
     }else {
-        power$976=null;
+        power$975=null;
     }
-    var power$978;
-    if((power$978=power$976)!==null){
-        return radix$974.power(power$978);
+    var power$977;
+    if((power$977=power$975)!==null){
+        return radix$973.power(power$977);
     }
     return null;
 };computeMagnitude.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},{t:Integer}]},$ps:[{$nm:'radix',$mt:'prm',$t:{t:Integer},$an:function(){return[];}},{$nm:'char',$mt:'prm',$t:{ t:'u', l:[{t:Null},{t:Character}]},$an:function(){return[];}}],d:['ceylon.language','computeMagnitude']};};
-var aInt$979;function $valinit$aInt$979(){if (aInt$979===undefined)aInt$979=Character(97).integer;return aInt$979;};$valinit$aInt$979();
-function getAInt(){return $valinit$aInt$979();}
+var aInt$978;function $valinit$aInt$978(){if (aInt$978===undefined)aInt$978=Character(97).integer;return aInt$978;};$valinit$aInt$978();
+function getAInt(){return $valinit$aInt$978();}
 exports.getAInt=getAInt;
 var $prop$getAInt={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','aInt']};}};
 exports.$prop$getAInt=$prop$getAInt;
 $prop$getAInt.get=getAInt;
 getAInt.$$metamodel$$=$prop$getAInt.$$metamodel$$;
-var zeroInt$980;function $valinit$zeroInt$980(){if (zeroInt$980===undefined)zeroInt$980=Character(48).integer;return zeroInt$980;};$valinit$zeroInt$980();
-function getZeroInt(){return $valinit$zeroInt$980();}
+var zeroInt$979;function $valinit$zeroInt$979(){if (zeroInt$979===undefined)zeroInt$979=Character(48).integer;return zeroInt$979;};$valinit$zeroInt$979();
+function getZeroInt(){return $valinit$zeroInt$979();}
 exports.getZeroInt=getZeroInt;
 var $prop$getZeroInt={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','zeroInt']};}};
 exports.$prop$getZeroInt=$prop$getZeroInt;
 $prop$getZeroInt.get=getZeroInt;
 getZeroInt.$$metamodel$$=$prop$getZeroInt.$$metamodel$$;
-function parseDigit(digit$981,radix$982){
-    var figure$983;
-    var digitInt$984=digit$981.integer;
-    if((tmpvar$985=digitInt$984.minus(getZeroInt()),tmpvar$985.compare((0))!==getSmaller()&&tmpvar$985.compare((10))===getSmaller())){
-        figure$983=digitInt$984.minus(getZeroInt());
+function parseDigit(digit$980,radix$981){
+    var figure$982;
+    var digitInt$983=digit$980.integer;
+    if((tmpvar$984=digitInt$983.minus(getZeroInt()),tmpvar$984.compare((0))!==getSmaller()&&tmpvar$984.compare((10))===getSmaller())){
+        figure$982=digitInt$983.minus(getZeroInt());
     }else {
-        if((tmpvar$986=digitInt$984.minus(getAInt()),tmpvar$986.compare((0))!==getSmaller()&&tmpvar$986.compare((26))===getSmaller())){
-            figure$983=digitInt$984.minus(getAInt()).plus((10));
+        if((tmpvar$985=digitInt$983.minus(getAInt()),tmpvar$985.compare((0))!==getSmaller()&&tmpvar$985.compare((26))===getSmaller())){
+            figure$982=digitInt$983.minus(getAInt()).plus((10));
         }else {
             return null;
         }
     }
-    return (figure$983.compare(radix$982).equals(getSmaller())?figure$983:null);
+    return (figure$982.compare(radix$981).equals(getSmaller())?figure$982:null);
 };parseDigit.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},{t:Integer}]},$ps:[{$nm:'digit',$mt:'prm',$t:{t:Character},$an:function(){return[];}},{$nm:'radix',$mt:'prm',$t:{t:Integer},$an:function(){return[];}}],d:['ceylon.language','parseDigit']};};
-function formatInteger(integer$987,radix$988){
-    if(radix$988===undefined){radix$988=(10);}
+function formatInteger(integer$986,radix$987){
+    if(radix$987===undefined){radix$987=(10);}
     //assert at parseInteger.ceylon (195:4-195:49)
-    if (!((radix$988.compare(getMinRadix())!==getSmaller())&&(radix$988.compare(getMaxRadix())!==getLarger()))) {throw wrapexc(AssertionException("Assertion failed: \'radix >= minRadix, radix <= maxRadix\' at parseInteger.ceylon (195:11-195:48)"),'195:4-195:49','parseInteger.ceylon'); }
-    if(integer$987.equals((0))){
+    if (!((radix$987.compare(getMinRadix())!==getSmaller())&&(radix$987.compare(getMaxRadix())!==getLarger()))) {throw wrapexc(AssertionException("Assertion failed: \'radix >= minRadix, radix <= maxRadix\' at parseInteger.ceylon (195:11-195:48)"),'195:4-195:49','parseInteger.ceylon'); }
+    if(integer$986.equals((0))){
         return String$("0",1);
     }
-    var digits$989=StringBuilder();
-    $prop$getDigits$989={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:StringBuilder},d:['ceylon.language','formatInteger','$at','digits']};}};
-    $prop$getDigits$989.get=function(){return digits$989};
-    var insertIndex$990;
-    $prop$getInsertIndex$990={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','formatInteger','$at','insertIndex']};}};
-    $prop$getInsertIndex$990.get=function(){return insertIndex$990};
-    var i$991;
-    function setI$991(i$992){return i$991=i$992;};
-    $prop$getI$991={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','formatInteger','$at','i']};}};
-    $prop$getI$991.get=function(){return i$991};
-    $prop$getI$991.set=setI$991;
-    if (setI$991.$$metamodel$$===undefined)setI$991.$$metamodel$$=$prop$getI$991.$$metamodel$$;
-    if(integer$987.compare((0)).equals(getSmaller())){
-        digits$989.append(String$("-",1));
-        insertIndex$990=(1);
-        i$991=integer$987;
+    var digits$988=StringBuilder();
+    $prop$getDigits$988={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:StringBuilder},d:['ceylon.language','formatInteger','$at','digits']};}};
+    $prop$getDigits$988.get=function(){return digits$988};
+    var insertIndex$989;
+    $prop$getInsertIndex$989={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','formatInteger','$at','insertIndex']};}};
+    $prop$getInsertIndex$989.get=function(){return insertIndex$989};
+    var i$990;
+    function setI$990(i$991){return i$990=i$991;};
+    $prop$getI$990={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},$an:function(){return[variable()];},d:['ceylon.language','formatInteger','$at','i']};}};
+    $prop$getI$990.get=function(){return i$990};
+    $prop$getI$990.set=setI$990;
+    if (setI$990.$$metamodel$$===undefined)setI$990.$$metamodel$$=$prop$getI$990.$$metamodel$$;
+    if(integer$986.compare((0)).equals(getSmaller())){
+        digits$988.append(String$("-",1));
+        insertIndex$989=(1);
+        i$990=integer$986;
     }else {
-        insertIndex$990=(0);
-        i$991=(-integer$987);
+        insertIndex$989=(0);
+        i$990=(-integer$986);
     }
-    while((!i$991.equals((0)))){
-        var d$993=(-i$991.remainder(radix$988));
-        $prop$getD$993={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','formatInteger','$at','d']};}};
-        $prop$getD$993.get=function(){return d$993};
-        var c$994;
-        $prop$getC$994={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Character},d:['ceylon.language','formatInteger','$at','c']};}};
-        $prop$getC$994.get=function(){return c$994};
-        if((tmpvar$995=d$993,tmpvar$995.compare((0))!==getSmaller()&&tmpvar$995.compare((10))===getSmaller())){
-            c$994=d$993.plus(getZeroInt()).character;
+    while((!i$990.equals((0)))){
+        var d$992=(-i$990.remainder(radix$987));
+        $prop$getD$992={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Integer},d:['ceylon.language','formatInteger','$at','d']};}};
+        $prop$getD$992.get=function(){return d$992};
+        var c$993;
+        $prop$getC$993={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Character},d:['ceylon.language','formatInteger','$at','c']};}};
+        $prop$getC$993.get=function(){return c$993};
+        if((tmpvar$994=d$992,tmpvar$994.compare((0))!==getSmaller()&&tmpvar$994.compare((10))===getSmaller())){
+            c$993=d$992.plus(getZeroInt()).character;
         }else {
-            if((tmpvar$996=d$993,tmpvar$996.compare((10))!==getSmaller()&&tmpvar$996.compare((36))===getSmaller())){
-                c$994=d$993.minus((10)).plus(getAInt()).character;
+            if((tmpvar$995=d$992,tmpvar$995.compare((10))!==getSmaller()&&tmpvar$995.compare((36))===getSmaller())){
+                c$993=d$992.minus((10)).plus(getAInt()).character;
             }else {
                 //assert at parseInteger.ceylon (220:12-220:26)
                 if (!(false)) {throw wrapexc(AssertionException("Assertion failed: \'false\' at parseInteger.ceylon (220:19-220:25)"),'220:12-220:26','parseInteger.ceylon'); }
             }
         }
-        digits$989.insertCharacter(insertIndex$990,c$994);
-        i$991=i$991.plus(d$993).divided(radix$988);
+        digits$988.insertCharacter(insertIndex$989,c$993);
+        i$990=i$990.plus(d$992).divided(radix$987);
     }
-    return digits$989.string;
+    return digits$988.string;
 }
 exports.formatInteger=formatInteger;
 formatInteger.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:String$},$ps:[{$nm:'integer',$mt:'prm',$t:{t:Integer},$an:function(){return[];}},{$nm:'radix',$mt:'prm',$def:1,$t:{t:Integer},$an:function(){return[];}}],$an:function(){return[doc(String$("The string representation of `integer` in the `radix` base.\n`radix` must be between `minRadix` and `maxRadix` included.\n\nIf `integer` is negative, returned string will start by character `-`",190)),$throws($init$OpenClass()(getModules$meta().find('ceylon.language','0.6.1').findPackage('ceylon.language'),AssertionException),String$("if `radix` is not between `minRadix` and `maxRadix`",51)),shared()];},d:['ceylon.language','formatInteger']};};
@@ -6641,9 +6636,9 @@ function $init$ConstrainedAnnotation(){
     if (ConstrainedAnnotation.$$===undefined){
         initTypeProto(ConstrainedAnnotation,'ceylon.language::ConstrainedAnnotation',$init$Annotation());
         (function($$constrainedAnnotation){
-            $$constrainedAnnotation.occurs=function (programElement$997){
+            $$constrainedAnnotation.occurs=function (programElement$996){
                 var $$constrainedAnnotation=this;
-                return isOfType(programElement$997,$$constrainedAnnotation.$$targs$$.ProgramElement);
+                return isOfType(programElement$996,$$constrainedAnnotation.$$targs$$.ProgramElement);
             };
             $$constrainedAnnotation.occurs.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'programElement',$mt:'prm',$t:{t:Annotated},$an:function(){return[];}}],$cont:ConstrainedAnnotation,$an:function(){return[doc(String$("Can this annotation can occur on the given program \nelement?",60)),shared()];},d:['ceylon.language','ConstrainedAnnotation','$m','occurs']};};
         })(ConstrainedAnnotation.$$.prototype);
@@ -6681,39 +6676,39 @@ function $init$SequencedAnnotation(){
 }
 exports.$init$SequencedAnnotation=$init$SequencedAnnotation;
 $init$SequencedAnnotation();
-function optionalAnnotation$meta(annotationType$998,programElement$999,$$$mptypes){
-    return annotations$meta(annotationType$998,programElement$999,{Values:{ t:'u', l:[{t:Null},$$$mptypes.Value]},Value:$$$mptypes.Value,ProgramElement:$$$mptypes.ProgramElement});
+function optionalAnnotation$meta(annotationType$997,programElement$998,$$$mptypes){
+    return annotations$meta(annotationType$997,programElement$998,{Values:{ t:'u', l:[{t:Null},$$$mptypes.Value]},Value:$$$mptypes.Value,ProgramElement:$$$mptypes.ProgramElement});
 }
 exports.optionalAnnotation$meta=optionalAnnotation$meta;
 optionalAnnotation$meta.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},'Value']},$ps:[{$nm:'annotationType',$mt:'prm',$t:{t:Class$meta$model,a:{Arguments:{t:Nothing},Type:{t:OptionalAnnotation,a:{Value:'Value',ProgramElement:'ProgramElement'}}}},$an:function(){return[];}},{$nm:'programElement',$mt:'prm',$t:'ProgramElement',$an:function(){return[];}}],$tp:{Value:{'satisfies':[{t:OptionalAnnotation,a:{Value:'Value',ProgramElement:'ProgramElement'}}]},ProgramElement:{'var':'in','satisfies':[{t:Annotated}]}},$an:function(){return[doc(String$("The value of given optional annotation type on the given program element, \nor null if the program element was not annotated with that annotation type.\nFor example:\n\n    // Does the process declaration have the Shared annotation?\n    value isShared = optionalAnnotation(`Shared`, `value process`) exists;\n",304)),shared()];},d:['ceylon.language.meta','optionalAnnotation']};};
-function sequencedAnnotations$meta(annotationType$1000,programElement$1001,$$$mptypes){
-    return annotations$meta(annotationType$1000,programElement$1001,{Values:{t:Sequential,a:{Element:$$$mptypes.Value}},Value:$$$mptypes.Value,ProgramElement:$$$mptypes.ProgramElement});
+function sequencedAnnotations$meta(annotationType$999,programElement$1000,$$$mptypes){
+    return annotations$meta(annotationType$999,programElement$1000,{Values:{t:Sequential,a:{Element:$$$mptypes.Value}},Value:$$$mptypes.Value,ProgramElement:$$$mptypes.ProgramElement});
 }
 exports.sequencedAnnotations$meta=sequencedAnnotations$meta;
 sequencedAnnotations$meta.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:'Value'}},$ps:[{$nm:'annotationType',$mt:'prm',$t:{t:Class$meta$model,a:{Arguments:{t:Nothing},Type:{t:SequencedAnnotation,a:{Value:'Value',ProgramElement:'ProgramElement'}}}},$an:function(){return[];}},{$nm:'programElement',$mt:'prm',$t:'ProgramElement',$an:function(){return[];}}],$tp:{Value:{'satisfies':[{t:SequencedAnnotation,a:{Value:'Value',ProgramElement:'ProgramElement'}}]},ProgramElement:{'var':'in','satisfies':[{t:Annotated}]}},$an:function(){return[doc(String$("The values of given sequenced annotation type on the given program element, \nor empty if the program element was not annotated with that annotation type.\nFor example:\n\n    // Does the sum declaration have any ThrownException annotations?\n    value throwsSomething = sequencedAnnotation(`ThrownException`, `function sum`) nonempty;\n\nThe annotations may be returned in any order.\n",378)),shared()];},d:['ceylon.language.meta','sequencedAnnotations']};};
-function modules$1002$meta(){
-    var $$modules=new modules$1002$meta.$$;
-    $$modules.$prop$getList={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:{t:Module$meta$declaration}}},$cont:modules$1002$meta,$an:function(){return[doc(String$("Returns the list of all currently loaded modules. This may include modules that\nwere not imported directly but your module, and multiple versions of the same\nmodule.",165)),shared(),$native()];},d:['ceylon.language.meta','modules','$at','list']};}};
-    $$modules.$prop$getDefault={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},{t:Module$meta$declaration}]},$cont:modules$1002$meta,$an:function(){return[doc(String$("Returns the default module, if there is one. This is only the case when\nyou are running the default module.",107)),shared(),$native()];},d:['ceylon.language.meta','modules','$at','default']};}};
+function modules$1001$meta(){
+    var $$modules=new modules$1001$meta.$$;
+    $$modules.$prop$getList={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:Sequential,a:{Element:{t:Module$meta$declaration}}},$cont:modules$1001$meta,$an:function(){return[doc(String$("Returns the list of all currently loaded modules. This may include modules that\nwere not imported directly but your module, and multiple versions of the same\nmodule.",165)),shared(),$native()];},d:['ceylon.language.meta','modules','$at','list']};}};
+    $$modules.$prop$getDefault={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:Null},{t:Module$meta$declaration}]},$cont:modules$1001$meta,$an:function(){return[doc(String$("Returns the default module, if there is one. This is only the case when\nyou are running the default module.",107)),shared(),$native()];},d:['ceylon.language.meta','modules','$at','default']};}};
     return $$modules;
 }
-function $init$modules$1002$meta(){
-    if (modules$1002$meta.$$===undefined){
-        initTypeProto(modules$1002$meta,'ceylon.language.meta::modules',Basic);
+function $init$modules$1001$meta(){
+    if (modules$1001$meta.$$===undefined){
+        initTypeProto(modules$1001$meta,'ceylon.language.meta::modules',Basic);
     }
+    return modules$1001$meta;
+}
+exports.$init$modules$1001$meta=$init$modules$1001$meta;
+$init$modules$1001$meta();
+(function($$modules){
+})(modules$1001$meta.$$.prototype);
+var modules$1002$meta;
+function getModules$meta(){
+    if (modules$1002$meta===undefined)modules$1002$meta=$init$modules$1001$meta()();
     return modules$1002$meta;
 }
-exports.$init$modules$1002$meta=$init$modules$1002$meta;
-$init$modules$1002$meta();
-(function($$modules){
-})(modules$1002$meta.$$.prototype);
-var modules$1003$meta;
-function getModules$meta(){
-    if (modules$1003$meta===undefined)modules$1003$meta=$init$modules$1002$meta()();
-    return modules$1003$meta;
-}
 exports.getModules$meta=getModules$meta;
-getModules$meta.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:modules$1002$meta},$an:function(){return[doc(String$("Represents the list of Ceylon modules currently loaded at runtime.\n\nNote that this contains all loaded modules, including those that are\nnot imported by your module.\n\nSince Ceylon supports module isolation at runtime, it is possible that\nthere are more than one version of a given module loaded at the same time.\n\n### Usage example\n\nHere\'s how you would iterate all the loaded modules and print their name and version:\n\n    import ceylon.language.meta { modules }\n\n    for(mod in modules.list){\n        print(\"Module: ``mod.name``/``mod.version``\");\n    }\n",556)),shared(),$native()];},d:['ceylon.language.meta','modules']};};
+getModules$meta.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:modules$1001$meta},$an:function(){return[doc(String$("Represents the list of Ceylon modules currently loaded at runtime.\n\nNote that this contains all loaded modules, including those that are\nnot imported by your module.\n\nSince Ceylon supports module isolation at runtime, it is possible that\nthere are more than one version of a given module loaded at the same time.\n\n### Usage example\n\nHere\'s how you would iterate all the loaded modules and print their name and version:\n\n    import ceylon.language.meta { modules }\n\n    for(mod in modules.list){\n        print(\"Module: ``mod.name``/``mod.version``\");\n    }\n",556)),shared(),$native()];},d:['ceylon.language.meta','modules']};};
 $prop$getModules$meta={get:getModules$meta,$$metamodel$$:getModules$meta.$$metamodel$$};
 exports.$prop$getModules$meta=$prop$getModules$meta;
 function ValueModel$meta$model($$targs$$,$$valueModel){
@@ -7040,9 +7035,9 @@ function $init$Type$meta$model(){
     if (Type$meta$model.$$===undefined){
         initTypeProto(Type$meta$model,'ceylon.language.meta.model::Type');
         (function($$type){
-            $$type.isSubTypeOf=function (type$1004){
+            $$type.isSubTypeOf=function (type$1003){
                 var $$type=this;
-                return type$1004.isSuperTypeOf($$type);
+                return type$1003.isSuperTypeOf($$type);
             };
             $$type.isSubTypeOf.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Boolean$},$ps:[{$nm:'type',$mt:'prm',$t:{t:Type$meta$model,a:{Type:{t:Anything}}},$an:function(){return[];}}],$cont:Type$meta$model,$an:function(){return[doc(String$("True if the given type is a subtype of this type.",49)),shared(),$default()];},d:['ceylon.language.meta.model','Type','$m','isSubTypeOf']};};
         })(Type$meta$model.$$.prototype);
@@ -7120,53 +7115,53 @@ function $init$VariableAttribute$meta$model(){
 }
 exports.$init$VariableAttribute$meta$model=$init$VariableAttribute$meta$model;
 $init$VariableAttribute$meta$model();
-function nothingType$1005$meta$model($$targs$$){
-    var $$nothingType=new nothingType$1005$meta$model.$$;
+function nothingType$1004$meta$model($$targs$$){
+    var $$nothingType=new nothingType$1004$meta$model.$$;
     $$nothingType.$$targs$$=$$targs$$;
     Type$meta$model({Type:{t:Nothing}},$$nothingType);
     return $$nothingType;
 }
-function $init$nothingType$1005$meta$model(){
-    if (nothingType$1005$meta$model.$$===undefined){
-        initTypeProto(nothingType$1005$meta$model,'ceylon.language.meta.model::nothingType',Basic,$init$Type$meta$model());
+function $init$nothingType$1004$meta$model(){
+    if (nothingType$1004$meta$model.$$===undefined){
+        initTypeProto(nothingType$1004$meta$model,'ceylon.language.meta.model::nothingType',Basic,$init$Type$meta$model());
     }
-    return nothingType$1005$meta$model;
+    return nothingType$1004$meta$model;
 }
-exports.$init$nothingType$1005$meta$model=$init$nothingType$1005$meta$model;
-$init$nothingType$1005$meta$model();
+exports.$init$nothingType$1004$meta$model=$init$nothingType$1004$meta$model;
+$init$nothingType$1004$meta$model();
 (function($$nothingType){
     defineAttr($$nothingType,'string',function(){
         var $$nothingType=this;
         return String$("Nothing",7);
-    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:nothingType$1005$meta$model,$an:function(){return[shared(),actual()];},d:['ceylon.language.meta.model','nothingType','$at','string']};});
-    $$nothingType.isTypeOf=function (instance$1006){
+    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:nothingType$1004$meta$model,$an:function(){return[shared(),actual()];},d:['ceylon.language.meta.model','nothingType','$at','string']};});
+    $$nothingType.isTypeOf=function (instance$1005){
         var $$nothingType=this;
         return false;
-    };$$nothingType.isSuperTypeOf=function (type$1007){
+    };$$nothingType.isSuperTypeOf=function (type$1006){
         var $$nothingType=this;
-        return $$nothingType.isExactly(type$1007);
-    };$$nothingType.isSubTypeOf=function (type$1008){
+        return $$nothingType.isExactly(type$1006);
+    };$$nothingType.isSubTypeOf=function (type$1007){
         var $$nothingType=this;
         return true;
-    };$$nothingType.isExactly=function (type$1009){
+    };$$nothingType.isExactly=function (type$1008){
         var $$nothingType=this;
-        return type$1009.equals(getNothingType$meta$model());
+        return type$1008.equals(getNothingType$meta$model());
     };
-})(nothingType$1005$meta$model.$$.prototype);
-var nothingType$1010$meta$model;
+})(nothingType$1004$meta$model.$$.prototype);
+var nothingType$1009$meta$model;
 function getNothingType$meta$model(){
-    if (nothingType$1010$meta$model===undefined)nothingType$1010$meta$model=$init$nothingType$1005$meta$model()({Type:{t:Nothing}});
-    return nothingType$1010$meta$model;
+    if (nothingType$1009$meta$model===undefined)nothingType$1009$meta$model=$init$nothingType$1004$meta$model()({Type:{t:Nothing}});
+    return nothingType$1009$meta$model;
 }
 exports.getNothingType$meta$model=getNothingType$meta$model;
-getNothingType$meta$model.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:nothingType$1005$meta$model},$an:function(){return[doc(String$("The singleton closed type for [[Nothing|ceylon.language::nothing]].",67)),shared()];},d:['ceylon.language.meta.model','nothingType']};};
+getNothingType$meta$model.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:nothingType$1004$meta$model},$an:function(){return[doc(String$("The singleton closed type for [[Nothing|ceylon.language::nothing]].",67)),shared()];},d:['ceylon.language.meta.model','nothingType']};};
 $prop$getNothingType$meta$model={get:getNothingType$meta$model,$$metamodel$$:getNothingType$meta$model.$$metamodel$$};
 exports.$prop$getNothingType$meta$model=$prop$getNothingType$meta$model;
-function TypeApplicationException$meta$model(message$1011, $$typeApplicationException){
+function TypeApplicationException$meta$model(message$1010, $$typeApplicationException){
     $init$TypeApplicationException$meta$model();
     if ($$typeApplicationException===undefined)$$typeApplicationException=new TypeApplicationException$meta$model.$$;
-    $$typeApplicationException.message$1011_=message$1011;
-    Exception($$typeApplicationException.message$1011,undefined,$$typeApplicationException);
+    $$typeApplicationException.message$1010_=message$1010;
+    Exception($$typeApplicationException.message$1010,undefined,$$typeApplicationException);
     return $$typeApplicationException;
 }
 TypeApplicationException$meta$model.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:Exception},satisfies:[],$an:function(){return[doc(String$("Thrown when declarations are applied with invalid or incompatible type arguments.\n\nFor example if you try to apply `Foo` with `String`, hoping to get a `Foo<String>`\nbut the type parameter for `Foo` only accepts types that satisfy `Numeric`.\n",242)),shared()];},d:['ceylon.language.meta.model','TypeApplicationException']};};
@@ -7175,18 +7170,18 @@ function $init$TypeApplicationException$meta$model(){
     if (TypeApplicationException$meta$model.$$===undefined){
         initTypeProto(TypeApplicationException$meta$model,'ceylon.language.meta.model::TypeApplicationException',$init$Exception());
         (function($$typeApplicationException){
-            defineAttr($$typeApplicationException,'message$1011',function(){return this.message$1011_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:TypeApplicationException$meta$model,d:['ceylon.language.meta.model','TypeApplicationException','$at','message']};});
+            defineAttr($$typeApplicationException,'message$1010',function(){return this.message$1010_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:TypeApplicationException$meta$model,d:['ceylon.language.meta.model','TypeApplicationException','$at','message']};});
         })(TypeApplicationException$meta$model.$$.prototype);
     }
     return TypeApplicationException$meta$model;
 }
 exports.$init$TypeApplicationException$meta$model=$init$TypeApplicationException$meta$model;
 $init$TypeApplicationException$meta$model();
-function InvocationException$meta$model(message$1012, $$invocationException){
+function InvocationException$meta$model(message$1011, $$invocationException){
     $init$InvocationException$meta$model();
     if ($$invocationException===undefined)$$invocationException=new InvocationException$meta$model.$$;
-    $$invocationException.message$1012_=message$1012;
-    Exception($$invocationException.message$1012,undefined,$$invocationException);
+    $$invocationException.message$1011_=message$1011;
+    Exception($$invocationException.message$1011,undefined,$$invocationException);
     return $$invocationException;
 }
 InvocationException$meta$model.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:Exception},satisfies:[],$an:function(){return[doc(String$("Thrown when attempting to invoke something which can\'t be invoked, like abstract class\ninitialisers.",100)),shared()];},d:['ceylon.language.meta.model','InvocationException']};};
@@ -7195,7 +7190,7 @@ function $init$InvocationException$meta$model(){
     if (InvocationException$meta$model.$$===undefined){
         initTypeProto(InvocationException$meta$model,'ceylon.language.meta.model::InvocationException',$init$Exception());
         (function($$invocationException){
-            defineAttr($$invocationException,'message$1012',function(){return this.message$1012_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:InvocationException$meta$model,d:['ceylon.language.meta.model','InvocationException','$at','message']};});
+            defineAttr($$invocationException,'message$1011',function(){return this.message$1011_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:InvocationException$meta$model,d:['ceylon.language.meta.model','InvocationException','$at','message']};});
         })(InvocationException$meta$model.$$.prototype);
     }
     return InvocationException$meta$model;
@@ -7748,32 +7743,32 @@ function $init$VariableDeclaration$meta$declaration(){
 }
 exports.$init$VariableDeclaration$meta$declaration=$init$VariableDeclaration$meta$declaration;
 $init$VariableDeclaration$meta$declaration();
-function nothingType$1013$meta$declaration(){
-    var $$nothingType=new nothingType$1013$meta$declaration.$$;
+function nothingType$1012$meta$declaration(){
+    var $$nothingType=new nothingType$1012$meta$declaration.$$;
     OpenType$meta$declaration($$nothingType);
     return $$nothingType;
 }
-function $init$nothingType$1013$meta$declaration(){
-    if (nothingType$1013$meta$declaration.$$===undefined){
-        initTypeProto(nothingType$1013$meta$declaration,'ceylon.language.meta.declaration::nothingType',Basic,$init$OpenType$meta$declaration());
+function $init$nothingType$1012$meta$declaration(){
+    if (nothingType$1012$meta$declaration.$$===undefined){
+        initTypeProto(nothingType$1012$meta$declaration,'ceylon.language.meta.declaration::nothingType',Basic,$init$OpenType$meta$declaration());
     }
-    return nothingType$1013$meta$declaration;
+    return nothingType$1012$meta$declaration;
 }
-exports.$init$nothingType$1013$meta$declaration=$init$nothingType$1013$meta$declaration;
-$init$nothingType$1013$meta$declaration();
+exports.$init$nothingType$1012$meta$declaration=$init$nothingType$1012$meta$declaration;
+$init$nothingType$1012$meta$declaration();
 (function($$nothingType){
     defineAttr($$nothingType,'string',function(){
         var $$nothingType=this;
         return String$("Nothing",7);
-    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:nothingType$1013$meta$declaration,$an:function(){return[shared(),actual()];},d:['ceylon.language.meta.declaration','nothingType','$at','string']};});
-})(nothingType$1013$meta$declaration.$$.prototype);
-var nothingType$1014$meta$declaration;
+    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:nothingType$1012$meta$declaration,$an:function(){return[shared(),actual()];},d:['ceylon.language.meta.declaration','nothingType','$at','string']};});
+})(nothingType$1012$meta$declaration.$$.prototype);
+var nothingType$1013$meta$declaration;
 function getNothingType$meta$declaration(){
-    if (nothingType$1014$meta$declaration===undefined)nothingType$1014$meta$declaration=$init$nothingType$1013$meta$declaration()();
-    return nothingType$1014$meta$declaration;
+    if (nothingType$1013$meta$declaration===undefined)nothingType$1013$meta$declaration=$init$nothingType$1012$meta$declaration()();
+    return nothingType$1013$meta$declaration;
 }
 exports.getNothingType$meta$declaration=getNothingType$meta$declaration;
-getNothingType$meta$declaration.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:nothingType$1013$meta$declaration},$an:function(){return[doc(String$("The singleton open type for [[Nothing|ceylon.language::nothing]].",65)),shared()];},d:['ceylon.language.meta.declaration','nothingType']};};
+getNothingType$meta$declaration.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:nothingType$1012$meta$declaration},$an:function(){return[doc(String$("The singleton open type for [[Nothing|ceylon.language::nothing]].",65)),shared()];},d:['ceylon.language.meta.declaration','nothingType']};};
 $prop$getNothingType$meta$declaration={get:getNothingType$meta$declaration,$$metamodel$$:getNothingType$meta$declaration.$$metamodel$$};
 exports.$prop$getNothingType$meta$declaration=$prop$getNothingType$meta$declaration;
 function AliasDeclaration$meta$declaration($$aliasDeclaration){
@@ -7805,88 +7800,88 @@ function $init$Variance$meta$declaration(){
 }
 exports.$init$Variance$meta$declaration=$init$Variance$meta$declaration;
 $init$Variance$meta$declaration();
-function invariant$1015$meta$declaration(){
-    var $$invariant=new invariant$1015$meta$declaration.$$;
+function invariant$1014$meta$declaration(){
+    var $$invariant=new invariant$1014$meta$declaration.$$;
     Variance$meta$declaration($$invariant);
     return $$invariant;
 }
-function $init$invariant$1015$meta$declaration(){
-    if (invariant$1015$meta$declaration.$$===undefined){
-        initTypeProto(invariant$1015$meta$declaration,'ceylon.language.meta.declaration::invariant',Basic,$init$Variance$meta$declaration());
+function $init$invariant$1014$meta$declaration(){
+    if (invariant$1014$meta$declaration.$$===undefined){
+        initTypeProto(invariant$1014$meta$declaration,'ceylon.language.meta.declaration::invariant',Basic,$init$Variance$meta$declaration());
     }
-    return invariant$1015$meta$declaration;
+    return invariant$1014$meta$declaration;
 }
-exports.$init$invariant$1015$meta$declaration=$init$invariant$1015$meta$declaration;
-$init$invariant$1015$meta$declaration();
+exports.$init$invariant$1014$meta$declaration=$init$invariant$1014$meta$declaration;
+$init$invariant$1014$meta$declaration();
 (function($$invariant){
     defineAttr($$invariant,'string',function(){
         var $$invariant=this;
         return String$("Invariant",9);
-    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:invariant$1015$meta$declaration,$an:function(){return[shared(),actual()];},d:['ceylon.language.meta.declaration','invariant','$at','string']};});
-})(invariant$1015$meta$declaration.$$.prototype);
-var invariant$1016$meta$declaration;
+    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:invariant$1014$meta$declaration,$an:function(){return[shared(),actual()];},d:['ceylon.language.meta.declaration','invariant','$at','string']};});
+})(invariant$1014$meta$declaration.$$.prototype);
+var invariant$1015$meta$declaration;
 function getInvariant$meta$declaration(){
-    if (invariant$1016$meta$declaration===undefined)invariant$1016$meta$declaration=$init$invariant$1015$meta$declaration()();
-    return invariant$1016$meta$declaration;
+    if (invariant$1015$meta$declaration===undefined)invariant$1015$meta$declaration=$init$invariant$1014$meta$declaration()();
+    return invariant$1015$meta$declaration;
 }
 exports.getInvariant$meta$declaration=getInvariant$meta$declaration;
-getInvariant$meta$declaration.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:invariant$1015$meta$declaration},$an:function(){return[doc(String$("Invariant means that neither subtype nor supertype can be accepted, the\ntype has to be exactly that which is declared.",118)),shared()];},d:['ceylon.language.meta.declaration','invariant']};};
+getInvariant$meta$declaration.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:invariant$1014$meta$declaration},$an:function(){return[doc(String$("Invariant means that neither subtype nor supertype can be accepted, the\ntype has to be exactly that which is declared.",118)),shared()];},d:['ceylon.language.meta.declaration','invariant']};};
 $prop$getInvariant$meta$declaration={get:getInvariant$meta$declaration,$$metamodel$$:getInvariant$meta$declaration.$$metamodel$$};
 exports.$prop$getInvariant$meta$declaration=$prop$getInvariant$meta$declaration;
-function covariant$1017$meta$declaration(){
-    var $$covariant=new covariant$1017$meta$declaration.$$;
+function covariant$1016$meta$declaration(){
+    var $$covariant=new covariant$1016$meta$declaration.$$;
     Variance$meta$declaration($$covariant);
     return $$covariant;
 }
-function $init$covariant$1017$meta$declaration(){
-    if (covariant$1017$meta$declaration.$$===undefined){
-        initTypeProto(covariant$1017$meta$declaration,'ceylon.language.meta.declaration::covariant',Basic,$init$Variance$meta$declaration());
+function $init$covariant$1016$meta$declaration(){
+    if (covariant$1016$meta$declaration.$$===undefined){
+        initTypeProto(covariant$1016$meta$declaration,'ceylon.language.meta.declaration::covariant',Basic,$init$Variance$meta$declaration());
     }
-    return covariant$1017$meta$declaration;
+    return covariant$1016$meta$declaration;
 }
-exports.$init$covariant$1017$meta$declaration=$init$covariant$1017$meta$declaration;
-$init$covariant$1017$meta$declaration();
+exports.$init$covariant$1016$meta$declaration=$init$covariant$1016$meta$declaration;
+$init$covariant$1016$meta$declaration();
 (function($$covariant){
     defineAttr($$covariant,'string',function(){
         var $$covariant=this;
         return String$("Covariant",9);
-    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:covariant$1017$meta$declaration,$an:function(){return[shared(),actual()];},d:['ceylon.language.meta.declaration','covariant','$at','string']};});
-})(covariant$1017$meta$declaration.$$.prototype);
-var covariant$1018$meta$declaration;
+    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:covariant$1016$meta$declaration,$an:function(){return[shared(),actual()];},d:['ceylon.language.meta.declaration','covariant','$at','string']};});
+})(covariant$1016$meta$declaration.$$.prototype);
+var covariant$1017$meta$declaration;
 function getCovariant$meta$declaration(){
-    if (covariant$1018$meta$declaration===undefined)covariant$1018$meta$declaration=$init$covariant$1017$meta$declaration()();
-    return covariant$1018$meta$declaration;
+    if (covariant$1017$meta$declaration===undefined)covariant$1017$meta$declaration=$init$covariant$1016$meta$declaration()();
+    return covariant$1017$meta$declaration;
 }
 exports.getCovariant$meta$declaration=getCovariant$meta$declaration;
-getCovariant$meta$declaration.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:covariant$1017$meta$declaration},$an:function(){return[doc(String$("Covariant means that subtypes of the given type may be returned.",64)),shared()];},d:['ceylon.language.meta.declaration','covariant']};};
+getCovariant$meta$declaration.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:covariant$1016$meta$declaration},$an:function(){return[doc(String$("Covariant means that subtypes of the given type may be returned.",64)),shared()];},d:['ceylon.language.meta.declaration','covariant']};};
 $prop$getCovariant$meta$declaration={get:getCovariant$meta$declaration,$$metamodel$$:getCovariant$meta$declaration.$$metamodel$$};
 exports.$prop$getCovariant$meta$declaration=$prop$getCovariant$meta$declaration;
-function contravariant$1019$meta$declaration(){
-    var $$contravariant=new contravariant$1019$meta$declaration.$$;
+function contravariant$1018$meta$declaration(){
+    var $$contravariant=new contravariant$1018$meta$declaration.$$;
     Variance$meta$declaration($$contravariant);
     return $$contravariant;
 }
-function $init$contravariant$1019$meta$declaration(){
-    if (contravariant$1019$meta$declaration.$$===undefined){
-        initTypeProto(contravariant$1019$meta$declaration,'ceylon.language.meta.declaration::contravariant',Basic,$init$Variance$meta$declaration());
+function $init$contravariant$1018$meta$declaration(){
+    if (contravariant$1018$meta$declaration.$$===undefined){
+        initTypeProto(contravariant$1018$meta$declaration,'ceylon.language.meta.declaration::contravariant',Basic,$init$Variance$meta$declaration());
     }
-    return contravariant$1019$meta$declaration;
+    return contravariant$1018$meta$declaration;
 }
-exports.$init$contravariant$1019$meta$declaration=$init$contravariant$1019$meta$declaration;
-$init$contravariant$1019$meta$declaration();
+exports.$init$contravariant$1018$meta$declaration=$init$contravariant$1018$meta$declaration;
+$init$contravariant$1018$meta$declaration();
 (function($$contravariant){
     defineAttr($$contravariant,'string',function(){
         var $$contravariant=this;
         return String$("contravariant",13);
-    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:contravariant$1019$meta$declaration,$an:function(){return[shared(),actual()];},d:['ceylon.language.meta.declaration','contravariant','$at','string']};});
-})(contravariant$1019$meta$declaration.$$.prototype);
-var contravariant$1020$meta$declaration;
+    },undefined,function(){return{mod:$$METAMODEL$$,$t:{t:String$},$cont:contravariant$1018$meta$declaration,$an:function(){return[shared(),actual()];},d:['ceylon.language.meta.declaration','contravariant','$at','string']};});
+})(contravariant$1018$meta$declaration.$$.prototype);
+var contravariant$1019$meta$declaration;
 function getContravariant$meta$declaration(){
-    if (contravariant$1020$meta$declaration===undefined)contravariant$1020$meta$declaration=$init$contravariant$1019$meta$declaration()();
-    return contravariant$1020$meta$declaration;
+    if (contravariant$1019$meta$declaration===undefined)contravariant$1019$meta$declaration=$init$contravariant$1018$meta$declaration()();
+    return contravariant$1019$meta$declaration;
 }
 exports.getContravariant$meta$declaration=getContravariant$meta$declaration;
-getContravariant$meta$declaration.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:contravariant$1019$meta$declaration},$an:function(){return[doc(String$("Contravariant means that supertypes of the given type may be accepted.",70)),shared()];},d:['ceylon.language.meta.declaration','contravariant']};};
+getContravariant$meta$declaration.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:contravariant$1018$meta$declaration},$an:function(){return[doc(String$("Contravariant means that supertypes of the given type may be accepted.",70)),shared()];},d:['ceylon.language.meta.declaration','contravariant']};};
 $prop$getContravariant$meta$declaration={get:getContravariant$meta$declaration,$$metamodel$$:getContravariant$meta$declaration.$$metamodel$$};
 exports.$prop$getContravariant$meta$declaration=$prop$getContravariant$meta$declaration;
 function AnnotationAnnotation($$annotationAnnotation){
@@ -8147,8 +8142,8 @@ function $init$DocAnnotation(){
 }
 exports.$init$DocAnnotation=$init$DocAnnotation;
 $init$DocAnnotation();
-var doc=function (description$1021){
-    return DocAnnotation(description$1021);
+var doc=function (description$1020){
+    return DocAnnotation(description$1020);
 };
 doc.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:DocAnnotation},$ps:[{$nm:'description',$mt:'prm',$t:{t:String$},$an:function(){return[doc("Documentation, in Markdown syntax, about the annotated element")];}}],$an:function(){return[doc(String$("Annotation to specify API documentation of a program\nelement.",61)),shared(),annotation()];},d:['ceylon.language','doc']};};
 exports.doc=doc;
@@ -8176,9 +8171,9 @@ function $init$SeeAnnotation(){
 }
 exports.$init$SeeAnnotation=$init$SeeAnnotation;
 $init$SeeAnnotation();
-var see=function (programElements$1022){
-    if(programElements$1022===undefined){programElements$1022=getEmpty();}
-    return SeeAnnotation(programElements$1022);
+var see=function (programElements$1021){
+    if(programElements$1021===undefined){programElements$1021=getEmpty();}
+    return SeeAnnotation(programElements$1021);
 };
 see.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:SeeAnnotation},$ps:[{$nm:'programElements',$mt:'prm',seq:1,$t:{t:Sequential,a:{Element:{t:Declaration$meta$declaration}}},$an:function(){return[doc("The program elements being referred to.")];}}],$an:function(){return[doc(String$("Annotation to specify API references to other related \nprogram elements.",72)),shared(),annotation()];},d:['ceylon.language','see']};};
 exports.see=see;
@@ -8206,9 +8201,9 @@ function $init$AuthorsAnnotation(){
 }
 exports.$init$AuthorsAnnotation=$init$AuthorsAnnotation;
 $init$AuthorsAnnotation();
-var by=function (authors$1023){
-    if(authors$1023===undefined){authors$1023=getEmpty();}
-    return AuthorsAnnotation(authors$1023);
+var by=function (authors$1022){
+    if(authors$1022===undefined){authors$1022=getEmpty();}
+    return AuthorsAnnotation(authors$1022);
 };
 by.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:AuthorsAnnotation},$ps:[{$nm:'authors',$mt:'prm',seq:1,$t:{t:Sequential,a:{Element:{t:String$}}},$an:function(){return[doc("The authors, in Markdown syntax, of the annotated element")];}}],$an:function(){return[doc(String$("Annotation to specify API authors.",34)),shared(),annotation()];},d:['ceylon.language','by']};};
 exports.by=by;
@@ -8236,9 +8231,9 @@ function $init$ThrownExceptionAnnotation(){
 }
 exports.$init$ThrownExceptionAnnotation=$init$ThrownExceptionAnnotation;
 $init$ThrownExceptionAnnotation();
-var $throws=function (type$1024,when$1025){
-    if(when$1025===undefined){when$1025=String$("",0);}
-    return ThrownExceptionAnnotation(type$1024,when$1025);
+var $throws=function (type$1023,when$1024){
+    if(when$1024===undefined){when$1024=String$("",0);}
+    return ThrownExceptionAnnotation(type$1023,when$1024);
 };
 $throws.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:ThrownExceptionAnnotation},$ps:[{$nm:'type',$mt:'prm',$t:{t:Declaration$meta$declaration},$an:function(){return[doc("The [[Exception]] type that this thrown.")];}},{$nm:'when',$mt:'prm',$def:1,$t:{t:String$},$an:function(){return[doc("A description, in Markdown syntax, of the circumstances that \ncause this exception to be thrown.")];}}],$an:function(){return[doc(String$("Annotation to mark a program element that throws an \nexception.",63)),shared(),annotation()];},d:['ceylon.language','throws']};};
 exports.$throws=$throws;
@@ -8271,9 +8266,9 @@ function $init$DeprecationAnnotation(){
 }
 exports.$init$DeprecationAnnotation=$init$DeprecationAnnotation;
 $init$DeprecationAnnotation();
-var deprecated=function (reason$1026){
-    if(reason$1026===undefined){reason$1026=String$("",0);}
-    return DeprecationAnnotation(reason$1026);
+var deprecated=function (reason$1025){
+    if(reason$1025===undefined){reason$1025=String$("",0);}
+    return DeprecationAnnotation(reason$1025);
 };
 deprecated.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:DeprecationAnnotation},$ps:[{$nm:'reason',$mt:'prm',$def:1,$t:{t:String$},$an:function(){return[doc("A description, in Markdown syntax, of why the element is deprecated, \nand what replacements are available.")];}}],$an:function(){return[doc(String$("Annotation to mark program elements which should not be \nused anymore.",70)),shared(),annotation()];},d:['ceylon.language','deprecated']};};
 exports.deprecated=deprecated;
@@ -8301,9 +8296,9 @@ function $init$TagsAnnotation(){
 }
 exports.$init$TagsAnnotation=$init$TagsAnnotation;
 $init$TagsAnnotation();
-var tagged=function (tags$1027){
-    if(tags$1027===undefined){tags$1027=getEmpty();}
-    return TagsAnnotation(tags$1027);
+var tagged=function (tags$1026){
+    if(tags$1026===undefined){tags$1026=getEmpty();}
+    return TagsAnnotation(tags$1026);
 };
 tagged.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:TagsAnnotation},$ps:[{$nm:'tags',$mt:'prm',seq:1,$t:{t:Sequential,a:{Element:{t:String$}}},$an:function(){return[doc("The tags, in plain text.")];}}],$an:function(){return[doc(String$("Annotation to categorize the API by tag.",40)),shared(),annotation()];},d:['ceylon.language','tagged']};};
 exports.tagged=tagged;
@@ -8330,8 +8325,8 @@ function $init$LicenseAnnotation(){
 }
 exports.$init$LicenseAnnotation=$init$LicenseAnnotation;
 $init$LicenseAnnotation();
-var license=function (url$1028){
-    return LicenseAnnotation(url$1028);
+var license=function (url$1027){
+    return LicenseAnnotation(url$1027);
 };
 license.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:LicenseAnnotation},$ps:[{$nm:'url',$mt:'prm',$t:{t:String$},$an:function(){return[doc("The URL of the license.")];}}],$an:function(){return[doc(String$("Annotation to specify the URL of the license of a module or \npackage.",69)),shared(),annotation()];},d:['ceylon.language','license']};};
 exports.license=license;
@@ -8598,131 +8593,152 @@ exports.getEqual=getEqual;
 
 //These are operators for handling nulls
 function exists(value) {
-    return value !== null && value !== undefined;
+  return value !== null && value !== undefined;
 }
 function nonempty(value) {
-    return value !== null && value !== undefined && !value.empty;
+  return value !== null && value !== undefined && !value.empty;
 }
 
 function isOfType(obj, type) {
-    if (type && type.t) {
-        if (type.t == 'i' || type.t == 'u') {
-            return isOfTypes(obj, type);
-        }
-        if (obj === null || obj === undefined) {
-            return type.t===Null || type.t===Anything;
-        }
-        if (obj.getT$all === undefined) {
-            if (obj.$$metamodel$$) {
-                var _mm = obj.$$metamodel$$;
-                if (typeof(_mm)==='function') {
-                  _mm=_mm();
-                  obj.$$metamodel$$=_mm;
-                }
-                //We can navigate the metamodel
-                if (_mm.d['$mt'] === 'mthd') {
-                    if (type.t === Callable) { //It's a callable reference
-                        if (type.a && type.a.Return && _mm['$t']) {
-                            //Check if return type matches
-                            if (extendsType(_mm['$t'], type.a.Return)) {
-                                if (type.a.Arguments && _mm['$ps'] !== undefined) {
-                                    var metaparams = _mm['$ps'];
-                                    if (metaparams.length == 0) {
-                                        return type.a.Arguments.t === Empty;
-                                    } else {
-                                        //check if arguments match
-                                        var comptype = type.a.Arguments;
-                                        for (var i=0; i < metaparams.length; i++) {
-                                            if (comptype.t !== Tuple || !extendsType(metaparams[i]['$t'], comptype.a.First)) {
-                                                return false;
-                                            }
-                                            comptype = comptype.a.Rest;
-                                        }
-                                    }
-                                }
-                                return true;
-                            }
-                        }
-                    }
-                }
-            }
-            return false;
-        }
-        if (type.t.$$.T$name in obj.getT$all()) {
-            if (type.a && obj.$$targs$$) {
-                for (var i in type.a) {
-                    var cmptype = type.a[i];
-                    var tmpobj = obj;
-                    var iance = null;
-                    var _mm = type.t.$$metamodel$$;
-                    if (typeof(_mm)==='function') {
-                      _mm = _mm();
-                      type.t.$$metamodel$$=_mm;
-                    }
-                    if (_mm && _mm.$tp && _mm.$tp[i]) iance=_mm.$tp[i]['var'];
-                    if (iance === null) {
-                        //Type parameter may be in the outer type
-                        while (iance===null && tmpobj.$$outer !== undefined) {
-                            tmpobj=tmpobj.$$outer;
-                            var _tmpf = tmpobj.constructor.T$all[tmpobj.constructor.T$name];
-                            var _mmf = typeof(_tmpf.$$metamodel$$)==='function'?_tmpf.$$metamodel$$():_tmpf.$$metamodel$$;
-                            if (_mmf && _mmf.$tp && _mmf.$tp[i]) {
-                                iance=_mmf.$tp[i]['var'];
-                            }
-                        }
-                    }
-                    if (iance === 'out') {
-                        if (!extendsType(tmpobj.$$targs$$[i], cmptype)) {
-                            return false;
-                        }
-                    } else if (iance === 'in') {
-                        if (!extendsType(cmptype, tmpobj.$$targs$$[i])) {
-                            return false;
-                        }
-                    } else if (iance === undefined) {
-                        if (!(tmpobj.$$targs$$[i] && tmpobj.$$targs$$[i].t.$$
-                            && tmpobj.$$targs$$[i].t.$$.T$name && cmptype && cmptype.t.$$
-                            && cmptype.t.$$.T$name && tmpobj.$$targs$$[i].t.$$.T$name === cmptype.t.$$.T$name)) {
-                            return false;
-                        }
-                    } else if (iance === null) {
-                        console.log("Possible missing metamodel for " + type.t.$$.T$name + "<" + i + ">");
-                    } else {
-                        console.log("Don't know what to do about variance '" + iance + "'");
-                    }
-                }
-            }
-            return true;
-        }
+  if (type && type.t) {
+    if (type.t == 'i' || type.t == 'u') {
+      return isOfTypes(obj, type);
     }
-    return false;
+    if (obj === null || obj === undefined) {
+      return type.t===Null || type.t===Anything;
+    }
+    if (obj.getT$all === undefined) {
+      if (obj.$$metamodel$$) {
+          var _mm = obj.$$metamodel$$;
+          if (typeof(_mm)==='function') {
+            _mm=_mm();
+            obj.$$metamodel$$=_mm;
+          }
+          //We can navigate the metamodel
+          if (_mm.d['$mt'] === 'mthd') {
+              if (type.t === Callable) { //It's a callable reference
+                  if (type.a && type.a.Return && _mm['$t']) {
+                      //Check if return type matches
+                      if (extendsType(_mm['$t'], type.a.Return)) {
+                          if (type.a.Arguments && _mm['$ps'] !== undefined) {
+                              var metaparams = _mm['$ps'];
+                              if (metaparams.length == 0) {
+                                  return type.a.Arguments.t === Empty;
+                              } else {
+                                  //check if arguments match
+                                  var comptype = type.a.Arguments;
+                                  for (var i=0; i < metaparams.length; i++) {
+                                      if (comptype.t !== Tuple || !extendsType(metaparams[i]['$t'], comptype.a.First)) {
+                                          return false;
+                                      }
+                                      comptype = comptype.a.Rest;
+                                  }
+                              }
+                          }
+                          return true;
+                      }
+                  }
+              }
+          }
+      }
+      return false;
+    }
+    if (type.t.$$.T$name in obj.getT$all()) {
+      if (type.a && obj.$$targs$$) {
+        for (var i in type.a) {
+          var cmptype = type.a[i];
+          var tmpobj = obj;
+          var iance = null;
+          var _mm = type.t.$$metamodel$$;
+          if (typeof(_mm)==='function') {
+            _mm = _mm();
+            type.t.$$metamodel$$=_mm;
+          }
+          if (_mm && _mm.$tp && _mm.$tp[i]) iance=_mm.$tp[i]['var'];
+          if (iance === null) {
+            //Type parameter may be in the outer type
+            while (iance===null && tmpobj.$$outer !== undefined) {
+              tmpobj=tmpobj.$$outer;
+              var _tmpf = tmpobj.constructor.T$all[tmpobj.constructor.T$name];
+              var _mmf = typeof(_tmpf.$$metamodel$$)==='function'?_tmpf.$$metamodel$$():_tmpf.$$metamodel$$;
+              if (_mmf && _mmf.$tp && _mmf.$tp[i]) {
+                iance=_mmf.$tp[i]['var'];
+              }
+            }
+          }
+          if (iance === 'out') {
+            if (!extendsType(tmpobj.$$targs$$[i], cmptype)) {
+              return false;
+            }
+          } else if (iance === 'in') {
+            if (!extendsType(cmptype, tmpobj.$$targs$$[i])) {
+              return false;
+            }
+          } else if (iance === undefined) {
+            var _targ=tmpobj.$$targs$$[i];
+            if (!(_targ && _targ.t && (_targ.t.$$ || _targ.t==='i' || _targ.t==='u')))return false;
+            if (_targ.t.$$) {
+              if (cmptype && cmptype.t && cmptype.t.$$) {
+                if (!(cmptype.t.$$.T$name && _targ.t.$$.T$name === cmptype.t.$$.T$name))return false;
+              } else if (cmptype && cmptype.t && cmptype.t==='i') {
+                //_targ must satisfy all types in cmptype
+                console.log("FIXME! Comparing type argument vs intersection type parameter");
+                if (cmptype.t!==_targ.t || !cmptype.l || cmptype.l.length!==_targ.l.length)return false;
+                for (var i=0; i<_targ.l.length;i++) {
+                  if (!extendsType(_targ.l[i],cmptype))return false;
+                }
+              } else if (cmptype && cmptype.t && cmptype.t==='u') {
+                //_targ must satisfy at least one type in cmptype
+                console.log("FIXME! Comparing type argument vs union type parameter");
+                if (cmptype.t!==_targ.t || !cmptype.l || cmptype.l.length!==_targ.l.length)return false;
+                for (var i=0; i<_targ.l.length;i++) {
+                  if (!extendsType(_targ.l[i],cmptype))return false;
+                }
+              }
+            } else {
+              if (cmptype.t!==_targ.t || !cmptype.l || cmptype.l.length!==_targ.l.length)return false;
+              for (var i=0; i<_targ.l.length;i++) {
+                if (!extendsType(_targ.l[i],cmptype))return false;
+              }
+            }
+          } else if (iance === null) {
+            console.log("Possible missing metamodel for " + type.t.$$.T$name + "<" + i + ">");
+          } else {
+            console.log("Don't know what to do about variance '" + iance + "'");
+          }
+        }
+      }
+      return true;
+    }
+  }
+  return false;
 }
 function isOfTypes(obj, types) {
-    if (obj===null) {
-        for (var i=0; i < types.l.length; i++) {
-            if(types.l[i].t===Null || types.l[i].t===Anything) return true;
-            else if (types.l[i].t==='u') {
-                if (isOfTypes(null, types.l[i])) return true;
-            }
-        }
-        return false;
+  if (obj===null) {
+    for (var i=0; i < types.l.length; i++) {
+      if(types.l[i].t===Null || types.l[i].t===Anything) return true;
+      else if (types.l[i].t==='u') {
+        if (isOfTypes(null, types.l[i])) return true;
+      }
     }
-    if (obj === undefined || obj.getT$all === undefined) { return false; }
-    var unions = false;
-    var inters = true;
-    var _ints=false;
-    var objTypes = obj.getT$all();
-    for (var i = 0; i < types.l.length; i++) {
-        var t = types.l[i];
-        var partial = isOfType(obj, t);
-        if (types.t==='u') {
-            unions = partial || unions;
-        } else {
-            inters = partial && inters;
-            _ints=true;
-        }
+    return false;
+  }
+  if (obj === undefined || obj.getT$all === undefined) { return false; }
+  var unions = false;
+  var inters = true;
+  var _ints=false;
+  var objTypes = obj.getT$all();
+  for (var i = 0; i < types.l.length; i++) {
+    var t = types.l[i];
+    var partial = isOfType(obj, t);
+    if (types.t==='u') {
+      unions = partial || unions;
+    } else {
+      inters = partial && inters;
+      _ints=true;
     }
-    return _ints ? inters||unions : unions;
+  }
+  return _ints ? inters||unions : unions;
 }
 function extendsType(t1, t2) {
     if (t1 === undefined || t1.t === undefined || (t2 !== undefined && t2.t === Nothing)) {
