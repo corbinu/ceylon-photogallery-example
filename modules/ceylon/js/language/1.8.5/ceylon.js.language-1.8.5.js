@@ -1721,11 +1721,11 @@ function objectDefineProperty(obj$213,prop$214,descriptor$215){
     var case$216=prop$214;
     if ($$$cl1.isOfType(prop$214,{t:$$$cl1.String})) {
         /*Begin dynamic block*/
-        (typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'62:3-62:8','object.ceylon'):Object).defineProperty(/*NULL PARAM!*/obj$213.$native/*NULL PARAM!*/,case$216.valueOf()/*NULL PARAM!*/,descriptor$215.toNative());
+        (typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'62:3-62:8','object.ceylon'):Object).defineProperty(/*NULL PARAM!*/obj$213.$native/*NULL PARAM!*/,case$216.valueOf()/*NULL PARAM!*/,descriptor$215.toNative().$native);
         /*End dynamic block*/
     }else if ($$$cl1.isOfType(prop$214,{t:JSString})) {
         /*Begin dynamic block*/
-        (typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'67:3-67:8','object.ceylon'):Object).defineProperty(/*NULL PARAM!*/obj$213.$native/*NULL PARAM!*/,case$216.$native/*NULL PARAM!*/,descriptor$215.toNative());
+        (typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'67:3-67:8','object.ceylon'):Object).defineProperty(/*NULL PARAM!*/obj$213.$native/*NULL PARAM!*/,case$216.$native/*NULL PARAM!*/,descriptor$215.toNative().$native);
         /*End dynamic block*/
     }
 }

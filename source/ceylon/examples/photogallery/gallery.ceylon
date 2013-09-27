@@ -1,4 +1,4 @@
-import ceylon.js.json { JSON, JSONArray, JSJSON }
+import ceylon.js.json { JSON, JSONArray, jsonStringify }
 import ceylon.js.jquery { jq, jQueryGetJSON }
 import ceylon.js.language { JSObject }
 
@@ -84,6 +84,7 @@ shared class Gallery() {
 				}
 			});
 			\iHandlebars.registerHelper("gt", (Integer int1, Integer int2, dynamic funcs) {
+				print("comparing if " + int1.string + " is greater then " + int2.string);
 				if (int1 > int2) {
 					return funcs.fn(\ithis);
 				} else {
@@ -341,8 +342,10 @@ shared class CategoryView(shared Category controller) {
 	        "lastPage" -> (controller.pages.size - 1),
 	        "pages" -> pages
 	    };
+	    
 	    dynamic {
-	        //pagination = paginationTemplate(context.toJson().native);
+	        print("displaying page with properties:" + context.string);
+	        pagination = paginationTemplate(context.toJson().native);
 		}
 		display();
 	}
@@ -390,7 +393,6 @@ shared class PageView(shared Page controller) {
 	}
 	
 	shared void display() {
-		/*
 		value photos = JSONArray();
 		for (photo in controller.model.photos) { 
 			photos.add(JSON { 
@@ -403,11 +405,9 @@ shared class PageView(shared Page controller) {
 		value context = JSON {
 	        "photos" -> photos
 	    };
-	    */
 	    dynamic {
-			//controller.parent.updatePage(template(context.toJson()));
+			controller.parent.updatePage(template(context.toJson().native));
 		}
-		/*
 		for (i in 0:photos.size) {
 			dynamic {
 				jq(".photo" + i.string).hide();
@@ -415,13 +415,12 @@ shared class PageView(shared Page controller) {
 				spin(jq(".photo" + i.string).parent()).spinPreset("small");
 			}
 		}
-		*/
 	}
 	
 	void photoLoaded(Integer photo) {
 		dynamic {
-			//spin(jq(\ithis).parent()).spinStop();
-			//jq(\ithis).show();
+			spin(jq(\ithis).parent()).spinStop();
+			jq(\ithis).show();
 		}
 	}
 	
