@@ -271,14 +271,18 @@ function GalleryView(controller, $$galleryView){
         var categories$80=$$$cjj2.JSONArray();
         var it$81 = $$galleryView.controller.categories.iterator();
         var category$82;while ((category$82=it$81.next())!==$$$cl1.getFinished()){
+            /*Begin dynamic block*/
             categories$80.add((values$83=/*NULL PARAM!*/[$$$cl1.Entry($$$cl1.String("name",4),category$82.model.name,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}}}),$$$cjj2.JSON(values$83)));
+            /*End dynamic block*/
             var values$83;
         }
         var context$84=(values$85=/*NULL PARAM!*/[$$$cl1.Entry($$$cl1.String("category",8),categories$80,{Key:{t:$$$cl1.String},Item:{t:$$$cjj2.JSONArray}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cjj2.JSONArray}}}}),$$$cjj2.JSON(values$85));
         var values$85;
         /*Begin dynamic block*/
-        $$galleryView.categoryTabs=(tmpvar$86=tabsTemplate$73(/*NULL PARAM!*/context$84.toJson().$native),$$$cl1.isOfType(tmpvar$86,{t:$$$cl1.String})?tmpvar$86:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'202:18-202:54','gallery.ceylon'));/*End dynamic block*/
-        $$galleryView.display();
+        var tabs$86=context$84.toJson();
+        $prop$getTabs$86={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cjj2.JSJSON},d:['ceylon.examples.photogallery','GalleryView','$m','displayCategories','$at','tabs']};}};
+        $prop$getTabs$86.get=function(){return tabs$86};
+        $$galleryView.categoryTabs=(tmpvar$87=tabsTemplate$73(/*NULL PARAM!*/tabs$86.$native),$$$cl1.isOfType(tmpvar$87,{t:$$$cl1.String})?tmpvar$87:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'206:18-206:42','gallery.ceylon'));/*End dynamic block*/
     }
     $$galleryView.displayCategories=displayCategories;
     displayCategories.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],$cont:GalleryView,$an:function(){return[$$$cl1.shared()];},d:['ceylon.examples.photogallery','GalleryView','$m','displayCategories']};};
@@ -314,40 +318,40 @@ function Category(parent, $$category){
     $$category.parent_=parent;
     $$$cl1.defineAttr($$category,'parent',function(){return this.parent_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Gallery},$cont:Category,$an:function(){return[$$$cl1.shared()];},d:['ceylon.examples.photogallery','Category','$at','parent']};});
     var model;
-    $$$cl1.defineAttr($$category,'model',function(){if (model===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «model»'));return model;},function(model$87){if(model!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «model»'));return model=model$87;},function(){return{mod:$$METAMODEL$$,$t:{t:CategoryModel},$cont:Category,$an:function(){return[$$$cl1.shared(),$$$cl1.late()];},d:['ceylon.examples.photogallery','Category','$at','model']};});
+    $$$cl1.defineAttr($$category,'model',function(){if (model===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «model»'));return model;},function(model$88){if(model!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «model»'));return model=model$88;},function(){return{mod:$$METAMODEL$$,$t:{t:CategoryModel},$cont:Category,$an:function(){return[$$$cl1.shared(),$$$cl1.late()];},d:['ceylon.examples.photogallery','Category','$at','model']};});
     $$category.$prop$getModel.get=function(){return model};
     var view;
-    $$$cl1.defineAttr($$category,'view',function(){if (view===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «view»'));return view;},function(view$88){if(view!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «view»'));return view=view$88;},function(){return{mod:$$METAMODEL$$,$t:{t:CategoryView},$cont:Category,$an:function(){return[$$$cl1.shared(),$$$cl1.late()];},d:['ceylon.examples.photogallery','Category','$at','view']};});
+    $$$cl1.defineAttr($$category,'view',function(){if (view===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «view»'));return view;},function(view$89){if(view!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «view»'));return view=view$89;},function(){return{mod:$$METAMODEL$$,$t:{t:CategoryView},$cont:Category,$an:function(){return[$$$cl1.shared(),$$$cl1.late()];},d:['ceylon.examples.photogallery','Category','$at','view']};});
     $$category.$prop$getView.get=function(){return view};
     var pages=$$$cl1.getEmpty();
-    $$$cl1.defineAttr($$category,'pages',function(){return pages;},function(pages$89){return pages=pages$89;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Sequential,a:{Element:{t:Page}}},$cont:Category,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','Category','$at','pages']};});
+    $$$cl1.defineAttr($$category,'pages',function(){return pages;},function(pages$90){return pages=pages$90;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Sequential,a:{Element:{t:Page}}},$cont:Category,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','Category','$at','pages']};});
     $$category.$prop$getPages={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Sequential,a:{Element:{t:Page}}},$cont:Category,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','Category','$at','pages']};}};
     $$category.$prop$getPages.get=function(){return pages};
-    function init(name$90,photos$91,dir$92){
+    function init(name$91,photos$92,dir$93){
         $$$cl1.print($$$cl1.String("initalizing category",20));
-        var model=CategoryModel($$category,name$90);
-        $$$cl1.defineAttr($$category,'model',function(){if (model===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «model»'));return model;},function(model$93){if(model!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «model»'));return model=model$93;},function(){return{mod:$$METAMODEL$$,$t:{t:CategoryModel},$cont:Category,$an:function(){return[$$$cl1.shared(),$$$cl1.late(),$$$cl1.shared(),$$$cl1.actual()];},d:['ceylon.examples.photogallery','Category','$at','model']};});
+        var model=CategoryModel($$category,name$91);
+        $$$cl1.defineAttr($$category,'model',function(){if (model===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «model»'));return model;},function(model$94){if(model!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «model»'));return model=model$94;},function(){return{mod:$$METAMODEL$$,$t:{t:CategoryModel},$cont:Category,$an:function(){return[$$$cl1.shared(),$$$cl1.late(),$$$cl1.shared(),$$$cl1.actual()];},d:['ceylon.examples.photogallery','Category','$at','model']};});
         var view=CategoryView($$category);
-        $$$cl1.defineAttr($$category,'view',function(){if (view===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «view»'));return view;},function(view$94){if(view!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «view»'));return view=view$94;},function(){return{mod:$$METAMODEL$$,$t:{t:CategoryView},$cont:Category,$an:function(){return[$$$cl1.shared(),$$$cl1.late(),$$$cl1.shared(),$$$cl1.actual()];},d:['ceylon.examples.photogallery','Category','$at','view']};});
-        $$category.setPages(photos$91,dir$92);
+        $$$cl1.defineAttr($$category,'view',function(){if (view===undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to read unitialized attribute «view»'));return view;},function(view$95){if(view!==undefined)throw $$$cl1.InitializationException($$$cl1.String('Attempt to reassign immutable attribute «view»'));return view=view$95;},function(){return{mod:$$METAMODEL$$,$t:{t:CategoryView},$cont:Category,$an:function(){return[$$$cl1.shared(),$$$cl1.late(),$$$cl1.shared(),$$$cl1.actual()];},d:['ceylon.examples.photogallery','Category','$at','view']};});
+        $$category.setPages(photos$92,dir$93);
         return $$category;
     }
     $$category.init=init;
     init.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:Category},$ps:[{$nm:'name',$mt:'prm',$t:{t:$$$cl1.String},$an:function(){return[];}},{$nm:'photos',$mt:'prm',$t:{t:$$$cl1.Sequential,a:{Element:{t:PhotoJSON}}},$an:function(){return[];}},{$nm:'dir',$mt:'prm',$t:{t:$$$cl1.String},$an:function(){return[];}}],$cont:Category,$an:function(){return[$$$cl1.shared()];},d:['ceylon.examples.photogallery','Category','$m','init']};};
-    function updatePage(page$95){
-        ($$category.view.page=page$95);
+    function updatePage(page$96){
+        ($$category.view.page=page$96);
         $$category.view.display();
     }
     $$category.updatePage=updatePage;
     updatePage.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'page',$mt:'prm',$t:{t:$$$cl1.String},$an:function(){return[];}}],$cont:Category,$an:function(){return[$$$cl1.shared()];},d:['ceylon.examples.photogallery','Category','$m','updatePage']};};
-    function display(pageNum$96,photoNum$97){
-        $$$cl1.print($$$cl1.String("display category ",17).plus($$category.model.name).plus($$$cl1.String(" page ",6)).plus(pageNum$96.string).plus($$$cl1.String(" photo ",7)).plus(photoNum$97.string));
+    function display(pageNum$97,photoNum$98){
+        $$$cl1.print($$$cl1.String("display category ",17).plus($$category.model.name).plus($$$cl1.String(" page ",6)).plus(pageNum$97.string).plus($$$cl1.String(" photo ",7)).plus(photoNum$98.string));
         $$category.view.display();
-        var page$98;
-        if((page$98=$$category.pages.get(pageNum$96))!==null){
+        var page$99;
+        if((page$99=$$category.pages.get(pageNum$97))!==null){
             $$$cl1.print($$$cl1.String("display page",12));
-            $$category.view.displayPage(pageNum$96);
-            page$98.display(photoNum$97);
+            $$category.view.displayPage(pageNum$97);
+            page$99.display(photoNum$98);
         }else {
             $$$cl1.print($$$cl1.String("display invalid page",20));
             $$category.view.displayInvalidPage();
@@ -355,11 +359,11 @@ function Category(parent, $$category){
     }
     $$category.display=display;
     display.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'pageNum',$mt:'prm',$t:{t:$$$cl1.Integer},$an:function(){return[];}},{$nm:'photoNum',$mt:'prm',$t:{t:$$$cl1.Integer},$an:function(){return[];}}],$cont:Category,$an:function(){return[$$$cl1.shared()];},d:['ceylon.examples.photogallery','Category','$m','display']};};
-    function displayPhoto(photoM$99){
-        var photo$100;
-        if((photo$100=photoM$99)!==null){
+    function displayPhoto(photoM$100){
+        var photo$101;
+        if((photo$101=photoM$100)!==null){
             $$$cl1.print($$$cl1.String("display photo",13));
-            $$category.view.displayPhoto(photo$100);
+            $$category.view.displayPhoto(photo$101);
         }else {
             $$$cl1.print($$$cl1.String("display no photo",16));
             $$category.view.displayNoPhoto();
@@ -367,26 +371,26 @@ function Category(parent, $$category){
     }
     $$category.displayPhoto=displayPhoto;
     displayPhoto.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'photoM',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.Null},{t:Photo}]},$an:function(){return[];}}],$cont:Category,$an:function(){return[$$$cl1.shared()];},d:['ceylon.examples.photogallery','Category','$m','displayPhoto']};};
-    function setPages(photosJSON$101,dir$102){
+    function setPages(photosJSON$102,dir$103){
         $$$cl1.print($$$cl1.String("set category pages",18));
-        var end$103=(1).plus(photosJSON$101.size.divided((6)));
+        var end$104=(1).plus(photosJSON$102.size.divided((6)));
         $$category.pages=$$$cl1.Comprehension(function(){
-            var it$104=(function(){var tmpvar$106=end$103;
-            if (tmpvar$106>0){
-            var tmpvar$107=(0);
-            var tmpvar$108=tmpvar$107;
-            for (var i=1; i<tmpvar$106; i++){tmpvar$108=tmpvar$108.successor;}
-            return $$$cl1.Range(tmpvar$107,tmpvar$108,{Element:{t:$$$cl1.Integer}})
+            var it$105=(function(){var tmpvar$107=end$104;
+            if (tmpvar$107>0){
+            var tmpvar$108=(0);
+            var tmpvar$109=tmpvar$108;
+            for (var i=1; i<tmpvar$107; i++){tmpvar$109=tmpvar$109.successor;}
+            return $$$cl1.Range(tmpvar$108,tmpvar$109,{Element:{t:$$$cl1.Integer}})
             }else return $$$cl1.getEmpty();}()).iterator();
-            var i$105=$$$cl1.getFinished();
-            var next$i$105=function(){return i$105=it$104.next();}
-            next$i$105();
+            var i$106=$$$cl1.getFinished();
+            var next$i$106=function(){return i$106=it$105.next();}
+            next$i$106();
             return function(){
-                if(i$105!==$$$cl1.getFinished()){
-                    var i$105$109=i$105;
-                    var tmpvar$110=Page($$category,$$category.model.uri.plus(i$105$109.string).plus($$$cl1.String("/",1))).init(photosJSON$101.segment(i$105$109.times((6)),(6)),dir$102);
-                    next$i$105();
-                    return tmpvar$110;
+                if(i$106!==$$$cl1.getFinished()){
+                    var i$106$110=i$106;
+                    var tmpvar$111=Page($$category,$$category.model.uri.plus(i$106$110.string).plus($$$cl1.String("/",1))).init(photosJSON$102.segment(i$106$110.times((6)),(6)),dir$103);
+                    next$i$106();
+                    return tmpvar$111;
                 }
                 return $$$cl1.getFinished();
             }
@@ -433,58 +437,58 @@ function CategoryView(controller, $$categoryView){
     if ($$categoryView===undefined)$$categoryView=new CategoryView.$$;
     $$categoryView.controller_=controller;
     $$$cl1.defineAttr($$categoryView,'controller',function(){return this.controller_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:Category},$cont:CategoryView,$an:function(){return[$$$cl1.shared()];},d:['ceylon.examples.photogallery','CategoryView','$at','controller']};});
-    var template$111;
-    $$$cl1.defineAttr($$categoryView,'template$111',function(){return template$111;},function(template$112){return template$111=template$112;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:CategoryView,$an:function(){return[$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','template']};});
-    $$categoryView.$prop$getTemplate$111={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:CategoryView,$an:function(){return[$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','template']};}};
-    $$categoryView.$prop$getTemplate$111.get=function(){return template$111};
-    var paginationTemplate$113;
-    $$$cl1.defineAttr($$categoryView,'paginationTemplate$113',function(){return paginationTemplate$113;},function(paginationTemplate$114){return paginationTemplate$113=paginationTemplate$114;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:CategoryView,$an:function(){return[$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','paginationTemplate']};});
-    $$categoryView.$prop$getPaginationTemplate$113={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:CategoryView,$an:function(){return[$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','paginationTemplate']};}};
-    $$categoryView.$prop$getPaginationTemplate$113.get=function(){return paginationTemplate$113};
+    var template$112;
+    $$$cl1.defineAttr($$categoryView,'template$112',function(){return template$112;},function(template$113){return template$112=template$113;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:CategoryView,$an:function(){return[$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','template']};});
+    $$categoryView.$prop$getTemplate$112={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:CategoryView,$an:function(){return[$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','template']};}};
+    $$categoryView.$prop$getTemplate$112.get=function(){return template$112};
+    var paginationTemplate$114;
+    $$$cl1.defineAttr($$categoryView,'paginationTemplate$114',function(){return paginationTemplate$114;},function(paginationTemplate$115){return paginationTemplate$114=paginationTemplate$115;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:CategoryView,$an:function(){return[$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','paginationTemplate']};});
+    $$categoryView.$prop$getPaginationTemplate$114={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:CategoryView,$an:function(){return[$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','paginationTemplate']};}};
+    $$categoryView.$prop$getPaginationTemplate$114.get=function(){return paginationTemplate$114};
     var pagination=$$$cl1.String("pagination",10);
-    $$$cl1.defineAttr($$categoryView,'pagination',function(){return pagination;},function(pagination$115){return pagination=pagination$115;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','pagination']};});
+    $$$cl1.defineAttr($$categoryView,'pagination',function(){return pagination;},function(pagination$116){return pagination=pagination$116;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','pagination']};});
     $$categoryView.$prop$getPagination={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','pagination']};}};
     $$categoryView.$prop$getPagination.get=function(){return pagination};
     var page=$$$cl1.String("page",4);
-    $$$cl1.defineAttr($$categoryView,'page',function(){return page;},function(page$116){return page=page$116;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','page']};});
+    $$$cl1.defineAttr($$categoryView,'page',function(){return page;},function(page$117){return page=page$117;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','page']};});
     $$categoryView.$prop$getPage={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','page']};}};
     $$categoryView.$prop$getPage.get=function(){return page};
     var title=$$$cl1.String("",0);
-    $$$cl1.defineAttr($$categoryView,'title',function(){return title;},function(title$117){return title=title$117;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','title']};});
+    $$$cl1.defineAttr($$categoryView,'title',function(){return title;},function(title$118){return title=title$118;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','title']};});
     $$categoryView.$prop$getTitle={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','title']};}};
     $$categoryView.$prop$getTitle.get=function(){return title};
     var src=$$$cl1.String("",0);
-    $$$cl1.defineAttr($$categoryView,'src',function(){return src;},function(src$118){return src=src$118;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','src']};});
+    $$$cl1.defineAttr($$categoryView,'src',function(){return src;},function(src$119){return src=src$119;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','src']};});
     $$categoryView.$prop$getSrc={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','src']};}};
     $$categoryView.$prop$getSrc.get=function(){return src};
     var alt=$$$cl1.String("",0);
-    $$$cl1.defineAttr($$categoryView,'alt',function(){return alt;},function(alt$119){return alt=alt$119;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','alt']};});
+    $$$cl1.defineAttr($$categoryView,'alt',function(){return alt;},function(alt$120){return alt=alt$120;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','alt']};});
     $$categoryView.$prop$getAlt={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','alt']};}};
     $$categoryView.$prop$getAlt.get=function(){return alt};
     var caption=$$$cl1.String("",0);
-    $$$cl1.defineAttr($$categoryView,'caption',function(){return caption;},function(caption$120){return caption=caption$120;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','caption']};});
+    $$$cl1.defineAttr($$categoryView,'caption',function(){return caption;},function(caption$121){return caption=caption$121;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','caption']};});
     $$categoryView.$prop$getCaption={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','caption']};}};
     $$categoryView.$prop$getCaption.get=function(){return caption};
     var width=$$$cl1.String("",0);
-    $$$cl1.defineAttr($$categoryView,'width',function(){return width;},function(width$121){return width=width$121;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','width']};});
+    $$$cl1.defineAttr($$categoryView,'width',function(){return width;},function(width$122){return width=width$122;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','width']};});
     $$categoryView.$prop$getWidth={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','width']};}};
     $$categoryView.$prop$getWidth.get=function(){return width};
     var height=$$$cl1.String("",0);
-    $$$cl1.defineAttr($$categoryView,'height',function(){return height;},function(height$122){return height=height$122;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','height']};});
+    $$$cl1.defineAttr($$categoryView,'height',function(){return height;},function(height$123){return height=height$123;},function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','height']};});
     $$categoryView.$prop$getHeight={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:CategoryView,$an:function(){return[$$$cl1.shared(),$$$cl1.variable()];},d:['ceylon.examples.photogallery','CategoryView','$at','height']};}};
     $$categoryView.$prop$getHeight.get=function(){return height};
     /*Begin dynamic block*/
-    template$111=(typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Handlebars")),'288:13-288:22','gallery.ceylon'):Handlebars).compile(/*NULL PARAM!*/$$$cjj3.jq($$$cl1.String("#category-template",18)).getHtml().$native);paginationTemplate$113=(typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Handlebars")),'289:23-289:32','gallery.ceylon'):Handlebars).compile(/*NULL PARAM!*/$$$cjj3.jq($$$cl1.String("#category-pagination-template",29)).getHtml().$native);/*End dynamic block*/
+    template$112=(typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Handlebars")),'292:13-292:22','gallery.ceylon'):Handlebars).compile(/*NULL PARAM!*/$$$cjj3.jq($$$cl1.String("#category-template",18)).getHtml().$native);paginationTemplate$114=(typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Handlebars")),'293:23-293:32','gallery.ceylon'):Handlebars).compile(/*NULL PARAM!*/$$$cjj3.jq($$$cl1.String("#category-pagination-template",29)).getHtml().$native);/*End dynamic block*/
     function display(){
         $$$cl1.print($$$cl1.String("display category",16));
-        var context$123=(values$124=/*NULL PARAM!*/[$$$cl1.Entry($$$cl1.String("title",5),$$categoryView.title,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})/*NULL PARAM!*/,$$$cl1.Entry($$$cl1.String("width",5),$$categoryView.width,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})/*NULL PARAM!*/,$$$cl1.Entry($$$cl1.String("src",3),$$categoryView.src,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})/*NULL PARAM!*/,$$$cl1.Entry($$$cl1.String("alt",3),$$categoryView.alt,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})/*NULL PARAM!*/,$$$cl1.Entry($$$cl1.String("caption",7),$$categoryView.caption,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})/*NULL PARAM!*/,$$$cl1.Entry($$$cl1.String("page",4),$$categoryView.page,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})/*NULL PARAM!*/,$$$cl1.Entry($$$cl1.String("pagination",10),$$categoryView.pagination,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}}}),$$$cjj2.JSON(values$124));
-        var values$124;
+        var context$124=(values$125=/*NULL PARAM!*/[$$$cl1.Entry($$$cl1.String("title",5),$$categoryView.title,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})/*NULL PARAM!*/,$$$cl1.Entry($$$cl1.String("width",5),$$categoryView.width,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})/*NULL PARAM!*/,$$$cl1.Entry($$$cl1.String("src",3),$$categoryView.src,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})/*NULL PARAM!*/,$$$cl1.Entry($$$cl1.String("alt",3),$$categoryView.alt,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})/*NULL PARAM!*/,$$$cl1.Entry($$$cl1.String("caption",7),$$categoryView.caption,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})/*NULL PARAM!*/,$$$cl1.Entry($$$cl1.String("page",4),$$categoryView.page,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})/*NULL PARAM!*/,$$$cl1.Entry($$$cl1.String("pagination",10),$$categoryView.pagination,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.String}}}}),$$$cjj2.JSON(values$125));
+        var values$125;
         $$$cl1.print($$$cl1.String("src: ",5).plus($$categoryView.src));
         /*Begin dynamic block*/
-        $$categoryView.controller.parent.updateCategory((tmpvar$125=template$111(/*NULL PARAM!*/context$123.toJson().$native),$$$cl1.isOfType(tmpvar$125,{t:$$$cl1.String})?tmpvar$125:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'305:36-305:68','gallery.ceylon')));
-        $$$cjj3.jq($$$cl1.String(".category",9)).each($$$cl1.$JsCallable((tmpvar$126=function (index$127,item$128){
-            return (typeof jqThis==='undefined'||jqThis===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: jqThis")),'306:59-306:64','gallery.ceylon'):jqThis)().removeClass(/*NULL PARAM!*/$$$cl1.String("active",6).valueOf());
-        },$$$cl1.isOfType(tmpvar$126,{t:$$$cl1.Callable,a:{Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.Anything},Element:{t:$$$cl1.Anything}}},First:{t:$$$cl1.Integer},Element:{t:$$$cl1.Anything}}},Return:{t:$$$cl1.Anything}}})?tmpvar$126:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'306:25-306:88','gallery.ceylon')),[{$nm:'index',$mt:'prm',$t:{t:$$$cl1.Integer},$an:function(){return[];}},{$nm:'item',$mt:'prm',$t:{t:$$$cl1.Anything},$an:function(){return[];}}],{Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.Anything},Element:{t:$$$cl1.Anything}}},First:{t:$$$cl1.Integer},Element:{t:$$$cl1.Anything}}},Return:{t:$$$cl1.Anything}}));
+        $$categoryView.controller.parent.updateCategory((tmpvar$126=template$112(/*NULL PARAM!*/context$124.toJson().$native),$$$cl1.isOfType(tmpvar$126,{t:$$$cl1.String})?tmpvar$126:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'309:36-309:68','gallery.ceylon')));
+        $$$cjj3.jq($$$cl1.String(".category",9)).each($$$cl1.$JsCallable(function (index$127,item$128){
+            return $$$cjj3.jqThis().removeClass($$$cl1.String("active",6));
+        },[{$nm:'index',$mt:'prm',$t:{t:$$$cl1.Integer},$an:function(){return[];}},{$nm:'item',$mt:'prm',$t:{t:$$$cl1.Anything},$an:function(){return[];}}],{Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.Anything},Element:{t:$$$cl1.Anything}}},First:{t:$$$cl1.Integer},Element:{t:$$$cl1.Anything}}},Return:{t:$$$cjj3.JQuery}}));
         $$$cjj3.jq($$$cl1.String(".category-",10).plus($$categoryView.controller.model.name.lowercased)).addClass($$$cl1.String("active",6));
         /*End dynamic block*/
     }
@@ -527,7 +531,7 @@ function CategoryView(controller, $$categoryView){
         var values$138;
         /*Begin dynamic block*/
         $$$cl1.print($$$cl1.String("displaying page with properties:",32).plus(context$137.string));
-        $$categoryView.pagination=(tmpvar$139=paginationTemplate$113(/*NULL PARAM!*/context$137.toJson().$native),$$$cl1.isOfType(tmpvar$139,{t:$$$cl1.String})?tmpvar$139:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'348:22-348:64','gallery.ceylon'));/*End dynamic block*/
+        $$categoryView.pagination=(tmpvar$139=paginationTemplate$114(/*NULL PARAM!*/context$137.toJson().$native),$$$cl1.isOfType(tmpvar$139,{t:$$$cl1.String})?tmpvar$139:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'352:22-352:64','gallery.ceylon'));/*End dynamic block*/
         $$categoryView.display();
     }
     $$categoryView.displayPage=displayPage;
@@ -658,7 +662,7 @@ function PageView(controller, $$pageView){
     $$pageView.$prop$getTemplate$154={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:PageView,$an:function(){return[$$$cl1.variable()];},d:['ceylon.examples.photogallery','PageView','$at','template']};}};
     $$pageView.$prop$getTemplate$154.get=function(){return template$154};
     /*Begin dynamic block*/
-    template$154=(typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Handlebars")),'392:13-392:22','gallery.ceylon'):Handlebars).compile(/*NULL PARAM!*/$$$cjj3.jq($$$cl1.String("#page-template",14)).getHtml().$native);/*End dynamic block*/
+    template$154=(typeof Handlebars==='undefined'||Handlebars===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Handlebars")),'396:13-396:22','gallery.ceylon'):Handlebars).compile(/*NULL PARAM!*/$$$cjj3.jq($$$cl1.String("#page-template",14)).getHtml().$native);/*End dynamic block*/
     function display(){
         var photos$156=$$$cjj2.JSONArray();
         var it$157 = $$pageView.controller.model.photos.iterator();
@@ -669,7 +673,7 @@ function PageView(controller, $$pageView){
         var context$160=(values$161=/*NULL PARAM!*/[$$$cl1.Entry($$$cl1.String("photos",6),photos$156,{Key:{t:$$$cl1.String},Item:{t:$$$cjj2.JSONArray}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cjj2.JSONArray}}}}),$$$cjj2.JSON(values$161));
         var values$161;
         /*Begin dynamic block*/
-        $$pageView.controller.parent.updatePage((tmpvar$162=template$154(/*NULL PARAM!*/context$160.toJson().$native),$$$cl1.isOfType(tmpvar$162,{t:$$$cl1.String})?tmpvar$162:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'409:32-409:64','gallery.ceylon')));
+        $$pageView.controller.parent.updatePage((tmpvar$162=template$154(/*NULL PARAM!*/context$160.toJson().$native),$$$cl1.isOfType(tmpvar$162,{t:$$$cl1.String})?tmpvar$162:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'413:32-413:64','gallery.ceylon')));
         /*End dynamic block*/
         var it$163 = (function(){var tmpvar$165=photos$156.size;
         if (tmpvar$165>0){
@@ -692,8 +696,8 @@ function PageView(controller, $$pageView){
     display.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],$cont:PageView,$an:function(){return[$$$cl1.shared()];},d:['ceylon.examples.photogallery','PageView','$m','display']};};
     function photoLoaded$169(photo$170){
         /*Begin dynamic block*/
-        spin($$$cjj3.jq((tmpvar$171=(typeof this==='undefined'||this===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: this")),'422:11-422:14','gallery.ceylon'):this),$$$cl1.isOfType(tmpvar$171,{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjj3.JQuery},{t:$$$cjl4.JSObject},{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjd172.Element}]}]})?tmpvar$171:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'422:11-422:14','gallery.ceylon'))).parent()).spinStop();
-        $$$cjj3.jq((tmpvar$173=(typeof this==='undefined'||this===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: this")),'423:6-423:9','gallery.ceylon'):this),$$$cl1.isOfType(tmpvar$173,{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjj3.JQuery},{t:$$$cjl4.JSObject},{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjd172.Element}]}]})?tmpvar$173:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'423:6-423:9','gallery.ceylon'))).show();
+        spin($$$cjj3.jq((tmpvar$171=(typeof this==='undefined'||this===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: this")),'426:11-426:14','gallery.ceylon'):this),$$$cl1.isOfType(tmpvar$171,{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjj3.JQuery},{t:$$$cjl4.JSObject},{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjd172.Element}]}]})?tmpvar$171:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'426:11-426:14','gallery.ceylon'))).parent()).spinStop();
+        $$$cjj3.jq((tmpvar$173=(typeof this==='undefined'||this===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: this")),'427:6-427:9','gallery.ceylon'):this),$$$cl1.isOfType(tmpvar$173,{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjj3.JQuery},{t:$$$cjl4.JSObject},{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjd172.Element}]}]})?tmpvar$173:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'427:6-427:9','gallery.ceylon'))).show();
         /*End dynamic block*/
     };photoLoaded$169.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'photo',$mt:'prm',$t:{t:$$$cl1.Integer},$an:function(){return[];}}],$cont:PageView,d:['ceylon.examples.photogallery','PageView','$m','photoLoaded']};};
     return $$pageView;

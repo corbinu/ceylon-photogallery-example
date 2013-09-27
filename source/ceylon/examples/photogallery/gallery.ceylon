@@ -1,5 +1,5 @@
-import ceylon.js.json { JSON, JSONArray, jsonStringify }
-import ceylon.js.jquery { jq, jQueryGetJSON }
+import ceylon.js.json { JSON, JSONArray }
+import ceylon.js.jquery { jq, jqThis, jQueryGetJSON }
 import ceylon.js.language { JSObject }
 
 shared class Gallery() {
@@ -195,13 +195,17 @@ shared class GalleryView(shared Gallery controller) {
 	shared void displayCategories() {
 		value categories = JSONArray();
 		for (category in controller.categories) { 
-			categories.add(JSON { "name" -> category.model.name });
+			// TODO this should be automatic in the JSON to JSON conversion
+			dynamic {
+				categories.add(JSON { "name" -> category.model.name });
+			}
 		}
 		value context = JSON { "category" -> categories };
 		dynamic {
-			categoryTabs = tabsTemplate(context.toJson().native);
+			value tabs = context.toJson();
+			categoryTabs = tabsTemplate(tabs.native);
 		}
-		display();
+		//display();
 	}
 	
 	shared void displayInvalidCategory() {

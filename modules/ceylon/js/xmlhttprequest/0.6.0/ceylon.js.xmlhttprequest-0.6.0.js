@@ -3,115 +3,115 @@ var $$METAMODEL$$={"$mod-deps":["ceylon.language\/0.6.1","ceylon.js.language\/1.
 exports.$$METAMODEL$$=function(){return $$METAMODEL$$;};
 var $$$cl1=require('ceylon/language/0.6.1/ceylon.language-0.6.1');
 $$$cl1.$addmod$($$$cl1,'ceylon.language/0.6.1');
-var $$$cjl361=require('ceylon/js/language/1.8.5/ceylon.js.language-1.8.5');
-$$$cl1.$addmod$($$$cjl361,'ceylon.js.language/1.8.5');
-var $$$cjf963=require('ceylon/js/file/1.0.0/ceylon.js.file-1.0.0');
-$$$cl1.$addmod$($$$cjf963,'ceylon.js.file/1.0.0');
-var $$$cjh451=require('ceylon/js/html/5.0.0/ceylon.js.html-5.0.0');
-$$$cl1.$addmod$($$$cjh451,'ceylon.js.html/5.0.0');
-function createFormData(form$964){
-    if(form$964===undefined){form$964=null;}
+var $$$cjl359=require('ceylon/js/language/1.8.5/ceylon.js.language-1.8.5');
+$$$cl1.$addmod$($$$cjl359,'ceylon.js.language/1.8.5');
+var $$$cjf961=require('ceylon/js/file/1.0.0/ceylon.js.file-1.0.0');
+$$$cl1.$addmod$($$$cjf961,'ceylon.js.file/1.0.0');
+var $$$cjh449=require('ceylon/js/html/5.0.0/ceylon.js.html-5.0.0');
+$$$cl1.$addmod$($$$cjh449,'ceylon.js.html/5.0.0');
+function createFormData(form$962){
+    if(form$962===undefined){form$962=null;}
     /*Begin dynamic block*/
     return FormData((typeof FormData==='undefined'||FormData===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: FormData")),'7:18-7:25','formdata.ceylon'):FormData)(/*NULL PARAM!*/(typeof f==='undefined'||f===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: f")),'7:29-7:29','formdata.ceylon'):f)));
     /*End dynamic block*/
 }
 exports.createFormData=createFormData;
-createFormData.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:FormData},$ps:[{$nm:'form',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjh451.HTMLFormElement}]},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','createFormData']};};
+createFormData.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:FormData},$ps:[{$nm:'form',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjh449.HTMLFormElement}]},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','createFormData']};};
 function FormDataAbs($$formDataAbs){
     $init$FormDataAbs();
     if ($$formDataAbs===undefined)$$$cl1.throwexc($$$cl1.InvocationException$meta$model($$$cl1.String("Cannot instantiate abstract class")),'?','?')
-    $$$cjl361.JSObjectAbs($$formDataAbs);
-    function append(name$965,val$966){
+    $$$cjl359.JSObjectAbs($$formDataAbs);
+    function append(name$963,val$964){
         
-        var case$967=name$965;
-        if ($$$cl1.isOfType(name$965,{t:$$$cl1.String})) {
+        var case$965=name$963;
+        if ($$$cl1.isOfType(name$963,{t:$$$cl1.String})) {
             
-            var case$968=val$966;
-            if ($$$cl1.isOfType(val$966,{t:$$$cl1.String})) {
+            var case$966=val$964;
+            if ($$$cl1.isOfType(val$964,{t:$$$cl1.String})) {
                 /*Begin dynamic block*/
-                $$formDataAbs.$native.append(/*NULL PARAM!*/case$967.valueOf()/*NULL PARAM!*/,case$968.valueOf());
+                $$formDataAbs.$native.append(/*NULL PARAM!*/case$965.valueOf()/*NULL PARAM!*/,case$966.valueOf());
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(val$966,{t:$$$cjl361.JSString})) {
+            }else if ($$$cl1.isOfType(val$964,{t:$$$cjl359.JSString})) {
                 /*Begin dynamic block*/
-                $$formDataAbs.$native.append(/*NULL PARAM!*/case$967.valueOf()/*NULL PARAM!*/,case$968.$native);
+                $$formDataAbs.$native.append(/*NULL PARAM!*/case$965.valueOf()/*NULL PARAM!*/,case$966.$native);
                 /*End dynamic block*/
             }
-        }else if ($$$cl1.isOfType(name$965,{t:$$$cjl361.JSString})) {
+        }else if ($$$cl1.isOfType(name$963,{t:$$$cjl359.JSString})) {
             
-            var case$969=val$966;
-            if ($$$cl1.isOfType(val$966,{t:$$$cl1.String})) {
+            var case$967=val$964;
+            if ($$$cl1.isOfType(val$964,{t:$$$cl1.String})) {
                 /*Begin dynamic block*/
-                $$formDataAbs.$native.append(/*NULL PARAM!*/case$967.$native/*NULL PARAM!*/,case$969.valueOf());
+                $$formDataAbs.$native.append(/*NULL PARAM!*/case$965.$native/*NULL PARAM!*/,case$967.valueOf());
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(val$966,{t:$$$cjl361.JSString})) {
+            }else if ($$$cl1.isOfType(val$964,{t:$$$cjl359.JSString})) {
                 /*Begin dynamic block*/
-                $$formDataAbs.$native.append(/*NULL PARAM!*/case$967.$native/*NULL PARAM!*/,case$969.$native);
+                $$formDataAbs.$native.append(/*NULL PARAM!*/case$965.$native/*NULL PARAM!*/,case$967.$native);
                 /*End dynamic block*/
             }
         }
     }
     $$formDataAbs.append=append;
-    append.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'name',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl361.JSString}]},$an:function(){return[];}},{$nm:'val',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl361.JSString}]},$an:function(){return[];}}],$cont:FormDataAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','FormDataAbs','$m','append']};};
-    function appendBlob(name$970,val$971,filename$972){
+    append.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'name',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl359.JSString}]},$an:function(){return[];}},{$nm:'val',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl359.JSString}]},$an:function(){return[];}}],$cont:FormDataAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','FormDataAbs','$m','append']};};
+    function appendBlob(name$968,val$969,filename$970){
         
-        var case$973=name$970;
-        if ($$$cl1.isOfType(name$970,{t:$$$cl1.String})) {
+        var case$971=name$968;
+        if ($$$cl1.isOfType(name$968,{t:$$$cl1.String})) {
             
-            var case$974=filename$972;
-            if ($$$cl1.isOfType(filename$972,{t:$$$cl1.String})) {
+            var case$972=filename$970;
+            if ($$$cl1.isOfType(filename$970,{t:$$$cl1.String})) {
                 /*Begin dynamic block*/
-                $$formDataAbs.$native.append(/*NULL PARAM!*/case$973.valueOf()/*NULL PARAM!*/,val$971.$native/*NULL PARAM!*/,case$974.valueOf());
+                $$formDataAbs.$native.append(/*NULL PARAM!*/case$971.valueOf()/*NULL PARAM!*/,val$969.$native/*NULL PARAM!*/,case$972.valueOf());
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(filename$972,{t:$$$cjl361.JSString})) {
+            }else if ($$$cl1.isOfType(filename$970,{t:$$$cjl359.JSString})) {
                 /*Begin dynamic block*/
-                $$formDataAbs.$native.append(/*NULL PARAM!*/case$973.valueOf()/*NULL PARAM!*/,val$971.$native/*NULL PARAM!*/,case$974.$native);
+                $$formDataAbs.$native.append(/*NULL PARAM!*/case$971.valueOf()/*NULL PARAM!*/,val$969.$native/*NULL PARAM!*/,case$972.$native);
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(filename$972,{t:$$$cl1.Null})) {
+            }else if ($$$cl1.isOfType(filename$970,{t:$$$cl1.Null})) {
                 /*Begin dynamic block*/
-                $$formDataAbs.$native.append(/*NULL PARAM!*/case$973.valueOf()/*NULL PARAM!*/,val$971.$native);
+                $$formDataAbs.$native.append(/*NULL PARAM!*/case$971.valueOf()/*NULL PARAM!*/,val$969.$native);
                 /*End dynamic block*/
             }
-        }else if ($$$cl1.isOfType(name$970,{t:$$$cjl361.JSString})) {
+        }else if ($$$cl1.isOfType(name$968,{t:$$$cjl359.JSString})) {
             
-            var case$975=filename$972;
-            if ($$$cl1.isOfType(filename$972,{t:$$$cl1.String})) {
+            var case$973=filename$970;
+            if ($$$cl1.isOfType(filename$970,{t:$$$cl1.String})) {
                 /*Begin dynamic block*/
-                $$formDataAbs.$native.append(/*NULL PARAM!*/case$973.$native/*NULL PARAM!*/,val$971.$native/*NULL PARAM!*/,case$975.valueOf());
+                $$formDataAbs.$native.append(/*NULL PARAM!*/case$971.$native/*NULL PARAM!*/,val$969.$native/*NULL PARAM!*/,case$973.valueOf());
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(filename$972,{t:$$$cjl361.JSString})) {
+            }else if ($$$cl1.isOfType(filename$970,{t:$$$cjl359.JSString})) {
                 /*Begin dynamic block*/
-                $$formDataAbs.$native.append(/*NULL PARAM!*/case$973.$native/*NULL PARAM!*/,val$971.$native/*NULL PARAM!*/,case$975.$native);
+                $$formDataAbs.$native.append(/*NULL PARAM!*/case$971.$native/*NULL PARAM!*/,val$969.$native/*NULL PARAM!*/,case$973.$native);
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(filename$972,{t:$$$cl1.Null})) {
+            }else if ($$$cl1.isOfType(filename$970,{t:$$$cl1.Null})) {
                 /*Begin dynamic block*/
-                $$formDataAbs.$native.append(/*NULL PARAM!*/case$973.$native/*NULL PARAM!*/,val$971.$native);
+                $$formDataAbs.$native.append(/*NULL PARAM!*/case$971.$native/*NULL PARAM!*/,val$969.$native);
                 /*End dynamic block*/
             }
         }
     }
     $$formDataAbs.appendBlob=appendBlob;
-    appendBlob.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'name',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl361.JSString}]},$an:function(){return[];}},{$nm:'val',$mt:'prm',$t:{t:$$$cjf963.Blob},$an:function(){return[];}},{$nm:'filename',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjl361.JSString}]}]},$an:function(){return[];}}],$cont:FormDataAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','FormDataAbs','$m','appendBlob']};};
+    appendBlob.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'name',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl359.JSString}]},$an:function(){return[];}},{$nm:'val',$mt:'prm',$t:{t:$$$cjf961.Blob},$an:function(){return[];}},{$nm:'filename',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjl359.JSString}]}]},$an:function(){return[];}}],$cont:FormDataAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','FormDataAbs','$m','appendBlob']};};
     return $$formDataAbs;
 }
-FormDataAbs.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:$$$cjl361.JSObjectAbs},satisfies:[],$an:function(){return[$$$cl1.shared(),$$$cl1.abstract()];},d:['ceylon.js.xmlhttprequest','FormDataAbs']};};
+FormDataAbs.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:$$$cjl359.JSObjectAbs},satisfies:[],$an:function(){return[$$$cl1.shared(),$$$cl1.abstract()];},d:['ceylon.js.xmlhttprequest','FormDataAbs']};};
 exports.FormDataAbs=FormDataAbs;
 function $init$FormDataAbs(){
     if (FormDataAbs.$$===undefined){
-        $$$cl1.initTypeProto(FormDataAbs,'ceylon.js.xmlhttprequest::FormDataAbs',$$$cjl361.JSObjectAbs);
+        $$$cl1.initTypeProto(FormDataAbs,'ceylon.js.xmlhttprequest::FormDataAbs',$$$cjl359.JSObjectAbs);
     }
     return FormDataAbs;
 }
 exports.$init$FormDataAbs=$init$FormDataAbs;
 $init$FormDataAbs();
-function FormData(n$976, $$formData){
+function FormData(n$974, $$formData){
     $init$FormData();
     if ($$formData===undefined)$$formData=new FormData.$$;
-    $$formData.n$976_=n$976;
+    $$formData.n$974_=n$974;
     FormDataAbs($$formData);
-    $$$cl1.defineAttr($$formData,'n$976',function(){return this.n$976_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:FormData,d:['ceylon.js.xmlhttprequest','FormData','$at','n']};});
+    $$$cl1.defineAttr($$formData,'n$974',function(){return this.n$974_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:FormData,d:['ceylon.js.xmlhttprequest','FormData','$at','n']};});
     $$formData.$prop$getNative={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:FormData,$an:function(){return[$$$cl1.shared(),$$$cl1.actual()];},d:['ceylon.js.xmlhttprequest','FormData','$at','native']};}};
     /*Begin dynamic block*/
-    $$formData.$native=n$976;/*End dynamic block*/
+    $$formData.$native=n$974;/*End dynamic block*/
     return $$formData;
 }
 FormData.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:FormDataAbs},satisfies:[],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','FormData']};};
@@ -126,15 +126,15 @@ exports.$init$FormData=$init$FormData;
 $init$FormData();
 exports.$mod$ans$=[];
 exports.$pkg$ans$ceylon$js$xmlhttprequest=function(){return[$$$cl1.shared()];};
-var $$$cjd977=require('ceylon/js/dom/4.0.0/ceylon.js.dom-4.0.0');
-$$$cl1.$addmod$($$$cjd977,'ceylon.js.dom/4.0.0');
-var $$$cjj661=require('ceylon/js/json/1.0.0/ceylon.js.json-1.0.0');
-$$$cl1.$addmod$($$$cjj661,'ceylon.js.json/1.0.0');
-function XMLHttpRequestResponseType(name$978, $$xMLHttpRequestResponseType){
+var $$$cjd975=require('ceylon/js/dom/4.0.0/ceylon.js.dom-4.0.0');
+$$$cl1.$addmod$($$$cjd975,'ceylon.js.dom/4.0.0');
+var $$$cjj659=require('ceylon/js/json/1.0.0/ceylon.js.json-1.0.0');
+$$$cl1.$addmod$($$$cjj659,'ceylon.js.json/1.0.0');
+function XMLHttpRequestResponseType(name$976, $$xMLHttpRequestResponseType){
     $init$XMLHttpRequestResponseType();
     if ($$xMLHttpRequestResponseType===undefined)$$$cl1.throwexc($$$cl1.InvocationException$meta$model($$$cl1.String("Cannot instantiate abstract class")),'?','?')
-    $$xMLHttpRequestResponseType.name$978_=name$978;
-    $$$cl1.defineAttr($$xMLHttpRequestResponseType,'name$978',function(){return this.name$978_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:XMLHttpRequestResponseType,d:['ceylon.js.xmlhttprequest','XMLHttpRequestResponseType','$at','name']};});
+    $$xMLHttpRequestResponseType.name$976_=name$976;
+    $$$cl1.defineAttr($$xMLHttpRequestResponseType,'name$976',function(){return this.name$976_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:XMLHttpRequestResponseType,d:['ceylon.js.xmlhttprequest','XMLHttpRequestResponseType','$at','name']};});
     return $$xMLHttpRequestResponseType;
 }
 XMLHttpRequestResponseType.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:$$$cl1.Basic},satisfies:[],$an:function(){return[$$$cl1.shared(),$$$cl1.abstract()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestResponseType']};};
@@ -147,143 +147,143 @@ function $init$XMLHttpRequestResponseType(){
 }
 exports.$init$XMLHttpRequestResponseType=$init$XMLHttpRequestResponseType;
 $init$XMLHttpRequestResponseType();
-function blank$979(){
-    var $$blank=new blank$979.$$;
+function blank$977(){
+    var $$blank=new blank$977.$$;
     XMLHttpRequestResponseType($$$cl1.String("",0),$$blank);
     return $$blank;
 }
-function $init$blank$979(){
-    if (blank$979.$$===undefined){
-        $$$cl1.initTypeProto(blank$979,'ceylon.js.xmlhttprequest::blank',$init$XMLHttpRequestResponseType());
+function $init$blank$977(){
+    if (blank$977.$$===undefined){
+        $$$cl1.initTypeProto(blank$977,'ceylon.js.xmlhttprequest::blank',$init$XMLHttpRequestResponseType());
     }
-    return blank$979;
+    return blank$977;
 }
-exports.$init$blank$979=$init$blank$979;
-$init$blank$979();
-var blank$980;
+exports.$init$blank$977=$init$blank$977;
+$init$blank$977();
+var blank$978;
 function getBlank(){
-    if (blank$980===undefined)blank$980=$init$blank$979()();
-    return blank$980;
+    if (blank$978===undefined)blank$978=$init$blank$977()();
+    return blank$978;
 }
 exports.getBlank=getBlank;
-getBlank.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:blank$979},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','blank']};};
+getBlank.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:blank$977},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','blank']};};
 $prop$getBlank={get:getBlank,$$metamodel$$:getBlank.$$metamodel$$};
 exports.$prop$getBlank=$prop$getBlank;
-function arraybuffer$981(){
-    var $$arraybuffer=new arraybuffer$981.$$;
+function arraybuffer$979(){
+    var $$arraybuffer=new arraybuffer$979.$$;
     XMLHttpRequestResponseType($$$cl1.String("arraybuffer",11),$$arraybuffer);
     return $$arraybuffer;
 }
-function $init$arraybuffer$981(){
-    if (arraybuffer$981.$$===undefined){
-        $$$cl1.initTypeProto(arraybuffer$981,'ceylon.js.xmlhttprequest::arraybuffer',$init$XMLHttpRequestResponseType());
+function $init$arraybuffer$979(){
+    if (arraybuffer$979.$$===undefined){
+        $$$cl1.initTypeProto(arraybuffer$979,'ceylon.js.xmlhttprequest::arraybuffer',$init$XMLHttpRequestResponseType());
     }
-    return arraybuffer$981;
+    return arraybuffer$979;
 }
-exports.$init$arraybuffer$981=$init$arraybuffer$981;
-$init$arraybuffer$981();
-var arraybuffer$982;
+exports.$init$arraybuffer$979=$init$arraybuffer$979;
+$init$arraybuffer$979();
+var arraybuffer$980;
 function getArraybuffer(){
-    if (arraybuffer$982===undefined)arraybuffer$982=$init$arraybuffer$981()();
-    return arraybuffer$982;
+    if (arraybuffer$980===undefined)arraybuffer$980=$init$arraybuffer$979()();
+    return arraybuffer$980;
 }
 exports.getArraybuffer=getArraybuffer;
-getArraybuffer.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:arraybuffer$981},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','arraybuffer']};};
+getArraybuffer.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:arraybuffer$979},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','arraybuffer']};};
 $prop$getArraybuffer={get:getArraybuffer,$$metamodel$$:getArraybuffer.$$metamodel$$};
 exports.$prop$getArraybuffer=$prop$getArraybuffer;
-function blob$983(){
-    var $$blob=new blob$983.$$;
+function blob$981(){
+    var $$blob=new blob$981.$$;
     XMLHttpRequestResponseType($$$cl1.String("blob",4),$$blob);
     return $$blob;
 }
-function $init$blob$983(){
-    if (blob$983.$$===undefined){
-        $$$cl1.initTypeProto(blob$983,'ceylon.js.xmlhttprequest::blob',$init$XMLHttpRequestResponseType());
+function $init$blob$981(){
+    if (blob$981.$$===undefined){
+        $$$cl1.initTypeProto(blob$981,'ceylon.js.xmlhttprequest::blob',$init$XMLHttpRequestResponseType());
     }
-    return blob$983;
+    return blob$981;
 }
-exports.$init$blob$983=$init$blob$983;
-$init$blob$983();
-var blob$984;
+exports.$init$blob$981=$init$blob$981;
+$init$blob$981();
+var blob$982;
 function getBlob(){
-    if (blob$984===undefined)blob$984=$init$blob$983()();
-    return blob$984;
+    if (blob$982===undefined)blob$982=$init$blob$981()();
+    return blob$982;
 }
 exports.getBlob=getBlob;
-getBlob.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:blob$983},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','blob']};};
+getBlob.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:blob$981},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','blob']};};
 $prop$getBlob={get:getBlob,$$metamodel$$:getBlob.$$metamodel$$};
 exports.$prop$getBlob=$prop$getBlob;
-function document$985(){
-    var $$document=new document$985.$$;
+function document$983(){
+    var $$document=new document$983.$$;
     XMLHttpRequestResponseType($$$cl1.String("document",8),$$document);
     return $$document;
 }
-function $init$document$985(){
-    if (document$985.$$===undefined){
-        $$$cl1.initTypeProto(document$985,'ceylon.js.xmlhttprequest::document',$init$XMLHttpRequestResponseType());
+function $init$document$983(){
+    if (document$983.$$===undefined){
+        $$$cl1.initTypeProto(document$983,'ceylon.js.xmlhttprequest::document',$init$XMLHttpRequestResponseType());
     }
-    return document$985;
+    return document$983;
 }
-exports.$init$document$985=$init$document$985;
-$init$document$985();
-var document$986;
+exports.$init$document$983=$init$document$983;
+$init$document$983();
+var document$984;
 function getDocument(){
-    if (document$986===undefined)document$986=$init$document$985()();
-    return document$986;
+    if (document$984===undefined)document$984=$init$document$983()();
+    return document$984;
 }
 exports.getDocument=getDocument;
-getDocument.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:document$985},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','document']};};
+getDocument.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:document$983},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','document']};};
 $prop$getDocument={get:getDocument,$$metamodel$$:getDocument.$$metamodel$$};
 exports.$prop$getDocument=$prop$getDocument;
-function json$987(){
-    var $$json=new json$987.$$;
+function json$985(){
+    var $$json=new json$985.$$;
     XMLHttpRequestResponseType($$$cl1.String("json",4),$$json);
     return $$json;
 }
-function $init$json$987(){
-    if (json$987.$$===undefined){
-        $$$cl1.initTypeProto(json$987,'ceylon.js.xmlhttprequest::json',$init$XMLHttpRequestResponseType());
+function $init$json$985(){
+    if (json$985.$$===undefined){
+        $$$cl1.initTypeProto(json$985,'ceylon.js.xmlhttprequest::json',$init$XMLHttpRequestResponseType());
     }
-    return json$987;
+    return json$985;
 }
-exports.$init$json$987=$init$json$987;
-$init$json$987();
-var json$988;
+exports.$init$json$985=$init$json$985;
+$init$json$985();
+var json$986;
 function getJson(){
-    if (json$988===undefined)json$988=$init$json$987()();
-    return json$988;
+    if (json$986===undefined)json$986=$init$json$985()();
+    return json$986;
 }
 exports.getJson=getJson;
-getJson.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:json$987},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','json']};};
+getJson.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:json$985},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','json']};};
 $prop$getJson={get:getJson,$$metamodel$$:getJson.$$metamodel$$};
 exports.$prop$getJson=$prop$getJson;
-function text$989(){
-    var $$text=new text$989.$$;
+function text$987(){
+    var $$text=new text$987.$$;
     XMLHttpRequestResponseType($$$cl1.String("text",4),$$text);
     return $$text;
 }
-function $init$text$989(){
-    if (text$989.$$===undefined){
-        $$$cl1.initTypeProto(text$989,'ceylon.js.xmlhttprequest::text',$init$XMLHttpRequestResponseType());
+function $init$text$987(){
+    if (text$987.$$===undefined){
+        $$$cl1.initTypeProto(text$987,'ceylon.js.xmlhttprequest::text',$init$XMLHttpRequestResponseType());
     }
-    return text$989;
+    return text$987;
 }
-exports.$init$text$989=$init$text$989;
-$init$text$989();
-var text$990;
+exports.$init$text$987=$init$text$987;
+$init$text$987();
+var text$988;
 function getText(){
-    if (text$990===undefined)text$990=$init$text$989()();
-    return text$990;
+    if (text$988===undefined)text$988=$init$text$987()();
+    return text$988;
 }
 exports.getText=getText;
-getText.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:text$989},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','text']};};
+getText.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:text$987},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','text']};};
 $prop$getText={get:getText,$$metamodel$$:getText.$$metamodel$$};
 exports.$prop$getText=$prop$getText;
-function ReadyState(num$991, $$readyState){
+function ReadyState(num$989, $$readyState){
     $init$ReadyState();
     if ($$readyState===undefined)$$$cl1.throwexc($$$cl1.InvocationException$meta$model($$$cl1.String("Cannot instantiate abstract class")),'?','?')
-    $$readyState.num$991_=num$991;
-    $$$cl1.defineAttr($$readyState,'num$991',function(){return this.num$991_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Integer},$cont:ReadyState,d:['ceylon.js.xmlhttprequest','ReadyState','$at','num']};});
+    $$readyState.num$989_=num$989;
+    $$$cl1.defineAttr($$readyState,'num$989',function(){return this.num$989_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Integer},$cont:ReadyState,d:['ceylon.js.xmlhttprequest','ReadyState','$at','num']};});
     return $$readyState;
 }
 ReadyState.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:$$$cl1.Basic},satisfies:[],$an:function(){return[$$$cl1.shared(),$$$cl1.abstract()];},d:['ceylon.js.xmlhttprequest','ReadyState']};};
@@ -296,114 +296,114 @@ function $init$ReadyState(){
 }
 exports.$init$ReadyState=$init$ReadyState;
 $init$ReadyState();
-function readyStateUnsent$992(){
-    var $$readyStateUnsent=new readyStateUnsent$992.$$;
+function readyStateUnsent$990(){
+    var $$readyStateUnsent=new readyStateUnsent$990.$$;
     ReadyState((0),$$readyStateUnsent);
     return $$readyStateUnsent;
 }
-function $init$readyStateUnsent$992(){
-    if (readyStateUnsent$992.$$===undefined){
-        $$$cl1.initTypeProto(readyStateUnsent$992,'ceylon.js.xmlhttprequest::readyStateUnsent',$init$ReadyState());
+function $init$readyStateUnsent$990(){
+    if (readyStateUnsent$990.$$===undefined){
+        $$$cl1.initTypeProto(readyStateUnsent$990,'ceylon.js.xmlhttprequest::readyStateUnsent',$init$ReadyState());
     }
-    return readyStateUnsent$992;
+    return readyStateUnsent$990;
 }
-exports.$init$readyStateUnsent$992=$init$readyStateUnsent$992;
-$init$readyStateUnsent$992();
-var readyStateUnsent$993;
+exports.$init$readyStateUnsent$990=$init$readyStateUnsent$990;
+$init$readyStateUnsent$990();
+var readyStateUnsent$991;
 function getReadyStateUnsent(){
-    if (readyStateUnsent$993===undefined)readyStateUnsent$993=$init$readyStateUnsent$992()();
-    return readyStateUnsent$993;
+    if (readyStateUnsent$991===undefined)readyStateUnsent$991=$init$readyStateUnsent$990()();
+    return readyStateUnsent$991;
 }
 exports.getReadyStateUnsent=getReadyStateUnsent;
-getReadyStateUnsent.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:readyStateUnsent$992},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','readyStateUnsent']};};
+getReadyStateUnsent.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:readyStateUnsent$990},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','readyStateUnsent']};};
 $prop$getReadyStateUnsent={get:getReadyStateUnsent,$$metamodel$$:getReadyStateUnsent.$$metamodel$$};
 exports.$prop$getReadyStateUnsent=$prop$getReadyStateUnsent;
-function readyStateOpened$994(){
-    var $$readyStateOpened=new readyStateOpened$994.$$;
+function readyStateOpened$992(){
+    var $$readyStateOpened=new readyStateOpened$992.$$;
     ReadyState((1),$$readyStateOpened);
     return $$readyStateOpened;
 }
-function $init$readyStateOpened$994(){
-    if (readyStateOpened$994.$$===undefined){
-        $$$cl1.initTypeProto(readyStateOpened$994,'ceylon.js.xmlhttprequest::readyStateOpened',$init$ReadyState());
+function $init$readyStateOpened$992(){
+    if (readyStateOpened$992.$$===undefined){
+        $$$cl1.initTypeProto(readyStateOpened$992,'ceylon.js.xmlhttprequest::readyStateOpened',$init$ReadyState());
     }
-    return readyStateOpened$994;
+    return readyStateOpened$992;
 }
-exports.$init$readyStateOpened$994=$init$readyStateOpened$994;
-$init$readyStateOpened$994();
-var readyStateOpened$995;
+exports.$init$readyStateOpened$992=$init$readyStateOpened$992;
+$init$readyStateOpened$992();
+var readyStateOpened$993;
 function getReadyStateOpened(){
-    if (readyStateOpened$995===undefined)readyStateOpened$995=$init$readyStateOpened$994()();
-    return readyStateOpened$995;
+    if (readyStateOpened$993===undefined)readyStateOpened$993=$init$readyStateOpened$992()();
+    return readyStateOpened$993;
 }
 exports.getReadyStateOpened=getReadyStateOpened;
-getReadyStateOpened.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:readyStateOpened$994},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','readyStateOpened']};};
+getReadyStateOpened.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:readyStateOpened$992},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','readyStateOpened']};};
 $prop$getReadyStateOpened={get:getReadyStateOpened,$$metamodel$$:getReadyStateOpened.$$metamodel$$};
 exports.$prop$getReadyStateOpened=$prop$getReadyStateOpened;
-function readyStateHeadersReceived$996(){
-    var $$readyStateHeadersReceived=new readyStateHeadersReceived$996.$$;
+function readyStateHeadersReceived$994(){
+    var $$readyStateHeadersReceived=new readyStateHeadersReceived$994.$$;
     ReadyState((2),$$readyStateHeadersReceived);
     return $$readyStateHeadersReceived;
 }
-function $init$readyStateHeadersReceived$996(){
-    if (readyStateHeadersReceived$996.$$===undefined){
-        $$$cl1.initTypeProto(readyStateHeadersReceived$996,'ceylon.js.xmlhttprequest::readyStateHeadersReceived',$init$ReadyState());
+function $init$readyStateHeadersReceived$994(){
+    if (readyStateHeadersReceived$994.$$===undefined){
+        $$$cl1.initTypeProto(readyStateHeadersReceived$994,'ceylon.js.xmlhttprequest::readyStateHeadersReceived',$init$ReadyState());
     }
-    return readyStateHeadersReceived$996;
+    return readyStateHeadersReceived$994;
 }
-exports.$init$readyStateHeadersReceived$996=$init$readyStateHeadersReceived$996;
-$init$readyStateHeadersReceived$996();
-var readyStateHeadersReceived$997;
+exports.$init$readyStateHeadersReceived$994=$init$readyStateHeadersReceived$994;
+$init$readyStateHeadersReceived$994();
+var readyStateHeadersReceived$995;
 function getReadyStateHeadersReceived(){
-    if (readyStateHeadersReceived$997===undefined)readyStateHeadersReceived$997=$init$readyStateHeadersReceived$996()();
-    return readyStateHeadersReceived$997;
+    if (readyStateHeadersReceived$995===undefined)readyStateHeadersReceived$995=$init$readyStateHeadersReceived$994()();
+    return readyStateHeadersReceived$995;
 }
 exports.getReadyStateHeadersReceived=getReadyStateHeadersReceived;
-getReadyStateHeadersReceived.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:readyStateHeadersReceived$996},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','readyStateHeadersReceived']};};
+getReadyStateHeadersReceived.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:readyStateHeadersReceived$994},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','readyStateHeadersReceived']};};
 $prop$getReadyStateHeadersReceived={get:getReadyStateHeadersReceived,$$metamodel$$:getReadyStateHeadersReceived.$$metamodel$$};
 exports.$prop$getReadyStateHeadersReceived=$prop$getReadyStateHeadersReceived;
-function readyStateLoading$998(){
-    var $$readyStateLoading=new readyStateLoading$998.$$;
+function readyStateLoading$996(){
+    var $$readyStateLoading=new readyStateLoading$996.$$;
     ReadyState((3),$$readyStateLoading);
     return $$readyStateLoading;
 }
-function $init$readyStateLoading$998(){
-    if (readyStateLoading$998.$$===undefined){
-        $$$cl1.initTypeProto(readyStateLoading$998,'ceylon.js.xmlhttprequest::readyStateLoading',$init$ReadyState());
+function $init$readyStateLoading$996(){
+    if (readyStateLoading$996.$$===undefined){
+        $$$cl1.initTypeProto(readyStateLoading$996,'ceylon.js.xmlhttprequest::readyStateLoading',$init$ReadyState());
     }
-    return readyStateLoading$998;
+    return readyStateLoading$996;
 }
-exports.$init$readyStateLoading$998=$init$readyStateLoading$998;
-$init$readyStateLoading$998();
-var readyStateLoading$999;
+exports.$init$readyStateLoading$996=$init$readyStateLoading$996;
+$init$readyStateLoading$996();
+var readyStateLoading$997;
 function getReadyStateLoading(){
-    if (readyStateLoading$999===undefined)readyStateLoading$999=$init$readyStateLoading$998()();
-    return readyStateLoading$999;
+    if (readyStateLoading$997===undefined)readyStateLoading$997=$init$readyStateLoading$996()();
+    return readyStateLoading$997;
 }
 exports.getReadyStateLoading=getReadyStateLoading;
-getReadyStateLoading.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:readyStateLoading$998},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','readyStateLoading']};};
+getReadyStateLoading.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:readyStateLoading$996},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','readyStateLoading']};};
 $prop$getReadyStateLoading={get:getReadyStateLoading,$$metamodel$$:getReadyStateLoading.$$metamodel$$};
 exports.$prop$getReadyStateLoading=$prop$getReadyStateLoading;
-function readyStateDone$1000(){
-    var $$readyStateDone=new readyStateDone$1000.$$;
+function readyStateDone$998(){
+    var $$readyStateDone=new readyStateDone$998.$$;
     ReadyState((4),$$readyStateDone);
     return $$readyStateDone;
 }
-function $init$readyStateDone$1000(){
-    if (readyStateDone$1000.$$===undefined){
-        $$$cl1.initTypeProto(readyStateDone$1000,'ceylon.js.xmlhttprequest::readyStateDone',$init$ReadyState());
+function $init$readyStateDone$998(){
+    if (readyStateDone$998.$$===undefined){
+        $$$cl1.initTypeProto(readyStateDone$998,'ceylon.js.xmlhttprequest::readyStateDone',$init$ReadyState());
     }
-    return readyStateDone$1000;
+    return readyStateDone$998;
 }
-exports.$init$readyStateDone$1000=$init$readyStateDone$1000;
-$init$readyStateDone$1000();
-var readyStateDone$1001;
+exports.$init$readyStateDone$998=$init$readyStateDone$998;
+$init$readyStateDone$998();
+var readyStateDone$999;
 function getReadyStateDone(){
-    if (readyStateDone$1001===undefined)readyStateDone$1001=$init$readyStateDone$1000()();
-    return readyStateDone$1001;
+    if (readyStateDone$999===undefined)readyStateDone$999=$init$readyStateDone$998()();
+    return readyStateDone$999;
 }
 exports.getReadyStateDone=getReadyStateDone;
-getReadyStateDone.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:readyStateDone$1000},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','readyStateDone']};};
+getReadyStateDone.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:readyStateDone$998},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','readyStateDone']};};
 $prop$getReadyStateDone={get:getReadyStateDone,$$metamodel$$:getReadyStateDone.$$metamodel$$};
 exports.$prop$getReadyStateDone=$prop$getReadyStateDone;
 function XMLHttpRequestOptions(anon, $$xMLHttpRequestOptions){
@@ -413,12 +413,12 @@ function XMLHttpRequestOptions(anon, $$xMLHttpRequestOptions){
     $$xMLHttpRequestOptions.anon_=anon;
     $$$cl1.defineAttr($$xMLHttpRequestOptions,'anon',function(){return this.anon_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Boolean},$cont:XMLHttpRequestOptions,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestOptions','$at','anon']};});
     function toJson(){
-        var json$1002=(values$1003=/*NULL PARAM!*/[$$$cl1.Entry($$$cl1.String("anon",4),$$xMLHttpRequestOptions.anon,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.Boolean}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.Boolean}}}}),$$$cjj661.JSON(values$1003));
-        var values$1003;
-        return json$1002.toJson();
+        var json$1000=(values$1001=/*NULL PARAM!*/[$$$cl1.Entry($$$cl1.String("anon",4),$$xMLHttpRequestOptions.anon,{Key:{t:$$$cl1.String},Item:{t:$$$cl1.Boolean}})].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{t:$$$cl1.Boolean}}}}),$$$cjj659.JSON(values$1001));
+        var values$1001;
+        return json$1000.toJson();
     }
     $$xMLHttpRequestOptions.toJson=toJson;
-    toJson.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cjj661.JSJSON},$ps:[],$cont:XMLHttpRequestOptions,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestOptions','$m','toJson']};};
+    toJson.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cjj659.JSJSON},$ps:[],$cont:XMLHttpRequestOptions,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestOptions','$m','toJson']};};
     return $$xMLHttpRequestOptions;
 }
 XMLHttpRequestOptions.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:$$$cl1.Basic},satisfies:[],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestOptions']};};
@@ -431,14 +431,14 @@ function $init$XMLHttpRequestOptions(){
 }
 exports.$init$XMLHttpRequestOptions=$init$XMLHttpRequestOptions;
 $init$XMLHttpRequestOptions();
-function createXMLHttpRequest(options$1004){
-    if(options$1004===undefined){options$1004=null;}
-    var o$1005;
-    if((o$1005=options$1004)!==null){
+function createXMLHttpRequest(options$1002){
+    if(options$1002===undefined){options$1002=null;}
+    var o$1003;
+    if((o$1003=options$1002)!==null){
         /*Begin dynamic block*/
-        return XMLHttpRequest((typeof XMLHttpRequest==='undefined'||XMLHttpRequest===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: XMLHttpRequest")),'34:25-34:38','xmlhttprequest.ceylon'):XMLHttpRequest)(/*NULL PARAM!*/$$$cl1.$JsCallable((opt$1006=o$1005,$$$cl1.JsCallable(opt$1006,opt$1006!==null?opt$1006.toJson:null)),[],{Arguments:{t:$$$cl1.Empty},Return:{t:$$$cjj661.JSJSON}})));
+        return XMLHttpRequest((typeof XMLHttpRequest==='undefined'||XMLHttpRequest===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: XMLHttpRequest")),'34:25-34:38','xmlhttprequest.ceylon'):XMLHttpRequest)(/*NULL PARAM!*/$$$cl1.$JsCallable((opt$1004=o$1003,$$$cl1.JsCallable(opt$1004,opt$1004!==null?opt$1004.toJson:null)),[],{Arguments:{t:$$$cl1.Empty},Return:{t:$$$cjj659.JSJSON}})));
         /*End dynamic block*/
-        var opt$1006;
+        var opt$1004;
     }else {
         /*Begin dynamic block*/
         return XMLHttpRequest((typeof XMLHttpRequest==='undefined'||XMLHttpRequest===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: XMLHttpRequest")),'38:25-38:38','xmlhttprequest.ceylon'):XMLHttpRequest)());
@@ -450,36 +450,36 @@ createXMLHttpRequest.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:XML
 function XMLHttpRequestAbs($$xMLHttpRequestAbs){
     $init$XMLHttpRequestAbs();
     if ($$xMLHttpRequestAbs===undefined)$$$cl1.throwexc($$$cl1.InvocationException$meta$model($$$cl1.String("Cannot instantiate abstract class")),'?','?')
-    $$$cjl361.JSObjectAbs($$xMLHttpRequestAbs);
+    $$$cjl359.JSObjectAbs($$xMLHttpRequestAbs);
     function getOnreadystatechange(){
         /*Begin dynamic block*/
-        return (tmpvar$1007=$$xMLHttpRequestAbs.$native.onreadystatechange,$$$cl1.isOfType(tmpvar$1007,{t:$$$cl1.Anything})?tmpvar$1007:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'48:10-48:34','xmlhttprequest.ceylon'));
+        return (tmpvar$1005=$$xMLHttpRequestAbs.$native.onreadystatechange,$$$cl1.isOfType(tmpvar$1005,{t:$$$cl1.Anything})?tmpvar$1005:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'48:10-48:34','xmlhttprequest.ceylon'));
         /*End dynamic block*/
     }
     $$xMLHttpRequestAbs.getOnreadystatechange=getOnreadystatechange;
     getOnreadystatechange.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.doc($$$cl1.String("returns a function Anything(Event event)",40)),$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','getOnreadystatechange']};};
-    function setOnreadystatechange(handler$1008){
+    function setOnreadystatechange(handler$1006){
         /*Begin dynamic block*/
-        $$xMLHttpRequestAbs.$native.onreadystatechange=$$$cl1.$JsCallable(handler$1008/*TODO: callable targs 6*/);
+        $$xMLHttpRequestAbs.$native.onreadystatechange=$$$cl1.$JsCallable(handler$1006/*TODO: callable targs 6*/);
         /*End dynamic block*/
     }
     $$xMLHttpRequestAbs.setOnreadystatechange=setOnreadystatechange;
     setOnreadystatechange.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'handler',$mt:'prm',$pt:'f',$t:{t:$$$cl1.Anything},$an:function(){return[];}}],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','setOnreadystatechange']};};
     function readyState(){
         /*Begin dynamic block*/
-        var readyState$1009=$$xMLHttpRequestAbs.$native.readyState;
-        $prop$getReadyState$1009={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','readyState','$at','readyState']};}};
-        $prop$getReadyState$1009.get=function(){return readyState$1009};
-        if((tmpvar$1010=readyState$1009,tmpvar$1011=(typeof XMLHttpRequest==='undefined'||XMLHttpRequest===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: XMLHttpRequest")),'61:21-61:34','xmlhttprequest.ceylon'):XMLHttpRequest).UNSENT,(tmpvar$1010.equals&&tmpvar$1010.equals(tmpvar$1011))||tmpvar$1010===tmpvar$1011)){
+        var readyState$1007=$$xMLHttpRequestAbs.$native.readyState;
+        $prop$getReadyState$1007={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','readyState','$at','readyState']};}};
+        $prop$getReadyState$1007.get=function(){return readyState$1007};
+        if((tmpvar$1008=readyState$1007,tmpvar$1009=(typeof XMLHttpRequest==='undefined'||XMLHttpRequest===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: XMLHttpRequest")),'61:21-61:34','xmlhttprequest.ceylon'):XMLHttpRequest).UNSENT,(tmpvar$1008.equals&&tmpvar$1008.equals(tmpvar$1009))||tmpvar$1008===tmpvar$1009)){
             return getReadyStateUnsent();
         }else {
-            if((tmpvar$1012=readyState$1009,tmpvar$1013=(typeof XMLHttpRequest==='undefined'||XMLHttpRequest===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: XMLHttpRequest")),'63:28-63:41','xmlhttprequest.ceylon'):XMLHttpRequest).OPENED,(tmpvar$1012.equals&&tmpvar$1012.equals(tmpvar$1013))||tmpvar$1012===tmpvar$1013)){
+            if((tmpvar$1010=readyState$1007,tmpvar$1011=(typeof XMLHttpRequest==='undefined'||XMLHttpRequest===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: XMLHttpRequest")),'63:28-63:41','xmlhttprequest.ceylon'):XMLHttpRequest).OPENED,(tmpvar$1010.equals&&tmpvar$1010.equals(tmpvar$1011))||tmpvar$1010===tmpvar$1011)){
                 return getReadyStateOpened();
             }else {
-                if((tmpvar$1014=readyState$1009,tmpvar$1015=(typeof XMLHttpRequest==='undefined'||XMLHttpRequest===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: XMLHttpRequest")),'65:28-65:41','xmlhttprequest.ceylon'):XMLHttpRequest).HEADERS_RECEIVED,(tmpvar$1014.equals&&tmpvar$1014.equals(tmpvar$1015))||tmpvar$1014===tmpvar$1015)){
+                if((tmpvar$1012=readyState$1007,tmpvar$1013=(typeof XMLHttpRequest==='undefined'||XMLHttpRequest===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: XMLHttpRequest")),'65:28-65:41','xmlhttprequest.ceylon'):XMLHttpRequest).HEADERS_RECEIVED,(tmpvar$1012.equals&&tmpvar$1012.equals(tmpvar$1013))||tmpvar$1012===tmpvar$1013)){
                     return getReadyStateHeadersReceived();
                 }else {
-                    if((tmpvar$1016=readyState$1009,tmpvar$1017=(typeof XMLHttpRequest==='undefined'||XMLHttpRequest===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: XMLHttpRequest")),'67:28-67:41','xmlhttprequest.ceylon'):XMLHttpRequest).LOADING,(tmpvar$1016.equals&&tmpvar$1016.equals(tmpvar$1017))||tmpvar$1016===tmpvar$1017)){
+                    if((tmpvar$1014=readyState$1007,tmpvar$1015=(typeof XMLHttpRequest==='undefined'||XMLHttpRequest===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: XMLHttpRequest")),'67:28-67:41','xmlhttprequest.ceylon'):XMLHttpRequest).LOADING,(tmpvar$1014.equals&&tmpvar$1014.equals(tmpvar$1015))||tmpvar$1014===tmpvar$1015)){
                         return getReadyStateLoading();
                     }else {
                         return getReadyStateDone();
@@ -490,227 +490,227 @@ function XMLHttpRequestAbs($$xMLHttpRequestAbs){
     }
     $$xMLHttpRequestAbs.readyState=readyState;
     readyState.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:ReadyState},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','readyState']};};
-    $$xMLHttpRequestAbs.open$defs$async=function(method$1018,url$1019,async$1020,user$1021,password$1022){return true;};
-    $$xMLHttpRequestAbs.open$defs$user=function(method$1018,url$1019,async$1020,user$1021,password$1022){return null;};
-    $$xMLHttpRequestAbs.open$defs$password=function(method$1018,url$1019,async$1020,user$1021,password$1022){return null;};
-    function open(method$1018,url$1019,async$1020,user$1021,password$1022){
-        if(async$1020===undefined){async$1020=$$xMLHttpRequestAbs.open$defs$async(method$1018,url$1019,async$1020,user$1021,password$1022);}
-        if(user$1021===undefined){user$1021=$$xMLHttpRequestAbs.open$defs$user(method$1018,url$1019,async$1020,user$1021,password$1022);}
-        if(password$1022===undefined){password$1022=$$xMLHttpRequestAbs.open$defs$password(method$1018,url$1019,async$1020,user$1021,password$1022);}
+    $$xMLHttpRequestAbs.open$defs$async=function(method$1016,url$1017,async$1018,user$1019,password$1020){return true;};
+    $$xMLHttpRequestAbs.open$defs$user=function(method$1016,url$1017,async$1018,user$1019,password$1020){return null;};
+    $$xMLHttpRequestAbs.open$defs$password=function(method$1016,url$1017,async$1018,user$1019,password$1020){return null;};
+    function open(method$1016,url$1017,async$1018,user$1019,password$1020){
+        if(async$1018===undefined){async$1018=$$xMLHttpRequestAbs.open$defs$async(method$1016,url$1017,async$1018,user$1019,password$1020);}
+        if(user$1019===undefined){user$1019=$$xMLHttpRequestAbs.open$defs$user(method$1016,url$1017,async$1018,user$1019,password$1020);}
+        if(password$1020===undefined){password$1020=$$xMLHttpRequestAbs.open$defs$password(method$1016,url$1017,async$1018,user$1019,password$1020);}
         
-        var case$1023=method$1018;
-        if ($$$cl1.isOfType(method$1018,{t:$$$cl1.String})) {
+        var case$1021=method$1016;
+        if ($$$cl1.isOfType(method$1016,{t:$$$cl1.String})) {
             
-            var case$1024=url$1019;
-            if ($$$cl1.isOfType(url$1019,{t:$$$cl1.String})) {
+            var case$1022=url$1017;
+            if ($$$cl1.isOfType(url$1017,{t:$$$cl1.String})) {
                 
-                var case$1025=user$1021;
-                if ($$$cl1.isOfType(user$1021,{t:$$$cl1.String})) {
+                var case$1023=user$1019;
+                if ($$$cl1.isOfType(user$1019,{t:$$$cl1.String})) {
                     
-                    var case$1026=password$1022;
-                    if ($$$cl1.isOfType(password$1022,{t:$$$cl1.String})) {
+                    var case$1024=password$1020;
+                    if ($$$cl1.isOfType(password$1020,{t:$$$cl1.String})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.valueOf()/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1025.valueOf()/*NULL PARAM!*/,case$1026.valueOf());
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.valueOf()/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1023.valueOf()/*NULL PARAM!*/,case$1024.valueOf());
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cjl361.JSString})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cjl359.JSString})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.valueOf()/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1025.valueOf()/*NULL PARAM!*/,case$1026.$native);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.valueOf()/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1023.valueOf()/*NULL PARAM!*/,case$1024.$native);
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cl1.Null})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cl1.Null})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.valueOf()/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1025.valueOf());
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.valueOf()/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1023.valueOf());
                         /*End dynamic block*/
                     }
-                }else if ($$$cl1.isOfType(user$1021,{t:$$$cjl361.JSString})) {
+                }else if ($$$cl1.isOfType(user$1019,{t:$$$cjl359.JSString})) {
                     
-                    var case$1027=password$1022;
-                    if ($$$cl1.isOfType(password$1022,{t:$$$cl1.String})) {
+                    var case$1025=password$1020;
+                    if ($$$cl1.isOfType(password$1020,{t:$$$cl1.String})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.valueOf()/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1025.$native/*NULL PARAM!*/,case$1027.valueOf());
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.valueOf()/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1023.$native/*NULL PARAM!*/,case$1025.valueOf());
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cjl361.JSString})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cjl359.JSString})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.valueOf()/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1025.$native/*NULL PARAM!*/,case$1027.$native);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.valueOf()/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1023.$native/*NULL PARAM!*/,case$1025.$native);
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cl1.Null})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cl1.Null})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.valueOf()/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1025.$native);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.valueOf()/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1023.$native);
                         /*End dynamic block*/
                     }
-                }else if ($$$cl1.isOfType(user$1021,{t:$$$cl1.Null})) {
+                }else if ($$$cl1.isOfType(user$1019,{t:$$$cl1.Null})) {
                     
-                    var case$1028=password$1022;
-                    if ($$$cl1.isOfType(password$1022,{t:$$$cl1.String})) {
+                    var case$1026=password$1020;
+                    if ($$$cl1.isOfType(password$1020,{t:$$$cl1.String})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.valueOf()/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,null/*NULL PARAM!*/,case$1028.valueOf());
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.valueOf()/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,null/*NULL PARAM!*/,case$1026.valueOf());
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cjl361.JSString})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cjl359.JSString})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.valueOf()/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,null/*NULL PARAM!*/,case$1028.$native);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.valueOf()/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,null/*NULL PARAM!*/,case$1026.$native);
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cl1.Null})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cl1.Null})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.valueOf()/*NULL PARAM!*/,async$1020);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.valueOf()/*NULL PARAM!*/,async$1018);
                         /*End dynamic block*/
                     }
                 }
-            }else if ($$$cl1.isOfType(url$1019,{t:$$$cjl361.JSString})) {
+            }else if ($$$cl1.isOfType(url$1017,{t:$$$cjl359.JSString})) {
                 
-                var case$1029=user$1021;
-                if ($$$cl1.isOfType(user$1021,{t:$$$cl1.String})) {
+                var case$1027=user$1019;
+                if ($$$cl1.isOfType(user$1019,{t:$$$cl1.String})) {
                     
-                    var case$1030=password$1022;
-                    if ($$$cl1.isOfType(password$1022,{t:$$$cl1.String})) {
+                    var case$1028=password$1020;
+                    if ($$$cl1.isOfType(password$1020,{t:$$$cl1.String})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.$native/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1029.valueOf()/*NULL PARAM!*/,case$1030.valueOf());
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.$native/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1027.valueOf()/*NULL PARAM!*/,case$1028.valueOf());
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cjl361.JSString})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cjl359.JSString})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.$native/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1029.valueOf()/*NULL PARAM!*/,case$1030.$native);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.$native/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1027.valueOf()/*NULL PARAM!*/,case$1028.$native);
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cl1.Null})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cl1.Null})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.$native/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1029.valueOf());
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.$native/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1027.valueOf());
                         /*End dynamic block*/
                     }
-                }else if ($$$cl1.isOfType(user$1021,{t:$$$cjl361.JSString})) {
+                }else if ($$$cl1.isOfType(user$1019,{t:$$$cjl359.JSString})) {
                     
-                    var case$1031=password$1022;
-                    if ($$$cl1.isOfType(password$1022,{t:$$$cl1.String})) {
+                    var case$1029=password$1020;
+                    if ($$$cl1.isOfType(password$1020,{t:$$$cl1.String})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.$native/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1029.$native/*NULL PARAM!*/,case$1031.valueOf());
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.$native/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1027.$native/*NULL PARAM!*/,case$1029.valueOf());
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cjl361.JSString})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cjl359.JSString})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.$native/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1029.$native/*NULL PARAM!*/,case$1031.$native);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.$native/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1027.$native/*NULL PARAM!*/,case$1029.$native);
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cl1.Null})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cl1.Null})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.$native/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1029.$native);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.$native/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1027.$native);
                         /*End dynamic block*/
                     }
-                }else if ($$$cl1.isOfType(user$1021,{t:$$$cl1.Null})) {
+                }else if ($$$cl1.isOfType(user$1019,{t:$$$cl1.Null})) {
                     
-                    var case$1032=password$1022;
-                    if ($$$cl1.isOfType(password$1022,{t:$$$cl1.String})) {
+                    var case$1030=password$1020;
+                    if ($$$cl1.isOfType(password$1020,{t:$$$cl1.String})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.$native/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,null/*NULL PARAM!*/,case$1032.valueOf());
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.$native/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,null/*NULL PARAM!*/,case$1030.valueOf());
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cjl361.JSString})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cjl359.JSString})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.$native/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,null/*NULL PARAM!*/,case$1032.$native);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.$native/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,null/*NULL PARAM!*/,case$1030.$native);
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cl1.Null})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cl1.Null})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.valueOf()/*NULL PARAM!*/,case$1024.$native/*NULL PARAM!*/,async$1020);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.valueOf()/*NULL PARAM!*/,case$1022.$native/*NULL PARAM!*/,async$1018);
                         /*End dynamic block*/
                     }
                 }
             }
-        }else if ($$$cl1.isOfType(method$1018,{t:$$$cjl361.JSString})) {
+        }else if ($$$cl1.isOfType(method$1016,{t:$$$cjl359.JSString})) {
             
-            var case$1033=url$1019;
-            if ($$$cl1.isOfType(url$1019,{t:$$$cl1.String})) {
+            var case$1031=url$1017;
+            if ($$$cl1.isOfType(url$1017,{t:$$$cl1.String})) {
                 
-                var case$1034=user$1021;
-                if ($$$cl1.isOfType(user$1021,{t:$$$cl1.String})) {
+                var case$1032=user$1019;
+                if ($$$cl1.isOfType(user$1019,{t:$$$cl1.String})) {
                     
-                    var case$1035=password$1022;
-                    if ($$$cl1.isOfType(password$1022,{t:$$$cl1.String})) {
+                    var case$1033=password$1020;
+                    if ($$$cl1.isOfType(password$1020,{t:$$$cl1.String})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.valueOf()/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1034.valueOf()/*NULL PARAM!*/,case$1035.valueOf());
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.valueOf()/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1032.valueOf()/*NULL PARAM!*/,case$1033.valueOf());
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cjl361.JSString})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cjl359.JSString})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.valueOf()/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1034.valueOf()/*NULL PARAM!*/,case$1035.$native);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.valueOf()/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1032.valueOf()/*NULL PARAM!*/,case$1033.$native);
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cl1.Null})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cl1.Null})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.valueOf()/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1034.valueOf());
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.valueOf()/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1032.valueOf());
                         /*End dynamic block*/
                     }
-                }else if ($$$cl1.isOfType(user$1021,{t:$$$cjl361.JSString})) {
+                }else if ($$$cl1.isOfType(user$1019,{t:$$$cjl359.JSString})) {
                     
-                    var case$1036=password$1022;
-                    if ($$$cl1.isOfType(password$1022,{t:$$$cl1.String})) {
+                    var case$1034=password$1020;
+                    if ($$$cl1.isOfType(password$1020,{t:$$$cl1.String})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.valueOf()/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1034.$native/*NULL PARAM!*/,case$1036.valueOf());
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.valueOf()/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1032.$native/*NULL PARAM!*/,case$1034.valueOf());
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cjl361.JSString})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cjl359.JSString})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.valueOf()/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1034.$native/*NULL PARAM!*/,case$1036.$native);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.valueOf()/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1032.$native/*NULL PARAM!*/,case$1034.$native);
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cl1.Null})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cl1.Null})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.valueOf()/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1034.$native);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.valueOf()/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1032.$native);
                         /*End dynamic block*/
                     }
-                }else if ($$$cl1.isOfType(user$1021,{t:$$$cl1.Null})) {
+                }else if ($$$cl1.isOfType(user$1019,{t:$$$cl1.Null})) {
                     
-                    var case$1037=password$1022;
-                    if ($$$cl1.isOfType(password$1022,{t:$$$cl1.String})) {
+                    var case$1035=password$1020;
+                    if ($$$cl1.isOfType(password$1020,{t:$$$cl1.String})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.valueOf()/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,null/*NULL PARAM!*/,case$1037.valueOf());
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.valueOf()/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,null/*NULL PARAM!*/,case$1035.valueOf());
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cjl361.JSString})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cjl359.JSString})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.valueOf()/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,null/*NULL PARAM!*/,case$1037.$native);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.valueOf()/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,null/*NULL PARAM!*/,case$1035.$native);
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cl1.Null})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cl1.Null})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.valueOf()/*NULL PARAM!*/,async$1020);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.valueOf()/*NULL PARAM!*/,async$1018);
                         /*End dynamic block*/
                     }
                 }
-            }else if ($$$cl1.isOfType(url$1019,{t:$$$cjl361.JSString})) {
+            }else if ($$$cl1.isOfType(url$1017,{t:$$$cjl359.JSString})) {
                 
-                var case$1038=user$1021;
-                if ($$$cl1.isOfType(user$1021,{t:$$$cl1.String})) {
+                var case$1036=user$1019;
+                if ($$$cl1.isOfType(user$1019,{t:$$$cl1.String})) {
                     
-                    var case$1039=password$1022;
-                    if ($$$cl1.isOfType(password$1022,{t:$$$cl1.String})) {
+                    var case$1037=password$1020;
+                    if ($$$cl1.isOfType(password$1020,{t:$$$cl1.String})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.$native/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1038.valueOf()/*NULL PARAM!*/,case$1039.valueOf());
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.$native/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1036.valueOf()/*NULL PARAM!*/,case$1037.valueOf());
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cjl361.JSString})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cjl359.JSString})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.$native/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1038.valueOf()/*NULL PARAM!*/,case$1039.$native);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.$native/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1036.valueOf()/*NULL PARAM!*/,case$1037.$native);
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cl1.Null})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cl1.Null})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.$native/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1038.valueOf());
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.$native/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1036.valueOf());
                         /*End dynamic block*/
                     }
-                }else if ($$$cl1.isOfType(user$1021,{t:$$$cjl361.JSString})) {
+                }else if ($$$cl1.isOfType(user$1019,{t:$$$cjl359.JSString})) {
                     
-                    var case$1040=password$1022;
-                    if ($$$cl1.isOfType(password$1022,{t:$$$cl1.String})) {
+                    var case$1038=password$1020;
+                    if ($$$cl1.isOfType(password$1020,{t:$$$cl1.String})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.$native/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1038.$native/*NULL PARAM!*/,case$1040.valueOf());
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.$native/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1036.$native/*NULL PARAM!*/,case$1038.valueOf());
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cjl361.JSString})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cjl359.JSString})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.$native/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1038.$native/*NULL PARAM!*/,case$1040.$native);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.$native/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1036.$native/*NULL PARAM!*/,case$1038.$native);
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cl1.Null})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cl1.Null})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.$native/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,case$1038.$native);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.$native/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,case$1036.$native);
                         /*End dynamic block*/
                     }
-                }else if ($$$cl1.isOfType(user$1021,{t:$$$cl1.Null})) {
+                }else if ($$$cl1.isOfType(user$1019,{t:$$$cl1.Null})) {
                     
-                    var case$1041=password$1022;
-                    if ($$$cl1.isOfType(password$1022,{t:$$$cl1.String})) {
+                    var case$1039=password$1020;
+                    if ($$$cl1.isOfType(password$1020,{t:$$$cl1.String})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.$native/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,null/*NULL PARAM!*/,case$1041.valueOf());
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.$native/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,null/*NULL PARAM!*/,case$1039.valueOf());
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cjl361.JSString})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cjl359.JSString})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.$native/*NULL PARAM!*/,async$1020/*NULL PARAM!*/,null/*NULL PARAM!*/,case$1041.$native);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.$native/*NULL PARAM!*/,async$1018/*NULL PARAM!*/,null/*NULL PARAM!*/,case$1039.$native);
                         /*End dynamic block*/
-                    }else if ($$$cl1.isOfType(password$1022,{t:$$$cl1.Null})) {
+                    }else if ($$$cl1.isOfType(password$1020,{t:$$$cl1.Null})) {
                         /*Begin dynamic block*/
-                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1023.$native/*NULL PARAM!*/,case$1033.$native/*NULL PARAM!*/,async$1020);
+                        $$xMLHttpRequestAbs.$native.open(/*NULL PARAM!*/case$1021.$native/*NULL PARAM!*/,case$1031.$native/*NULL PARAM!*/,async$1018);
                         /*End dynamic block*/
                     }
                 }
@@ -718,60 +718,60 @@ function XMLHttpRequestAbs($$xMLHttpRequestAbs){
         }
     }
     $$xMLHttpRequestAbs.open=open;
-    open.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'method',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl361.JSString}]},$an:function(){return[];}},{$nm:'url',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl361.JSString}]},$an:function(){return[];}},{$nm:'async',$mt:'prm',$def:1,$t:{t:$$$cl1.Boolean},$an:function(){return[];}},{$nm:'user',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cl1.String},{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjl361.JSString}]}]},$an:function(){return[];}},{$nm:'password',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cl1.String},{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjl361.JSString}]}]},$an:function(){return[];}}],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','open']};};
-    function setRequestHeader(header$1042,val$1043){
+    open.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'method',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl359.JSString}]},$an:function(){return[];}},{$nm:'url',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl359.JSString}]},$an:function(){return[];}},{$nm:'async',$mt:'prm',$def:1,$t:{t:$$$cl1.Boolean},$an:function(){return[];}},{$nm:'user',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cl1.String},{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjl359.JSString}]}]},$an:function(){return[];}},{$nm:'password',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cl1.String},{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjl359.JSString}]}]},$an:function(){return[];}}],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','open']};};
+    function setRequestHeader(header$1040,val$1041){
         
-        var case$1044=header$1042;
-        if ($$$cl1.isOfType(header$1042,{t:$$$cl1.String})) {
+        var case$1042=header$1040;
+        if ($$$cl1.isOfType(header$1040,{t:$$$cl1.String})) {
             
-            var case$1045=val$1043;
-            if ($$$cl1.isOfType(val$1043,{t:$$$cl1.String})) {
+            var case$1043=val$1041;
+            if ($$$cl1.isOfType(val$1041,{t:$$$cl1.String})) {
                 /*Begin dynamic block*/
-                $$xMLHttpRequestAbs.$native.setRequestHeader(/*NULL PARAM!*/case$1044.valueOf()/*NULL PARAM!*/,case$1045.valueOf());
+                $$xMLHttpRequestAbs.$native.setRequestHeader(/*NULL PARAM!*/case$1042.valueOf()/*NULL PARAM!*/,case$1043.valueOf());
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(val$1043,{t:$$$cjl361.JSString})) {
+            }else if ($$$cl1.isOfType(val$1041,{t:$$$cjl359.JSString})) {
                 /*Begin dynamic block*/
-                $$xMLHttpRequestAbs.$native.setRequestHeader(/*NULL PARAM!*/case$1044.valueOf()/*NULL PARAM!*/,case$1045.$native);
+                $$xMLHttpRequestAbs.$native.setRequestHeader(/*NULL PARAM!*/case$1042.valueOf()/*NULL PARAM!*/,case$1043.$native);
                 /*End dynamic block*/
             }
-        }else if ($$$cl1.isOfType(header$1042,{t:$$$cjl361.JSString})) {
+        }else if ($$$cl1.isOfType(header$1040,{t:$$$cjl359.JSString})) {
             
-            var case$1046=val$1043;
-            if ($$$cl1.isOfType(val$1043,{t:$$$cl1.String})) {
+            var case$1044=val$1041;
+            if ($$$cl1.isOfType(val$1041,{t:$$$cl1.String})) {
                 /*Begin dynamic block*/
-                $$xMLHttpRequestAbs.$native.setRequestHeader(/*NULL PARAM!*/case$1044.$native/*NULL PARAM!*/,case$1046.valueOf());
+                $$xMLHttpRequestAbs.$native.setRequestHeader(/*NULL PARAM!*/case$1042.$native/*NULL PARAM!*/,case$1044.valueOf());
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(val$1043,{t:$$$cjl361.JSString})) {
+            }else if ($$$cl1.isOfType(val$1041,{t:$$$cjl359.JSString})) {
                 /*Begin dynamic block*/
-                $$xMLHttpRequestAbs.$native.setRequestHeader(/*NULL PARAM!*/case$1044.$native/*NULL PARAM!*/,case$1046.$native);
+                $$xMLHttpRequestAbs.$native.setRequestHeader(/*NULL PARAM!*/case$1042.$native/*NULL PARAM!*/,case$1044.$native);
                 /*End dynamic block*/
             }
         }
     }
     $$xMLHttpRequestAbs.setRequestHeader=setRequestHeader;
-    setRequestHeader.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'header',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl361.JSString}]},$an:function(){return[];}},{$nm:'val',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl361.JSString}]},$an:function(){return[];}}],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','setRequestHeader']};};
+    setRequestHeader.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'header',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl359.JSString}]},$an:function(){return[];}},{$nm:'val',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl359.JSString}]},$an:function(){return[];}}],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','setRequestHeader']};};
     function getTimeout(){
         /*Begin dynamic block*/
-        return $$$cjl361.JSNumber($$xMLHttpRequestAbs.$native.timeout);
+        return $$$cjl359.JSNumber($$xMLHttpRequestAbs.$native.timeout);
         /*End dynamic block*/
     }
     $$xMLHttpRequestAbs.getTimeout=getTimeout;
-    getTimeout.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cjl361.JSNumber},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','getTimeout']};};
-    function setTimeout(timeout$1047){
+    getTimeout.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cjl359.JSNumber},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','getTimeout']};};
+    function setTimeout(timeout$1045){
         
-        var case$1048=timeout$1047;
-        if ($$$cl1.isOfType(timeout$1047,{t:$$$cl1.Integer})) {
+        var case$1046=timeout$1045;
+        if ($$$cl1.isOfType(timeout$1045,{t:$$$cl1.Integer})) {
             /*Begin dynamic block*/
-            $$xMLHttpRequestAbs.$native.timeout=case$1048;
+            $$xMLHttpRequestAbs.$native.timeout=case$1046;
             /*End dynamic block*/
-        }else if ($$$cl1.isOfType(timeout$1047,{t:$$$cjl361.JSNumber})) {
+        }else if ($$$cl1.isOfType(timeout$1045,{t:$$$cjl359.JSNumber})) {
             /*Begin dynamic block*/
-            $$xMLHttpRequestAbs.$native.timeout=case$1048.$native;
+            $$xMLHttpRequestAbs.$native.timeout=case$1046.$native;
             /*End dynamic block*/
         }
     }
     $$xMLHttpRequestAbs.setTimeout=setTimeout;
-    setTimeout.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'timeout',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.Integer},{t:$$$cjl361.JSNumber}]},$an:function(){return[];}}],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','setTimeout']};};
+    setTimeout.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'timeout',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.Integer},{t:$$$cjl359.JSNumber}]},$an:function(){return[];}}],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','setTimeout']};};
     function getWithCredentials(){
         /*Begin dynamic block*/
         if($$xMLHttpRequestAbs.$native.withCredentials){
@@ -782,9 +782,9 @@ function XMLHttpRequestAbs($$xMLHttpRequestAbs){
     }
     $$xMLHttpRequestAbs.getWithCredentials=getWithCredentials;
     getWithCredentials.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Boolean},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','getWithCredentials']};};
-    function setWithCredentials(credentials$1049){
+    function setWithCredentials(credentials$1047){
         /*Begin dynamic block*/
-        $$xMLHttpRequestAbs.$native.withCredentials=credentials$1049;
+        $$xMLHttpRequestAbs.$native.withCredentials=credentials$1047;
         /*End dynamic block*/
     }
     $$xMLHttpRequestAbs.setWithCredentials=setWithCredentials;
@@ -796,39 +796,39 @@ function XMLHttpRequestAbs($$xMLHttpRequestAbs){
     }
     $$xMLHttpRequestAbs.upload=upload;
     upload.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:XMLHttpRequestUpload},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','upload']};};
-    $$xMLHttpRequestAbs.send$defs$data=function(data$1050){return null;};
-    function send(data$1050){
-        if(data$1050===undefined){data$1050=$$xMLHttpRequestAbs.send$defs$data(data$1050);}
+    $$xMLHttpRequestAbs.send$defs$data=function(data$1048){return null;};
+    function send(data$1048){
+        if(data$1048===undefined){data$1048=$$xMLHttpRequestAbs.send$defs$data(data$1048);}
         
-        var case$1051=data$1050;
-        if ($$$cl1.isOfType(data$1050,{t:$$$cjf963.Blob})) {
+        var case$1049=data$1048;
+        if ($$$cl1.isOfType(data$1048,{t:$$$cjf961.Blob})) {
             /*Begin dynamic block*/
-            $$xMLHttpRequestAbs.$native.send(/*NULL PARAM!*/case$1051.$native);
+            $$xMLHttpRequestAbs.$native.send(/*NULL PARAM!*/case$1049.$native);
             /*End dynamic block*/
-        }else if ($$$cl1.isOfType(data$1050,{t:$$$cjd977.Document})) {
+        }else if ($$$cl1.isOfType(data$1048,{t:$$$cjd975.Document})) {
             /*Begin dynamic block*/
-            $$xMLHttpRequestAbs.$native.send(/*NULL PARAM!*/case$1051.$native);
+            $$xMLHttpRequestAbs.$native.send(/*NULL PARAM!*/case$1049.$native);
             /*End dynamic block*/
-        }else if ($$$cl1.isOfType(data$1050,{t:$$$cl1.String})) {
+        }else if ($$$cl1.isOfType(data$1048,{t:$$$cl1.String})) {
             /*Begin dynamic block*/
-            $$xMLHttpRequestAbs.$native.send(/*NULL PARAM!*/case$1051.valueOf());
+            $$xMLHttpRequestAbs.$native.send(/*NULL PARAM!*/case$1049.valueOf());
             /*End dynamic block*/
-        }else if ($$$cl1.isOfType(data$1050,{t:$$$cjl361.JSString})) {
+        }else if ($$$cl1.isOfType(data$1048,{t:$$$cjl359.JSString})) {
             /*Begin dynamic block*/
-            $$xMLHttpRequestAbs.$native.send(/*NULL PARAM!*/case$1051.$native);
+            $$xMLHttpRequestAbs.$native.send(/*NULL PARAM!*/case$1049.$native);
             /*End dynamic block*/
-        }else if ($$$cl1.isOfType(data$1050,{t:FormData})) {
+        }else if ($$$cl1.isOfType(data$1048,{t:FormData})) {
             /*Begin dynamic block*/
-            $$xMLHttpRequestAbs.$native.send(/*NULL PARAM!*/case$1051.$native);
+            $$xMLHttpRequestAbs.$native.send(/*NULL PARAM!*/case$1049.$native);
             /*End dynamic block*/
-        }else if ($$$cl1.isOfType(data$1050,{t:$$$cl1.Null})) {
+        }else if ($$$cl1.isOfType(data$1048,{t:$$$cl1.Null})) {
             /*Begin dynamic block*/
             $$xMLHttpRequestAbs.$native.send();
             /*End dynamic block*/
         }
     }
     $$xMLHttpRequestAbs.send=send;
-    send.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'data',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cjf963.Blob},{t:$$$cjd977.Document},{t:$$$cl1.String},{t:$$$cjl361.JSString},{ t:'u', l:[{t:$$$cl1.Null},{t:FormData}]}]},$an:function(){return[];}}],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','send']};};
+    send.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'data',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cjf961.Blob},{t:$$$cjd975.Document},{t:$$$cl1.String},{t:$$$cjl359.JSString},{ t:'u', l:[{t:$$$cl1.Null},{t:FormData}]}]},$an:function(){return[];}}],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','send']};};
     function abort(){
         /*Begin dynamic block*/
         $$xMLHttpRequestAbs.$native.abort();
@@ -838,80 +838,80 @@ function XMLHttpRequestAbs($$xMLHttpRequestAbs){
     abort.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','abort']};};
     function status(){
         /*Begin dynamic block*/
-        return $$$cjl361.JSNumber($$xMLHttpRequestAbs.$native.status);
+        return $$$cjl359.JSNumber($$xMLHttpRequestAbs.$native.status);
         /*End dynamic block*/
     }
     $$xMLHttpRequestAbs.status=status;
-    status.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cjl361.JSNumber},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','status']};};
+    status.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cjl359.JSNumber},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','status']};};
     function statusText(){
         /*Begin dynamic block*/
-        return $$$cjl361.JSString($$xMLHttpRequestAbs.$native.statusText);
+        return $$$cjl359.JSString($$xMLHttpRequestAbs.$native.statusText);
         /*End dynamic block*/
     }
     $$xMLHttpRequestAbs.statusText=statusText;
-    statusText.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cjl361.JSString},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','statusText']};};
-    function getResponseHeader(header$1052){
+    statusText.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cjl359.JSString},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','statusText']};};
+    function getResponseHeader(header$1050){
         /*Begin dynamic block*/
-        var rheader$1053;
-        $prop$getRheader$1053={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','getResponseHeader','$at','rheader']};}};
-        $prop$getRheader$1053.get=function(){return rheader$1053};
+        var rheader$1051;
+        $prop$getRheader$1051={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','getResponseHeader','$at','rheader']};}};
+        $prop$getRheader$1051.get=function(){return rheader$1051};
         
-        var case$1054=header$1052;
-        if ($$$cl1.isOfType(header$1052,{t:$$$cl1.String})) {
-            rheader$1053=$$xMLHttpRequestAbs.$native.getResponseHeader(/*NULL PARAM!*/case$1054.valueOf());
-        }else if ($$$cl1.isOfType(header$1052,{t:$$$cjl361.JSString})) {
-            rheader$1053=$$xMLHttpRequestAbs.$native.getResponseHeader(/*NULL PARAM!*/case$1054.$native);
-        }if((tmpvar$1055=rheader$1053,tmpvar$1056=null,(tmpvar$1055.equals&&!tmpvar$1055.equals(tmpvar$1056))||tmpvar$1055!==tmpvar$1056)){
-            return $$$cjl361.JSString(rheader$1053);
+        var case$1052=header$1050;
+        if ($$$cl1.isOfType(header$1050,{t:$$$cl1.String})) {
+            rheader$1051=$$xMLHttpRequestAbs.$native.getResponseHeader(/*NULL PARAM!*/case$1052.valueOf());
+        }else if ($$$cl1.isOfType(header$1050,{t:$$$cjl359.JSString})) {
+            rheader$1051=$$xMLHttpRequestAbs.$native.getResponseHeader(/*NULL PARAM!*/case$1052.$native);
+        }if((tmpvar$1053=rheader$1051,tmpvar$1054=null,(tmpvar$1053.equals&&!tmpvar$1053.equals(tmpvar$1054))||tmpvar$1053!==tmpvar$1054)){
+            return $$$cjl359.JSString(rheader$1051);
         }else {
             return null;
         }/*End dynamic block*/
     }
     $$xMLHttpRequestAbs.getResponseHeader=getResponseHeader;
-    getResponseHeader.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjl361.JSString}]},$ps:[{$nm:'header',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl361.JSString}]},$an:function(){return[];}}],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','getResponseHeader']};};
+    getResponseHeader.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjl359.JSString}]},$ps:[{$nm:'header',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl359.JSString}]},$an:function(){return[];}}],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','getResponseHeader']};};
     function getAllResponseHeaders(){
         /*Begin dynamic block*/
-        var rheaders$1057=$$xMLHttpRequestAbs.$native.getAllResponseHeaders();
-        $prop$getRheaders$1057={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','getAllResponseHeaders','$at','rheaders']};}};
-        $prop$getRheaders$1057.get=function(){return rheaders$1057};
-        if((tmpvar$1058=rheaders$1057,tmpvar$1059=null,(tmpvar$1058.equals&&!tmpvar$1058.equals(tmpvar$1059))||tmpvar$1058!==tmpvar$1059)){
-            return $$$cjl361.JSString(rheaders$1057);
+        var rheaders$1055=$$xMLHttpRequestAbs.$native.getAllResponseHeaders();
+        $prop$getRheaders$1055={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','getAllResponseHeaders','$at','rheaders']};}};
+        $prop$getRheaders$1055.get=function(){return rheaders$1055};
+        if((tmpvar$1056=rheaders$1055,tmpvar$1057=null,(tmpvar$1056.equals&&!tmpvar$1056.equals(tmpvar$1057))||tmpvar$1056!==tmpvar$1057)){
+            return $$$cjl359.JSString(rheaders$1055);
         }else {
             return null;
         }/*End dynamic block*/
     }
     $$xMLHttpRequestAbs.getAllResponseHeaders=getAllResponseHeaders;
-    getAllResponseHeaders.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjl361.JSString}]},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','getAllResponseHeaders']};};
-    function overrideMimeType(mime$1060){
+    getAllResponseHeaders.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjl359.JSString}]},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','getAllResponseHeaders']};};
+    function overrideMimeType(mime$1058){
         
-        var case$1061=mime$1060;
-        if ($$$cl1.isOfType(mime$1060,{t:$$$cl1.String})) {
+        var case$1059=mime$1058;
+        if ($$$cl1.isOfType(mime$1058,{t:$$$cl1.String})) {
             /*Begin dynamic block*/
-            $$xMLHttpRequestAbs.$native.overrideMimeType(/*NULL PARAM!*/case$1061.valueOf());
+            $$xMLHttpRequestAbs.$native.overrideMimeType(/*NULL PARAM!*/case$1059.valueOf());
             /*End dynamic block*/
-        }else if ($$$cl1.isOfType(mime$1060,{t:$$$cjl361.JSString})) {
+        }else if ($$$cl1.isOfType(mime$1058,{t:$$$cjl359.JSString})) {
             /*Begin dynamic block*/
-            $$xMLHttpRequestAbs.$native.overrideMimeType(/*NULL PARAM!*/case$1061.$native);
+            $$xMLHttpRequestAbs.$native.overrideMimeType(/*NULL PARAM!*/case$1059.$native);
             /*End dynamic block*/
         }
     }
     $$xMLHttpRequestAbs.overrideMimeType=overrideMimeType;
-    overrideMimeType.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'mime',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl361.JSString}]},$an:function(){return[];}}],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','overrideMimeType']};};
+    overrideMimeType.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'mime',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:$$$cjl359.JSString}]},$an:function(){return[];}}],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','overrideMimeType']};};
     function getResponseType(){
         /*Begin dynamic block*/
-        if((tmpvar$1062=$$xMLHttpRequestAbs.$native.responseType,tmpvar$1063=$$$cl1.String("",0),(tmpvar$1062.equals&&tmpvar$1062.equals(tmpvar$1063))||tmpvar$1062===tmpvar$1063)){
+        if((tmpvar$1060=$$xMLHttpRequestAbs.$native.responseType,tmpvar$1061=$$$cl1.String("",0),(tmpvar$1060.equals&&tmpvar$1060.equals(tmpvar$1061))||tmpvar$1060===tmpvar$1061)){
             return getBlank();
         }else {
-            if((tmpvar$1064=$$xMLHttpRequestAbs.$native.responseType,tmpvar$1065=$$$cl1.String("arraybuffer",11),(tmpvar$1064.equals&&tmpvar$1064.equals(tmpvar$1065))||tmpvar$1064===tmpvar$1065)){
+            if((tmpvar$1062=$$xMLHttpRequestAbs.$native.responseType,tmpvar$1063=$$$cl1.String("arraybuffer",11),(tmpvar$1062.equals&&tmpvar$1062.equals(tmpvar$1063))||tmpvar$1062===tmpvar$1063)){
                 return getArraybuffer();
             }else {
-                if((tmpvar$1066=$$xMLHttpRequestAbs.$native.responseType,tmpvar$1067=$$$cl1.String("blob",4),(tmpvar$1066.equals&&tmpvar$1066.equals(tmpvar$1067))||tmpvar$1066===tmpvar$1067)){
+                if((tmpvar$1064=$$xMLHttpRequestAbs.$native.responseType,tmpvar$1065=$$$cl1.String("blob",4),(tmpvar$1064.equals&&tmpvar$1064.equals(tmpvar$1065))||tmpvar$1064===tmpvar$1065)){
                     return getBlob();
                 }else {
-                    if((tmpvar$1068=$$xMLHttpRequestAbs.$native.responseType,tmpvar$1069=$$$cl1.String("document",8),(tmpvar$1068.equals&&tmpvar$1068.equals(tmpvar$1069))||tmpvar$1068===tmpvar$1069)){
+                    if((tmpvar$1066=$$xMLHttpRequestAbs.$native.responseType,tmpvar$1067=$$$cl1.String("document",8),(tmpvar$1066.equals&&tmpvar$1066.equals(tmpvar$1067))||tmpvar$1066===tmpvar$1067)){
                         return getDocument();
                     }else {
-                        if((tmpvar$1070=$$xMLHttpRequestAbs.$native.responseType,tmpvar$1071=$$$cl1.String("json",4),(tmpvar$1070.equals&&tmpvar$1070.equals(tmpvar$1071))||tmpvar$1070===tmpvar$1071)){
+                        if((tmpvar$1068=$$xMLHttpRequestAbs.$native.responseType,tmpvar$1069=$$$cl1.String("json",4),(tmpvar$1068.equals&&tmpvar$1068.equals(tmpvar$1069))||tmpvar$1068===tmpvar$1069)){
                             return getJson();
                         }else {
                             return getText();
@@ -923,61 +923,61 @@ function XMLHttpRequestAbs($$xMLHttpRequestAbs){
     }
     $$xMLHttpRequestAbs.getResponseType=getResponseType;
     getResponseType.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:XMLHttpRequestResponseType},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','getResponseType']};};
-    function setResponseType(responseType$1072){
+    function setResponseType(responseType$1070){
         /*Begin dynamic block*/
-        $$xMLHttpRequestAbs.$native.responseType=responseType$1072.string.valueOf();
+        $$xMLHttpRequestAbs.$native.responseType=responseType$1070.string.valueOf();
         /*End dynamic block*/
     }
     $$xMLHttpRequestAbs.setResponseType=setResponseType;
     setResponseType.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'responseType',$mt:'prm',$t:{t:XMLHttpRequestResponseType},$an:function(){return[];}}],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','setResponseType']};};
     function response(){
         /*Begin dynamic block*/
-        return (tmpvar$1073=$$xMLHttpRequestAbs.$native.response,$$$cl1.isOfType(tmpvar$1073,{t:$$$cl1.Anything})?tmpvar$1073:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'506:10-506:24','xmlhttprequest.ceylon'));
+        return (tmpvar$1071=$$xMLHttpRequestAbs.$native.response,$$$cl1.isOfType(tmpvar$1071,{t:$$$cl1.Anything})?tmpvar$1071:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'506:10-506:24','xmlhttprequest.ceylon'));
         /*End dynamic block*/
     }
     $$xMLHttpRequestAbs.response=response;
     response.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','response']};};
     function responseText(){
         /*Begin dynamic block*/
-        return $$$cjl361.JSString($$xMLHttpRequestAbs.$native.responseText);
+        return $$$cjl359.JSString($$xMLHttpRequestAbs.$native.responseText);
         /*End dynamic block*/
     }
     $$xMLHttpRequestAbs.responseText=responseText;
-    responseText.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cjl361.JSString},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','responseText']};};
+    responseText.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cjl359.JSString},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','responseText']};};
     function responseXML(){
         /*Begin dynamic block*/
-        var responseXML$1074=$$xMLHttpRequestAbs.$native.responseXML;
-        $prop$getResponseXML$1074={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','responseXML','$at','responseXML']};}};
-        $prop$getResponseXML$1074.get=function(){return responseXML$1074};
-        if((tmpvar$1075=responseXML$1074,tmpvar$1076=null,(tmpvar$1075.equals&&!tmpvar$1075.equals(tmpvar$1076))||tmpvar$1075!==tmpvar$1076)){
-            return $$$cjd977.Document(responseXML$1074);
+        var responseXML$1072=$$xMLHttpRequestAbs.$native.responseXML;
+        $prop$getResponseXML$1072={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','responseXML','$at','responseXML']};}};
+        $prop$getResponseXML$1072.get=function(){return responseXML$1072};
+        if((tmpvar$1073=responseXML$1072,tmpvar$1074=null,(tmpvar$1073.equals&&!tmpvar$1073.equals(tmpvar$1074))||tmpvar$1073!==tmpvar$1074)){
+            return $$$cjd975.Document(responseXML$1072);
         }else {
             return null;
         }/*End dynamic block*/
     }
     $$xMLHttpRequestAbs.responseXML=responseXML;
-    responseXML.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjd977.Document}]},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','responseXML']};};
+    responseXML.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cjd975.Document}]},$ps:[],$cont:XMLHttpRequestAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs','$m','responseXML']};};
     return $$xMLHttpRequestAbs;
 }
-XMLHttpRequestAbs.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:$$$cjl361.JSObjectAbs},satisfies:[],$an:function(){return[$$$cl1.shared(),$$$cl1.abstract()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs']};};
+XMLHttpRequestAbs.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:$$$cjl359.JSObjectAbs},satisfies:[],$an:function(){return[$$$cl1.shared(),$$$cl1.abstract()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestAbs']};};
 exports.XMLHttpRequestAbs=XMLHttpRequestAbs;
 function $init$XMLHttpRequestAbs(){
     if (XMLHttpRequestAbs.$$===undefined){
-        $$$cl1.initTypeProto(XMLHttpRequestAbs,'ceylon.js.xmlhttprequest::XMLHttpRequestAbs',$$$cjl361.JSObjectAbs);
+        $$$cl1.initTypeProto(XMLHttpRequestAbs,'ceylon.js.xmlhttprequest::XMLHttpRequestAbs',$$$cjl359.JSObjectAbs);
     }
     return XMLHttpRequestAbs;
 }
 exports.$init$XMLHttpRequestAbs=$init$XMLHttpRequestAbs;
 $init$XMLHttpRequestAbs();
-function XMLHttpRequest(n$1077, $$xMLHttpRequest){
+function XMLHttpRequest(n$1075, $$xMLHttpRequest){
     $init$XMLHttpRequest();
     if ($$xMLHttpRequest===undefined)$$xMLHttpRequest=new XMLHttpRequest.$$;
-    $$xMLHttpRequest.n$1077_=n$1077;
+    $$xMLHttpRequest.n$1075_=n$1075;
     XMLHttpRequestAbs($$xMLHttpRequest);
-    $$$cl1.defineAttr($$xMLHttpRequest,'n$1077',function(){return this.n$1077_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:XMLHttpRequest,d:['ceylon.js.xmlhttprequest','XMLHttpRequest','$at','n']};});
+    $$$cl1.defineAttr($$xMLHttpRequest,'n$1075',function(){return this.n$1075_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:XMLHttpRequest,d:['ceylon.js.xmlhttprequest','XMLHttpRequest','$at','n']};});
     $$xMLHttpRequest.$prop$getNative={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:XMLHttpRequest,$an:function(){return[$$$cl1.shared(),$$$cl1.actual()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequest','$at','native']};}};
     /*Begin dynamic block*/
-    $$xMLHttpRequest.$native=n$1077;/*End dynamic block*/
+    $$xMLHttpRequest.$native=n$1075;/*End dynamic block*/
     return $$xMLHttpRequest;
 }
 XMLHttpRequest.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:XMLHttpRequestAbs},satisfies:[],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequest']};};
@@ -993,126 +993,126 @@ $init$XMLHttpRequest();
 function XMLHttpRequestEventTargetAbs($$xMLHttpRequestEventTargetAbs){
     $init$XMLHttpRequestEventTargetAbs();
     if ($$xMLHttpRequestEventTargetAbs===undefined)$$$cl1.throwexc($$$cl1.InvocationException$meta$model($$$cl1.String("Cannot instantiate abstract class")),'?','?')
-    $$$cjd977.EventTargetAbs($$xMLHttpRequestEventTargetAbs);
+    $$$cjd975.EventTargetAbs($$xMLHttpRequestEventTargetAbs);
     function getOnloadstart(){
         /*Begin dynamic block*/
-        return (tmpvar$1078=$$xMLHttpRequestEventTargetAbs.$native.onloadstart,$$$cl1.isOfType(tmpvar$1078,{t:$$$cl1.Anything})?tmpvar$1078:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'8:10-8:27','xmlhttprequestevent.ceylon'));
+        return (tmpvar$1076=$$xMLHttpRequestEventTargetAbs.$native.onloadstart,$$$cl1.isOfType(tmpvar$1076,{t:$$$cl1.Anything})?tmpvar$1076:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'8:10-8:27','xmlhttprequestevent.ceylon'));
         /*End dynamic block*/
     }
     $$xMLHttpRequestEventTargetAbs.getOnloadstart=getOnloadstart;
     getOnloadstart.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],$cont:XMLHttpRequestEventTargetAbs,$an:function(){return[$$$cl1.doc($$$cl1.String("returns a function Anything(Event event)",40)),$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTargetAbs','$m','getOnloadstart']};};
-    function setOnloadstart(handler$1079){
+    function setOnloadstart(handler$1077){
         /*Begin dynamic block*/
-        $$xMLHttpRequestEventTargetAbs.$native.onloadstart=$$$cl1.$JsCallable(handler$1079/*TODO: callable targs 6*/);
+        $$xMLHttpRequestEventTargetAbs.$native.onloadstart=$$$cl1.$JsCallable(handler$1077/*TODO: callable targs 6*/);
         /*End dynamic block*/
     }
     $$xMLHttpRequestEventTargetAbs.setOnloadstart=setOnloadstart;
     setOnloadstart.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'handler',$mt:'prm',$pt:'f',$t:{t:$$$cl1.Anything},$an:function(){return[];}}],$cont:XMLHttpRequestEventTargetAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTargetAbs','$m','setOnloadstart']};};
     function getOnprogress(){
         /*Begin dynamic block*/
-        return (tmpvar$1080=$$xMLHttpRequestEventTargetAbs.$native.onprogress,$$$cl1.isOfType(tmpvar$1080,{t:$$$cl1.Anything})?tmpvar$1080:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'21:10-21:26','xmlhttprequestevent.ceylon'));
+        return (tmpvar$1078=$$xMLHttpRequestEventTargetAbs.$native.onprogress,$$$cl1.isOfType(tmpvar$1078,{t:$$$cl1.Anything})?tmpvar$1078:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'21:10-21:26','xmlhttprequestevent.ceylon'));
         /*End dynamic block*/
     }
     $$xMLHttpRequestEventTargetAbs.getOnprogress=getOnprogress;
     getOnprogress.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],$cont:XMLHttpRequestEventTargetAbs,$an:function(){return[$$$cl1.doc($$$cl1.String("returns a function Anything(Event event)",40)),$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTargetAbs','$m','getOnprogress']};};
-    function setOnprogress(handler$1081){
+    function setOnprogress(handler$1079){
         /*Begin dynamic block*/
-        $$xMLHttpRequestEventTargetAbs.$native.onprogress=$$$cl1.$JsCallable(handler$1081/*TODO: callable targs 6*/);
+        $$xMLHttpRequestEventTargetAbs.$native.onprogress=$$$cl1.$JsCallable(handler$1079/*TODO: callable targs 6*/);
         /*End dynamic block*/
     }
     $$xMLHttpRequestEventTargetAbs.setOnprogress=setOnprogress;
     setOnprogress.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'handler',$mt:'prm',$pt:'f',$t:{t:$$$cl1.Anything},$an:function(){return[];}}],$cont:XMLHttpRequestEventTargetAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTargetAbs','$m','setOnprogress']};};
     function getOnabort(){
         /*Begin dynamic block*/
-        return (tmpvar$1082=$$xMLHttpRequestEventTargetAbs.$native.onabort,$$$cl1.isOfType(tmpvar$1082,{t:$$$cl1.Anything})?tmpvar$1082:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'34:10-34:23','xmlhttprequestevent.ceylon'));
+        return (tmpvar$1080=$$xMLHttpRequestEventTargetAbs.$native.onabort,$$$cl1.isOfType(tmpvar$1080,{t:$$$cl1.Anything})?tmpvar$1080:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'34:10-34:23','xmlhttprequestevent.ceylon'));
         /*End dynamic block*/
     }
     $$xMLHttpRequestEventTargetAbs.getOnabort=getOnabort;
     getOnabort.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],$cont:XMLHttpRequestEventTargetAbs,$an:function(){return[$$$cl1.doc($$$cl1.String("returns a function Anything(Event event)",40)),$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTargetAbs','$m','getOnabort']};};
-    function setOnabort(handler$1083){
+    function setOnabort(handler$1081){
         /*Begin dynamic block*/
-        $$xMLHttpRequestEventTargetAbs.$native.onabort=$$$cl1.$JsCallable(handler$1083/*TODO: callable targs 6*/);
+        $$xMLHttpRequestEventTargetAbs.$native.onabort=$$$cl1.$JsCallable(handler$1081/*TODO: callable targs 6*/);
         /*End dynamic block*/
     }
     $$xMLHttpRequestEventTargetAbs.setOnabort=setOnabort;
     setOnabort.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'handler',$mt:'prm',$pt:'f',$t:{t:$$$cl1.Anything},$an:function(){return[];}}],$cont:XMLHttpRequestEventTargetAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTargetAbs','$m','setOnabort']};};
     function getOnerror(){
         /*Begin dynamic block*/
-        return (tmpvar$1084=$$xMLHttpRequestEventTargetAbs.$native.onerror,$$$cl1.isOfType(tmpvar$1084,{t:$$$cl1.Anything})?tmpvar$1084:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'47:10-47:23','xmlhttprequestevent.ceylon'));
+        return (tmpvar$1082=$$xMLHttpRequestEventTargetAbs.$native.onerror,$$$cl1.isOfType(tmpvar$1082,{t:$$$cl1.Anything})?tmpvar$1082:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'47:10-47:23','xmlhttprequestevent.ceylon'));
         /*End dynamic block*/
     }
     $$xMLHttpRequestEventTargetAbs.getOnerror=getOnerror;
     getOnerror.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],$cont:XMLHttpRequestEventTargetAbs,$an:function(){return[$$$cl1.doc($$$cl1.String("returns a function Anything(Event event)",40)),$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTargetAbs','$m','getOnerror']};};
-    function setOnerror(handler$1085){
+    function setOnerror(handler$1083){
         /*Begin dynamic block*/
-        $$xMLHttpRequestEventTargetAbs.$native.onerror=$$$cl1.$JsCallable(handler$1085/*TODO: callable targs 6*/);
+        $$xMLHttpRequestEventTargetAbs.$native.onerror=$$$cl1.$JsCallable(handler$1083/*TODO: callable targs 6*/);
         /*End dynamic block*/
     }
     $$xMLHttpRequestEventTargetAbs.setOnerror=setOnerror;
     setOnerror.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'handler',$mt:'prm',$pt:'f',$t:{t:$$$cl1.Anything},$an:function(){return[];}}],$cont:XMLHttpRequestEventTargetAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTargetAbs','$m','setOnerror']};};
     function getOnload(){
         /*Begin dynamic block*/
-        return (tmpvar$1086=$$xMLHttpRequestEventTargetAbs.$native.onload,$$$cl1.isOfType(tmpvar$1086,{t:$$$cl1.Anything})?tmpvar$1086:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'60:10-60:22','xmlhttprequestevent.ceylon'));
+        return (tmpvar$1084=$$xMLHttpRequestEventTargetAbs.$native.onload,$$$cl1.isOfType(tmpvar$1084,{t:$$$cl1.Anything})?tmpvar$1084:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'60:10-60:22','xmlhttprequestevent.ceylon'));
         /*End dynamic block*/
     }
     $$xMLHttpRequestEventTargetAbs.getOnload=getOnload;
     getOnload.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],$cont:XMLHttpRequestEventTargetAbs,$an:function(){return[$$$cl1.doc($$$cl1.String("returns a function Anything(Event event)",40)),$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTargetAbs','$m','getOnload']};};
-    function setOnload(handler$1087){
+    function setOnload(handler$1085){
         /*Begin dynamic block*/
-        $$xMLHttpRequestEventTargetAbs.$native.onload=$$$cl1.$JsCallable(handler$1087/*TODO: callable targs 6*/);
+        $$xMLHttpRequestEventTargetAbs.$native.onload=$$$cl1.$JsCallable(handler$1085/*TODO: callable targs 6*/);
         /*End dynamic block*/
     }
     $$xMLHttpRequestEventTargetAbs.setOnload=setOnload;
     setOnload.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'handler',$mt:'prm',$pt:'f',$t:{t:$$$cl1.Anything},$an:function(){return[];}}],$cont:XMLHttpRequestEventTargetAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTargetAbs','$m','setOnload']};};
     function getOntimeout(){
         /*Begin dynamic block*/
-        return (tmpvar$1088=$$xMLHttpRequestEventTargetAbs.$native.ontimeout,$$$cl1.isOfType(tmpvar$1088,{t:$$$cl1.Anything})?tmpvar$1088:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'73:10-73:25','xmlhttprequestevent.ceylon'));
+        return (tmpvar$1086=$$xMLHttpRequestEventTargetAbs.$native.ontimeout,$$$cl1.isOfType(tmpvar$1086,{t:$$$cl1.Anything})?tmpvar$1086:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'73:10-73:25','xmlhttprequestevent.ceylon'));
         /*End dynamic block*/
     }
     $$xMLHttpRequestEventTargetAbs.getOntimeout=getOntimeout;
     getOntimeout.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],$cont:XMLHttpRequestEventTargetAbs,$an:function(){return[$$$cl1.doc($$$cl1.String("returns a function Anything(Event event)",40)),$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTargetAbs','$m','getOntimeout']};};
-    function setOntimeout(handler$1089){
+    function setOntimeout(handler$1087){
         /*Begin dynamic block*/
-        $$xMLHttpRequestEventTargetAbs.$native.ontimeout=$$$cl1.$JsCallable(handler$1089/*TODO: callable targs 6*/);
+        $$xMLHttpRequestEventTargetAbs.$native.ontimeout=$$$cl1.$JsCallable(handler$1087/*TODO: callable targs 6*/);
         /*End dynamic block*/
     }
     $$xMLHttpRequestEventTargetAbs.setOntimeout=setOntimeout;
     setOntimeout.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'handler',$mt:'prm',$pt:'f',$t:{t:$$$cl1.Anything},$an:function(){return[];}}],$cont:XMLHttpRequestEventTargetAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTargetAbs','$m','setOntimeout']};};
     function getOnloadend(){
         /*Begin dynamic block*/
-        return (tmpvar$1090=$$xMLHttpRequestEventTargetAbs.$native.onloadend,$$$cl1.isOfType(tmpvar$1090,{t:$$$cl1.Anything})?tmpvar$1090:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'86:10-86:25','xmlhttprequestevent.ceylon'));
+        return (tmpvar$1088=$$xMLHttpRequestEventTargetAbs.$native.onloadend,$$$cl1.isOfType(tmpvar$1088,{t:$$$cl1.Anything})?tmpvar$1088:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'86:10-86:25','xmlhttprequestevent.ceylon'));
         /*End dynamic block*/
     }
     $$xMLHttpRequestEventTargetAbs.getOnloadend=getOnloadend;
     getOnloadend.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[],$cont:XMLHttpRequestEventTargetAbs,$an:function(){return[$$$cl1.doc($$$cl1.String("returns a function Anything(Event event)",40)),$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTargetAbs','$m','getOnloadend']};};
-    function setOnloadend(handler$1091){
+    function setOnloadend(handler$1089){
         /*Begin dynamic block*/
-        $$xMLHttpRequestEventTargetAbs.$native.onloadend=$$$cl1.$JsCallable(handler$1091/*TODO: callable targs 6*/);
+        $$xMLHttpRequestEventTargetAbs.$native.onloadend=$$$cl1.$JsCallable(handler$1089/*TODO: callable targs 6*/);
         /*End dynamic block*/
     }
     $$xMLHttpRequestEventTargetAbs.setOnloadend=setOnloadend;
     setOnloadend.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'handler',$mt:'prm',$pt:'f',$t:{t:$$$cl1.Anything},$an:function(){return[];}}],$cont:XMLHttpRequestEventTargetAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTargetAbs','$m','setOnloadend']};};
     return $$xMLHttpRequestEventTargetAbs;
 }
-XMLHttpRequestEventTargetAbs.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:$$$cjd977.EventTargetAbs},satisfies:[],$an:function(){return[$$$cl1.shared(),$$$cl1.abstract()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTargetAbs']};};
+XMLHttpRequestEventTargetAbs.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:$$$cjd975.EventTargetAbs},satisfies:[],$an:function(){return[$$$cl1.shared(),$$$cl1.abstract()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTargetAbs']};};
 exports.XMLHttpRequestEventTargetAbs=XMLHttpRequestEventTargetAbs;
 function $init$XMLHttpRequestEventTargetAbs(){
     if (XMLHttpRequestEventTargetAbs.$$===undefined){
-        $$$cl1.initTypeProto(XMLHttpRequestEventTargetAbs,'ceylon.js.xmlhttprequest::XMLHttpRequestEventTargetAbs',$$$cjd977.EventTargetAbs);
+        $$$cl1.initTypeProto(XMLHttpRequestEventTargetAbs,'ceylon.js.xmlhttprequest::XMLHttpRequestEventTargetAbs',$$$cjd975.EventTargetAbs);
     }
     return XMLHttpRequestEventTargetAbs;
 }
 exports.$init$XMLHttpRequestEventTargetAbs=$init$XMLHttpRequestEventTargetAbs;
 $init$XMLHttpRequestEventTargetAbs();
-function XMLHttpRequestEventTarget(n$1092, $$xMLHttpRequestEventTarget){
+function XMLHttpRequestEventTarget(n$1090, $$xMLHttpRequestEventTarget){
     $init$XMLHttpRequestEventTarget();
     if ($$xMLHttpRequestEventTarget===undefined)$$xMLHttpRequestEventTarget=new XMLHttpRequestEventTarget.$$;
-    $$xMLHttpRequestEventTarget.n$1092_=n$1092;
+    $$xMLHttpRequestEventTarget.n$1090_=n$1090;
     XMLHttpRequestEventTargetAbs($$xMLHttpRequestEventTarget);
-    $$$cl1.defineAttr($$xMLHttpRequestEventTarget,'n$1092',function(){return this.n$1092_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:XMLHttpRequestEventTarget,d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTarget','$at','n']};});
+    $$$cl1.defineAttr($$xMLHttpRequestEventTarget,'n$1090',function(){return this.n$1090_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:XMLHttpRequestEventTarget,d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTarget','$at','n']};});
     $$xMLHttpRequestEventTarget.$prop$getNative={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:XMLHttpRequestEventTarget,$an:function(){return[$$$cl1.shared(),$$$cl1.actual()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTarget','$at','native']};}};
     /*Begin dynamic block*/
-    $$xMLHttpRequestEventTarget.$native=n$1092;/*End dynamic block*/
+    $$xMLHttpRequestEventTarget.$native=n$1090;/*End dynamic block*/
     return $$xMLHttpRequestEventTarget;
 }
 XMLHttpRequestEventTarget.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:XMLHttpRequestEventTargetAbs},satisfies:[],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestEventTarget']};};
@@ -1141,14 +1141,14 @@ function $init$XMLHttpRequestUploadAbs(){
 }
 exports.$init$XMLHttpRequestUploadAbs=$init$XMLHttpRequestUploadAbs;
 $init$XMLHttpRequestUploadAbs();
-function XMLHttpRequestUpload(n$1093, $$xMLHttpRequestUpload){
+function XMLHttpRequestUpload(n$1091, $$xMLHttpRequestUpload){
     $init$XMLHttpRequestUpload();
     if ($$xMLHttpRequestUpload===undefined)$$xMLHttpRequestUpload=new XMLHttpRequestUpload.$$;
-    $$xMLHttpRequestUpload.n$1093_=n$1093;
+    $$xMLHttpRequestUpload.n$1091_=n$1091;
     XMLHttpRequestUploadAbs($$xMLHttpRequestUpload);
-    $$$cl1.defineAttr($$xMLHttpRequestUpload,'n$1093',function(){return this.n$1093_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:XMLHttpRequestUpload,d:['ceylon.js.xmlhttprequest','XMLHttpRequestUpload','$at','n']};});
+    $$$cl1.defineAttr($$xMLHttpRequestUpload,'n$1091',function(){return this.n$1091_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:XMLHttpRequestUpload,d:['ceylon.js.xmlhttprequest','XMLHttpRequestUpload','$at','n']};});
     /*Begin dynamic block*/
-    $$xMLHttpRequestUpload.$native=n$1093;/*End dynamic block*/
+    $$xMLHttpRequestUpload.$native=n$1091;/*End dynamic block*/
     return $$xMLHttpRequestUpload;
 }
 XMLHttpRequestUpload.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:XMLHttpRequestUploadAbs},satisfies:[],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.xmlhttprequest','XMLHttpRequestUpload']};};

@@ -1,16 +1,15 @@
 (function(define) { define(function(require, exports, module) {
-var $$METAMODEL$$={"$mod-deps":["ceylon.language\/0.6.1"],"$mod-name":"ceylon.js.language","$mod-version":"1.8.5","ceylon.js.language":{"PropertyDescriptor":{"abstract":"1","super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"toNative":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"mthd","$an":{"shared":[],"formal":[]},"$nm":"toNative"}},"$at":{"configurable":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"formal":[]},"$nm":"configurable"},"descriptor":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"formal":[]},"$nm":"descriptor"},"enumerable":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"formal":[]},"$nm":"enumerable"}},"$nm":"PropertyDescriptor"},"defineProperties":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"},{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"String"},{"comp":"u","$mt":"tpm","$ts":[{"$pk":"ceylon.js.language","$nm":"DataDescriptor"},{"$pk":"ceylon.js.language","$nm":"AccessorDescriptor"}]}],"$pk":"ceylon.language","$nm":"Entry"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","$nm":"properties"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"defineProperties"},"mathLog10":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"mathLog10"},"objectIsSealed":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectIsSealed"},"mathRoot2":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"mathRoot2"},"Math":{"super":{"$pk":"ceylon.js.language","$nm":"MathAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"Math"},"objectIsFrozen":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectIsFrozen"},"objectDefineProperty":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"prop"},{"$t":{"comp":"u","$ts":[{"$pk":"ceylon.js.language","$nm":"DataDescriptor"},{"$pk":"ceylon.js.language","$nm":"AccessorDescriptor"}]},"$mt":"prm","$nm":"descriptor"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectDefineProperty"},"RegExp":{"super":{"$pk":"ceylon.js.language","$nm":"RegExpAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"RegExp"},"dateUTC":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"year"},{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"month"},{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"day"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"hour"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"minute"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"second"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"milli"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"dateUTC"},"createJSDateYMDInt":{"$t":{"$pk":"ceylon.js.language","$nm":"JSDate"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"year"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"month"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"day"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$def":"1","$nm":"hour"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$def":"1","$nm":"minute"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$def":"1","$nm":"second"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$def":"1","$nm":"milli"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSDateYMDInt"},"JSString":{"super":{"$pk":"ceylon.js.language","$nm":"JSStringAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"JSString"},"createJSObject":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSObject"},"createJSNumber":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Float"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"}]},"$mt":"prm","$nm":"val"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSNumber"},"$pkg-shared":"1","JSDateAbs":{"abstract":"1","super":{"$pk":"ceylon.js.language","$nm":"JSObjectAbs"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"toLocaleDateString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toLocaleDateString"},"toLocaleString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toLocaleString"},"getSeconds":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getSeconds"},"getUTCSeconds":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getUTCSeconds"},"getUTCMonth":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getUTCMonth"},"toUTCString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toUTCString"},"setUTCFullYear":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"year"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setUTCFullYear"},"getFullYear":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getFullYear"},"getHours":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getHours"},"setUTCHours":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"hours"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setUTCHours"},"getTimezoneOffset":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getTimezoneOffset"},"getDay":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getDay"},"setMinutes":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"minutes"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setMinutes"},"toISOString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toISOString"},"setMilliseconds":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"milli"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setMilliseconds"},"getUTCHours":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getUTCHours"},"setTime":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"milli"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setTime"},"toLocaleTimeString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toLocaleTimeString"},"getUTCDate":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getUTCDate"},"toTimeString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toTimeString"},"setUTCMilliseconds":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"milli"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setUTCMilliseconds"},"setSeconds":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"seconds"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setSeconds"},"setUTCMinutes":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"minutes"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setUTCMinutes"},"setMonth":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"month"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setMonth"},"toDateString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toDateString"},"setUTCSeconds":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"seconds"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setUTCSeconds"},"getUTCMinutes":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getUTCMinutes"},"setDate":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"day"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setDate"},"getDate":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getDate"},"setFullYear":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"year"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setFullYear"},"getTime":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getTime"},"toJSON":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toJSON"},"setHours":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"hour"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setHours"},"getMonth":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getMonth"},"getUTCFullYear":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getUTCFullYear"},"getUTCDay":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getUTCDay"},"getUTCMilliseconds":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getUTCMilliseconds"},"setUTCMonth":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"month"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setUTCMonth"},"setUTCDate":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"day"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setUTCDate"},"getMilliseconds":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getMilliseconds"},"getMinutes":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getMinutes"}},"$nm":"JSDateAbs"},"objectGetOwnPropertyDescriptor":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"prop"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectGetOwnPropertyDescriptor"},"createJSDate":{"$t":{"$pk":"ceylon.js.language","$nm":"JSDate"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"val"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSDate"},"objectKeys":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectKeys"},"objectGetOwnPropertyNames":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectGetOwnPropertyNames"},"objectSeal":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectSeal"},"objectFreeze":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectFreeze"},"arrayIsArray":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"arrayIsArray"},"numberNegativeInfinity":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"numberNegativeInfinity"},"global":{"super":{"$pk":"ceylon.js.language","$nm":"RegExpFlag"},"$mt":"obj","$an":{"shared":[]},"$nm":"global"},"eval":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"js"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"eval"},"JSArrayAbs":{"abstract":"1","super":{"$pk":"ceylon.js.language","$nm":"JSObjectAbs"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"splice":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"index"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"howMany"},{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"elements"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"splice"},"reverse":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"mthd","$an":{"shared":[]},"$nm":"reverse"},"sort":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$mt":"mthd","$an":{"shared":[]},"$nm":"sort"},"reduceRight":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"previousValue"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"currentValue"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"prm","$pt":"f","$nm":"callback"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$def":"1","$nm":"initialValue"}]],"$mt":"mthd","$an":{"shared":[]},"$m":{"callback":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"previousValue"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"currentValue"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"mthd","$nm":"callback"}},"$nm":"reduceRight"},"forEach":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"prm","$pt":"f","$nm":"callback"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$def":"1","$nm":"context"}]],"$mt":"mthd","$an":{"shared":[]},"$m":{"callback":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"mthd","$nm":"callback"}},"$nm":"forEach"},"lastIndexOf":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"searchElement"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"fromIndex"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"lastIndexOf"},"pop":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"mthd","$an":{"shared":[],"doc":["return type unknown"]},"$nm":"pop"},"indexOf":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"searchElement"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"fromIndex"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"indexOf"},"join":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$def":"1","$nm":"separator"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"join"},"every":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"prm","$pt":"f","$nm":"callback"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$def":"1","$nm":"context"}]],"$mt":"mthd","$an":{"shared":[]},"$m":{"callback":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"mthd","$nm":"callback"}},"$nm":"every"},"concat":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"elementsOrArrays"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"concat"},"reduce":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"previousValue"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"currentValue"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"prm","$pt":"f","$nm":"callback"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$def":"1","$nm":"initialValue"}]],"$mt":"mthd","$an":{"shared":[]},"$m":{"callback":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"previousValue"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"currentValue"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"mthd","$nm":"callback"}},"$nm":"reduce"},"push":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"element"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"push"},"concatArrays":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.js.language","$nm":"JSArray"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"arrays"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"concatArrays"},"map":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"prm","$pt":"f","$nm":"callback"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$def":"1","$nm":"context"}]],"$mt":"mthd","$an":{"shared":[]},"$m":{"callback":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"mthd","$nm":"callback"}},"$nm":"map"},"slice":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"begin"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"end"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"slice"},"sortCompare":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"a"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"b"}]],"$mt":"prm","$pt":"f","$nm":"compare"}]],"$mt":"mthd","$an":{"shared":[]},"$m":{"compare":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"a"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"b"}]],"$mt":"mthd","$nm":"compare"}},"$nm":"sortCompare"},"getLength":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getLength"},"unshift":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"elements"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"unshift"},"setLength":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"len"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setLength"},"some":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"prm","$pt":"f","$nm":"callback"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$def":"1","$nm":"context"}]],"$mt":"mthd","$an":{"shared":[]},"$m":{"callback":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"mthd","$nm":"callback"}},"$nm":"some"},"filter":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"prm","$pt":"f","$nm":"callback"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$def":"1","$nm":"context"}]],"$mt":"mthd","$an":{"shared":[]},"$m":{"callback":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"mthd","$nm":"callback"}},"$nm":"filter"},"shift":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"mthd","$an":{"shared":[],"doc":["return type unknown"]},"$nm":"shift"}},"$nm":"JSArrayAbs"},"dateParse":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"dateTime"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"dateParse"},"isFinite":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"num"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"isFinite"},"JSArray":{"super":{"$pk":"ceylon.js.language","$nm":"JSArrayAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"JSArray"},"createJSDateYMD":{"$t":{"$pk":"ceylon.js.language","$nm":"JSDate"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"year"},{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"month"},{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"day"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"hour"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"minute"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"second"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"milli"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSDateYMD"},"JSNumber":{"super":{"$pk":"ceylon.js.language","$nm":"JSNumberAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"JSNumber"},"mathLog2e":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"mathLog2e"},"RegExpAbs":{"abstract":"1","super":{"$pk":"ceylon.js.language","$nm":"JSObjectAbs"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"source":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"source"},"test":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$def":"1","$nm":"str"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"test"},"multiline":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"multiline"},"global":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"mthd","$an":{"shared":[]},"$nm":"global"},"exec":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$nm":"str"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"exec"},"getLastindex":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getLastindex"},"ignoreCase":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"mthd","$an":{"shared":[]},"$nm":"ignoreCase"},"setLastindex":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"index"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setLastindex"}},"$c":{"RegResult":{"super":{"$pk":"ceylon.js.language","$nm":"RegResultAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"RegResult"},"RegResultAbs":{"abstract":"1","super":{"$pk":"ceylon.js.language","$nm":"JSArrayAbs"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"index":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"index"},"input":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"input"}},"$nm":"RegResultAbs"}},"$nm":"RegExpAbs"},"isNaN":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"isNaN"},"objectCreate":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"proto"},{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"String"},{"comp":"u","$mt":"tpm","$ts":[{"$pk":"ceylon.js.language","$nm":"DataDescriptor"},{"$pk":"ceylon.js.language","$nm":"AccessorDescriptor"}]}],"$pk":"ceylon.language","$nm":"Entry"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","$nm":"properties"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectCreate"},"numberMinValue":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"numberMinValue"},"JSObject":{"super":{"$pk":"ceylon.js.language","$nm":"JSObjectAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"JSObject"},"mathLog2":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"mathLog2"},"DataDescriptor":{"super":{"$pk":"ceylon.js.language","$nm":"PropertyDescriptor"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"prm","$def":"1","$an":{"shared":[],"actual":[]},"$nm":"configurable"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"prm","$def":"1","$an":{"shared":[],"actual":[]},"$nm":"descriptor"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"prm","$def":"1","$an":{"shared":[],"actual":[]},"$nm":"enumerable"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"prm","$def":"1","$an":{"shared":[]},"$nm":"writable"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$def":"1","$an":{"shared":[]},"$nm":"val"}],"$mt":"cls","$an":{"shared":[]},"$m":{"toNative":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"mthd","$an":{"shared":[],"actual":[]},"$nm":"toNative"}},"$at":{"val":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[]},"$nm":"val"},"configurable":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"configurable"},"descriptor":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"descriptor"},"writable":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[]},"$nm":"writable"},"enumerable":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"enumerable"}},"$nm":"DataDescriptor"},"parseFloat":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"float"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"parseFloat"},"RegExpFlag":{"abstract":"1","super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"of":[{"$pk":"ceylon.js.language","$nm":"global"},{"$pk":"ceylon.js.language","$nm":"ignore"},{"$pk":"ceylon.js.language","$nm":"multiple"}],"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$nm":"name"}],"$mt":"cls","$an":{"abstract":[],"shared":[]},"$at":{"name":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"attr","$nm":"name"}},"$nm":"RegExpFlag"},"parseInt":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"int"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"radix"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"parseInt"},"dateUTCInt":{"$t":{"$pk":"ceylon.js.language","$nm":"JSDate"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"year"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"month"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"day"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$def":"1","$nm":"hour"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$def":"1","$nm":"minute"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$def":"1","$nm":"second"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$def":"1","$nm":"milli"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"dateUTCInt"},"objectIsExtensible":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectIsExtensible"},"JSNumberAbs":{"abstract":"1","super":{"$pk":"ceylon.js.language","$nm":"JSObjectAbs"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"toFixed":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"digits"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"toFixed"},"toExponential":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"fractionDigits"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"toExponential"},"toPrecision":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"precision"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"toPrecision"}},"$nm":"JSNumberAbs"},"JSStringAbs":{"abstract":"1","super":{"$pk":"ceylon.js.language","$nm":"JSObjectAbs"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"lastIndexOf":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"searchValue"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"fromIndex"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"lastIndexOf"},"indexOf":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"searchValue"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"fromIndex"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"indexOf"},"concat":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.js.language","$nm":"JSString"}],"$pk":"ceylon.language","$nm":"Sequence"},"$mt":"prm","seq":"1","$nm":"strings","$min1":"1"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"concat"},"replace":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"},{"$pk":"ceylon.js.language","$nm":"RegExp"}]},"$mt":"prm","$nm":"pattern"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"replace"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"replace"},"toUpperCase":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toUpperCase"},"replaceCallback":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"},{"$pk":"ceylon.js.language","$nm":"RegExp"}]},"$mt":"prm","$nm":"pattern"},{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$nm":"match"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"psOffsetExamined"}]],"$mt":"prm","$pt":"f","$nm":"replace"}]],"$mt":"mthd","$an":{"shared":[],"doc":["replace will recived a set of substrings based on the regex then an Integer for offset, and the examined String"]},"$m":{"replace":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$nm":"match"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"psOffsetExamined"}]],"$mt":"mthd","$nm":"replace"}},"$nm":"replaceCallback"},"charCodeAt":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"index"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"charCodeAt"},"search":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"RegExp"},"$mt":"prm","$nm":"regexp"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"search"},"toLowerCase":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toLowerCase"},"substring":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"indexA"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"indexB"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"substring"},"length":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"length"},"slice":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"beginSlice"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"endSlice"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"slice"},"split":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"RegExp"}]}]},"$mt":"prm","$def":"1","$nm":"separator"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"limit"}]],"$mt":"mthd","$an":{"shared":[],"doc":["returns array of strings"]},"$nm":"split"},"match":{"$t":{"$pk":"ceylon.js.language","$nm":"RegResult"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"RegExp"},"$mt":"prm","$nm":"regexp"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"match"},"trim":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"trim"},"substr":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"start"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"length"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"substr"},"charAt":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"index"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"charAt"}},"$nm":"JSStringAbs"},"JSDate":{"super":{"$pk":"ceylon.js.language","$nm":"JSDateAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"JSDate"},"multiple":{"super":{"$pk":"ceylon.js.language","$nm":"RegExpFlag"},"$mt":"obj","$an":{"shared":[]},"$nm":"multiple"},"numberMaxValue":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"numberMaxValue"},"objectPreventExtensions":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectPreventExtensions"},"ignore":{"super":{"$pk":"ceylon.js.language","$nm":"RegExpFlag"},"$mt":"obj","$an":{"shared":[]},"$nm":"ignore"},"mathRoot1_2":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"mathRoot1_2"},"JSFunctionAbs":{"abstract":"1","super":{"$pk":"ceylon.js.language","$nm":"JSObjectAbs"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"isGenerator":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"mthd","$an":{"shared":[]},"$nm":"isGenerator"},"length":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"length"},"bind":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"thisArg"},{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.js.language","$nm":"JSObject"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"args"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"bind"}},"$nm":"JSFunctionAbs"},"dateNow":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"dateNow"},"AccessorDescriptor":{"super":{"$pk":"ceylon.js.language","$nm":"PropertyDescriptor"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"prm","$an":{"shared":[],"actual":[]},"$nm":"configurable"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"prm","$def":"1","$an":{"shared":[],"actual":[]},"$nm":"descriptor"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"prm","$def":"1","$an":{"shared":[],"actual":[]},"$nm":"enumerable"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"},{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Empty"}],"$pk":"ceylon.language","$nm":"Callable"}]},"$mt":"prm","$def":"1","$an":{"shared":[]},"$nm":"get"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"},{"$md":"ceylon.language","$mt":"tpm","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"},{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"},{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Empty"}],"$pk":"ceylon.language","$nm":"Tuple"}],"$pk":"ceylon.language","$nm":"Callable"}]},"$mt":"prm","$def":"1","$an":{"shared":[]},"$nm":"set"}],"$mt":"cls","$an":{"shared":[]},"$m":{"toNative":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"mthd","$an":{"shared":[],"actual":[]},"$nm":"toNative"}},"$at":{"configurable":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"configurable"},"get":{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"},{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Empty"}],"$pk":"ceylon.language","$nm":"Callable"}]},"$mt":"attr","$an":{"shared":[]},"$nm":"get"},"descriptor":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"descriptor"},"set":{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"},{"$md":"ceylon.language","$mt":"tpm","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"},{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"},{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Empty"}],"$pk":"ceylon.language","$nm":"Tuple"}],"$pk":"ceylon.language","$nm":"Callable"}]},"$mt":"attr","$an":{"shared":[]},"$nm":"set"},"enumerable":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"enumerable"}},"$nm":"AccessorDescriptor"},"createJSRegExp":{"$t":{"$pk":"ceylon.js.language","$nm":"RegExp"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"pattern"},{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.js.language","$nm":"RegExpFlag"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"flags"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSRegExp"},"createJSString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"string"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSString"},"JSFunction":{"super":{"$pk":"ceylon.js.language","$nm":"JSFunctionAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"JSFunction"},"numberPositiveInfinity":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"numberPositiveInfinity"},"JSObjectAbs":{"abstract":"1","super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"isPrototypeOf":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"isPrototypeOf"},"callJS":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSObject"}]},"$mt":"prm","$nm":"thisArg"},{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.js.language","$nm":"JSObject"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"args"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"callJS"},"call":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"thisArg"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"args"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"call"},"apply":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"thisArg"},{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","$nm":"args"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"apply"},"setConstructor":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSFunction"},"$mt":"prm","$nm":"constructor"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setConstructor"},"propertyIsEnumerable":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"prop"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"propertyIsEnumerable"},"toString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toString"},"setPrototype":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"prototype"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setPrototype"},"applyJS":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSObject"}]},"$mt":"prm","$nm":"thisArg"},{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.js.language","$nm":"JSObject"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","$nm":"args"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"applyJS"},"hasOwnProperty":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"prop"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"hasOwnProperty"},"getConstructor":{"$t":{"$pk":"ceylon.js.language","$nm":"JSFunction"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getConstructor"},"getPrototype":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getPrototype"}},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"formal":[]},"$nm":"native"}},"$nm":"JSObjectAbs"},"mathLog10e":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"mathLog10e"},"MathAbs":{"abstract":"1","super":{"$pk":"ceylon.js.language","$nm":"JSObjectAbs"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"min":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.js.language","$nm":"JSNumber"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"numbers"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"min"},"atan":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"atan"},"max":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.js.language","$nm":"JSNumber"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"numbers"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"max"},"pow":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"base"},{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"exponent"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"pow"},"asin":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"asin"},"cos":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"cos"},"ceil":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"ceil"},"sqrt":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"sqrt"},"random":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"random"},"round":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"round"},"log":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"log"},"exp":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"exp"},"atan2":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"y"},{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"atan2"},"abs":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"abs"},"floor":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"floor"},"sin":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"sin"},"tan":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"tan"}},"$nm":"MathAbs"},"objectGetPrototypeOf":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectGetPrototypeOf"},"createJSDateNow":{"$t":{"$pk":"ceylon.js.language","$nm":"JSDate"},"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSDateNow"},"createJSArray":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"elements"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSArray"},"mathPi":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"mathPi"},"mathE":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"mathE"}}};
+var $$METAMODEL$$={"$mod-deps":["ceylon.language\/0.6.1"],"$mod-name":"ceylon.js.language","$mod-version":"1.8.5","ceylon.js.language":{"PropertyDescriptor":{"abstract":"1","super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"toNative":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"mthd","$an":{"shared":[],"formal":[]},"$nm":"toNative"}},"$at":{"configurable":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"formal":[]},"$nm":"configurable"},"descriptor":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"formal":[]},"$nm":"descriptor"},"enumerable":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"formal":[]},"$nm":"enumerable"}},"$nm":"PropertyDescriptor"},"defineProperties":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"},{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"String"},{"comp":"u","$mt":"tpm","$ts":[{"$pk":"ceylon.js.language","$nm":"DataDescriptor"},{"$pk":"ceylon.js.language","$nm":"AccessorDescriptor"}]}],"$pk":"ceylon.language","$nm":"Entry"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","$nm":"properties"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"defineProperties"},"mathLog10":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"mathLog10"},"objectIsSealed":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectIsSealed"},"mathRoot2":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"mathRoot2"},"Math":{"super":{"$pk":"ceylon.js.language","$nm":"MathAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"Math"},"objectIsFrozen":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectIsFrozen"},"objectDefineProperty":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"prop"},{"$t":{"comp":"u","$ts":[{"$pk":"ceylon.js.language","$nm":"DataDescriptor"},{"$pk":"ceylon.js.language","$nm":"AccessorDescriptor"}]},"$mt":"prm","$nm":"descriptor"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectDefineProperty"},"RegExp":{"super":{"$pk":"ceylon.js.language","$nm":"RegExpAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"RegExp"},"dateUTC":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"year"},{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"month"},{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"day"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"hour"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"minute"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"second"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"milli"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"dateUTC"},"createJSDateYMDInt":{"$t":{"$pk":"ceylon.js.language","$nm":"JSDate"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"year"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"month"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"day"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$def":"1","$nm":"hour"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$def":"1","$nm":"minute"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$def":"1","$nm":"second"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$def":"1","$nm":"milli"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSDateYMDInt"},"JSString":{"super":{"$pk":"ceylon.js.language","$nm":"JSStringAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"JSString"},"createJSObject":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSObject"},"createJSNumber":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Float"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"}]},"$mt":"prm","$nm":"val"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSNumber"},"$pkg-shared":"1","JSDateAbs":{"abstract":"1","super":{"$pk":"ceylon.js.language","$nm":"JSObjectAbs"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"toLocaleDateString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toLocaleDateString"},"toLocaleString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toLocaleString"},"getSeconds":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getSeconds"},"getUTCSeconds":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getUTCSeconds"},"getUTCMonth":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getUTCMonth"},"toUTCString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toUTCString"},"setUTCFullYear":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"year"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setUTCFullYear"},"getFullYear":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getFullYear"},"getHours":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getHours"},"setUTCHours":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"hours"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setUTCHours"},"getTimezoneOffset":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getTimezoneOffset"},"getDay":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getDay"},"setMinutes":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"minutes"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setMinutes"},"toISOString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toISOString"},"setMilliseconds":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"milli"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setMilliseconds"},"getUTCHours":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getUTCHours"},"setTime":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"milli"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setTime"},"toLocaleTimeString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toLocaleTimeString"},"getUTCDate":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getUTCDate"},"toTimeString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toTimeString"},"setUTCMilliseconds":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"milli"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setUTCMilliseconds"},"setSeconds":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"seconds"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setSeconds"},"setUTCMinutes":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"minutes"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setUTCMinutes"},"setMonth":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"month"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setMonth"},"toDateString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toDateString"},"setUTCSeconds":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"seconds"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setUTCSeconds"},"getUTCMinutes":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getUTCMinutes"},"setDate":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"day"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setDate"},"getDate":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getDate"},"setFullYear":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"year"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setFullYear"},"getTime":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getTime"},"toJSON":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toJSON"},"setHours":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"hour"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setHours"},"getMonth":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getMonth"},"getUTCFullYear":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getUTCFullYear"},"getUTCDay":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getUTCDay"},"getUTCMilliseconds":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getUTCMilliseconds"},"setUTCMonth":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"month"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setUTCMonth"},"setUTCDate":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"day"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setUTCDate"},"getMilliseconds":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getMilliseconds"},"getMinutes":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getMinutes"}},"$nm":"JSDateAbs"},"objectGetOwnPropertyDescriptor":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"prop"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectGetOwnPropertyDescriptor"},"createJSDate":{"$t":{"$pk":"ceylon.js.language","$nm":"JSDate"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"val"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSDate"},"objectKeys":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectKeys"},"objectGetOwnPropertyNames":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectGetOwnPropertyNames"},"objectSeal":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectSeal"},"objectFreeze":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectFreeze"},"arrayIsArray":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"arrayIsArray"},"numberNegativeInfinity":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"numberNegativeInfinity"},"global":{"super":{"$pk":"ceylon.js.language","$nm":"RegExpFlag"},"$mt":"obj","$an":{"shared":[]},"$nm":"global"},"eval":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"js"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"eval"},"JSArrayAbs":{"abstract":"1","super":{"$pk":"ceylon.js.language","$nm":"JSObjectAbs"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"splice":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"index"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"howMany"},{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"elements"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"splice"},"reverse":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"mthd","$an":{"shared":[]},"$nm":"reverse"},"sort":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$mt":"mthd","$an":{"shared":[]},"$nm":"sort"},"reduceRight":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"previousValue"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"currentValue"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"prm","$pt":"f","$nm":"callback"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$def":"1","$nm":"initialValue"}]],"$mt":"mthd","$an":{"shared":[]},"$m":{"callback":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"previousValue"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"currentValue"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"mthd","$nm":"callback"}},"$nm":"reduceRight"},"forEach":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"prm","$pt":"f","$nm":"callback"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$def":"1","$nm":"context"}]],"$mt":"mthd","$an":{"shared":[]},"$m":{"callback":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"mthd","$nm":"callback"}},"$nm":"forEach"},"lastIndexOf":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"searchElement"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"fromIndex"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"lastIndexOf"},"pop":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"mthd","$an":{"shared":[],"doc":["return type unknown"]},"$nm":"pop"},"indexOf":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"searchElement"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"fromIndex"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"indexOf"},"join":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$def":"1","$nm":"separator"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"join"},"every":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"prm","$pt":"f","$nm":"callback"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$def":"1","$nm":"context"}]],"$mt":"mthd","$an":{"shared":[]},"$m":{"callback":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"mthd","$nm":"callback"}},"$nm":"every"},"concat":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"elementsOrArrays"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"concat"},"reduce":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"previousValue"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"currentValue"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"prm","$pt":"f","$nm":"callback"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$def":"1","$nm":"initialValue"}]],"$mt":"mthd","$an":{"shared":[]},"$m":{"callback":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"previousValue"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"currentValue"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"mthd","$nm":"callback"}},"$nm":"reduce"},"push":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"element"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"push"},"concatArrays":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.js.language","$nm":"JSArray"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"arrays"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"concatArrays"},"map":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"prm","$pt":"f","$nm":"callback"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$def":"1","$nm":"context"}]],"$mt":"mthd","$an":{"shared":[]},"$m":{"callback":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"mthd","$nm":"callback"}},"$nm":"map"},"slice":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"begin"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"end"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"slice"},"sortCompare":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"a"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"b"}]],"$mt":"prm","$pt":"f","$nm":"compare"}]],"$mt":"mthd","$an":{"shared":[]},"$m":{"compare":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"a"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"b"}]],"$mt":"mthd","$nm":"compare"}},"$nm":"sortCompare"},"getLength":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getLength"},"unshift":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"elements"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"unshift"},"setLength":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"len"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setLength"},"some":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"prm","$pt":"f","$nm":"callback"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$def":"1","$nm":"context"}]],"$mt":"mthd","$an":{"shared":[]},"$m":{"callback":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"mthd","$nm":"callback"}},"$nm":"some"},"filter":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"prm","$pt":"f","$nm":"callback"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$def":"1","$nm":"context"}]],"$mt":"mthd","$an":{"shared":[]},"$m":{"callback":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"index"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"array"}]],"$mt":"mthd","$nm":"callback"}},"$nm":"filter"},"shift":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"mthd","$an":{"shared":[],"doc":["return type unknown"]},"$nm":"shift"}},"$nm":"JSArrayAbs"},"dateParse":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"dateTime"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"dateParse"},"isFinite":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"num"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"isFinite"},"JSArray":{"super":{"$pk":"ceylon.js.language","$nm":"JSArrayAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"JSArray"},"createJSDateYMD":{"$t":{"$pk":"ceylon.js.language","$nm":"JSDate"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"year"},{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"month"},{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"day"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"hour"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"minute"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"second"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"milli"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSDateYMD"},"JSNumber":{"super":{"$pk":"ceylon.js.language","$nm":"JSNumberAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"JSNumber"},"mathLog2e":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"mathLog2e"},"RegExpAbs":{"abstract":"1","super":{"$pk":"ceylon.js.language","$nm":"JSObjectAbs"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"source":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"source"},"test":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$def":"1","$nm":"str"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"test"},"multiline":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"multiline"},"global":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"mthd","$an":{"shared":[]},"$nm":"global"},"exec":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$nm":"str"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"exec"},"getLastindex":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getLastindex"},"ignoreCase":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"mthd","$an":{"shared":[]},"$nm":"ignoreCase"},"setLastindex":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"index"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setLastindex"}},"$c":{"RegResult":{"super":{"$pk":"ceylon.js.language","$nm":"RegResultAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"RegResult"},"RegResultAbs":{"abstract":"1","super":{"$pk":"ceylon.js.language","$nm":"JSArrayAbs"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"index":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"index"},"input":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"input"}},"$nm":"RegResultAbs"}},"$nm":"RegExpAbs"},"isNaN":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"val"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"isNaN"},"objectCreate":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"proto"},{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"String"},{"comp":"u","$mt":"tpm","$ts":[{"$pk":"ceylon.js.language","$nm":"DataDescriptor"},{"$pk":"ceylon.js.language","$nm":"AccessorDescriptor"}]}],"$pk":"ceylon.language","$nm":"Entry"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","$nm":"properties"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectCreate"},"numberMinValue":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"numberMinValue"},"JSObject":{"super":{"$pk":"ceylon.js.language","$nm":"JSObjectAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"JSObject"},"mathLog2":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"mathLog2"},"DataDescriptor":{"super":{"$pk":"ceylon.js.language","$nm":"PropertyDescriptor"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"prm","$def":"1","$an":{"shared":[],"actual":[]},"$nm":"configurable"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"prm","$def":"1","$an":{"shared":[],"actual":[]},"$nm":"descriptor"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"prm","$def":"1","$an":{"shared":[],"actual":[]},"$nm":"enumerable"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"prm","$def":"1","$an":{"shared":[]},"$nm":"writable"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$def":"1","$an":{"shared":[]},"$nm":"val"}],"$mt":"cls","$an":{"shared":[]},"$m":{"toNative":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"mthd","$an":{"shared":[],"actual":[]},"$nm":"toNative"}},"$at":{"val":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[]},"$nm":"val"},"configurable":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"configurable"},"descriptor":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"descriptor"},"writable":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[]},"$nm":"writable"},"enumerable":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"enumerable"}},"$nm":"DataDescriptor"},"parseFloat":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"float"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"parseFloat"},"RegExpFlag":{"abstract":"1","super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"of":[{"$pk":"ceylon.js.language","$nm":"global"},{"$pk":"ceylon.js.language","$nm":"ignore"},{"$pk":"ceylon.js.language","$nm":"multiple"}],"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$nm":"name"}],"$mt":"cls","$an":{"abstract":[],"shared":[]},"$at":{"name":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"attr","$nm":"name"}},"$nm":"RegExpFlag"},"parseInt":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"int"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"radix"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"parseInt"},"dateUTCInt":{"$t":{"$pk":"ceylon.js.language","$nm":"JSDate"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"year"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"month"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},"$mt":"prm","$nm":"day"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$def":"1","$nm":"hour"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$def":"1","$nm":"minute"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$def":"1","$nm":"second"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"}]},"$mt":"prm","$def":"1","$nm":"milli"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"dateUTCInt"},"objectIsExtensible":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectIsExtensible"},"JSNumberAbs":{"abstract":"1","super":{"$pk":"ceylon.js.language","$nm":"JSObjectAbs"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"toFixed":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"digits"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"toFixed"},"toExponential":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"fractionDigits"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"toExponential"},"toPrecision":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"precision"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"toPrecision"}},"$nm":"JSNumberAbs"},"JSStringAbs":{"abstract":"1","super":{"$pk":"ceylon.js.language","$nm":"JSObjectAbs"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"lastIndexOf":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"searchValue"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"fromIndex"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"lastIndexOf"},"indexOf":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"searchValue"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$def":"1","$nm":"fromIndex"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"indexOf"},"concat":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.js.language","$nm":"JSString"}],"$pk":"ceylon.language","$nm":"Sequence"},"$mt":"prm","seq":"1","$nm":"strings","$min1":"1"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"concat"},"replace":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"},{"$pk":"ceylon.js.language","$nm":"RegExp"}]},"$mt":"prm","$nm":"pattern"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"replace"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"replace"},"toUpperCase":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toUpperCase"},"replaceCallback":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"},{"$pk":"ceylon.js.language","$nm":"RegExp"}]},"$mt":"prm","$nm":"pattern"},{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$nm":"match"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"psOffsetExamined"}]],"$mt":"prm","$pt":"f","$nm":"replace"}]],"$mt":"mthd","$an":{"shared":[],"doc":["replace will recived a set of substrings based on the regex then an Integer for offset, and the examined String"]},"$m":{"replace":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},"$mt":"prm","$nm":"match"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"psOffsetExamined"}]],"$mt":"mthd","$nm":"replace"}},"$nm":"replaceCallback"},"charCodeAt":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"index"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"charCodeAt"},"search":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"RegExp"},"$mt":"prm","$nm":"regexp"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"search"},"toLowerCase":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toLowerCase"},"substring":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"indexA"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"indexB"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"substring"},"length":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"length"},"slice":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"beginSlice"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"endSlice"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"slice"},"split":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"RegExp"}]}]},"$mt":"prm","$def":"1","$nm":"separator"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"limit"}]],"$mt":"mthd","$an":{"shared":[],"doc":["returns array of strings"]},"$nm":"split"},"match":{"$t":{"$pk":"ceylon.js.language","$nm":"RegResult"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"RegExp"},"$mt":"prm","$nm":"regexp"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"match"},"trim":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"trim"},"substr":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"start"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]}]},"$mt":"prm","$def":"1","$nm":"length"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"substr"},"charAt":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Integer"},{"$pk":"ceylon.js.language","$nm":"JSNumber"}]},"$mt":"prm","$nm":"index"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"charAt"}},"$nm":"JSStringAbs"},"JSDate":{"super":{"$pk":"ceylon.js.language","$nm":"JSDateAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"JSDate"},"multiple":{"super":{"$pk":"ceylon.js.language","$nm":"RegExpFlag"},"$mt":"obj","$an":{"shared":[]},"$nm":"multiple"},"numberMaxValue":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"numberMaxValue"},"objectPreventExtensions":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectPreventExtensions"},"ignore":{"super":{"$pk":"ceylon.js.language","$nm":"RegExpFlag"},"$mt":"obj","$an":{"shared":[]},"$nm":"ignore"},"mathRoot1_2":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"mathRoot1_2"},"JSFunctionAbs":{"abstract":"1","super":{"$pk":"ceylon.js.language","$nm":"JSObjectAbs"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"isGenerator":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"mthd","$an":{"shared":[]},"$nm":"isGenerator"},"length":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"length"},"bind":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"thisArg"},{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.js.language","$nm":"JSObject"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"args"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"bind"}},"$nm":"JSFunctionAbs"},"dateNow":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"dateNow"},"AccessorDescriptor":{"super":{"$pk":"ceylon.js.language","$nm":"PropertyDescriptor"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"prm","$an":{"shared":[],"actual":[]},"$nm":"configurable"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"prm","$def":"1","$an":{"shared":[],"actual":[]},"$nm":"descriptor"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"prm","$def":"1","$an":{"shared":[],"actual":[]},"$nm":"enumerable"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"},{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Empty"}],"$pk":"ceylon.language","$nm":"Callable"}]},"$mt":"prm","$def":"1","$an":{"shared":[]},"$nm":"get"},{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"},{"$md":"ceylon.language","$mt":"tpm","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"},{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"},{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Empty"}],"$pk":"ceylon.language","$nm":"Tuple"}],"$pk":"ceylon.language","$nm":"Callable"}]},"$mt":"prm","$def":"1","$an":{"shared":[]},"$nm":"set"}],"$mt":"cls","$an":{"shared":[]},"$m":{"toNative":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"mthd","$an":{"shared":[],"actual":[]},"$nm":"toNative"}},"$at":{"configurable":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"configurable"},"get":{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"},{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Empty"}],"$pk":"ceylon.language","$nm":"Callable"}]},"$mt":"attr","$an":{"shared":[]},"$nm":"get"},"descriptor":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"descriptor"},"set":{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"},{"$md":"ceylon.language","$mt":"tpm","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"},{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"},{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Empty"}],"$pk":"ceylon.language","$nm":"Tuple"}],"$pk":"ceylon.language","$nm":"Callable"}]},"$mt":"attr","$an":{"shared":[]},"$nm":"set"},"enumerable":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"enumerable"}},"$nm":"AccessorDescriptor"},"createJSRegExp":{"$t":{"$pk":"ceylon.js.language","$nm":"RegExp"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"pattern"},{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.js.language","$nm":"RegExpFlag"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"flags"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSRegExp"},"createJSString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"string"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSString"},"JSFunction":{"super":{"$pk":"ceylon.js.language","$nm":"JSFunctionAbs"},"$ps":[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"n"}],"$mt":"cls","$an":{"shared":[]},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"actual":[]},"$nm":"native"},"n":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$nm":"n"}},"$nm":"JSFunction"},"numberPositiveInfinity":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"numberPositiveInfinity"},"JSObjectAbs":{"abstract":"1","super":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Basic"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"isPrototypeOf":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"isPrototypeOf"},"callJS":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSObject"}]},"$mt":"prm","$nm":"thisArg"},{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.js.language","$nm":"JSObject"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"args"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"callJS"},"call":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"thisArg"},{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"args"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"call"},"apply":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"thisArg"},{"$t":{"$md":"ceylon.language","$tp":[{"$md":"ceylon.language","$mt":"tpm","$pk":"ceylon.language","$nm":"Anything"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","$nm":"args"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"apply"},"setConstructor":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSFunction"},"$mt":"prm","$nm":"constructor"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setConstructor"},"propertyIsEnumerable":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"prop"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"propertyIsEnumerable"},"toString":{"$t":{"$pk":"ceylon.js.language","$nm":"JSString"},"$mt":"mthd","$an":{"shared":[]},"$nm":"toString"},"setPrototype":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"prototype"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"setPrototype"},"applyJS":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Null"},{"$pk":"ceylon.js.language","$nm":"JSObject"}]},"$mt":"prm","$nm":"thisArg"},{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.js.language","$nm":"JSObject"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","$nm":"args"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"applyJS"},"hasOwnProperty":{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Boolean"},"$ps":[[{"$t":{"comp":"u","$ts":[{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"String"},{"$pk":"ceylon.js.language","$nm":"JSString"}]},"$mt":"prm","$nm":"prop"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"hasOwnProperty"},"getConstructor":{"$t":{"$pk":"ceylon.js.language","$nm":"JSFunction"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getConstructor"},"getPrototype":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"mthd","$an":{"shared":[]},"$nm":"getPrototype"}},"$at":{"native":{"$t":{"$pk":"ceylon.js.language","$nm":"unknown"},"$mt":"attr","$an":{"shared":[],"formal":[]},"$nm":"native"}},"$nm":"JSObjectAbs"},"mathLog10e":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"mathLog10e"},"MathAbs":{"abstract":"1","super":{"$pk":"ceylon.js.language","$nm":"JSObjectAbs"},"$mt":"cls","$an":{"abstract":[],"shared":[]},"$m":{"min":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.js.language","$nm":"JSNumber"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"numbers"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"min"},"atan":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"atan"},"max":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$md":"ceylon.language","$tp":[{"$mt":"tpm","$pk":"ceylon.js.language","$nm":"JSNumber"}],"$pk":"ceylon.language","$nm":"Sequential"},"$mt":"prm","seq":"1","$nm":"numbers"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"max"},"pow":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"base"},{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"exponent"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"pow"},"asin":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"asin"},"cos":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"cos"},"ceil":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"ceil"},"sqrt":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"sqrt"},"random":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"random"},"round":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"round"},"log":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"log"},"exp":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"exp"},"atan2":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"y"},{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"atan2"},"abs":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"abs"},"floor":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"floor"},"sin":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"sin"},"tan":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"prm","$nm":"x"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"tan"}},"$nm":"MathAbs"},"objectGetPrototypeOf":{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$ps":[[{"$t":{"$pk":"ceylon.js.language","$nm":"JSObject"},"$mt":"prm","$nm":"obj"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"objectGetPrototypeOf"},"createJSDateNow":{"$t":{"$pk":"ceylon.js.language","$nm":"JSDate"},"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSDateNow"},"createJSArray":{"$t":{"$pk":"ceylon.js.language","$nm":"JSArray"},"$ps":[[{"$t":{"$md":"ceylon.language","$pk":"ceylon.language","$nm":"Anything"},"$mt":"prm","$nm":"arg"}]],"$mt":"mthd","$an":{"shared":[]},"$nm":"createJSArray"},"mathPi":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"mathPi"},"mathE":{"$t":{"$pk":"ceylon.js.language","$nm":"JSNumber"},"$mt":"mthd","$an":{"shared":[]},"$nm":"mathE"}}};
 exports.$$METAMODEL$$=function(){return $$METAMODEL$$;};
 var $$$cl1=require('ceylon/language/0.6.1/ceylon.language-0.6.1');
 $$$cl1.$addmod$($$$cl1,'ceylon.language/0.6.1');
-function createJSArray(elements$2){
-    if(elements$2===undefined){elements$2=$$$cl1.getEmpty();}
+function createJSArray(arg$2){
     /*Begin dynamic block*/
-    return JSArray((typeof Array==='undefined'||Array===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Array")),'4:17-4:21','array.ceylon'):Array)(/*NULL PARAM!*/elements$2));
+    return JSArray((typeof Array==='undefined'||Array===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Array")),'4:17-4:21','array.ceylon'):Array)(/*NULL PARAM!*/arg$2));
     /*End dynamic block*/
 }
 exports.createJSArray=createJSArray;
-createJSArray.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSArray},$ps:[{$nm:'elements',$mt:'prm',seq:1,$t:{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','createJSArray']};};
+createJSArray.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSArray},$ps:[{$nm:'arg',$mt:'prm',$t:{t:$$$cl1.Anything},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','createJSArray']};};
 function arrayIsArray(array$3){
     /*Begin dynamic block*/
     if((typeof Array==='undefined'||Array===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Array")),'10:6-10:10','array.ceylon'):Array).isArray(/*NULL PARAM!*/array$3)){
@@ -1118,15 +1117,15 @@ function JSFunctionAbs($$jSFunctionAbs){
     function bind(thisArg$146,args$147){
         if(args$147===undefined){args$147=$$$cl1.getEmpty();}
         /*Begin dynamic block*/
-        JSFunction($$jSFunctionAbs.$native.bind).$apply(null,(tmpvar$148=createJSArray([(tmpvar$149=thisArg$146.$native,$$$cl1.isOfType(tmpvar$149,{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}})?tmpvar$149:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'12:53-12:66','function.ceylon'))].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}}})).concat([(tmpvar$150=(function(){
-            var lst$151=[];
-            var it$152=args$147.iterator();
-            var elem$153;
-            while ((elem$153=it$152.next())!==$$$cl1.getFinished()){
-                lst$151.push(elem$153.$native);
+        JSFunction($$jSFunctionAbs.$native.bind).$apply(null,(tmpvar$148=createJSArray(thisArg$146.$native).concat(/*NULL PARAM!*/(function(){
+            var lst$149=[];
+            var it$150=args$147.iterator();
+            var elem$151;
+            while ((elem$151=it$150.next())!==$$$cl1.getFinished()){
+                lst$149.push(elem$151.$native);
             }
-            return $$$cl1.ArraySequence(lst$151);
-        }()),$$$cl1.isOfType(tmpvar$150,{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}})?tmpvar$150:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'12:76-12:87','function.ceylon'))].reifyCeylonType({Absent:{t:$$$cl1.Null},Element:{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}}})).$native,$$$cl1.isOfType(tmpvar$148,{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}})?tmpvar$148:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'12:39-12:95','function.ceylon')));
+            return $$$cl1.ArraySequence(lst$149);
+        }())).native,$$$cl1.isOfType(tmpvar$148,{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}})?tmpvar$148:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'12:39-12:95','function.ceylon')));
         /*End dynamic block*/
     }
     $$jSFunctionAbs.bind=bind;
@@ -1153,15 +1152,15 @@ function $init$JSFunctionAbs(){
 }
 exports.$init$JSFunctionAbs=$init$JSFunctionAbs;
 $init$JSFunctionAbs();
-function JSFunction(n$154, $$jSFunction){
+function JSFunction(n$152, $$jSFunction){
     $init$JSFunction();
     if ($$jSFunction===undefined)$$jSFunction=new JSFunction.$$;
-    $$jSFunction.n$154_=n$154;
+    $$jSFunction.n$152_=n$152;
     JSFunctionAbs($$jSFunction);
-    $$$cl1.defineAttr($$jSFunction,'n$154',function(){return this.n$154_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:JSFunction,d:['ceylon.js.language','JSFunction','$at','n']};});
+    $$$cl1.defineAttr($$jSFunction,'n$152',function(){return this.n$152_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:JSFunction,d:['ceylon.js.language','JSFunction','$at','n']};});
     $$jSFunction.$prop$getNative={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:JSFunction,$an:function(){return[$$$cl1.shared(),$$$cl1.actual()];},d:['ceylon.js.language','JSFunction','$at','native']};}};
     /*Begin dynamic block*/
-    $$jSFunction.$native=n$154;/*End dynamic block*/
+    $$jSFunction.$native=n$152;/*End dynamic block*/
     return $$jSFunction;
 }
 JSFunction.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:JSFunctionAbs},satisfies:[],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSFunction']};};
@@ -1174,16 +1173,16 @@ function $init$JSFunction(){
 }
 exports.$init$JSFunction=$init$JSFunction;
 $init$JSFunction();
-function eval(js$155){
+function eval(js$153){
     /*Begin dynamic block*/
-    return (tmpvar$156=eval(js$155),$$$cl1.isOfType(tmpvar$156,{t:$$$cl1.Anything})?tmpvar$156:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'3:9-3:16','main.ceylon'));
+    return (tmpvar$154=eval(js$153),$$$cl1.isOfType(tmpvar$154,{t:$$$cl1.Anything})?tmpvar$154:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'3:9-3:16','main.ceylon'));
     /*End dynamic block*/
 }
 exports.eval=eval;
 eval.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'js',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:JSString}]},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','eval']};};
-function isFinite(num$157){
+function isFinite(num$155){
     /*Begin dynamic block*/
-    if(isFinite((tmpvar$158=num$157.$native,$$$cl1.isOfType(tmpvar$158,{t:JSNumber})?tmpvar$158:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'9:15-9:24','main.ceylon')))){
+    if(isFinite((tmpvar$156=num$155.$native,$$$cl1.isOfType(tmpvar$156,{t:JSNumber})?tmpvar$156:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'9:15-9:24','main.ceylon')))){
         return true;
     }else {
         return false;
@@ -1191,9 +1190,9 @@ function isFinite(num$157){
 }
 exports.isFinite=isFinite;
 isFinite.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Boolean},$ps:[{$nm:'num',$mt:'prm',$t:{t:JSNumber},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','isFinite']};};
-function isNaN(val$159){
+function isNaN(val$157){
     /*Begin dynamic block*/
-    if(isNaN(val$159)){
+    if(isNaN(val$157)){
         return true;
     }else {
         return false;
@@ -1201,32 +1200,32 @@ function isNaN(val$159){
 }
 exports.isNaN=isNaN;
 isNaN.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Boolean},$ps:[{$nm:'val',$mt:'prm',$t:{t:$$$cl1.Anything},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','isNaN']};};
-function parseInt(int$160,radix$161){
-    if(radix$161===undefined){radix$161=(10);}
+function parseInt(int$158,radix$159){
+    if(radix$159===undefined){radix$159=(10);}
     
-    var case$162=radix$161;
-    if ($$$cl1.isOfType(radix$161,{t:$$$cl1.Integer})) {
+    var case$160=radix$159;
+    if ($$$cl1.isOfType(radix$159,{t:$$$cl1.Integer})) {
         /*Begin dynamic block*/
-        return JSNumber(parseInt(int$160,case$162));
+        return JSNumber(parseInt(int$158,case$160));
         /*End dynamic block*/
-    }else if ($$$cl1.isOfType(radix$161,{t:JSNumber})) {
+    }else if ($$$cl1.isOfType(radix$159,{t:JSNumber})) {
         /*Begin dynamic block*/
-        return JSNumber(parseInt(int$160,(tmpvar$163=case$162.$native,$$$cl1.isOfType(tmpvar$163,{ t:'u', l:[{t:$$$cl1.Integer},{t:JSNumber}]})?tmpvar$163:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'36:33-36:44','main.ceylon'))));
+        return JSNumber(parseInt(int$158,(tmpvar$161=case$160.$native,$$$cl1.isOfType(tmpvar$161,{ t:'u', l:[{t:$$$cl1.Integer},{t:JSNumber}]})?tmpvar$161:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'36:33-36:44','main.ceylon'))));
         /*End dynamic block*/
     }
 }
 exports.parseInt=parseInt;
 parseInt.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'int',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:JSString}]},$an:function(){return[];}},{$nm:'radix',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cl1.Integer},{t:JSNumber}]},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','parseInt']};};
-function parseFloat(float$164){
+function parseFloat(float$162){
     
-    var case$165=float$164;
-    if ($$$cl1.isOfType(float$164,{t:$$$cl1.String})) {
+    var case$163=float$162;
+    if ($$$cl1.isOfType(float$162,{t:$$$cl1.String})) {
         /*Begin dynamic block*/
-        return JSNumber(parseFloat(case$165));
+        return JSNumber(parseFloat(case$163));
         /*End dynamic block*/
-    }else if ($$$cl1.isOfType(float$164,{t:JSString})) {
+    }else if ($$$cl1.isOfType(float$162,{t:JSString})) {
         /*Begin dynamic block*/
-        return JSNumber(parseFloat((tmpvar$166=case$165.$native,$$$cl1.isOfType(tmpvar$166,{ t:'u', l:[{t:$$$cl1.String},{t:JSString}]})?tmpvar$166:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'50:30-50:41','main.ceylon'))));
+        return JSNumber(parseFloat((tmpvar$164=case$163.$native,$$$cl1.isOfType(tmpvar$164,{ t:'u', l:[{t:$$$cl1.String},{t:JSString}]})?tmpvar$164:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'50:30-50:41','main.ceylon'))));
         /*End dynamic block*/
     }
 }
@@ -1292,104 +1291,104 @@ function MathAbs($$mathAbs){
     $init$MathAbs();
     if ($$mathAbs===undefined)$$$cl1.throwexc($$$cl1.InvocationException$meta$model($$$cl1.String("Cannot instantiate abstract class")),'?','?')
     JSObjectAbs($$mathAbs);
-    function abs(x$167){
+    function abs(x$165){
         /*Begin dynamic block*/
-        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'55:19-55:22','math.ceylon'):Math).abs(/*NULL PARAM!*/x$167.$native));
+        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'55:19-55:22','math.ceylon'):Math).abs(/*NULL PARAM!*/x$165.$native));
         /*End dynamic block*/
     }
     $$mathAbs.abs=abs;
     abs.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'x',$mt:'prm',$t:{t:JSNumber},$an:function(){return[];}}],$cont:MathAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','MathAbs','$m','abs']};};
-    function asin(x$168){
+    function asin(x$166){
         /*Begin dynamic block*/
-        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'61:19-61:22','math.ceylon'):Math).asin(/*NULL PARAM!*/x$168.$native));
+        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'61:19-61:22','math.ceylon'):Math).asin(/*NULL PARAM!*/x$166.$native));
         /*End dynamic block*/
     }
     $$mathAbs.asin=asin;
     asin.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'x',$mt:'prm',$t:{t:JSNumber},$an:function(){return[];}}],$cont:MathAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','MathAbs','$m','asin']};};
-    function atan(x$169){
+    function atan(x$167){
         /*Begin dynamic block*/
-        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'67:19-67:22','math.ceylon'):Math).asin(/*NULL PARAM!*/x$169.$native));
+        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'67:19-67:22','math.ceylon'):Math).asin(/*NULL PARAM!*/x$167.$native));
         /*End dynamic block*/
     }
     $$mathAbs.atan=atan;
     atan.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'x',$mt:'prm',$t:{t:JSNumber},$an:function(){return[];}}],$cont:MathAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','MathAbs','$m','atan']};};
-    function atan2(y$170,x$171){
+    function atan2(y$168,x$169){
         /*Begin dynamic block*/
-        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'73:19-73:22','math.ceylon'):Math).atan2(/*NULL PARAM!*/y$170.$native/*NULL PARAM!*/,x$171.$native));
+        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'73:19-73:22','math.ceylon'):Math).atan2(/*NULL PARAM!*/y$168.$native/*NULL PARAM!*/,x$169.$native));
         /*End dynamic block*/
     }
     $$mathAbs.atan2=atan2;
     atan2.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'y',$mt:'prm',$t:{t:JSNumber},$an:function(){return[];}},{$nm:'x',$mt:'prm',$t:{t:JSNumber},$an:function(){return[];}}],$cont:MathAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','MathAbs','$m','atan2']};};
-    function ceil(x$172){
+    function ceil(x$170){
         /*Begin dynamic block*/
-        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'79:19-79:22','math.ceylon'):Math).ceil(/*NULL PARAM!*/x$172.$native));
+        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'79:19-79:22','math.ceylon'):Math).ceil(/*NULL PARAM!*/x$170.$native));
         /*End dynamic block*/
     }
     $$mathAbs.ceil=ceil;
     ceil.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'x',$mt:'prm',$t:{t:JSNumber},$an:function(){return[];}}],$cont:MathAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','MathAbs','$m','ceil']};};
-    function cos(x$173){
+    function cos(x$171){
         /*Begin dynamic block*/
-        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'85:19-85:22','math.ceylon'):Math).cos(/*NULL PARAM!*/x$173.$native));
+        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'85:19-85:22','math.ceylon'):Math).cos(/*NULL PARAM!*/x$171.$native));
         /*End dynamic block*/
     }
     $$mathAbs.cos=cos;
     cos.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'x',$mt:'prm',$t:{t:JSNumber},$an:function(){return[];}}],$cont:MathAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','MathAbs','$m','cos']};};
-    function exp(x$174){
+    function exp(x$172){
         /*Begin dynamic block*/
-        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'91:19-91:22','math.ceylon'):Math).exp(/*NULL PARAM!*/x$174.$native));
+        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'91:19-91:22','math.ceylon'):Math).exp(/*NULL PARAM!*/x$172.$native));
         /*End dynamic block*/
     }
     $$mathAbs.exp=exp;
     exp.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'x',$mt:'prm',$t:{t:JSNumber},$an:function(){return[];}}],$cont:MathAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','MathAbs','$m','exp']};};
-    function floor(x$175){
+    function floor(x$173){
         /*Begin dynamic block*/
-        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'97:19-97:22','math.ceylon'):Math).floor(/*NULL PARAM!*/x$175.$native));
+        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'97:19-97:22','math.ceylon'):Math).floor(/*NULL PARAM!*/x$173.$native));
         /*End dynamic block*/
     }
     $$mathAbs.floor=floor;
     floor.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'x',$mt:'prm',$t:{t:JSNumber},$an:function(){return[];}}],$cont:MathAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','MathAbs','$m','floor']};};
-    function log(x$176){
+    function log(x$174){
         /*Begin dynamic block*/
-        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'103:19-103:22','math.ceylon'):Math).log(/*NULL PARAM!*/x$176.$native));
+        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'103:19-103:22','math.ceylon'):Math).log(/*NULL PARAM!*/x$174.$native));
         /*End dynamic block*/
     }
     $$mathAbs.log=log;
     log.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'x',$mt:'prm',$t:{t:JSNumber},$an:function(){return[];}}],$cont:MathAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','MathAbs','$m','log']};};
-    function max(numbers$177){
-        if(numbers$177===undefined){numbers$177=$$$cl1.getEmpty();}
+    function max(numbers$175){
+        if(numbers$175===undefined){numbers$175=$$$cl1.getEmpty();}
         /*Begin dynamic block*/
-        return JSNumber(JSFunction((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'110:30-110:33','math.ceylon'):Math).max).$apply(null,(tmpvar$178=(function(){
-            var lst$179=[];
-            var it$180=numbers$177.iterator();
-            var elem$181;
-            while ((elem$181=it$180.next())!==$$$cl1.getFinished()){
-                lst$179.push(elem$181.$native);
+        return JSNumber(JSFunction((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'110:30-110:33','math.ceylon'):Math).max).$apply(null,(tmpvar$176=(function(){
+            var lst$177=[];
+            var it$178=numbers$175.iterator();
+            var elem$179;
+            while ((elem$179=it$178.next())!==$$$cl1.getFinished()){
+                lst$177.push(elem$179.$native);
             }
-            return $$$cl1.ArraySequence(lst$179);
-        }()),$$$cl1.isOfType(tmpvar$178,{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}})?tmpvar$178:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'110:54-110:68','math.ceylon'))));
+            return $$$cl1.ArraySequence(lst$177);
+        }()),$$$cl1.isOfType(tmpvar$176,{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}})?tmpvar$176:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'110:54-110:68','math.ceylon'))));
         /*End dynamic block*/
     }
     $$mathAbs.max=max;
     max.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'numbers',$mt:'prm',seq:1,$t:{t:$$$cl1.Sequential,a:{Element:{t:JSNumber}}},$an:function(){return[];}}],$cont:MathAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','MathAbs','$m','max']};};
-    function min(numbers$182){
-        if(numbers$182===undefined){numbers$182=$$$cl1.getEmpty();}
+    function min(numbers$180){
+        if(numbers$180===undefined){numbers$180=$$$cl1.getEmpty();}
         /*Begin dynamic block*/
-        return JSNumber(JSFunction((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'117:30-117:33','math.ceylon'):Math).min).$apply(null,(tmpvar$183=(function(){
-            var lst$184=[];
-            var it$185=numbers$182.iterator();
-            var elem$186;
-            while ((elem$186=it$185.next())!==$$$cl1.getFinished()){
-                lst$184.push(elem$186.$native);
+        return JSNumber(JSFunction((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'117:30-117:33','math.ceylon'):Math).min).$apply(null,(tmpvar$181=(function(){
+            var lst$182=[];
+            var it$183=numbers$180.iterator();
+            var elem$184;
+            while ((elem$184=it$183.next())!==$$$cl1.getFinished()){
+                lst$182.push(elem$184.$native);
             }
-            return $$$cl1.ArraySequence(lst$184);
-        }()),$$$cl1.isOfType(tmpvar$183,{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}})?tmpvar$183:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'117:54-117:68','math.ceylon'))));
+            return $$$cl1.ArraySequence(lst$182);
+        }()),$$$cl1.isOfType(tmpvar$181,{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}})?tmpvar$181:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'117:54-117:68','math.ceylon'))));
         /*End dynamic block*/
     }
     $$mathAbs.min=min;
     min.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'numbers',$mt:'prm',seq:1,$t:{t:$$$cl1.Sequential,a:{Element:{t:JSNumber}}},$an:function(){return[];}}],$cont:MathAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','MathAbs','$m','min']};};
-    function pow(base$187,exponent$188){
+    function pow(base$185,exponent$186){
         /*Begin dynamic block*/
-        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'123:19-123:22','math.ceylon'):Math).pow(/*NULL PARAM!*/base$187/*NULL PARAM!*/,exponent$188));
+        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'123:19-123:22','math.ceylon'):Math).pow(/*NULL PARAM!*/base$185/*NULL PARAM!*/,exponent$186));
         /*End dynamic block*/
     }
     $$mathAbs.pow=pow;
@@ -1401,30 +1400,30 @@ function MathAbs($$mathAbs){
     }
     $$mathAbs.random=random;
     random.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[],$cont:MathAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','MathAbs','$m','random']};};
-    function round(x$189){
+    function round(x$187){
         /*Begin dynamic block*/
-        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'135:19-135:22','math.ceylon'):Math).round(/*NULL PARAM!*/x$189));
+        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'135:19-135:22','math.ceylon'):Math).round(/*NULL PARAM!*/x$187));
         /*End dynamic block*/
     }
     $$mathAbs.round=round;
     round.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'x',$mt:'prm',$t:{t:JSNumber},$an:function(){return[];}}],$cont:MathAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','MathAbs','$m','round']};};
-    function sin(x$190){
+    function sin(x$188){
         /*Begin dynamic block*/
-        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'141:19-141:22','math.ceylon'):Math).sin(/*NULL PARAM!*/x$190));
+        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'141:19-141:22','math.ceylon'):Math).sin(/*NULL PARAM!*/x$188));
         /*End dynamic block*/
     }
     $$mathAbs.sin=sin;
     sin.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'x',$mt:'prm',$t:{t:JSNumber},$an:function(){return[];}}],$cont:MathAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','MathAbs','$m','sin']};};
-    function sqrt(x$191){
+    function sqrt(x$189){
         /*Begin dynamic block*/
-        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'147:19-147:22','math.ceylon'):Math).sqrt(/*NULL PARAM!*/x$191));
+        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'147:19-147:22','math.ceylon'):Math).sqrt(/*NULL PARAM!*/x$189));
         /*End dynamic block*/
     }
     $$mathAbs.sqrt=sqrt;
     sqrt.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'x',$mt:'prm',$t:{t:JSNumber},$an:function(){return[];}}],$cont:MathAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','MathAbs','$m','sqrt']};};
-    function tan(x$192){
+    function tan(x$190){
         /*Begin dynamic block*/
-        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'153:19-153:22','math.ceylon'):Math).tan(/*NULL PARAM!*/x$192));
+        return JSNumber((typeof Math==='undefined'||Math===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Math")),'153:19-153:22','math.ceylon'):Math).tan(/*NULL PARAM!*/x$190));
         /*End dynamic block*/
     }
     $$mathAbs.tan=tan;
@@ -1441,15 +1440,15 @@ function $init$MathAbs(){
 }
 exports.$init$MathAbs=$init$MathAbs;
 $init$MathAbs();
-function Math(n$193, $$math){
+function Math(n$191, $$math){
     $init$Math();
     if ($$math===undefined)$$math=new Math.$$;
-    $$math.n$193_=n$193;
+    $$math.n$191_=n$191;
     MathAbs($$math);
-    $$$cl1.defineAttr($$math,'n$193',function(){return this.n$193_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:Math,d:['ceylon.js.language','Math','$at','n']};});
+    $$$cl1.defineAttr($$math,'n$191',function(){return this.n$191_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:Math,d:['ceylon.js.language','Math','$at','n']};});
     $$math.$prop$getNative={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:Math,$an:function(){return[$$$cl1.shared(),$$$cl1.actual()];},d:['ceylon.js.language','Math','$at','native']};}};
     /*Begin dynamic block*/
-    $$math.$native=n$193;/*End dynamic block*/
+    $$math.$native=n$191;/*End dynamic block*/
     return $$math;
 }
 Math.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:MathAbs},satisfies:[],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','Math']};};
@@ -1463,9 +1462,9 @@ function $init$Math(){
 exports.$init$Math=$init$Math;
 $init$Math();
 exports.$mod$ans$=function(){return[$$$cl1.doc($$$cl1.String("JavaScript 1.8.5",16))];};
-function createJSNumber(val$194){
+function createJSNumber(val$192){
     /*Begin dynamic block*/
-    return JSNumber((typeof Number==='undefined'||Number===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Number")),'3:18-3:23','number.ceylon'):Number)(/*NULL PARAM!*/val$194));
+    return JSNumber((typeof Number==='undefined'||Number===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Number")),'3:18-3:23','number.ceylon'):Number)(/*NULL PARAM!*/val$192));
     /*End dynamic block*/
 }
 exports.createJSNumber=createJSNumber;
@@ -1502,20 +1501,20 @@ function JSNumberAbs($$jSNumberAbs){
     $init$JSNumberAbs();
     if ($$jSNumberAbs===undefined)$$$cl1.throwexc($$$cl1.InvocationException$meta$model($$$cl1.String("Cannot instantiate abstract class")),'?','?')
     JSObjectAbs($$jSNumberAbs);
-    $$jSNumberAbs.toExponential$defs$fractionDigits=function(fractionDigits$195){return null;};
-    function toExponential(fractionDigits$195){
-        if(fractionDigits$195===undefined){fractionDigits$195=$$jSNumberAbs.toExponential$defs$fractionDigits(fractionDigits$195);}
+    $$jSNumberAbs.toExponential$defs$fractionDigits=function(fractionDigits$193){return null;};
+    function toExponential(fractionDigits$193){
+        if(fractionDigits$193===undefined){fractionDigits$193=$$jSNumberAbs.toExponential$defs$fractionDigits(fractionDigits$193);}
         
-        var case$196=fractionDigits$195;
-        if ($$$cl1.isOfType(fractionDigits$195,{t:$$$cl1.Integer})) {
+        var case$194=fractionDigits$193;
+        if ($$$cl1.isOfType(fractionDigits$193,{t:$$$cl1.Integer})) {
             /*Begin dynamic block*/
-            return JSString($$jSNumberAbs.$native.toExponential(/*NULL PARAM!*/case$196));
+            return JSString($$jSNumberAbs.$native.toExponential(/*NULL PARAM!*/case$194));
             /*End dynamic block*/
-        }else if ($$$cl1.isOfType(fractionDigits$195,{t:JSNumber})) {
+        }else if ($$$cl1.isOfType(fractionDigits$193,{t:JSNumber})) {
             /*Begin dynamic block*/
-            return JSString($$jSNumberAbs.$native.toExponential(/*NULL PARAM!*/case$196.$native));
+            return JSString($$jSNumberAbs.$native.toExponential(/*NULL PARAM!*/case$194.$native));
             /*End dynamic block*/
-        }else if ($$$cl1.isOfType(fractionDigits$195,{t:$$$cl1.Null})) {
+        }else if ($$$cl1.isOfType(fractionDigits$193,{t:$$$cl1.Null})) {
             /*Begin dynamic block*/
             return JSString($$jSNumberAbs.$native.toExponential());
             /*End dynamic block*/
@@ -1523,37 +1522,37 @@ function JSNumberAbs($$jSNumberAbs){
     }
     $$jSNumberAbs.toExponential=toExponential;
     toExponential.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSString},$ps:[{$nm:'fractionDigits',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cl1.Integer},{ t:'u', l:[{t:$$$cl1.Null},{t:JSNumber}]}]},$an:function(){return[];}}],$cont:JSNumberAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSNumberAbs','$m','toExponential']};};
-    $$jSNumberAbs.toFixed$defs$digits=function(digits$197){return (0);};
-    function toFixed(digits$197){
-        if(digits$197===undefined){digits$197=$$jSNumberAbs.toFixed$defs$digits(digits$197);}
+    $$jSNumberAbs.toFixed$defs$digits=function(digits$195){return (0);};
+    function toFixed(digits$195){
+        if(digits$195===undefined){digits$195=$$jSNumberAbs.toFixed$defs$digits(digits$195);}
         
-        var case$198=digits$197;
-        if ($$$cl1.isOfType(digits$197,{t:$$$cl1.Integer})) {
+        var case$196=digits$195;
+        if ($$$cl1.isOfType(digits$195,{t:$$$cl1.Integer})) {
             /*Begin dynamic block*/
-            return JSString($$jSNumberAbs.$native.toFixed(/*NULL PARAM!*/case$198));
+            return JSString($$jSNumberAbs.$native.toFixed(/*NULL PARAM!*/case$196));
             /*End dynamic block*/
-        }else if ($$$cl1.isOfType(digits$197,{t:JSNumber})) {
+        }else if ($$$cl1.isOfType(digits$195,{t:JSNumber})) {
             /*Begin dynamic block*/
-            return JSString($$jSNumberAbs.$native.toFixed(/*NULL PARAM!*/case$198.$native));
+            return JSString($$jSNumberAbs.$native.toFixed(/*NULL PARAM!*/case$196.$native));
             /*End dynamic block*/
         }
     }
     $$jSNumberAbs.toFixed=toFixed;
     toFixed.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSString},$ps:[{$nm:'digits',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cl1.Integer},{t:JSNumber}]},$an:function(){return[];}}],$cont:JSNumberAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSNumberAbs','$m','toFixed']};};
-    $$jSNumberAbs.toPrecision$defs$precision=function(precision$199){return null;};
-    function toPrecision(precision$199){
-        if(precision$199===undefined){precision$199=$$jSNumberAbs.toPrecision$defs$precision(precision$199);}
+    $$jSNumberAbs.toPrecision$defs$precision=function(precision$197){return null;};
+    function toPrecision(precision$197){
+        if(precision$197===undefined){precision$197=$$jSNumberAbs.toPrecision$defs$precision(precision$197);}
         
-        var case$200=precision$199;
-        if ($$$cl1.isOfType(precision$199,{t:$$$cl1.Integer})) {
+        var case$198=precision$197;
+        if ($$$cl1.isOfType(precision$197,{t:$$$cl1.Integer})) {
             /*Begin dynamic block*/
-            return JSString($$jSNumberAbs.$native.toPrecision(/*NULL PARAM!*/case$200));
+            return JSString($$jSNumberAbs.$native.toPrecision(/*NULL PARAM!*/case$198));
             /*End dynamic block*/
-        }else if ($$$cl1.isOfType(precision$199,{t:JSNumber})) {
+        }else if ($$$cl1.isOfType(precision$197,{t:JSNumber})) {
             /*Begin dynamic block*/
-            return JSString($$jSNumberAbs.$native.toPrecision(/*NULL PARAM!*/case$200.$native));
+            return JSString($$jSNumberAbs.$native.toPrecision(/*NULL PARAM!*/case$198.$native));
             /*End dynamic block*/
-        }else if ($$$cl1.isOfType(precision$199,{t:$$$cl1.Null})) {
+        }else if ($$$cl1.isOfType(precision$197,{t:$$$cl1.Null})) {
             /*Begin dynamic block*/
             return JSString($$jSNumberAbs.$native.toPrecision());
             /*End dynamic block*/
@@ -1573,15 +1572,15 @@ function $init$JSNumberAbs(){
 }
 exports.$init$JSNumberAbs=$init$JSNumberAbs;
 $init$JSNumberAbs();
-function JSNumber(n$201, $$jSNumber){
+function JSNumber(n$199, $$jSNumber){
     $init$JSNumber();
     if ($$jSNumber===undefined)$$jSNumber=new JSNumber.$$;
-    $$jSNumber.n$201_=n$201;
+    $$jSNumber.n$199_=n$199;
     JSNumberAbs($$jSNumber);
-    $$$cl1.defineAttr($$jSNumber,'n$201',function(){return this.n$201_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:JSNumber,d:['ceylon.js.language','JSNumber','$at','n']};});
+    $$$cl1.defineAttr($$jSNumber,'n$199',function(){return this.n$199_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:JSNumber,d:['ceylon.js.language','JSNumber','$at','n']};});
     $$jSNumber.$prop$getNative={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:JSNumber,$an:function(){return[$$$cl1.shared(),$$$cl1.actual()];},d:['ceylon.js.language','JSNumber','$at','native']};}};
     /*Begin dynamic block*/
-    $$jSNumber.$native=n$201;/*End dynamic block*/
+    $$jSNumber.$native=n$199;/*End dynamic block*/
     return $$jSNumber;
 }
 JSNumber.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:JSNumberAbs},satisfies:[],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSNumber']};};
@@ -1632,15 +1631,15 @@ function DataDescriptor(configurable, descriptor, enumerable, writable, val, $$d
     $$$cl1.defineAttr($$dataDescriptor,'writable',function(){return this.writable_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Boolean},$cont:DataDescriptor,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','DataDescriptor','$at','writable']};});
     $$$cl1.defineAttr($$dataDescriptor,'val',function(){return this.val_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:DataDescriptor,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','DataDescriptor','$at','val']};});
     function toNative(){
-        var obj$202=createJSObject();
+        var obj$200=createJSObject();
         /*Begin dynamic block*/
-        obj$202.$native.configurable=$$dataDescriptor.configurable;
-        obj$202.$native.descriptor=$$dataDescriptor.descriptor;
-        obj$202.$native.enumerable=$$dataDescriptor.enumerable;
-        obj$202.$native.writable=$$dataDescriptor.writable;
-        obj$202.$native.value=$$dataDescriptor.val;
+        obj$200.$native.configurable=$$dataDescriptor.configurable;
+        obj$200.$native.descriptor=$$dataDescriptor.descriptor;
+        obj$200.$native.enumerable=$$dataDescriptor.enumerable;
+        obj$200.$native.writable=$$dataDescriptor.writable;
+        obj$200.$native.value=$$dataDescriptor.val;
         /*End dynamic block*/
-        return obj$202;
+        return obj$200;
     }
     $$dataDescriptor.toNative=toNative;
     toNative.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSObject},$ps:[],$cont:DataDescriptor,$an:function(){return[$$$cl1.shared(),$$$cl1.actual()];},d:['ceylon.js.language','DataDescriptor','$m','toNative']};};
@@ -1675,19 +1674,19 @@ function AccessorDescriptor(configurable, descriptor, enumerable, get, set, $$ac
     $$$cl1.defineAttr($$accessorDescriptor,'get',function(){return this.get_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cl1.Callable,a:{Arguments:{t:$$$cl1.Empty},Return:{t:$$$cl1.Anything}}}]},$cont:AccessorDescriptor,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','AccessorDescriptor','$at','get']};});
     $$$cl1.defineAttr($$accessorDescriptor,'set',function(){return this.set_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{ t:'u', l:[{t:$$$cl1.Null},{t:$$$cl1.Callable,a:{Arguments:{t:$$$cl1.Tuple,a:{Rest:{t:$$$cl1.Empty},First:{t:$$$cl1.Anything},Element:{t:$$$cl1.Anything}}},Return:{t:$$$cl1.Anything}}}]},$cont:AccessorDescriptor,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','AccessorDescriptor','$at','set']};});
     function toNative(){
-        var obj$203=createJSObject();
+        var obj$201=createJSObject();
         /*Begin dynamic block*/
-        obj$203.$native.configurable=$$accessorDescriptor.configurable;
-        obj$203.$native.descriptor=$$accessorDescriptor.descriptor;
-        obj$203.$native.enumerable=$$accessorDescriptor.enumerable;
-        var g$204;
-        if((g$204=$$accessorDescriptor.get)!==null){
-            obj$203.$native.get=$$$cl1.$JsCallable(g$204/*TODO: callable targs 6*/);
-        }var s$205;
-        if((s$205=$$accessorDescriptor.set)!==null){
-            obj$203.$native.set=$$$cl1.$JsCallable(s$205/*TODO: callable targs 6*/);
+        obj$201.$native.configurable=$$accessorDescriptor.configurable;
+        obj$201.$native.descriptor=$$accessorDescriptor.descriptor;
+        obj$201.$native.enumerable=$$accessorDescriptor.enumerable;
+        var g$202;
+        if((g$202=$$accessorDescriptor.get)!==null){
+            obj$201.$native.get=$$$cl1.$JsCallable(g$202/*TODO: callable targs 6*/);
+        }var s$203;
+        if((s$203=$$accessorDescriptor.set)!==null){
+            obj$201.$native.set=$$$cl1.$JsCallable(s$203/*TODO: callable targs 6*/);
         }/*End dynamic block*/
-        return obj$203;
+        return obj$201;
     }
     $$accessorDescriptor.toNative=toNative;
     toNative.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSObject},$ps:[],$cont:AccessorDescriptor,$an:function(){return[$$$cl1.shared(),$$$cl1.actual()];},d:['ceylon.js.language','AccessorDescriptor','$m','toNative']};};
@@ -1703,93 +1702,93 @@ function $init$AccessorDescriptor(){
 }
 exports.$init$AccessorDescriptor=$init$AccessorDescriptor;
 $init$AccessorDescriptor();
-function objectCreate(proto$206,properties$207){
-    var propsNative$208=createJSObject();
+function objectCreate(proto$204,properties$205){
+    var propsNative$206=createJSObject();
     /*Begin dynamic block*/
-    var it$209 = properties$207.iterator();
-    var item$210;while ((item$210=it$209.next())!==$$$cl1.getFinished()){
-        var key$211=item$210.key;
-        var val$212=item$210.item;
-        objectDefineProperty(propsNative$208,key$211,val$212);
-    }return JSObject((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'54:18-54:23','object.ceylon'):Object).create(/*NULL PARAM!*/proto$206.$native/*NULL PARAM!*/,propsNative$208));
+    var it$207 = properties$205.iterator();
+    var item$208;while ((item$208=it$207.next())!==$$$cl1.getFinished()){
+        var key$209=item$208.key;
+        var val$210=item$208.item;
+        objectDefineProperty(propsNative$206,key$209,val$210);
+    }return JSObject((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'54:18-54:23','object.ceylon'):Object).create(/*NULL PARAM!*/proto$204.$native/*NULL PARAM!*/,propsNative$206));
     /*End dynamic block*/
 }
 exports.objectCreate=objectCreate;
 objectCreate.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSObject},$ps:[{$nm:'proto',$mt:'prm',$t:{t:JSObject},$an:function(){return[];}},{$nm:'properties',$mt:'prm',$t:{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{ t:'u', l:[{t:DataDescriptor},{t:AccessorDescriptor}]}}}}},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','objectCreate']};};
-function objectDefineProperty(obj$213,prop$214,descriptor$215){
+function objectDefineProperty(obj$211,prop$212,descriptor$213){
     
-    var case$216=prop$214;
-    if ($$$cl1.isOfType(prop$214,{t:$$$cl1.String})) {
+    var case$214=prop$212;
+    if ($$$cl1.isOfType(prop$212,{t:$$$cl1.String})) {
         /*Begin dynamic block*/
-        (typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'62:3-62:8','object.ceylon'):Object).defineProperty(/*NULL PARAM!*/obj$213.$native/*NULL PARAM!*/,case$216.valueOf()/*NULL PARAM!*/,descriptor$215.toNative().$native);
+        (typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'62:3-62:8','object.ceylon'):Object).defineProperty(/*NULL PARAM!*/obj$211.$native/*NULL PARAM!*/,case$214.valueOf()/*NULL PARAM!*/,descriptor$213.toNative().$native);
         /*End dynamic block*/
-    }else if ($$$cl1.isOfType(prop$214,{t:JSString})) {
+    }else if ($$$cl1.isOfType(prop$212,{t:JSString})) {
         /*Begin dynamic block*/
-        (typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'67:3-67:8','object.ceylon'):Object).defineProperty(/*NULL PARAM!*/obj$213.$native/*NULL PARAM!*/,case$216.$native/*NULL PARAM!*/,descriptor$215.toNative().$native);
+        (typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'67:3-67:8','object.ceylon'):Object).defineProperty(/*NULL PARAM!*/obj$211.$native/*NULL PARAM!*/,case$214.$native/*NULL PARAM!*/,descriptor$213.toNative().$native);
         /*End dynamic block*/
     }
 }
 exports.objectDefineProperty=objectDefineProperty;
 objectDefineProperty.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'obj',$mt:'prm',$t:{t:JSObject},$an:function(){return[];}},{$nm:'prop',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:JSString}]},$an:function(){return[];}},{$nm:'descriptor',$mt:'prm',$t:{ t:'u', l:[{t:DataDescriptor},{t:AccessorDescriptor}]},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','objectDefineProperty']};};
-function defineProperties(obj$217,properties$218){
-    var propsNative$219=createJSObject();
+function defineProperties(obj$215,properties$216){
+    var propsNative$217=createJSObject();
     /*Begin dynamic block*/
-    var it$220 = properties$218.iterator();
-    var item$221;while ((item$221=it$220.next())!==$$$cl1.getFinished()){
-        var key$222=item$221.key;
-        var val$223=item$221.item;
-        objectDefineProperty(propsNative$219,key$222,val$223);
-    }return JSObject((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'78:18-78:23','object.ceylon'):Object).defineProperties(/*NULL PARAM!*/obj$217.$native/*NULL PARAM!*/,propsNative$219));
+    var it$218 = properties$216.iterator();
+    var item$219;while ((item$219=it$218.next())!==$$$cl1.getFinished()){
+        var key$220=item$219.key;
+        var val$221=item$219.item;
+        objectDefineProperty(propsNative$217,key$220,val$221);
+    }return JSObject((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'78:18-78:23','object.ceylon'):Object).defineProperties(/*NULL PARAM!*/obj$215.$native/*NULL PARAM!*/,propsNative$217));
     /*End dynamic block*/
 }
 exports.defineProperties=defineProperties;
 defineProperties.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSObject},$ps:[{$nm:'obj',$mt:'prm',$t:{t:JSObject},$an:function(){return[];}},{$nm:'properties',$mt:'prm',$t:{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Entry,a:{Key:{t:$$$cl1.String},Item:{ t:'u', l:[{t:DataDescriptor},{t:AccessorDescriptor}]}}}}},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','defineProperties']};};
-function objectGetOwnPropertyDescriptor(obj$224,prop$225){
-    var descriptor$226;
+function objectGetOwnPropertyDescriptor(obj$222,prop$223){
+    var descriptor$224;
     
-    var case$227=prop$225;
-    if ($$$cl1.isOfType(prop$225,{t:$$$cl1.String})) {
+    var case$225=prop$223;
+    if ($$$cl1.isOfType(prop$223,{t:$$$cl1.String})) {
         /*Begin dynamic block*/
-        descriptor$226=JSObject((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'87:25-87:30','object.ceylon'):Object).objectGetOwnPropertyDescriptor(/*NULL PARAM!*/obj$224/*NULL PARAM!*/,case$227.valueOf()));/*End dynamic block*/
-    }else if ($$$cl1.isOfType(prop$225,{t:JSString})) {
+        descriptor$224=JSObject((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'87:25-87:30','object.ceylon'):Object).objectGetOwnPropertyDescriptor(/*NULL PARAM!*/obj$222/*NULL PARAM!*/,case$225.valueOf()));/*End dynamic block*/
+    }else if ($$$cl1.isOfType(prop$223,{t:JSString})) {
         /*Begin dynamic block*/
-        descriptor$226=JSObject((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'92:25-92:30','object.ceylon'):Object).objectGetOwnPropertyDescriptor(/*NULL PARAM!*/obj$224/*NULL PARAM!*/,case$227.$native));/*End dynamic block*/
+        descriptor$224=JSObject((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'92:25-92:30','object.ceylon'):Object).objectGetOwnPropertyDescriptor(/*NULL PARAM!*/obj$222/*NULL PARAM!*/,case$225.$native));/*End dynamic block*/
     }
-    return descriptor$226;
+    return descriptor$224;
 }
 exports.objectGetOwnPropertyDescriptor=objectGetOwnPropertyDescriptor;
 objectGetOwnPropertyDescriptor.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSObject},$ps:[{$nm:'obj',$mt:'prm',$t:{t:JSObject},$an:function(){return[];}},{$nm:'prop',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:JSString}]},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','objectGetOwnPropertyDescriptor']};};
-function objectKeys(obj$228){
+function objectKeys(obj$226){
     /*Begin dynamic block*/
-    return JSArray((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'100:17-100:22','object.ceylon'):Object).keys(/*NULL PARAM!*/obj$228));
+    return JSArray((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'100:17-100:22','object.ceylon'):Object).keys(/*NULL PARAM!*/obj$226));
     /*End dynamic block*/
 }
 exports.objectKeys=objectKeys;
 objectKeys.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSArray},$ps:[{$nm:'obj',$mt:'prm',$t:{t:JSObject},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','objectKeys']};};
-function objectGetOwnPropertyNames(obj$229){
+function objectGetOwnPropertyNames(obj$227){
     /*Begin dynamic block*/
-    return JSArray((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'106:17-106:22','object.ceylon'):Object).getOwnPropertyNames(/*NULL PARAM!*/obj$229.$native));
+    return JSArray((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'106:17-106:22','object.ceylon'):Object).getOwnPropertyNames(/*NULL PARAM!*/obj$227.$native));
     /*End dynamic block*/
 }
 exports.objectGetOwnPropertyNames=objectGetOwnPropertyNames;
 objectGetOwnPropertyNames.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSArray},$ps:[{$nm:'obj',$mt:'prm',$t:{t:JSObject},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','objectGetOwnPropertyNames']};};
-function objectGetPrototypeOf(obj$230){
+function objectGetPrototypeOf(obj$228){
     /*Begin dynamic block*/
-    return JSObject((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'112:18-112:23','object.ceylon'):Object).getPrototypeOf(/*NULL PARAM!*/obj$230.$native));
+    return JSObject((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'112:18-112:23','object.ceylon'):Object).getPrototypeOf(/*NULL PARAM!*/obj$228.$native));
     /*End dynamic block*/
 }
 exports.objectGetPrototypeOf=objectGetPrototypeOf;
 objectGetPrototypeOf.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSObject},$ps:[{$nm:'obj',$mt:'prm',$t:{t:JSObject},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','objectGetPrototypeOf']};};
-function objectPreventExtensions(obj$231){
+function objectPreventExtensions(obj$229){
     /*Begin dynamic block*/
-    return JSObject((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'118:18-118:23','object.ceylon'):Object).preventExtensions(/*NULL PARAM!*/obj$231.$native));
+    return JSObject((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'118:18-118:23','object.ceylon'):Object).preventExtensions(/*NULL PARAM!*/obj$229.$native));
     /*End dynamic block*/
 }
 exports.objectPreventExtensions=objectPreventExtensions;
 objectPreventExtensions.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSObject},$ps:[{$nm:'obj',$mt:'prm',$t:{t:JSObject},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','objectPreventExtensions']};};
-function objectIsExtensible(obj$232){
+function objectIsExtensible(obj$230){
     /*Begin dynamic block*/
-    if((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'124:6-124:11','object.ceylon'):Object).isExtensible(/*NULL PARAM!*/obj$232.$native)){
+    if((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'124:6-124:11','object.ceylon'):Object).isExtensible(/*NULL PARAM!*/obj$230.$native)){
         return true;
     }else {
         return false;
@@ -1797,16 +1796,16 @@ function objectIsExtensible(obj$232){
 }
 exports.objectIsExtensible=objectIsExtensible;
 objectIsExtensible.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Boolean},$ps:[{$nm:'obj',$mt:'prm',$t:{t:JSObject},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','objectIsExtensible']};};
-function objectSeal(obj$233){
+function objectSeal(obj$231){
     /*Begin dynamic block*/
-    return JSObject((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'134:18-134:23','object.ceylon'):Object).seal(/*NULL PARAM!*/obj$233.$native));
+    return JSObject((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'134:18-134:23','object.ceylon'):Object).seal(/*NULL PARAM!*/obj$231.$native));
     /*End dynamic block*/
 }
 exports.objectSeal=objectSeal;
 objectSeal.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSObject},$ps:[{$nm:'obj',$mt:'prm',$t:{t:JSObject},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','objectSeal']};};
-function objectIsSealed(obj$234){
+function objectIsSealed(obj$232){
     /*Begin dynamic block*/
-    if((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'140:6-140:11','object.ceylon'):Object).isSealed(/*NULL PARAM!*/obj$234.$native)){
+    if((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'140:6-140:11','object.ceylon'):Object).isSealed(/*NULL PARAM!*/obj$232.$native)){
         return true;
     }else {
         return false;
@@ -1814,16 +1813,16 @@ function objectIsSealed(obj$234){
 }
 exports.objectIsSealed=objectIsSealed;
 objectIsSealed.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Boolean},$ps:[{$nm:'obj',$mt:'prm',$t:{t:JSObject},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','objectIsSealed']};};
-function objectFreeze(obj$235){
+function objectFreeze(obj$233){
     /*Begin dynamic block*/
-    return JSObject((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'150:18-150:23','object.ceylon'):Object).freeze(/*NULL PARAM!*/obj$235.$native));
+    return JSObject((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'150:18-150:23','object.ceylon'):Object).freeze(/*NULL PARAM!*/obj$233.$native));
     /*End dynamic block*/
 }
 exports.objectFreeze=objectFreeze;
 objectFreeze.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSObject},$ps:[{$nm:'obj',$mt:'prm',$t:{t:JSObject},$an:function(){return[];}}],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','objectFreeze']};};
-function objectIsFrozen(obj$236){
+function objectIsFrozen(obj$234){
     /*Begin dynamic block*/
-    if((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'156:6-156:11','object.ceylon'):Object).isFrozen(/*NULL PARAM!*/obj$236.$native)){
+    if((typeof Object==='undefined'||Object===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: Object")),'156:6-156:11','object.ceylon'):Object).isFrozen(/*NULL PARAM!*/obj$234.$native)){
         return true;
     }else {
         return false;
@@ -1849,40 +1848,40 @@ function JSObjectAbs($$jSObjectAbs){
     }
     $$jSObjectAbs.getPrototype=getPrototype;
     getPrototype.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSObject},$ps:[],$cont:JSObjectAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSObjectAbs','$m','getPrototype']};};
-    function setPrototype(prototype$237){
+    function setPrototype(prototype$235){
         /*Begin dynamic block*/
-        $$jSObjectAbs.$native.prototype=prototype$237.$native;
+        $$jSObjectAbs.$native.prototype=prototype$235.$native;
         /*End dynamic block*/
     }
     $$jSObjectAbs.setPrototype=setPrototype;
     setPrototype.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'prototype',$mt:'prm',$t:{t:JSObject},$an:function(){return[];}}],$cont:JSObjectAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSObjectAbs','$m','setPrototype']};};
     function getConstructor(){
         /*Begin dynamic block*/
-        return (tmpvar$238=(/*NULL PARAM!*/tmpvar$239=$$jSObjectAbs.$native.constructor,tmpvar$240=(typeof Function==='undefined'?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined type Function")),'187:10-187:17','object.ceylon'):Function),tmpvar$240.$$===undefined?new tmpvar$240(tmpvar$239):tmpvar$240(tmpvar$239)),$$$cl1.isOfType(tmpvar$238,{t:$$$cl1.Anything})?tmpvar$238:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'187:10-187:37','object.ceylon'));
+        return (tmpvar$236=(/*NULL PARAM!*/tmpvar$237=$$jSObjectAbs.$native.constructor,tmpvar$238=(typeof Function==='undefined'?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined type Function")),'187:10-187:17','object.ceylon'):Function),tmpvar$238.$$===undefined?new tmpvar$238(tmpvar$237):tmpvar$238(tmpvar$237)),$$$cl1.isOfType(tmpvar$236,{t:$$$cl1.Anything})?tmpvar$236:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'187:10-187:37','object.ceylon'));
         /*End dynamic block*/
     }
     $$jSObjectAbs.getConstructor=getConstructor;
     getConstructor.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSFunction},$ps:[],$cont:JSObjectAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSObjectAbs','$m','getConstructor']};};
-    function setConstructor(constructor$241){
+    function setConstructor(constructor$239){
         /*Begin dynamic block*/
-        $$jSObjectAbs.$native.constructor=constructor$241.$native;
+        $$jSObjectAbs.$native.constructor=constructor$239.$native;
         /*End dynamic block*/
     }
     $$jSObjectAbs.setConstructor=setConstructor;
     setConstructor.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'constructor',$mt:'prm',$t:{t:JSFunction},$an:function(){return[];}}],$cont:JSObjectAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSObjectAbs','$m','setConstructor']};};
-    function hasOwnProperty(prop$242){
-        var has$243;
+    function hasOwnProperty(prop$240){
+        var has$241;
         
-        var case$244=prop$242;
-        if ($$$cl1.isOfType(prop$242,{t:$$$cl1.String})) {
+        var case$242=prop$240;
+        if ($$$cl1.isOfType(prop$240,{t:$$$cl1.String})) {
             /*Begin dynamic block*/
-            has$243=$$jSObjectAbs.$native.hasOwnProperty(/*NULL PARAM!*/case$244.valueOf());/*End dynamic block*/
-        }else if ($$$cl1.isOfType(prop$242,{t:JSString})) {
+            has$241=$$jSObjectAbs.$native.hasOwnProperty(/*NULL PARAM!*/case$242.valueOf());/*End dynamic block*/
+        }else if ($$$cl1.isOfType(prop$240,{t:JSString})) {
             /*Begin dynamic block*/
-            has$243=$$jSObjectAbs.$native.hasOwnProperty(/*NULL PARAM!*/case$244.$native);/*End dynamic block*/
+            has$241=$$jSObjectAbs.$native.hasOwnProperty(/*NULL PARAM!*/case$242.$native);/*End dynamic block*/
         }
         /*Begin dynamic block*/
-        if(has$243){
+        if(has$241){
             return true;
         }else {
             return false;
@@ -1890,9 +1889,9 @@ function JSObjectAbs($$jSObjectAbs){
     }
     $$jSObjectAbs.hasOwnProperty=hasOwnProperty;
     hasOwnProperty.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Boolean},$ps:[{$nm:'prop',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:JSString}]},$an:function(){return[];}}],$cont:JSObjectAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSObjectAbs','$m','hasOwnProperty']};};
-    function isPrototypeOf(obj$245){
+    function isPrototypeOf(obj$243){
         /*Begin dynamic block*/
-        if($$jSObjectAbs.$native.isPrototypeOf(/*NULL PARAM!*/obj$245)){
+        if($$jSObjectAbs.$native.isPrototypeOf(/*NULL PARAM!*/obj$243)){
             return true;
         }else {
             return false;
@@ -1900,19 +1899,19 @@ function JSObjectAbs($$jSObjectAbs){
     }
     $$jSObjectAbs.isPrototypeOf=isPrototypeOf;
     isPrototypeOf.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Boolean},$ps:[{$nm:'obj',$mt:'prm',$t:{t:$$$cl1.Anything},$an:function(){return[];}}],$cont:JSObjectAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSObjectAbs','$m','isPrototypeOf']};};
-    function propertyIsEnumerable(prop$246){
-        var enum$247;
+    function propertyIsEnumerable(prop$244){
+        var enum$245;
         
-        var case$248=prop$246;
-        if ($$$cl1.isOfType(prop$246,{t:$$$cl1.String})) {
+        var case$246=prop$244;
+        if ($$$cl1.isOfType(prop$244,{t:$$$cl1.String})) {
             /*Begin dynamic block*/
-            enum$247=$$jSObjectAbs.$native.propertyIsEnumerable(/*NULL PARAM!*/case$248.valueOf());/*End dynamic block*/
-        }else if ($$$cl1.isOfType(prop$246,{t:JSString})) {
+            enum$245=$$jSObjectAbs.$native.propertyIsEnumerable(/*NULL PARAM!*/case$246.valueOf());/*End dynamic block*/
+        }else if ($$$cl1.isOfType(prop$244,{t:JSString})) {
             /*Begin dynamic block*/
-            enum$247=$$jSObjectAbs.$native.propertyIsEnumerable(/*NULL PARAM!*/case$248.$native);/*End dynamic block*/
+            enum$245=$$jSObjectAbs.$native.propertyIsEnumerable(/*NULL PARAM!*/case$246.$native);/*End dynamic block*/
         }
         /*Begin dynamic block*/
-        if(enum$247){
+        if(enum$245){
             return true;
         }else {
             return false;
@@ -1920,54 +1919,54 @@ function JSObjectAbs($$jSObjectAbs){
     }
     $$jSObjectAbs.propertyIsEnumerable=propertyIsEnumerable;
     propertyIsEnumerable.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Boolean},$ps:[{$nm:'prop',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:JSString}]},$an:function(){return[];}}],$cont:JSObjectAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSObjectAbs','$m','propertyIsEnumerable']};};
-    function $apply(thisArg$249,args$250){
+    function $apply(thisArg$247,args$248){
         /*Begin dynamic block*/
-        $$jSObjectAbs.$native.apply(/*NULL PARAM!*/(typeof a==='undefined'||a===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: a")),'253:22-253:22','object.ceylon'):a)/*NULL PARAM!*/,args$250);
+        $$jSObjectAbs.$native.apply(/*NULL PARAM!*/(typeof a==='undefined'||a===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: a")),'253:22-253:22','object.ceylon'):a)/*NULL PARAM!*/,args$248);
         /*End dynamic block*/
     }
     $$jSObjectAbs.$apply=$apply;
     $apply.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'thisArg',$mt:'prm',$t:{t:$$$cl1.Anything},$an:function(){return[];}},{$nm:'args',$mt:'prm',$t:{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}},$an:function(){return[];}}],$cont:JSObjectAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSObjectAbs','$m','apply']};};
-    function applyJS(thisArg$251,args$252){
-        var a$253;
-        if((a$253=thisArg$251)!==null){
+    function applyJS(thisArg$249,args$250){
+        var a$251;
+        if((a$251=thisArg$249)!==null){
             /*Begin dynamic block*/
-            $$jSObjectAbs.$native.apply(/*NULL PARAM!*/a$253.$native/*NULL PARAM!*/,(function(){
-                var lst$254=[];
-                var it$255=args$252.iterator();
-                var elem$256;
-                while ((elem$256=it$255.next())!==$$$cl1.getFinished()){
-                    lst$254.push(elem$256.$native);
+            $$jSObjectAbs.$native.apply(/*NULL PARAM!*/a$251.$native/*NULL PARAM!*/,(function(){
+                var lst$252=[];
+                var it$253=args$250.iterator();
+                var elem$254;
+                while ((elem$254=it$253.next())!==$$$cl1.getFinished()){
+                    lst$252.push(elem$254.$native);
                 }
-                return $$$cl1.ArraySequence(lst$254);
+                return $$$cl1.ArraySequence(lst$252);
             }()));
             /*End dynamic block*/
         }else {
             /*Begin dynamic block*/
             $$jSObjectAbs.$native.apply(/*NULL PARAM!*/null/*NULL PARAM!*/,(function(){
-                var lst$257=[];
-                var it$258=args$252.iterator();
-                var elem$259;
-                while ((elem$259=it$258.next())!==$$$cl1.getFinished()){
-                    lst$257.push(elem$259.$native);
+                var lst$255=[];
+                var it$256=args$250.iterator();
+                var elem$257;
+                while ((elem$257=it$256.next())!==$$$cl1.getFinished()){
+                    lst$255.push(elem$257.$native);
                 }
-                return $$$cl1.ArraySequence(lst$257);
+                return $$$cl1.ArraySequence(lst$255);
             }()));
             /*End dynamic block*/
         }
     }
     $$jSObjectAbs.applyJS=applyJS;
     applyJS.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'thisArg',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.Null},{t:JSObject}]},$an:function(){return[];}},{$nm:'args',$mt:'prm',$t:{t:$$$cl1.Sequential,a:{Element:{t:JSObject}}},$an:function(){return[];}}],$cont:JSObjectAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSObjectAbs','$m','applyJS']};};
-    function $call(thisArg$260,args$261){
+    function $call(thisArg$258,args$259){
         /*Begin dynamic block*/
-        JSFunction($$jSObjectAbs.$native.call).$apply(thisArg$260,(tmpvar$262=args$261,$$$cl1.isOfType(tmpvar$262,{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}})?tmpvar$262:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'272:45-272:48','object.ceylon')));
+        JSFunction($$jSObjectAbs.$native.call).$apply(thisArg$258,(tmpvar$260=args$259,$$$cl1.isOfType(tmpvar$260,{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}})?tmpvar$260:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'272:45-272:48','object.ceylon')));
         /*End dynamic block*/
     }
     $$jSObjectAbs.$call=$call;
     $call.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$ps:[{$nm:'thisArg',$mt:'prm',$t:{t:$$$cl1.Anything},$an:function(){return[];}},{$nm:'args',$mt:'prm',$t:{t:$$$cl1.Anything},$an:function(){return[];}}],$cont:JSObjectAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSObjectAbs','$m','call']};};
-    function callJS(thisArg$263,args$264){
-        if(args$264===undefined){args$264=$$$cl1.getEmpty();}
+    function callJS(thisArg$261,args$262){
+        if(args$262===undefined){args$262=$$$cl1.getEmpty();}
         /*Begin dynamic block*/
-        JSFunction($$jSObjectAbs.$native.call).applyJS((tmpvar$265=(typeof a==='undefined'||a===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: a")),'278:35-278:35','object.ceylon'):a),$$$cl1.isOfType(tmpvar$265,{ t:'u', l:[{t:$$$cl1.Null},{t:JSObject}]})?tmpvar$265:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'278:35-278:35','object.ceylon')),args$264);
+        JSFunction($$jSObjectAbs.$native.call).applyJS((tmpvar$263=(typeof a==='undefined'||a===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: a")),'278:35-278:35','object.ceylon'):a),$$$cl1.isOfType(tmpvar$263,{ t:'u', l:[{t:$$$cl1.Null},{t:JSObject}]})?tmpvar$263:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'278:35-278:35','object.ceylon')),args$262);
         /*End dynamic block*/
     }
     $$jSObjectAbs.callJS=callJS;
@@ -1991,14 +1990,14 @@ function $init$JSObjectAbs(){
 }
 exports.$init$JSObjectAbs=$init$JSObjectAbs;
 $init$JSObjectAbs();
-function JSObject(n$266, $$jSObject){
+function JSObject(n$264, $$jSObject){
     $init$JSObject();
     if ($$jSObject===undefined)$$jSObject=new JSObject.$$;
-    $$jSObject.n$266_=n$266;
+    $$jSObject.n$264_=n$264;
     JSObjectAbs($$jSObject);
-    $$$cl1.defineAttr($$jSObject,'n$266',function(){return this.n$266_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:JSObject,d:['ceylon.js.language','JSObject','$at','n']};});
+    $$$cl1.defineAttr($$jSObject,'n$264',function(){return this.n$264_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:JSObject,d:['ceylon.js.language','JSObject','$at','n']};});
     /*Begin dynamic block*/
-    $$jSObject.$native=n$266;/*End dynamic block*/
+    $$jSObject.$native=n$264;/*End dynamic block*/
     return $$jSObject;
 }
 JSObject.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:JSObjectAbs},satisfies:[],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSObject']};};
@@ -2012,11 +2011,11 @@ function $init$JSObject(){
 exports.$init$JSObject=$init$JSObject;
 $init$JSObject();
 exports.$pkg$ans$ceylon$js$language=function(){return[$$$cl1.shared()];};
-function RegExpFlag(name$267, $$regExpFlag){
+function RegExpFlag(name$265, $$regExpFlag){
     $init$RegExpFlag();
     if ($$regExpFlag===undefined)$$$cl1.throwexc($$$cl1.InvocationException$meta$model($$$cl1.String("Cannot instantiate abstract class")),'?','?')
-    $$regExpFlag.name$267_=name$267;
-    $$$cl1.defineAttr($$regExpFlag,'name$267',function(){return this.name$267_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:RegExpFlag,d:['ceylon.js.language','RegExpFlag','$at','name']};});
+    $$regExpFlag.name$265_=name$265;
+    $$$cl1.defineAttr($$regExpFlag,'name$265',function(){return this.name$265_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.String},$cont:RegExpFlag,d:['ceylon.js.language','RegExpFlag','$at','name']};});
     return $$regExpFlag;
 }
 RegExpFlag.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:$$$cl1.Basic},satisfies:[],$an:function(){return[$$$cl1.shared(),$$$cl1.abstract()];},d:['ceylon.js.language','RegExpFlag']};};
@@ -2029,98 +2028,98 @@ function $init$RegExpFlag(){
 }
 exports.$init$RegExpFlag=$init$RegExpFlag;
 $init$RegExpFlag();
-function global$268(){
-    var $$global=new global$268.$$;
+function global$266(){
+    var $$global=new global$266.$$;
     RegExpFlag($$$cl1.String("g",1),$$global);
     return $$global;
 }
-function $init$global$268(){
-    if (global$268.$$===undefined){
-        $$$cl1.initTypeProto(global$268,'ceylon.js.language::global',$init$RegExpFlag());
+function $init$global$266(){
+    if (global$266.$$===undefined){
+        $$$cl1.initTypeProto(global$266,'ceylon.js.language::global',$init$RegExpFlag());
     }
-    return global$268;
+    return global$266;
 }
-exports.$init$global$268=$init$global$268;
-$init$global$268();
-var global$269;
+exports.$init$global$266=$init$global$266;
+$init$global$266();
+var global$267;
 function getGlobal(){
-    if (global$269===undefined)global$269=$init$global$268()();
-    return global$269;
+    if (global$267===undefined)global$267=$init$global$266()();
+    return global$267;
 }
 exports.getGlobal=getGlobal;
-getGlobal.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:global$268},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','global']};};
+getGlobal.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:global$266},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','global']};};
 $prop$getGlobal={get:getGlobal,$$metamodel$$:getGlobal.$$metamodel$$};
 exports.$prop$getGlobal=$prop$getGlobal;
-function ignore$270(){
-    var $$ignore=new ignore$270.$$;
+function ignore$268(){
+    var $$ignore=new ignore$268.$$;
     RegExpFlag($$$cl1.String("i",1),$$ignore);
     return $$ignore;
 }
-function $init$ignore$270(){
-    if (ignore$270.$$===undefined){
-        $$$cl1.initTypeProto(ignore$270,'ceylon.js.language::ignore',$init$RegExpFlag());
+function $init$ignore$268(){
+    if (ignore$268.$$===undefined){
+        $$$cl1.initTypeProto(ignore$268,'ceylon.js.language::ignore',$init$RegExpFlag());
     }
-    return ignore$270;
+    return ignore$268;
 }
-exports.$init$ignore$270=$init$ignore$270;
-$init$ignore$270();
-var ignore$271;
+exports.$init$ignore$268=$init$ignore$268;
+$init$ignore$268();
+var ignore$269;
 function getIgnore(){
-    if (ignore$271===undefined)ignore$271=$init$ignore$270()();
-    return ignore$271;
+    if (ignore$269===undefined)ignore$269=$init$ignore$268()();
+    return ignore$269;
 }
 exports.getIgnore=getIgnore;
-getIgnore.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:ignore$270},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','ignore']};};
+getIgnore.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:ignore$268},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','ignore']};};
 $prop$getIgnore={get:getIgnore,$$metamodel$$:getIgnore.$$metamodel$$};
 exports.$prop$getIgnore=$prop$getIgnore;
-function multiple$272(){
-    var $$multiple=new multiple$272.$$;
+function multiple$270(){
+    var $$multiple=new multiple$270.$$;
     RegExpFlag($$$cl1.String("m",1),$$multiple);
     return $$multiple;
 }
-function $init$multiple$272(){
-    if (multiple$272.$$===undefined){
-        $$$cl1.initTypeProto(multiple$272,'ceylon.js.language::multiple',$init$RegExpFlag());
+function $init$multiple$270(){
+    if (multiple$270.$$===undefined){
+        $$$cl1.initTypeProto(multiple$270,'ceylon.js.language::multiple',$init$RegExpFlag());
     }
-    return multiple$272;
+    return multiple$270;
 }
-exports.$init$multiple$272=$init$multiple$272;
-$init$multiple$272();
-var multiple$273;
+exports.$init$multiple$270=$init$multiple$270;
+$init$multiple$270();
+var multiple$271;
 function getMultiple(){
-    if (multiple$273===undefined)multiple$273=$init$multiple$272()();
-    return multiple$273;
+    if (multiple$271===undefined)multiple$271=$init$multiple$270()();
+    return multiple$271;
 }
 exports.getMultiple=getMultiple;
-getMultiple.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:multiple$272},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','multiple']};};
+getMultiple.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:multiple$270},$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','multiple']};};
 $prop$getMultiple={get:getMultiple,$$metamodel$$:getMultiple.$$metamodel$$};
 exports.$prop$getMultiple=$prop$getMultiple;
-function createJSRegExp(pattern$274,flags$275){
-    if(flags$275===undefined){flags$275=$$$cl1.getEmpty();}
+function createJSRegExp(pattern$272,flags$273){
+    if(flags$273===undefined){flags$273=$$$cl1.getEmpty();}
     
-    var case$276=pattern$274;
-    if ($$$cl1.isOfType(pattern$274,{t:$$$cl1.String})) {
+    var case$274=pattern$272;
+    if ($$$cl1.isOfType(pattern$272,{t:$$$cl1.String})) {
         /*Begin dynamic block*/
-        return RegExp((typeof RegExp==='undefined'||RegExp===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: RegExp")),'11:17-11:22','regexp.ceylon'):RegExp)(/*NULL PARAM!*/case$276.valueOf()/*NULL PARAM!*/,(function(){
-            var lst$277=[];
-            var it$278=flags$275.iterator();
-            var elem$279;
-            while ((elem$279=it$278.next())!==$$$cl1.getFinished()){
-                lst$277.push(elem$279.string);
+        return RegExp((typeof RegExp==='undefined'||RegExp===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: RegExp")),'11:17-11:22','regexp.ceylon'):RegExp)(/*NULL PARAM!*/case$274.valueOf()/*NULL PARAM!*/,(function(){
+            var lst$275=[];
+            var it$276=flags$273.iterator();
+            var elem$277;
+            while ((elem$277=it$276.next())!==$$$cl1.getFinished()){
+                lst$275.push(elem$277.string);
             }
-            return $$$cl1.ArraySequence(lst$277);
+            return $$$cl1.ArraySequence(lst$275);
         }())));
         /*End dynamic block*/
-    }else if ($$$cl1.isOfType(pattern$274,{t:JSString})) {
+    }else if ($$$cl1.isOfType(pattern$272,{t:JSString})) {
         /*Begin dynamic block*/
-        return RegExp((typeof RegExp==='undefined'||RegExp===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: RegExp")),'16:17-16:22','regexp.ceylon'):RegExp)(/*NULL PARAM!*/case$276.$native/*NULL PARAM!*/,(function(){
-            var lst$280=[];
-            var it$281=flags$275.iterator();
-            var elem$282;
-            while ((elem$282=it$281.next())!==$$$cl1.getFinished()){
-                lst$280.push(elem$282.string);
+        return RegExp((typeof RegExp==='undefined'||RegExp===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: RegExp")),'16:17-16:22','regexp.ceylon'):RegExp)(/*NULL PARAM!*/case$274.$native/*NULL PARAM!*/,(function(){
+            var lst$278=[];
+            var it$279=flags$273.iterator();
+            var elem$280;
+            while ((elem$280=it$279.next())!==$$$cl1.getFinished()){
+                lst$278.push(elem$280.string);
             }
-            return $$$cl1.ArraySequence(lst$280);
+            return $$$cl1.ArraySequence(lst$278);
         }())));
         /*End dynamic block*/
     }
@@ -2131,16 +2130,16 @@ function RegExpAbs($$regExpAbs){
     $init$RegExpAbs();
     if ($$regExpAbs===undefined)$$$cl1.throwexc($$$cl1.InvocationException$meta$model($$$cl1.String("Cannot instantiate abstract class")),'?','?')
     JSObjectAbs($$regExpAbs);
-    function RegResult$RegExpAbs(n$283, $$regResult$RegExpAbs){
+    function RegResult$RegExpAbs(n$281, $$regResult$RegExpAbs){
         $init$RegResult$RegExpAbs();
         if ($$regResult$RegExpAbs===undefined)$$regResult$RegExpAbs=new RegResult$RegExpAbs.$$;
         $$regResult$RegExpAbs.$$outer=this;
-        $$regResult$RegExpAbs.n$283_=n$283;
+        $$regResult$RegExpAbs.n$281_=n$281;
         $$regExpAbs.RegResultAbs$RegExpAbs($$regResult$RegExpAbs);
-        $$$cl1.defineAttr($$regResult$RegExpAbs,'n$283',function(){return this.n$283_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:RegResult$RegExpAbs,d:['ceylon.js.language','RegExpAbs','$c','RegResult','$at','n']};});
+        $$$cl1.defineAttr($$regResult$RegExpAbs,'n$281',function(){return this.n$281_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:RegResult$RegExpAbs,d:['ceylon.js.language','RegExpAbs','$c','RegResult','$at','n']};});
         $$regResult$RegExpAbs.$prop$getNative={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:RegResult$RegExpAbs,$an:function(){return[$$$cl1.shared(),$$$cl1.actual()];},d:['ceylon.js.language','RegExpAbs','$c','RegResult','$at','native']};}};
         /*Begin dynamic block*/
-        $$regResult$RegExpAbs.$native=n$283;/*End dynamic block*/
+        $$regResult$RegExpAbs.$native=n$281;/*End dynamic block*/
         return $$regResult$RegExpAbs;
     }
     RegResult$RegExpAbs.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:RegExpAbs.RegResultAbs$RegExpAbs},$cont:RegExpAbs,satisfies:[],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','RegExpAbs','$c','RegResult']};};
@@ -2213,16 +2212,16 @@ function RegExpAbs($$regExpAbs){
     }
     $$regExpAbs.getLastindex=getLastindex;
     getLastindex.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[],$cont:RegExpAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','RegExpAbs','$m','getLastindex']};};
-    function setLastindex(index$284){
+    function setLastindex(index$282){
         
-        var case$285=index$284;
-        if ($$$cl1.isOfType(index$284,{t:$$$cl1.Integer})) {
+        var case$283=index$282;
+        if ($$$cl1.isOfType(index$282,{t:$$$cl1.Integer})) {
             /*Begin dynamic block*/
-            $$regExpAbs.$native.lastindex=case$285;
+            $$regExpAbs.$native.lastindex=case$283;
             /*End dynamic block*/
-        }else if ($$$cl1.isOfType(index$284,{t:JSNumber})) {
+        }else if ($$$cl1.isOfType(index$282,{t:JSNumber})) {
             /*Begin dynamic block*/
-            $$regExpAbs.$native.lastindex=case$285.$native;
+            $$regExpAbs.$native.lastindex=case$283.$native;
             /*End dynamic block*/
         }
     }
@@ -2242,28 +2241,28 @@ function RegExpAbs($$regExpAbs){
     }
     $$regExpAbs.source=source;
     source.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSString},$ps:[],$cont:RegExpAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','RegExpAbs','$m','source']};};
-    function exec(str$286){
+    function exec(str$284){
         /*Begin dynamic block*/
-        return JSString($$regExpAbs.$native.exec(/*NULL PARAM!*/str$286.valueOf()));
+        return JSString($$regExpAbs.$native.exec(/*NULL PARAM!*/str$284.valueOf()));
         /*End dynamic block*/
     }
     $$regExpAbs.exec=exec;
     exec.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSString},$ps:[{$nm:'str',$mt:'prm',$t:{t:$$$cl1.String},$an:function(){return[];}}],$cont:RegExpAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','RegExpAbs','$m','exec']};};
-    $$regExpAbs.test$defs$str=function(str$287){return $$$cl1.String("undefined",9);};
-    function test(str$287){
-        if(str$287===undefined){str$287=$$regExpAbs.test$defs$str(str$287);}
-        var result$288;
+    $$regExpAbs.test$defs$str=function(str$285){return $$$cl1.String("undefined",9);};
+    function test(str$285){
+        if(str$285===undefined){str$285=$$regExpAbs.test$defs$str(str$285);}
+        var result$286;
         
-        var case$289=str$287;
-        if ($$$cl1.isOfType(str$287,{t:$$$cl1.String})) {
+        var case$287=str$285;
+        if ($$$cl1.isOfType(str$285,{t:$$$cl1.String})) {
             /*Begin dynamic block*/
-            result$288=$$regExpAbs.$native.test(/*NULL PARAM!*/case$289.valueOf());/*End dynamic block*/
-        }else if ($$$cl1.isOfType(str$287,{t:JSString})) {
+            result$286=$$regExpAbs.$native.test(/*NULL PARAM!*/case$287.valueOf());/*End dynamic block*/
+        }else if ($$$cl1.isOfType(str$285,{t:JSString})) {
             /*Begin dynamic block*/
-            result$288=$$regExpAbs.$native.test(/*NULL PARAM!*/case$289.$native);/*End dynamic block*/
+            result$286=$$regExpAbs.$native.test(/*NULL PARAM!*/case$287.$native);/*End dynamic block*/
         }
         /*Begin dynamic block*/
-        if(result$288){
+        if(result$286){
             return true;
         }else {
             return false;
@@ -2283,14 +2282,14 @@ function $init$RegExpAbs(){
 }
 exports.$init$RegExpAbs=$init$RegExpAbs;
 $init$RegExpAbs();
-function RegExp(n$290, $$regExp){
+function RegExp(n$288, $$regExp){
     $init$RegExp();
     if ($$regExp===undefined)$$regExp=new RegExp.$$;
-    $$regExp.n$290_=n$290;
+    $$regExp.n$288_=n$288;
     RegExpAbs($$regExp);
-    $$$cl1.defineAttr($$regExp,'n$290',function(){return this.n$290_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:RegExp,d:['ceylon.js.language','RegExp','$at','n']};});
+    $$$cl1.defineAttr($$regExp,'n$288',function(){return this.n$288_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:RegExp,d:['ceylon.js.language','RegExp','$at','n']};});
     /*Begin dynamic block*/
-    $$regExp.$native=n$290;/*End dynamic block*/
+    $$regExp.$native=n$288;/*End dynamic block*/
     return $$regExp;
 }
 RegExp.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:RegExpAbs},satisfies:[],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','RegExp']};};
@@ -2303,9 +2302,9 @@ function $init$RegExp(){
 }
 exports.$init$RegExp=$init$RegExp;
 $init$RegExp();
-function createJSString(string$291){
+function createJSString(string$289){
     /*Begin dynamic block*/
-    return JSString((typeof String==='undefined'||String===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: String")),'5:18-5:23','string.ceylon'):String)(/*NULL PARAM!*/string$291));
+    return JSString((typeof String==='undefined'||String===null?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined or null reference: String")),'5:18-5:23','string.ceylon'):String)(/*NULL PARAM!*/string$289));
     /*End dynamic block*/
 }
 exports.createJSString=createJSString;
@@ -2321,259 +2320,259 @@ function JSStringAbs($$jSStringAbs){
     }
     $$jSStringAbs.length=length;
     length.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[],$cont:JSStringAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSStringAbs','$m','length']};};
-    function charAt(index$292){
+    function charAt(index$290){
         
-        var case$293=index$292;
-        if ($$$cl1.isOfType(index$292,{t:$$$cl1.Integer})) {
+        var case$291=index$290;
+        if ($$$cl1.isOfType(index$290,{t:$$$cl1.Integer})) {
             /*Begin dynamic block*/
-            return JSString($$jSStringAbs.$native.charAt(/*NULL PARAM!*/case$293));
+            return JSString($$jSStringAbs.$native.charAt(/*NULL PARAM!*/case$291));
             /*End dynamic block*/
-        }else if ($$$cl1.isOfType(index$292,{t:JSNumber})) {
+        }else if ($$$cl1.isOfType(index$290,{t:JSNumber})) {
             /*Begin dynamic block*/
-            return JSString($$jSStringAbs.$native.charAt(/*NULL PARAM!*/case$293.$native));
+            return JSString($$jSStringAbs.$native.charAt(/*NULL PARAM!*/case$291.$native));
             /*End dynamic block*/
         }
     }
     $$jSStringAbs.charAt=charAt;
     charAt.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSString},$ps:[{$nm:'index',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.Integer},{t:JSNumber}]},$an:function(){return[];}}],$cont:JSStringAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSStringAbs','$m','charAt']};};
-    function charCodeAt(index$294){
+    function charCodeAt(index$292){
         
-        var case$295=index$294;
-        if ($$$cl1.isOfType(index$294,{t:$$$cl1.Integer})) {
+        var case$293=index$292;
+        if ($$$cl1.isOfType(index$292,{t:$$$cl1.Integer})) {
             /*Begin dynamic block*/
-            return JSNumber($$jSStringAbs.$native.charCodeAt(/*NULL PARAM!*/case$295));
+            return JSNumber($$jSStringAbs.$native.charCodeAt(/*NULL PARAM!*/case$293));
             /*End dynamic block*/
-        }else if ($$$cl1.isOfType(index$294,{t:JSNumber})) {
+        }else if ($$$cl1.isOfType(index$292,{t:JSNumber})) {
             /*Begin dynamic block*/
-            return JSNumber($$jSStringAbs.$native.charCodeAt(/*NULL PARAM!*/case$295.$native));
+            return JSNumber($$jSStringAbs.$native.charCodeAt(/*NULL PARAM!*/case$293.$native));
             /*End dynamic block*/
         }
     }
     $$jSStringAbs.charCodeAt=charCodeAt;
     charCodeAt.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'index',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.Integer},{t:JSNumber}]},$an:function(){return[];}}],$cont:JSStringAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSStringAbs','$m','charCodeAt']};};
-    function concat(strings$296){
-        if(strings$296===undefined){strings$296=$$$cl1.getEmpty();}
+    function concat(strings$294){
+        if(strings$294===undefined){strings$294=$$$cl1.getEmpty();}
         /*Begin dynamic block*/
-        return JSString(JSFunction($$jSStringAbs.$native.concat).$apply(null,(tmpvar$297=(function(){
-            var lst$298=[];
-            var it$299=strings$296.iterator();
-            var elem$300;
-            while ((elem$300=it$299.next())!==$$$cl1.getFinished()){
-                lst$298.push(elem$300.$native);
+        return JSString(JSFunction($$jSStringAbs.$native.concat).$apply(null,(tmpvar$295=(function(){
+            var lst$296=[];
+            var it$297=strings$294.iterator();
+            var elem$298;
+            while ((elem$298=it$297.next())!==$$$cl1.getFinished()){
+                lst$296.push(elem$298.$native);
             }
-            return $$$cl1.ArraySequence(lst$298);
-        }()),$$$cl1.isOfType(tmpvar$297,{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}})?tmpvar$297:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'47:66-47:80','string.ceylon'))));
+            return $$$cl1.ArraySequence(lst$296);
+        }()),$$$cl1.isOfType(tmpvar$295,{t:$$$cl1.Sequential,a:{Element:{t:$$$cl1.Anything}}})?tmpvar$295:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'47:66-47:80','string.ceylon'))));
         /*End dynamic block*/
     }
     $$jSStringAbs.concat=concat;
     concat.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSString},$ps:[{$nm:'strings',$mt:'prm',seq:1,$t:{t:$$$cl1.Sequence,a:{Element:{t:JSString}}},$an:function(){return[];}}],$cont:JSStringAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSStringAbs','$m','concat']};};
-    $$jSStringAbs.indexOf$defs$fromIndex=function(searchValue$301,fromIndex$302){return (0);};
-    function indexOf(searchValue$301,fromIndex$302){
-        if(fromIndex$302===undefined){fromIndex$302=$$jSStringAbs.indexOf$defs$fromIndex(searchValue$301,fromIndex$302);}
+    $$jSStringAbs.indexOf$defs$fromIndex=function(searchValue$299,fromIndex$300){return (0);};
+    function indexOf(searchValue$299,fromIndex$300){
+        if(fromIndex$300===undefined){fromIndex$300=$$jSStringAbs.indexOf$defs$fromIndex(searchValue$299,fromIndex$300);}
         
-        var case$303=searchValue$301;
-        if ($$$cl1.isOfType(searchValue$301,{t:$$$cl1.String})) {
+        var case$301=searchValue$299;
+        if ($$$cl1.isOfType(searchValue$299,{t:$$$cl1.String})) {
             
-            var case$304=fromIndex$302;
-            if ($$$cl1.isOfType(fromIndex$302,{t:$$$cl1.Integer})) {
+            var case$302=fromIndex$300;
+            if ($$$cl1.isOfType(fromIndex$300,{t:$$$cl1.Integer})) {
                 /*Begin dynamic block*/
-                return JSNumber($$jSStringAbs.$native.indexOf(/*NULL PARAM!*/case$303.valueOf()/*NULL PARAM!*/,case$304));
+                return JSNumber($$jSStringAbs.$native.indexOf(/*NULL PARAM!*/case$301.valueOf()/*NULL PARAM!*/,case$302));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(fromIndex$302,{t:JSNumber})) {
+            }else if ($$$cl1.isOfType(fromIndex$300,{t:JSNumber})) {
                 /*Begin dynamic block*/
-                return JSNumber($$jSStringAbs.$native.indexOf(/*NULL PARAM!*/case$303.valueOf()/*NULL PARAM!*/,case$304.$native));
+                return JSNumber($$jSStringAbs.$native.indexOf(/*NULL PARAM!*/case$301.valueOf()/*NULL PARAM!*/,case$302.$native));
                 /*End dynamic block*/
             }
-        }else if ($$$cl1.isOfType(searchValue$301,{t:JSString})) {
+        }else if ($$$cl1.isOfType(searchValue$299,{t:JSString})) {
             
-            var case$305=fromIndex$302;
-            if ($$$cl1.isOfType(fromIndex$302,{t:$$$cl1.Integer})) {
+            var case$303=fromIndex$300;
+            if ($$$cl1.isOfType(fromIndex$300,{t:$$$cl1.Integer})) {
                 /*Begin dynamic block*/
-                return JSNumber($$jSStringAbs.$native.indexOf(/*NULL PARAM!*/case$303.$native/*NULL PARAM!*/,case$305));
+                return JSNumber($$jSStringAbs.$native.indexOf(/*NULL PARAM!*/case$301.$native/*NULL PARAM!*/,case$303));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(fromIndex$302,{t:JSNumber})) {
+            }else if ($$$cl1.isOfType(fromIndex$300,{t:JSNumber})) {
                 /*Begin dynamic block*/
-                return JSNumber($$jSStringAbs.$native.indexOf(/*NULL PARAM!*/case$303.$native/*NULL PARAM!*/,case$305.$native));
+                return JSNumber($$jSStringAbs.$native.indexOf(/*NULL PARAM!*/case$301.$native/*NULL PARAM!*/,case$303.$native));
                 /*End dynamic block*/
             }
         }
     }
     $$jSStringAbs.indexOf=indexOf;
     indexOf.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'searchValue',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:JSString}]},$an:function(){return[];}},{$nm:'fromIndex',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cl1.Integer},{t:JSNumber}]},$an:function(){return[];}}],$cont:JSStringAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSStringAbs','$m','indexOf']};};
-    $$jSStringAbs.lastIndexOf$defs$fromIndex=function(searchValue$306,fromIndex$307){return (0);};
-    function lastIndexOf(searchValue$306,fromIndex$307){
-        if(fromIndex$307===undefined){fromIndex$307=$$jSStringAbs.lastIndexOf$defs$fromIndex(searchValue$306,fromIndex$307);}
+    $$jSStringAbs.lastIndexOf$defs$fromIndex=function(searchValue$304,fromIndex$305){return (0);};
+    function lastIndexOf(searchValue$304,fromIndex$305){
+        if(fromIndex$305===undefined){fromIndex$305=$$jSStringAbs.lastIndexOf$defs$fromIndex(searchValue$304,fromIndex$305);}
         
-        var case$308=searchValue$306;
-        if ($$$cl1.isOfType(searchValue$306,{t:$$$cl1.String})) {
+        var case$306=searchValue$304;
+        if ($$$cl1.isOfType(searchValue$304,{t:$$$cl1.String})) {
             
-            var case$309=fromIndex$307;
-            if ($$$cl1.isOfType(fromIndex$307,{t:$$$cl1.Integer})) {
+            var case$307=fromIndex$305;
+            if ($$$cl1.isOfType(fromIndex$305,{t:$$$cl1.Integer})) {
                 /*Begin dynamic block*/
-                return JSNumber($$jSStringAbs.$native.lastIndexOf(/*NULL PARAM!*/case$308.valueOf()/*NULL PARAM!*/,case$309));
+                return JSNumber($$jSStringAbs.$native.lastIndexOf(/*NULL PARAM!*/case$306.valueOf()/*NULL PARAM!*/,case$307));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(fromIndex$307,{t:JSNumber})) {
+            }else if ($$$cl1.isOfType(fromIndex$305,{t:JSNumber})) {
                 /*Begin dynamic block*/
-                return JSNumber($$jSStringAbs.$native.lastIndexOf(/*NULL PARAM!*/case$308.valueOf()/*NULL PARAM!*/,case$309.$native));
+                return JSNumber($$jSStringAbs.$native.lastIndexOf(/*NULL PARAM!*/case$306.valueOf()/*NULL PARAM!*/,case$307.$native));
                 /*End dynamic block*/
             }
-        }else if ($$$cl1.isOfType(searchValue$306,{t:JSString})) {
+        }else if ($$$cl1.isOfType(searchValue$304,{t:JSString})) {
             
-            var case$310=fromIndex$307;
-            if ($$$cl1.isOfType(fromIndex$307,{t:$$$cl1.Integer})) {
+            var case$308=fromIndex$305;
+            if ($$$cl1.isOfType(fromIndex$305,{t:$$$cl1.Integer})) {
                 /*Begin dynamic block*/
-                return JSNumber($$jSStringAbs.$native.lastIndexOf(/*NULL PARAM!*/case$308.$native/*NULL PARAM!*/,case$310));
+                return JSNumber($$jSStringAbs.$native.lastIndexOf(/*NULL PARAM!*/case$306.$native/*NULL PARAM!*/,case$308));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(fromIndex$307,{t:JSNumber})) {
+            }else if ($$$cl1.isOfType(fromIndex$305,{t:JSNumber})) {
                 /*Begin dynamic block*/
-                return JSNumber($$jSStringAbs.$native.lastIndexOf(/*NULL PARAM!*/case$308.$native/*NULL PARAM!*/,case$310.$native));
+                return JSNumber($$jSStringAbs.$native.lastIndexOf(/*NULL PARAM!*/case$306.$native/*NULL PARAM!*/,case$308.$native));
                 /*End dynamic block*/
             }
         }
     }
     $$jSStringAbs.lastIndexOf=lastIndexOf;
     lastIndexOf.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'searchValue',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:JSString}]},$an:function(){return[];}},{$nm:'fromIndex',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cl1.Integer},{t:JSNumber}]},$an:function(){return[];}}],$cont:JSStringAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSStringAbs','$m','lastIndexOf']};};
-    function match(regexp$311){
+    function match(regexp$309){
         /*Begin dynamic block*/
-        return (tmpvar$312=RegExp.RegResult$RegExpAbs(/*NULL PARAM!*/$$jSStringAbs.$native.match(/*NULL PARAM!*/regexp$311.$native)),$$$cl1.isOfType(tmpvar$312,{t:$$$cl1.Anything})?tmpvar$312:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'113:16-113:60','string.ceylon'));
+        return (tmpvar$310=RegExp.RegResult$RegExpAbs(/*NULL PARAM!*/$$jSStringAbs.$native.match(/*NULL PARAM!*/regexp$309.$native)),$$$cl1.isOfType(tmpvar$310,{t:$$$cl1.Anything})?tmpvar$310:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'113:16-113:60','string.ceylon'));
         /*End dynamic block*/
     }
     $$jSStringAbs.match=match;
     match.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:RegExpAbs.RegResult$RegExpAbs},$ps:[{$nm:'regexp',$mt:'prm',$t:{t:RegExp},$an:function(){return[];}}],$cont:JSStringAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSStringAbs','$m','match']};};
-    function replace(pattern$313,replace$314){
+    function replace(pattern$311,replace$312){
         
-        var case$315=pattern$313;
-        if ($$$cl1.isOfType(pattern$313,{t:$$$cl1.String})) {
+        var case$313=pattern$311;
+        if ($$$cl1.isOfType(pattern$311,{t:$$$cl1.String})) {
             
-            var case$316=replace$314;
-            if ($$$cl1.isOfType(replace$314,{t:$$$cl1.String})) {
+            var case$314=replace$312;
+            if ($$$cl1.isOfType(replace$312,{t:$$$cl1.String})) {
                 /*Begin dynamic block*/
-                return JSString($$jSStringAbs.$native.replace(/*NULL PARAM!*/case$315.valueOf()/*NULL PARAM!*/,case$316.valueOf()));
+                return JSString($$jSStringAbs.$native.replace(/*NULL PARAM!*/case$313.valueOf()/*NULL PARAM!*/,case$314.valueOf()));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(replace$314,{t:JSString})) {
+            }else if ($$$cl1.isOfType(replace$312,{t:JSString})) {
                 /*Begin dynamic block*/
-                return JSString($$jSStringAbs.$native.replace(/*NULL PARAM!*/case$315.valueOf()/*NULL PARAM!*/,case$316.$native));
+                return JSString($$jSStringAbs.$native.replace(/*NULL PARAM!*/case$313.valueOf()/*NULL PARAM!*/,case$314.$native));
                 /*End dynamic block*/
             }
-        }else if ($$$cl1.isOfType(pattern$313,{ t:'u', l:[{t:JSString},{t:RegExp}]})) {
+        }else if ($$$cl1.isOfType(pattern$311,{ t:'u', l:[{t:JSString},{t:RegExp}]})) {
             
-            var case$317=replace$314;
-            if ($$$cl1.isOfType(replace$314,{t:$$$cl1.String})) {
+            var case$315=replace$312;
+            if ($$$cl1.isOfType(replace$312,{t:$$$cl1.String})) {
                 /*Begin dynamic block*/
-                return JSString($$jSStringAbs.$native.replace(/*NULL PARAM!*/case$315.$native/*NULL PARAM!*/,case$317.valueOf()));
+                return JSString($$jSStringAbs.$native.replace(/*NULL PARAM!*/case$313.$native/*NULL PARAM!*/,case$315.valueOf()));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(replace$314,{t:JSString})) {
+            }else if ($$$cl1.isOfType(replace$312,{t:JSString})) {
                 /*Begin dynamic block*/
-                return JSString($$jSStringAbs.$native.replace(/*NULL PARAM!*/case$315.$native/*NULL PARAM!*/,case$317.$native));
+                return JSString($$jSStringAbs.$native.replace(/*NULL PARAM!*/case$313.$native/*NULL PARAM!*/,case$315.$native));
                 /*End dynamic block*/
             }
         }
     }
     $$jSStringAbs.replace=replace;
     replace.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSString},$ps:[{$nm:'pattern',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:JSString},{t:RegExp}]},$an:function(){return[];}},{$nm:'replace',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:JSString}]},$an:function(){return[];}}],$cont:JSStringAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSStringAbs','$m','replace']};};
-    function replaceCallback(pattern$318,replace$319){
+    function replaceCallback(pattern$316,replace$317){
         
-        var case$320=pattern$318;
-        if ($$$cl1.isOfType(pattern$318,{t:$$$cl1.String})) {
+        var case$318=pattern$316;
+        if ($$$cl1.isOfType(pattern$316,{t:$$$cl1.String})) {
             /*Begin dynamic block*/
-            return JSString($$jSStringAbs.$native.replace(/*NULL PARAM!*/case$320.valueOf()/*NULL PARAM!*/,replace$319));
+            return JSString($$jSStringAbs.$native.replace(/*NULL PARAM!*/case$318.valueOf()/*NULL PARAM!*/,replace$317));
             /*End dynamic block*/
-        }else if ($$$cl1.isOfType(pattern$318,{ t:'u', l:[{t:JSString},{t:RegExp}]})) {
+        }else if ($$$cl1.isOfType(pattern$316,{ t:'u', l:[{t:JSString},{t:RegExp}]})) {
             /*Begin dynamic block*/
-            return JSString($$jSStringAbs.$native.replace(/*NULL PARAM!*/case$320.$native/*NULL PARAM!*/,replace$319));
+            return JSString($$jSStringAbs.$native.replace(/*NULL PARAM!*/case$318.$native/*NULL PARAM!*/,replace$317));
             /*End dynamic block*/
         }
     }
     $$jSStringAbs.replaceCallback=replaceCallback;
     replaceCallback.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSString},$ps:[{$nm:'pattern',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.String},{t:JSString},{t:RegExp}]},$an:function(){return[];}},{$nm:'replace',$mt:'prm',$pt:'f',$t:{t:JSString},$an:function(){return[];}}],$cont:JSStringAbs,$an:function(){return[$$$cl1.doc($$$cl1.String("replace will recived a set of substrings based on the regex then an Integer for offset, and the examined String",111)),$$$cl1.shared()];},d:['ceylon.js.language','JSStringAbs','$m','replaceCallback']};};
-    function search(regexp$321){
+    function search(regexp$319){
         /*Begin dynamic block*/
-        return JSNumber($$jSStringAbs.$native.search(/*NULL PARAM!*/regexp$321.$native));
+        return JSNumber($$jSStringAbs.$native.search(/*NULL PARAM!*/regexp$319.$native));
         /*End dynamic block*/
     }
     $$jSStringAbs.search=search;
     search.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSNumber},$ps:[{$nm:'regexp',$mt:'prm',$t:{t:RegExp},$an:function(){return[];}}],$cont:JSStringAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSStringAbs','$m','search']};};
-    $$jSStringAbs.slice$defs$endSlice=function(beginSlice$322,endSlice$323){return null;};
-    function slice(beginSlice$322,endSlice$323){
-        if(endSlice$323===undefined){endSlice$323=$$jSStringAbs.slice$defs$endSlice(beginSlice$322,endSlice$323);}
+    $$jSStringAbs.slice$defs$endSlice=function(beginSlice$320,endSlice$321){return null;};
+    function slice(beginSlice$320,endSlice$321){
+        if(endSlice$321===undefined){endSlice$321=$$jSStringAbs.slice$defs$endSlice(beginSlice$320,endSlice$321);}
         
-        var case$324=beginSlice$322;
-        if ($$$cl1.isOfType(beginSlice$322,{t:$$$cl1.Integer})) {
+        var case$322=beginSlice$320;
+        if ($$$cl1.isOfType(beginSlice$320,{t:$$$cl1.Integer})) {
             
-            var case$325=endSlice$323;
-            if ($$$cl1.isOfType(endSlice$323,{t:$$$cl1.Integer})) {
+            var case$323=endSlice$321;
+            if ($$$cl1.isOfType(endSlice$321,{t:$$$cl1.Integer})) {
                 /*Begin dynamic block*/
-                return (tmpvar$326=(/*NULL PARAM!*/tmpvar$327=$$jSStringAbs.$native.slice(/*NULL PARAM!*/case$324/*NULL PARAM!*/,case$325),tmpvar$328=(typeof JString==='undefined'?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined type JString")),'174:12-174:18','string.ceylon'):JString),tmpvar$328.$$===undefined?new tmpvar$328(tmpvar$327):tmpvar$328(tmpvar$327)),$$$cl1.isOfType(tmpvar$326,{t:$$$cl1.Anything})?tmpvar$326:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'174:12-174:54','string.ceylon'));
+                return (tmpvar$324=(/*NULL PARAM!*/tmpvar$325=$$jSStringAbs.$native.slice(/*NULL PARAM!*/case$322/*NULL PARAM!*/,case$323),tmpvar$326=(typeof JString==='undefined'?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined type JString")),'174:12-174:18','string.ceylon'):JString),tmpvar$326.$$===undefined?new tmpvar$326(tmpvar$325):tmpvar$326(tmpvar$325)),$$$cl1.isOfType(tmpvar$324,{t:$$$cl1.Anything})?tmpvar$324:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'174:12-174:54','string.ceylon'));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(endSlice$323,{t:JSNumber})) {
+            }else if ($$$cl1.isOfType(endSlice$321,{t:JSNumber})) {
                 /*Begin dynamic block*/
-                return (tmpvar$329=(/*NULL PARAM!*/tmpvar$330=$$jSStringAbs.$native.slice(/*NULL PARAM!*/case$324/*NULL PARAM!*/,case$325.$native),tmpvar$331=(typeof JString==='undefined'?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined type JString")),'179:12-179:18','string.ceylon'):JString),tmpvar$331.$$===undefined?new tmpvar$331(tmpvar$330):tmpvar$331(tmpvar$330)),$$$cl1.isOfType(tmpvar$329,{t:$$$cl1.Anything})?tmpvar$329:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'179:12-179:61','string.ceylon'));
+                return (tmpvar$327=(/*NULL PARAM!*/tmpvar$328=$$jSStringAbs.$native.slice(/*NULL PARAM!*/case$322/*NULL PARAM!*/,case$323.$native),tmpvar$329=(typeof JString==='undefined'?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined type JString")),'179:12-179:18','string.ceylon'):JString),tmpvar$329.$$===undefined?new tmpvar$329(tmpvar$328):tmpvar$329(tmpvar$328)),$$$cl1.isOfType(tmpvar$327,{t:$$$cl1.Anything})?tmpvar$327:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'179:12-179:61','string.ceylon'));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(endSlice$323,{t:$$$cl1.Null})) {
+            }else if ($$$cl1.isOfType(endSlice$321,{t:$$$cl1.Null})) {
                 /*Begin dynamic block*/
-                return (tmpvar$332=(/*NULL PARAM!*/tmpvar$333=$$jSStringAbs.$native.slice(/*NULL PARAM!*/case$324),tmpvar$334=(typeof JString==='undefined'?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined type JString")),'184:12-184:18','string.ceylon'):JString),tmpvar$334.$$===undefined?new tmpvar$334(tmpvar$333):tmpvar$334(tmpvar$333)),$$$cl1.isOfType(tmpvar$332,{t:$$$cl1.Anything})?tmpvar$332:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'184:12-184:44','string.ceylon'));
+                return (tmpvar$330=(/*NULL PARAM!*/tmpvar$331=$$jSStringAbs.$native.slice(/*NULL PARAM!*/case$322),tmpvar$332=(typeof JString==='undefined'?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined type JString")),'184:12-184:18','string.ceylon'):JString),tmpvar$332.$$===undefined?new tmpvar$332(tmpvar$331):tmpvar$332(tmpvar$331)),$$$cl1.isOfType(tmpvar$330,{t:$$$cl1.Anything})?tmpvar$330:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'184:12-184:44','string.ceylon'));
                 /*End dynamic block*/
             }
-        }else if ($$$cl1.isOfType(beginSlice$322,{t:JSNumber})) {
+        }else if ($$$cl1.isOfType(beginSlice$320,{t:JSNumber})) {
             
-            var case$335=endSlice$323;
-            if ($$$cl1.isOfType(endSlice$323,{t:$$$cl1.Integer})) {
+            var case$333=endSlice$321;
+            if ($$$cl1.isOfType(endSlice$321,{t:$$$cl1.Integer})) {
                 /*Begin dynamic block*/
-                return (tmpvar$336=(/*NULL PARAM!*/tmpvar$337=$$jSStringAbs.$native.slice(/*NULL PARAM!*/case$324.$native/*NULL PARAM!*/,case$335),tmpvar$338=(typeof JString==='undefined'?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined type JString")),'192:12-192:18','string.ceylon'):JString),tmpvar$338.$$===undefined?new tmpvar$338(tmpvar$337):tmpvar$338(tmpvar$337)),$$$cl1.isOfType(tmpvar$336,{t:$$$cl1.Anything})?tmpvar$336:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'192:12-192:61','string.ceylon'));
+                return (tmpvar$334=(/*NULL PARAM!*/tmpvar$335=$$jSStringAbs.$native.slice(/*NULL PARAM!*/case$322.$native/*NULL PARAM!*/,case$333),tmpvar$336=(typeof JString==='undefined'?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined type JString")),'192:12-192:18','string.ceylon'):JString),tmpvar$336.$$===undefined?new tmpvar$336(tmpvar$335):tmpvar$336(tmpvar$335)),$$$cl1.isOfType(tmpvar$334,{t:$$$cl1.Anything})?tmpvar$334:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'192:12-192:61','string.ceylon'));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(endSlice$323,{t:JSNumber})) {
+            }else if ($$$cl1.isOfType(endSlice$321,{t:JSNumber})) {
                 /*Begin dynamic block*/
-                return (tmpvar$339=(/*NULL PARAM!*/tmpvar$340=$$jSStringAbs.$native.slice(/*NULL PARAM!*/case$324.$native/*NULL PARAM!*/,case$335.$native),tmpvar$341=(typeof JString==='undefined'?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined type JString")),'197:12-197:18','string.ceylon'):JString),tmpvar$341.$$===undefined?new tmpvar$341(tmpvar$340):tmpvar$341(tmpvar$340)),$$$cl1.isOfType(tmpvar$339,{t:$$$cl1.Anything})?tmpvar$339:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'197:12-197:68','string.ceylon'));
+                return (tmpvar$337=(/*NULL PARAM!*/tmpvar$338=$$jSStringAbs.$native.slice(/*NULL PARAM!*/case$322.$native/*NULL PARAM!*/,case$333.$native),tmpvar$339=(typeof JString==='undefined'?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined type JString")),'197:12-197:18','string.ceylon'):JString),tmpvar$339.$$===undefined?new tmpvar$339(tmpvar$338):tmpvar$339(tmpvar$338)),$$$cl1.isOfType(tmpvar$337,{t:$$$cl1.Anything})?tmpvar$337:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'197:12-197:68','string.ceylon'));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(endSlice$323,{t:$$$cl1.Null})) {
+            }else if ($$$cl1.isOfType(endSlice$321,{t:$$$cl1.Null})) {
                 /*Begin dynamic block*/
-                return (tmpvar$342=(/*NULL PARAM!*/tmpvar$343=$$jSStringAbs.$native.slice(/*NULL PARAM!*/case$324.$native),tmpvar$344=(typeof JString==='undefined'?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined type JString")),'202:12-202:18','string.ceylon'):JString),tmpvar$344.$$===undefined?new tmpvar$344(tmpvar$343):tmpvar$344(tmpvar$343)),$$$cl1.isOfType(tmpvar$342,{t:$$$cl1.Anything})?tmpvar$342:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'202:12-202:51','string.ceylon'));
+                return (tmpvar$340=(/*NULL PARAM!*/tmpvar$341=$$jSStringAbs.$native.slice(/*NULL PARAM!*/case$322.$native),tmpvar$342=(typeof JString==='undefined'?$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("Undefined type JString")),'202:12-202:18','string.ceylon'):JString),tmpvar$342.$$===undefined?new tmpvar$342(tmpvar$341):tmpvar$342(tmpvar$341)),$$$cl1.isOfType(tmpvar$340,{t:$$$cl1.Anything})?tmpvar$340:$$$cl1.throwexc($$$cl1.Exception($$$cl1.String("dynamic objects cannot be used here")),'202:12-202:51','string.ceylon'));
                 /*End dynamic block*/
             }
         }
     }
     $$jSStringAbs.slice=slice;
     slice.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSString},$ps:[{$nm:'beginSlice',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.Integer},{t:JSNumber}]},$an:function(){return[];}},{$nm:'endSlice',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cl1.Integer},{ t:'u', l:[{t:$$$cl1.Null},{t:JSNumber}]}]},$an:function(){return[];}}],$cont:JSStringAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSStringAbs','$m','slice']};};
-    $$jSStringAbs.split$defs$separator=function(separator$345,limit$346){return null;};
-    $$jSStringAbs.split$defs$limit=function(separator$345,limit$346){return null;};
-    function split(separator$345,limit$346){
-        if(separator$345===undefined){separator$345=$$jSStringAbs.split$defs$separator(separator$345,limit$346);}
-        if(limit$346===undefined){limit$346=$$jSStringAbs.split$defs$limit(separator$345,limit$346);}
+    $$jSStringAbs.split$defs$separator=function(separator$343,limit$344){return null;};
+    $$jSStringAbs.split$defs$limit=function(separator$343,limit$344){return null;};
+    function split(separator$343,limit$344){
+        if(separator$343===undefined){separator$343=$$jSStringAbs.split$defs$separator(separator$343,limit$344);}
+        if(limit$344===undefined){limit$344=$$jSStringAbs.split$defs$limit(separator$343,limit$344);}
         
-        var case$347=separator$345;
-        if ($$$cl1.isOfType(separator$345,{t:$$$cl1.String})) {
+        var case$345=separator$343;
+        if ($$$cl1.isOfType(separator$343,{t:$$$cl1.String})) {
             
-            var case$348=limit$346;
-            if ($$$cl1.isOfType(limit$346,{t:$$$cl1.Integer})) {
+            var case$346=limit$344;
+            if ($$$cl1.isOfType(limit$344,{t:$$$cl1.Integer})) {
                 /*Begin dynamic block*/
-                return JSArray($$jSStringAbs.$native.split(/*NULL PARAM!*/case$347.valueOf()/*NULL PARAM!*/,case$348));
+                return JSArray($$jSStringAbs.$native.split(/*NULL PARAM!*/case$345.valueOf()/*NULL PARAM!*/,case$346));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(limit$346,{t:JSNumber})) {
+            }else if ($$$cl1.isOfType(limit$344,{t:JSNumber})) {
                 /*Begin dynamic block*/
-                return JSArray($$jSStringAbs.$native.split(/*NULL PARAM!*/case$347.valueOf()/*NULL PARAM!*/,case$348.$native));
+                return JSArray($$jSStringAbs.$native.split(/*NULL PARAM!*/case$345.valueOf()/*NULL PARAM!*/,case$346.$native));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(limit$346,{t:$$$cl1.Null})) {
+            }else if ($$$cl1.isOfType(limit$344,{t:$$$cl1.Null})) {
                 /*Begin dynamic block*/
-                return JSArray($$jSStringAbs.$native.split(/*NULL PARAM!*/case$347.valueOf()));
+                return JSArray($$jSStringAbs.$native.split(/*NULL PARAM!*/case$345.valueOf()));
                 /*End dynamic block*/
             }
-        }else if ($$$cl1.isOfType(separator$345,{ t:'u', l:[{t:JSString},{t:RegExp}]})) {
+        }else if ($$$cl1.isOfType(separator$343,{ t:'u', l:[{t:JSString},{t:RegExp}]})) {
             
-            var case$349=limit$346;
-            if ($$$cl1.isOfType(limit$346,{t:$$$cl1.Integer})) {
+            var case$347=limit$344;
+            if ($$$cl1.isOfType(limit$344,{t:$$$cl1.Integer})) {
                 /*Begin dynamic block*/
-                return JSArray($$jSStringAbs.$native.split(/*NULL PARAM!*/case$347.$native/*NULL PARAM!*/,case$349));
+                return JSArray($$jSStringAbs.$native.split(/*NULL PARAM!*/case$345.$native/*NULL PARAM!*/,case$347));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(limit$346,{t:JSNumber})) {
+            }else if ($$$cl1.isOfType(limit$344,{t:JSNumber})) {
                 /*Begin dynamic block*/
-                return JSArray($$jSStringAbs.$native.split(/*NULL PARAM!*/case$347.$native/*NULL PARAM!*/,case$349.$native));
+                return JSArray($$jSStringAbs.$native.split(/*NULL PARAM!*/case$345.$native/*NULL PARAM!*/,case$347.$native));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(limit$346,{t:$$$cl1.Null})) {
+            }else if ($$$cl1.isOfType(limit$344,{t:$$$cl1.Null})) {
                 /*Begin dynamic block*/
-                return JSArray($$jSStringAbs.$native.split(/*NULL PARAM!*/case$347));
+                return JSArray($$jSStringAbs.$native.split(/*NULL PARAM!*/case$345));
                 /*End dynamic block*/
             }
-        }else if ($$$cl1.isOfType(separator$345,{t:$$$cl1.Null})) {
+        }else if ($$$cl1.isOfType(separator$343,{t:$$$cl1.Null})) {
             /*Begin dynamic block*/
             return JSArray($$jSStringAbs.$native.split());
             /*End dynamic block*/
@@ -2581,82 +2580,82 @@ function JSStringAbs($$jSStringAbs){
     }
     $$jSStringAbs.split=split;
     split.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSArray},$ps:[{$nm:'separator',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cl1.String},{t:JSString},{ t:'u', l:[{t:$$$cl1.Null},{t:RegExp}]}]},$an:function(){return[];}},{$nm:'limit',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cl1.Integer},{ t:'u', l:[{t:$$$cl1.Null},{t:JSNumber}]}]},$an:function(){return[];}}],$cont:JSStringAbs,$an:function(){return[$$$cl1.doc($$$cl1.String("returns array of strings",24)),$$$cl1.shared()];},d:['ceylon.js.language','JSStringAbs','$m','split']};};
-    $$jSStringAbs.substr$defs$length=function(start$350,length$351){return null;};
-    function substr(start$350,length$351){
-        if(length$351===undefined){length$351=$$jSStringAbs.substr$defs$length(start$350,length$351);}
+    $$jSStringAbs.substr$defs$length=function(start$348,length$349){return null;};
+    function substr(start$348,length$349){
+        if(length$349===undefined){length$349=$$jSStringAbs.substr$defs$length(start$348,length$349);}
         
-        var case$352=start$350;
-        if ($$$cl1.isOfType(start$350,{t:$$$cl1.Integer})) {
+        var case$350=start$348;
+        if ($$$cl1.isOfType(start$348,{t:$$$cl1.Integer})) {
             
-            var case$353=length$351;
-            if ($$$cl1.isOfType(length$351,{t:$$$cl1.Integer})) {
+            var case$351=length$349;
+            if ($$$cl1.isOfType(length$349,{t:$$$cl1.Integer})) {
                 /*Begin dynamic block*/
-                return JSString($$jSStringAbs.$native.substr(/*NULL PARAM!*/case$352/*NULL PARAM!*/,case$353));
+                return JSString($$jSStringAbs.$native.substr(/*NULL PARAM!*/case$350/*NULL PARAM!*/,case$351));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(length$351,{t:JSNumber})) {
+            }else if ($$$cl1.isOfType(length$349,{t:JSNumber})) {
                 /*Begin dynamic block*/
-                return JSString($$jSStringAbs.$native.substr(/*NULL PARAM!*/case$352/*NULL PARAM!*/,case$353.$native));
+                return JSString($$jSStringAbs.$native.substr(/*NULL PARAM!*/case$350/*NULL PARAM!*/,case$351.$native));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(length$351,{t:$$$cl1.Null})) {
+            }else if ($$$cl1.isOfType(length$349,{t:$$$cl1.Null})) {
                 /*Begin dynamic block*/
-                return JSString($$jSStringAbs.$native.substr(/*NULL PARAM!*/case$352));
+                return JSString($$jSStringAbs.$native.substr(/*NULL PARAM!*/case$350));
                 /*End dynamic block*/
             }
-        }else if ($$$cl1.isOfType(start$350,{t:JSNumber})) {
+        }else if ($$$cl1.isOfType(start$348,{t:JSNumber})) {
             
-            var case$354=length$351;
-            if ($$$cl1.isOfType(length$351,{t:$$$cl1.Integer})) {
+            var case$352=length$349;
+            if ($$$cl1.isOfType(length$349,{t:$$$cl1.Integer})) {
                 /*Begin dynamic block*/
-                return JSString($$jSStringAbs.$native.substr(/*NULL PARAM!*/case$352.$native/*NULL PARAM!*/,case$354));
+                return JSString($$jSStringAbs.$native.substr(/*NULL PARAM!*/case$350.$native/*NULL PARAM!*/,case$352));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(length$351,{t:JSNumber})) {
+            }else if ($$$cl1.isOfType(length$349,{t:JSNumber})) {
                 /*Begin dynamic block*/
-                return JSString($$jSStringAbs.$native.substr(/*NULL PARAM!*/case$352.$native/*NULL PARAM!*/,case$354.$native));
+                return JSString($$jSStringAbs.$native.substr(/*NULL PARAM!*/case$350.$native/*NULL PARAM!*/,case$352.$native));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(length$351,{t:$$$cl1.Null})) {
+            }else if ($$$cl1.isOfType(length$349,{t:$$$cl1.Null})) {
                 /*Begin dynamic block*/
-                return JSString($$jSStringAbs.$native.substr(/*NULL PARAM!*/case$352.$native));
+                return JSString($$jSStringAbs.$native.substr(/*NULL PARAM!*/case$350.$native));
                 /*End dynamic block*/
             }
         }
     }
     $$jSStringAbs.substr=substr;
     substr.$$metamodel$$=function(){return{mod:$$METAMODEL$$,$t:{t:JSString},$ps:[{$nm:'start',$mt:'prm',$t:{ t:'u', l:[{t:$$$cl1.Integer},{t:JSNumber}]},$an:function(){return[];}},{$nm:'length',$mt:'prm',$def:1,$t:{ t:'u', l:[{t:$$$cl1.Integer},{ t:'u', l:[{t:$$$cl1.Null},{t:JSNumber}]}]},$an:function(){return[];}}],$cont:JSStringAbs,$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSStringAbs','$m','substr']};};
-    $$jSStringAbs.substring$defs$indexB=function(indexA$355,indexB$356){return null;};
-    function substring(indexA$355,indexB$356){
-        if(indexB$356===undefined){indexB$356=$$jSStringAbs.substring$defs$indexB(indexA$355,indexB$356);}
+    $$jSStringAbs.substring$defs$indexB=function(indexA$353,indexB$354){return null;};
+    function substring(indexA$353,indexB$354){
+        if(indexB$354===undefined){indexB$354=$$jSStringAbs.substring$defs$indexB(indexA$353,indexB$354);}
         
-        var case$357=indexA$355;
-        if ($$$cl1.isOfType(indexA$355,{t:$$$cl1.Integer})) {
+        var case$355=indexA$353;
+        if ($$$cl1.isOfType(indexA$353,{t:$$$cl1.Integer})) {
             
-            var case$358=indexB$356;
-            if ($$$cl1.isOfType(indexB$356,{t:$$$cl1.Integer})) {
+            var case$356=indexB$354;
+            if ($$$cl1.isOfType(indexB$354,{t:$$$cl1.Integer})) {
                 /*Begin dynamic block*/
-                return JSString($$jSStringAbs.$native.substring(/*NULL PARAM!*/case$357/*NULL PARAM!*/,case$358));
+                return JSString($$jSStringAbs.$native.substring(/*NULL PARAM!*/case$355/*NULL PARAM!*/,case$356));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(indexB$356,{t:JSNumber})) {
+            }else if ($$$cl1.isOfType(indexB$354,{t:JSNumber})) {
                 /*Begin dynamic block*/
-                return JSString($$jSStringAbs.$native.substring(/*NULL PARAM!*/case$357/*NULL PARAM!*/,case$358.$native));
+                return JSString($$jSStringAbs.$native.substring(/*NULL PARAM!*/case$355/*NULL PARAM!*/,case$356.$native));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(indexB$356,{t:$$$cl1.Null})) {
+            }else if ($$$cl1.isOfType(indexB$354,{t:$$$cl1.Null})) {
                 /*Begin dynamic block*/
-                return JSString($$jSStringAbs.$native.substring(/*NULL PARAM!*/case$357));
+                return JSString($$jSStringAbs.$native.substring(/*NULL PARAM!*/case$355));
                 /*End dynamic block*/
             }
-        }else if ($$$cl1.isOfType(indexA$355,{t:JSNumber})) {
+        }else if ($$$cl1.isOfType(indexA$353,{t:JSNumber})) {
             
-            var case$359=indexB$356;
-            if ($$$cl1.isOfType(indexB$356,{t:$$$cl1.Integer})) {
+            var case$357=indexB$354;
+            if ($$$cl1.isOfType(indexB$354,{t:$$$cl1.Integer})) {
                 /*Begin dynamic block*/
-                return JSString($$jSStringAbs.$native.substring(/*NULL PARAM!*/case$357.$native/*NULL PARAM!*/,case$359));
+                return JSString($$jSStringAbs.$native.substring(/*NULL PARAM!*/case$355.$native/*NULL PARAM!*/,case$357));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(indexB$356,{t:JSNumber})) {
+            }else if ($$$cl1.isOfType(indexB$354,{t:JSNumber})) {
                 /*Begin dynamic block*/
-                return JSString($$jSStringAbs.$native.substring(/*NULL PARAM!*/case$357.$native/*NULL PARAM!*/,case$359.$native));
+                return JSString($$jSStringAbs.$native.substring(/*NULL PARAM!*/case$355.$native/*NULL PARAM!*/,case$357.$native));
                 /*End dynamic block*/
-            }else if ($$$cl1.isOfType(indexB$356,{t:$$$cl1.Null})) {
+            }else if ($$$cl1.isOfType(indexB$354,{t:$$$cl1.Null})) {
                 /*Begin dynamic block*/
-                return JSString($$jSStringAbs.$native.substring(/*NULL PARAM!*/case$357.$native));
+                return JSString($$jSStringAbs.$native.substring(/*NULL PARAM!*/case$355.$native));
                 /*End dynamic block*/
             }
         }
@@ -2696,15 +2695,15 @@ function $init$JSStringAbs(){
 }
 exports.$init$JSStringAbs=$init$JSStringAbs;
 $init$JSStringAbs();
-function JSString(n$360, $$jSString){
+function JSString(n$358, $$jSString){
     $init$JSString();
     if ($$jSString===undefined)$$jSString=new JSString.$$;
-    $$jSString.n$360_=n$360;
+    $$jSString.n$358_=n$358;
     JSStringAbs($$jSString);
-    $$$cl1.defineAttr($$jSString,'n$360',function(){return this.n$360_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:JSString,d:['ceylon.js.language','JSString','$at','n']};});
+    $$$cl1.defineAttr($$jSString,'n$358',function(){return this.n$358_;},undefined,function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:JSString,d:['ceylon.js.language','JSString','$at','n']};});
     $$jSString.$prop$getNative={$$metamodel$$:function(){return{mod:$$METAMODEL$$,$t:{t:$$$cl1.Anything},$cont:JSString,$an:function(){return[$$$cl1.shared(),$$$cl1.actual()];},d:['ceylon.js.language','JSString','$at','native']};}};
     /*Begin dynamic block*/
-    $$jSString.$native=n$360;/*End dynamic block*/
+    $$jSString.$native=n$358;/*End dynamic block*/
     return $$jSString;
 }
 JSString.$$metamodel$$=function(){return{mod:$$METAMODEL$$,'super':{t:JSStringAbs},satisfies:[],$an:function(){return[$$$cl1.shared()];},d:['ceylon.js.language','JSString']};};
