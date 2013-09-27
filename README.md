@@ -1,5 +1,5 @@
 # Ceylon Photo Gallery Example #
-============
+================================
 
 This is a example of using the Ceylon language to create a jQuery Photo Gallery.
 
@@ -20,6 +20,8 @@ Building the projects requires:
 * Make sure you have Node.js and GruntJS cli installed
 * To install dependencies Run: npm install
 * To build run: grunt
+
+### Compatible with the Ceylon Beta ### 
 
 ### License ###
 
