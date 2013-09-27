@@ -205,7 +205,7 @@ shared class GalleryView(shared Gallery controller) {
 			value tabs = context.toJson();
 			categoryTabs = tabsTemplate(tabs.native);
 		}
-		//display();
+		display();
 	}
 	
 	shared void displayInvalidCategory() {

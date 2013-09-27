@@ -4,12 +4,12 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		exec: {
 			build: {
-				command: '$CEYLON_HOME/bin/ceylon compile-js --rep=./../ceylon-js-interop/modules ceylon.examples.photogallery'
+				command: 'ceylon compile-js --rep=./../ceylon-js-interop/modules ceylon.examples.photogallery'
 			},
-			build_interop: {
+			/*build_interop: {
 				command: 'grunt',
 				cwd: '../ceylon-js-interop'
-			},
+			},*/
 			flatten: {
 				command: 'node r.js -o build.js optimize=none'
 			}
@@ -30,6 +30,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 
-	grunt.registerTask('default', ['exec:build_interop', 'clean:interop', 'copy:interop', 'exec:build', 'exec:flatten']);
+	grunt.registerTask('default', [/*'exec:build_interop', */'clean:interop', 'copy:interop', 'exec:build', 'exec:flatten']);
 
 };
