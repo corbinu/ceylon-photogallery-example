@@ -2,7 +2,6 @@ import com.openswimsoftware.ceylon.js.jquery { JQueryAbs, JQuery }
 import com.openswimsoftware.ceylon.js.json { JSJSON }
 import com.openswimsoftware.ceylon.js.language { DataDescriptor, JSObject, createJSObject }
 
-
 shared JQuerySpin spin(JQuery jq) {
 	dynamic {
 		return JQuerySpin(jq.native);

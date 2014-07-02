@@ -3,7 +3,7 @@ import com.openswimsoftware.ceylon.js.jquery { jq, jqThis, jQueryGetJSON }
 import com.openswimsoftware.ceylon.js.language { JSObject }
 
 shared class Gallery() {
-	shared variable Category[] categories = {};
+	shared variable Category[] categories = [];
 	shared String currentCategory = "";
 	shared late GalleryModel model;
 	shared late GalleryView view;
@@ -224,7 +224,7 @@ shared class GalleryView(shared Gallery controller) {
 shared class Category(shared Gallery parent) {
 	shared late CategoryModel model;
 	shared late CategoryView view;
-	shared variable Page[] pages = {};
+	shared variable Page[] pages = [];
 	
 	shared Category init(String name, PhotoJSON[] photos, String dir) {
 		print("initalizing category");
@@ -381,7 +381,7 @@ shared class Page(shared Category parent, shared String uri) {
 }
 
 shared class PageModel(shared Page controller) {
-	shared variable Photo[] photos = {};
+	shared variable Photo[] photos = [];
 	
 	shared void parsePhotos(PhotoJSON[] photosJSON, String dir) {
 		print("parsing photos");
